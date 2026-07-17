@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2048 — Pixelsprout</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+  .board2048 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    width: min(90vw, 360px);
+    height: min(90vw, 360px);
+    background: #221a12;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  .cell2048 {
+    background: #382a1d;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 700;
+    font-size: clamp(16px, 4.5vw, 26px);
+    color: #E8DFC8;
+    transition: background 0.15s ease;
+  }
+  .v2 { background: #4C7A4A22; }
+  .v4 { background: #4C7A4A44; }
+  .v8 { background: #4C7A4A77; }
+  .v16 { background: #C89B3C55; }
+  .v32 { background: #C89B3C88; }
+  .v64 { background: #C89B3C; color: #221A12; }
+  .v128, .v256, .v512 { background: #9C4A2E; color: #E8DFC8; }
+  .v1024, .v2048 { background: #7FA876; color: #221A12; }
+</style>
+</head>
+<body>
+<div class="game-shell">
+  <a class="back-link" href="../index.html">← back to garden</a>
+  <h1 class="game-title">2048</h1>
+  <div class="game-meta">Arrow keys or swipe · merge equal tiles</div>
+
+  <div class="game-board-frame">
+    <div class="hud">
+      <div><span class="label">Score</span><span id="score">0</span></div>
+      <div><span class="label">Best</span><span id="best">0</span></div>
+      <button class="action" id="restart">Restart</button>
+    </div>
+    <div class="board2048" id="board" tabindex="0"></div>
+    <p class="how-to">Use arrow keys (desktop) or swipe (mobile) to slide all tiles. When two tiles of the same number touch, they merge into one.</p>
+  </div>
+</div>
+
+<script>
+const SIZE = 4;
+let grid, score = 0, best = Number(localStorage.getItem('sprout2048best') || 0);
+const boardEl = document.getElementById('board');
+const scoreEl = document.getElementById('score');
+const bestEl = document.getElementById('best');
+bestEl.textContent = best;
+
+function emptyGrid() {
+  return Array.from({length: SIZE}, () => Array(SIZE).fill(0));
+}
+
+function addRandomTile() {
+  const empties = [];
+  for (let r = 0; r < SIZE; r++)
+    for (let c = 0; c < SIZE; c++)
+      if (grid[r][c] === 0) empties.push([r, c]);
+  if (!empties.length) return;
+  const [r, c] = empties[Math.floor(Math.random() * empties.length)];
+  grid[r][c] = Math.random() < 0.9 ? 2 : 4;
+}
+
+function render() {
+  boardEl.innerHTML = '';
+  for (let r = 0; r < SIZE; r++) {
+    for (let c = 0; c < SIZE; c++) {
+      const v = grid[r][c];
+      const cell = document.createElement('div');
+      cell.className = 'cell2048' + (v ? ' v' + v : '');
+      cell.textContent = v || '';
+      boardEl.appendChild(cell);
+    }
+  }
+  scoreEl.textContent = score;
+  if (score > best) {
+    best = score;
+    bestEl.textContent = best;
+    localStorage.setItem('sprout2048best', best);
+  }
+}
+
+function slideRowLeft(row) {
+  let vals = row.filter(v => v !== 0);
+  for (let i = 0; i < vals.length - 1; i++) {
+    if (vals[i] === vals[i + 1]) {
+      vals[i] *= 2;
+      score += vals[i];
+      vals.splice(i + 1, 1);
+    }
+  }
+  while (vals.length < SIZE) vals.push(0);
+  return vals;
+}
+
+function rotateGrid(g) {
+  const newG = emptyGrid();
+  for (let r = 0; r < SIZE; r++)
+    for (let c = 0; c < SIZE; c++)
+      newG[c][SIZE - 1 - r] = g[r][c];
+  return newG;
+}
+
+function move(dir) {
+  let g = grid;
+  let rotations = { left: 0, up: 1, right: 2, down: 3 }[dir];
+  for (let i = 0; i < rotations; i++) g = rotateGrid(g);
+
+  const before = JSON.stringify(g);
+  g = g.map(slideRowLeft);
+  const changed = JSON.stringify(g) !== before;
+
+  for (let i = 0; i < (4 - rotations) % 4; i++) g = rotateGrid(g);
+
+  grid = g;
+  if (changed) {
+    addRandomTile();
+    render();
+  }
+}
+
+document.addEventListener('keydown', (e) => {
+  const map = { ArrowLeft: 'left', ArrowRight: 'right', ArrowUp: 'up', ArrowDown: 'down' };
+  if (map[e.key]) { e.preventDefault(); move(map[e.key]); }
+});
+
+let touchStartX, touchStartY;
+boardEl.addEventListener('touchstart', (e) => {
+  touchStartX = e.touches[0].clientX;
+  touchStartY = e.touches[0].clientY;
+}, { passive: true });
+boardEl.addEventListener('touchend', (e) => {
+  const dx = e.changedTouches[0].clientX - touchStartX;
+  const dy = e.changedTouches[0].clientY - touchStartY;
+  if (Math.max(Math.abs(dx), Math.abs(dy)) < 20) return;
+  if (Math.abs(dx) > Math.abs(dy)) move(dx > 0 ? 'right' : 'left');
+  else move(dy > 0 ? 'down' : 'up');
+}, { passive: true });
+
+document.getElementById('restart').addEventListener('click', () => {
+  score = 0;
+  grid = emptyGrid();
+  addRandomTile();
+  addRandomTile();
+  render();
+});
+
+grid = emptyGrid();
+addRandomTile();
+addRandomTile();
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tic-Tac-Toe — Pixelsprout</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+  .ttt-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: min(80vw, 300px);
+  }
+  .ttt-cell {
+    aspect-ratio: 1;
+    background: #382a1d;
+    border: 1px solid #5a4a37;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(28px, 8vw, 42px);
+    font-family: 'IBM Plex Mono', monospace;
+    cursor: pointer;
+    color: #E8DFC8;
+  }
+  .ttt-cell.x { color: #C89B3C; }
+  .ttt-cell.o { color: #7FA876; }
+  .ttt-cell.win { background: #4C7A4A55; }
+  #status { font-size: 15px; }
+</style>
+</head>
+<body>
+<div class="game-shell">
+  <a class="back-link" href="../index.html">← back to garden</a>
+  <h1 class="game-title">Tic-Tac-Toe</h1>
+  <div class="game-meta">Two players, one screen · pass and play</div>
+
+  <div class="game-board-frame">
+    <div class="hud">
+      <div id="status">X's turn</div>
+      <button class="action" id="restart">Restart</button>
+    </div>
+    <div class="ttt-grid" id="grid"></div>
+    <p class="how-to">Take turns tapping empty squares. First to line up three in a row, column, or diagonal wins.</p>
+  </div>
+</div>
+
+<script>
+const gridEl = document.getElementById('grid');
+const statusEl = document.getElementById('status');
+let board, turn, over;
+
+const LINES = [
+  [0,1,2],[3,4,5],[6,7,8],
+  [0,3,6],[1,4,7],[2,5,8],
+  [0,4,8],[2,4,6]
+];
+
+function setup() {
+  board = Array(9).fill(null);
+  turn = 'X';
+  over = false;
+  statusEl.textContent = "X's turn";
+  render();
+}
+
+function checkWin() {
+  for (const line of LINES) {
+    const [a,b,c] = line;
+    if (board[a] && board[a] === board[b] && board[a] === board[c]) return line;
+  }
+  return null;
+}
+
+function render(winLine) {
+  gridEl.innerHTML = '';
+  board.forEach((val, i) => {
+    const el = document.createElement('div');
+    el.className = 'ttt-cell' + (val === 'X' ? ' x' : val === 'O' ? ' o' : '') +
+      (winLine && winLine.includes(i) ? ' win' : '');
+    el.textContent = val || '';
+    el.addEventListener('click', () => onMove(i));
+    gridEl.appendChild(el);
+  });
+}
+
+function onMove(i) {
+  if (over || board[i]) return;
+  board[i] = turn;
+  const win = checkWin();
+  if (win) {
+    over = true;
+    statusEl.textContent = turn + ' wins!';
+    render(win);
+    return;
+  }
+  if (board.every(v => v)) {
+    over = true;
+    statusEl.textContent = "It's a draw";
+    render();
+    return;
+  }
+  turn = turn === 'X' ? 'O' : 'X';
+  statusEl.textContent = turn + "'s turn";
+  render();
+}
+
+document.getElementById('restart').addEventListener('click', setup);
+setup();
+</script>
+</body>
+</html>

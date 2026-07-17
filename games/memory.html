@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memory Match — Pixelsprout</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+  .memgrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    width: min(90vw, 340px);
+  }
+  .memcard {
+    aspect-ratio: 1;
+    background: #382a1d;
+    border: 1px solid #5a4a37;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(20px, 5vw, 30px);
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s ease, transform 0.15s ease;
+  }
+  .memcard.flipped, .memcard.matched {
+    background: #4C7A4A55;
+  }
+  .memcard.matched {
+    opacity: 0.55;
+    cursor: default;
+  }
+</style>
+</head>
+<body>
+<div class="game-shell">
+  <a class="back-link" href="../index.html">← back to garden</a>
+  <h1 class="game-title">Memory Match</h1>
+  <div class="game-meta">Flip two at a time · find every pair</div>
+
+  <div class="game-board-frame">
+    <div class="hud">
+      <div><span class="label">Moves</span><span id="moves">0</span></div>
+      <div><span class="label">Best</span><span id="best">–</span></div>
+      <button class="action" id="restart">Restart</button>
+    </div>
+    <div class="memgrid" id="grid"></div>
+    <p class="how-to">Tap two cards to reveal them. Matching symbols stay face up. Clear the board in as few moves as possible.</p>
+  </div>
+</div>
+
+<script>
+const SYMBOLS = ['🌱','🍄','🌻','🐌','🍃','🪴','🌾','🐛'];
+const gridEl = document.getElementById('grid');
+const movesEl = document.getElementById('moves');
+const bestEl = document.getElementById('best');
+let best = localStorage.getItem('sproutmemorybest');
+bestEl.textContent = best || '–';
+
+let cards, flipped, matched, moves, lock;
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function setup() {
+  cards = shuffle([...SYMBOLS, ...SYMBOLS]);
+  flipped = [];
+  matched = new Set();
+  moves = 0;
+  lock = false;
+  movesEl.textContent = moves;
+  render();
+}
+
+function render() {
+  gridEl.innerHTML = '';
+  cards.forEach((sym, i) => {
+    const el = document.createElement('div');
+    const isFlipped = flipped.includes(i) || matched.has(i);
+    el.className = 'memcard' + (isFlipped ? ' flipped' : '') + (matched.has(i) ? ' matched' : '');
+    el.textContent = isFlipped ? sym : '';
+    el.addEventListener('click', () => onFlip(i));
+    gridEl.appendChild(el);
+  });
+}
+
+function onFlip(i) {
+  if (lock || flipped.includes(i) || matched.has(i)) return;
+  flipped.push(i);
+  render();
+  if (flipped.length === 2) {
+    moves++;
+    movesEl.textContent = moves;
+    lock = true;
+    const [a, b] = flipped;
+    if (cards[a] === cards[b]) {
+      matched.add(a); matched.add(b);
+      flipped = [];
+      lock = false;
+      render();
+      if (matched.size === cards.length) {
+        if (!best || moves < best) {
+          best = moves;
+          localStorage.setItem('sproutmemorybest', best);
+          bestEl.textContent = best;
+        }
+        setTimeout(() => alert('Cleared in ' + moves + ' moves!'), 200);
+      }
+    } else {
+      setTimeout(() => {
+        flipped = [];
+        lock = false;
+        render();
+      }, 700);
+    }
+  }
+}
+
+document.getElementById('restart').addEventListener('click', setup);
+setup();
+</script>
+</body>
+</html>
