@@ -1,0 +1,339 @@
+/* Pixelsprout — design tokens
+   Soil dark:      #2B2118
+   Paper cream:    #E8DFC8
+   Sprout green:   #4C7A4A
+   Sprout green-lt:#7FA876
+   Sun amber:      #C89B3C
+   Rust accent:    #9C4A2E
+*/
+
+@font-face {
+  font-family: 'Fredoka-fallback';
+  src: local('Arial Rounded MT Bold');
+}
+
+:root {
+  --soil: #2B2118;
+  --soil-2: #382a1d;
+  --paper: #E8DFC8;
+  --sprout: #4C7A4A;
+  --sprout-lt: #7FA876;
+  --amber: #C89B3C;
+  --rust: #9C4A2E;
+  --ink: #221A12;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--soil);
+  color: var(--paper);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+a { color: inherit; }
+
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 24px 18px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  color: var(--paper);
+}
+
+.logo .sprout-mark {
+  font-size: 20px;
+  transform: translateY(-1px);
+}
+
+.tagline {
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 12px;
+  color: var(--sprout-lt);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: 48px 24px 40px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: clamp(34px, 6vw, 56px);
+  line-height: 1.05;
+  margin: 0 0 14px;
+  max-width: 720px;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--amber);
+}
+
+.hero p {
+  max-width: 520px;
+  color: #d7cdb3;
+  font-size: 16px;
+  margin: 0 0 22px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 28px;
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 13px;
+  color: var(--sprout-lt);
+  flex-wrap: wrap;
+}
+
+.hero-stats strong {
+  color: var(--paper);
+  font-size: 16px;
+  display: block;
+}
+
+/* growth bar signature element */
+.growth-row {
+  display: flex;
+  gap: 4px;
+  margin-top: 28px;
+  align-items: flex-end;
+  height: 34px;
+}
+
+.growth-row span {
+  display: inline-block;
+  width: 6px;
+  background: var(--sprout);
+  border-radius: 2px 2px 0 0;
+  animation: grow 1.4s ease-out both;
+  transform-origin: bottom;
+}
+
+@keyframes grow {
+  from { transform: scaleY(0); opacity: 0; }
+  to { transform: scaleY(1); opacity: 1; }
+}
+
+/* ---------- Category labels ---------- */
+
+.category {
+  margin: 44px 0 18px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.category .bed-icon {
+  font-size: 15px;
+}
+
+.category h2 {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  margin: 0;
+  color: var(--paper);
+}
+
+.category .count {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--sprout-lt);
+}
+
+/* ---------- Seed-packet cards ---------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+  margin-bottom: 12px;
+}
+
+.card {
+  background: var(--soil-2);
+  border: 1px dashed #5a4a37;
+  border-radius: 10px;
+  padding: 18px 16px 16px;
+  text-decoration: none;
+  color: var(--paper);
+  position: relative;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card:hover, .card:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--sprout-lt);
+  background: #40311f;
+  outline: none;
+}
+
+.card:focus-visible {
+  box-shadow: 0 0 0 2px var(--amber);
+}
+
+.card .icon {
+  font-size: 30px;
+  line-height: 1;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 17px;
+  font-family: Georgia, serif;
+}
+
+.card p {
+  margin: 0;
+  font-size: 13px;
+  color: #c7bc9e;
+}
+
+.stamp {
+  align-self: flex-start;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--soil);
+  background: var(--amber);
+  padding: 3px 8px;
+  border-radius: 3px;
+  transform: rotate(-2deg);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  max-width: 1080px;
+  margin: 60px auto 30px;
+  padding: 24px;
+  border-top: 1px solid #4a3a28;
+  font-size: 13px;
+  color: #a89877;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ---------- Game page shell ---------- */
+
+.game-shell {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 28px 20px 60px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  color: var(--sprout-lt);
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.back-link:hover { color: var(--amber); }
+
+.game-title {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  margin: 0 0 6px;
+}
+
+.game-meta {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--sprout-lt);
+  margin-bottom: 22px;
+}
+
+.game-board-frame {
+  background: var(--soil-2);
+  border: 1px dashed #5a4a37;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.hud {
+  display: flex;
+  gap: 20px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  color: var(--paper);
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hud .label { color: var(--sprout-lt); margin-right: 4px; }
+
+button.action {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: var(--sprout);
+  color: var(--paper);
+  border: none;
+  border-radius: 6px;
+  padding: 9px 16px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+button.action:hover { background: var(--sprout-lt); color: var(--soil); }
+
+.how-to {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #a89877;
+  text-align: center;
+  max-width: 420px;
+}

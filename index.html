@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pixelsprout — small open games, grown in the open</title>
+<meta name="description" content="A curated garden of free, open-source browser games. No installs, no accounts, just play.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="/"><span class="sprout-mark">🌱</span> Pixelsprout</a>
+  <span class="tagline">Open-source · Browser-native</span>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Small games, <em>grown</em> in the open.</h1>
+    <p>Every game here is free, open-source, and playable instantly — no installs, no accounts, no App Store. Built by independent devs, credited by name, hosted for anyone.</p>
+    <div class="hero-stats">
+      <div><strong id="game-count">4</strong> games planted</div>
+      <div><strong>100%</strong> open-source</div>
+      <div><strong>$0</strong> to play</div>
+    </div>
+    <div class="growth-row" aria-hidden="true" id="growth-row"></div>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <div class="category">
+    <span class="bed-icon">🧩</span>
+    <h2>Puzzle bed</h2>
+    <span class="count">2 games</span>
+  </div>
+  <div class="grid">
+    <a class="card" href="games/2048.html">
+      <span class="icon">🔢</span>
+      <h3>2048</h3>
+      <p>Slide and merge tiles to reach 2048. One-file classic, original build.</p>
+      <span class="stamp">MIT · original</span>
+    </a>
+    <a class="card" href="games/memory.html">
+      <span class="icon">🃏</span>
+      <h3>Memory Match</h3>
+      <p>Flip cards, find pairs, beat your best time. Simple, sharp, replayable.</p>
+      <span class="stamp">MIT · original</span>
+    </a>
+  </div>
+
+  <div class="category">
+    <span class="bed-icon">🕹️</span>
+    <h2>Arcade bed</h2>
+    <span class="count">1 game</span>
+  </div>
+  <div class="grid">
+    <a class="card" href="games/snake.html">
+      <span class="icon">🐍</span>
+      <h3>Snake</h3>
+      <p>Grow your trail, don't cross yourself. Arrow keys or swipe on mobile.</p>
+      <span class="stamp">MIT · original</span>
+    </a>
+  </div>
+
+  <div class="category">
+    <span class="bed-icon">♟️</span>
+    <h2>Board bed</h2>
+    <span class="count">1 game</span>
+  </div>
+  <div class="grid">
+    <a class="card" href="games/tictactoe.html">
+      <span class="icon">⭕</span>
+      <h3>Tic-Tac-Toe</h3>
+      <p>Two players, one grid, zero downloads. A quiet classic done right.</p>
+      <span class="stamp">MIT · original</span>
+    </a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <span>Pixelsprout — a small garden of open games.</span>
+  <span>All games above are original builds under MIT license. Built with real names, no disguised clones.</span>
+</footer>
+
+<script>
+  const row = document.getElementById('growth-row');
+  const heights = [8, 14, 10, 22, 16, 28, 20, 34, 24, 18];
+  heights.forEach((h, i) => {
+    const bar = document.createElement('span');
+    bar.style.height = h + 'px';
+    bar.style.animationDelay = (i * 0.06) + 's';
+    row.appendChild(bar);
+  });
+</script>
+
+</body>
+</html>
