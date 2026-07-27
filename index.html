@@ -1,59 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="preconnect" href="https://img.gamepix.com">
-<link rel="dns-prefetch" href="https://img.gamepix.com">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pixelsprout — Play. Grow. Explore.</title>
-<meta name="description" content="Pixelsprout is a free browser gaming library, growing every genre. No installs, no accounts, no App Store. Just click and play.">
 <link rel="icon" type="image/png" href="assets/logo-icon.png">
+<link rel="preconnect" href="https://img.gamepix.com">
+<link rel="dns-prefetch" href="https://img.gamepix.com">
+<title>Pixelsprout — Play. Grow. Explore.</title>
+<meta name="description" content="Pixelsprout is a free browser gaming library with thousands of games across every genre. No installs, no accounts — just click and play.">
 <link rel="stylesheet" href="styles.css">
-<script defer src="/_vercel/insights/script.js"></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8466016918717424" crossorigin="anonymous"></script>
+<script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
+<button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle genre menu">☰</button>
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-title">Genres</div>
+  <nav class="sidebar-nav">
+    <a href="#" class="sidebar-link active" data-filter="all">All Games</a>
+    <a href="#puzzle" class="sidebar-link">Puzzle</a>
+    <a href="#arcade" class="sidebar-link">Arcade</a>
+    <a href="#strategy" class="sidebar-link">Strategy</a>
+    <a href="#simulation" class="sidebar-link">Simulation</a>
+    <a href="#hidden-object" class="sidebar-link">Hidden-Object</a>
+    <a href="#match-3" class="sidebar-link">Match-3</a>
+    <a href="#2048" class="sidebar-link">2048</a>
+    <a href="#battle" class="sidebar-link">Battle</a>
+    <a href="#memory" class="sidebar-link">Memory</a>
+    <a href="#kids" class="sidebar-link">Kids</a>
+  </nav>
+</aside>
+
 <header class="site-header">
-  <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle genre menu">☰</button>
-    <a class="logo" href="/">
+  <a class="logo" href="/">
     <img class="logo-mark" src="assets/logo-icon.png" alt="Pixelsprout">
     <span class="logo-word">PIXEL<span class="sprout-part">SPROUT</span></span>
   </a>
   <span class="tagline">Play · Grow · Explore</span>
 </header>
-<div class="layout">
-<aside class="sidebar" id="sidebar">
-  <div class="sidebar-title">Genres</div>
-  <nav class="sidebar-nav">
-    <a href="#" class="sidebar-link active" data-filter="all">All Games</a>
-    <a href="#puzzle" class="sidebar-link" data-filter="puzzle">Puzzle</a>
-    <a href="#arcade" class="sidebar-link" data-filter="arcade">Arcade</a>
-    <a href="#strategy" class="sidebar-link" data-filter="strategy">Strategy</a>
-    <a href="#simulation" class="sidebar-link" data-filter="simulation">Simulation</a>
-    <a href="#hidden-object" class="sidebar-link" data-filter="hidden-object">Hidden-Object</a>
-    <a href="#match-3" class="sidebar-link" data-filter="match-3">Match-3</a>
-    <a href="#2048" class="sidebar-link" data-filter="2048">2048</a>
-    <a href="#battle" class="sidebar-link" data-filter="battle">Battle</a>
-    <a href="#memory" class="sidebar-link" data-filter="memory">Memory</a>
-    <a href="#kids" class="sidebar-link" data-filter="kids">Kids</a>
-  </nav>
-</aside>
-<div class="layout-main">
-
 
 <section class="hero">
   <div class="wrap hero-inner">
     <div class="hero-text">
       <h1>One tab.<br><span class="accent">Every game.</span></h1>
-      <p>A free browser gaming library — thousands of games, zero installs, zero accounts. Puzzle, arcade, strategy, simulation, and more, all in one place. Pick a genre, hit play, you're in.</p>
+      <p>Pixelsprout is a free browser gaming library with thousands of titles across every genre — puzzle, arcade, strategy, simulation, and more. No downloads, no sign-ups. Pick a genre from the menu, or search for something specific, and you're playing in seconds.</p>
       <div class="hero-stats">
-        <div><strong id="game-count">2889</strong>games live</div>
-        <div><strong>4</strong>genres</div>
-        <div><strong>0</strong>installs required</div>
+        <div><strong id="game-count">2897</strong>games live</div>
       </div>
     </div>
-    <img class="hero-logo" src="assets/logo-full.png" alt="Pixelsprout — Play. Grow. Explore.">
+    <img class="hero-logo" src="assets/logo-full.png" alt="Pixelsprout">
   </div>
 </section>
 
@@ -68,10 +65,26 @@
       <svg class="search-icon" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20L16.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       <input type="text" id="search" placeholder="Search games..." autocomplete="off">
     </div>
-    <span id="result-count" class="result-count">8 games</span>
+    <span id="result-count" class="result-count">2897 games</span>
   </div>
 
-  <div id="popular-picks" class="category gold" data-section data-genre="popular-picks">
+  <div id="popular-picks" class="category gold" data-section>
+    <span class="bar"></span>
+    <h2>Popular Picks</h2>
+    <span class="count">Featured</span>
+  </div>
+  <div class="grid" data-grid>
+    <a class="card popular-slot" href="games/subway-princess-run.html" data-clone-from="games/subway-princess-run.html"></a>
+    <a class="card popular-slot" href="games/worms-zone.html" data-clone-from="games/worms-zone.html"></a>
+    <a class="card popular-slot" href="games/uno-online.html" data-clone-from="games/uno-online.html"></a>
+    <a class="card popular-slot" href="games/baba-is-you.html" data-clone-from="games/baba-is-you.html"></a>
+    <a class="card popular-slot" href="games/getting-over-it.html" data-clone-from="games/getting-over-it.html"></a>
+    <a class="card popular-slot" href="games/suika-world.html" data-clone-from="games/suika-world.html"></a>
+    <a class="card popular-slot" href="games/tank-1990.html" data-clone-from="games/tank-1990.html"></a>
+    <a class="card popular-slot" href="games/ultimate-solitaire-classic.html" data-clone-from="games/ultimate-solitaire-classic.html"></a>
+  </div>
+
+<div id="popular-picks" class="category gold" data-section data-genre="popular-picks">
     <span class="bar"></span>
     <h2>Popular Picks</h2>
   <span class="count">Featured</span>
@@ -27184,12 +27197,10 @@
     </a>
   </div>
 
+  
   <p id="no-results" class="no-results" hidden>No games match "<span id="no-results-term"></span>". Try a different search.</p>
 
 </main>
-</div>
-</div>
-
 
 <footer class="site-footer">
   <span>© Pixelsprout — Play. Grow. Explore.</span>
@@ -27197,7 +27208,7 @@
 </footer>
 
 <script>
-  const cards = Array.from(document.querySelectorAll('.card'));
+  const cards = Array.from(document.querySelectorAll('.card:not(.popular-slot)'));
   const sections = Array.from(document.querySelectorAll('[data-section]'));
   const grids = Array.from(document.querySelectorAll('[data-grid]'));
   const resultCount = document.getElementById('result-count');
@@ -27207,60 +27218,45 @@
 
   resultCount.textContent = cards.length + ' games';
 
-  // Marquee: a small, fixed-size random sample of titles pulled straight
-  // from the live page, so its length (and therefore its speed) never
-  // changes no matter how large the catalog grows.
-  const track = document.getElementById('marquee-track');
-  const allTitles = cards.map(c => c.querySelector('h3').textContent.toUpperCase());
-  const sampleSize = Math.min(20, allTitles.length);
-  const shuffled = allTitles.slice().sort(() => 0.5 - Math.random());
-  const marqueeNames = shuffled.slice(0, sampleSize);
-  [...marqueeNames, ...marqueeNames].forEach(n => {
-    const span = document.createElement('span');
-    span.textContent = n;
-    track.appendChild(span);
-  });
-
   searchInput.addEventListener('input', () => {
     const q = searchInput.value.trim().toLowerCase();
     let visible = 0;
-
     cards.forEach(card => {
-      const match = card.dataset.name.includes(q);
+      const match = card.dataset.name && card.dataset.name.includes(q);
       card.style.display = match ? '' : 'none';
       if (match) visible++;
     });
-
     grids.forEach((grid, i) => {
       const anyVisible = Array.from(grid.children).some(c => c.style.display !== 'none');
       grid.style.display = anyVisible ? '' : 'none';
-      sections[i].style.display = anyVisible ? '' : 'none';
+      if (sections[i]) sections[i].style.display = anyVisible ? '' : 'none';
     });
-
     resultCount.textContent = visible + (visible === 1 ? ' game' : ' games');
-    if (visible === 0) {
-      noResults.hidden = false;
-      noResultsTerm.textContent = searchInput.value.trim();
-    } else {
-      noResults.hidden = true;
-    }
+    noResults.hidden = visible !== 0;
+    if (visible === 0) noResultsTerm.textContent = searchInput.value.trim();
   });
 
-  // Sidebar genre links: highlight whichever one was clicked. The actual
-  // jump-to-section behavior is native browser anchor-link scrolling —
-  // no extra JS needed for that, since each section already has a matching id.
-  document.querySelectorAll('.sidebar-link').forEach(link => {
-    link.addEventListener('click', () => {
-      document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
+  try {
+    const track = document.getElementById('marquee-track');
+    const allTitles = cards.map(c => {
+      const h3 = c.querySelector('h3');
+      return h3 ? h3.textContent.toUpperCase() : '';
+    }).filter(Boolean);
+    const sampleSize = Math.min(20, allTitles.length);
+    const shuffled = allTitles.slice().sort(() => 0.5 - Math.random());
+    const marqueeNames = shuffled.slice(0, sampleSize);
+    [...marqueeNames, ...marqueeNames].forEach(n => {
+      const span = document.createElement('span');
+      span.textContent = n;
+      track.appendChild(span);
     });
-  });
+  } catch (err) { console.error('Marquee setup failed:', err); }
 
-  // Sidebar: click the hamburger to open/close it as a slide-in drawer.
-  const sidebarToggle = document.getElementById('sidebar-toggle');
-  const sidebarEl = document.getElementById('sidebar');
-  if (sidebarToggle && sidebarEl) {
-    sidebarToggle.addEventListener('click', () => {
+  try {
+    const sidebarToggle = document.getElementById('sidebar-toggle');
+    const sidebarEl = document.getElementById('sidebar');
+    sidebarToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       sidebarEl.classList.toggle('open');
     });
     document.addEventListener('click', (e) => {
@@ -27268,24 +27264,26 @@
         sidebarEl.classList.remove('open');
       }
     });
-    // Close it after picking a genre, since the click already navigated.
     document.querySelectorAll('.sidebar-link').forEach(link => {
-      link.addEventListener('click', () => sidebarEl.classList.remove('open'));
+      link.addEventListener('click', () => {
+        document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        sidebarEl.classList.remove('open');
+      });
     });
-  }
+  } catch (err) { console.error('Sidebar setup failed:', err); }
 
-  // Popular Picks: clone the REAL card (with its real photo) for each
-  // featured game from wherever it actually lives on the page, instead of
-  // showing a fake placeholder icon.
-  document.querySelectorAll('.popular-slot').forEach(slot => {
-    const targetHref = slot.dataset.cloneFrom;
-    const realCard = Array.from(document.querySelectorAll('.card:not(.popular-slot)'))
-      .find(c => c.getAttribute('href') === targetHref);
-    if (realCard) {
-      slot.innerHTML = realCard.innerHTML;
-      slot.dataset.name = realCard.dataset.name;
-    }
-  });
+  try {
+    document.querySelectorAll('.popular-slot').forEach(slot => {
+      const targetHref = slot.getAttribute('href');
+      const realCard = Array.from(document.querySelectorAll('.card:not(.popular-slot)'))
+        .find(c => c.getAttribute('href') === targetHref);
+      if (realCard) {
+        slot.innerHTML = realCard.innerHTML;
+        slot.dataset.name = realCard.dataset.name;
+      }
+    });
+  } catch (err) { console.error('Popular Picks setup failed:', err); }
 </script>
 
 </body>
