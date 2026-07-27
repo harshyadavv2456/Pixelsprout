@@ -38,7 +38,7 @@
 <div class="game-shell">
   <a class="back-link" href="../index.html">← back to Pixelsprout</a>
   <h1 class="game-title">Snake Swipe Puzzle</h1>
-  <div class="game-meta">Puzzle · hosted via GamePix</div>
+  <div class="game-meta">Puzzle</div>
 
   <div class="game-board-frame">
     <div class="embed-frame-wrap">
@@ -54,7 +54,35 @@
       }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide a delightful block snake through intricate mazes in Snake Swipe Puzzle. Swipe to calculate every move, ensuring all paths are covered. Navigate increasingly challenging labyrinths with strategic thinking, offering a whimsical yet brain-teasing adventure that sharpens problem-solving skills. Lose yourself in this enchanting puzzle journey!</p>
-    <p class="source-note">Game provided via GamePix</p>
+
+    <div class="similar-games">
+      <h3 class="similar-games-title">You might also like</h3>
+      <div class="similar-games-grid" id="similar-games-grid"></div>
+    </div>
+    <script>
+      fetch('../games-index.json')
+        .then(r => r.json())
+        .then(games => {
+          const currentSlug = 'snake-swipe-puzzle';
+          const currentCategory = 'Puzzle';
+          let matches = games.filter(g => g.category === currentCategory && g.slug !== currentSlug);
+          matches = matches.sort(() => 0.5 - Math.random());
+          if (matches.length < 4) {
+            const others = games.filter(g => g.slug !== currentSlug && !matches.some(m => m.slug === g.slug));
+            matches = matches.concat(others.sort(() => 0.5 - Math.random()).slice(0, 4 - matches.length));
+          }
+          matches = matches.slice(0, 4);
+          const grid = document.getElementById('similar-games-grid');
+          matches.forEach(g => {
+            const a = document.createElement('a');
+            a.className = 'similar-card';
+            a.href = g.slug + '.html';
+            a.innerHTML = '<img src="' + g.thumbnail + '" alt="" loading="lazy"><span>' + g.title + '</span>';
+            grid.appendChild(a);
+          });
+        })
+        .catch(() => {});
+    </script>
   </div>
 </div>
 </body>

@@ -38,7 +38,7 @@
 <div class="game-shell">
   <a class="back-link" href="../index.html">← back to Pixelsprout</a>
   <h1 class="game-title">Hopeless Island Survival Hero</h1>
-  <div class="game-meta">Fighting · hosted via GamePix</div>
+  <div class="game-meta">Fighting</div>
 
   <div class="game-board-frame">
     <div class="embed-frame-wrap">
@@ -54,7 +54,35 @@
       }
     ">⛶ Fullscreen</button>
     <p class="how-to">Battle monstrous creatures in "Hopeless Island Survival Hero" as you navigate a dangerous island. Utilize your combat skills with swords and guns, rely on your instincts, and manage resources wisely. Each decision is vital as you strive to overcome threats and escape the island’s relentless peril. Can you survive?</p>
-    <p class="source-note">Game provided via GamePix</p>
+
+    <div class="similar-games">
+      <h3 class="similar-games-title">You might also like</h3>
+      <div class="similar-games-grid" id="similar-games-grid"></div>
+    </div>
+    <script>
+      fetch('../games-index.json')
+        .then(r => r.json())
+        .then(games => {
+          const currentSlug = 'hopeless-island-survival-hero';
+          const currentCategory = 'Fighting';
+          let matches = games.filter(g => g.category === currentCategory && g.slug !== currentSlug);
+          matches = matches.sort(() => 0.5 - Math.random());
+          if (matches.length < 4) {
+            const others = games.filter(g => g.slug !== currentSlug && !matches.some(m => m.slug === g.slug));
+            matches = matches.concat(others.sort(() => 0.5 - Math.random()).slice(0, 4 - matches.length));
+          }
+          matches = matches.slice(0, 4);
+          const grid = document.getElementById('similar-games-grid');
+          matches.forEach(g => {
+            const a = document.createElement('a');
+            a.className = 'similar-card';
+            a.href = g.slug + '.html';
+            a.innerHTML = '<img src="' + g.thumbnail + '" alt="" loading="lazy"><span>' + g.title + '</span>';
+            grid.appendChild(a);
+          });
+        })
+        .catch(() => {});
+    </script>
   </div>
 </div>
 </body>

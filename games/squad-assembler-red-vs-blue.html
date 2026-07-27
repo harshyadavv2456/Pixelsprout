@@ -38,7 +38,7 @@
 <div class="game-shell">
   <a class="back-link" href="../index.html">← back to Pixelsprout</a>
   <h1 class="game-title">Squad Assembler - Red vs Blue</h1>
-  <div class="game-meta">Strategy · hosted via GamePix</div>
+  <div class="game-meta">Strategy</div>
 
   <div class="game-board-frame">
     <div class="embed-frame-wrap">
@@ -54,7 +54,35 @@
       }
     ">⛶ Fullscreen</button>
     <p class="how-to">Craft the ultimate battle squad in Squad Assembler - Red vs Blue. Strategize, equip, and fund your team to outwit rival squads in thrilling isometric skirmishes. Merge gear for powerful upgrades and lead your fighters to victory across challenging arenas with tactical precision. Will your squad reign supreme?</p>
-    <p class="source-note">Game provided via GamePix</p>
+
+    <div class="similar-games">
+      <h3 class="similar-games-title">You might also like</h3>
+      <div class="similar-games-grid" id="similar-games-grid"></div>
+    </div>
+    <script>
+      fetch('../games-index.json')
+        .then(r => r.json())
+        .then(games => {
+          const currentSlug = 'squad-assembler-red-vs-blue';
+          const currentCategory = 'Strategy';
+          let matches = games.filter(g => g.category === currentCategory && g.slug !== currentSlug);
+          matches = matches.sort(() => 0.5 - Math.random());
+          if (matches.length < 4) {
+            const others = games.filter(g => g.slug !== currentSlug && !matches.some(m => m.slug === g.slug));
+            matches = matches.concat(others.sort(() => 0.5 - Math.random()).slice(0, 4 - matches.length));
+          }
+          matches = matches.slice(0, 4);
+          const grid = document.getElementById('similar-games-grid');
+          matches.forEach(g => {
+            const a = document.createElement('a');
+            a.className = 'similar-card';
+            a.href = g.slug + '.html';
+            a.innerHTML = '<img src="' + g.thumbnail + '" alt="" loading="lazy"><span>' + g.title + '</span>';
+            grid.appendChild(a);
+          });
+        })
+        .catch(() => {});
+    </script>
   </div>
 </div>
 </body>

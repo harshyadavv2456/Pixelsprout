@@ -38,7 +38,7 @@
 <div class="game-shell">
   <a class="back-link" href="../index.html">← back to Pixelsprout</a>
   <h1 class="game-title">Mr. Shooter</h1>
-  <div class="game-meta">Arcade · hosted via GamePix</div>
+  <div class="game-meta">Arcade</div>
 
   <div class="game-board-frame">
     <div class="embed-frame-wrap">
@@ -54,7 +54,35 @@
       }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into the role of a covert agent in Mr. Shooter, where your sharpshooting skills and strategic mind are your greatest assets. Navigate intense levels, staying undetected, and adapt your tactics to prevailing challenges. Every mission holds unique trials in a dynamic, immersive world demanding precision and cunning.</p>
-    <p class="source-note">Game provided via GamePix</p>
+
+    <div class="similar-games">
+      <h3 class="similar-games-title">You might also like</h3>
+      <div class="similar-games-grid" id="similar-games-grid"></div>
+    </div>
+    <script>
+      fetch('../games-index.json')
+        .then(r => r.json())
+        .then(games => {
+          const currentSlug = 'mr-shooter';
+          const currentCategory = 'Arcade';
+          let matches = games.filter(g => g.category === currentCategory && g.slug !== currentSlug);
+          matches = matches.sort(() => 0.5 - Math.random());
+          if (matches.length < 4) {
+            const others = games.filter(g => g.slug !== currentSlug && !matches.some(m => m.slug === g.slug));
+            matches = matches.concat(others.sort(() => 0.5 - Math.random()).slice(0, 4 - matches.length));
+          }
+          matches = matches.slice(0, 4);
+          const grid = document.getElementById('similar-games-grid');
+          matches.forEach(g => {
+            const a = document.createElement('a');
+            a.className = 'similar-card';
+            a.href = g.slug + '.html';
+            a.innerHTML = '<img src="' + g.thumbnail + '" alt="" loading="lazy"><span>' + g.title + '</span>';
+            grid.appendChild(a);
+          });
+        })
+        .catch(() => {});
+    </script>
   </div>
 </div>
 </body>

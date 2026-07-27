@@ -132,7 +132,91 @@ a { color: inherit; }
   font-weight: 600;
 }
 
-/* ---------- Header ---------- */
+/* ---------- Similar games recommendations (per game page) ---------- */
+
+.similar-games {
+  width: 100%;
+  max-width: 480px;
+  margin-top: 8px;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.similar-games-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  color: var(--paper);
+  margin: 0 0 10px;
+}
+
+.similar-games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 8px;
+}
+
+.similar-card {
+  text-decoration: none;
+  color: var(--paper);
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.similar-card:hover { transform: translateY(-2px); border-color: var(--teal); }
+
+.similar-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+.similar-card span {
+  font-size: 10.5px;
+  padding: 5px 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---------- Hero "trending" pop-in widget ---------- */
+
+.hero-trending {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 4px 0 8px;
+}
+
+.hero-trending-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 14px 6px 6px;
+  text-decoration: none;
+  color: var(--paper);
+  font-size: 12.5px;
+  opacity: 0;
+  animation: pop-in 0.4s ease forwards;
+}
+
+.hero-trending-card:hover { border-color: var(--teal); background: var(--panel-2); }
+.hero-trending-card img { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; }
+
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(0.8) translateY(6px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
 
 .site-header {
   display: flex;
@@ -570,6 +654,28 @@ button.action:hover { background: var(--sprout-lt); }
   .grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; }
   .hero-inner { flex-direction: column; gap: 12px; }
   .hero-logo { width: 90px; max-width: 30vw; align-self: flex-end; margin-top: -60px; }
+
+  /* Embedded games get real height on mobile/tablet instead of being
+     squeezed by a fixed aspect-ratio — this is what was causing games to
+     render too small for their own "rotate/fullscreen" logic to properly
+     detect a usable screen size. */
+  .embed-frame-wrap {
+    max-width: 100%;
+    aspect-ratio: unset;
+    height: 65vh;
+    min-height: 380px;
+  }
+}
+
+/* Fullscreen: the game genuinely fills the entire screen, overriding the
+   aspect-ratio/height constraints above, matching whatever orientation
+   the device is actually in. */
+.embed-frame-wrap:fullscreen,
+.embed-frame-wrap:-webkit-full-screen {
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: 100vw !important;
+  aspect-ratio: unset !important;
 }
 
 @media (max-width: 480px) {

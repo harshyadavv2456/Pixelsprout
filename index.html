@@ -45,6 +45,7 @@
   <div class="wrap hero-inner">
     <div class="hero-text">
       <h1>One tab.<br><span class="accent">Every game.</span></h1>
+      <div class="hero-trending" id="hero-trending" aria-label="Randomly featured games"></div>
     </div>
     <img class="hero-logo" src="assets/logo-full.png" alt="Pixelsprout">
   </div>
@@ -27181,12 +27182,13 @@
 
   
   
+  
   <p id="no-results" class="no-results" hidden>No games match "<span id="no-results-term"></span>". Try a different search.</p>
 
 </main>
 
 <footer class="site-footer">
-  <span>© Pixelsprout — Play. Grow. Explore.</span>
+  <span>© Pixelsprout — Play. Grow. Explore. Some games provided via GamePix.</span>
   <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
 </footer>
 
@@ -27242,6 +27244,22 @@
       track.appendChild(span);
     });
   } catch (err) { console.error('Marquee setup failed:', err); }
+
+  try {
+    const trendingEl = document.getElementById('hero-trending');
+    const sample = cards.slice().sort(() => 0.5 - Math.random()).slice(0, 3);
+    sample.forEach((card, i) => {
+      const img = card.querySelector('img');
+      const title = card.querySelector('h3');
+      if (!title) return;
+      const a = document.createElement('a');
+      a.className = 'hero-trending-card';
+      a.href = card.getAttribute('href');
+      a.style.animationDelay = (i * 0.12) + 's';
+      a.innerHTML = (img ? '<img src="' + img.src + '" alt="">' : '') + '<span>' + title.textContent + '</span>';
+      trendingEl.appendChild(a);
+    });
+  } catch (err) { console.error('Hero trending setup failed:', err); }
 
   try {
     const sidebarToggle = document.getElementById('sidebar-toggle');

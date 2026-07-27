@@ -38,7 +38,7 @@
 <div class="game-shell">
   <a class="back-link" href="../index.html">← back to Pixelsprout</a>
   <h1 class="game-title">Mountain Bike Challenge</h1>
-  <div class="game-meta">Bike · hosted via GamePix</div>
+  <div class="game-meta">Bike</div>
 
   <div class="game-board-frame">
     <div class="embed-frame-wrap">
@@ -54,7 +54,35 @@
       }
     ">⛶ Fullscreen</button>
     <p class="how-to">Conquer rugged mountains and master exhilarating trails in Mountain Bike Challenge. Navigate dynamic terrains with intuitive controls as you balance speed and precision. Experience the thrill of racing the clock, perfecting your technique, and overcoming every obstacle in this gripping, physics-driven biking adventure. Each ride promises a new, adrenaline-fueled challenge.</p>
-    <p class="source-note">Game provided via GamePix</p>
+
+    <div class="similar-games">
+      <h3 class="similar-games-title">You might also like</h3>
+      <div class="similar-games-grid" id="similar-games-grid"></div>
+    </div>
+    <script>
+      fetch('../games-index.json')
+        .then(r => r.json())
+        .then(games => {
+          const currentSlug = 'mountain-bike-challenge';
+          const currentCategory = 'Bike';
+          let matches = games.filter(g => g.category === currentCategory && g.slug !== currentSlug);
+          matches = matches.sort(() => 0.5 - Math.random());
+          if (matches.length < 4) {
+            const others = games.filter(g => g.slug !== currentSlug && !matches.some(m => m.slug === g.slug));
+            matches = matches.concat(others.sort(() => 0.5 - Math.random()).slice(0, 4 - matches.length));
+          }
+          matches = matches.slice(0, 4);
+          const grid = document.getElementById('similar-games-grid');
+          matches.forEach(g => {
+            const a = document.createElement('a');
+            a.className = 'similar-card';
+            a.href = g.slug + '.html';
+            a.innerHTML = '<img src="' + g.thumbnail + '" alt="" loading="lazy"><span>' + g.title + '</span>';
+            grid.appendChild(a);
+          });
+        })
+        .catch(() => {});
+    </script>
   </div>
 </div>
 </body>

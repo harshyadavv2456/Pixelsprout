@@ -77,14 +77,50 @@ GAME_PAGE_TEMPLATE = """<!DOCTYPE html>
 <div class="game-shell">
   <a class="back-link" href="../index.html">← back to Pixelsprout</a>
   <h1 class="game-title">{title}</h1>
-  <div class="game-meta">{category} · hosted via GamePix</div>
+  <div class="game-meta">{category}</div>
 
   <div class="game-board-frame">
     <div class="embed-frame-wrap">
-      <iframe src="{embed_url}" scrolling="no" allowfullscreen title="{title}"></iframe>
+      <iframe src="{embed_url}" allow="fullscreen; autoplay; screen-orientation;" scrolling="no" allowfullscreen title="{title}"></iframe>
     </div>
+    <button class="action fullscreen-btn" onclick="
+      const f = document.querySelector('.embed-frame-wrap');
+      const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
+      if (req) req.call(f);
+      if (screen.orientation && screen.orientation.lock) {{
+        screen.orientation.lock('landscape').catch(() => {{}});
+      }}
+    ">⛶ Fullscreen</button>
     <p class="how-to">{description}</p>
-    <p class="source-note">Game provided via GamePix</p>
+
+    <div class="similar-games">
+      <h3 class="similar-games-title">You might also like</h3>
+      <div class="similar-games-grid" id="similar-games-grid"></div>
+    </div>
+    <script>
+      fetch('../games-index.json')
+        .then(r => r.json())
+        .then(games => {{
+          const currentSlug = '{slug}';
+          const currentCategory = '{category}';
+          let matches = games.filter(g => g.category === currentCategory && g.slug !== currentSlug);
+          matches = matches.sort(() => 0.5 - Math.random());
+          if (matches.length < 4) {{
+            const others = games.filter(g => g.slug !== currentSlug && !matches.some(m => m.slug === g.slug));
+            matches = matches.concat(others.sort(() => 0.5 - Math.random()).slice(0, 4 - matches.length));
+          }}
+          matches = matches.slice(0, 4);
+          const grid = document.getElementById('similar-games-grid');
+          matches.forEach(g => {{
+            const a = document.createElement('a');
+            a.className = 'similar-card';
+            a.href = g.slug + '.html';
+            a.innerHTML = '<img src="' + g.thumbnail + '" alt="" loading="lazy"><span>' + g.title + '</span>';
+            grid.appendChild(a);
+          }});
+        }})
+        .catch(() => {{}});
+    </script>
   </div>
 </div>
 </body>
@@ -163,10 +199,29 @@ def build_game_page(game):
         category=game["category"],
         embed_url=game["embed_url"],
         description=game["description"],
+        slug=game["slug"],
     )
     path = f"{GAMES_DIR}/{game['slug']}.html"
     with open(path, "w", encoding='utf-8') as f:
         f.write(html)
+    update_games_index(game)
+
+
+def update_games_index(game):
+    index_path = "games-index.json"
+    try:
+        with open(index_path, encoding='utf-8') as f:
+            games_list = json.load(f)
+    except FileNotFoundError:
+        games_list = []
+    games_list.append({
+        "slug": game["slug"],
+        "title": game["title"],
+        "category": game["category"],
+        "thumbnail": game["thumbnail"],
+    })
+    with open(index_path, "w", encoding='utf-8') as f:
+        json.dump(games_list, f)
 
 
 def add_card_to_index(game):
