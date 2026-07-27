@@ -1,32 +1,31 @@
-/* Pixelsprout — Arcade Marquee design system
-   Ink (bg):       #15120F
-   Panel:          #211C17
-   Marquee gold:   #E7A94C
-   Signal red:     #D6553A
-   Cabinet teal:   #3E8073
-   Paper (text):   #EFE6D3
-   Muted:          #9C9284
+/* Pixelsprout — design system, built from the logo
+   Space navy:     #0B0E1A
+   Sprout green:   #7ED957
+   Star gold:      #F5B942
+   Heart pink:     #FF6B9D
+   Sky blue:       #4FC3F7
+   Paper (text):   #EAF2FF
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
-  --ink: #15120F;
-  --panel: #211C17;
-  --panel-2: #2B241C;
-  --paper: #EFE6D3;
-  --muted: #9C9284;
-  --gold: #E7A94C;
-  --signal: #D6553A;
-  --teal: #3E8073;
-  --border: #3a3126;
+  --ink: #0B0E1A;
+  --panel: #141A2E;
+  --panel-2: #1C2540;
+  --paper: #EAF2FF;
+  --muted: #8A93B8;
+  --gold: #F5B942;
+  --signal: #FF6B9D;
+  --teal: #7ED957;
+  --blue: #4FC3F7;
+  --border: #263156;
 
-  /* legacy aliases so existing game pages (2048/memory/snake/tictactoe)
-     that reference the old token names keep working without edits */
+  /* legacy aliases so existing game pages keep working without edits */
   --soil: var(--ink);
   --soil-2: var(--panel);
   --sprout: var(--teal);
-  --sprout-lt: #5FA394;
+  --sprout-lt: #9BE87A;
   --amber: var(--gold);
   --rust: var(--signal);
 }
@@ -37,9 +36,12 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background: var(--ink);
+  background-image: radial-gradient(circle at 15% 0%, #16204a 0%, transparent 45%),
+                     radial-gradient(circle at 90% 15%, #1a1440 0%, transparent 40%);
   color: var(--paper);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.5;
+  min-height: 100vh;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -49,13 +51,15 @@ body {
 a { color: inherit; }
 .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
 
+.pixel { font-family: 'Press Start 2P', 'IBM Plex Mono', monospace; }
+
 /* ---------- Header ---------- */
 
 .site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 26px 24px;
+  padding: 20px 24px;
   max-width: 1120px;
   margin: 0 auto;
 }
@@ -69,76 +73,86 @@ a { color: inherit; }
 }
 
 .logo-mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
-  background: var(--gold);
-  color: var(--ink);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 18px;
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  image-rendering: pixelated;
 }
 
 .logo-word {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 19px;
-  letter-spacing: 0.02em;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.01em;
 }
+
+.logo-word .sprout-part { color: var(--teal); }
 
 .tagline {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 11px;
-  color: var(--muted);
-  letter-spacing: 0.08em;
+  color: var(--blue);
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 /* ---------- Hero ---------- */
 
-.hero { padding: 40px 24px 0; }
+.hero { padding: 30px 24px 0; }
 
-.hero h1 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: clamp(36px, 6vw, 60px);
-  line-height: 1.04;
-  letter-spacing: -0.01em;
-  margin: 0 0 16px;
-  max-width: 760px;
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-.hero h1 .accent { color: var(--gold); }
+.hero-text { flex: 1; min-width: 280px; }
+
+.hero-logo {
+  width: 220px;
+  max-width: 40vw;
+  image-rendering: pixelated;
+}
+
+.hero h1 {
+  font-family: 'Press Start 2P', monospace;
+  font-weight: 400;
+  font-size: clamp(18px, 3.4vw, 30px);
+  line-height: 1.6;
+  letter-spacing: 0;
+  margin: 0 0 18px;
+  max-width: 620px;
+}
+
+.hero h1 .accent { color: var(--teal); }
 
 .hero p {
-  max-width: 560px;
+  max-width: 540px;
   color: var(--muted);
-  font-size: 17px;
-  margin: 0 0 26px;
+  font-size: 16px;
+  margin: 0 0 22px;
 }
 
 .hero-stats {
   display: flex;
-  gap: 32px;
+  gap: 30px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 12px;
   color: var(--muted);
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 }
 
 .hero-stats strong {
   color: var(--paper);
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 22px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 16px;
   display: block;
-  font-weight: 700;
+  margin-bottom: 4px;
 }
 
-/* ---------- Marquee ticker (signature element) ---------- */
+/* ---------- Marquee ticker ---------- */
 
 .marquee {
   border-top: 1px solid var(--border);
@@ -147,6 +161,7 @@ a { color: inherit; }
   overflow: hidden;
   white-space: nowrap;
   margin-bottom: 8px;
+  margin-top: 20px;
 }
 
 .marquee-track {
@@ -165,9 +180,10 @@ a { color: inherit; }
 }
 
 .marquee-track span::after {
-  content: '•';
+  content: '★';
   color: var(--muted);
   margin-left: 28px;
+  font-size: 10px;
 }
 
 @keyframes scroll-marquee {
@@ -218,7 +234,7 @@ a { color: inherit; }
 }
 
 .search-box input::placeholder { color: var(--muted); }
-.search-box input:focus { border-color: var(--gold); }
+.search-box input:focus { border-color: var(--teal); }
 
 .result-count {
   font-family: 'IBM Plex Mono', monospace;
@@ -254,9 +270,9 @@ a { color: inherit; }
 .category.signal .bar { background: var(--signal); }
 
 .category h2 {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 20px;
+  font-family: 'Press Start 2P', monospace;
+  font-weight: 400;
+  font-size: 15px;
   margin: 0;
   color: var(--paper);
 }
@@ -291,12 +307,12 @@ a { color: inherit; }
 
 .card:hover, .card:focus-visible {
   transform: translateY(-2px);
-  border-color: var(--gold);
+  border-color: var(--teal);
   background: var(--panel-2);
   outline: none;
 }
 
-.card:focus-visible { box-shadow: 0 0 0 2px var(--gold); }
+.card:focus-visible { box-shadow: 0 0 0 2px var(--teal); }
 
 .icon-tile {
   width: 46px;
@@ -312,14 +328,15 @@ a { color: inherit; }
 .icon-tile svg { width: 24px; height: 24px; }
 
 .icon-tile.gold { background: var(--gold); }
-.icon-tile.teal { background: var(--teal); color: var(--paper); }
+.icon-tile.teal { background: var(--teal); }
 .icon-tile.signal { background: var(--signal); color: var(--paper); }
 
 .card-body h3 {
-  margin: 0 0 3px;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
+  margin: 0 0 4px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
 }
 
 .card-body p {
@@ -345,7 +362,7 @@ a { color: inherit; }
 }
 
 .site-footer a { color: var(--muted); text-decoration: underline; }
-.site-footer a:hover { color: var(--gold); }
+.site-footer a:hover { color: var(--teal); }
 
 /* ---------- Game page shell ---------- */
 
@@ -369,10 +386,11 @@ a { color: inherit; }
 .back-link:hover { color: var(--gold); }
 
 .game-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 28px;
-  margin: 0 0 6px;
+  font-family: 'Press Start 2P', monospace;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 0 10px;
 }
 
 .game-meta {
@@ -411,7 +429,7 @@ button.action {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  background: var(--gold);
+  background: var(--teal);
   color: var(--ink);
   border: none;
   border-radius: 6px;
@@ -421,7 +439,7 @@ button.action {
   font-weight: 500;
 }
 
-button.action:hover { background: #f0bb6c; }
+button.action:hover { background: var(--sprout-lt); }
 
 .how-to {
   margin-top: 18px;
