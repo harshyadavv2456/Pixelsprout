@@ -35,28 +35,42 @@
 
 <main class="wrap">
 
-  <div class="category gold">
+  <div class="search-row">
+    <div class="search-box">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20L16.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input type="text" id="search" placeholder="Search games..." autocomplete="off">
+    </div>
+    <span id="result-count" class="result-count">8 games</span>
+  </div>
+
+  <div class="category gold" data-section>
     <span class="bar"></span>
     <h2>Puzzle</h2>
     <span class="count">3 games</span>
   </div>
-  <div class="grid">
-    <a class="card" href="games/2048.html">
-      <span class="mono gold">20</span>
+  <div class="grid" data-grid>
+    <a class="card" href="games/2048.html" data-name="2048">
+      <span class="icon-tile gold">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" rx="1.5" fill="currentColor"/><rect x="13" y="3" width="8" height="8" rx="1.5" fill="currentColor" opacity="0.55"/><rect x="3" y="13" width="8" height="8" rx="1.5" fill="currentColor" opacity="0.55"/><rect x="13" y="13" width="8" height="8" rx="1.5" fill="currentColor"/></svg>
+      </span>
       <div class="card-body">
         <h3>2048</h3>
         <p>Slide and merge tiles to reach the 2048 tile.</p>
       </div>
     </a>
-    <a class="card" href="games/memory.html">
-      <span class="mono gold">MM</span>
+    <a class="card" href="games/memory.html" data-name="memory match">
+      <span class="icon-tile gold">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="9" height="14" rx="2" fill="currentColor" opacity="0.55" transform="rotate(-8 7.5 12)"/><rect x="12" y="5" width="9" height="14" rx="2" fill="currentColor" transform="rotate(8 16.5 12)"/></svg>
+      </span>
       <div class="card-body">
         <h3>Memory Match</h3>
         <p>Flip pairs, clear the board in the fewest moves.</p>
       </div>
     </a>
-    <a class="card" href="games/minesweeper.html">
-      <span class="mono gold">MS</span>
+    <a class="card" href="games/minesweeper.html" data-name="minesweeper">
+      <span class="icon-tile gold">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/><line x1="9" y1="3" x2="9" y2="21" stroke="currentColor" stroke-width="1.2" opacity="0.5"/><line x1="15" y1="3" x2="15" y2="21" stroke="currentColor" stroke-width="1.2" opacity="0.5"/><line x1="3" y1="9" x2="21" y2="9" stroke="currentColor" stroke-width="1.2" opacity="0.5"/><line x1="3" y1="15" x2="21" y2="15" stroke="currentColor" stroke-width="1.2" opacity="0.5"/><path d="M6 12 L6 6 L10 8Z" fill="currentColor"/></svg>
+      </span>
       <div class="card-body">
         <h3>Minesweeper</h3>
         <p>Clear the field without triggering a mine.</p>
@@ -64,28 +78,34 @@
     </a>
   </div>
 
-  <div class="category teal">
+  <div class="category teal" data-section>
     <span class="bar"></span>
     <h2>Arcade</h2>
     <span class="count">3 games</span>
   </div>
-  <div class="grid">
-    <a class="card" href="games/snake.html">
-      <span class="mono teal">SN</span>
+  <div class="grid" data-grid>
+    <a class="card" href="games/snake.html" data-name="snake">
+      <span class="icon-tile teal">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 8h9a4 4 0 010 8H8a3 3 0 010-6h6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="19" cy="6" r="2" fill="currentColor"/></svg>
+      </span>
       <div class="card-body">
         <h3>Snake</h3>
         <p>Grow your trail. Don't cross yourself.</p>
       </div>
     </a>
-    <a class="card" href="games/flappy.html">
-      <span class="mono teal">FH</span>
+    <a class="card" href="games/flappy.html" data-name="flappy hop">
+      <span class="icon-tile teal">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="10" cy="12" r="5" fill="currentColor"/><path d="M14 9c3-2 6-1 7 1-3 1-5 0-7-1z" fill="currentColor" opacity="0.6"/><circle cx="12" cy="10" r="1" fill="var(--panel)"/></svg>
+      </span>
       <div class="card-body">
         <h3>Flappy Hop</h3>
         <p>One tap, one rhythm, one high score.</p>
       </div>
     </a>
-    <a class="card" href="games/tetris.html">
-      <span class="mono teal">SB</span>
+    <a class="card" href="games/tetris.html" data-name="stackblocks tetris">
+      <span class="icon-tile teal">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="13" width="6" height="6" fill="currentColor"/><rect x="9" y="13" width="6" height="6" fill="currentColor" opacity="0.6"/><rect x="9" y="7" width="6" height="6" fill="currentColor" opacity="0.6"/><rect x="15" y="13" width="6" height="6" fill="currentColor"/></svg>
+      </span>
       <div class="card-body">
         <h3>Stackblocks</h3>
         <p>Rotate, drop, and clear lines before it fills.</p>
@@ -93,27 +113,33 @@
     </a>
   </div>
 
-  <div class="category signal">
+  <div class="category signal" data-section>
     <span class="bar"></span>
     <h2>Strategy</h2>
     <span class="count">2 games</span>
   </div>
-  <div class="grid">
-    <a class="card" href="games/tictactoe.html">
-      <span class="mono signal">TT</span>
+  <div class="grid" data-grid>
+    <a class="card" href="games/tictactoe.html" data-name="tic tac toe">
+      <span class="icon-tile signal">
+        <svg viewBox="0 0 24 24" fill="none"><line x1="9" y1="3" x2="9" y2="21" stroke="currentColor" stroke-width="1.6"/><line x1="15" y1="3" x2="15" y2="21" stroke="currentColor" stroke-width="1.6"/><line x1="3" y1="9" x2="21" y2="9" stroke="currentColor" stroke-width="1.6"/><line x1="3" y1="15" x2="21" y2="15" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 4.5l3 3M7.5 4.5l-3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="18" cy="6" r="2.1" stroke="currentColor" stroke-width="1.8"/></svg>
+      </span>
       <div class="card-body">
         <h3>Tic-Tac-Toe</h3>
         <p>Two players, one grid, quick matches.</p>
       </div>
     </a>
-    <a class="card" href="games/pong.html">
-      <span class="mono signal">RL</span>
+    <a class="card" href="games/pong.html" data-name="rally pong">
+      <span class="icon-tile signal">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="2.4" height="9" rx="1" fill="currentColor"/><rect x="18.6" y="9" width="2.4" height="9" rx="1" fill="currentColor"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>
+      </span>
       <div class="card-body">
         <h3>Rally</h3>
         <p>Paddle vs. CPU. First to seven wins.</p>
       </div>
     </a>
   </div>
+
+  <p id="no-results" class="no-results" hidden>No games match "<span id="no-results-term"></span>". Try a different search.</p>
 
 </main>
 
@@ -125,11 +151,43 @@
 <script>
   const names = ['2048','MEMORY MATCH','MINESWEEPER','SNAKE','FLAPPY HOP','STACKBLOCKS','TIC-TAC-TOE','RALLY'];
   const track = document.getElementById('marquee-track');
-  const doubled = [...names, ...names]; // duplicate for seamless loop
-  doubled.forEach(n => {
+  [...names, ...names].forEach(n => {
     const span = document.createElement('span');
     span.textContent = n;
     track.appendChild(span);
+  });
+
+  const searchInput = document.getElementById('search');
+  const cards = Array.from(document.querySelectorAll('.card'));
+  const sections = Array.from(document.querySelectorAll('[data-section]'));
+  const grids = Array.from(document.querySelectorAll('[data-grid]'));
+  const resultCount = document.getElementById('result-count');
+  const noResults = document.getElementById('no-results');
+  const noResultsTerm = document.getElementById('no-results-term');
+
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.trim().toLowerCase();
+    let visible = 0;
+
+    cards.forEach(card => {
+      const match = card.dataset.name.includes(q);
+      card.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+
+    grids.forEach((grid, i) => {
+      const anyVisible = Array.from(grid.children).some(c => c.style.display !== 'none');
+      grid.style.display = anyVisible ? '' : 'none';
+      sections[i].style.display = anyVisible ? '' : 'none';
+    });
+
+    resultCount.textContent = visible + (visible === 1 ? ' game' : ' games');
+    if (visible === 0) {
+      noResults.hidden = false;
+      noResultsTerm.textContent = searchInput.value.trim();
+    } else {
+      noResults.hidden = true;
+    }
   });
 </script>
 

@@ -175,6 +175,65 @@ a { color: inherit; }
   to { transform: translateX(-50%); }
 }
 
+/* ---------- Search ---------- */
+
+.search-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  position: relative;
+  flex: 1;
+  min-width: 220px;
+  max-width: 420px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.search-box input {
+  width: 100%;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 11px 14px 11px 38px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--paper);
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.search-box input::placeholder { color: var(--muted); }
+.search-box input:focus { border-color: var(--gold); }
+
+.result-count {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.no-results {
+  color: var(--muted);
+  font-size: 14px;
+  padding: 30px 0;
+  text-align: center;
+}
+
 /* ---------- Genre sections ---------- */
 
 .category {
@@ -239,23 +298,22 @@ a { color: inherit; }
 
 .card:focus-visible { box-shadow: 0 0 0 2px var(--gold); }
 
-.mono {
-  width: 44px;
-  height: 44px;
-  min-width: 44px;
-  border-radius: 8px;
+.icon-tile {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  border-radius: 9px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
   color: var(--ink);
 }
 
-.mono.gold { background: var(--gold); }
-.mono.teal { background: var(--teal); color: var(--paper); }
-.mono.signal { background: var(--signal); color: var(--paper); }
+.icon-tile svg { width: 24px; height: 24px; }
+
+.icon-tile.gold { background: var(--gold); }
+.icon-tile.teal { background: var(--teal); color: var(--paper); }
+.icon-tile.signal { background: var(--signal); color: var(--paper); }
 
 .card-body h3 {
   margin: 0 0 3px;
