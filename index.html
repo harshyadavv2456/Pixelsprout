@@ -26,7 +26,7 @@
       <h1>One tab.<br><span class="accent">Every game.</span></h1>
       <p>Pixelsprout is a free browser gaming library, built to hold every genre — arcade, puzzle, strategy, and whatever's next. No installs, no accounts, no App Store. Click and you're playing.</p>
       <div class="hero-stats">
-        <div><strong id="game-count">9</strong>games live</div>
+        <div><strong id="game-count">12</strong>games live</div>
         <div><strong>4</strong>genres</div>
         <div><strong>0</strong>installs required</div>
       </div>
@@ -162,6 +162,57 @@
     </a>
   </div>
 
+  <div class="category gold" data-section>
+    <span class="bar"></span>
+    <h2>Hidden-Object</h2>
+    <span class="count">1 game</span>
+  </div>
+  <div class="grid" data-grid>
+    <a class="card" href="games/twin-peeks.html" data-name="twin peeks">
+      <span class="icon-tile gold" style="padding:0; overflow:hidden;">
+        <img src="https://img.gamepix.com/games/twin-peeks/cover/twin-peeks.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;">
+      </span>
+      <div class="card-body">
+        <h3>Twin Peeks</h3>
+        <p></p>
+      </div>
+    </a>
+  </div>
+
+  <div class="category gold" data-section>
+    <span class="bar"></span>
+    <h2>Match-3</h2>
+    <span class="count">1 game</span>
+  </div>
+  <div class="grid" data-grid>
+    <a class="card" href="games/prism-match-3d.html" data-name="prism match 3d">
+      <span class="icon-tile gold" style="padding:0; overflow:hidden;">
+        <img src="https://img.gamepix.com/games/prism-match-3d/cover/prism-match-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;">
+      </span>
+      <div class="card-body">
+        <h3>Prism Match 3D</h3>
+        <p>Dive into a mesmerizing 3D cube universe where vibrant prisms challeng...</p>
+      </div>
+    </a>
+  </div>
+
+  <div class="category gold" data-section>
+    <span class="bar"></span>
+    <h2>2048</h2>
+    <span class="count">1 game</span>
+  </div>
+  <div class="grid" data-grid>
+    <a class="card" href="games/merge-royal.html" data-name="merge royal">
+      <span class="icon-tile gold" style="padding:0; overflow:hidden;">
+        <img src="https://img.gamepix.com/games/merge-royal/cover/merge-royal.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;">
+      </span>
+      <div class="card-body">
+        <h3>Merge Royal</h3>
+        <p>Dive into Merge Royal, where Solitaire strategy meets 2048 thrill. Eff...</p>
+      </div>
+    </a>
+  </div>
+
   <p id="no-results" class="no-results" hidden>No games match "<span id="no-results-term"></span>". Try a different search.</p>
 
 </main>
@@ -172,7 +223,7 @@
 </footer>
 
 <script>
-  const names = ['2048','MEMORY MATCH','MINESWEEPER','SNAKE','FLAPPY HOP','STACKBLOCKS','TIC-TAC-TOE','RALLY','BUS DRIVER SIMULATOR 3D'];
+  const names = ['2048','MEMORY MATCH','MINESWEEPER','SNAKE','FLAPPY HOP','STACKBLOCKS','TIC-TAC-TOE','RALLY','BUS DRIVER SIMULATOR 3D','TWIN PEEKS','PRISM MATCH 3D','MERGE ROYAL'];
   const track = document.getElementById('marquee-track');
   [...names, ...names].forEach(n => {
     const span = document.createElement('span');

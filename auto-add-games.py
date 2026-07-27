@@ -90,14 +90,14 @@ def slugify(title):
 
 def load_tracking():
     try:
-        with open(TRACKING_FILE) as f:
+        with open(TRACKING_FILE, encoding='utf-8') as f:
             return json.load(f)
     except FileNotFoundError:
         return {"added_ids": []}
 
 
 def save_tracking(data):
-    with open(TRACKING_FILE, "w") as f:
+    with open(TRACKING_FILE, "w", encoding='utf-8') as f:
         json.dump(data, f, indent=2)
 
 
@@ -139,55 +139,64 @@ def build_game_page(game):
         description=game["description"],
     )
     path = f"{GAMES_DIR}/{game['slug']}.html"
-    with open(path, "w") as f:
+    with open(path, "w", encoding='utf-8') as f:
         f.write(html)
     return path
 
 
 def add_card_to_index(game):
-    with open(INDEX_FILE) as f:
+    with open(INDEX_FILE, encoding='utf-8') as f:
         index_html = f.read()
 
+    category_heading = f"<h2>{game['category']}</h2>"
+    existing_category = category_heading in index_html
+
+    if existing_category:
+        # Look up the color already used by this category's section, so the
+        # new card matches the section it's being dropped into.
+        section_pattern = re.compile(
+            r'<div class="category (\w+)" data-section>\s*<span class="bar"></span>\s*'
+            + re.escape(category_heading)
+        )
+        section_match = section_pattern.search(index_html)
+        game["color"] = section_match.group(1) if section_match else CATEGORY_COLORS[0]
+    else:
+        used_colors = re.findall(r'class="category (\w+)"', index_html)
+        game["color"] = CATEGORY_COLORS[len(set(used_colors)) % len(CATEGORY_COLORS)]
+
+    short_desc = game['description'][:70] + ('...' if len(game['description']) > 70 else '')
     card_html = f'''    <a class="card" href="games/{game['slug']}.html" data-name="{game['title'].lower()}">
       <span class="icon-tile {game['color']}" style="padding:0; overflow:hidden;">
         <img src="{game['thumbnail']}" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;">
       </span>
       <div class="card-body">
         <h3>{game['title']}</h3>
-        <p>{game['description'][:70]}{'...' if len(game['description']) > 70 else ''}</p>
+        <p>{short_desc}</p>
       </div>
     </a>
 '''
 
-    category_heading = f"<h2>{game['category']}</h2>"
-
-    if category_heading in index_html:
-        # Existing category — insert card into that grid, bump the count
-        pattern = re.compile(
-            re.escape(category_heading) + r'(.*?<span class="count">)(\d+)( games?</span>.*?<div class="grid" data-grid>\n)',
+    if existing_category:
+        # Insert the card right after this category's <div class="grid" data-grid>
+        # opening tag, and bump its displayed count by 1.
+        grid_pattern = re.compile(
+            re.escape(category_heading) + r'.*?<span class="count">(\d+)( games?)</span>.*?<div class="grid" data-grid>\n',
             re.DOTALL,
         )
-        match = pattern.search(index_html)
+        match = grid_pattern.search(index_html)
         if match:
-            new_count = int(match.group(2)) + 1
-            replacement = match.group(1) + str(new_count) + " games</span>" + match.group(3) + card_html
-            index_html = pattern.sub(re.escape(replacement).replace("\\", ""), index_html, count=1)
+            new_count = int(match.group(1)) + 1
+            plural = " games" if new_count != 1 else " game"
+            block = match.group(0)
+            block = block.replace(f'{match.group(1)}{match.group(2)}</span>', f'{new_count}{plural}</span>', 1)
+            index_html = (
+                index_html[:match.start()]
+                + block
+                + card_html
+                + index_html[match.end():]
+            )
     else:
-        # New category — create a fresh section before the no-results marker
-        used_colors = re.findall(r'class="category (\w+)"', index_html)
-        color = CATEGORY_COLORS[len(set(used_colors)) % len(CATEGORY_COLORS)]
-        game["color"] = color
-        card_html = f'''    <a class="card" href="games/{game['slug']}.html" data-name="{game['title'].lower()}">
-      <span class="icon-tile {color}" style="padding:0; overflow:hidden;">
-        <img src="{game['thumbnail']}" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;">
-      </span>
-      <div class="card-body">
-        <h3>{game['title']}</h3>
-        <p>{game['description'][:70]}{'...' if len(game['description']) > 70 else ''}</p>
-      </div>
-    </a>
-'''
-        new_section = f'''  <div class="category {color}" data-section>
+        new_section = f'''  <div class="category {game['color']}" data-section>
     <span class="bar"></span>
     <h2>{game['category']}</h2>
     <span class="count">1 game</span>
@@ -215,16 +224,16 @@ def add_card_to_index(game):
         new_names = marquee_match.group(1) + f",'{game['title'].upper()}'"
         index_html = index_html.replace(marquee_match.group(0), f"const names = [{new_names}];", 1)
 
-    with open(INDEX_FILE, "w") as f:
+    with open(INDEX_FILE, "w", encoding='utf-8') as f:
         f.write(index_html)
 
 
 def add_to_sitemap(game):
-    with open(SITEMAP_FILE) as f:
+    with open(SITEMAP_FILE, encoding='utf-8') as f:
         sitemap = f.read()
     new_url = f'  <url><loc>{DOMAIN}/games/{game["slug"]}.html</loc><priority>0.7</priority></url>\n'
     sitemap = sitemap.replace("</urlset>", new_url + "</urlset>")
-    with open(SITEMAP_FILE, "w") as f:
+    with open(SITEMAP_FILE, "w", encoding='utf-8') as f:
         f.write(sitemap)
 
 
