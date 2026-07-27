@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Burrow into the world of Deep Worm, where survival hinges on strategic underground maneuvers. Guide your voracious worm to devour anything on the surface while dodging armed human adversaries. Master when to emerge for a feast and plunge back to safety, ensuring your survival against ever-increasing threats.</p>
 

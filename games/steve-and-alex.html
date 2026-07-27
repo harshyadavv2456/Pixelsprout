@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a daring rescue with Steve as you navigate deadly TNTs and treacherous falls to save Alex. Collect obsidians to form the essential portal, "alexsin," while mastering precise movements. Each step holds adventure, and every decision could mean life or death in this puzzle-filled quest.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide a forgetful mole through twisting tunnels in a race against time to reach home. Rely on your memory and map skills to navigate past dangers and distractions. Enjoy nostalgic pixel-art visuals and increasing challenges as you dig your way back to dinner. Every choice counts!</p>
 

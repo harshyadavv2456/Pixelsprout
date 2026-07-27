@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Water Sort - Color Puzzle Game offers an engaging brain exercise, where you logically sort vibrant liquids into bottles. As levels increase in complexity, the simple controls make it easy to strategize and master the art of color coordination. It’s an endless, colorful challenge that sharpens your mind.</p>
 

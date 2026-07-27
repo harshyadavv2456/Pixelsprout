@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into a whimsical world with Little Cute Summer Fairies Puzzle. Assemble captivating fairy-themed jigsaws, increasing in difficulty as you race against the clock. Enjoy intuitive controls and delightful graphics, delivering both relaxation and excitement with each piece you fit perfectly into place.</p>
 

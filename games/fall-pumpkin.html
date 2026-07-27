@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your creativity in Fall Pumpkin, an engaging arcade puzzle game where you craft and design your own festive masterpieces. With limitless customization, delightful graphics, and intuitive controls, each pumpkin becomes a unique expression of your imagination, offering endless replayability and festive fun for all ages.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Immerse yourself in IT Clicker, a charming simulation where every click means progress. Enhance your efficiency with ClickBoost upgrades, speeding up your journey into an ever-evolving world of productivity. Strategize as clicking transforms into a rhythmic pursuit of growth, blending engaging mechanics with satisfying upgrades.</p>
 

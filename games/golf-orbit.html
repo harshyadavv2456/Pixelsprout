@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner golfer with Golf Orbit, a dynamic twist on traditional golf. Master the power meter to blast balls through zany courses, overcoming quirky obstacles. Customize your golfer, earn rewards, and test your strength as you aim for the green, all with a light-hearted, entertaining spin.</p>
 

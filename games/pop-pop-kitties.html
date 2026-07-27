@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner cat lover in Pop-Pop Kitties, a frantic Match-3 Puzzle Shooter filled with cute challenges. Strategically connect identical cats before they descend or time vanishes. Hone your reflexes, collect stars, and endlessly strive for perfection without harming a single kitty. Can you master all 100+ levels?</p>
 

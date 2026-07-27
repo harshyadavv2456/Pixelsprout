@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner fashionista with Dressing Up The Girl! Customize unique styles using a vibrant array of clothes and accessories. Experiment with funky combinations, then let your style shine in a fun disco dance scene. Perfect for young creatives to express limitless imagination and embrace stylish adventures.</p>
 

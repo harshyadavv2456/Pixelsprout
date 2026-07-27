@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide a vibrant snake to collect matching colored balls and navigate challenging obstacles. Master color-changing gates for new paths, and strategically use power-ups to climb the competitive leaderboard. With its vivid graphics and smooth controls, this game promises quick yet endlessly engaging fun on any device.</p>
 

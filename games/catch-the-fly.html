@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the vivid world of "Catch the Fly," where every tap is a thrilling pursuit. Hone your reflexes as you anticipate the erratic flight of this pesky insect. With vibrant visuals and addictive gameplay, each fast-paced moment tests your precision in this captivating arcade challenge.</p>
 

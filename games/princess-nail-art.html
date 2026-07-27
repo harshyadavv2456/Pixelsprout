@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Indulge in the relaxing world of Princess Nail Art, where creativity and relaxation meet. Customize elegant nail designs on hands and feet using intuitive drag-and-drop tools. Explore a stress-free environment and unleash your artistic side as you pamper with no time limits or scores—just pure, soothing fun.</p>
 

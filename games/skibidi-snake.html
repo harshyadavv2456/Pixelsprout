@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Skibidi Snake, where you guide a number-hungry serpent through vibrant arenas. Dodge obstacles and your own tail while gobbling up numeric treats for a thrilling challenge. With intuitive controls and escalating levels, sharpen your strategic skills in this mesmerizing, arcade-style adventure. How long can you grow?</p>
 

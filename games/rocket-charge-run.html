@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Rocket Charge Run immerses you in a high-speed, futuristic parkour adventure. Dodge treacherous traps like robots and cutting machines, collect vital energy, and boost your rocket's journey through the galaxy. Customize your rockets, aiming for celestial destinations, and break personal records in this exhilarating, out-of-this-world escapade.</p>
 

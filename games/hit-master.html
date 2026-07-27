@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Master the art of precision in Hit Master, where every bullet counts. Strategize angles and ricochet shots in the chaotic Wild West to conquer hordes of outlaws. With limited ammo, careful aiming ensures survival and higher scores. Experiment with varied game modes for unique challenges and explosive fun.</p>
 

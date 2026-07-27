@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Master the art of juggling in Squid Head Kick! Keep the ball airborne using your skillful squid, collecting rewards and power-ups with precise timing. Perfect your rhythm and aim for the ultimate high score in this addictive challenge of dexterity and quick reflexes. Dive into endless fun today!</p>
 

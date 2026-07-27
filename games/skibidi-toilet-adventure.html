@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the wacky world of Skibidi Toilet Adventure, where you'll leap through quirky levels inspired by the Skibidi Toilet meme. Master intuitive controls and enjoy vibrant graphics as you navigate obstacles and snag power-ups, ensuring a comedic and addictive platformer experience for both casual and dedicated gamers.</p>
 

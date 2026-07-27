@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Fall on the Hall delivers a hilarious physics-based experience focused on ragdoll antics. Master the art of timing to propel an unfortunate character down the stairs, watching their comedic, tumbled descent as distance and injury stats pile up. Relish in the absurdity of endless falls with just a click.</p>
 

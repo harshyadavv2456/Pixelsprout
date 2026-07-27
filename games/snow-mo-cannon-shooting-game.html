@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Defend your snowy friends in a winter battlefield! Command a powerful cannon, tapping and dragging to fire against relentless snowball invaders. Strategically upgrade your cannon and sharpen your reflexes to withstand endless waves and challenging boss battles. Can you master the field before the snow bears claim victory?</p>
 

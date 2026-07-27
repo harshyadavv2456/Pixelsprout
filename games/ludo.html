@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Ludo brings a timeless pursuit of strategy and chance to life, where players race to move their tokens home while avoiding being sent back to start. Roll the dice, form strategic blocks, and embrace the thrill of every move in this classic race to victory.</p>
 

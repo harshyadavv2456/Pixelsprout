@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your creativity in Cute Little Dragon Creator, where endless customization lets you design your dream dragon. Use intuitive click-and-drag controls to personalize features like color and accessories, creating a one-of-a-kind companion. Embrace the joy of inventiveness and share your whimsical creations with friends!</p>
 

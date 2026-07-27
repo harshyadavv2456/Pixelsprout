@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Join the energetic Oia Oia cat in a vivid brick-breaking adventure where vibrant visuals and lively meows propel you forward. Master your aim, shatter bricks with precision, and groove through each escalating level, all while soaking up the dynamic, cheering atmosphere for an endlessly fun experience.</p>
 

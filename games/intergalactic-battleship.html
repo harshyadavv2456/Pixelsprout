@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Engage in a cosmic showdown as you outsmart alien forces, strategically locating and destroying enemy ships. Intergalactic Battleship blends timeless board game mechanics with a captivating space theme, delivering immersive strategic battles that are accessible on any device. Save Earth in this thrilling modern twist on a beloved classic.</p>
 

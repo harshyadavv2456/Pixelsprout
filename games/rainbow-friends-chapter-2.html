@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on an anime-inspired RPG journey in Rainbow Friends Chapter 2. Assemble a team of vibrant characters, each with unique abilities, to tackle thrilling quests and uncover a captivating narrative. Forge strong friendships to enhance your strategy as you navigate through puzzles and battles in this colorful adventure.</p>
 

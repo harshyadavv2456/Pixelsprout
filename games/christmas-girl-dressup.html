@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Help a young girl sparkle this holiday season by crafting her dream Christmas outfit. Mix and match clothes, hairstyles, and accessories to create unique, festive styles. Enjoy endless combinations and find inspiration for your own holiday look in this creative and fun-filled dress-up experience for everyone.</p>
 

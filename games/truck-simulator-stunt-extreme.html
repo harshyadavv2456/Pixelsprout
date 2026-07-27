@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the thrill of mastering gravity-defying stunts with powerful custom trucks on daring, impossible courses. Leap over obstacles, perform daring spirals, and conquer sky-high loops. Each track tests your courage and precision, promising an adrenaline-fueled adventure at every turn. Can you rule the road in this extreme driving escapade?</p>
 

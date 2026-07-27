@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the whimsical aquatic world of Fish Clicker, where your taps turn into endless fish! Balance strategy with furious clicking to enhance your collection rate, achieve milestones, and unlock a delightful cascade of aquatic abundance, ensuring the fun never stops even when idle. Can you reach a billion fish?</p>
 

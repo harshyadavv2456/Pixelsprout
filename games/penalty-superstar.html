@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the exhilarating world of Penalty Superstar, where you become the ultimate goalkeeper. Master quick reflexes to block increasingly skilled shots, grow with water bottle boosts, and avoid shrinking potions. Experience endless challenges and lightning-fast fun as you aim to be the best in this unique soccer showdown.</p>
 

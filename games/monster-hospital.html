@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Heal spooky creatures in Monster Hospital as you tackle thrilling mini-games to fix their ailments. Race against time, learn, and have fun while honing your doctoring skills. This accessible and engaging experience lets kids explore the world of medicine in a monster-filled adventure.</p>
 

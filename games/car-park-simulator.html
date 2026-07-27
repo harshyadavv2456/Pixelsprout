@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Master parking precision in Car Park Simulator, where clever maneuvering and strategic planning guide you through 72 intricate levels. Experience realistic car handling through tight spaces and obstacles. Sharpen your skills with intuitive controls, offering a thrilling and addictive challenge for both novice and experienced drivers.</p>
 

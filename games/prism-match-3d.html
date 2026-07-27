@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into a mesmerizing 3D cube universe where vibrant prisms challenge your logic and timing. Rotate and explore intricately designed levels while relaxing your mind. Perfect your skills to conquer endless creative stages, offering a refreshing blend of relaxation and mental exercise.</p>
 

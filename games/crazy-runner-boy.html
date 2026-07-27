@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dodge obstacles and perform daring flips in Crazy Runner Boy, a thrilling arcade experience where speed is key. Navigate a vibrant, fast-paced world, relying on quick reflexes and agile maneuvers to collect coins and boost your score, all while the game accelerates to a breathtaking pace.</p>
 

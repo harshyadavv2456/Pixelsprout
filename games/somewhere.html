@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Enter the minimalist yet challenging world of Somewhere, where every level demands strategic navigation through intricate obstacles. Survive without enemies in a 1-bit universe that tests your timing, patience, and determination. Uncover hidden secrets as you master seven levels with precision and thoughtful execution to succeed.</p>
 

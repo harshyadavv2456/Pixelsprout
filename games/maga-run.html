@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a comical escape as an ex-president in MAGA Run. Master arrow key navigation to collect ballots, dodge the FBI, and use Twitter boosts for speed. With its unique blend of political satire and adventure, this game offers a captivating mix of challenge, humor, and thrilling chase sequences.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Immerse yourself in the vibrant world of Red Coloring Book, where coloring your favorite cartoons becomes an artful adventure. Harness shades of red to enhance your creativity and craft dynamic, vibrant images. This intuitive game not only entertains young artists but also hones their attention to detail.</p>
 

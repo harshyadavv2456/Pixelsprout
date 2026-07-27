@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the enchanting world of Monster Popsy Dolls, where charm meets the eerily delightful. Craft your own captivating creatures with endless fashion choices. Mix, match, and create a unique masterpiece that reflects your style in this whimsical design adventure, pushing creativity to its limits with each combination.</p>
 

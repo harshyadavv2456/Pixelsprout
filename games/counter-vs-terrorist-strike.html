@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into high-stakes commando missions in Counter Vs Terrorist Strike, where quick reflexes and tactical prowess are your keys to survival. Navigate intense battlegrounds, wield an array of powerful weapons, and engage in thrilling gunfights to defeat cunning enemies in both offline and online modes.</p>
 

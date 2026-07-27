@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Maintain composure amidst urban chaos in Traffic.io, as you deftly manage the swirling flow of city traffic. Engage in high-stakes action by tapping to stop or go, ensuring smooth transit without collision. Quick reflexes and strategic thinking are your allies in this escalating traffic frenzy.</p>
 

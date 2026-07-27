@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Create an enchanting world of endless cuteness with Cat Clicker. Start by crafting cat bubbles with each click, and watch your feline universe multiply with strategic upgrades and resets. Fast-paced progression and adorable charm await in this delightful clicker adventure. Ready to bubble over with fun?</p>
 

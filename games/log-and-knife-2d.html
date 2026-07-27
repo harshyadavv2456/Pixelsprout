@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the thrill of precision in Log and Knife 2D. Test your aim as you skillfully launch knives, mastering each level. Challenge yourself to stick every knife into the spinning log and achieve victory through dexterity and timing. Can you become the ultimate knife thrower?</p>
 

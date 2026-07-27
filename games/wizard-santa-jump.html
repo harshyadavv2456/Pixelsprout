@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a festive adventure as Wizard Santa, deftly navigating perilous levels with precision timing. Leap across deadly obstacles, harness momentum, and race against time to complete each stage. Experience the exhilarating mix of danger and cheer, testing your patience and skills in this captivating holiday journey.</p>
 

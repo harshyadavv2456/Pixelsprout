@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Blast through waves of relentless alien foes as a tenacious potato hero in this exhilarating top-down shooter. Juggle up to six weapons, unleash explosive firepower, and make sharp tactical decisions in each dynamic encounter. With endless upgrade paths and character variety, every battle offers fresh and exciting challenges.</p>
 

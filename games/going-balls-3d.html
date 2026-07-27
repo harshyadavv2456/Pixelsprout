@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate a cosmic path in Going Balls 3D, where precision and quick reflexes are key. Maneuver your rolling ball past obstacles, collect gold coins for upgrades, and embrace escalating challenges. With its simple controls and captivating rhythm, this game promises an exhilarating and unpredictable adventure.</p>
 

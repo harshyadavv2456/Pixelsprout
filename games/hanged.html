@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Hanged challenges you to unravel numerical mysteries using your wits and logic. Guess secret numbers, sharpen your deduction skills, and climb the ranks against global competitors. With new levels regularly added, each session demands precision and strategy, offering an ever-evolving mental adventure.</p>
 

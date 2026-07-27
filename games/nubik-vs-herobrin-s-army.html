@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Brave a perilous world as Nubik, crafting and upgrading dynamic weapons to face Herobrine’s army. Utilize strategy and dexterity to rescue your brother and conquer diverse challenges in this pixelated action-packed adventure. Explore, adapt, and survive in thrilling battles filled with ever-evolving foes.</p>
 

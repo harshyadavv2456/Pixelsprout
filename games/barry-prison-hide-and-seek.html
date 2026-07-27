@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Immerse yourself in the thrilling escape of Barry Prison: Hide And Seek! Choose between the cunning escapee or the relentless guard, each with unique skills. Collect seals, evade capture, or hunt down every hider in this intense, heart-pounding chase. Will you outsmart or outdo the opposition?</p>
 

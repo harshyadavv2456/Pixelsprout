@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Race through exhilarating skies in TriSpeed, a thrilling endless flyer. Master speedy maneuvers, dodge obstacles, and collect power-ups to boost your score. Test your reflexes and strive to beat your own records in a relentless race against time. Embark on an adrenaline-filled flight and prove your skills!</p>
 

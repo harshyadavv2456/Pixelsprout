@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Brace yourself for the Wild West in Cowboy Duel Ghost, where gun-slinging showdowns meet undead chaos. Sharpen your aim, switch weapons on the fly, and conquer thrilling shootouts. Navigate rugged landscapes and test your nerve in a gripping quest for survival amid duels, zombies, and relentless action.</p>
 

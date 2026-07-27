@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Pilot a neon plane through thrilling arcade skies in Triangle Way. Experience intense action as vibrant graphics and dynamic obstacles challenge your reflexes. With escalating difficulty and addictive gameplay, aim for high scores and fun while dodging enemies and collecting strategic power-ups. Perfect for endless entertainment!</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Destroy enemy forces and conquer challenging terrain with strategic top-down tank battles in Tanks 2D War and Heroes. Master the controls, upgrade your arsenal, and outmaneuver foes through explosive action. Dominate the battlefield in this thrilling side-scrolling adventure, where your reflexes and tactics will lead to triumph.</p>
 

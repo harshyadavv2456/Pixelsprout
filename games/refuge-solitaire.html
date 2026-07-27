@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Escape into the serene world of Refuge Solitaire, where strategy meets chance. Traverse through Alpine landscapes as you build sequences, mastering the art of stacking from kings to aces. Embrace the thrill of victory against the unpredictable Lady Luck in this relaxing card game.</p>
 

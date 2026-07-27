@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Transform your patient in ASMR Beauty Treatment, merging clinical precision with creative flair. Enjoy soothing ASMR sounds as you address medical needs and unleash your inner stylist. Explore endless fashion possibilities for a captivating makeover experience, blending beauty care with personal expression.</p>
 

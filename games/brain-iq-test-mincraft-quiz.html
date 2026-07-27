@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Test your Minecraft expertise with Brain IQ Test Minecraft Quiz, a fun intellectual challenge. Engage your reasoning and intuition through intriguing trivia and puzzles. Navigate a seamless interface and climb the leaderboard as you prove your mastery of the Minecraft universe. Take the challenge and see how much you really know!</p>
 

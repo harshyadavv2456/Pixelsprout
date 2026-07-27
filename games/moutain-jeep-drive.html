@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on an exhilarating offroad journey with Mountain Jeep Drive. Master rugged terrains and race through immersive landscapes, feeling every bump and thrill as you steer powerful 4x4 jeeps. Experience the ultimate in adrenaline-fueled driving challenges and explore the wildest adventures nature has to offer.</p>
 

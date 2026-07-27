@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a delightful adventure in Kaido, where you guide a lovable robot through perilous terrains. Navigate with precision, avoiding spinning blades and quirky hat-wearing foes, all to collect orange ice cream bars. Master the art of timing and double jumping to triumph through eight increasingly challenging levels.</p>
 

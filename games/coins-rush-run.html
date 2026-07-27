@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a thrilling 3D adventure in Coins Rush Run, where you guide coins along a dynamic track to maximize their value. Navigate colorful barriers, collect scattered coins, and aim for massive multipliers in an engaging Pachinko-style finale. Quick reflexes and strategic thinking will keep your score soaring.</p>
 

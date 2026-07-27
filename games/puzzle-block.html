@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Strategically maneuver blocks into perfect positions in this engaging brain-teaser. With its simple drag-and-fit mechanics, Puzzle Block challenges your mind to leave no block unused. Test your strategy skills, plan ahead, and enjoy endless fun as you solve this delightful puzzle for all ages.</p>
 

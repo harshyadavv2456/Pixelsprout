@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the golden depths in Idle Gold Miner. Build your mining empire, strategically manage resources, and automate processes for continuous profit, even offline. Face challenges, unlock bonuses, and enjoy addictive progression, whether you're optimizing for efficiency or just relaxing with the thrill of gold discovery.</p>
 

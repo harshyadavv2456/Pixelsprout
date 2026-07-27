@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the joy of farming as you cultivate, harvest, and trade crops. Drive your tractor through picturesque fields, crafting products like tomato ketchup and dairy treats. Each level offers new opportunities to earn currency, making the farming life an engaging journey of growth and success.</p>
 

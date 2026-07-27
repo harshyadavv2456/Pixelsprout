@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Feel the rush of speed and strategy in Racing Game Challenge. Master the track with skilled maneuvers and strategic braking as you outpace AI or friends. Each race is a test of skill, with increasingly challenging courses demanding your best for victory and the ultimate driving glory.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Join Dorothy and friends on a glittering match-3 adventure across Oz. Uncover powerful jewels to revive the heart of Emerald City. Traverse enchanting lands like the Munchkin Land and Oz Forest, solving dazzling puzzles to restore magic and energy throughout the whimsical world.</p>
 

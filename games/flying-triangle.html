@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Conquer the exhilarating world of Flying Triangle, an arcade adventure demanding razor-sharp reflexes. Guide your shape through relentless obstacles, each tap propelling you forward. Outsmart the barriers to climb the leaderboard while mastering rhythm and patience in this fast-paced endless journey. Can you become the ultimate flight ace?</p>
 

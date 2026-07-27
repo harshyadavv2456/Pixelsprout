@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Leap across moons in TouchTheMoon, an exhilarating cosmic adventure. Master precise jumps to shatter records in a mesmerizing galaxy filled with twinkling stars. Simple controls on mobile and desktop make it enjoyable for all ages, offering endless arcade excitement with captivating visuals. Ready to make your mark in space?</p>
 

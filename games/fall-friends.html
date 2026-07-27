@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Tumble through chaotic obstacle courses with wobbly friends in Fall Friends. Navigate vibrant challenges as you dodge, jump, and race against quirky contenders. Outmaneuver clever AI competitors in this offline, laugh-out-loud adventure, all while earning coins to unlock unique outfits. Strive for greatness as you battle your "friends" to the top!</p>
 

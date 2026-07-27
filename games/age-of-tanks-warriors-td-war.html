@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a tactical journey through time in Age of Tanks Warriors: TD War. Begin in the Stone Age, advancing to modern warfare through strategic army upgrades. Deploy troops and conquer evolving battlegrounds in intense 1v1 battles. Outsmart opponents with tactical prowess and lead your forces to victory.</p>
 

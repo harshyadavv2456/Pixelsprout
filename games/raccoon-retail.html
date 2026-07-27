@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Raccoon Retail transforms the chaotic charm of retail into a fun challenge! Step into a raccoon's paws, cleaning a bustling store with mischievous customers. Navigate spills, collect trash, and upgrade your cleaning gear as the aisles expand. Can you out-clean the messiest critters around? It's a wild, whimsical ride!</p>
 

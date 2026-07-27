@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Challenge your mind with X O Tic Tac Toe, set against the serene backdrop of a sandy beach. Choose between classic 3x3 or challenging 5x5 grids and face off against an intelligent AI opponent. Perfect for honing strategies, easing boredom, and proving your tactical mastery in a relaxing virtual paradise.</p>
 

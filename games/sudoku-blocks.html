@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Sudoku Blocks offers a unique fusion of Sudoku logic and block placement. Navigate the grid, thoughtfully filling it with numbers 1-9 without repetition in rows, columns, or regions. Experience the joy of problem-solving as you refine your strategy and sharpen your mind in this addictive logical challenge.</p>
 

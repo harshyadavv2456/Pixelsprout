@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into a vibrant fashion showdown with best friends Gaia, Ero, and Ai in Hipsters vs Rockers. Mix and match outfits and accessories from both styles to create unique looks. Let your creativity decide who wins this stylish duel, while enjoying intuitive controls and stunning visuals.</p>
 

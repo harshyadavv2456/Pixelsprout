@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Home Pin 1 combines everyday hazards with engaging puzzles in a suburban setting. Strategically maneuver pins and obstacles to protect your home, save your loved ones, and secure valuables. Balance risk and reward in each level while transforming chaos into control. Perfect timing and precision make every solution satisfying.</p>
 

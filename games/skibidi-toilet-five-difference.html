@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unlock your observation prowess with Skibidi Toilet Five Difference! Challenge yourself to discern subtle differences within over 40 meticulously crafted images before time runs out. With each thrilling search, enhance your concentration and detection skills in this exciting race against the clock.</p>
 

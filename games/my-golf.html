@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Tee off with precision in My Golf, a delightful pixel adventure where aiming perfectly is key. Tackle diverse landscapes, gather stars to unlock new courses and golf balls, and enjoy the retro charm. Challenge your strategy as you master each unique hole with simple, intuitive controls.</p>
 

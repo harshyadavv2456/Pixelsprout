@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Get hooked on Marble Smash, where strategy meets speed! Tackle 400 puzzles in captivating Puzzle Mode or race against the clock in Time Attack Mode. With its stunning visuals, test your wits and enjoy endless fun across any device. Dive into the thrill of Marble Smash today!</p>
 

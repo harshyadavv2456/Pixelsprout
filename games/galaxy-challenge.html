@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a thrilling interstellar journey in Galaxy Challenge! Navigate dazzling space landscapes, collect coins, and snag game-changing power-ups. Master the art of timing, dodge obstacles, and rise to the top of the global leaderboard. Dive into this addictive cosmic adventure and see if you have what it takes!</p>
 

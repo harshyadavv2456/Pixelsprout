@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Super Chains invites you into a mesmerizing puzzle universe where you connect blocks of ascending, descending, or matching numbers to unveil mystical creatures. Master the art of chaining cleverly, make swift decisions, and deploy Heroic Helpers strategically to conquer complex challenges and claim your champion title.</p>
 

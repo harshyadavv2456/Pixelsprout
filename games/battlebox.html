@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unearth hidden treasures while sidestepping treacherous monsters in BattleBox, a thrilling puzzle adventure that will challenge your memory and wits. Strategize and recall the secret grid layout, aiming for riches while avoiding peril. Survive by maintaining your health with handy strawberries, ensuring every play is an exciting discovery.</p>
 

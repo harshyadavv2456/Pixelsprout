@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the spine-chilling madness of Mr. Noob EAT Burger. Navigate a mysterious manor with a torch and burger detector, seeking hidden burgers while evading the menacing Mr. Noob. Feel the tension build as you explore dark corridors, avoiding traps and outwitting your monstrous pursuer!</p>
 

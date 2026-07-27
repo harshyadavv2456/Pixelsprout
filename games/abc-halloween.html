@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">ABC Halloween sweeps kids aged 2-6 into an enchanting world where friendly ghosts and playful witches guide them through interactive mini-games. Designed to foster joyful learning, this vibrant Halloween-themed adventure makes mastering the alphabet a delightful expedition in a safe, ad-free environment.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner hero in Stick Rope Hero, a dynamic sandbox adventure where you swing through a vibrant city like a legendary web-slinger. Battle evildoers, complete daring missions, and collect power-ups. Hone your swinging skills to save the day with style and embody the ultimate urban champion.</p>
 

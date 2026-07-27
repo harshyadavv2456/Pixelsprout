@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Leap into the fast-paced challenge of Jump the Block, where quick reflexes and strategic timing are key. Navigate an ever-changing landscape, dodging obstacles with precision. As each jump could alter your fate, stay sharp and strive to break your high score in this addictive arcade adventure.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the vibrant world of Ice Cream Fever and become a culinary maestro. Master the art of time management as you whip up gourmet delights, upgrade your kitchen, and dazzle customers. Experience thrilling challenges, satisfying combos, and endless creativity in this addictive cooking adventure.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Enter the dynamic arena of Mechangelion: Robot Fight, where you become a mechanical warrior! Engage in heart-pounding battles against colossal foes. Quick reflexes and strategic upgrades are essential for victory as you exploit enemy weaknesses and unleash critical strikes in vibrant 3D settings, providing an exhilarating experience.</p>
 

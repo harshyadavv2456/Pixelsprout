@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Survive a unique space adventure in 456 Impostor, where quick reflexes and strategic jumps crush red-suited adversaries. Tackle thrilling endless runs every 10 levels, testing your skills to the max. With diverse controls, immerse in arcade action and outsmart your foes for survival and progression.</p>
 

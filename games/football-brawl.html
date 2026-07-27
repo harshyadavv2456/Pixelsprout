@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Jump into the chaotic world of Football Brawl, where heads and feet brawl in hilarious one-on-one clashes. Kick, jump, and outwit your opponent using quirky powers and strategies, aiming to dominate the scoreboard. Customize your player, tweak strategies, and rise through the ranks in this amusing football frenzy.</p>
 

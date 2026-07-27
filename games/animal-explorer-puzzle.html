@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a wild adventure with Animal Explorer Puzzle! Young minds solve vibrant jigsaws featuring adorable animals. Explore enchanting landscapes, enhance problem-solving skills, and discover the wonders of nature in this engaging, educational journey perfect for little explorers. Let creativity and fun lead the way!</p>
 

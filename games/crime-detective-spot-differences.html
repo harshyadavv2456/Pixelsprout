@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner detective in Crime Detective - Spot Differences. Solve intricate cases by spotting subtle differences between immersive crime scene images. With each mystery, sharpen your observational prowess against the clock. Experience captivating storylines and challenging puzzles in a race where every second counts toward justice.</p>
 

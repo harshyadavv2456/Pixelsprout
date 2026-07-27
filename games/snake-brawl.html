@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Brace yourself for an addictive journey in Snake Brawl! Navigate your snake through descending mazes, strategically bashing balls to grow while avoiding blocky traps that threaten to shrink you down. Test your reflexes and decision-making in this exhilarating challenge where survival means balancing risk and reward.</p>
 

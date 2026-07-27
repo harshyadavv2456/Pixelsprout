@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your strategic prowess in Screw Puzzle - Nuts and Bolts. Navigate a tangled maze of ropes, metal sheets, and screws, using creative solutions like bombs and saws. With no time limits and escalating challenges, every level promises a captivating brain-teasing adventure. Can you master the metallic conundrum?</p>
 

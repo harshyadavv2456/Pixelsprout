@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash fiery vengeance as Glauron, the wrathful dragon. With just two clicks, reign devastation upon relentless archers, incinerate arrows, and engulf villages in flames. Effortlessly accessible yet challenging to master, embark on a thrilling aerial conquest that demands swift reflexes and relentless fury.</p>
 

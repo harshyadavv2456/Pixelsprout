@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Command your archers in Royal Elite Archer Defense, a strategic 3D puzzle game. Defend your castle against relentless enemy forces, balance upgrades wisely, and stop oncoming melee attacks before they obliterate your stronghold. Master tactics and timing to ensure victory in this gripping battle of survival.</p>
 

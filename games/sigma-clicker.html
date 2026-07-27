@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Sigma Clicker's vibrant realm, where rapid tapping and strategic upgrades keep you hooked. Accumulate sigmas through clicks, invest in powerful enhancements, and watch your progress soar. This addictive adventure offers simple mechanics and endless fun, making each tap a step towards greater achievements.</p>
 

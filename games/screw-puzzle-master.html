@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into a brain-teasing adventure with Nuts & Bolts! Challenge your problem-solving skills by strategically unscrewing wood nuts and bolts. Each puzzle presents a riveting test of logic and precision. Enjoy the thrill of untangling complex screw-ups and master the art of clever deconstruction.</p>
 

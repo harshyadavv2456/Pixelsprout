@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the bustling world of Barber Shop, where creativity meets strategy. Master the art of hairstyling, design unique looks, and upgrade your salon. Satisfy quirky customer requests efficiently and transform from a novice hairstylist to a successful salon maestro in this dynamic, hair-raising adventure.</p>
 

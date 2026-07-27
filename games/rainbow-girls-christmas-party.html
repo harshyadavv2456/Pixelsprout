@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into a vibrant holiday world in Rainbow Girls Christmas Party and help best friends Skyler and Sunny dazzle at a Christmas bash. With intuitive gameplay focused on fashion and creativity, transform the girls' looks to captivate Collin's heart in this charming, festive adventure.</p>
 

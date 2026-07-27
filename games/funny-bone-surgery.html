@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the quirky world of Funny Bone Surgery, where you’ll guide Leah's recovery from skateboard mishaps. Employ your strategic skills and nimble hands using precision tools. Master diagnosis, surgery, and care stages, each demanding sharp focus. A vibrant, educational experience blending fun with medical insight awaits.</p>
 

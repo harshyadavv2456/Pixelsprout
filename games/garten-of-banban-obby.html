@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Enter the thrilling world of Garten of Banban Obby, where pulse-pounding chases and thrilling escapes keep you on edge. Guide your character through danger while collecting gold for stylish upgrades, as you navigate this exhilarating game with friends or alone. Adventure and mystery await in every corner!</p>
 

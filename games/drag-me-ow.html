@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide your agile feline through perilous pixel landscapes in Drag me-ow! Dodge obstacles and outmaneuver dangers using swift reflexes and strategic moves. Drag your way to the cozy cushion goal, with challenges intensifying at every turn, testing your cunning and speed in this charming cat adventure.</p>
 

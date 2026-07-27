@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Escape a bizarre maze with a terrifying toilet creature on your tail in Skibidi in the Backrooms. Collect vital videotapes while navigating endless, eerie corridors. Tension mounts as every corner turns a potential danger, challenging your wits and reflexes. Can you outsmart the relentless pursuer and find your way out?</p>
 

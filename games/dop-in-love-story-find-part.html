@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into the shoes of a detective in this addictive puzzle adventure. Use a unique scanner tool to unveil hidden clues and solve mind-bending mysteries in a captivating love story. Embrace a stress-free experience with enchanting scenarios and unexpected twists, perfect for sharpening your critical thinking skills.</p>
 

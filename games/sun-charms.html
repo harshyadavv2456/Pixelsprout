@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Brighten your day with Sun Charms, where adorable creatures await your strategic touch. Match rows of lively animals on a limited-move board, reaching progressively challenging targets. Easy to grasp yet delightfully challenging, each level offers hours of engaging fun as you refine your matching skills. Dive into the charm today!</p>
 

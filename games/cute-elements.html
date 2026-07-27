@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into the charming world of Cute Elements, where strategy and fun unite! Link similar elements to clear levels as puzzles grow increasingly challenging. Delight in adorable graphics while your mind sharpens through thoughtful planning. Perfect for all ages, this addictive game is a delightful test of skill and wit.</p>
 

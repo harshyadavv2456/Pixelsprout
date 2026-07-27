@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Chop 'til you drop in Timber Guy! Race against the clock to fell trees while dodging dangerous branches. Choose your favorite celebrity character and click quickly to top the leaderboard, but watch that red bar and keep your wits about you, or it's timber time!</p>
 

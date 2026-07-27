@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Combine stickmen to forge unstoppable warriors in Stick Merge! Strategically merge identical fighters to evolve and strengthen your army. With addictive mechanics and increasing challenges, test your strategic skills and timing to dominate the battlefield in this simplistic yet captivating stickman world.</p>
 

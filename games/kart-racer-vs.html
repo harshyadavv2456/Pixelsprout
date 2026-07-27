@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the thrill of speed in Kart Racer Vs, where smooth handling meets exhilarating drifts. Master strategic racing lines on challenging tracks, harnessing dynamic audio that amplifies the adrenaline rush. Perfect for any device, immerse yourself in fast-paced kart action, drifting to victory with perfectly timed boosts.</p>
 

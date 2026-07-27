@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Immerse yourself in Retro Tower Defense, where timeless strategy meets a vintage vibe. Design defenses with unique towers, upgrade strategically, and adapt to evolving enemy waves. As challenges intensify, your tactical prowess will be key to defending your base against cunning foes in this nostalgic adventure.</p>
 

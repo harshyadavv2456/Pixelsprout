@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your kicking prowess in Football Kickoff, where precision meets power. Master swipe control to send the ball soaring through the uprights, battling wind and shifting perspectives. Rack up high scores while balancing strategy and skill as each kick brings you closer to gridiron glory.</p>
 

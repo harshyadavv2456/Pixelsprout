@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Boxteria plunges you into a world of limitless cubic adventure. Transform into various characters, race with 20 unique vehicles, and explore maps like the "Russian Village." Engage in dynamic battles or thrilling races, crafting your own path in this vibrant, ever-evolving realm full of surprises.</p>
 

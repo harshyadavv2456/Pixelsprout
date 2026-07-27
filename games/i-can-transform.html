@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Transform into powerful mechanical objects to dodge obstacles and collect Vortex Gems in the thrilling 2D platformer, I Can Transform. Adapt to challenges with quick reflexes, battling the fearsome Assas amidst retro pixel-style graphics. Choose your transformations wisely to save the world from destruction.</p>
 

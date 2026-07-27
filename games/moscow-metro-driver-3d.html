@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Take command of iconic Moscow metro trains and ferry passengers through bustling underground stations. Experience realistic controls and authentic sounds as you master the rails in both driver and training modes. Navigate the historic Kalininskaya line and immerse yourself in the rhythmic pulse of a true metro operator.</p>
 

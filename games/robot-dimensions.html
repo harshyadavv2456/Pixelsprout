@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a strategic adventure with a dimension-shifting robot. Alter environments, solve intricate puzzles, and navigate challenging terrains. Master unique mechanics in this captivating journey, blending adventure and strategy in a compact, immersive world.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide an adorable kitten safely to the ground in Cat Drop, a charming physics-based puzzle game. Use strategy to manipulate objects, tackle 28 increasingly challenging levels, and test your critical thinking. With resettable stages, experiment with different approaches to ensure the kitty lands safely on the grassy platform.</p>
 

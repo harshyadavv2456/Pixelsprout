@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Race through vibrant 80s-style circuits in Rally Championship 2, where your car moves automatically. Focus on steering, unleash turbo boosts, and uncover hidden cards to gain an edge. With exhilarating speed and catchy sound effects, strive to set record lap times in this nostalgic arcade racing experience.</p>
 

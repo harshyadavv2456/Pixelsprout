@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the adrenaline-fueled world of GT Ghost Racing, where vintage and futuristic cars race against legendary specters. Navigate dynamic tracks through diverse landscapes and seasons, mastering every curve and surface. Engage in tense races, collecting stars to secure your place as the ultimate racing champion.</p>
 

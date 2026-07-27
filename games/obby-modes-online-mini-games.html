@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into a vibrant online world packed with thrilling challenges! Master 100 tough obby levels, join wild races, and face fate on the glass bridge. Customize your character, team up with friends, and showcase your agility and strategy to become a gaming legend!</p>
 

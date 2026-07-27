@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a joyful journey through Fairyland, a magical arcade platformer filled with vibrant visuals and charming creatures. Navigate whimsical obstacles, collect power-ups, and master skillful maneuvers. With engaging gameplay and increasing challenges, this delightful adventure promises endless hours of fun and enchantment. Get ready to jump into the magic!</p>
 

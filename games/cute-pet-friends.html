@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Nurture Kiki the cat and Fifi the dog in Cute Pet Friends! With simple click-and-drag controls, pamper your pets with baths, grooming, and stylish outfits. Personalize their home, ensure their happiness, and create an adorable sanctuary. Perfect for kids who adore animals and creative play.</p>
 

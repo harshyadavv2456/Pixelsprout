@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to"> Outmaneuver and blast your way to victory in Tank Wars, where quick reflexes and strategic planning collide. Upgrade your tank, master terrain shortcuts, and anticipate enemy moves as you skillfully navigate the battlefield. Continuous improvement and clever tactics will lead you to triumph over increasingly challenging foes.</p>
 

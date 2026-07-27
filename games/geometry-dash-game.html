@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Leap into the thrilling chaos of Geometry Dash Game, where quick reflexes and sharp timing are your greatest allies. Navigate through dynamic levels packed with challenging obstacles, mastering tap-to-jump controls. Discover new characters as you progress, offering fresh experiences with each daring adventure. Are you ready to survive the ultimate test?</p>
 

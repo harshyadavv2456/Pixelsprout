@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Engage in adrenaline-pumping battles across dynamic arenas in BoxBulletCraft, where strategy meets action. Choose from a variety of weapons to counter unique monster attacks. Solo or with a friend, refine your tactics and wield the power to outsmart fearsome foes in this heart-pounding combat adventure.</p>
 

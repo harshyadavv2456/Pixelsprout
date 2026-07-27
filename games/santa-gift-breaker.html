@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Santa Gift Breaker delivers thrilling arcade action with a festive twist. Click rapidly to destroy cascading gifts before they pile up. With increasing difficulty and easy mouse controls, this game offers a fast-paced, holiday cheer-packed challenge to keep your reflexes sharp and your spirits high.</p>
 

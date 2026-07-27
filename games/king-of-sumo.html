@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into the ring as Takeshi in King Of Sumo, where every bout is a battle of strength and intellect. Master strategic attacks, unveil the mystery of a vanished legend, and navigate intense, unpredictable sumo clashes. With captivating graphics and a gripping storyline, each victory brings you closer to the ultimate championship.</p>
 

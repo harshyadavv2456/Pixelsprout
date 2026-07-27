@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Tung Tung Sahur Trap Maze, where quick thinking and agility are your best allies. Navigate twisting labyrinths filled with clever traps and puzzles, while evading the hilariously menacing Tung Tung Sahur. With captivating challenges and dynamic gameplay, your survival skills are truly put to the test.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a captivating adventure with Dino King! Navigate vibrant prehistoric landscapes using simple one-tap controls, unlocking unique dinosaurs along the way. Collect items, dodge obstacles, and enjoy endless fun in a relaxing, family-friendly atmosphere. Test your timing and guide the Dino King through its exciting journey!</p>
 

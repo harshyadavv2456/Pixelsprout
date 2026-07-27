@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Join Santa on a thrilling 2D adventure through a snowy wonderland, navigating treacherous terrains to collect missing presents. Use your keyboard skills to guide him, dodge hazards, and defeat enemies. Can you retrieve all the gifts and unlock special levels before Christmas arrives? Experience festive fun with Santa Games!</p>
 

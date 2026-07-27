@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide a frosty ball through intricate platforms filled with devious obstacles. Master control and finesse your moves to conquer levels with unique challenges. Ice Ball Run demands precision and strategy, as each level becomes an addictive test of dexterity where every calculated move matters in this icy adventure.</p>
 

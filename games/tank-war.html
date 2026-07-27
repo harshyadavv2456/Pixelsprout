@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Engage in intense tank battles where strategy reigns supreme. Outmaneuver enemy defenses, capture crucial bases, and upgrade your arsenal to dominate the battlefield. Balance aggression and strategy to emerge victorious in this heart-pounding war scenario.</p>
 

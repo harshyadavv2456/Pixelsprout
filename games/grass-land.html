@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on an adventure through vibrant grasslands, diving deep into lush terrains to discover hidden resources. Equipped with your reliable grass cutter, explore expansive landscapes, gather vital supplies, and develop your base in this immersive exploration journey. Will you uncover the secrets living beneath the green?</p>
 

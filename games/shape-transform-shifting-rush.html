@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your shape-shifting skills in Shape Transform Shifting Rush, a high-speed parkour adventure. Morph seamlessly between shapes to conquer dynamic terrains and outsmart obstacles. Hone your reflexes through thrilling levels, collecting coins to unlock quirky hats. Master transformation timing and embrace ever-evolving challenges for endless fun and excitement.</p>
 

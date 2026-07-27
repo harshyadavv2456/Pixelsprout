@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dash through snowy tundras in Penguin Runner, guiding a lively penguin as he collects fish and dodges icy traps. Navigate with simple screen taps, embracing faster speeds and rising challenges. Keep your wits about you to avoid obstacles and polar bears, aiming for high scores in this endless pursuit!</p>
 

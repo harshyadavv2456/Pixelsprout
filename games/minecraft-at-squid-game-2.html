@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into a thrilling blend of Minecraft creativity and Squid Game suspense. Navigate iconic challenges with fresh puzzles, intense survival, and strategic multiplayer alliances. Enhanced visuals and new mini-games demand quick wits and clever tactics. Will you outsmart and outlast the competition in this exhilarating sequel?</p>
 

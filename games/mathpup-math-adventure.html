@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a thrilling journey with MathPup, navigating levels filled with numerical puzzles. Collect and order numbers to unlock paths before time runs out. Plan strategically, engage your mind, and keep your math skills sharp in this engaging, time-pressured adventure of educational entertainment.</p>
 

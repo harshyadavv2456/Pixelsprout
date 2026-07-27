@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate treacherous lands in Evil Wyrm, where stealth is your only ally. Collect emeralds while evading a watchful dragon's fiery gaze. Utilize rocks and shadows to remain unseen. Perfect your timing, gather enough gems, and confront the mighty dragon to emerge victorious. Can you survive the wyrm's wrath?</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Take control of the skies in Airport Simulator Plane Tycoon! Design and manage a bustling airport from the ground up. Strategically plan runways, juggle flight schedules, and upgrade facilities. Perfect your management skills in an addictive challenge to transform your airport into the world’s busiest hub.</p>
 

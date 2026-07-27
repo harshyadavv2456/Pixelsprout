@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a delightful underground journey with Miner Cat, where you mine vibrant landscapes and uncover hidden treasures. Upgrade your pickaxes, expand your backpack, and navigate immersive terrains with precision. Experience endless crafting and surprise discoveries behind each block, blending traditional mining excitement with a charming twist.</p>
 

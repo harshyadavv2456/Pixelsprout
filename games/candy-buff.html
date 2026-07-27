@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Leap through vibrant, candy-filled worlds with just one button! Master the art of timing to double-jump and dodge obstacles. Collect stars to speed up, snatch power-ups, and extend your jumps. But be cautious—mistakes send you back to the beginning! Can you outpace your sweet tooth?</p>
 

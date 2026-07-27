@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Circle Monster challenges your reflexes as you skillfully navigate your character through a twisting path. With each jump, the speed increases, testing your timing and precision. Aim to outlast the ever-escalating pace while striving to beat your high score in this addictive arcade adventure.</p>
 

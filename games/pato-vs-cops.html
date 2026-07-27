@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Race through hectic city streets, outsmart relentless cops, and test your reflexes in an endless, high-speed pursuit. Dodge traffic, grab boosts, and experience nonstop adrenaline in this thrilling arcade chase. Play in your browser and embark on this exhilarating car chase today!</p>
 

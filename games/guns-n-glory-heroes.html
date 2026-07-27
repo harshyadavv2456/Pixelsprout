@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash medieval chaos in Guns n Glory Heroes, where you command a trio of heroes to repel enemy onslaughts. Strategize with varied hero abilities, lay clever traps, and strengthen your forces as you protect your kingdom from evil. Enjoy dynamic gameplay with a touch of classic tower defense.</p>
 

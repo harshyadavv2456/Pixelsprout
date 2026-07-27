@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Lead your stickman squad through intense battles, strategically dodging obstacles and enemies in "Crowd Enhance." Master the art of timing to boost your army's strength and resources while navigating thrilling levels. With each challenge overcome, amplify your forces in a quest for ultimate victory.</p>
 

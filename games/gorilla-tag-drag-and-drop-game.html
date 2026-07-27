@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Swing into the exhilarating world of Gorilla Tag Drag and Drop, where your VR controllers become your gorilla hands. Master the art of primate parkour by leaping and climbing through lush jungles and daunting cliffs. Experience the thrill of multiplayer matches and conquer diverse challenges with intuitive drag-and-drop controls.</p>
 

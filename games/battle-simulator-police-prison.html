@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Lead a police squad in daring escape missions through intricate prisons. Strategize each officer's moves, exploiting their unique skills in action-packed, puzzle-like scenarios. Outsmart cunning inmates, maintain tactical formations, and revel in immersive, adrenaline-filled battle simulations that keep you on the edge of your seat.</p>
 

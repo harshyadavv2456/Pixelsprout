@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a vibrant adventure in Panda Fight, where drag-and-drop mechanics elevate thrilling panda battles. Journey through charming pixelated realms, collecting stars and rescuing the Panda Princess. Master strategic combat and enjoy the satisfaction of 100% completion in this enchanting, action-packed escapade.</p>
 

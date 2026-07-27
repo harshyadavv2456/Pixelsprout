@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Journey through time with Om Nom in Cut The Rope: Time Travel! Solve puzzling physics-based challenges by snipping ropes to feed not one, but two hungry creatures. Navigate historical settings, acclimate to unique gameplay dynamics, and relish the sweet adventure while tackling delightful, mind-bending puzzles.</p>
 

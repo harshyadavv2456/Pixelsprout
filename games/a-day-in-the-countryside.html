@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the joys of rural life in A Day in the Countryside. Battle pesky moles, care for charming farm animals, and protect snowmen from errant snowballs. With vibrant 2D graphics, seasonal challenges, and simple controls, dive into a delightful world full of surprises and adventure on the farm.</p>
 

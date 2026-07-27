@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Hop into adventure with Blue Rabbit! Collect gold coins while dodging sneaky cats and frogs. Restore your health by finding hidden hearts to keep the excitement alive. Can you master the challenge and stay in the game?</p>
 

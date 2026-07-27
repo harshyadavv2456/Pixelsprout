@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Balloon Slicer challenges your instincts as you deftly launch blades to burst balloons through complex, bouncy courses. Master the art of momentum with strategic throws, unlock new blades, and tackle increasingly clever layouts. Aim carefully, pop joy unyielding, and defend your reputation as the ultimate balloon popper.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into the shoes of a museum guard challenged by eco-terrorist threats. Patrol through galleries, uncover clues to identify culprits, and strike decisively to halt their sabotage. Confront suspects, navigate tense interrogations, and outsmart foes to protect priceless art. Can you uphold the museum's tranquility before disaster strikes?</p>
 

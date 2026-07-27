@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Protect the stickman with your wits in Stickman Rescue Draw 2 Save! Draw strategic lines to shield him from hazards like falling rocks and flying arrows. Tackle increasingly difficult puzzles as you devise creative solutions to ensure his safety. Challenge your mind and unleash your creativity!</p>
 

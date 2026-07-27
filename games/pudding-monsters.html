@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide adorable pudding creatures in an engaging puzzle adventure! Slide these jiggly heroes together, experimenting with different pudding types and quirky traits. Strategically merge them to rest perfectly on star tiles. With unique mechanics and heartwarming charm, Pudding Monsters ensures a delightful, brain-teasing experience. Enjoy this sweet treat without the calories!</p>
 

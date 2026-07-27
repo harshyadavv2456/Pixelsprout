@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Sprunki Coloring Book offers a delightful canvas for creativity with 12 enchanting illustrations and a vibrant 15-color palette. Experiment with various brush sizes to craft intricate details and save or share your masterpieces. Perfect for all ages, it's a joyful experience where your imagination knows no bounds.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Become a Monster Nail Doctor and dive into a world of whimsical medical challenges. Heal bizarre monster nail injuries using interactive surgical techniques. With quirky characters and delightful surprises, develop your clinical skills in this enchanting and educational virtual surgery adventure. Patiently restore every creature to health in this captivating, kid-friendly game.</p>
 

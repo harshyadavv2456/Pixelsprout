@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into the whimsical world of Pet Salon Simulator, where you transform every pet into a masterpiece. Tend to their needs, heal wounds, and style them with bright colors and sparkling accessories. Showcase your artistic flair and watch each pet strut away with newfound confidence and joy.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Race against time in Grand Theft Stunt, where precision driving meets adrenaline-fueled action. Maneuver luxurious cars through challenging terrains, master daring drifts, and conquer each level's high stakes to triumph. Will you navigate the twists without crashing and cross the finish line in time?</p>
 

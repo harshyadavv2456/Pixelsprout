@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Command a self-operating cannon through intense action, as you hunt targets in a vibrant arena. Upgrade with powerful boosters, as you push your skills to the limit. Unleash chaos and enjoy explosive, fast-paced fun that never quits. How long can you survive the relentless onslaught?</p>
 

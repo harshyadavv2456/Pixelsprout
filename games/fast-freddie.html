@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a thrilling pixel adventure as Fast Freddie, darting through vivid worlds brimming with perilous creatures and luscious fruit. Outsmart your foes using lightning-fast reflexes, gathering fruit to unlock paths forward. With each level's unique challenges, mastering agility becomes your key to destiny. Will you conquer Freddie's quest?</p>
 

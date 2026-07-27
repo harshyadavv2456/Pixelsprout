@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into a colorful adventure with Squid Coloring Game! Choose from over 40 lively sketches and let your creativity soar. Unleash a spectrum of colors, explore freely, and enjoy the relaxing experience of bringing characters to life in your unique style. Perfect for sparking joy and imagination.</p>
 

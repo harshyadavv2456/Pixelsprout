@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Slide tiles to create a seamless path and guide the eager ball to its destination in Ball Puzzle. With limited moves and a challenging setup, this strategic game tests your logic and foresight as you rearrange and connect pieces for that satisfying roll to victory.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Master the cue and take calculated shots as you engage in the immersive thrill of Pool 8 Ball. Strategize your way through realistic physics, challenging both AI and real opponents. Focus on precision over power to sink your set before claiming victory with the coveted 8 Ball.</p>
 

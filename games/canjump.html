@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Leap into a thrilling arcade adventure with Canjump! Master the art of well-timed jumps as a monster navigating perilous terrains. With only one button to control, sharpen your reflexes to conquer increasingly tough obstacles and enemies, all while aiming for the highest score in this endlessly entertaining challenge.</p>
 

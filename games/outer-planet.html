@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Defend your world from relentless alien invasions in Outer Planet. Master thrilling battles using skillful navigation and precise shooting. Strategize to free planets, unlocking diverse challenges as you progress. Immerse yourself in this browser-based intergalactic adventure where every aim counts in epic outer space combat. Save your planet from doom!</p>
 

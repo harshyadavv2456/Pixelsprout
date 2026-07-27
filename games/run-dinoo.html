@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide a delightful baby dinosaur through an adventurous landscape in Run Dinoo. Navigate through obstacles, collect shiny coins, and advance through increasingly challenging levels. With intuitive controls and charming graphics, this casual action game delivers fun and excitement for players of all ages. Jump into the adventure today!</p>
 

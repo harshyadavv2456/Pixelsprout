@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Rev up for a wild ride with Bike Stunt skibidi Toilet, where off-road racing meets comedic chaos. Master tricky terrains, perform outrageous stunts, and race atop a toilet! This zany adventure combines humor with high-speed thrills, guaranteeing nonstop entertainment and challenging levels that'll test your stunt skills.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Enter the quirky world of Sprunki Horror, where creating music is an adventure! Assemble unique tunes using famous character voices from memes and horror games. Mix, match, and swap to craft melodies with personality. Unlock, experiment, and unleash your creativity in this playful musical challenge.</p>
 

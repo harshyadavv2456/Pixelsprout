@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Enter Baby Hazel's joyous world, where your task is to keep her smiling by tending to her every need. From waking her up to engaging in fun activities, your intuitive clicks and drags will ensure her ultimate happiness. Watch out for hints to maintain her cheerful demeanor throughout the day.</p>
 

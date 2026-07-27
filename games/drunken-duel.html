@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into the chaotic world of Drunken Duel, where hilarious physics-based gunfights meet vibrant wild west visuals. Control a ragdoll stickman with single-button chaos, making each victory a test of timing and mastery. Unpredictable shots and amusing sounds make every duel an exhilarating challenge.</p>
 

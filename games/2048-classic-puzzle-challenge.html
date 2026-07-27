@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Join the timeless challenge of 2048 Classic Puzzle! Slide and merge tiles strategically to hit the magical 2048 target. With intuitive controls and endless cerebral fun, this game is perfect for players of all ages, anytime, anywhere. Outsmart your pals and triumph with impeccable planning. Can you master the board?</p>
 

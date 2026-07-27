@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Brainrot Chaser, where agility meets chaos in a vivid 3D world. Dash through a crumbling city as Tall Brainrot, dodging traps and quirky foes. With unexpected encounters and dynamic races, each step is a thrilling test of reflexes. Can you conquer the Brainrot Challenge?</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner mischief-maker in Crazy Goose Simulator! Cause hilariously chaotic mayhem as a mad goose, tackling outrageous missions in a sleepy village. Flap, honk, and outwit villagers in this riotous adventure full of unexpected laughs and delightful surprises. Will you be the village's most notorious feathered troublemaker?</p>
 

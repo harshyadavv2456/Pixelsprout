@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your strategic prowess in Simply Breakout, where simplicity meets challenge. Master the art of the perfect angle as you shatter bricks and navigate increasingly intricate levels. With dynamic gameplay and exciting power-ups, this addictive classic will test your precision and timing with every thrilling bounce.</p>
 

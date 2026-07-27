@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Test your flag knowledge with Kobadoo Flags, an addictive game that sharpens memory and boosts cognitive skills. Memorize flags as challenges intensify, making it both entertaining and enlightening. Perfect for flag enthusiasts and those eager to enhance mental performance while having fun. Dive into this captivating world of flags today!</p>
 

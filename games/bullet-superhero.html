@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide your superhero through thrilling 2D shooter levels where precision is key. Master ricochet shots and anticipate the ever-moving hand for strategic enemy takedowns. Each level presents new challenges, while varied skins offer personalized flair, ensuring a dynamic and engaging experience from start to finish.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the addictive world of POP it Plus, where anti-stress meets speed! Tap to pop and match colorful balls under pressure. Quick reflexes and sharp eyes are your allies as levels and challenges escalate. Can you conquer all stages without losing your cool? Let the popping frenzy begin!</p>
 

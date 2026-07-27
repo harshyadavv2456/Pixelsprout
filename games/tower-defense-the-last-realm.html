@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Strategically place and upgrade seven distinct tower types to defend your kingdom across 40 thrilling levels. Each decision in Tower Defense: The Last Realm requires wit and precision as you face escalating waves of foes. Enhance your towers and conquer three difficulty tiers for a dynamic and engaging defense experience.</p>
 

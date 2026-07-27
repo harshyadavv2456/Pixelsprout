@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into a princess's role and compete in merry cookie decorating battles! Let your creativity shine as you design festive treats using vibrant colors and unique decorations. Outsmart your friends or AI in this cheerful holiday challenge where imagination and presentation hold the key to sweet victory.</p>
 

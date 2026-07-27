@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Cake Shop Cafe, where you're the culinary mastermind behind delectable desserts. As the café owner, you'll craft mouthwatering pastries and waffles, serving eager customers. Manage resources, upgrade equipment, and expand your business to new locations. Test your skills and creativity in this sweetly addictive adventure.</p>
 

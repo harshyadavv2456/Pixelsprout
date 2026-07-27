@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Help a young princess break free from a wicked spell and restore her natural beauty. Unleash your creativity as you transform her appearance to win her prince's heart. Immerse yourself in this enchanting, easy-to-play adventure that's accessible on any device. Transform the princess and witness true magic!</p>
 

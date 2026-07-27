@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Outrun seasoned opponents in Noob vs Guys, where agility and quick reflexes are your best allies. Navigate a thrilling pixelated world packed with evolving obstacles, demanding strategic decisions and adaptability. Compete fiercely to be the last one standing in this pulse-pounding race for survival.</p>
 

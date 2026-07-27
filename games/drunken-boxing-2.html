@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into chaos with Drunken Boxing 2, where intoxicated stickmen clash in strategic bouts of reflex and endurance. With glistening 3D visuals, vibrant animations, and adrenaline-pumping action, battle solo or with friends for a uniquely boozy arcade experience where energy management is the key to victory.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a heart-pounding adventure with Johnny Jump Challenge. Navigate thrilling, gravity-defying leaps while dodging unpredictable obstacles. With each strategic jump, aim to climb higher and top the leaderboard in this easy-to-learn, tough-to-master experience. Test your reflexes and keep your wits sharp to avoid catastrophic falls.</p>
 

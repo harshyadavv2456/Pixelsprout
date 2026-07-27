@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dash through vibrant chaos as a fearless feline riding Tung Tung Sahur’s skateboard! Perfectly timed jumps keep you zipping through crowded cityscapes while dodging unpredictable hazards. Stay nimble to balance amid madness, collecting coins and power-ups in this delightful, fast-paced adventure filled with speed and charm. Can you conquer the craze?</p>
 

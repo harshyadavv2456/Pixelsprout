@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your strategic genius in Desert Block Puzzle, where intricate block-fitting challenges meet an alluring desert backdrop. Test your wit by arranging tiles seamlessly, maneuvering through progressively mind-bending levels. Enjoy an endless, captivating quest that sharpens your organization skills while delivering a blissful mental workout.</p>
 

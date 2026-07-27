@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the colorful chaos of Bubbles Clicker, where quick reflexes and strategic tapping are your keys to success. Burst vibrant bubbles before they escape, leveraging unexpected power-ups to boost your score. The escalating pace and exhilarating challenge promise endless addictive entertainment for fast-paced game lovers.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Catch Huggy Wuggy! plunges you into a suspenseful factory nightmare where your goal is to capture monstrous toys. Armed with a GrabPak, navigate treacherous paths, dodge hazards, and strike fast and precise against relentless foes in this thrilling rail shooter experience. Can you outmaneuver the terrifying blue menace?</p>
 

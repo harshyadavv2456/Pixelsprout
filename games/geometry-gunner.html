@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Engage in dynamic arcade action with Geometry Gunner, where your strategic prowess and agility are your best allies. Outmaneuver relentless geometric foes, tactically gun them down, and make split-second decisions in this exhilarating battle of precision and survival.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Race against the clock as a feline artist in "Tomb of the Cat Color." Dash through a spooky cemetery, collecting coins and leaving vibrant trails. With only ten seconds per level, strategic maneuvers and quick thinking are crucial in this thrilling, retro-style adventure spanning 20 challenging stages.</p>
 

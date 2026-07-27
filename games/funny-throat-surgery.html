@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into a whimsical world of oral hygiene in Funny Throat Surgery! Clean and scrub teeth, hunt down pesky germs, and unleash your creativity to style the patient. This playful adventure tests your dental skills while offering endless design possibilities for a charming and laughter-filled experience.</p>
 

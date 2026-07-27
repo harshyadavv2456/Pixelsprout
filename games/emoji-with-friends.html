@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into "Emoji with Friends," a puzzle-solving adventure where emojis become the ultimate language. Challenge your creativity and logic to decode riddles and craft unique emoji combinations. Compete with friends in this captivating multiplayer experience that keeps you thinking and laughing as each puzzle unfolds.</p>
 

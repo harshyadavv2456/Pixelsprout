@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Color Circle is a thrilling test of speed and precision, challenging your reflexes as you rotate a vibrant wheel to match incoming colors. Quickly adapt to the escalating pace in this addictive arcade game, where sleek graphics and simple controls keep the excitement high and the gameplay captivating.</p>
 

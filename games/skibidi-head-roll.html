@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide Scooby Doo through complex, ever-evolving puzzle levels to reach the elusive toilet in Skibidi Head Roll. Carefully plan your moves, adapt to challenging obstacles, and refine your strategy to conquer each stage with minimal steps. Dive into this engaging test of wits and navigation skills!</p>
 

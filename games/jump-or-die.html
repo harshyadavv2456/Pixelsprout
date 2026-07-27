@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Leap into the intense world of Jump or Die, where quick reflexes decide survival. Master the art of perfectly timed jumps to avoid unpredictable obstacles in a relentless quest for the highest score. Every leap is a daring challenge—will you conquer the ultimate test of nerves?</p>
 

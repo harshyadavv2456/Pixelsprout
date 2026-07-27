@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Battle sugar monsters and cavity creatures as a heroic toothpaste blob in Teeth Runner. Swipe to dodge enemies, collect power-ups, and ensure each tooth is sparkling clean. This fun-filled adventure blends education with vibrant graphics, encouraging healthy dental habits for players of all ages.</p>
 

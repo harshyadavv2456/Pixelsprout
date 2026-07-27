@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate lively cityscapes in Taxi Simulator 3D, where quick reflexes and strategic planning are essential. Maneuver through traffic as you pick up passengers in a time-crunch adventure. With added challenges like fuel management, feel the thrill of being a city cabbie in this captivating simulation.</p>
 

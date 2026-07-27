@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the world of Huggy Wuggy with a challenging quiz that sharpens your wits and memory. Answer increasingly difficult trivia questions about the beloved character, honing your recall skills under pressure. Fast thinking and precise knowledge keep you on your toes in this engaging brain teaser.</p>
 

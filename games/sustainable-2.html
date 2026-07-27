@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">In Sustainable 2, step into the shoes of a museum guard battling eco-terrorists in a thrilling whodunit. Navigate through rooms, gather clues, and strategically confront suspects with your trusty tonfa. Can you crack the case and save the art before it's too late? The mystery awaits!</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Gear up for a thrilling aerial battle in Air War. Navigate hostile skies with precise maneuvers, dodge relentless enemy fire, and unleash explosive firepower. Master survival tactics and strategic decision-making to conquer the high-stakes combat and emerge victorious. Every moment is a pulse-pounding test of skill and resilience.</p>
 

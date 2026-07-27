@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide your dino in Donutosaur 2 through wacky worlds filled with fans, portals, and tasty flotation devices. Conquer 25 imaginative levels while collecting elusive stars, testing your brains and patience. Dive back into challenges anytime and enjoy this free unblocked adventure. Can you master all the puzzles?</p>
 

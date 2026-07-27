@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the colorful world of Kiko Adventure, a lively platformer where thrilling missions await. Leap over foes, pick fruit for high scores, and discover hidden bottles to unlock new levels. With simple controls and captivating pixel art, it's an exciting quest for all ages.</p>
 

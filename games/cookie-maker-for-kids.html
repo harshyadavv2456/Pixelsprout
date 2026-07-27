@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the delightful world of Cookie Maker for Kids, where young bakers transform into pastry chefs. Roll, shape, and bake cookies, then unleash creativity with vibrant decorations. With simple controls and a joyful atmosphere, it's a sweet adventure of fun and imagination perfect for budding chefs.</p>
 

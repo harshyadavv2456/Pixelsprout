@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Rings Rotate invites you into a colorful world of puzzle-ring mastery. Engage your brain by aligning rings and unlocking intricate patterns, each level offering unique challenges. With seamless controls, stunning visuals, and the perfect balance of simplicity and complexity, every twist promises refreshing excitement.</p>
 

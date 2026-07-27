@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Defend Brr Brr Patapim with your quick-witted sketches in this thrilling puzzle adventure! Craft lines to shield him from pits and threats. As challenges intensify, each clever stroke could mean survival or doom. Think fast, draw smart, and guide Brr Brr safely through the perils ahead!</p>
 

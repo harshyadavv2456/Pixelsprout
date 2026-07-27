@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience a charming romantic adventure as Lucas, a charismatic young man striving to win Natasha's heart. Your choices shape their love story, requiring precise timing to impress. Immerse yourself in vibrant graphics and an engaging narrative that keeps you invested in every decision and interaction.</p>
 

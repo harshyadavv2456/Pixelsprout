@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Immerse yourself in Chocolate Tetris, where chocolate blocks cascade and challenge you to create lines for points. With strategic planning and swift movements, enjoy a delightful twist on a beloved classic. Balance patience with quick-thinking to keep your board clear and your score rising in this captivating puzzle adventure.</p>
 

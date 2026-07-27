@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">In Babel Tower, mine resources and craft them into bricks as you race to construct the mythical Tower of Babel. Strategize and upgrade your operations, swiftly advancing through automation and clever planning to build higher and reach the heavens faster. An addictive blend of resource management and incremental growth awaits!</p>
 

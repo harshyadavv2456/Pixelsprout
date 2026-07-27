@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to"> Unleash your inner racer in Drift Race in the Open World. Master exhilarating drifts, explore vast urban landscapes, and conquer the streets with high-speed precision. Customize your ride, tackle intense crash scenarios, and unlock hidden secrets in this heart-pounding race against the clock.</p>
 

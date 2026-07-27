@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your strategy in Candy Egg Blast! Match colorful eggs to hatch adorable birds and save them from doom. Encounter dynamic challenges, quick thinking puzzles, and an enchanting narrative. Master combos and conquer levels to protect these precious creatures, all within a vibrant, immersive world teeming with life.</p>
 

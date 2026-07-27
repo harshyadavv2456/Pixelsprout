@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner warrior in Spear Toss Challenge, where precision meets raw power. Strategically aim and master your throws to achieve astounding distances. Engage in an immersive experience combining physics and competition, honing your skills with every attempt in this nostalgic, adrenaline-pumping contest.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Race through a city as you evade relentless tax collectors, dodging dynamic barrels that add a unique challenge at every twist and turn. Precision jumping and quick reflexes are key in this fast-paced, humorous chase that rewards skillful navigation with endless fun and escalating excitement.</p>
 

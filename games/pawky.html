@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Pawky delivers an adrenaline-fueled platform challenge, testing your reflexes and strategic prowess. Navigate an energetic creature through dynamic landscapes, dodging obstacles with swift precision. Master the art of timing as platforms shift unpredictably, ensuring a fresh and thrilling adventure that rewards quick thinking and seamless navigation.</p>
 

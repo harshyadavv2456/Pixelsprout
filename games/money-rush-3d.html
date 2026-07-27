@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Money Rush 3D, where your reflexes meet endless fun! Collect cash and blast away obstacles with straightforward controls, keeping the excitement on high. Balance your actions to maximize your gains and uncover bonus items, making every round a thrilling race for riches. Perfect for all ages!</p>
 

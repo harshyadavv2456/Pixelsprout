@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">In Five Nights Funny Face, transform eerie animatronics into comedic characters by creatively distorting their features. Turn fear into laughter as you stretch and morph faces, crafting hysterical expressions in a playful parody of frightful nights. Unleash your imagination and enjoy a night of giggles instead of screams!</p>
 

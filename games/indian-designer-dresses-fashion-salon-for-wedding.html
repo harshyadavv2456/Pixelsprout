@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Immerse yourself in the vibrant world of Indian weddings with the ultimate dress-up experience. Mix and match exquisite ethnic outfits, stunning hairstyles, and glamorous makeup to create dazzling bridal looks. Let creativity flow as you transform each bride into a show-stopping vision for her big day.</p>
 

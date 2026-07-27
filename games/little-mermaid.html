@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Immerse yourself in Little Mermaid's enchanting underwater world, where precision and timing lead to endless adventure. Maneuver through obstacles with agility, collect precious pearls, and navigate accelerating currents in a dynamically challenging journey. Perfect for all ages, experience the thrill of this addictive, beautifully designed endless runner.</p>
 

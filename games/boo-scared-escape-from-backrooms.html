@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Trapped by a deranged cat in an enigmatic labyrinth, solve clever riddles to escape before the cunning feline catches you. Unravel the mystery of the cat's missing friend, Dog, in a thrilling adventure that will keep you returning for more pulse-pounding fun. Can you outsmart the cat?</p>
 

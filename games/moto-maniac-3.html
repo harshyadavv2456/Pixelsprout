@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Race through a vibrant forest in Moto Maniac 3, balancing your dirt bike over challenging obstacles while being relentlessly chased by a wild bear. Master the physics-based mechanics to maintain speed and stay ahead, escaping the wilderness with quick reflexes and strategic navigation.</p>
 

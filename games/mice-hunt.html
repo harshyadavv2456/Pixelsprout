@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the exhilarating world of Mice Hunt, where you play as a swift owl in a frantic race against a pursuing dragon. Capture mice to extend your lives and aim for a high score, collecting tantalizing potion power-ups for an edge in this relentless, heart-pounding chase.</p>
 

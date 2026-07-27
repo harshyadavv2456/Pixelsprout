@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate a spine-chilling factory maze in "Huggy Wuggy - Guess the Right Door." Choose wisely between three doors in 50 rooms to avoid the lurking menace. With easy controls, embrace suspense and trust your instincts for a thrilling escape experience as each step brings you closer to freedom.</p>
 

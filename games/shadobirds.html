@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate an immersive shadow-filled world as a determined bird in Shadobirds. Master precise tap-to-fly mechanics and face relentless challenges across 20 intense levels. Your reflexes and perseverance are tested as you dodge obstacles and strive to join the elite ranks of those who've triumphed. Are you ready?</p>
 

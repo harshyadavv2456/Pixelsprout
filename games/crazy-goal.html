@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Immerse yourself in Crazy Goal, where scoring isn't as easy as it seems. Navigate over 200 challenging levels across continents using intuitive controls. Master your skills, compete against friends in weekly tournaments, and embrace the escalating difficulty for a truly gripping football adventure!</p>
 

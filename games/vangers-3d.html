@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on an extraordinary adventure in Vangers 3D, merging racing thrills with RPG depth. Explore vast, ever-changing landscapes, uncover intricate stories, and master new skills. With full freedom to choose your path and an immersive atmosphere, every moment promises unexpected surprises and captivating gameplay.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Relive the arcade era with Balls Ricochet! This addictive shooter challenges you to master ball physics and angles as you ricochet shots off blocks. A nostalgic adventure with captivating visuals awaits, promising endless quests for higher scores and unique playthroughs every time. Can you conquer the arcade challenge?</p>
 

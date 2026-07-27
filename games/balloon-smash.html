@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">In Balloon Smash, unleash your aim and timing skills as you launch a thorn ball to burst colorful, dynamic balloons. Each level ramps up in complexity, demanding keen strategy and precision. Perfect your shots by ricocheting off walls, delivering endless entertainment on both mobile and PC.</p>
 

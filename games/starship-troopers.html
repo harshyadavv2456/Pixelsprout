@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into the boots of a fearless trooper battling hostile forces on a lunar base. Armed with a diverse arsenal, including flamethrowers and rocket launchers, you'll navigate intense combat scenarios. Stay alert, manage your health strategically, and gather vital supplies to ensure your survival in this gripping adventure.</p>
 

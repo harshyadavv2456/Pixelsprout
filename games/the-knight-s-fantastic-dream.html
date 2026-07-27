@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide a valiant knight through a mystical, eternal night, collecting keys and dodging slimes to uncover secrets. With intuitive controls and an enchanting soundtrack, master agility and strategy to outsmart obstacles, beat the clock, and climb the leaderboard. Can you emerge victorious in this dreamy platform adventure?</p>
 

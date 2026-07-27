@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Master math skills while having fun with Scary Vending Machine! Drag and drop coins to match prices on diverse vending machines. Succeed and earn delightful rewards; err and receive gentle prompts. This engaging game combines educational value with simple mechanics, perfect for honing arithmetic abilities in an entertaining way.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner predator in Killer Escape Huggy, a suspenseful test of stealth and strategy. Disguise yourself among innocents and eliminate them one by one before time runs out. With intuitive controls and adrenaline-pumping gameplay, every decision could mean life or failure. Can you stay hidden and outsmart them all?</p>
 

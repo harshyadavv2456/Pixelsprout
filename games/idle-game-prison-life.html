@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Build and manage the ultimate high-security prison empire in this captivating idle simulator. Design perfect layouts, recruit a skilled team, and automate operations to keep control. Watch your prison expand and generate wealth even offline, as you unlock new technologies and soar to tycoon status.</p>
 

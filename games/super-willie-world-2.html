@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Join Willie and Minnie as they embark on a whimsical rescue mission across 18 exhilarating levels. Outsmart treacherous traps, outmaneuver sticky foes, and collect power-up flowers to thwart the Mad Doctor's honey-stealing schemes. Jump into action-packed platforming fun and save the land from sweet disaster!</p>
 

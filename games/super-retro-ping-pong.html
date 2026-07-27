@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the thrill of Super Retro Ping-Pong, where strategic swipes and precise hits lead to victory. Compete in rapid matches, aiming for three points to progress. With its easy controls but challenging levels, this game tests your reflexes and determination. How long can you maintain your winning streak?</p>
 

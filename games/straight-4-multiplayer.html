@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Enter the strategic world of Straight 4 Multiplayer, where you challenge an opponent to connect four discs in a row. With simple click-and-drop mechanics, the game demands careful planning and tactical positioning to outmaneuver your rival in this engaging battle of wits.</p>
 

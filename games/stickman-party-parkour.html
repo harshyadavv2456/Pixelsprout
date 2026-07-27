@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Join your friends in Stickman Party Parkour for a thrilling cooperative adventure. Navigate treacherous cliffs and dodge deadly obstacles while coordinating and strategizing with your team. Test your awareness and patience as you conquer vibrant levels to reach the exit door safely together.</p>
 

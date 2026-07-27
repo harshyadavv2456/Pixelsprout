@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a thrilling mining adventure in The Stone Miner! Navigate vibrant terrains, crush vibrant stones, and collect treasures. Maneuver your powerful machine to unearth and sell rare gems, unlocking exciting new worlds. Experience the joy of discovery and wealth as you become a top mining tycoon!</p>
 

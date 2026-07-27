@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate your ship through space, dodging barriers while collecting stars in a fast-paced 3D adventure. As the game speeds up, quick reflexes become crucial. Space Cord promises thrilling tension, perfect for quick, exhilarating gameplay sessions that make time fly on your commute.</p>
 

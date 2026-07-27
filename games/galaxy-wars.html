@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate your spaceship through relentless alien onslaughts in Galaxy Wars. Experience electrifying 2D shooting action as you dodge enemies and strategize your firepower. Face escalating challenges across varied levels, harness bonus power-ups, and unleash your piloting skills to conquer the cosmic battlefield.</p>
 

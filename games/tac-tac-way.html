@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate through mesmerizing landscapes as a nimble ball in Tac Tac Way. Change your trajectory to dodge perilous edges and fiery pits. Keep calm and strategize extensively to thrive in this colorful puzzle world. Compete solo or summon multiplayer challenges for thrilling rewards.</p>
 

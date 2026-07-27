@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide delightful, vibrant balls through dynamic landscapes filled with challenges and treasures in Rolling Adventure. Outsmart whimsical enemies with strategic moves and perfect your jumps to access new levels. Explore intriguing puzzles and secret areas in a colorful world brimming with excitement and discovery.</p>
 

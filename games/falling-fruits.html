@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Falling Fruits brings a fresh twist to puzzle gaming with fruit tile sliding and merging. Strategize to prevent the grid from filling while creating high-value tiles. With endless gameplay and easy controls, it’s a tantalizing challenge that captivates and entertains for hours.</p>
 

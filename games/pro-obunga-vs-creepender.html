@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Survive relentless pursuit in Pro Obunga vs CreepEnder, a thrilling escape game where strategic jumps and nimble moves are your tools. Navigate perilous levels, collect coins to upgrade your character, and dive into cooperative play for a dynamic, challenging experience. Can you reach the portal before Obunga?</p>
 

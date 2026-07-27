@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Outsmart opponents in Tic-Tac-Grid, a strategic twist on the classic game of Xs and Os. Engage in lively battles against friends or AI, plotting your course to create a winning line of three. Simple yet addictive fun awaits!</p>
 

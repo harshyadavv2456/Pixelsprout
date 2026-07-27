@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Help a toad escape a relentless princess in Runaway Toad. Master the art of strategic jumping by controlling leap power, navigating treacherous landscapes, and dining on flies. Embark on a whimsical journey across magical terrains, striving for freedom, while unlocking new toads along your escape. Will your hops ensure liberty?</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Fight Trivia fuses intense battles with brain-bending questions. Answer wisely from four options to advance and duel opponents. Missteps lead to starting over, while the reward button boosts your odds. Arm your mind and fist for this thrilling challenge! Ready to test your mettle?</p>
 

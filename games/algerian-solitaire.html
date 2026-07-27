@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Algerian Solitaire offers a challenging twist on classic Solitaire, where strategic thinking is key. Navigate complex card layouts and use foundation piles wisely to liberate trapped Kings and Aces. Each move demands careful calculation—are you ready to test your skills? Enjoy a captivating brain exercise without any downloads.</p>
 

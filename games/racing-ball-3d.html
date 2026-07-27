@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Race through heart-pounding 3D landscapes in Racing Ball 3D. Navigate thrilling tracks filled with obstacles and tight turns that test your precision and reflexes. Challenge a friend in an electrifying two-player mode for unmatched competitive fun. Quick reactions and strategic moves are your keys to victory.</p>
 

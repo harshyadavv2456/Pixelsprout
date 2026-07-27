@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the cunning world of trading with "Traders Trading." Master the art of negotiation by analyzing item values and striking deals. Experience vibrant graphics and intricate economic mechanics as you strategize your way through various trade levels. Will you secure the best deal?</p>
 

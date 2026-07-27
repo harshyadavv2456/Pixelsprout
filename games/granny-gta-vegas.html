@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Granny GTA Vegas throws the infamous horror legend into Las Vegas mayhem! Armed and dangerous, she must shoot through crime-ridden streets and casino chaos, escaping masked foes on her trail. Immerse yourself in open-world action and see if Granny becomes a Vegas legend or a ghost of the Strip.</p>
 

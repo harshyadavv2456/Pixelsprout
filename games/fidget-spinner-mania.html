@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Spin your way to digital satisfaction in Fidget Spinner Mania! With limited swipes, test your reflexes and aim for the fastest spins. Beat your records and collect cash to power up your spinner. It's simple, addictive, and endlessly entertaining to see how far you can take your skills.</p>
 

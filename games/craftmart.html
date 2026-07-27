@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a culinary adventure in CraftMart, where Noob's shop becomes the go-to paradise for hungry Minecraft residents. Harvest crops, manage livestock, and expand your menu to satisfy customers. Balance efficiency and creativity to create the ultimate food emporium, ensuring no one leaves hungry.</p>
 

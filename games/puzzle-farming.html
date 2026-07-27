@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Harvest your strategic prowess in Puzzle Farming as you navigate a tractor through intricate 3D farmlands. Carefully plan your route to cover every patch without retracing your steps, balancing time and efficiency to yield the richest crops. Each level presents unique challenges, making your farming adventure an engaging brain teaser.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Command your formidable pirate ship through epic naval battles in the Caribbean, facing off against ruthless rivals and mythical foes. Strategically unleash powerful cannons and upgrade your vessel to conquer the seas. Engage in treasure hunts and immerse yourself in the thrilling pirate life. The adventure awaits!</p>
 

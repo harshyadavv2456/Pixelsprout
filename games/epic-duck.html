@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on an adventurous journey with Epic Duck, where clever exploration and precise timing lead to success. Navigate charming levels, uncover hidden keys, and unlock doorways to progress, all while honing your puzzle-solving skills. With engaging challenges and delightful visuals, it's a delightful test of strategy and reflexes.</p>
 

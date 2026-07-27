@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the high-octane world of Arsenal Online, a 2D shooter that challenges your precision and speed across diverse game modes. Master each mode by experimenting with unlockable weapons, honing your skills at the firing range, and thriving in both solo and cooperative multiplayer battles.</p>
 

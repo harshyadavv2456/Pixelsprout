@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash chaos in Bricks Breaker: Gravity Balls as you shatter intricate brick patterns with physics-driven bounces. Challenge your strategic aim across diverse puzzles while leveraging power-ups and special balls for explosive fun. Each level intensifies with fresh hurdles, making every shot a calculated leap towards victory.</p>
 

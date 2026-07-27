@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to"> Experience a fresh take on a timeless strategy game with Russian Checkers. Battle intelligent AI or friends in dynamic matches featuring customizable boards, insightful analysis, and emotive gameplay. Engage in diverse time modes and difficulty levels while honing your skills and having fun every step of the way.</p>
 

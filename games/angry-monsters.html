@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the exhilarating world of Angry Monsters, where each action-packed level demands strategy and skill. Master physics-based puzzles to outsmart and defeat your monstrous foes. As complexity rises, hone your logical thinking and tactical planning to conquer all ten unique, challenging stages.</p>
 

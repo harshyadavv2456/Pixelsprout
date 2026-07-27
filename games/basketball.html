@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the thrill of basketball at home with this exciting HTML5 adaptation. Immerse yourself in nail-biting matches, execute perfect shots, and showcase your skills on the court. Perfect for quick, adrenaline-pumping gameplay whenever you have a moment to spare. Shoot some hoops and become the MVP!</p>
 

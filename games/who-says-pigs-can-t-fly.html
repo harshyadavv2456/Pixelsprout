@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Launch a piggy projectile in "Who Says Pigs Can't Fly," a vibrant, physics-based adventure where strategy meets comedy. Use your slingshot skills to thwart wily pirates across whimsical levels. Perfect your aim, plan your shots, and enjoy this addictive escapade filled with challenging puzzles and strategic planning.</p>
 

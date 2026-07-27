@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate treacherous terrains in Stickman Rope Heroes, where your skill and timing in swinging from rope to rope are paramount. Master the physics-based mechanics to avoid falls and reach marked destinations. The minimalist design, varied difficulties, and engaging challenges promise endless fun for those seeking a thrilling adventure.</p>
 

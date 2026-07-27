@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Join two brave, toilet-shaped heroes on an exhilarating platform quest in Skibidi Toilet Friends. Dodge moving obstacles, collaborate tightly with your teammate, and master intricate levels to reach your goal. Conquer challenges with skillful timing, teamwork, and strategy in this quirky, engaging adventure.</p>
 

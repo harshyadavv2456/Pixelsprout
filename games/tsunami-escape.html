@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Tsunami Escape plunges you into a heart-racing quest to outrun nature's fury. Master high-speed navigation through evolving levels where timing and reflexes are your best allies. Adapt quickly to unpredictable terrains and choose your path wisely for a suspensive escape from the relentless tsunami.</p>
 

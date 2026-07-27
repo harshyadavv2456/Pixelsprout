@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner maestro with The Simple Piano, where your fingers glide across vibrant tiles to create music. This user-friendly app offers authentic piano sounds and responsive multi-touch functionality, perfect for all ages seeking an immersive musical journey. Dive into melodies, practice, and master the symphonic art.</p>
 

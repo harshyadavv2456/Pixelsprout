@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Take aim in a city overrun by rebellious skibidi toilets in this distinctive FPS. Juggle humor with action as you navigate urban arenas using a diverse arsenal. Whether sniping from rooftops or dodging on the streets, each encounter promises a hilarious and strategic twist on classic shooting thrills.</p>
 

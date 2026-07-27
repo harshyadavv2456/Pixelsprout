@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Fish Love, where guiding lovable fish through an enchanting underwater world means unraveling intricate puzzles filled with lurking perils. Navigate with precision, foster companionship among the fish, and delight in lush visuals and mesmerizing soundtracks that transform each safe passage into an aquatic triumph.</p>
 

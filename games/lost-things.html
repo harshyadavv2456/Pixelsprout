@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into a serene journey of discovery in "Lost Things," where keen observation is everything. Explore vast, vibrant landscapes, uncovering intricately concealed items without the rush. This laid-back hidden object game offers a rich, leisurely experience for those who relish in detailed exploration and artistic wonder.</p>
 

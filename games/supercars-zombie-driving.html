@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Rev your engines and take on hordes of zombies in a high-speed, apocalyptic driving spree! Blast through streets at full throttle, using your swift supercar to mow down the undead. Navigate the chaos with precision, ensuring survival as you clear city zones. Drive fearlessly, it's your ultimate weapon.</p>
 

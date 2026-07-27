@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to"> Dive into Jewel Blocks, where your mind is the ultimate tool. Align jewel-inspired blocks to clear lines and earn points, all while navigating a cascade of vibrant puzzles. With its beautiful skins and addictive strategy-driven challenges, this game promises endless fun and rewarding gameplay.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide a daring crab through perilous traps to outsmart a crafty pirate. Dash, dodge, and strategize to protect your stolen treasures in escalating challenges. Sharpen your reflexes and tackle each level with courage. Will you master this thrilling adventure and claim the ultimate high score?</p>
 

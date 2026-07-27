@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your creativity as a fashion guide in LOL Surprise Fresh Spring Look. Style the LOL Surprise Girls with vibrant outfits, blending bold colors and unique accessories. Drag and drop to craft each girl's unique ensemble, capturing the essence of spring with ease and flair.</p>
 

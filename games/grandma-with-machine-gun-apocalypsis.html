@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Join Granny's chaotic journey as she blitzes through a zombie apocalypse, armed to the teeth with an explosive arsenal. Speed through undead hordes on wheels, wielding everything from revolvers to bazookas. Help her pave the way home for some pie-baking in this adrenaline-packed extravaganza!</p>
 

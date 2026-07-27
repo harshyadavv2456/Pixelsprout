@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the chaotic sandbox of DTA 6, a browser-based adventure where your only limits are your imagination and limb control. Explore a surreal world filled with meme-talking ragdolls, gather an arsenal of weapons, and let loose in a city that's yours for the taking.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">The Windows Game transforms the classic Windows 10 interface into an engaging playground of mini-games and creativity. Navigate familiar system elements to master shooting simulations, painting, multitasking challenges, and more, all while enjoying hidden gems and authentic soundscapes. Dive into nostalgia with a twist of addictive gameplay.</p>
 

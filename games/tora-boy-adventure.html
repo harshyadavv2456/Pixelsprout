@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Join Tora Boy on an exciting platforming quest through ten wild levels. Gather cakes, outsmart enemies, and collect hidden keys to unlock new challenges. With its cute graphics and intuitive controls, this thrilling adventure keeps you on your toes as you leap toward victory.</p>
 

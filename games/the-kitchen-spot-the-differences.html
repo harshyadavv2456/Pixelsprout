@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into a bustling kitchen scene in "The Kitchen - Spot the Differences." Test your observational skills by distinguishing subtle shifts in nearly identical images, under the pressure of time and limited attempts. With penalties for errors, strike a balance between precision and speed to succeed.</p>
 

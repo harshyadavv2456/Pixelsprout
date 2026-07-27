@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a pixelated adventure with Steve and Alex in MCBros PixelCraft. Navigate treacherous obstacles, outsmart lurking monsters, and master double jumps. Collect shiny coins and crucial keys as you switch seamlessly between characters, guiding them to safety through exhilarating levels filled with danger and discovery.</p>
 

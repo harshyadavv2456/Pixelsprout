@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Enter a retro console and join Billy Boy in "Boss Level - Pumpkin Madness." Battle eerie foes, dodge perilous threats, and strategically collect rockets to face the ultimate Halloween boss. With fast-paced action and strategic challenges, this spooky arcade adventure will test your reflexes at every level.</p>
 

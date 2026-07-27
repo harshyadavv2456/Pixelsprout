@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide your car across intricately designed bridges in a race against time. Strategize swiftly, plot the shortest route, and master levels of increasing complexity as you outsmart obstacles. Quick reflexes and sharp thinking are your keys to success in this thrilling test of speed and precision.</p>
 

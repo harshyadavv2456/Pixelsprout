@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Lead your stickman army to victory in a dynamic, strategy-driven battleground. Engage in thrilling campaigns with intuitive controls, leveraging immersive 3D graphics. Strategize wisely, manage resources, and adapt to varied maps to outsmart powerful enemies. Diversity and clever unit upgrades will secure your legacy in war.</p>
 

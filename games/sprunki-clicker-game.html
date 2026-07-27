@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Race against the clock in Sprunki Clicker Game, where rapid reflexes and strategic taps are key. Score extra seconds with time bonuses in this exhilarating 60-second challenge to break personal and global records. Perfect for testing your stamina and precision, each session brings a fresh clicking frenzy.</p>
 

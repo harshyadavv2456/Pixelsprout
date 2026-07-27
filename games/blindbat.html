@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Defy nature as a sun-loving bat in the whimsical 2D arcade game, BlindBat. Navigate the sky using sonar, outwit birds, and conserve ammo cleverly. Every missed shot heightens the risk, but hitting targets restores your precious supplies. Strategize your attack to keep soaring amidst the feathery foes.</p>
 

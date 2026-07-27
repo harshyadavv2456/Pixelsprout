@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Zoo Trivia, where your animal knowledge meets spelling mastery. Unlock endless challenges as you identify animals and spell their names accurately. Engage your brain, earn hints, and reveal elusive creatures in this fun, educational adventure suitable for all ages. Can you conquer the entire board?</p>
 

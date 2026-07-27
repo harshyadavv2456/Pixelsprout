@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Enter a suspense-laden world in Don't Press It. Navigate a mysterious base with just your mouse or touchpad, where every action triggers unexpected outcomes. Solve intricate puzzles, decode cryptic clues, and succumb to the game's addictive narrative, all while resisting the urge to touch anything... but will you?</p>
 

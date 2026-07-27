@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the zany world of Goal Skibidi Goal, where frenetic physics-based soccer controls keep you on edge. Navigate using nimble head motions, leveraging clever jumps, ducks, and slides. Master power-ups to outwit opponents in dynamic duels filled with unpredictability and exhilarating momentum.</p>
 

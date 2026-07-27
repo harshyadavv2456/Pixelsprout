@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to"> Defend a precious crumb from relentless ant invaders in Save the Crumb. Strategically repel waves of ants using quick reflexes on mouse or touchscreen. Rack up points for daring, close-call saves as you protect your crumb from becoming ant chow.</p>
 

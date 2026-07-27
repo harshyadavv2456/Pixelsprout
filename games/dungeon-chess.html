@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Dungeon Chess, where strategic puzzling meets dynamic RPG action. Navigate treacherous dungeons using a deck of chess-inspired cards, balancing tactical brilliance and chance. Embark on gripping adventures with six distinctive heroes across challenging realms, perfect for developing cunning strategies and mastering thrilling, ever-changing quests.</p>
 

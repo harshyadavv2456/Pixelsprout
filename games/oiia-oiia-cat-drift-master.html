@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Master the art of precision drifting with OIIA OIIA Cat by your side. Navigate thrilling courses, hit every snow pile, and avoid barriers with deft timing and skillful maneuvers. Each run tests your reflexes and strategy, pushing you closer to becoming the ultimate Drift Master.</p>
 

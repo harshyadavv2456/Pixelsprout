@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Join Baby Pear for an addictive tapping adventure in Baby Pear Clicker 2! Discover endless fun with a stylish new interface, customizable backgrounds, and a thrilling array of upgrades and achievements. Strategize your clicks to enhance power and efficiency, unlocking vibrant rewards and keeping the experience refreshingly engaging.</p>
 

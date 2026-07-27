@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Discover your inner artist with Diamond Painting by Number. Enjoy a relaxing experience as you create stunning diamond-themed artworks, sketch by sketch. Unleash creativity with dazzling patterns, transforming simple outlines into breathtaking masterpieces, one colorful gem at a time. Let your imagination sparkle!</p>
 

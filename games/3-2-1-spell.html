@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner wizard in 3 2 1 Spell, where fast-paced magic duels test your reflexes and strategy. Sharpen your observation to counter foes with precision spells. This thrilling game challenges your skills in an exhilarating, dynamic adventure that’s accessible across devices. Dive into the enchanting world of spellbinding fun!</p>
 

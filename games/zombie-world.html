@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Face relentless waves of zombies in Zombie World, a thrilling first-person shooter where your survival skills are put to the ultimate test. Strategically manage your limited ammo, utilize power-ups, and outmaneuver hordes to stay alive in this pulse-pounding post-apocalyptic adventure. How long can you withstand the undead?</p>
 

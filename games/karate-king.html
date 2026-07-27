@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Immerse yourself in the action-packed world of Karate King, where the thrill of jungle battles meets strategic prowess. Master karate skills to defeat foes and challenge the infamous Karate King. Balance offense and defense through dynamic real-time strategy, making every fight a tactical masterpiece.</p>
 

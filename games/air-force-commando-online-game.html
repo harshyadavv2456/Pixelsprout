@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the thrill of high-octane dogfights in 1945, piloting powerful warplanes. Outsmart rivals with tactical maneuvers, precision attacks, and sharp reflexes. Face intense aerial battles where survival hinges on skill and strategy, challenging your limits in the quest for dominance. Will you be the ace of the skies?</p>
 

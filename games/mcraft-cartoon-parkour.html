@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the vibrant block universe of Mcraft Cartoon Parkour, where teamwork is your key to survival. Navigate thrilling landscapes, dodge hazards, and collect diamonds with friends. Immerse yourself in a world of fun, adventure, and strategic planning to unveil new realms in this action-packed cartoon odyssey.</p>
 

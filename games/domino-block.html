@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Chain up your dominoes and outsmart your opponents in Domino Block! Strategize by matching tiles and blocking others' moves. Challenge up to three computer players, save blank tiles for tactical plays, and watch your points soar. A game of wit and precision, where every decision counts.</p>
 

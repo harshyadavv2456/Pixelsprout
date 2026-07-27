@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Become an unstoppable black hole in Hole.io 2, devouring vibrant landscapes and opponents. Engage in quick-paced, strategic consumption as you grow ever larger. Navigate obstacles and target opponents in a beautifully chaotic world where speed and strategy are your keys to domination and high-scoring triumphs.</p>
 

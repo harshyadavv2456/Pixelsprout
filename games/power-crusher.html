@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash relentless destruction in Power Crusher, where each smash unveils spectacular visuals. Upgrade your crusher's power and speed, transforming each tap into an electrifying spectacle. Master the art of strategic progression and enjoy the adrenaline rush of turning minerals into magnificent shatters. How mighty will your machine become?</p>
 

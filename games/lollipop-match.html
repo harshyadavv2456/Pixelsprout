@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Lollipop Match, a vibrant match-3 puzzle adventure where you clear colorful lollipops in creative patterns. Strategize to form big combos, unlock power-ups, and watch as your score climbs. Perfect for casual gamers looking for a fun and visually mesmerizing mental challenge.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Ignite your musical passion with Music Tools, an immersive experience where you can master the piano, guitar, and drums. Experiment with sounds and rhythms as you create unique compositions and climb the online leaderboards. Whether you're a novice or a pro, enhance your skills and enjoy endless musical fun.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide your stickman through a vibrant, ever-changing world in Crazy Color Run 3D. Match colors, dodge obstacles, and enhance your reflexes in a thrilling race against time. With stunning 3D visuals and addictive gameplay, this fast-paced journey demands quick thinking and keeps you hooked.</p>
 

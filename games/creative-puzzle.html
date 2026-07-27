@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into "Creative Puzzle," where coloring meets clever problem-solving. Engage with 32 vibrant scenes, offering a delightful blend of art and challenge. Perfect for young minds, it encourages creativity and logic as players color and piece together puzzles in an enjoyable, growing challenge.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step up to the plate and experience the thrilling world of Baseball Super. With realistic physics and dynamic weather, play in captivating stadiums. Utilize intuitive controls and strategic super skills to outsmart opponents, with every move cheered on by an animated crowd. Can you become the next baseball legend?</p>
 

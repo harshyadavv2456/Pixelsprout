@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Triangle Trip offers a nostalgic arcade experience with a fresh twist, challenging players with precise tapping mechanics and fast-paced reflex tests. Its clean graphics and addictive gameplay create an engaging journey through increasingly tough obstacles, perfect for fans of skill-based challenges and tap-tastic adventures.</p>
 

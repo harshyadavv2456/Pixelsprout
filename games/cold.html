@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Brave the relentless ice storm in Cold, a thrilling clicker game where speed and endurance keep you alive. Each click raises vital body temperature, demanding quick reflexes as the icy challenge intensifies. Can your fingers outrun the cold and save a life before the storm subsides?</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a dynamic parkour race in Kaiju Run Dzilla Enemies. Scale towering landscapes, collect boosts to power up, and face mighty dinosaur foes. Customize your hero with skins, navigate unique animal challenges, and master the art of speed and strength in this exhilarating adventure.</p>
 

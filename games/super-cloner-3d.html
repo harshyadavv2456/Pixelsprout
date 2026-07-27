@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a thrilling mission in Super Cloner 3D, where stealth meets strategy. Harness your cloning abilities to navigate treacherous landscapes, outsmart fierce enemies, and defeat powerful bosses. Upgrade your skills, personalize your hero, and tactfully plan each move to experience a captivating and dynamic adventure.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate the treacherous Red Dark as the endearing Steve, using precise jumps and stops to outwit lurking slimes, flying fiends, and zombie archers. With charming pixel art and thrilling challenges, this adventure promises heart-pounding action and strategic gameplay, whether on PC or mobile. Can you lead Steve to victory?</p>
 

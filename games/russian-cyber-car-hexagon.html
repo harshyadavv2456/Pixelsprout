@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Race through a futuristic battleground in Russian Cyber Car - HexagoN. Experience thrilling elimination where every twist tests your skill and strategy. Only the craftiest survive on this hexagonal track. Master jumps, anticipate rivals, and outlast the competition to claim victory in this gripping, adrenaline-fueled adventure!</p>
 

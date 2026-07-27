@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Become a rockstar in Neon Guitar, where hand-eye coordination meets musical mastery. Hit the right notes to vibrant tunes, dazzling the crowd with your neon-lit instrument. Perfect your timing across dynamic difficulty levels, and unleash epic combos in this electrifying rhythm adventure!</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide your quirky bat through smoky clouds in Flappy Blob, where every tap is crucial for survival. Master quick reflexes and strategic timing in this endlessly entertaining and addictive challenge. Avoid obstacles, maintain a balanced rhythm, and perfect your flying skill for relentless fun.</p>
 

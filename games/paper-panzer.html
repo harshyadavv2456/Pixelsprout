@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Command a German tank with precision in Paper Panzer! Master turret movements with intuitive controls, strategize purchases of rare tanks, and dominate the battlefield with authentic weaponry. Immerse yourself in World War II tank warfare, wielding formidable firepower and tactical expertise. Every battle is a chance to showcase your command skills!</p>
 

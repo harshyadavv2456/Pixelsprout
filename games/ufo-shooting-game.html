@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Engage in thrilling intergalactic battles piloting a UFO over scenic landscapes. Navigate with precision, utilize terrain for defense, and strategically unleash firepower to overcome evolving day-night challenges. Collect power-ups to fortify your spacecraft and ensure your cosmic domination. Will you rise against the odds?</p>
 

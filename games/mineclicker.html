@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Immerse yourself in MineClicker's blocky adventure, where every click battles mobs and mines resources. Strategically upgrade and recruit helpers to conquer increasingly challenging levels. Face timer-driven boss battles, maximizing gains before advancing to earn greater rewards. Enjoy an engaging mix of strategy, idle progression, and fast-paced clicking fun.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a nostalgic platforming journey in Emerald and Amber, where retro-inspired graphics meet a unique sticking mechanic. Navigate 27 carefully crafted levels, mastering surfaces and overcoming challenges to reunite with your beloved. Enjoy the blend of challenge and tranquility, with opportunities for strategic planning and speedrunning.</p>
 

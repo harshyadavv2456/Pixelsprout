@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Leap into a whimsical Halloween world with Survival Pumpkin, where a cheeky pumpkin tackles spine-chilling foes. One-tap controls make it easy to bounce past bats and skulls while colorful visuals enchant. Dodge, jump, and aim for high scores in an exhilarating endless survival adventure that's fun for everyone.</p>
 

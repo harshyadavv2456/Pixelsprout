@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Test your precision and timing in Grimace Penalty, a thrilling soccer challenge. Outsmart the elusive Grimace goalkeeper by strategically placing your shots. Sharpen your reflexes to keep the momentum, as three missed goals spell defeat. Can you handle the suspense and score the winning goal?</p>
 

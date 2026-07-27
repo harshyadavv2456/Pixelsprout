@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate a dynamic block world as two stickman brothers in a fast-paced parkour adventure. Master timing and strategy to overcome disappearing floors and moving obstacles. With user-friendly controls and engaging challenges, each level requires precision and quick thinking to reach portals and survive.</p>
 

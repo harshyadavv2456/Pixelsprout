@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Pop vibrant bubbles by strategically aiming and shooting in Bubble Shooter POP, a dynamic 2D puzzle game. Harness your skill to clear the colorful cascade before it overwhelms the screen. Score big with multipliers and carefully placed bombs, creating satisfying chain reactions. Can you master the popping frenzy?</p>
 

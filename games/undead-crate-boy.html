@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Jump into the pixelated world of Undead Crate Boy, where quick reflexes and strategic planning are your best friends. Evade perilous traps and quirky foes while collecting valuable crates. Navigate the retro landscape with immersive gameplay that offers endless excitement and challenges at every turn.</p>
 

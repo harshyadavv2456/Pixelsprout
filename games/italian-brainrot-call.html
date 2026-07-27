@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Italian Brainrot Call, a whirlwind simulation where each chaotic video call fuses absurdity with outrageous antics. Survive the unpredictable barrage of wild characters and revel in the hilariously nonsensical interactions. Can you hang up before total brainrot consumes you, or will you embrace the madness?</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Animal Match Master invites you to dive into an addictive puzzle adventure where sharp memory meets quick reflexes. Connect identical animals to conquer increasing challenges, choose your difficulty, and compete in thrilling multiplayer showdowns. Simple controls and strategic play offer endless fun for every puzzle enthusiast.</p>
 

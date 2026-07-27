@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a clicking frenzy in Mantis Clicker, where your taps multiply the elusive mantis coins. Unlock powerful upgrades and stylish skins to boost your gains and dominate the mantis universe. How far will your clicking prowess take you? Discover the addictive journey today!</p>
 

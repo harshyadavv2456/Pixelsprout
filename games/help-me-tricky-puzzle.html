@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Test your wits with Help Me Tricky Puzzle, where each level presents a new mind-bending challenge. Harness strategic planning and creativity to unravel puzzles that grow in complexity. Dive into a captivating world of problem-solving, honing your cognitive skills while enjoying endless fun and intrigue.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Stranded on a lush island, transform raw resources into essential tools and shelters in Survival Island. Navigate with intuitive controls, rescue fellow castaways, and earn upgrades to thrive. Challenge your patience and creativity in this immersive, single-player survival experience where every decision impacts your fate.</p>
 

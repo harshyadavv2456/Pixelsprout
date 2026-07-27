@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Swipe, aim, and release to merge cubes in this addictive puzzle challenge. Strategically combine numbers while avoiding obstacles to create higher-value cubes. With endless gameplay, the test lies in how high you can score. Can you conquer the puzzle and reach new heights?</p>
 

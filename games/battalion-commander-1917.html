@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Lead your troops through the chaos of WWI in Battalion Commander 1917, where cartoonish bullet-hell action meets strategic gameplay. Rescue allies, upgrade your arsenal, and break through enemy lines in an ever-evolving battlefield where survival depends on quick reflexes and tactical precision.</p>
 

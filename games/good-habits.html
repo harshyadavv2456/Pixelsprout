@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into an enchanting world where learning meets fun in Good Habits. Through engaging tasks and customizable characters, children effortlessly adopt essential daily habits. Navigate simple controls and earn rewards, making educational playtime a joyous adventure. Share achievements and inspire others in this delightful blend of education and entertainment.</p>
 

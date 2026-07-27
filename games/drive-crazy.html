@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Speed through chaotic tracks in Drive Crazy, where thrilling races demand split-second decisions and precision. Upgrade your vehicle to conquer diverse obstacles, master daring drifts, and secure victory. Perfect your racing strategy and immerse yourself in pulse-pounding action on the ultimate ride of your life.</p>
 

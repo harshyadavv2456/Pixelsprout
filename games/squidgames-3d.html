@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to"> Immerse yourself in the suspenseful challenge of Squidgames 3D. Test your agility in the iconic "Red Light, Green Light" game, where timely precision is key. Navigate through vivid environments as you halt and dash, racing against the clock. Hone your reflexes and outsmart 'it' to reach victory.</p>
 

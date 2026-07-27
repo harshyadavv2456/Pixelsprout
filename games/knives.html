@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to"> Sharpen your reflexes in Knives, a thrilling arcade challenge where precision matters. Fling knives at a spinning target while avoiding existing blades. With increasing difficulty and strategic timing required, each throw becomes an exhilarating test of skill. Aim wisely, find your rhythm, and dominate the leaderboard.</p>
 

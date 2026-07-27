@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a relaxing adventure in Gem Clicker, where each click on gems earns rewards. Strategize upgrades, automate income generation, and tackle increasingly challenging gemstone puzzles. Enjoy infinite fun in this ever-evolving gem-cracking quest, perfect for casual gamers seeking a blend of strategy and relaxation.</p>
 

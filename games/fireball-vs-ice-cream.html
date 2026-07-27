@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Evade relentless fireballs as a nimble ice cream in this fast-paced survival game. With intuitive controls and escalating challenges, maneuver expertly through fiery arenas. Stay alert and patient to increase your score and outlast the heat in this classic arcade-inspired thrill ride. Can you withstand the blaze?</p>
 

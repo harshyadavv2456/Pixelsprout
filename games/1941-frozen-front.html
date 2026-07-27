@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Command WWII forces in 1941 Frozen Front, a gripping strategy game. Conquer brutal terrains using tanks, planes, and infantry. Plan your moves wisely, control resources, and lead strategic battles. Victory demands tactical brilliance as you navigate the war-torn fronts, balancing attack and defense seamlessly.</p>
 

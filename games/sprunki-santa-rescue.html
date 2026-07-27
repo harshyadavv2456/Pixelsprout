@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on an adventurous quest with Sprunki Santa, navigating a perilous lava-filled cave to save Christmas. Outsmart goblins through strategic pin-removal puzzles, ensuring safe gift recovery. Each level poses new challenges, demanding sharp thinking and timing to rescue Santa’s presents and restore holiday joy.</p>
 

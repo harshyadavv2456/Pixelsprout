@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience an amusing twist on the classic clicker game with Spinning Cat Clicker. Boost the hilariously whirling feline's speed as you compete against your personal bests. Balancing humor, skill, and strategy, this delightful escapade offers a fun, meme-filled challenge for cat-loving gamers everywhere.</p>
 

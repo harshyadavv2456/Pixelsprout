@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Immerse yourself in DD Blocky, a captivating puzzle game where strategic block placement is key. Fill rows and columns by carefully positioning Tetris-like shapes. Its addictive nature sharpens your mind while delivering endless fun. Perfect for all ages, challenge your skills and enjoy a fresh, mobile-friendly twist on a classic.</p>
 

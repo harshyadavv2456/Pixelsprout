@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Transform your character with endless possibilities in Princess Hair Spa Salon. Indulge in a relaxing makeover through three delightful stages: cleanse, style, and accessorize. Embark on a beautifying adventure full of creativity and charm, ensuring your character leaves the salon radiantly transformed and your dermatologist’s worries behind.</p>
 

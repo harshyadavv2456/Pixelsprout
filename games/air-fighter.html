@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Take to the skies as you navigate intense battle zones in Air Fighter. Test your reflexes against relentless enemy units, using skillful maneuvers to dodge bullets and launch powerful attacks. Survive the onslaught, collect power-ups, and feel the adrenaline as you strive for aerial supremacy.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Yummy Waffle Ice Cream invites you to unleash your culinary creativity and make mouthwatering waffle desserts. Use intuitive drag-and-drop controls to craft and customize delightful treats with various toppings and flavors. With endless combinations and an appealing atmosphere, creating the ultimate dessert masterpiece is fun and rewarding.</p>
 

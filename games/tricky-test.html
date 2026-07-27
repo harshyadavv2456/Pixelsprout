@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your creativity and put your mind to the test with Tricky Test, a puzzling adventure packed with vibrant visuals and delightful animations. Embrace unconventional thinking to solve quirky challenges, while engaging in a whimsical story. Shake, tilt, and collect coins in this engaging brain-teaser.</p>
 

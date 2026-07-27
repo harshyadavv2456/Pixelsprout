@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Hotfoot Baseball delivers an exhilarating sports experience with simple one-tap controls. Step into a fast-paced world where timing and strategy define victory. Choose your nation, unleash precise swings, and break for bases in a race for the championship. Feel the authentic thrill as each decision propels you closer to glory.</p>
 

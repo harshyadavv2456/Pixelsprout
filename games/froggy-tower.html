@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Leap and stack in Froggy Tower, where precision and timing are your allies. Navigate an endless skyward journey, extending blocks in perfect harmony to keep your frog hopping higher. Collect coins to boost your survival, master your rhythm, and enjoy this addictively charming pixel art adventure.</p>
 

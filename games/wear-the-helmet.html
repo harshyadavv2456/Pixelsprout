@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate treacherous roads in "Wear the Helmet," a thrilling 2D endless-runner. Steer your scooter safely through relentless obstacles with simple keyboard controls. Dodge barricades, roadblocks, and open sewer holes. Choose strategically—will you wear the helmet for extra bounce or rely solely on skill? How far can you ride?</p>
 

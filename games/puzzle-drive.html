@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate through intricate puzzles to fuel your journey! Each solution propels your car ahead, allowing you to collect coins and unlock vibrant new worlds. Puzzle Drive offers endless excitement with its dynamic levels and engaging challenges that keep every adventure fresh and rewarding.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to"> Dive into Iceberg, a captivating puzzle game where precision and sequence matter! Click to drop suspended shapes, crafting the perfect iceberg. Master the art of timing and enjoy the rewarding challenge of aligning each piece flawlessly. Engage your mind and relish the thrill of success in every level!</p>
 

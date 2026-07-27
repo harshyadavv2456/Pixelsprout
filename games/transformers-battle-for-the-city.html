@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Join the epic clash in Transformers Battle For The City, where you defend against robotic invaders in an immersive open-world battlefield. Select and customize your robot, master advanced combat gear, and strategically unleash powerful techniques to triumph in complex missions and save the day.</p>
 

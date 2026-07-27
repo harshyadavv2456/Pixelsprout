@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Immerse yourself in Checkers Casual, a vibrant twist on the classic board game. Challenge your strategic mind in lively matches against clever AI or friends. With a dynamic design and intuitive gameplay, enjoy endless cerebral excitement as you seek to dominate the board and outmaneuver opponents.</p>
 

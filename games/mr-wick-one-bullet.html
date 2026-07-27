@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into the role of elite sniper Mr. Wick in a high-octane shooting game. Plan meticulously and aim with precision as you navigate diverse challenges. Each strategic shot counts as you outsmart criminals in a heart-pounding, adrenaline-fueled journey. Sharpen your skills and embrace the thrill!</p>
 

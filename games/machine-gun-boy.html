@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Machine Gun Boy, a pulse-pounding battle for survival against relentless zombie hordes. Armed with a mighty machine gun, enjoy endless gameplay featuring charming pixel graphics and smooth animations. Master the intuitive controls and claim your place on the leaderboard by outlasting the undead threat.</p>
 

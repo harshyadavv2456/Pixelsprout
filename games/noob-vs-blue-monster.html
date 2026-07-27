@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a vibrant pixelated quest in Noob vs Blue Monster. Navigate treacherous cliffs as comical Noob, while evading the tenacious beast. With simple yet challenging controls, master timing to reach the mystical statue portal. Keep your cool and your distance in this amusing race for survival!</p>
 

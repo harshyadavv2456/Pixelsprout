@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Join forces in Redpool Skyblock 2 Player, where teamwork is key. Traverse treacherous platforms to collect potion boxes, dodge ruthless monsters, and unleash the unique powers of red and yellow heroes. Communicate, strategize, and conquer increasingly difficult levels in this exciting cooperative adventure.</p>
 

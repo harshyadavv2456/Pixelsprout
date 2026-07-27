@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide adorable animals through a whirlwind of challenges in Pet Chase! Strategically navigate hazards by building bridges and managing traffic, all while testing your quick reflexes and planning skills. Simple controls make it accessible for all players, but escalating difficulties ensure an engaging, pulse-pounding adventure.</p>
 

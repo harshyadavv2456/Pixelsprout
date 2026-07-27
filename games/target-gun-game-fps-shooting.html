@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Sharpen your aiming skills in this immersive 3D first-person shooter. Focus on precision and strategy as you eliminate targets and aim for high scores. With a variety of challenges and guns to unlock, each shot counts in this addictive, accurate gun range experience. Make every bullet matter!</p>
 

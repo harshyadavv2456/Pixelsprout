@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner archer in Arrow Hit, an exhilarating challenge of precision and timing. Tap to release your arrows, hit moving targets, and enhance your skills as each stage becomes more demanding. Master the rhythm and accuracy to conquer this addictive arcade adventure.</p>
 

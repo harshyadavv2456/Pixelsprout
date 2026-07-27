@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Skibidi Wood Cutter, where you control a tireless lumberjack Skibidi Toilet, chopping down trees with one-touch gameplay. Quick reflexes and clever timing are your allies in avoiding branches. Simple yet challenging, this adventure demands patience and rewards strategic chopping mastery. Will you chop or stop?</p>
 

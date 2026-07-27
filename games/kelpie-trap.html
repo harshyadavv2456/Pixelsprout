@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">In Kelpie Trap, dodge and leap past enchanting critters, timing your moves just right to climb higher. With charming visuals and addictive gameplay, skillfully clear playful Kelpies to rack up points. Master each jump and shot in this delightful, mythical arcade adventure.</p>
 

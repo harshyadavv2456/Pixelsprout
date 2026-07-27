@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a pulse-pounding journey through Jungle Game, where survival hinges on your swift reflexes. Leap over bizarre creatures in a vividly dangerous world, adapting to its increasing challenges. Push your agility and timing skills to the limit in an addictive quest for enduring glory.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Vortex 9, where stylish heroes wield insane weapons in explosive battles across vivid maps. Choose from unique characters and unleash chaos in thrilling modes like Team Battle and Deathmatch. With ever-expanding challenges, the action never stops. Get ready to dominate the arena!</p>
 

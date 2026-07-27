@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Enter a vibrant realm of popping action with Sprunki Pop It! Engage in a dynamic quest to burst bubbles amidst captivating visuals and challenging patterns. Master levels with intuitive controls, overcome tricky obstacles, and aim high with strategic pops. Perfect for thrill-seekers or those who relish satisfying bubble pops.</p>
 

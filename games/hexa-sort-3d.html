@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Immerse yourself in Hexa Sort 3D, where strategic tiling meets calming aesthetics. Conquer increasingly complex levels by artfully stacking and merging hexagonal tiles. With each calculated move, navigate a landscape of tranquil logic, crafting higher-value tiles for a deeply rewarding and soothing puzzle experience.</p>
 

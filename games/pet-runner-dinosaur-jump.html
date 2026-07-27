@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the exhilarating world of Pet Runner - Dinosaur Jump, where your furry friend races through vibrant landscapes. Master jumps, dodge obstacles, and collect coins to unlock adorable companions. With exciting modes and intuitive controls, each run is thrilling and packed with endless fun for all ages.</p>
 

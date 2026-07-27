@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Rodha immerses you in a minimalist platformer where quick reflexes guide your ball-shaped hero through 60 intense levels. Maneuver unique characters around deadly obstacles, collect coins for upgrades, and perfect timing to unlock endless customization possibilities. Experience a thrilling, skill-driven journey in this simplistic yet challenging world.</p>
 

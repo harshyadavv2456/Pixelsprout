@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Pomni Coloring Book, a playful digital adventure where your creativity breathes life into charming circus scenes. Enjoy intuitive controls to effortlessly select and color vibrant images as you explore endless color possibilities. Perfect for all ages, this artistic journey is full of fun and creativity.</p>
 

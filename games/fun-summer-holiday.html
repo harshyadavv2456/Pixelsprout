@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on spontaneous adventures with Ashleigh and friends in Fun Summer Holiday. Spin the wheel to discover destinations, pick perfect outfits, and capture unforgettable moments. Relive vacations by exploring the photo gallery. Jet off again for endless summer escapades and fashion fun!</p>
 

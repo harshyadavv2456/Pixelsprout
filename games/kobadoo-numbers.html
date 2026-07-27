@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Strengthen your mind with Kobadoo Numbers, a captivating browser game. Challenge yourself to memorize increasingly difficult two-digit sequences and enhance your cognitive abilities in a fun way. Unlock the potential of your working memory as you improve your focus, attention, and mental agility while enjoying this addictive experience.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner shredder in Ontube, where precision slicing delivers mesmerizing satisfaction. Immerse yourself in a tactile universe, skillfully cutting through varied textures with smooth gestures. Each stroke creates a vibrant spectacle, transforming mundane materials into captivating artistry, making every snip a moment of pure, addictive bliss.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Zoom through space in Robo Runner IO, outpacing rivals in electrifying races. Navigate challenging tracks, collect stars to unlock exciting skins, and showcase your speed and strategy. With every race, improve your skills and strive to be the universe's fastest robot. Are you ready for the spotlight?</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into a frantic game of hide-and-seek with Tung Tung Sahur! Outwit the relentless seeker by finding the perfect hiding spot in a quirky house. Laugh through unpredictable twists, animated antics, and escalating challenges. Test your stealth skills in this hilarious, fast-paced adventure for all ages!</p>
 

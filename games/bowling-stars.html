@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into the thrilling world of Bowling Stars, where you rise to become a bowling legend. With intuitive swiping controls and realistic physics, perfect your curve shots and master the lanes. Unlock diverse bowling balls through triumph, and stay captivated by endless gameplay and escalating challenges.</p>
 

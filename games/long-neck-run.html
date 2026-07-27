@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Race through a vibrant landscape as a long-necked stickman, collecting color-matched rings to maintain your speed. With each collected ring, the world grows taller, intensifying the skyscraper view. Simple controls make it easy to dive into this escalating challenge with visually captivating 3D graphics.</p>
 

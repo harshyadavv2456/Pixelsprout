@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your pattern-matching prowess in Animal Connection, where adorable animals await amidst an array of puzzles. Hone your skills through 30 engaging stages, using speedy completions to earn valuable rewards. With its charming design and accessible gameplay, every playthrough offers a delightful challenge across any device.</p>
 

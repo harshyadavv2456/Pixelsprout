@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Challenge your pool skills with Pool: 8 Ball Mania! Experience lifelike ball physics and strategic gameplay as you refine your aim against a savvy AI or challenge friends in multiplayer mode. Master accuracy and power to outsmart opponents and enjoy the thrill of a realistic mobile pool experience.</p>
 

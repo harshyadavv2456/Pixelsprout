@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into Cambini's Great Escape, where every corner hides danger in a sinister escape room you never signed up for. Outwit a twisted family's traps, unravel haunting puzzles, and explore eerie surroundings to save yourself from becoming Henry's next meal. Can you escape the farm's terrifying clutches?</p>
 

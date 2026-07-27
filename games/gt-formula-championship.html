@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Rev up your engines for GT Formula Championship, where precision driving meets high-speed thrills. Experience intense competition in cutting-edge Formula cars, expertly crafted with realistic physics for true-to-life handling. Customize and conquer dynamic tracks inspired by iconic global circuits, pushing your skills to the ultimate test in any weather.</p>
 

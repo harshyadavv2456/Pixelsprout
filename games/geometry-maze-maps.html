@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Geometry Maze Maps is an enthralling arcade experience where quick reactions and strategic timing are key. Navigate abstract landscapes filled with geometric obstacles, relying on instinct to leap to safety. Its minimalist design and addictive, score-chasing gameplay make every jump a thrilling challenge.</p>
 

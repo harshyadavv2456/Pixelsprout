@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Defend your planet in Smash the Meteor! Test your reflexes and quick thinking as you intercept meteors plummeting from space, using strategic maneuvers to prevent world-shattering impacts. Are you the hero who can save humanity from cosmic chaos?</p>
 

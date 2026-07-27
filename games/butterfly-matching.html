@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the colorful excitement of Butterfly Matching, where your keen observation and quick reflexes are key. Identify and pair identical butterfly patterns among hundreds of dazzling species. Enjoy vibrant graphics as you challenge your perception in this fast-paced, exhilarating match-3 puzzle adventure.</p>
 

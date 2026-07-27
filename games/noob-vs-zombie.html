@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate maze-like landscapes in Noob vs Zombie, an immersive adventure where strategic combat and cunning puzzle-solving reign supreme. Arm yourself with powerful upgrades, dodge deadly traps, and collect coins to unmask a traitor. Explore diverse biomes, unlock secrets, and engage villagers to uncover thrilling challenges at every turn.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on an aquatic adventure with Swimming Bee, where precision and strategy are your greatest allies. Navigate intricate obstacles, harness unique power-ups, and hone your skills across progressively challenging levels. Delight in vibrant graphics and intuitive controls as you master this thrilling underwater arcade journey.</p>
 

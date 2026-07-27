@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Enter a vibrant world of feline fashion where you're the ultimate makeover artist! In Superstar Kitty Fashion Award, transform cat clients into dazzling divas with your flair for style. Select from a variety of treatments and tools in delightful mini-games, making these charismatic cats feel fabulous inside and out.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embrace the tranquil journey of nurturing nature in Life of a Tree. Plant seeds, tend to saplings, and guide them to majestic glory. With interactive learning through quizzes and mini-games, discover the intricate beauty of tree ecology while protecting your grove from challenges. A delightful blend of fun and education awaits!</p>
 

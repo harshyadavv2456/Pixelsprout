@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a tribal adventure with Bushman Bamboo, where precision and timing are your allies. Stretch bamboo sticks across perilous gaps, master intuitive controls, and revel in the stunning visuals. Perfect for quick sessions or extended play, every level challenges your skills with escalating excitement.</p>
 

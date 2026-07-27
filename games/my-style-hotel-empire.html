@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the thrill of hotel management as you design, upgrade, and expand your empire in My Style Hotel Empire. Delight guests with impeccable service, smart choices, and stylish upgrades. Become a master of hospitality as you grow, strategize, and tackle dynamic challenges to achieve hotel greatness.</p>
 

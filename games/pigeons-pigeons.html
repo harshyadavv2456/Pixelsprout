@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Become humanity's last hope against the ever-present pigeon menace! Arm yourself with a shotgun and take aim at 12 quirky pigeon types across 30 challenging levels. Experience unexpected twists and interactive destruction as you embark on this exhilarating, sky-clearing adventure. Are you ready to face the feathers?</p>
 

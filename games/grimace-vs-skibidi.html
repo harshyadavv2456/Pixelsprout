@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">In Grimace Vs Skibidi, defend your sacred shakes from mischievous Skibidi Aliens using strategic snowball attacks. Navigate this fast-paced action-defense game by balancing swift movements and decisive actions to repel relentless invaders. Each wave brings new challenges, testing your quick thinking and reflexes in a vibrant, thrilling setting.</p>
 

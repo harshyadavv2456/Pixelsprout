@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Slide your way through realistic trucking challenges! Manipulate fragmented images of mighty trucks by shifting tiles into place, completing captivating high-quality puzzles. Test your spatial skills and enjoy the thrill of assembling powerful vehicles, merging the worlds of trucking and puzzle-solving into a delightful brain-teasing experience.</p>
 

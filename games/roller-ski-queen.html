@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Race through icy tracks with skill and grace in Roller Ski Queen. Master flips, spins, and swift evasion while collecting upgrades and coins. Stylish outfits await as you conquer escalating challenges, blending speed with alluring fashion. Can you claim the crown in this high-speed icy adventure?</p>
 

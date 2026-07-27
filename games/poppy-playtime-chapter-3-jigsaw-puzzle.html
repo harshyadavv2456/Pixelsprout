@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the thrilling world of Poppy Playtime Chapter 3 with this unique jigsaw puzzle. Experience a brand new adventure as you piece together captivating imagery, unraveling the mystery with every exciting fit. Enjoy a one-of-a-kind, immersive challenge that offers a fresh take on the beloved series.</p>
 

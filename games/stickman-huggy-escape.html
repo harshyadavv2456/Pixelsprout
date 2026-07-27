@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide the Stickman Huggy brothers through a pixelated prison escape. Outsmart guards, dodge surveillance, and discover secret paths in this thrilling stealth adventure. Each level ramps up the challenge, requiring sharp wit and strategy to uncover the keys to freedom. Can you master the art of the escape?</p>
 

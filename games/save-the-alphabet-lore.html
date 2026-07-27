@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on an alphabet-saving adventure where you connect letters through clever pin clicks. Navigate around cunning obstacles like the malevolent letter F, bombs, and lava. Test your wits and timing to rescue the alphabet. Will you succeed in becoming the ultimate letter hero?</p>
 

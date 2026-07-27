@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Sharpen your precision and focus in Archery Hero, where dynamic weather and moving targets keep you on edge. Perfect your timing and aim for the bullseye as you tackle increasingly challenging levels. Experience the thrill of atmospheric realism and intuitive controls as you strive to become the ultimate archery master.</p>
 

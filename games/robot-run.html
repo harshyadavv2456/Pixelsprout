@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate through a perilous tech lab, dodging lasers and obstacles. In Robot Run, experience the thrill of endless escape as a newly assembled robot with an unyielding desire for freedom. Can you outsmart the high-tech defenses and make it to the open world beyond?</p>
 

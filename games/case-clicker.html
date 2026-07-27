@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into a whirlwind of excitement with Case Clicker, where clicking meets the rush of collecting. Open cases, complete missions, and climb the ranks using strategy and skillful investments. Unlock an array of dazzling skins, while mastering engaging mini-games for rewards. Elevate your collection and income in this addictive arcade adventure.</p>
 

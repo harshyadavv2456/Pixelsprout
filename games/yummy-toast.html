@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">In Yummy Toast, become the toast crafting expert in a lively kitchen setting. Quickly serve up delightful creations using a variety of ingredients to satisfy customer orders. Speed and precision are your allies as you unlock challenging levels and strive to become the ultimate toast maestro.</p>
 

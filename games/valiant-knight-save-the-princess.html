@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a heroic journey as a valiant knight, navigating through a trap-laden castle. Strategically alter your path using simple clicks to outwit foes and collect treasures. Race against time and optimize your descent to rescue the princess and claim victory against the final boss.</p>
 

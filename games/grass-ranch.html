@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into the serene world of Grass Ranch, where mastering the art of grass mowing unfolds through relaxing tasks. Care for adorable animals and upgrade your mower as you relish tranquil greenery. Mow your way to rewards and expand your ranch in this charming pastoral escape.</p>
 

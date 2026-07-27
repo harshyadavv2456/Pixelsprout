@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Start your mining empire in Stone Miner Idle, where simple clicks unearth treasures. Upgrade your gear to boost mining speed and profits. Strategize smartly to expand your venture, balancing upgrades and expenditures. Experience gratifying progress as you amass wealth and climb the ranks in this captivating idle adventure.</p>
 

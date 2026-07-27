@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide your bird through thrilling obstacles in Sky Flapper! Experience intuitive controls and a customizable appearance for endless challenges. Balance strategy and reflexes to outsmart barriers and reach soaring scores. With engaging gameplay, Sky Flapper offers a delightful, addictive adventure for all ages.</p>
 

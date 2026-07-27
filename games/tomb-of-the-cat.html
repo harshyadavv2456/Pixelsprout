@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Race against the clock in Tomb of the Cat, where speed reigns supreme. Navigate a feline hero through intricate pixel-art levels, prioritizing quick exits over gold. Tackle escalating challenges with sharp reflexes and strategic flair for a riveting arcade experience. Can you outpace the ticking time?</p>
 

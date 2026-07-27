@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide your flexible jelly block through vividly animated terrains as you merge numbers in a thrilling parkour adventure. Achieve 2048 by merging identical tiles while dodging sharp spines and menacing maces. Engage in strategic swipes and quick reflexes to conquer vibrant levels and unlock quirky blocks.</p>
 

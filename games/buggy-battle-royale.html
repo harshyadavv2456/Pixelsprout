@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Rev up for adrenaline-fueled action in Buggy - Battle Royale, where racing meets survival. Maneuver treacherous tracks, strategize to outlast opponents, and avoid dramatic cliff falls. Adapt your tactics and master your controls to become the last buggy standing in this high-stakes, edge-of-your-seat adventure.</p>
 

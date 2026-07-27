@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Immerse yourself in Color Fill, a strategic puzzle challenge where every move matters. Carefully select colors to spread across the board, starting from the top left, and conquer each level with minimal moves. Enjoy endless brain-teasing fun without time constraints in a sleek, uncluttered environment.</p>
 

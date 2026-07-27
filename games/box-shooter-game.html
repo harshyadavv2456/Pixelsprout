@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Box Shooter Game and unleash your reflexes in a fast-paced world brimming with dynamic challenges. Aim, shoot, and shatter advancing boxes while collecting power-ups and climbing the global leaderboard. React swiftly, stay alert, and enjoy a non-stop adrenaline rush in this action-packed adventure!</p>
 

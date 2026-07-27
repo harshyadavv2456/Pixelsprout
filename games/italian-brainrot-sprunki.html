@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a haunting musical odyssey in Italian Brainrot Sprunki. Shape the eerie soundscapes with bizarre characters and creepy icons, crafting sinister melodies that thrill and mesmerize. Experiment to create spine-tingling ensembles that captivate horror and music lovers alike. Unleash your creativity and let the chilling tunes flow.</p>
 

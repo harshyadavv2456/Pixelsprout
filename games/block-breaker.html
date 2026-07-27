@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Smash through block challenges with precision in Block Breaker. Navigate your paddle to keep the ball airborne, shatter dynamic block patterns, and seize special power-ups. Overcome 150 intricate levels that escalate in difficulty, offering relentless arcade excitement and strategy at every turn. Can you perfect the art of anticipation?</p>
 

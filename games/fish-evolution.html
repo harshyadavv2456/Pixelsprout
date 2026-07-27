@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the mesmerizing depths of Fish Evolution, where merging vibrant fish leads to spectacular transformations. Explore strategic depths and witness evolving sea creatures as you protect your aquatic realm. With endless species and captivating visuals, get hooked on this thrilling puzzle adventure that keeps your strategy sharp and imagination afloat.</p>
 

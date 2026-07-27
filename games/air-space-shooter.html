@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on thrilling interstellar warfare in Air Space Shooter! Maneuver your spacecraft through relentless alien waves and epic bosses. Upgrade firepower, unlock new abilities, and gather resources to survive in stunning cosmic battles. With fast-paced action and intuitive controls, it's a must-play for all space adventure enthusiasts.</p>
 

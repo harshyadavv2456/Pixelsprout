@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your creativity in Paper Doll for Girls Dress Up! Style adorable dolls with a mix of outfits and accessories, from casual to formal, and craft unique looks. Customize backgrounds to enhance your fashion creations, transforming every scene into a chic showcase of your stylish masterpieces.</p>
 

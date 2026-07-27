@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Enter the fast-paced world of "Multi Surgery Hospital Games," where precision and skill are key. Immerse yourself in intricate surgical puzzles, mastering each step as you heal patients in a challenging yet rewarding hospital adventure. No timers—just a focus on perfecting your craft and proving your medical prowess.</p>
 

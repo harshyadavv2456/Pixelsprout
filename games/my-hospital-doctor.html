@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into the bustling life of a hospital with My Hospital Doctor, where you become a master of multitasking. Diagnose patients, manage time effectively, and tackle daily challenges. Upgrade your clinic while ensuring patient satisfaction in this thrilling medical simulation of becoming a top-tier doctor.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Pulse Arcade pulls you into its vibrant, minimalist world, testing your reflexes as you guide a ball along an unpredictable pulse line. With each level's unique rhythm, challenge yourself to maintain composure, navigate shifting paths, and aim for leaderboard glory in this captivating, fast-paced adventure.</p>
 

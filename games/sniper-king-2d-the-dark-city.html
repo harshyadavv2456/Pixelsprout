@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into the shadows of Sniper King 2D: The Dark City. Immerse yourself in strategic sniping missions where every shot counts. Scan, aim, and execute your targets while conserving ammo, all from a first-person perspective. Precision and patience are your allies in this tense, thrilling game of stealth.</p>
 

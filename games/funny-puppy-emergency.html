@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the delightful world of Funny Puppy Emergency, where you become a vet for adorable puppies. Diagnose, treat, and creatively dress up your furry patients with intuitive controls. This vibrant and engaging journey offers a blend of medical care and fashion fun, perfect for young animal enthusiasts.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a tranquil fishing adventure in Fish Land - Fish World. Cast your line, catch diverse fish, and trade them for gold to expand your pond and unlock new zones. Master fishing strategies, hire workers, and create your own thriving aquatic habitat in this relaxing idle simulation.</p>
 

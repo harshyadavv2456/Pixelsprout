@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dash through a whirlwind of wacky scenarios in Shoe Race, where timing and shoe IQ are key. Choose the right footwear and navigate quirky challenges in this educational yet hilarious race against the clock, combining rapid thinking with a splash of style and humor.</p>
 

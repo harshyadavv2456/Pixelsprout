@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Wrestle Run, where exhilarating wrestling action meets endless running. Dodge or smash obstacles using epic moves, collect power-ups, and maintain your momentum to achieve high scores. With intuitive controls and diverse wrestlers, every run promises fast-paced, adrenaline-pumping excitement.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the thrill of Brazil Cup 2014, where soccer meets pinball chaos. Navigate through qualifiers and knockout rounds, unleashing your quick reflexes as multiple balls storm the field. Accessible and engaging, compete for tournament glory and etch your name into football history. Enjoy the ride unblocked and in HTML5.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Challenge friends in Ludo Game Multiplayer, where luck and strategy unite! Navigate your tokens to victory, dodging rivals and seizing opportunities. Plan moves carefully, utilizing safe spots, and aim for the home stretch. Roll the dice and let the fun unfold on any device!</p>
 

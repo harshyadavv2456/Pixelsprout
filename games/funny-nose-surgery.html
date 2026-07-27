@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Get ready for hilarious fun in Funny Nose Surgery! Treat Mia’s snotty nose in this charming game with simple, interactive play. Perform light-hearted medical tasks and unleash creativity by adorning her nose with wacky stickers. Enjoy a colorful, engaging experience while uncovering basic healthcare routines.</p>
 

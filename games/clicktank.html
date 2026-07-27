@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to"> Dive into ClickTank, an addictive arcade clicker where swift tapping leads to fortunes and powerful tank upgrades. Engage in electrifying battles by rapidly clicking tanks to maximize your earnings. Strategically spend your earnings on advanced upgrades and new tanks for a thrilling, endlessly replayable experience!</p>
 

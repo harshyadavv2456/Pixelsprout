@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the spook-tacular fun of Roblox Halloween Costume Party! Transform your avatar with an array of eerie and imaginative costumes, participate in haunted house tours, and shine in costume contests. Mix and match creative styles to express your unique Halloween spirit in a festive community atmosphere.</p>
 

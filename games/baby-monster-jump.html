@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide a lovable young monster through thrilling and dangerous levels in Baby Monster Jump. With intuitive controls, experience exciting jumps and test your reflexes to dodge obstacles. Bright visuals and a charming narrative enhance this captivating arcade adventure, offering endless challenges and hidden power-ups for an invigorating gameplay experience.</p>
 

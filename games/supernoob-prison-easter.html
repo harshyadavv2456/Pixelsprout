@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a chaotic Easter egg hunt with a bumbling hero in Supernoob Prison Easter. Navigate treacherous prison corridors, dodging traps and collecting hidden eggs. Balance quick reflexes and smart planning in this pixelated adventure full of unexpected surprises and comedic challenges. Will you outwit the perilous paths to success?</p>
 

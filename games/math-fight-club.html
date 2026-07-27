@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner math warrior in Math Fight Club! Customize your character, solve challenging equations, and battle legendary opponents in the ring. Outsmart your foes with quick calculations, collect their masks, and rise to become the ultimate math champion. Can you conquer every math legend?</p>
 

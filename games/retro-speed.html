@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Race through a nostalgic world in Retro Speed, where your car grows faster with each coin collected. Master simple controls to weave through traffic, outmaneuver opponents, and rise in the rankings. Can you maintain your nerve and reflexes as the pace escalates toward exhilarating heights?</p>
 

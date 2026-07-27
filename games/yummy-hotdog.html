@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Create your dream hotdog in Yummy Hotdog, a whimsical cooking experience. Dive into ingredient selection, craft a perfect batter, and customize with diverse toppings. Your culinary creativity unlocks achievements as taste and presentation meld in this delicious journey. Get ready to savor the joy of your personalized gourmet delight!</p>
 

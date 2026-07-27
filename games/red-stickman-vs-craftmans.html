@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Battle fierce monsters in a thrilling duel as the Red Stickman. Engage in dynamic hand-to-hand combat across a pixelated world, where each victory brings you closer to escape. Can you conquer the blocky beasties and survive the ultimate showdown?</p>
 

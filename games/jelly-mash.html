@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Immerse yourself in the vibrant world of Jelly Mash, where puzzle-solving meets strategic finesse. Arrange colorful jellies into perfect lines or clusters, navigating through increasingly complex levels. Simple to pick up yet challenging to master, Jelly Mash offers endless fun with its enticing visuals and engaging gameplay.</p>
 

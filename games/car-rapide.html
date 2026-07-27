@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Car Rapide immerses you in the lively streets of Senegal, combining thrilling driving with the challenge of dodging obstacles. Collect coins to unlock unique cars that elevate your experience. With vivid graphics and intuitive controls, this exhilarating adventure keeps every moment exciting as you race to victory.</p>
 

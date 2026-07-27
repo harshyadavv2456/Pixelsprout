@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on an exhilarating journey where quick reflexes and sharp wits are key. Guide your soldier through thrilling levels, face off against foes, and solve intricate puzzles. Evolve your ranks and arsenal as you dash to victory. Run, shoot, and transform from rookie to elite in Soldier Run Evolution!</p>
 

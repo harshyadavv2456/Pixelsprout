@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Craft your army of tech-infused heroes and lead them into strategic battles in a futuristic stickman universe. Click and touch to direct your forces, upgrade heroes, and counter peculiar foes with clever tactics. Initiate thrilling combat engagements where strategy and creativity shape your path to victory.</p>
 

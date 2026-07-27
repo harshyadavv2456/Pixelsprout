@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Basketball Challenge, where thrilling strategy meets fast-paced shooting action. Maneuver your ball past tricky obstacles, master precision shots, and improve your score with every basket. With your reflexes and strategic planning, conquer progressively tougher levels and enjoy endless fun on the court.</p>
 

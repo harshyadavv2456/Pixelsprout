@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate a haunted hospital, outsmarting grotesque creatures to survive "Grimace Shake - Escape Skibidi and Cameraman." In this pulse-pounding escape, silence is your ally, and every corner hides a potential threat. Craft your getaway with stealth and resourcefulness amid eerie corridors, relentless suspense, and heart-pounding danger.</p>
 

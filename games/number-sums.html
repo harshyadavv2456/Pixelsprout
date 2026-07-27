@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Number Sums, a logic puzzle game that will put your number-crunching skills to the test. Strategically select grid cells to achieve precise target sums across rows and columns. With 5000 levels, this addictive challenge promises endless brain-bending fun. Will you reign as the ultimate puzzle master?</p>
 

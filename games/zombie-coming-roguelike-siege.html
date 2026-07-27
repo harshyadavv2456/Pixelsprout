@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Defend your fortress in a relentless zombie onslaught with strategic upgrades and resourceful gameplay. Navigate each round of undead chaos, where quick reflexes and tactical thinking turn the tide. Immerse yourself in this arcade-style roguelike, battling unpredictable zombie threats with ever-evolving strategies in a visually captivating world.</p>
 

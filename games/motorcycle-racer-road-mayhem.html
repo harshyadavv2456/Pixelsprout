@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the thrill of high-speed motorcycle racing through bustling city streets. Dodge traffic, unlock powerful bikes, and master unique handling with fluid physics and vivid graphics. Immerse yourself in an electrifying ride complemented by a dynamic, realistic soundtrack.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Fast-paced and nostalgic, Final Freeway revives classic 16-bit racing thrills with eight diverse tracks. Whether navigating deserts or ruins, enjoy fluid controls and smooth gameplay. Three modes, variable difficulty, and captivating scenery provide endless excitement for both veteran and novice racers. Push your limits in this captivating retro ride.</p>
 

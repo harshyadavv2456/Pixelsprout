@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Enter the world of Flames & Fortune, where card battles meet fiery strategies. Conquer ever-changing dungeons with tactical mastery, collecting powerful spells and abilities along the way. Unpredictable challenges ensure every run is a new test of skill and adaptation, offering endless excitement and strategic depth.</p>
 

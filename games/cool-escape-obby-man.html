@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate a treacherous prison escape, outsmarting guards at every turn. Leap over perilous platforms, dodge deadly traps, and unravel clever riddles. Unearth hidden clues and utilize makeshift tools to carve your path to freedom. Can you outwit your captors in this thrilling and brain-teasing adventure?</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into a whimsical world where strategy meets charm in Monster Go. Connect adorable cube-shaped monsters on a vibrant grid to unravel a challenging puzzle adventure. Test your wits in increasingly tricky levels, earning stars as you strategically conquer each colorful stage. Can you master every delightful challenge?</p>
 

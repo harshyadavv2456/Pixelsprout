@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Swoop through skies in Crazy Plane Shooter, an exhilarating arcade experience where quick reflexes and strategic movement are your best weapons. Upgrade your adaptable plane, dodge enemy fire, and unleash powerful shots to clear the screen of hostile forces. Engage in endless aerial battles and keep the skies free!</p>
 

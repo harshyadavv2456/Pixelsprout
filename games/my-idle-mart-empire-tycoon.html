@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Watch your store evolve from a humble shop to a bustling retail empire in this captivating idle simulation. Customize and upgrade every detail, unlock new areas, and hire staff to boost efficiency. Enjoy the excitement of strategic growth and passive earnings, even when you're away. Can you build the ultimate shopping haven?</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Saddle up as a fearless cowboy battling vicious bandits across dusty towns and wild canyons. Engage in adrenaline-pumping shootouts, testing your reflexes to determine the West's fate. Will you forge your legacy as a mere hero or an enduring legend? The frontier awaits your mark.</p>
 

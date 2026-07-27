@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide a bouncing ball through neon-lit realms in Ball Hop, where your reflexes are your best ally. With each tap or swipe, dodge cunning traps, collect vital power-ups, and customize your ball's style. Challenge yourself to master thrilling platform landscapes and climb the leaderboard in this endless arcade adventure.</p>
 

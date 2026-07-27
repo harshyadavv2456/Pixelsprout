@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Design delightful styles in Panda Hair-do, where creativity thrives as you wash, style, and accessorize a panda-loving girl! With endless makeover combinations, each session becomes a unique exploration, offering inspiration and endless fashion fun. Create dazzling looks that might inspire your next personal style adventure!</p>
 

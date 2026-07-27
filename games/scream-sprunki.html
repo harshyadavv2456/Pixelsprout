@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Use your voice to guide a quirky chicken through a world of obstacles in Scream Sprunki. Shout, tap, or press the spacebar to make leaps over exciting hurdles. With lively levels and surprising challenges, enjoy a unique and laughter-filled adventure as you master vocal-powered gameplay.</p>
 

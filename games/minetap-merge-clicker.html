@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into MineTap Merge Clicker, a mesmerizing experience where mining meets merging. Combine blocks to craft powerful tools, fend off monsters, and build a thriving village. Efficient tapping and strategic upgrades challenge your skills in this engaging idle adventure, offering endless discovery and creativity at every click.</p>
 

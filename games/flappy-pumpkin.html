@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate the skies as a winged pumpkin, dodging perilous mechanical hands in a spooky, adrenaline-pumping challenge. Master precise timing to soar through obstacles, earn medals, and set high scores. With simple controls and escalating difficulty, indulge in this thrilling test of endurance and skillful strategy.</p>
 

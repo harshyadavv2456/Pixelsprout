@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Conquer rugged mountains and master exhilarating trails in Mountain Bike Challenge. Navigate dynamic terrains with intuitive controls as you balance speed and precision. Experience the thrill of racing the clock, perfecting your technique, and overcoming every obstacle in this gripping, physics-driven biking adventure. Each ride promises a new, adrenaline-fueled challenge.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Dot Link Puzzle - Connect the Dots, where vibrant colors meet strategic thinking. Connect matching dots without crossing paths in countless puzzles. Sharpen your logic and creativity in a soothing yet challenging environment, perfect for all ages seeking endless brain-teasing entertainment.</p>
 

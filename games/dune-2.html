@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Command your House in the timeless battle for Arrakis in Dune 2, a pioneering real-time strategy game. Defend resources, harvest precious spice, and wage war against rival factions. Choose your allegiance, strategize, and conquer to dominate the spice trade in this iconic desert conflict.</p>
 

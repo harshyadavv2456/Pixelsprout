@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate the vibrant world of Qubycall, where mastering gravity becomes a thrilling challenge. Control a nimble ball, moving with precision to reach new heights. Test your skills, timing, and patience as you climb the global leaderboard in this endlessly entertaining 3D arcade spectacle.</p>
 

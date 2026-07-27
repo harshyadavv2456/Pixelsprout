@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide your pumpkin on a candy-collecting adventure in Little Pumpkin Online Game. Navigate through obstacles and manage resources to achieve high scores. With intuitive controls and a balance of fun and strategy, challenge yourself to become a master in this entertaining and educational experience.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Morph Shoot challenges you with thrilling monster-hunting action where your observation skills and quick reflexes are key. Identify and eliminate shape-shifting foes before time runs out, keeping you alert and engaged. Dive into this fast-paced adventure where every second and every click counts. Can you master the monstrous mayhem?</p>
 

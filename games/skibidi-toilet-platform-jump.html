@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Take control of a daring toilet in Skibidi Toilet Platform Jump! Navigate through dynamic levels with precise click-to-jump mechanics, timing your moves to avoid falls and conquer obstacles. Each level’s unique challenges keep your reflexes sharp in this quirky and fast-paced adventure.</p>
 

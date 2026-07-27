@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a whimsical journey in Grimace Shake Hidden Skibidi Toilet, a mesmerizing hidden-object puzzle game. Dive into a world brimming with quirky artifacts, solving engaging puzzles while hunting for the enigmatic skibidi toilet. With captivating visuals and clever challenges, every level offers thrilling surprises for curious minds.</p>
 

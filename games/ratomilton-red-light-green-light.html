@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide Rato Milton in a thrilling twist on the classic Red Light, Green Light! Master the art of timing to dodge the watchful eyes of your opponent. With escalating challenges and unexpected turns, every step is packed with tension and excitement. Can you cross the finish line unseen?</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the festive spirit with Santabalt, an exhilarating endless runner with Santa at the helm. Leap between rooftops, dodging obstacles at thrilling speed with just a tap or click. Hone your timing and reflexes, extending Santa's journey in this addictive holiday adventure loaded with jolly excitement.</p>
 

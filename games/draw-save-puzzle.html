@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide your Stickman to safety in Draw Save Puzzle by creatively sketching lines or shapes. Each level offers unique challenges that demand strategic thinking and inventive solutions, ensuring every moment is a test of wits and imagination in this dynamic 2D puzzle adventure.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner ninja in a pulse-pounding adventure! Navigate 20 electrifying levels, battling fierce foes with an array of weapons. Master the art of agility and strategy, utilizing your mysterious cape and cunning to overcome unique challenges. Embrace the thrill of each perilous encounter!</p>
 

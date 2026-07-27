@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Craft the ultimate battle squad in Squad Assembler - Red vs Blue. Strategize, equip, and fund your team to outwit rival squads in thrilling isometric skirmishes. Merge gear for powerful upgrades and lead your fighters to victory across challenging arenas with tactical precision. Will your squad reign supreme?</p>
 

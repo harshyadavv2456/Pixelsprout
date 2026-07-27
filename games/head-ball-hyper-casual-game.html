@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Get ready to experience dynamic head-on action in this fast-paced sports game. Master the art of controlling your character’s head to skillfully hit balls and climb the ranks. With simple controls and strategic gameplay, every match offers intense fun wrapped in an innovative twist on classic ball games.</p>
 

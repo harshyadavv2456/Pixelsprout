@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the mind-bending challenges of 100 Rooms Escape, where every door holds a new mystery. Solve intricate puzzles, hunt for hidden objects, and navigate unique rooms brimming with surprises. With each door unlocked, your path to freedom comes into sharper focus. Can you escape all 100 rooms?</p>
 

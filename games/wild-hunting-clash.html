@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the tranquil wilderness of Wild Hunting Clash, where exquisite landscapes and animal behaviors challenge your marksmanship. Immerse in endless adventures, honing precision and strategy, while unlocking regions with unique fauna. Customize your arsenal and embrace the serenity of nature as you hunt the ultimate prey.</p>
 

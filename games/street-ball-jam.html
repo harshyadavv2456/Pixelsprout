@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner basketball legend in Street Ball Jam! With simple tap-and-hold mechanics, shoot for high scores and unlock exciting bonuses and crystals. Elevate your skills, dominate the court, and aim for MVP status in this addictive, fast-paced basketball challenge playable on any device. Join the action now!</p>
 

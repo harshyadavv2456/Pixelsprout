@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Become a master of fruity alchemy in Super Watermelon! Strategize as you merge smaller fruits into a delightful watermelon amidst tight spaces. Navigate quirky physics, surprise elements, and unlock clever moves as you keenly plan for that ultimate juicy reward in this colorful, engaging puzzle adventure.</p>
 

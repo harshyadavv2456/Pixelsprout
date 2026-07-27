@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Suit up as Metalbot, a retro-style robot navigating enemy-filled territories. Engage in thrilling platform action as you blast foes and collect valuable gems to boost scores. Each level’s distinct challenges keep gameplay fresh and exciting, with intuitive controls ensuring a smooth experience for gamers of all ages.</p>
 

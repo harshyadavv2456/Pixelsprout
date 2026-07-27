@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into King of Crabs, where you battle as a crab in dynamic multiplayer oceans. Outwit 24 players, devour fish, and enhance your crustacean with tactical upgrades. Unleash your strategic flair and dominate the seas through cunning and skillful maneuvers on your quest to become the legendary crab king.</p>
 

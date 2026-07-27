@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the thrilling role of a city cop with Grand City Police Simulation. Navigate an expansive, detailed city in realistic police vehicles while managing intense missions. Experience precision-driven physics during high-speed chases and strategic operations, ensuring every maneuver tests your skills and decision-making under pressure.</p>
 

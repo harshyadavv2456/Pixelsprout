@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unno Game delivers a thrilling twist on the classic card game. Outsmart opponents using special cards to alter game dynamics. Experience accessible play with colorful graphics that pop, whether solo or in multiplayer. Navigate clever strategies and unleash game-changing moves—just remember to shout "Uno!" before your rivals.</p>
 

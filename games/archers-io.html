@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner tactician in Archers.io, where precision and strategy crown survival. Begin as a solitary archer, recruit wandering allies, and forge a formidable army. Navigate immersive battlefields teeming with rival teams, employ devastating power shots, and engage in thrilling PvP duels to dominate the landscape.</p>
 

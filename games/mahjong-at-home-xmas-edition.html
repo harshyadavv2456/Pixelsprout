@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Celebrate the festive spirit with Mahjong At Home - Xmas Edition! Delight in holiday-themed tiles as you match pairs and clear the board. Each level ramps up the challenge, offering fun for both beginners and pros. Use strategic thinking and hints to conquer this wintery puzzle wonderland.</p>
 

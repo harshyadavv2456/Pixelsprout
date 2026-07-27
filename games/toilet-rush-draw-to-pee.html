@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide frantic kids to the nearest bathroom by drawing paths amidst hilarious chaos. Avoid obstacles and collisions, ensuring everyone's urgent needs are met. Master the art of swift and strategic planning to prevent unfortunate mishaps. Can you lead them safely to relief before the time runs out?</p>
 

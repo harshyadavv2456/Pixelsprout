@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Learn the art of waste sorting with Save The Planet! Test your skills as you drag and drop items into the correct recycling bins, reflecting Italian waste management strategies. As you progress, tackle more challenging levels to educate and entertain while racing against time to save the planet.</p>
 

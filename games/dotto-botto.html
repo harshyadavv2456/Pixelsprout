@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on an epic adventure with pixel hero Dotto Botto in this charming retro platformer. Facing hazardous spikes and deadly enemies across diverse levels, you'll jump and dodge with precision. Find power-ups, solve challenges, and prepare for a climactic showdown against a colossal final boss! Will you guide Dotto home?</p>
 

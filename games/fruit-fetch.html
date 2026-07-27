@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Fruit Fetch, a vibrant arcade adventure where fast reflexes and strategy are key. Collect fruits to soar in points while navigating dynamic landscapes with intuitive controls. Mesmerizing graphics create an immersive experience, keeping every moment thrilling. Can you master the rhythm of this delicious challenge?</p>
 

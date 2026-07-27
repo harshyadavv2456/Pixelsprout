@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Survive the relentless onslaught in Zombie Runner, a thrilling 2D adventure. Outpace zombie hordes in a dystopian wasteland, collecting gems and coins for crucial power-ups. Prepare your reflexes for fast-paced action, strategic upgrades, and exhilarating survival challenges in this immersive apocalyptic world. Can you outrun the undead?</p>
 

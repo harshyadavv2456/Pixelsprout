@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into a bustling metropolis where creativity is key to survival. Craft unique gear, plan daring heists, and outsmart law enforcement in a dynamic world. Personalize your hideout and elevate your reputation as you navigate the thrilling challenges of life as a master thief.</p>
 

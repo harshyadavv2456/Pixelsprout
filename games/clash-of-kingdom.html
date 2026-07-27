@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Engage in epic battles in Clash of Kingdom, where strategic decisions shape your destiny. Navigate dynamic battlefields, upgrade skills, and wield weapons with precision. Every encounter escalates in intensity, promising an adrenaline-fueled quest for supremacy in a mesmerizing world of legendary knights and ferocious foes.</p>
 

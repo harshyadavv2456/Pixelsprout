@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Car Racing delivers heart-pounding action as you deftly weave through traffic on ever-faster tracks. Master quick reflexes to dodge collisions, restarting levels if you falter. Progress to increasingly challenging stages, where speed and strategy are key. Share your thrilling achievements for endless fun with friends.</p>
 

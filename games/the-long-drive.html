@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Hit the open road in The Long Drive, a thrilling adventure through a vast open world. Test your driving skills and embrace the unpredictable as you speed through digital gates, race against time, and conquer unique challenges in this unpredictable driving simulation.</p>
 

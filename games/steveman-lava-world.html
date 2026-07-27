@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide Steveman through a treacherous world of bubbling lava and lurking dangers. Master precision leaps, evade menacing flying monsters, and risk it all for red eggs. Intense platforming challenges demand skill and timing as you race to reach each stage's exit door. Ready for the ultimate adventure?</p>
 

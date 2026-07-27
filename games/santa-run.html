@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Join Santa's thrilling rooftop dash in Santa Run! Master quick jumps to dodge deadly drops and tricky obstacles like water towers and icicles. With simple clicks, keep Santa sprinting as you leap over chimneys to rack up a high score and ensure every present is delivered on time.</p>
 

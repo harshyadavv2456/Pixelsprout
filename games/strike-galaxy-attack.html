@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Take command of a lone, powerful spaceship in Strike Galaxy Attack. Dodge and weave through endless waves of colorful space birds while unleashing streams of gunfire. Collect upgrades to enhance your ship and outmaneuver enemies as you aim to dominate the galaxy in this thrilling 2D arcade shooter.</p>
 

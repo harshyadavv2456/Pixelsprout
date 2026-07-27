@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide Baby Hazel through her bedtime routine under a serene, moonlit sky. Help her brush teeth, take a shower, and soothe her from nightmares with comforting gestures. Engage in nurturing activities with captivating visuals and soothing music, ensuring a peaceful night's sleep for the adorable Hazel.</p>
 

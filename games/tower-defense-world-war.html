@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Defend island nations from relentless invasions in Tower Defense - World War. Strategically position diverse towers to stop a myriad of enemy forces. Adapt to evolving threats with precise upgrades, mastering tactical strategy and timing against waves of air and ground adversaries. A thrilling challenge of strategic depth awaits!</p>
 

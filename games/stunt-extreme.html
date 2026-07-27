@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the thrill of dirt biking with Stunt Extreme! Master breathtaking tricks, conquer challenging tracks, and outrace your rivals. Show off your stunt skills in high-octane races that demand precision and speed. Compete for glory in this energetic side-scrolling motocross adventure.</p>
 

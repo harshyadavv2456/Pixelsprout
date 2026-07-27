@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Transform old wardrobes into chic pinafore dresses in BFFs Pinafore Fashion. Unleash your creativity by choosing shapes, colors, and textures, then dress up your model in your unique creation. Enjoy intuitive controls and endless design possibilities for a fashion adventure with your best friends forever.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Survival Zombie Battle plunges you into a shrinking arena teeming with zombies and hostile survivors. Scavenge for weapons, strategize your moves, and fight relentlessly to outlast the undead hordes and human foes, all while the safe zone constricts, heightening tension in this relentless battle royale experience.</p>
 

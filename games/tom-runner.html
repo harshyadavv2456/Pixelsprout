@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dash through a pulsating city as Tom, the nimble raccoon, eluding persistent police in exhilarating, fast-paced action. Utilize intuitive touch controls to maneuver through vibrant urban challenges. Collect coins, harness power-ups, and master slick evasive techniques to survive increasingly intense pursuits in this visually stunning adventure.</p>
 

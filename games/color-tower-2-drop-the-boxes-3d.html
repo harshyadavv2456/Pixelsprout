@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Build towering creations with vibrant boxes in Color Tower 2. This addictive 3D arcade game tests your strategic skills and quick reflexes as you aim to reach new heights and dominate global leaderboards. With smooth controls and dazzling visuals, it's like painting your own colorful masterpiece.</p>
 

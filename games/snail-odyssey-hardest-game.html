@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide a brave snail through a vibrant, trap-filled world in Snail Odyssey. Outsmart a clever AI, dodge ingenious obstacles, and master clever strategies in this thrilling puzzle adventure. Each level demands sharp timing and wits. Can you complete this exhilarating journey and conquer its challenges?</p>
 

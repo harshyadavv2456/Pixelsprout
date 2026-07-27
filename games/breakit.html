@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Breakit, where precision meets strategy. Aim and shoot to clear falling blocks before they hit the ground. With escalating challenges, this game demands sharp reflexes and clever tactics. Master the art of anticipation to conquer each level in an exhilarating test of skill and speed.</p>
 

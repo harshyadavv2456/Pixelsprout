@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide the cunning Journey Fox through intricate underground puzzles to reach safety. Solve mind-bending challenges, unlock doors with hidden keys, and collect shimmering crystals. With charming cartoon graphics and over 30 engaging levels, prepare for endless hours of strategic fun and exploration. Embark on this unforgettable underground adventure! </p>
 

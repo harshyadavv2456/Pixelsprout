@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a dynamic shooting adventure in The Unleashed Hunter, perfecting your aim to collect trophies and unlock weaponry. Navigate the shop for powerful upgrades, visit your trophy cabin for motivation, and master precision and speed for endless challenges in this all-ages thrill ride.</p>
 

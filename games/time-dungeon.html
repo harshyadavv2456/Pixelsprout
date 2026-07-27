@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Time Dungeon, where survival hinges on strategic moves and precise timing. Navigate through pixelated mazes, dodging traps and facing unique enemies. Engage with simple yet effective controls as you unravel the dungeon's secrets. Tense, immersive, and full of mystery—can you conquer the unknown?</p>
 

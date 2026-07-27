@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Build the tallest structure with a simple click in Tower Mania. Immerse yourself in stunning scenery, earn money to unlock new themes, and purchase power-ups for precision. It's a beautifully designed adventure that challenges your skills as you strive to become the ultimate tower builder. Enjoy for free anytime!</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a thrilling quest in Minecraft Blockman Go, where creativity meets survival. Repair your spaceship while building shelters, crafting tools, and facing relentless zombie hordes. Explore vibrant, blocky landscapes filled with resources and danger. Will you survive the wilds and return to Earth?</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Prepare for intense football excitement in Head Soccer 2026! Use your head—literally—to outscore opponents in thrilling matches. Master special moves, smash the ball, and enjoy fast-paced action in the iconic World Cup stadiums. Whether solo or with friends, only true champions will rise!</p>
 

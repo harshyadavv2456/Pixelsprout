@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on Steve Adventurecraft, a pixelated arcade thrill where quick reflexes and strategic shooting are vital against monstrous foes. Journey through perilous levels, forming alliances with friendly designs for survival. Master controls, conserve ammo, and conquer each challenge in this gripping quest for victory.</p>
 

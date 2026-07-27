@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to"> Ascend the towering wall in Dunk Up Basketball, where precision and physics collide. Master the art of launching a ball with trampoline nets, aiming for hoops to climb higher. Succeed with seamless shots to score big, but beware – one miss sends you tumbling back. Prepare for addictive, exhilarating fun!</p>
 

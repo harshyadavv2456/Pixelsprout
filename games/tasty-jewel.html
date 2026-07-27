@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Tasty Jewel's vibrant world, where swapping colorful fruits ignites dazzling cascades of joy. Conquer 16 diverse levels, unlocking special jewels and achieving high scores. This captivating puzzle adventure promises endless, addictive fun with every match and explosion of color. How high can you score?</p>
 

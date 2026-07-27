@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into the boots of a lone commando in IGI Commando Mission: Cover the Fire. Strategize through diverse missions, use stealth and precision to overcome enemy forces, and master your loadout for success. Navigate dynamic 3D environments with tactical agility and quick reflexes in this thrilling shooter adventure.</p>
 

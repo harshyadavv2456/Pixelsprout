@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Transform George’s unsightly hair into a masterpiece in Funny Hair Salon. Use intuitive tools to eradicate mites and pimples, paving the way for lush growth. Watch his stunning transformation unfold as you strategically apply treatments and uncover his hidden beauty, all within a vibrant, playful atmosphere.</p>
 

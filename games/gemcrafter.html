@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a dazzling adventure through enchanting landscapes in Gemcrafter. Strategically match and merge shiny gems to unlock mystical treasures. With no time limits, take your time to savor the mesmerizing visuals and soothing sounds while crafting the ultimate gem collection. Every move is a step to brilliance.</p>
 

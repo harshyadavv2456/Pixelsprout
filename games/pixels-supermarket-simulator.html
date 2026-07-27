@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Explore endless shopping adventures with Pixels Supermarket Simulator. Kids manage their own vibrant store, stocking shelves, assisting customers, and handling checkouts. This interactive experience combines colorful visuals with playful learning, teaching young minds about retail management in a fun, engaging way.</p>
 

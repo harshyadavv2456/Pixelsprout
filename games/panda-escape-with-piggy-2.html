@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate vibrant jungle landscapes in Panda Escape with Piggy 2, where strategic double jumps and agile maneuvers are key. Face thrilling challenges and cunning enemies as you aim to survive and protect the forest. Join this lively adventure solo or with a friend and unleash your arcade prowess.</p>
 

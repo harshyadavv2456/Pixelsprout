@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into a world of creativity in BFF Summer Shine Look, where you design dazzling summer party outfits. Unleash your inner fashionista, experimenting with beautiful hairstyles, trendy clothes, and chic accessories to craft the ultimate stylish look. Perfect for fashion lovers eager to showcase their design flair.</p>
 

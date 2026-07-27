@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">In Traigon's nostalgic pixelated universe, engage in adrenaline-pumping platforming as you skillfully navigate challenging terrains. Master precise jumps to dodge deadly obstacles and conquer progressively tough levels. This intense journey rewards strategic finesse and patience, promising an exhilarating gaming adventure. Will you become a Traigon master?</p>
 

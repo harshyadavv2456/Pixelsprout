@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Enter the intense realm of superhero battles, where every move counts. Master kung fu, karate, and boxing to become the ultimate martial arts legend. Engage in breathtaking, epic fights across vibrant arenas, honing your skills with each clash. Will you rise as the ultimate champion? Let the combat begin!</p>
 

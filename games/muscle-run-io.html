@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Race against quirky opponents in Muscle Run io, a vibrant competition where bulking up is key. Strategize your workout, collect gains, and barreling through obstacles, storm to victory. It's a fast-paced, humorous spin on fitness, where the race to the finish line is only as smooth as your muscle power.</p>
 

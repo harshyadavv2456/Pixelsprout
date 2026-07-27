@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dodge enemy fire and strategize your shots in Micro Tank Battle. Navigate intricate battlefields, collect power-ups, and either face the challenges solo or compete against friends in thrilling duels. Master the art of tank warfare where every decision is crucial, making victory immensely satisfying.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into FNF - House, where a chance encounter in a backyard leads to an epic rap showdown. Match beats using keyboard precision, groove to charming rhythms, and elevate your skills in this lively, toe-tapping adventure alongside the quirky Dave. Can you dominate the musical challenge?</p>
 

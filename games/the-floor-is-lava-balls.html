@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate intense puzzle platformer levels in The Floor is Lava! Balls. Guide your ball through tricky terrain, mastering realistic physics and weight dynamics. Quick reflexes and strategic thinking help unlock diverse skins, making each level a thrilling challenge that tests your skill and patience against a backdrop of perilous lava.</p>
 

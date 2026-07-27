@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Venture into Mixed World, where adorable blue monsters need your clever strategy to outsmart mischievous red foes. Conquer 30 engaging levels, utilizing unique creature abilities to master puzzles and reach the top score. Enjoy seamless play on any device in this delightful physics-based journey!</p>
 

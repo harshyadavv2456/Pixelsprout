@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Immerse yourself in the glamorous world of Blackpink Black Friday Fever, where you can style Jisoo, Jennie, Rosé, and Lisa in trend-setting outfits. Use intuitive drag-and-drop mechanics to craft stunning ensembles, unlocking unique fashion pieces that pop with creativity and flair. Show off your styling skills in this chic K-pop extravaganza!</p>
 

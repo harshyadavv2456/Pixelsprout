@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Challenge your reflexes with Red Hands, a digital twist on the classic slap game. Test your speed and anticipation in a duel where every move counts. Outwit, outpace, and avoid the sting of defeat as you play against a friend in this fast-paced two-player battle.</p>
 

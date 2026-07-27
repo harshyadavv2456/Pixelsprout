@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into "Just Bubbles," where you can enjoy the satisfying joy of bubble popping. Choose between a relaxed endless mode or a challenging timed mode, aiming for high scores amidst beautiful backdrops and soothing lo-fi tunes. Perfect for a fun break on both PC and smartphones.</p>
 

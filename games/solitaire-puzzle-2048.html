@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Solitaire Puzzle 2048, where solitaire meets 2048's addictive number merging! Strategically combine cards to reach the ultimate goal. Navigate through columns with foresight and craft clever strategies to master this engaging, leisurely puzzle that promises both challenge and relaxation.</p>
 

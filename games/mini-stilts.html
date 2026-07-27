@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide a charming green slime on a whimsical adventure using stilts to overcome obstacles. Master balance and timing to navigate small chambers filled with quirky hazards. Quick reflexes and smart stilt use lead to sweet success, while speedrun mode offers an exciting challenge for daring players.</p>
 

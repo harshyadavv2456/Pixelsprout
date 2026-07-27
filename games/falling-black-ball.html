@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide a nimble sphere through a whimsical skyward journey in Falling Black Ball! Sharpen your timing and precision skills as you leap between unpredictable, moving platforms. Master the art of patience and stay focused to climb higher, while the sleek, minimalist design ensures each gameplay keeps you hooked.</p>
 

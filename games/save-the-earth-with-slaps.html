@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Test your reflexes in Save The Earth With Slaps, where quick swipes deflect incoming missiles to protect the planet. Experience escalating intensity and test your precision as you navigate through increasing missile speed and numbers. Get ready for a captivating challenge that demands accuracy and sharp timing.</p>
 

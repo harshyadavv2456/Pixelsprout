@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Double Checkers, an exhilarating twist on the classic game. Strategically navigate two boards simultaneously, capturing opponents in a battle of wits. Master quick decision-making as each move counts on this dual battlefield. Whether alone or competing with friends, embrace the ultimate challenge.</p>
 

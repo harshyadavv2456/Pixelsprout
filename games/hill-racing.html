@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Conquer treacherous terrains in Hill Racing, where every climb is an electrifying test of skill and balance. Master intuitive controls to navigate tricky slopes and gather coins for vehicle upgrades. Challenge yourself with diverse landscapes and unique obstacles, making each race a thrilling physics-driven adventure.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dodge treacherous obstacles and outsmart pursuing dinosaurs in Niko and Dino Run. With a sleek HTML5 design, jump, dash, and grab power-ups to maintain your lead. Challenge your reflexes and keep your wits sharp in this captivating endless runner, where agility is key to survival.</p>
 

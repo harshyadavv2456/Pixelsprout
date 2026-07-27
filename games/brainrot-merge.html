@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner chaos manager in Brainrot Drop Merge Challenge! Merge absurd creatures like laser-eyed monkeys in a madcap world of melting cities and meme mayhem. Dive into wild puzzles, embrace viral catchphrases, and master brain-melting logic in a surreal universe that’s both hilarious and addictive.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Test your reflexes in Stick Freak, where precise stick stretching is your ally. Traverse challenging gaps while collecting diamonds to unlock unique characters. A deceptively simple yet addictive puzzle game that keeps you coming back for more. Will you master the balance between danger and glory?</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Jump into a vibrant musical world with Jump in Rhythm to the Hit! Cat Disco! Tap in sync with delightful cat meows and catchy tunes, mastering your timing to earn points. Each adorable cat has unique abilities. Daily surprises and a kawaii atmosphere keep this rhythmic journey fun and exciting!</p>
 

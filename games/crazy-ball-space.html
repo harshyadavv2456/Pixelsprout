@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate through the cosmic expanse in Crazy Ball Space, mastering your reflexes as you guide a bouncing ball across shifting platforms. With increasing speed and complexity, prepare for an exhilarating test of skill. Enjoy endless action with intuitive controls and challenging levels that keep you on edge.</p>
 

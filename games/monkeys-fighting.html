@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide your monkey through intense jungle battles in Monkeys Fighting. Dive into dynamic brawls with easy controls and unleash unique combos against AI or friends. With strategic timing and quick reflexes, outsmart opponents in this arcade-style game, where each victory feels more rewarding than the last.</p>
 

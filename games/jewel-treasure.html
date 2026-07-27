@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a dazzling jewel-matching adventure in Jewel Treasure. Conquer uniquely crafted puzzles and challenge yourself in endless mode. Strategize your moves for epic chain reactions and power-up bursts, elevating your score to new heights. Perfect balance of simplicity and challenge awaits in this ultimate quest.</p>
 

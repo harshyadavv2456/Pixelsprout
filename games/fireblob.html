@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">In FireBlob, unleash your inner fireball in a pixelated wonderland. Navigate intricate levels, melting icy barriers and setting logs ablaze. With retro charm and clever puzzles, harness the heat and conquer diverse challenges. Guide your fiery orb skillfully to ignite your path to victory!</p>
 

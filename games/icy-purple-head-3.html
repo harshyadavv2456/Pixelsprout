@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Jump into a colorful adventure with Icy Purple Head 3 as you help the postman deliver parcels across 40 dynamic levels. Dodge tricky post birds and master swift clicks and taps to succeed. Embrace creativity by unlocking funky hats, all while enjoying a vibrant and engaging escapade.</p>
 

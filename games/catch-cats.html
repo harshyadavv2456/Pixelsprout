@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Catch Cats delivers non-stop fun as you tap your way to a high score by catching adorable, quick-moving kittens. Set in a vibrant world, this game tests your reflexes and speed, offering endless challenges and friendly competition for cat enthusiasts and gamers alike.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate an intense 14x14 grid in Battleship - Infinity War, where strategic ship placement and tactical maneuvers are key to victory. Outsmart clever foes with special tools like air strikes, and climb the leaderboards in thrilling global multiplayer matches. Sail to triumph with skillful adaptation and cunning.</p>
 

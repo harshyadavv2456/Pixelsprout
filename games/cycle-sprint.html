@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Pedal through picturesque landscapes in Cycle Sprint, a heart-pounding 2.5D racing experience. Navigate dynamic courses across Italy, France, and Spain, manage stamina, and strategically boost to overtake rivals. Customize your cyclist, dodge opponents, and master lane-switching to clinch victory in this exhilarating solo cycling challenge.</p>
 

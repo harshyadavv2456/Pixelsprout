@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a heroic journey across Gorlik Island in Key & Shield 2. Conquer tricky levels, rescue friends from cages, and lift a curse. Enjoy clever gameplay and polished design in this thrilling modern arcade adventure, optimized for all devices. Will you be the island's savior?</p>
 

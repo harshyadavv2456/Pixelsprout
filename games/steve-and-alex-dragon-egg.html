@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a daring adventure with Steve and Alex as you navigate a perilous labyrinth filled with fiery dragons and explosive monsters. Wield unique abilities, from sword-fighting to path-clearing with a pickaxe, and strategically collaborate to snatch the coveted dragon egg in this action-packed escapade.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the thrill of realistic driving in Car Real Simulator. Navigate dynamic open-world environments with genuine car physics and lifelike handling. From city cruising to drifting challenges, every drive feels authentic. Explore a vast garage, tackle tricky parking tasks, and conquer diverse terrains for an exhilarating automotive adventure.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Transform a barren landscape into a powerful military fortress in Idle Military Base. Army Tycoon. With simple taps, build and upgrade diverse facilities, balance resources, and watch your base thrive and generate income even when idle. Experience the strategic thrill of creating an unstoppable military empire.</p>
 

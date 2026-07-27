@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Race through chaotic courses in Red Impostor Guys, a fast-paced multiplayer showdown where strategy meets speed. Customize your avatar with a myriad of costumes and master unique map mechanics. Outmaneuver up to 39 opponents as you sprint for glory in a vibrant, dynamic world. Ready, set, go!</p>
 

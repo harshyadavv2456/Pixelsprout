@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate whimsical obstacle courses in Fat Race 3D, where the key to victory lies in strategic eating. Balance size and agility by collecting food to power through hurdles, all while racing against formidable opponents. Timing and quick reflexes crown the winner in this fun and intense parkour adventure.</p>
 

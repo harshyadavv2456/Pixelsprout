@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Get ready for the exhilarating challenge of Basketball Smash! Master your timing to dunk swiftly and gain precious seconds against the ticking clock. With its addictive gameplay and simple controls, strive to unlock diverse balls and push your skill limits in this fast-paced basketball frenzy.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your creativity in Hair Do Design! Start with a relaxing spa treatment, then master styling with vibrant hairstyles. Finally, elevate your character's allure with a stunning makeup makeover. Perfect for young stylists seeking a colorful, hands-on experience in a vivid, accessible game world.</p>
 

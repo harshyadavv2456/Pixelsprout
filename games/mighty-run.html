@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on an exhilarating platforming adventure in Mighty Run. Navigate vibrant levels, dodge cunning foes, and collect valuable gifts and diamonds. Master intuitive controls and clever strategies as challenges escalate. Discover hidden shortcuts and harness power-ups to conquer each stage in this addictive quest. Can you find every hidden treasure?</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Tiptoe through a thrilling stealth adventure, snatching elusive brainrots as they slumber. But beware—one false step and they'll give chase! Can you keep your cool and escape with your prize? Every encounter is a pulse-pounding escape from cunning brainrot creatures.</p>
 

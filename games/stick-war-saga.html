@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Lead your stickmen to victory in this action-packed strategy adventure. Balance resource mining and tactical warfare as you build your army, defend your territory, and conquer enemy lands. Can you outsmart your foes and dominate the battlefield? Dive into the Stick War Saga and find out!</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a vibrant race to the top in Snake n Ladders Game. Navigate treacherous snakes while using ladders to leap ahead. With each dice roll, experience the excitement and strategy needed to outpace opponents. Perfect for solo or multiplayer fun, this timeless classic is now a thrilling quest.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience pulse-pounding parkour action in Gun Up Weapon Shooter. Navigate treacherous courses with an arsenal of upgradable guns, collecting rewards to boost firepower and earnings. Outsmart deadly moving knives and master the art of precision timing to conquer increasingly challenging levels and shatter distance records.</p>
 

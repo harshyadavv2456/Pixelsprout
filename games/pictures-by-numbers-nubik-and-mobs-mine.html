@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your creative flair in Pictures by Numbers - Nubik and Mobs Mine. Embrace the soothing joy of coloring Minecraft-inspired scenes, guided by number-based puzzles. User-friendly controls and vivid graphics ensure an immersive experience as you relax and watch your favorite characters spring to life.</p>
 

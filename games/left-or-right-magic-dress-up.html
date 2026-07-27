@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner stylist in Left or Right: Magic Dress Up! Choose your favorite model, mix and match chic outfits, and apply elegant makeup to steal the spotlight. With endless fashion possibilities and feedback-driven design, refine your style and unlock new fashion treasures for the ultimate runway look.</p>
 

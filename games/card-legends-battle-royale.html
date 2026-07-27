@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into a high-speed card-battle arena, where luck and strategy reign supreme. Unleash superhuman card powers in a thrilling fight for domination, facing unpredictable foes and potential game-changers. Quick thinking and a touch of fortune are your allies, as you strive to outlast the competition. Will you emerge victorious?</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">In "Crazy Balls," test your wits in an endless blend of strategy and precision as you launch and bounce balls to break numerically-marked shapes. With each bounce, maximize impact and score, aiming to dominate the global leaderboard. Ideal for those eager to challenge both reflexes and strategic thinking.</p>
 

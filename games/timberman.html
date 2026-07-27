@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Swing your axe with precision in TimberMan, an irresistibly addictive arcade challenge. Master deceptively simple controls as you chop at lightning speed, dodging treacherous branches with every slice. Achieve high scores in this fast-paced test of focus and reflexes. TimberMan: an evergreen adventure.</p>
 

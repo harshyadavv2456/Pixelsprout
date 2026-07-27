@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the exhilarating world of high-speed racing with powerful cars and lifelike tracks. Experience the adrenaline rush as you maneuver through intense competitions, aiming to become the ultimate champion. Master the art of racing with seamless controls and captivating gameplay in this immersive racing experience.</p>
 

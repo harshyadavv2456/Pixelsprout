@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the thrilling highs and lows of virtual trading in Yolo Dogecoin. Test your instincts by buying and selling Dogecoin based on real-time market movements. Master the art of financial strategy where every decision counts, inching closer to millionaire status—or potential bankruptcy. Are you ready to seize the market?</p>
 

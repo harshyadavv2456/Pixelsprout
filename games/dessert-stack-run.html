@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Sprint through vibrant worlds in Dessert Stack Run, stacking sweets into towering treats while dodging obstacles. Master timing and agility to craft impressive dessert towers, and unlock exciting new items as you progress. Enjoy the sweet blend of fun challenges and skillful parkour in this colorful confectionery adventure!</p>
 

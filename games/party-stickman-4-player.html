@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the chaotic fun of Party Stickman 4 Player! Navigate through challenging levels with friends, relying on teamwork and precise moves to keep everyone alive. Strategically cooperate across unique control systems, and remember: one player's fall means a restart. Can you and your squad reach the finish line unscathed?</p>
 

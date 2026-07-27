@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Merge Dragons invites you to creatively combine dragons, unlocking new species as they transform and grow. Engage in endless discovery by tactically merging creatures, expanding your dragon guide, and racing them for rewards. With simplistic controls and a whimsical world, this game offers delightful merging madness!</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into nostalgic thrills with GT Cars Super Racing, where vibrant visuals and precise controls fuel your high-speed adventure. Navigate 21 diverse tracks filled with unexpected twists, master engine roars, and strategically deploy turbo boosts for an exhilarating, arcade-style racing experience.</p>
 

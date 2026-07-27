@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into the role of an emergency responder in Emergency Dispatcher 911. Navigate high-pressure situations, make critical decisions under stress, and dispatch aid swiftly. Challenge your strategic thinking with lifelike scenarios, upgrade your setup for complex cases, and experience the thrill of saving lives.</p>
 

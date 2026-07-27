@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Indulge in "Mahjong Sweet Connection," where matching sweet icons becomes a strategic adventure. Navigate puzzles with a unique linking system, requiring precision as paths twist through limited angles. With escalating complexity, vibrant graphics, and a soothing atmosphere, it's the perfect mix of leisure and challenge.</p>
 

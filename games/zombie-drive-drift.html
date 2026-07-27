@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">In Zombie Drive Drift, embrace the chaos of an undead apocalypse by using your drifting prowess to navigate zombie-packed roads. Master precision driving to crush hordes, dodge obstacles, and rack up points. Feel the adrenaline with each drift and survive the relentless onslaught in this thrilling survival challenge.</p>
 

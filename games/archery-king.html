@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Become a master archer in Archery King, where precision, timing, and focus are your allies. Navigate dynamic environments and shifting winds, perfecting each shot. Compete solo or challenge friends in thrilling duels, balancing steady aim with unpredictable elements. Will your skills make you the ultimate archer?</p>
 

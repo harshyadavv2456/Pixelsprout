@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Rescue a lovable pup from peril in Protect My Dog, a quirky puzzle game combining quick thinking and creativity. Draw protective barriers to shield your furry friend from hazards like bees and lava. With charming animations and hundreds of unique levels, it promises endless entertaining challenges for all ages.</p>
 

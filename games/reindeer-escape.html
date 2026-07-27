@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a thrilling escape as a rebellious reindeer in Reindeer Escape. Navigate snowy landscapes, dodge obstacles, and outsmart enemies with your nimble reflexes and strategic planning. Immerse yourself in its charming pixel art world, battling and surviving to earn your freedom.</p>
 

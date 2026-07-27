@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Transform your kitten into a divine feline entity in Cat Evolution Clicker. Merge idle gameplay with rapid-fire clicking to amass coins and evolve your furry friend. Vibrant visuals and whimsical charm enhance this addictive journey towards crafting your ultimate Cat God. Dive into this purr-fectly captivating adventure!</p>
 

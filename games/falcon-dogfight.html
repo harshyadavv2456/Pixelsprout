@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience adrenaline-pumping aerial combat as you soar through the skies in state-of-the-art fighter jets. Simplified controls make high-speed dogfights and strategic BVR battles accessible. Master radar locks and automatic maneuvers to dominate distant foes. Feel the thrill of modern air warfare without the complex controls.</p>
 

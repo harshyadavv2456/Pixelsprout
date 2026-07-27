@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate bustling city streets with urgency and precision in Ambulance Driving Simulator. Experience the adrenaline of saving lives as you race against time, finding the fastest route under pressure. Maneuver through traffic, master the delicate balance of speed and control, and become the unsung hero of emergency response.</p>
 

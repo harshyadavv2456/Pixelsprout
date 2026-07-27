@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">In Steve and Alex House Escape, navigate a pixelated labyrinth, solving puzzles with unique dual-character mechanics. Use Steve's ability to collect obsidian and Alex's skills to gather fire-making materials. Experience nostalgic thrills as you fuel teamwork and strategy to break free from the familiar yet mysterious house.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Compassion invites you to relive the retro glory days with strategic fights against fearsome monsters. Skillfully dodge attacks, unleash powerful strikes, and plan your moves meticulously, all while soaking in the nostalgic visuals. Every decision counts in this immersive journey where survival hinges on your wit and reflexes.</p>
 

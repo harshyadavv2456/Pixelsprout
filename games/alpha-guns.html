@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the adrenaline-pumping world of Alpha Guns! As Max, skillfully upgrade your arsenal and outsmart challenging foes. Tackle intense levels demanding sharp aim and tactical prowess. Replay past missions to perfect your strategy and harness your inner sharpshooter in this electrifying adventure.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Battle waves of zombies in Z Machine, commanding your tank through diverse maps filled with danger and opportunity. Upgrade power, defense, and fuel to conquer each level. Navigate unique terrains, unleash powerful items, and adapt strategies as you collect loot and face evolving undead threats in this thrilling arcade adventure.</p>
 

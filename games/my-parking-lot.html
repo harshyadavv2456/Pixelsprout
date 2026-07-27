@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">My Parking Lot challenges you to strategically clear traffic chaos. Navigate through complex car arrangements using intuitive drag controls, plotting the perfect path to exits without collisions. Unlock increasingly intricate puzzles that test your problem-solving finesse and advance your skills in this engaging, mental workout of a game.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Sort your way to victory with Sorting Balls - Puzzle! Engage your brain by grouping colorful balls with simple drag-and-drop mechanics. Enjoy progressively challenging puzzles that demand strategic planning and foresight. Perfect for players of all ages, this vibrant and addictive game offers endless fun without downloads.</p>
 

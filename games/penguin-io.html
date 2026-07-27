@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Enter a frosty arena in Penguin.io, where your agile penguin vies for icy supremacy. Outsmart others, dodge hazards, and stay masterfully balanced to be the last one standing on the crumbling iceberg. Each unpredictable round tests your wits and split-second timing in this thrilling battle for survival.</p>
 

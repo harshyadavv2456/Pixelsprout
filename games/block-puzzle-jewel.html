@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Block Puzzle Jewel, where strategic planning and swift decisions reign. Arrange colorful blocks into full lines without a time limit, testing your spatial skills. Enjoy visually stunning designs while tackling an engaging challenge that rewards forward-thinking and keen observation. Can you master the grid before it fills up?</p>
 

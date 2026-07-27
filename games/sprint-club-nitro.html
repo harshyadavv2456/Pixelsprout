@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Race from last to first in the thrilling Sprint Club Nitro. Outpace 19 rivals, feel the adrenaline rush from nitro boosts, and refine your skills on diverse tracks. Earn cash rewards to enhance your car, pushing your limits with every high-octane competition. It's Formula 1 fun without the pit stop!</p>
 

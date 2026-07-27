@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a skin-hunting adventure in Case Opener! Each click reveals dazzling Counter-Strike 2 skins to expand your collection or sell for profit. Upgrade your luck and speed for even bigger rewards. With vibrant visuals and daily bonuses, this single-player journey promises endless, kid-friendly clicking fun.</p>
 

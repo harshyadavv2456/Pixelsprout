@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the thrilling world of Swim or Die, where your quick tapping skills keep your pet afloat. Experience a dynamic environment as you collect Time Points to unlock adorable skins. Save your pet from drowning and enjoy the pulsating action that challenges your reflexes in every moment.</p>
 

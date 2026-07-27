@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Guide your prison to perfection in Prison Break Architect Tycoon, where cunning strategy and swift upgrades hold the key. Balance building powerful defenses, enhancing personnel, and managing resources to foil nightly escape attempts. Tackle diverse challenges across multiple prisons in this dynamic, engaging tycoon experience.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Race down the aisle in Bridal Rush, where speed and wits determine your wedding bliss. Dodge obstacles, collect essential items, and outpace competing brides to claim first place. It's a whimsical arcade challenge where every second counts towards your fairy tale ending!</p>
 

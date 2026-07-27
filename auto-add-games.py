@@ -78,9 +78,7 @@ GAME_PAGE_TEMPLATE = """<!DOCTYPE html>
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {{
-        screen.orientation.lock('landscape').catch(() => {{}});
-      }}
+      {orientation_lock_js}
     ">⛶ Fullscreen</button>
     <p class="how-to">{description}</p>
 
@@ -158,6 +156,7 @@ def fetch_new_games(already_added_ids, games_per_run=GAMES_PER_RUN, max_pages=MA
                 "description": item.get("description", ""),
                 "thumbnail": item.get("banner_image") or item.get("image", ""),
                 "embed_url": item.get("url", ""),
+                "orientation": item.get("orientation", ""),
             })
             if len(found) >= games_per_run:
                 break
@@ -169,12 +168,28 @@ def fetch_new_games(already_added_ids, games_per_run=GAMES_PER_RUN, max_pages=MA
 
 
 def build_game_page(game):
+    orientation = (game.get("orientation") or "").lower()
+    if orientation == "portrait":
+        orientation_lock_js = (
+            "if (screen.orientation && screen.orientation.lock) { "
+            "screen.orientation.lock('portrait-primary').catch(() => {}); }"
+        )
+    elif orientation == "landscape":
+        orientation_lock_js = (
+            "if (screen.orientation && screen.orientation.lock) { "
+            "screen.orientation.lock('landscape').catch(() => {}); }"
+        )
+    else:
+        # Unknown orientation — don't force one; let the game/browser decide.
+        orientation_lock_js = ""
+
     html = GAME_PAGE_TEMPLATE.format(
         title=game["title"],
         category=game["category"],
         embed_url=game["embed_url"],
         description=game["description"],
         slug=game["slug"],
+        orientation_lock_js=orientation_lock_js,
     )
     path = f"{GAMES_DIR}/{game['slug']}.html"
     with open(path, "w", encoding='utf-8') as f:

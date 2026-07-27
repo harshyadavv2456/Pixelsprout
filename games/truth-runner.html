@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Run to shape your destiny in Truth Runner. Dash through diverse terrains, aspiring for dream professions while collecting diamonds. Customize your abode with dazzling decor purchased using your earnings. Navigate skillfully to advance, embracing the thrill of fast-paced decision-making in this engaging arcade adventure.</p>
 

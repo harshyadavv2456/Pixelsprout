@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Master drifting in Russian Car Drift 3D, an exhilarating isometric driving challenge. Navigate slick tracks with seamless tap controls, collect valuable items, and unlock diverse cars. Conquer obstacles with skill and finesse in this accessible, casual experience where progression doesn’t reset, letting you hone your drifting prowess at your own pace.</p>
 

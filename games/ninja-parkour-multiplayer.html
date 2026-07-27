@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Conquer ever-changing obstacle courses as a nimble ninja in this fast-paced, multiplayer parkour challenge. With adaptive agility and precise jumps, outrun your opponents in an exhilarating race of speed and skill. Test your reflexes against the dynamic landscape and become the ultimate ninja champion.</p>
 

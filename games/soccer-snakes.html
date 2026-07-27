@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the comedic chaos of Soccer Snakes, where clumsy serpents take on a hilariously thrilling soccer match. Navigate the field with intuitive controls, unleash powerful headbutts, and score outrageous goals alone or with a friend. This game promises non-stop laughter and competitive fun as you aim for serpentine soccer glory.</p>
 

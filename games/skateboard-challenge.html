@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Prepare for a thrilling adventure in Skateboard Challenge, where your reflexes are key to navigating a vibrant 2D world. Ride smoothly with skateboarder friends, jumping and collecting coins while avoiding obstacles. With charming visuals and short levels, it's a fun test of timing and skill.</p>
 

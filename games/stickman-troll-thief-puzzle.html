@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Join a cunning stickman on a whimsical adventure in Stickman Troll Thief Puzzle. Solve inventive puzzles, outsmart guards, and navigate unexpected twists using simple swipe controls. Each level unveils unique challenges in lively settings, perfect for snappy, fun-filled sessions that test your wit and creativity.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a charming journey in Dotted Girl Wedding, where you craft Mary and Louis's dream ceremony. Delight in designing their outfits and makeup with endless options. Enjoy a magical atmosphere filled with creativity as you orchestrate a truly unforgettable wedding day experience.</p>
 

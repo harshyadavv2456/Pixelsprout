@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Engage in a neon-drenched escape where nostalgia meets modern thrills. Experience heart-racing chases as you outmaneuver spectral foes in meticulously crafted mazes. Pulsing '80s synthwave beats fuel the excitement, offering a timeless yet cutting-edge adventure. "Pac vs Ghosts 2024" is an adrenaline-infused homage to classic arcade excitement.</p>
 

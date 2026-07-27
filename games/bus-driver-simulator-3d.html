@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the thrill of Bus Driver Simulator 3D by navigating iconic cities, conquering diverse terrains, and mastering the art of bus driving. Choose between adrenaline-packed racing or relaxed free mode, and immerse yourself in authentic cityscapes with dynamic traffic and weather for a truly captivating driving adventure.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on an otherworldly adventure in Vangers HD, where explosive vehicular combat meets strategic upgrading. Navigate a richly detailed alien landscape, completing daring missions for rewards. Enhance your vehicle's capabilities as you engage in gripping battles, experiencing the timeless allure of this classic reimagined.</p>
 

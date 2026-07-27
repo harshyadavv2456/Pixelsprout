@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Get hooked on the delightful challenge of Suika World, a unique puzzle game where strategic connections of matching fruits clash with immovable stones and wild bombs. Each level twists traditional gameplay into a fresh adventure, rewarding meticulous planning with exciting bonuses and an addictive scoring system.</p>
 

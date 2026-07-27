@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Squid Game Craft Runner and dash through vibrant blocky environments. Navigate tricky obstacles, encounter quirky characters, and showcase your reflexes. Experience thrilling, action-packed races inspired by Squid Game, where creativity and agility are your ultimate tools for survival. Will you conquer the craft?</p>
 

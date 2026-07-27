@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">In TNT Clicker, dive into a world of vibrant clicking chaos where your rapid taps gather resources to unlock thrilling upgrades. Engage with delightful graphics, addictive mechanics, and power-ups that escalate the joy of your clicking prowess. Speed and strategy are your tickets to success!</p>
 

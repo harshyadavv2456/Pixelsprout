@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Sprint towards glory in TRZ Athletic Games, a thrilling 2D sports experience. Master timing and technique across dynamic events, from dashes to jumps, using intuitive keyboard controls. Hone your skills to achieve athletic excellence, chasing personal bests and pursuing gold in an electrifying quest for victory.</p>
 

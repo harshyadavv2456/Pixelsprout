@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Defend against relentless zombie hordes in Zombie Idle Defense, where strategy meets survival. Upgrade your fortifications and weapons for the ultimate protection. Venture out for resources and rescue survivors, all while deploying strategic turret placements to fend off the undead. Earn, build, and battle in this immersive fight for life.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Cruise through a vast, empty city in Grand City Driving 2, where sleek sports cars await your command. Unleash the throttle on open roads while avoiding pedestrians and obstacles. Embrace the freedom of exploration without the hassle of traffic, perfecting your driving skills in a thrilling urban sandbox.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Command your ship in ShipPop Saga, an exhilarating bubble-bursting adventure. Strategically shoot and match vibrant bubbles to prevent them from overwhelming the screen. With escalating challenges and intricate patterns, sharpen your reflexes and aim for victory in this colorful, fast-paced arcade thrill ride.</p>
 

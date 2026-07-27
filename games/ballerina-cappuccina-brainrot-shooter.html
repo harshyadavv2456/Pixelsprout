@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Join Ballerina Cappuccina in a rhythmic shooter where precise aim meets graceful pirouetting. Charge and release your shots, letting them ricochet through surreal obstacles to combo brainrotted foes. Master this dance of destruction, blending elegance and firepower, to outwit quirky enemies and achieve high-scoring chaos.</p>
 

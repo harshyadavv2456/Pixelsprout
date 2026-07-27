@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a thrilling journey as a stickman warrior, mastering parkour and combat to cleanse a monster-infested town. With fast-paced action, dynamic levels, and strategic battles against formidable bosses, you'll collect gems and upgrade skills to reach legendary hero status. Run, jump, and fight your way to victory!</p>
 

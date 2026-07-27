@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Baba Is You transforms puzzle-solving into a creative adventure where you manipulate game rules by rearranging words. Guide the lovable Baba through beautifully designed levels, experimenting with every combination to alter reality and reach your goal. It's a delightful test of lateral thinking and imagination that captivates and challenges.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience vibrant, arcade-style golf excitement in Golf IT. With intuitive controls and captivating graphics, master challenging courses on any device. Weekly updates add fresh levels to test your aim and skill. Perfect your shot power and direction, unleash creativity, and keep your golf journey alive with endless fun.</p>
 

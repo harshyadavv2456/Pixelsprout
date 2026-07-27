@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the heart-pounding thrill of drifting with a twist in Train Drift. Master precise controls to steer massive locomotives through stunning landscapes, executing daring drifts and dodging competing trains in adrenaline-charged races. Every race challenges your skills and reflexes, offering a truly unique racing escapade.</p>
 

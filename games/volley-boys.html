@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Master the art of timing in Volley Boys, a pulse-pounding volleyball game where a single click rules the court. Execute awe-inspiring Dunks and outsmart opponents as you aim to score three points. With random challengers and dazzling moves, every match is a thrilling spectacle of skill and precision.</p>
 

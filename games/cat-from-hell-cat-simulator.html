@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner feline mischief in this hilarious cat simulator! Wreak havoc inside Granny's house by smashing, toppling, and causing chaos. Discover secrets, rescue your partner, and dodge capture as you explore indoors and outdoors. Experience the thrill of feline freedom with endless fun and pranks!</p>
 

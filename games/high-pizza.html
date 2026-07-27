@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Deliver piping-hot pizzas in High Pizza, where you navigate hurdles, dodge spoiled ingredients, and serve feasts with finesse! Test your speed and precision in an exhilarating arcade setting, climb the competitive leaderboard, and embrace the deliciously fast-paced adventure that demands sharp reflexes and strategic movement.</p>
 

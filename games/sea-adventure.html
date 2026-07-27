@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on thrilling oceanic quests in Sea Adventure. Cast your line with precision to reel in rare catches and earn points. Navigate the seas, evade dangers, and unlock new adventures. With immersive exploration and engaging mechanics, this free-to-play escapade is perfect for adventure seekers. Dive in today!</p>
 

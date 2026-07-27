@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Lead your stickman army in intense battles, combining quick reflexes and strategic prowess. Defend your base, manage resources, and outmaneuver powerful foes. Enhance your troops and master attack timing to rise as the ultimate commander in this fast-paced and thrilling tower defense experience. Will you reign supreme?</p>
 

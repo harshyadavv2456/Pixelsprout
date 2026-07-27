@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a thrilling journey with Super Droid Adventure! Navigate treacherous traps and battle fierce enemies as a courageous robot. Unleash firepower, unlock surprises by breaking blocks, and collect power-ups and coins. Strategize your moves to conquer the ultimate boss and reclaim your castle.</p>
 

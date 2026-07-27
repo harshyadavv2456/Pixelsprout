@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a fruity adventure in Tile Fruits, a vibrant 2D tile-matching game. Strategically connect three identical fruits to clear levels and tackle rising challenges. With its colorful graphics and charming sound effects, plan your moves carefully to avoid losing to the seven-fruit limit.</p>
 

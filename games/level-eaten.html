@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to"> Level EATEN! immerses you in vibrant worlds where mastering strategy is key. Consume blocks matching your size to grow and conquer thoughtfully crafted puzzles. With addictive gameplay and intuitive controls, you'll be strategizing, munching, and leveling up through captivating challenges in an ever-engaging loop.</p>
 

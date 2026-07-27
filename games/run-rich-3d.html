@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Run Rich 3D takes you on a thrilling journey, challenging your speed and strategic decision-making. Navigate vibrant lanes, dodge obstacles, and choose paths that reflect wise choices like studying over procrastinating. With simple controls and immersive graphics, become financially savvy as each choice impacts your wealth.</p>
 

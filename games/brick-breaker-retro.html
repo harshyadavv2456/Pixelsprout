@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your paddle prowess in Brick Breaker Retro, a thrilling arcade revival. Skillfully maneuver your paddle to deflect balls and shatter vibrant block patterns. Catch power-ups to enhance your strategy. Get lost in the satisfying cascade of blocks breaking and keep the action bouncing. It's endlessly captivating fun!</p>
 

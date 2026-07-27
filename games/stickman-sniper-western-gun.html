@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into the boots of a Wild West stickslinger, where precision is key and bullets are limited. Tackle diverse missions, safeguard hostages, and carefully choose your shots. Unlock formidable weapons as you progress through vibrant backdrops and tactically outsmart your foes in this thrilling adventure of skill and strategy.</p>
 

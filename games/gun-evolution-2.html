@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">In Gun Evolution 2, blend fast-paced shooting with strategic weapon fusion in vibrant 3D cartoon worlds. Maneuver through challenges, earn coins, and upgrade weapons for an edge in thrilling gun battles. Master timing and tactics to conquer each level with increasingly powerful armaments. Ready, aim, merge!</p>
 

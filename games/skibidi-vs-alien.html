@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Skibidi Vs Alien invites you to an exhilarating dance-filled endless run. Maneuver through levels with precision jumps and slides, outsmarting enemies while collecting power-ups. With rhythmic gameplay and escalating challenges, this adventure keeps you on your toes, promising a thrilling test of reflexes and skill.</p>
 

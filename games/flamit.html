@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Flamit puts your reflexes to the test in a swift race against a dwindling flame. Navigate 30 challenging, icy levels, lighting torches before time extinguishes your hopes. Strategize through snowy obstacles, evade icy enemies, and conquer two distinct game modes for an adrenaline-pumping experience.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">JetPackBoy 3D lets you become a daring stickman pilot through thrilling levels. Test your agility and precision as you dodge obstacles, carefully manage your fuel, and unlock cool skins. Master timing and strategy to dominate levels and reveal the endless mode filled with non-stop action.</p>
 

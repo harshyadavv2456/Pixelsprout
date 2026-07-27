@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">In WW2 Call of Sniper, step into the boots of a stealthy marksman tasked with completing daring solo missions in enemy territory. Balance precision and strategy as you navigate intense environments, choose your loadout, and outmaneuver foes. Can you fulfill your duty without being detected?</p>
 

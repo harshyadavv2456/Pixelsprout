@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Feel the rush in Drive Race Crash, where you'll speed through city streets and autobahns, tackle explosive derbies, and leap off ramps with style. Explore a vibrant open-world city, sharpen your skills, and unlock new challenges. Precision control and strategic thinking turn every race into an exhilarating experience.</p>
 

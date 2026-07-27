@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">In Magic Kingdom: Hex Match, embark on a thrilling journey to build your own kingdom. Match colorful hexes to gather resources, unlocking magnificent structures along the way. With mesmerizing visuals and strategic depth, every move counts as you prove your worth and expand your realm in this captivating adventure.</p>
 

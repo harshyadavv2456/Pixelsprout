@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a thrilling adventure with Super Onion Boy 2, where vibrant levels and retro charm await. Transform with superpowers, uncover hidden treasures, and outsmart enemies in a quest to rescue your friend from a powerful beast. Face formidable bosses and explore secret paths for an exhilarating experience.</p>
 

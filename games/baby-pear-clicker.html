@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the whimsical world of Baby Pear Clicker, where charming pear-faced babies bring endless amusement. Click to gather giggling pears, invest in strategic upgrades, and watch your fruitful empire flourish. Enjoy lively animations and delightful surprises as you grow your pear kingdom with strategy and humor.</p>
 

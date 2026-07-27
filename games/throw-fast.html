@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Immerse yourself in the fast-paced challenge of Throw Fast, where precision and timing reign supreme. Perfect your knife-throwing skills against rotating targets, dodging obstacles while aiming for perfection. With escalating difficulty and addictive gameplay, can you master the art of hitting the mark?</p>
 

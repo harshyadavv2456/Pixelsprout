@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate a post-apocalyptic realm in Wormpocalypse, where quick reflexes and strategic thinking are vital. Uncover dark secrets, confront mutated adversaries, and survive using a diverse arsenal. The pixel art and haunting soundtrack create an immersive experience, blending old-school platforming with a gripping, dystopian narrative. Can you overcome the challenges?</p>
 

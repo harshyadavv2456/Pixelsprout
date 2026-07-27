@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Jump Up Arcade challenges your reflexes in a fast-paced ascent. Master the art of perfect jumps as you dodge obstructive black lines and climb higher. With increasing speed and complexity, this addictively simple yet challenging game will test your skills and provide endless fun as you chase high scores.</p>
 

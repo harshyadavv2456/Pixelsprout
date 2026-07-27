@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner rebel in Wall Breaker, a dynamic adventure where shattering walls of confinement fuels your power. Experience the adrenaline of liberation as each demolition amplifies your strength. With intuitive controls and precision challenges, break free from monotony and become unstoppable in your quest for freedom.</p>
 

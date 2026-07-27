@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Defy gravity and unleash your inner gymnast in Roblox Flip. Twist and tumble through household challenges as you strive to reach your bed without touching the floor. Collect coins, unlock characters, and perfect your timing to master the art of flipping in this thrilling acrobatic adventure.</p>
 

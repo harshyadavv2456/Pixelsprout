@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Survive waves of relentless enemies as a lone stickman warrior in Stickman Blast. Armed with only a sword and quick reflexes, defend your base by clicking and earning coins to upgrade skills and hire allies. Face the infinite horde and see how long your stand can last!</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Race against fierce opponents in Super Car Racer, where mastering speed and maneuverability is key. Strategically use boosts and power-ups to outpace rivals on challenging tracks. Unlock new cars and customization options as you progress, and experience the thrill of high-octane racing at its finest.</p>
 

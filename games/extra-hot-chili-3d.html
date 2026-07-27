@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Feel the sizzle in Extra Hot Chili 3D, where you brave the escalating heat of globally inspired spicy dishes. Master quick reflexes and strategic thinking to endure fiery challenges as you navigate through a tantalizing culinary adventure. Can you handle the spice and keep your cool?</p>
 

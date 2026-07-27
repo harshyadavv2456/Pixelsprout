@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner artist in Rope Draw, a captivating puzzle game. Arrange ropes into intricate patterns by strategically placing pegs, all while avoiding tangles. As complexity grows, so does the challenge—test your skills and creativity across 40 engaging levels, then explore boundless freedom in Fun Mode!</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Master Checkers transforms the timeless board game into a strategic digital showdown. Navigate your pieces wisely to outmaneuver opponents and capitalize on forced captures. Control both directional movement once crowned and experience the thrill of planning and counter-strategy against AI or friends. Play classic checkers anytime, anywhere!</p>
 

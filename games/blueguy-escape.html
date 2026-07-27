@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a nostalgic journey with BlueGuy Escape, where your timing skills are crucial. Maneuver through a vivid pixel world, dodging intricate obstacles, and collecting fruits for high scores. This endless runner boasts simple controls and keeps you coming back with its charming retro thrills.</p>
 

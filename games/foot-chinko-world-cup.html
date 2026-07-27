@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the thrill of Foot Chinko World Cup, a vibrant fusion of football and pachinko. Navigate a chaotic 2D arena where luck and skill intertwine. Kick, bounce, and strategize to outscore opponents while embracing unpredictable ball physics and quirky power-ups. Conquer leagues in this captivating arcade delight!</p>
 

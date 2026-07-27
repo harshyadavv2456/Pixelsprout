@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner samurai in Blade Master Ninja Slash. Slice through relentless enemies with swift precision, navigating perilous paths and dodging menacing projectiles in an exhilarating adventure. Hone your reflexes and strategic prowess as every perfect strike increases your power. Only the boldest warriors will endure to complete their quest.</p>
 

@@ -49,9 +49,6 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
-      if (screen.orientation && screen.orientation.lock) {
-        screen.orientation.lock('landscape').catch(() => {});
-      }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a buzzing adventure in Bee Factory Honey Collector. Merge and strategize to create powerful bee variants for enhanced honey production. Skillfully navigate past obstacles and capitalize on surprise eggs for exciting hive upgrades. Test your reflexes and creativity in this captivating and ever-evolving quest.</p>
 
