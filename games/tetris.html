@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stackblocks — Pixelsprout</title>
+<meta name="description" content="Play Stackblocks, a free online block-stacking puzzle. Clear lines and beat your best score, no download needed.">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  canvas { background: #2B2118; border-radius: 8px; max-width: 60vw; }
+  #ttwrap { display:flex; gap:20px; align-items:flex-start; }
+</style>
+</head>
+<body>
+<div class="game-shell">
+  <a class="back-link" href="../index.html">← back to garden</a>
+  <h1 class="game-title">Stackblocks</h1>
+  <div class="game-meta">Arrow keys · Space to hard drop</div>
+
+  <div class="game-board-frame">
+    <div class="hud">
+      <div><span class="label">Score</span><span id="score">0</span></div>
+      <div><span class="label">Lines</span><span id="lines">0</span></div>
+      <div><span class="label">Best</span><span id="best">0</span></div>
+      <button class="action" id="restart">Restart</button>
+    </div>
+    <canvas id="game" width="220" height="440"></canvas>
+    <p class="how-to">← → move · ↑ rotate · ↓ soft drop · Space hard drop. Clear full rows to score.</p>
+  </div>
+</div>
+
+<script>
+const cvs = document.getElementById('game');
+const ctx = cvs.getContext('2d');
+const COLS=11, ROWS=22, SIZE=20;
+let board = Array.from({length:ROWS}, () => Array(COLS).fill(0));
+let score=0, lines=0, best=Number(localStorage.getItem('sprouttetrisbest')||0);
+document.getElementById('best').textContent = best;
+
+const SHAPES = {
+  I: [[1,1,1,1]], O: [[1,1],[1,1]], T: [[0,1,0],[1,1,1]],
+  S: [[0,1,1],[1,1,0]], Z: [[1,1,0],[0,1,1]], J: [[1,0,0],[1,1,1]], L: [[0,0,1],[1,1,1]]
+};
+const COLORS = { I:'#7FA876', O:'#C89B3C', T:'#9C4A2E', S:'#4C7A4A', Z:'#9C4A2E', J:'#C89B3C', L:'#7FA876' };
+
+function randPiece(){
+  const keys = Object.keys(SHAPES);
+  const k = keys[Math.floor(Math.random()*keys.length)];
+  return { shape: SHAPES[k].map(r=>r.slice()), color: COLORS[k], x: Math.floor(COLS/2)-1, y: 0 };
+}
+let current = randPiece(), dropTimer = 0, dropInterval = 600, gameOver = false;
+
+function rotate(shape){
+  const rows = shape.length, cols = shape[0].length;
+  const res = Array.from({length:cols}, () => Array(rows).fill(0));
+  for(let y=0;y<rows;y++) for(let x=0;x<cols;x++) res[x][rows-1-y] = shape[y][x];
+  return res;
+}
+function collide(shape,ox,oy){
+  for(let y=0;y<shape.length;y++) for(let x=0;x<shape[y].length;x++){
+    if(!shape[y][x]) continue;
+    const nx=ox+x, ny=oy+y;
+    if(nx<0||nx>=COLS||ny>=ROWS) return true;
+    if(ny>=0 && board[ny][nx]) return true;
+  }
+  return false;
+}
+function merge(){
+  current.shape.forEach((row,y)=>row.forEach((v,x)=>{
+    if(v){ const ny=current.y+y, nx=current.x+x; if(ny>=0) board[ny][nx]=current.color; }
+  }));
+}
+function clearLines(){
+  let cleared=0;
+  board = board.filter(row => { if(row.every(c=>c)){ cleared++; return false;} return true; });
+  while(board.length<ROWS) board.unshift(Array(COLS).fill(0));
+  if(cleared){ lines+=cleared; score += [0,100,300,500,800][cleared]; }
+}
+function spawn(){
+  current = randPiece();
+  if(collide(current.shape, current.x, current.y)) gameOver = true;
+}
+function hardDrop(){
+  while(!collide(current.shape, current.x, current.y+1)) current.y++;
+  lockPiece();
+}
+function lockPiece(){
+  merge(); clearLines(); spawn();
+  if(score>best){ best=score; localStorage.setItem('sprouttetrisbest',best); }
+}
+function restart(){ board = Array.from({length:ROWS}, () => Array(COLS).fill(0)); score=0; lines=0; gameOver=false; spawn(); }
+document.getElementById('restart').addEventListener('click', restart);
+
+document.addEventListener('keydown', e => {
+  if(gameOver){ if(e.code==='Space') restart(); return; }
+  if(e.code==='ArrowLeft' && !collide(current.shape,current.x-1,current.y)) current.x--;
+  else if(e.code==='ArrowRight' && !collide(current.shape,current.x+1,current.y)) current.x++;
+  else if(e.code==='ArrowDown' && !collide(current.shape,current.x,current.y+1)) current.y++;
+  else if(e.code==='ArrowUp'){ const r=rotate(current.shape); if(!collide(r,current.x,current.y)) current.shape=r; }
+  else if(e.code==='Space'){ e.preventDefault(); hardDrop(); }
+});
+
+function draw(){
+  ctx.fillStyle='#2B2118'; ctx.fillRect(0,0,cvs.width,cvs.height);
+  board.forEach((row,y)=>row.forEach((v,x)=>{ if(v){ ctx.fillStyle=v; ctx.fillRect(x*SIZE,y*SIZE,SIZE-1,SIZE-1); }}));
+  ctx.fillStyle = current.color;
+  current.shape.forEach((row,y)=>row.forEach((v,x)=>{ if(v){ const px=(current.x+x)*SIZE, py=(current.y+y)*SIZE; if(py>=0) ctx.fillRect(px,py,SIZE-1,SIZE-1); }}));
+  if(gameOver){
+    ctx.fillStyle='rgba(0,0,0,0.6)'; ctx.fillRect(0,0,cvs.width,cvs.height);
+    ctx.fillStyle='#E8DFC8'; ctx.font='bold 16px monospace'; ctx.textAlign='center';
+    ctx.fillText('Game over', cvs.width/2, cvs.height/2-8);
+    ctx.font='12px monospace'; ctx.fillText('Space to restart', cvs.width/2, cvs.height/2+14);
+  }
+  document.getElementById('score').textContent = score;
+  document.getElementById('lines').textContent = lines;
+  document.getElementById('best').textContent = best;
+}
+function loop(ts){
+  if(!gameOver){
+    if(!loop.last) loop.last = ts;
+    dropTimer += ts - loop.last; loop.last = ts;
+    if(dropTimer > dropInterval){
+      dropTimer = 0;
+      if(!collide(current.shape, current.x, current.y+1)) current.y++; else lockPiece();
+    }
+  } else { loop.last = ts; }
+  draw();
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>

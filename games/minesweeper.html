@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rootfield — Pixelsprout</title>
+<meta name="description" content="Play Rootfield, a free online minesweeper-style puzzle. Clear the field without hitting a root, no download needed.">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  #minegrid { display:grid; grid-template-columns:repeat(10, 28px); grid-template-rows:repeat(10, 28px); gap:2px; background:#221A12; padding:6px; border-radius:8px; }
+  .mcell { width:28px; height:28px; background:#382a1d; border-radius:3px; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:bold; cursor:pointer; user-select:none; font-family: 'IBM Plex Mono', monospace; }
+  .mcell.open { background:#2B2118; cursor:default; }
+  .mcell.mine { background:#9C4A2E; }
+</style>
+</head>
+<body>
+<div class="game-shell">
+  <a class="back-link" href="../index.html">← back to garden</a>
+  <h1 class="game-title">Rootfield</h1>
+  <div class="game-meta">Left click reveal · right click flag</div>
+
+  <div class="game-board-frame">
+    <div class="hud">
+      <div><span class="label">Roots left</span><span id="minesLeft">15</span></div>
+      <div><span class="label">Status</span><span id="status">Playing</span></div>
+      <button class="action" id="restart">Restart</button>
+    </div>
+    <div id="minegrid"></div>
+    <p class="how-to">Left click to clear a plot. Right click to mark a suspected root. Clear every safe plot to win.</p>
+  </div>
+</div>
+
+<script>
+const SIZE=10, MINES=15;
+let board, revealed, flagged, gameOver;
+const grid = document.getElementById('minegrid');
+const NUM_COLORS = ['','#7FA876','#4C7A4A','#9C4A2E','#C89B3C','#9C4A2E','#7FA876','#E8DFC8','#a89877'];
+
+function init(){
+  board = Array.from({length:SIZE},()=>Array(SIZE).fill(0));
+  revealed = Array.from({length:SIZE},()=>Array(SIZE).fill(false));
+  flagged = Array.from({length:SIZE},()=>Array(SIZE).fill(false));
+  gameOver = false;
+  let placed=0;
+  while(placed<MINES){
+    const x=Math.floor(Math.random()*SIZE), y=Math.floor(Math.random()*SIZE);
+    if(board[y][x]!==-1){ board[y][x]=-1; placed++; }
+  }
+  for(let y=0;y<SIZE;y++) for(let x=0;x<SIZE;x++){
+    if(board[y][x]===-1) continue;
+    let count=0;
+    for(let dy=-1;dy<=1;dy++) for(let dx=-1;dx<=1;dx++){
+      const ny=y+dy, nx=x+dx;
+      if(ny>=0&&ny<SIZE&&nx>=0&&nx<SIZE&&board[ny][nx]===-1) count++;
+    }
+    board[y][x]=count;
+  }
+  document.getElementById('status').textContent='Playing';
+  render();
+}
+
+function reveal(x,y){
+  if(gameOver||revealed[y][x]||flagged[y][x]) return;
+  revealed[y][x]=true;
+  if(board[y][x]===-1){ gameOver=true; document.getElementById('status').textContent='Hit a root'; revealAll(); render(); return; }
+  if(board[y][x]===0){
+    for(let dy=-1;dy<=1;dy++) for(let dx=-1;dx<=1;dx++){
+      const ny=y+dy, nx=x+dx;
+      if(ny>=0&&ny<SIZE&&nx>=0&&nx<SIZE) reveal(nx,ny);
+    }
+  }
+  checkWin();
+  render();
+}
+function revealAll(){ for(let y=0;y<SIZE;y++) for(let x=0;x<SIZE;x++) revealed[y][x]=true; }
+function checkWin(){
+  let safeLeft=0;
+  for(let y=0;y<SIZE;y++) for(let x=0;x<SIZE;x++) if(!revealed[y][x] && board[y][x]!==-1) safeLeft++;
+  if(safeLeft===0){ gameOver=true; document.getElementById('status').textContent='Field cleared!'; }
+}
+
+function render(){
+  grid.innerHTML='';
+  let flagCount=0;
+  for(let y=0;y<SIZE;y++) for(let x=0;x<SIZE;x++){
+    if(flagged[y][x]) flagCount++;
+    const cell = document.createElement('div');
+    cell.className='mcell'+(revealed[y][x]?' open':'');
+    if(revealed[y][x] && board[y][x]===-1){ cell.classList.add('mine'); cell.textContent='●'; }
+    else if(revealed[y][x] && board[y][x]>0){ cell.textContent=board[y][x]; cell.style.color=NUM_COLORS[board[y][x]]; }
+    else if(!revealed[y][x] && flagged[y][x]){ cell.textContent='⚑'; cell.style.color='#C89B3C'; }
+    cell.addEventListener('click', ()=>reveal(x,y));
+    cell.addEventListener('contextmenu', e=>{ e.preventDefault(); if(!revealed[y][x] && !gameOver){ flagged[y][x]=!flagged[y][x]; render(); }});
+    grid.appendChild(cell);
+  }
+  document.getElementById('minesLeft').textContent = MINES-flagCount;
+}
+document.getElementById('restart').addEventListener('click', init);
+init();
+</script>
+</body>
+</html>

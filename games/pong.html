@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rally — Pixelsprout</title>
+<meta name="description" content="Play Rally, a free online paddle game against the CPU. Instant browser play, no download needed.">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  canvas { background: #2B2118; border-radius: 8px; max-width: 90vw; }
+</style>
+</head>
+<body>
+<div class="game-shell">
+  <a class="back-link" href="../index.html">← back to garden</a>
+  <h1 class="game-title">Rally</h1>
+  <div class="game-meta">Mouse or touch drag · first to 7 wins</div>
+
+  <div class="game-board-frame">
+    <div class="hud">
+      <div><span class="label">You</span><span id="pscore">0</span></div>
+      <div><span class="label">CPU</span><span id="cscore">0</span></div>
+      <button class="action" id="restart">Restart</button>
+    </div>
+    <canvas id="game" width="440" height="300"></canvas>
+    <p class="how-to">Move your mouse or drag your finger to control the left paddle. Return the ball past the CPU to score.</p>
+  </div>
+</div>
+
+<script>
+const c = document.getElementById('game');
+const ctx = c.getContext('2d');
+const W=c.width, H=c.height, PW=10, PH=64;
+let player = { y:H/2-PH/2, score:0 };
+let cpu = { y:H/2-PH/2, score:0 };
+let ball = { x:W/2, y:H/2, vx:4, vy:3, r:6 };
+let over = false, winner = '';
+
+function resetBall(dir){ ball.x=W/2; ball.y=H/2; ball.vx=4*dir; ball.vy=(Math.random()*4-2)||2; }
+function updateHud(){ document.getElementById('pscore').textContent = player.score; document.getElementById('cscore').textContent = cpu.score; }
+
+c.addEventListener('mousemove', e => {
+  const rect = c.getBoundingClientRect();
+  player.y = (e.clientY - rect.top) - PH/2;
+  player.y = Math.max(0, Math.min(H-PH, player.y));
+});
+c.addEventListener('touchmove', e => {
+  e.preventDefault();
+  const rect = c.getBoundingClientRect();
+  player.y = (e.touches[0].clientY - rect.top) - PH/2;
+  player.y = Math.max(0, Math.min(H-PH, player.y));
+});
+function restart(){ player.score=0; cpu.score=0; over=false; updateHud(); resetBall(1); }
+c.addEventListener('click', () => { if(over) restart(); });
+document.getElementById('restart').addEventListener('click', restart);
+
+function update(){
+  if(over) return;
+  ball.x += ball.vx; ball.y += ball.vy;
+  if(ball.y - ball.r < 0 || ball.y + ball.r > H) ball.vy *= -1;
+
+  const cpuCenter = cpu.y + PH/2;
+  if(cpuCenter < ball.y - 10) cpu.y += 3.2;
+  else if(cpuCenter > ball.y + 10) cpu.y -= 3.2;
+  cpu.y = Math.max(0, Math.min(H-PH, cpu.y));
+
+  if(ball.x - ball.r < PW + 10 && ball.y > player.y && ball.y < player.y+PH && ball.vx < 0){
+    ball.vx *= -1.05; ball.vy += (ball.y-(player.y+PH/2))*0.1;
+  }
+  if(ball.x + ball.r > W - PW - 10 && ball.y > cpu.y && ball.y < cpu.y+PH && ball.vx > 0){
+    ball.vx *= -1.05; ball.vy += (ball.y-(cpu.y+PH/2))*0.1;
+  }
+  if(ball.x < 0){ cpu.score++; updateHud(); resetBall(1); }
+  if(ball.x > W){ player.score++; updateHud(); resetBall(-1); }
+  if(player.score>=7){ over=true; winner='You win!'; }
+  if(cpu.score>=7){ over=true; winner='CPU wins'; }
+}
+
+function draw(){
+  ctx.fillStyle='#2B2118'; ctx.fillRect(0,0,W,H);
+  ctx.strokeStyle='#5a4a37'; ctx.setLineDash([6,10]);
+  ctx.beginPath(); ctx.moveTo(W/2,0); ctx.lineTo(W/2,H); ctx.stroke(); ctx.setLineDash([]);
+  ctx.fillStyle='#7FA876'; ctx.fillRect(10, player.y, PW, PH);
+  ctx.fillStyle='#9C4A2E'; ctx.fillRect(W-10-PW, cpu.y, PW, PH);
+  ctx.fillStyle='#E8DFC8'; ctx.beginPath(); ctx.arc(ball.x,ball.y,ball.r,0,Math.PI*2); ctx.fill();
+  if(over){
+    ctx.fillStyle='rgba(0,0,0,0.65)'; ctx.fillRect(0,0,W,H);
+    ctx.fillStyle='#E8DFC8'; ctx.font='bold 22px monospace'; ctx.textAlign='center';
+    ctx.fillText(winner, W/2, H/2-6);
+    ctx.font='13px monospace'; ctx.fillText('Tap to play again', W/2, H/2+18);
+  }
+}
+function loop(){ update(); draw(); requestAnimationFrame(loop); }
+resetBall(1);
+loop();
+</script>
+</body>
+</html>

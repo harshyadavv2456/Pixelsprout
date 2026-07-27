@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flappy Sprout — Pixelsprout</title>
+<meta name="description" content="Play Flappy Sprout free online, no download required. Tap to fly through the hedges and beat your best score.">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  canvas { background: #4C7A4A33; border-radius: 8px; touch-action: none; max-width: 90vw; }
+</style>
+</head>
+<body>
+<div class="game-shell">
+  <a class="back-link" href="../index.html">← back to garden</a>
+  <h1 class="game-title">Flappy Sprout</h1>
+  <div class="game-meta">Click, tap, or Space · fly through the hedges</div>
+
+  <div class="game-board-frame">
+    <div class="hud">
+      <div><span class="label">Score</span><span id="score">0</span></div>
+      <div><span class="label">Best</span><span id="best">0</span></div>
+      <button class="action" id="restart">Restart</button>
+    </div>
+    <canvas id="game" width="340" height="480"></canvas>
+    <p class="how-to">Click, tap, or press Space to flap upward. Weave between the hedges — hitting one or the ground ends the run.</p>
+  </div>
+</div>
+
+<script>
+const c = document.getElementById('game');
+const ctx = c.getContext('2d');
+let bird, pipes, frame, score, best, dead, started;
+const gravity = 0.45, flapPower = -7.5, pipeGap = 150, pipeW = 60, pipeSpeed = 2.4;
+
+function reset(){
+  bird = { x:70, y:230, vy:0, r:13 };
+  pipes = [];
+  frame = 0; score = 0; dead = false; started = false;
+  best = Number(localStorage.getItem('sproutflappybest') || 0);
+  document.getElementById('best').textContent = best;
+  document.getElementById('score').textContent = 0;
+}
+reset();
+
+function spawnPipe(){
+  const topH = 50 + Math.random() * (c.height - pipeGap - 160);
+  pipes.push({ x:c.width, top:topH, passed:false });
+}
+function flap(){
+  if(dead){ reset(); return; }
+  started = true;
+  bird.vy = flapPower;
+}
+document.addEventListener('keydown', e => { if(e.code==='Space'){ e.preventDefault(); flap(); }});
+c.addEventListener('mousedown', flap);
+c.addEventListener('touchstart', e => { e.preventDefault(); flap(); });
+document.getElementById('restart').addEventListener('click', reset);
+
+function update(){
+  ctx.fillStyle = '#2B2118';
+  ctx.fillRect(0,0,c.width,c.height);
+
+  if(started && !dead){
+    bird.vy += gravity;
+    bird.y += bird.vy;
+    frame++;
+    if(frame % 90 === 0) spawnPipe();
+    pipes.forEach(p => p.x -= pipeSpeed);
+    pipes = pipes.filter(p => p.x > -pipeW);
+    pipes.forEach(p => {
+      if(!p.passed && p.x + pipeW < bird.x){ p.passed = true; score++; document.getElementById('score').textContent = score; }
+      const hitX = bird.x + bird.r > p.x && bird.x - bird.r < p.x + pipeW;
+      const hitY = bird.y - bird.r < p.top || bird.y + bird.r > p.top + pipeGap;
+      if(hitX && hitY) dead = true;
+    });
+    if(bird.y + bird.r > c.height || bird.y - bird.r < 0) dead = true;
+    if(dead && score > best){ best = score; localStorage.setItem('sproutflappybest', best); document.getElementById('best').textContent = best; }
+  }
+
+  ctx.fillStyle = '#4C7A4A';
+  pipes.forEach(p => {
+    ctx.fillRect(p.x, 0, pipeW, p.top);
+    ctx.fillRect(p.x, p.top + pipeGap, pipeW, c.height - p.top - pipeGap);
+  });
+
+  ctx.save();
+  ctx.translate(bird.x, bird.y);
+  ctx.rotate(Math.max(-0.5, Math.min(0.9, bird.vy * 0.06)));
+  ctx.fillStyle = '#C89B3C';
+  ctx.beginPath(); ctx.arc(0,0,bird.r,0,Math.PI*2); ctx.fill();
+  ctx.fillStyle = '#2B2118'; ctx.beginPath(); ctx.arc(5,-4,2.3,0,Math.PI*2); ctx.fill();
+  ctx.restore();
+
+  if(!started){
+    ctx.fillStyle = '#E8DFC8'; ctx.font = 'bold 16px monospace'; ctx.textAlign='center';
+    ctx.fillText('Click to start', c.width/2, c.height/2);
+  }
+  if(dead){
+    ctx.fillStyle = 'rgba(0,0,0,0.55)'; ctx.fillRect(0,0,c.width,c.height);
+    ctx.fillStyle = '#E8DFC8'; ctx.font = 'bold 20px monospace'; ctx.textAlign='center';
+    ctx.fillText('Game over', c.width/2, c.height/2 - 8);
+    ctx.font = '13px monospace';
+    ctx.fillText('Tap to try again', c.width/2, c.height/2 + 18);
+  }
+  requestAnimationFrame(update);
+}
+update();
+</script>
+</body>
+</html>
