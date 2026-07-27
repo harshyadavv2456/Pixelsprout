@@ -1,35 +1,42 @@
-/* Pixelsprout — design tokens
-   Soil dark:      #2B2118
-   Paper cream:    #E8DFC8
-   Sprout green:   #4C7A4A
-   Sprout green-lt:#7FA876
-   Sun amber:      #C89B3C
-   Rust accent:    #9C4A2E
+/* Pixelsprout — Arcade Marquee design system
+   Ink (bg):       #15120F
+   Panel:          #211C17
+   Marquee gold:   #E7A94C
+   Signal red:     #D6553A
+   Cabinet teal:   #3E8073
+   Paper (text):   #EFE6D3
+   Muted:          #9C9284
 */
 
-@font-face {
-  font-family: 'Fredoka-fallback';
-  src: local('Arial Rounded MT Bold');
-}
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root {
-  --soil: #2B2118;
-  --soil-2: #382a1d;
-  --paper: #E8DFC8;
-  --sprout: #4C7A4A;
-  --sprout-lt: #7FA876;
-  --amber: #C89B3C;
-  --rust: #9C4A2E;
-  --ink: #221A12;
+  --ink: #15120F;
+  --panel: #211C17;
+  --panel-2: #2B241C;
+  --paper: #EFE6D3;
+  --muted: #9C9284;
+  --gold: #E7A94C;
+  --signal: #D6553A;
+  --teal: #3E8073;
+  --border: #3a3126;
+
+  /* legacy aliases so existing game pages (2048/memory/snake/tictactoe)
+     that reference the old token names keep working without edits */
+  --soil: var(--ink);
+  --soil-2: var(--panel);
+  --sprout: var(--teal);
+  --sprout-lt: #5FA394;
+  --amber: var(--gold);
+  --rust: var(--signal);
 }
 
 * { box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: var(--soil);
+  background: var(--ink);
   color: var(--paper);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.5;
@@ -40,12 +47,7 @@ body {
 }
 
 a { color: inherit; }
-
-.wrap {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
 
 /* ---------- Header ---------- */
 
@@ -53,119 +55,148 @@ a { color: inherit; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 28px 24px 18px;
-  max-width: 1080px;
+  padding: 26px 24px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-weight: 700;
-  font-size: 22px;
-  letter-spacing: 0.2px;
+  gap: 12px;
   text-decoration: none;
   color: var(--paper);
 }
 
-.logo .sprout-mark {
-  font-size: 20px;
-  transform: translateY(-1px);
+.logo-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--gold);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.logo-word {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: 0.02em;
 }
 
 .tagline {
-  font-family: 'IBM Plex Mono', 'Courier New', monospace;
-  font-size: 12px;
-  color: var(--sprout-lt);
-  letter-spacing: 0.06em;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 /* ---------- Hero ---------- */
 
-.hero {
-  padding: 48px 24px 40px;
-  text-align: left;
-  position: relative;
-  overflow: hidden;
-}
+.hero { padding: 40px 24px 0; }
 
 .hero h1 {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
-  font-size: clamp(34px, 6vw, 56px);
-  line-height: 1.05;
-  margin: 0 0 14px;
-  max-width: 720px;
+  font-size: clamp(36px, 6vw, 60px);
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  margin: 0 0 16px;
+  max-width: 760px;
 }
 
-.hero h1 em {
-  font-style: normal;
-  color: var(--amber);
-}
+.hero h1 .accent { color: var(--gold); }
 
 .hero p {
-  max-width: 520px;
-  color: #d7cdb3;
-  font-size: 16px;
-  margin: 0 0 22px;
+  max-width: 560px;
+  color: var(--muted);
+  font-size: 17px;
+  margin: 0 0 26px;
 }
 
 .hero-stats {
   display: flex;
-  gap: 28px;
-  font-family: 'IBM Plex Mono', 'Courier New', monospace;
-  font-size: 13px;
-  color: var(--sprout-lt);
+  gap: 32px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  color: var(--muted);
   flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 .hero-stats strong {
   color: var(--paper);
-  font-size: 16px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 22px;
   display: block;
+  font-weight: 700;
 }
 
-/* growth bar signature element */
-.growth-row {
-  display: flex;
-  gap: 4px;
-  margin-top: 28px;
-  align-items: flex-end;
-  height: 34px;
+/* ---------- Marquee ticker (signature element) ---------- */
+
+.marquee {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--panel);
+  overflow: hidden;
+  white-space: nowrap;
+  margin-bottom: 8px;
 }
 
-.growth-row span {
-  display: inline-block;
-  width: 6px;
-  background: var(--sprout);
-  border-radius: 2px 2px 0 0;
-  animation: grow 1.4s ease-out both;
-  transform-origin: bottom;
+.marquee-track {
+  display: inline-flex;
+  animation: scroll-marquee 28s linear infinite;
+  padding: 12px 0;
 }
 
-@keyframes grow {
-  from { transform: scaleY(0); opacity: 0; }
-  to { transform: scaleY(1); opacity: 1; }
+.marquee-track span {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  padding: 0 28px;
+  text-transform: uppercase;
 }
 
-/* ---------- Category labels ---------- */
+.marquee-track span::after {
+  content: '•';
+  color: var(--muted);
+  margin-left: 28px;
+}
+
+@keyframes scroll-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ---------- Genre sections ---------- */
 
 .category {
-  margin: 44px 0 18px;
+  margin: 48px 0 18px;
   display: flex;
   align-items: baseline;
-  gap: 10px;
+  gap: 12px;
 }
 
-.category .bed-icon {
-  font-size: 15px;
+.category .bar {
+  width: 4px;
+  height: 20px;
+  border-radius: 2px;
+  background: var(--gold);
 }
+
+.category.teal .bar { background: var(--teal); }
+.category.signal .bar { background: var(--signal); }
 
 .category h2 {
-  font-family: Georgia, serif;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
   font-size: 20px;
   margin: 0;
   color: var(--paper);
@@ -174,87 +205,89 @@ a { color: inherit; }
 .category .count {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 12px;
-  color: var(--sprout-lt);
+  color: var(--muted);
 }
 
-/* ---------- Seed-packet cards ---------- */
+/* ---------- Game cards ---------- */
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
   margin-bottom: 12px;
 }
 
 .card {
-  background: var(--soil-2);
-  border: 1px dashed #5a4a37;
+  background: var(--panel);
+  border: 1px solid var(--border);
   border-radius: 10px;
-  padding: 18px 16px 16px;
+  padding: 18px;
   text-decoration: none;
   color: var(--paper);
-  position: relative;
-  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  gap: 14px;
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
 }
 
 .card:hover, .card:focus-visible {
-  transform: translateY(-3px);
-  border-color: var(--sprout-lt);
-  background: #40311f;
+  transform: translateY(-2px);
+  border-color: var(--gold);
+  background: var(--panel-2);
   outline: none;
 }
 
-.card:focus-visible {
-  box-shadow: 0 0 0 2px var(--amber);
+.card:focus-visible { box-shadow: 0 0 0 2px var(--gold); }
+
+.mono {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--ink);
 }
 
-.card .icon {
-  font-size: 30px;
-  line-height: 1;
+.mono.gold { background: var(--gold); }
+.mono.teal { background: var(--teal); color: var(--paper); }
+.mono.signal { background: var(--signal); color: var(--paper); }
+
+.card-body h3 {
+  margin: 0 0 3px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
 }
 
-.card h3 {
+.card-body p {
   margin: 0;
-  font-size: 17px;
-  font-family: Georgia, serif;
-}
-
-.card p {
-  margin: 0;
-  font-size: 13px;
-  color: #c7bc9e;
-}
-
-.stamp {
-  align-self: flex-start;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--soil);
-  background: var(--amber);
-  padding: 3px 8px;
-  border-radius: 3px;
-  transform: rotate(-2deg);
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.4;
 }
 
 /* ---------- Footer ---------- */
 
 .site-footer {
-  max-width: 1080px;
-  margin: 60px auto 30px;
+  max-width: 1120px;
+  margin: 64px auto 30px;
   padding: 24px;
-  border-top: 1px solid #4a3a28;
+  border-top: 1px solid var(--border);
   font-size: 13px;
-  color: #a89877;
+  color: var(--muted);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 10px;
 }
+
+.site-footer a { color: var(--muted); text-decoration: underline; }
+.site-footer a:hover { color: var(--gold); }
 
 /* ---------- Game page shell ---------- */
 
@@ -270,15 +303,16 @@ a { color: inherit; }
   gap: 6px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 13px;
-  color: var(--sprout-lt);
+  color: var(--teal);
   text-decoration: none;
   margin-bottom: 20px;
 }
 
-.back-link:hover { color: var(--amber); }
+.back-link:hover { color: var(--gold); }
 
 .game-title {
-  font-family: Georgia, serif;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
   font-size: 28px;
   margin: 0 0 6px;
 }
@@ -286,13 +320,13 @@ a { color: inherit; }
 .game-meta {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 12px;
-  color: var(--sprout-lt);
+  color: var(--muted);
   margin-bottom: 22px;
 }
 
 .game-board-frame {
-  background: var(--soil-2);
-  border: 1px dashed #5a4a37;
+  background: var(--panel);
+  border: 1px solid var(--border);
   border-radius: 12px;
   padding: 20px;
   display: flex;
@@ -312,28 +346,29 @@ a { color: inherit; }
   justify-content: center;
 }
 
-.hud .label { color: var(--sprout-lt); margin-right: 4px; }
+.hud .label { color: var(--muted); margin-right: 4px; }
 
 button.action {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  background: var(--sprout);
-  color: var(--paper);
+  background: var(--gold);
+  color: var(--ink);
   border: none;
   border-radius: 6px;
   padding: 9px 16px;
   cursor: pointer;
   transition: background 0.15s ease;
+  font-weight: 500;
 }
 
-button.action:hover { background: var(--sprout-lt); color: var(--soil); }
+button.action:hover { background: #f0bb6c; }
 
 .how-to {
   margin-top: 18px;
   font-size: 13px;
-  color: #a89877;
+  color: var(--muted);
   text-align: center;
   max-width: 420px;
 }

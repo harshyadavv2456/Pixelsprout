@@ -3,119 +3,133 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pixelsprout — small open games, grown in the open</title>
-<meta name="description" content="A curated garden of free, open-source browser games. No installs, no accounts, just play.">
+<title>Pixelsprout — Free browser games, every genre, zero installs</title>
+<meta name="description" content="Pixelsprout is a growing library of free browser games — arcade, puzzle, and strategy. No installs, no accounts, no App Store. Just click and play.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header class="site-header">
-  <a class="logo" href="/"><span class="sprout-mark">🌱</span> Pixelsprout</a>
-  <span class="tagline">Open-source · Browser-native</span>
+  <a class="logo" href="/">
+    <span class="logo-mark">P</span>
+    <span class="logo-word">PIXELSPROUT</span>
+  </a>
+  <span class="tagline">Free · Instant · Every Genre</span>
 </header>
 
 <section class="hero">
   <div class="wrap">
-    <h1>Small games, <em>grown</em> in the open.</h1>
-    <p>Every game here is free, open-source, and playable instantly — no installs, no accounts, no App Store. Built by independent devs, credited by name, hosted for anyone.</p>
+    <h1>One tab. <span class="accent">Every game.</span></h1>
+    <p>Pixelsprout is a free browser gaming library, built to hold every genre — arcade, puzzle, strategy, and whatever's next. No installs, no accounts, no App Store. Click and you're playing.</p>
     <div class="hero-stats">
-      <div><strong id="game-count">8</strong> games planted</div>
-      <div><strong>100%</strong> open-source</div>
-      <div><strong>$0</strong> to play</div>
+      <div><strong id="game-count">8</strong>games live</div>
+      <div><strong>3</strong>genres</div>
+      <div><strong>0</strong>installs required</div>
     </div>
-    <div class="growth-row" aria-hidden="true" id="growth-row"></div>
   </div>
 </section>
 
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marquee-track"></div>
+</div>
+
 <main class="wrap">
 
-  <div class="category">
-    <span class="bed-icon">🧩</span>
-    <h2>Puzzle bed</h2>
+  <div class="category gold">
+    <span class="bar"></span>
+    <h2>Puzzle</h2>
     <span class="count">3 games</span>
   </div>
   <div class="grid">
     <a class="card" href="games/2048.html">
-      <span class="icon">🔢</span>
-      <h3>2048</h3>
-      <p>Slide and merge tiles to reach 2048. One-file classic, original build.</p>
-      <span class="stamp">MIT · original</span>
+      <span class="mono gold">20</span>
+      <div class="card-body">
+        <h3>2048</h3>
+        <p>Slide and merge tiles to reach the 2048 tile.</p>
+      </div>
     </a>
     <a class="card" href="games/memory.html">
-      <span class="icon">🃏</span>
-      <h3>Memory Match</h3>
-      <p>Flip cards, find pairs, beat your best time. Simple, sharp, replayable.</p>
-      <span class="stamp">MIT · original</span>
+      <span class="mono gold">MM</span>
+      <div class="card-body">
+        <h3>Memory Match</h3>
+        <p>Flip pairs, clear the board in the fewest moves.</p>
+      </div>
     </a>
     <a class="card" href="games/minesweeper.html">
-      <span class="icon">🌰</span>
-      <h3>Rootfield</h3>
-      <p>Clear every safe plot without hitting a buried root. Classic minesweeper.</p>
-      <span class="stamp">MIT · original</span>
+      <span class="mono gold">MS</span>
+      <div class="card-body">
+        <h3>Minesweeper</h3>
+        <p>Clear the field without triggering a mine.</p>
+      </div>
     </a>
   </div>
 
-  <div class="category">
-    <span class="bed-icon">🕹️</span>
-    <h2>Arcade bed</h2>
+  <div class="category teal">
+    <span class="bar"></span>
+    <h2>Arcade</h2>
     <span class="count">3 games</span>
   </div>
   <div class="grid">
     <a class="card" href="games/snake.html">
-      <span class="icon">🐍</span>
-      <h3>Snake</h3>
-      <p>Grow your trail, don't cross yourself. Arrow keys or swipe on mobile.</p>
-      <span class="stamp">MIT · original</span>
+      <span class="mono teal">SN</span>
+      <div class="card-body">
+        <h3>Snake</h3>
+        <p>Grow your trail. Don't cross yourself.</p>
+      </div>
     </a>
     <a class="card" href="games/flappy.html">
-      <span class="icon">🐤</span>
-      <h3>Flappy Sprout</h3>
-      <p>Tap to fly through the hedges. One tap, one rhythm, one high score.</p>
-      <span class="stamp">MIT · original</span>
+      <span class="mono teal">FH</span>
+      <div class="card-body">
+        <h3>Flappy Hop</h3>
+        <p>One tap, one rhythm, one high score.</p>
+      </div>
     </a>
     <a class="card" href="games/tetris.html">
-      <span class="icon">🧱</span>
-      <h3>Stackblocks</h3>
-      <p>Rotate, drop, and clear lines before the field fills up.</p>
-      <span class="stamp">MIT · original</span>
+      <span class="mono teal">SB</span>
+      <div class="card-body">
+        <h3>Stackblocks</h3>
+        <p>Rotate, drop, and clear lines before it fills.</p>
+      </div>
     </a>
   </div>
 
-  <div class="category">
-    <span class="bed-icon">♟️</span>
-    <h2>Board bed</h2>
+  <div class="category signal">
+    <span class="bar"></span>
+    <h2>Strategy</h2>
     <span class="count">2 games</span>
   </div>
   <div class="grid">
     <a class="card" href="games/tictactoe.html">
-      <span class="icon">⭕</span>
-      <h3>Tic-Tac-Toe</h3>
-      <p>Two players, one grid, zero downloads. A quiet classic done right.</p>
-      <span class="stamp">MIT · original</span>
+      <span class="mono signal">TT</span>
+      <div class="card-body">
+        <h3>Tic-Tac-Toe</h3>
+        <p>Two players, one grid, quick matches.</p>
+      </div>
     </a>
     <a class="card" href="games/pong.html">
-      <span class="icon">🏓</span>
-      <h3>Rally</h3>
-      <p>Paddle vs. CPU. First to seven wins — simple, fast, replayable.</p>
-      <span class="stamp">MIT · original</span>
+      <span class="mono signal">RL</span>
+      <div class="card-body">
+        <h3>Rally</h3>
+        <p>Paddle vs. CPU. First to seven wins.</p>
+      </div>
     </a>
   </div>
 
 </main>
 
 <footer class="site-footer">
-  <span>Pixelsprout — a small garden of open games.</span>
-  <span>All games above are original builds under MIT license. Built with real names, no disguised clones.</span>
+  <span>© Pixelsprout — a free browser gaming library.</span>
+  <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
 </footer>
 
 <script>
-  const row = document.getElementById('growth-row');
-  const heights = [8, 14, 10, 22, 16, 28, 20, 34, 24, 18];
-  heights.forEach((h, i) => {
-    const bar = document.createElement('span');
-    bar.style.height = h + 'px';
-    bar.style.animationDelay = (i * 0.06) + 's';
-    row.appendChild(bar);
+  const names = ['2048','MEMORY MATCH','MINESWEEPER','SNAKE','FLAPPY HOP','STACKBLOCKS','TIC-TAC-TOE','RALLY'];
+  const track = document.getElementById('marquee-track');
+  const doubled = [...names, ...names]; // duplicate for seamless loop
+  doubled.forEach(n => {
+    const span = document.createElement('span');
+    span.textContent = n;
+    track.appendChild(span);
   });
 </script>
 

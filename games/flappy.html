@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flappy Sprout — Pixelsprout</title>
-<meta name="description" content="Play Flappy Sprout free online, no download required. Tap to fly through the hedges and beat your best score.">
+<title>Flappy Hop — Pixelsprout</title>
+<meta name="description" content="Play Flappy Hop free online, no download required. Tap to fly through the hedges and beat your best score.">
 <link rel="stylesheet" href="../styles.css">
 <style>
   canvas { background: #4C7A4A33; border-radius: 8px; touch-action: none; max-width: 90vw; }
@@ -13,7 +13,7 @@
 <body>
 <div class="game-shell">
   <a class="back-link" href="../index.html">← back to garden</a>
-  <h1 class="game-title">Flappy Sprout</h1>
+  <h1 class="game-title">Flappy Hop</h1>
   <div class="game-meta">Click, tap, or Space · fly through the hedges</div>
 
   <div class="game-board-frame">
@@ -37,7 +37,7 @@ function reset(){
   bird = { x:70, y:230, vy:0, r:13 };
   pipes = [];
   frame = 0; score = 0; dead = false; started = false;
-  best = Number(localStorage.getItem('sproutflappybest') || 0);
+  best = Number(localStorage.getItem('flappyhopbest') || 0);
   document.getElementById('best').textContent = best;
   document.getElementById('score').textContent = 0;
 }
@@ -75,7 +75,7 @@ function update(){
       if(hitX && hitY) dead = true;
     });
     if(bird.y + bird.r > c.height || bird.y - bird.r < 0) dead = true;
-    if(dead && score > best){ best = score; localStorage.setItem('sproutflappybest', best); document.getElementById('best').textContent = best; }
+    if(dead && score > best){ best = score; localStorage.setItem('flappyhopbest', best); document.getElementById('best').textContent = best; }
   }
 
   ctx.fillStyle = '#4C7A4A';

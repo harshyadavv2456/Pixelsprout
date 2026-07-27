@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rootfield — Pixelsprout</title>
-<meta name="description" content="Play Rootfield, a free online minesweeper-style puzzle. Clear the field without hitting a root, no download needed.">
+<title>Minesweeper — Pixelsprout</title>
+<meta name="description" content="Play Minesweeper, a free online minesweeper-style puzzle. Clear the field without hitting a mine, no download needed.">
 <link rel="stylesheet" href="../styles.css">
 <style>
   #minegrid { display:grid; grid-template-columns:repeat(10, 28px); grid-template-rows:repeat(10, 28px); gap:2px; background:#221A12; padding:6px; border-radius:8px; }
@@ -16,17 +16,17 @@
 <body>
 <div class="game-shell">
   <a class="back-link" href="../index.html">← back to garden</a>
-  <h1 class="game-title">Rootfield</h1>
-  <div class="game-meta">Left click reveal · right click flag</div>
+  <h1 class="game-title">Minesweeper</h1>
+  <div class="game-meta">Left click to reveal · right click to flag</div>
 
   <div class="game-board-frame">
     <div class="hud">
-      <div><span class="label">Roots left</span><span id="minesLeft">15</span></div>
+      <div><span class="label">Mines left</span><span id="minesLeft">15</span></div>
       <div><span class="label">Status</span><span id="status">Playing</span></div>
       <button class="action" id="restart">Restart</button>
     </div>
     <div id="minegrid"></div>
-    <p class="how-to">Left click to clear a plot. Right click to mark a suspected root. Clear every safe plot to win.</p>
+    <p class="how-to">Left click to clear a cell. Right click to flag a suspected mine. Clear every safe cell to win.</p>
   </div>
 </div>
 
@@ -62,7 +62,7 @@ function init(){
 function reveal(x,y){
   if(gameOver||revealed[y][x]||flagged[y][x]) return;
   revealed[y][x]=true;
-  if(board[y][x]===-1){ gameOver=true; document.getElementById('status').textContent='Hit a root'; revealAll(); render(); return; }
+  if(board[y][x]===-1){ gameOver=true; document.getElementById('status').textContent='Hit a mine'; revealAll(); render(); return; }
   if(board[y][x]===0){
     for(let dy=-1;dy<=1;dy++) for(let dx=-1;dx<=1;dx++){
       const ny=y+dy, nx=x+dx;
