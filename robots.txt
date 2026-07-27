@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pixelsprout.vercel.app/sitemap.xml
+Sitemap: https://playpixelsprout.com/sitemap.xml

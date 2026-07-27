@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://pixelsprout.vercel.app/</loc><priority>1.0</priority></url>
-  <url><loc>https://pixelsprout.vercel.app/games/2048.html</loc><priority>0.8</priority></url>
-  <url><loc>https://pixelsprout.vercel.app/games/memory.html</loc><priority>0.8</priority></url>
-  <url><loc>https://pixelsprout.vercel.app/games/snake.html</loc><priority>0.8</priority></url>
-  <url><loc>https://pixelsprout.vercel.app/games/tictactoe.html</loc><priority>0.8</priority></url>
-  <url><loc>https://pixelsprout.vercel.app/games/flappy.html</loc><priority>0.8</priority></url>
-  <url><loc>https://pixelsprout.vercel.app/games/tetris.html</loc><priority>0.8</priority></url>
-  <url><loc>https://pixelsprout.vercel.app/games/pong.html</loc><priority>0.8</priority></url>
-  <url><loc>https://pixelsprout.vercel.app/games/minesweeper.html</loc><priority>0.8</priority></url>
-  <url><loc>https://pixelsprout.vercel.app/privacy.html</loc><priority>0.3</priority></url>
-  <url><loc>https://pixelsprout.vercel.app/terms.html</loc><priority>0.3</priority></url>
+  <url><loc>https://playpixelsprout.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://playpixelsprout.com/games/2048.html</loc><priority>0.8</priority></url>
+  <url><loc>https://playpixelsprout.com/games/memory.html</loc><priority>0.8</priority></url>
+  <url><loc>https://playpixelsprout.com/games/snake.html</loc><priority>0.8</priority></url>
+  <url><loc>https://playpixelsprout.com/games/tictactoe.html</loc><priority>0.8</priority></url>
+  <url><loc>https://playpixelsprout.com/games/flappy.html</loc><priority>0.8</priority></url>
+  <url><loc>https://playpixelsprout.com/games/tetris.html</loc><priority>0.8</priority></url>
+  <url><loc>https://playpixelsprout.com/games/pong.html</loc><priority>0.8</priority></url>
+  <url><loc>https://playpixelsprout.com/games/minesweeper.html</loc><priority>0.8</priority></url>
+  <url><loc>https://playpixelsprout.com/privacy.html</loc><priority>0.3</priority></url>
+  <url><loc>https://playpixelsprout.com/terms.html</loc><priority>0.3</priority></url>
 </urlset>
