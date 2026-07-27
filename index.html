@@ -19,12 +19,31 @@
   </a>
   <span class="tagline">Play · Grow · Explore</span>
 </header>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-title">Genres</div>
+  <nav class="sidebar-nav">
+    <a href="#" class="sidebar-link active" data-filter="all">All Games</a>
+    <a href="#puzzle" class="sidebar-link" data-filter="puzzle">Puzzle</a>
+    <a href="#arcade" class="sidebar-link" data-filter="arcade">Arcade</a>
+    <a href="#strategy" class="sidebar-link" data-filter="strategy">Strategy</a>
+    <a href="#simulation" class="sidebar-link" data-filter="simulation">Simulation</a>
+    <a href="#hidden-object" class="sidebar-link" data-filter="hidden-object">Hidden-Object</a>
+    <a href="#match-3" class="sidebar-link" data-filter="match-3">Match-3</a>
+    <a href="#2048" class="sidebar-link" data-filter="2048">2048</a>
+    <a href="#battle" class="sidebar-link" data-filter="battle">Battle</a>
+    <a href="#memory" class="sidebar-link" data-filter="memory">Memory</a>
+    <a href="#kids" class="sidebar-link" data-filter="kids">Kids</a>
+  </nav>
+</aside>
+<div class="layout-main">
+
 
 <section class="hero">
   <div class="wrap hero-inner">
     <div class="hero-text">
       <h1>One tab.<br><span class="accent">Every game.</span></h1>
-      <p>Pixelsprout is a free browser gaming library, built to hold every genre — arcade, puzzle, strategy, and whatever's next. No installs, no accounts, no App Store. Click and you're playing.</p>
+      <p>A free browser gaming library — thousands of games, zero installs, zero accounts. Puzzle, arcade, strategy, simulation, and more, all in one place. Pick a genre, hit play, you're in.</p>
       <div class="hero-stats">
         <div><strong id="game-count">2889</strong>games live</div>
         <div><strong>4</strong>genres</div>
@@ -49,7 +68,47 @@
     <span id="result-count" class="result-count">8 games</span>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="popular-picks" class="category gold" data-section data-genre="popular-picks">
+    <span class="bar"></span>
+    <h2>Popular Picks</h2>
+  <span class="count">Featured</span>
+</div>
+<div class="grid" data-grid>
+  <a class="card" href="games/subway-princess-run.html" data-name="subway princess run">
+    <span class="icon-tile gold"><svg viewBox="0 0 24 24" fill="none"><path d="M4 17V9a2 2 0 012-2h12a2 2 0 012 2v8M4 17l-1 3h18l-1-3M4 17h16" stroke="currentColor" stroke-width="1.8"/><circle cx="8" cy="17" r="1.4" fill="currentColor"/><circle cx="16" cy="17" r="1.4" fill="currentColor"/></svg></span>
+    <div class="card-body"><h3>Subway Princess Run</h3></div>
+  </a>
+  <a class="card" href="games/worms-zone.html" data-name="worms zone">
+    <span class="icon-tile teal"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h9a4 4 0 010 8H8a3 3 0 010-6h6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+    <div class="card-body"><h3>Worms Zone</h3></div>
+  </a>
+  <a class="card" href="games/uno-online.html" data-name="uno online">
+    <span class="icon-tile signal"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="9" height="14" rx="2" fill="currentColor" opacity="0.55" transform="rotate(-8 8.5 10)"/><rect x="11" y="3" width="9" height="14" rx="2" fill="currentColor" transform="rotate(8 15.5 10)"/></svg></span>
+    <div class="card-body"><h3>Uno Online</h3></div>
+  </a>
+  <a class="card" href="games/baba-is-you.html" data-name="baba is you">
+    <span class="icon-tile gold"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" fill="currentColor"/><rect x="13" y="13" width="8" height="8" fill="currentColor" opacity="0.6"/></svg></span>
+    <div class="card-body"><h3>Baba Is You</h3></div>
+  </a>
+  <a class="card" href="games/getting-over-it.html" data-name="getting over it">
+    <span class="icon-tile teal"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="6" fill="currentColor"/></svg></span>
+    <div class="card-body"><h3>Getting Over It</h3></div>
+  </a>
+  <a class="card" href="games/suika-world.html" data-name="suika world">
+    <span class="icon-tile signal"><svg viewBox="0 0 24 24" fill="none"><circle cx="8" cy="14" r="5" fill="currentColor" opacity="0.6"/><circle cx="15" cy="10" r="6" fill="currentColor"/></svg></span>
+    <div class="card-body"><h3>Suika World</h3></div>
+  </a>
+  <a class="card" href="games/tank-1990.html" data-name="tank 1990">
+    <span class="icon-tile gold"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="6" rx="1" fill="currentColor"/><rect x="10" y="5" width="4" height="7" fill="currentColor"/></svg></span>
+    <div class="card-body"><h3>Tank 1990</h3></div>
+  </a>
+  <a class="card" href="games/ultimate-solitaire-classic.html" data-name="ultimate solitaire classic">
+    <span class="icon-tile teal"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="9" height="14" rx="2" fill="currentColor" opacity="0.55" transform="rotate(-8 8.5 10)"/><rect x="11" y="3" width="9" height="14" rx="2" fill="currentColor" transform="rotate(8 15.5 10)"/></svg></span>
+    <div class="card-body"><h3>Ultimate Solitaire Classic</h3></div>
+  </a>
+</div>
+
+<div id="puzzle" class="category gold" data-section data-genre="puzzle">
     <span class="bar"></span>
     <h2>Puzzle</h2>
     <span class="count">114 games</span>
@@ -1083,7 +1142,7 @@
     </a>
   </div>
 
-  <div class="category teal" data-section>
+  <div id="arcade" class="category teal" data-section data-genre="arcade">
     <span class="bar"></span>
     <h2>Arcade</h2>
     <span class="count">262 games</span>
@@ -3449,7 +3508,7 @@
     </a>
   </div>
 
-  <div class="category signal" data-section>
+  <div id="strategy" class="category signal" data-section data-genre="strategy">
     <span class="bar"></span>
     <h2>Strategy</h2>
     <span class="count">66 games</span>
@@ -4051,7 +4110,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="simulation" class="category gold" data-section data-genre="simulation">
     <span class="bar"></span>
     <h2>Simulation</h2>
     <span class="count">45 games</span>
@@ -4464,7 +4523,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="hidden-object" class="category gold" data-section data-genre="hidden-object">
     <span class="bar"></span>
     <h2>Hidden-Object</h2>
     <span class="count">10 games</span>
@@ -4562,7 +4621,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="match-3" class="category gold" data-section data-genre="match-3">
     <span class="bar"></span>
     <h2>Match-3</h2>
     <span class="count">32 games</span>
@@ -4858,7 +4917,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="2048" class="category gold" data-section data-genre="2048">
     <span class="bar"></span>
     <h2>2048</h2>
     <span class="count">22 games</span>
@@ -5064,7 +5123,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="battle" class="category gold" data-section data-genre="battle">
     <span class="bar"></span>
     <h2>Battle</h2>
     <span class="count">19 games</span>
@@ -5243,7 +5302,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="memory" class="category gold" data-section data-genre="memory">
     <span class="bar"></span>
     <h2>Memory</h2>
     <span class="count">12 games</span>
@@ -5359,7 +5418,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="kids" class="category gold" data-section data-genre="kids">
     <span class="bar"></span>
     <h2>Kids</h2>
     <span class="count">218 games</span>
@@ -7329,7 +7388,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="drawing" class="category gold" data-section data-genre="drawing">
     <span class="bar"></span>
     <h2>Drawing</h2>
     <span class="count">20 games</span>
@@ -7517,7 +7576,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="ball" class="category gold" data-section data-genre="ball">
     <span class="bar"></span>
     <h2>Ball</h2>
     <span class="count">57 games</span>
@@ -8038,7 +8097,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="stickman" class="category gold" data-section data-genre="stickman">
     <span class="bar"></span>
     <h2>Stickman</h2>
     <span class="count">7 games</span>
@@ -8109,7 +8168,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="sports" class="category gold" data-section data-genre="sports">
     <span class="bar"></span>
     <h2>Sports</h2>
     <span class="count">162 games</span>
@@ -9575,7 +9634,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="adventure" class="category gold" data-section data-genre="adventure">
     <span class="bar"></span>
     <h2>Adventure</h2>
     <span class="count">122 games</span>
@@ -10681,7 +10740,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="fighting" class="category gold" data-section data-genre="fighting">
     <span class="bar"></span>
     <h2>Fighting</h2>
     <span class="count">49 games</span>
@@ -11130,7 +11189,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="shooter" class="category gold" data-section data-genre="shooter">
     <span class="bar"></span>
     <h2>Shooter</h2>
     <span class="count">66 games</span>
@@ -11732,7 +11791,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="educational" class="category gold" data-section data-genre="educational">
     <span class="bar"></span>
     <h2>Educational</h2>
     <span class="count">12 games</span>
@@ -11848,7 +11907,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="animal" class="category gold" data-section data-genre="animal">
     <span class="bar"></span>
     <h2>Animal</h2>
     <span class="count">81 games</span>
@@ -12585,7 +12644,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="fun" class="category gold" data-section data-genre="fun">
     <span class="bar"></span>
     <h2>Fun</h2>
     <span class="count">58 games</span>
@@ -13115,7 +13174,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="racing" class="category gold" data-section data-genre="racing">
     <span class="bar"></span>
     <h2>Racing</h2>
     <span class="count">67 games</span>
@@ -13726,7 +13785,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="io" class="category gold" data-section data-genre="io">
     <span class="bar"></span>
     <h2>Io</h2>
     <span class="count">11 games</span>
@@ -13833,7 +13892,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="trivia" class="category gold" data-section data-genre="trivia">
     <span class="bar"></span>
     <h2>Trivia</h2>
     <span class="count">15 games</span>
@@ -13976,7 +14035,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="block" class="category gold" data-section data-genre="block">
     <span class="bar"></span>
     <h2>Block</h2>
     <span class="count">10 games</span>
@@ -14074,7 +14133,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="christmas" class="category gold" data-section data-genre="christmas">
     <span class="bar"></span>
     <h2>Christmas</h2>
     <span class="count">8 games</span>
@@ -14154,7 +14213,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="first-person-shooter" class="category gold" data-section data-genre="first-person-shooter">
     <span class="bar"></span>
     <h2>First-Person-Shooter</h2>
     <span class="count">30 games</span>
@@ -14432,7 +14491,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="basketball" class="category gold" data-section data-genre="basketball">
     <span class="bar"></span>
     <h2>Basketball</h2>
     <span class="count">15 games</span>
@@ -14575,7 +14634,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="retro" class="category gold" data-section data-genre="retro">
     <span class="bar"></span>
     <h2>Retro</h2>
     <span class="count">20 games</span>
@@ -14763,7 +14822,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="idle" class="category gold" data-section data-genre="idle">
     <span class="bar"></span>
     <h2>Idle</h2>
     <span class="count">4 games</span>
@@ -14807,7 +14866,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="robots" class="category gold" data-section data-genre="robots">
     <span class="bar"></span>
     <h2>Robots</h2>
     <span class="count">11 games</span>
@@ -14914,7 +14973,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="car" class="category gold" data-section data-genre="car">
     <span class="bar"></span>
     <h2>Car</h2>
     <span class="count">32 games</span>
@@ -15210,7 +15269,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="board" class="category gold" data-section data-genre="board">
     <span class="bar"></span>
     <h2>Board</h2>
     <span class="count">54 games</span>
@@ -15704,7 +15763,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="snake" class="category gold" data-section data-genre="snake">
     <span class="bar"></span>
     <h2>Snake</h2>
     <span class="count">11 games</span>
@@ -15811,7 +15870,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="platformer" class="category gold" data-section data-genre="platformer">
     <span class="bar"></span>
     <h2>Platformer</h2>
     <span class="count">51 games</span>
@@ -16278,7 +16337,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="golf" class="category gold" data-section data-genre="golf">
     <span class="bar"></span>
     <h2>Golf</h2>
     <span class="count">2 games</span>
@@ -16304,7 +16363,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="monster" class="category gold" data-section data-genre="monster">
     <span class="bar"></span>
     <h2>Monster</h2>
     <span class="count">54 games</span>
@@ -16798,7 +16857,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="runner" class="category gold" data-section data-genre="runner">
     <span class="bar"></span>
     <h2>Runner</h2>
     <span class="count">45 games</span>
@@ -17211,7 +17270,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="clicker" class="category gold" data-section data-genre="clicker">
     <span class="bar"></span>
     <h2>Clicker</h2>
     <span class="count">53 games</span>
@@ -17696,7 +17755,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="action" class="category gold" data-section data-genre="action">
     <span class="bar"></span>
     <h2>Action</h2>
     <span class="count">171 games</span>
@@ -19243,7 +19302,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="mobile" class="category gold" data-section data-genre="mobile">
     <span class="bar"></span>
     <h2>Mobile</h2>
     <span class="count">5 games</span>
@@ -19296,7 +19355,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="math" class="category gold" data-section data-genre="math">
     <span class="bar"></span>
     <h2>Math</h2>
     <span class="count">16 games</span>
@@ -19448,7 +19507,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="tanks" class="category gold" data-section data-genre="tanks">
     <span class="bar"></span>
     <h2>Tanks</h2>
     <span class="count">28 games</span>
@@ -19708,7 +19767,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="addictive" class="category gold" data-section data-genre="addictive">
     <span class="bar"></span>
     <h2>Addictive</h2>
     <span class="count">16 games</span>
@@ -19860,7 +19919,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="war" class="category gold" data-section data-genre="war">
     <span class="bar"></span>
     <h2>War</h2>
     <span class="count">8 games</span>
@@ -19940,7 +19999,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="hyper-casual" class="category gold" data-section data-genre="hyper-casual">
     <span class="bar"></span>
     <h2>Hyper-Casual</h2>
     <span class="count">46 games</span>
@@ -20362,7 +20421,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="casual" class="category gold" data-section data-genre="casual">
     <span class="bar"></span>
     <h2>Casual</h2>
     <span class="count">124 games</span>
@@ -21486,7 +21545,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="card" class="category gold" data-section data-genre="card">
     <span class="bar"></span>
     <h2>Card</h2>
     <span class="count">9 games</span>
@@ -21575,7 +21634,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="scary" class="category gold" data-section data-genre="scary">
     <span class="bar"></span>
     <h2>Scary</h2>
     <span class="count">5 games</span>
@@ -21628,7 +21687,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="skill" class="category gold" data-section data-genre="skill">
     <span class="bar"></span>
     <h2>Skill</h2>
     <span class="count">32 games</span>
@@ -21924,7 +21983,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="two-player" class="category gold" data-section data-genre="two-player">
     <span class="bar"></span>
     <h2>Two-Player</h2>
     <span class="count">32 games</span>
@@ -22220,7 +22279,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="dinosaur" class="category gold" data-section data-genre="dinosaur">
     <span class="bar"></span>
     <h2>Dinosaur</h2>
     <span class="count">16 games</span>
@@ -22372,7 +22431,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="driving" class="category gold" data-section data-genre="driving">
     <span class="bar"></span>
     <h2>Driving</h2>
     <span class="count">20 games</span>
@@ -22560,7 +22619,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="dirt-bike" class="category gold" data-section data-genre="dirt-bike">
     <span class="bar"></span>
     <h2>Dirt-Bike</h2>
     <span class="count">2 games</span>
@@ -22586,7 +22645,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="parkour" class="category gold" data-section data-genre="parkour">
     <span class="bar"></span>
     <h2>Parkour</h2>
     <span class="count">8 games</span>
@@ -22666,7 +22725,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="flight" class="category gold" data-section data-genre="flight">
     <span class="bar"></span>
     <h2>Flight</h2>
     <span class="count">4 games</span>
@@ -22710,7 +22769,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="survival" class="category gold" data-section data-genre="survival">
     <span class="bar"></span>
     <h2>Survival</h2>
     <span class="count">5 games</span>
@@ -22763,7 +22822,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="money" class="category gold" data-section data-genre="money">
     <span class="bar"></span>
     <h2>Money</h2>
     <span class="count">13 games</span>
@@ -22888,7 +22947,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="brain" class="category gold" data-section data-genre="brain">
     <span class="bar"></span>
     <h2>Brain</h2>
     <span class="count">25 games</span>
@@ -23121,7 +23180,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="jigsaw-puzzles" class="category gold" data-section data-genre="jigsaw-puzzles">
     <span class="bar"></span>
     <h2>Jigsaw-Puzzles</h2>
     <span class="count">8 games</span>
@@ -23201,7 +23260,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="skateboard" class="category gold" data-section data-genre="skateboard">
     <span class="bar"></span>
     <h2>Skateboard</h2>
     <span class="count">3 games</span>
@@ -23236,7 +23295,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="skibidi-toilet" class="category gold" data-section data-genre="skibidi-toilet">
     <span class="bar"></span>
     <h2>Skibidi-Toilet</h2>
     <span class="count">18 games</span>
@@ -23406,7 +23465,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="sniper" class="category gold" data-section data-genre="sniper">
     <span class="bar"></span>
     <h2>Sniper</h2>
     <span class="count">9 games</span>
@@ -23495,7 +23554,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="cats" class="category gold" data-section data-genre="cats">
     <span class="bar"></span>
     <h2>Cats</h2>
     <span class="count">7 games</span>
@@ -23566,7 +23625,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="horror" class="category gold" data-section data-genre="horror">
     <span class="bar"></span>
     <h2>Horror</h2>
     <span class="count">15 games</span>
@@ -23709,7 +23768,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="music" class="category gold" data-section data-genre="music">
     <span class="bar"></span>
     <h2>Music</h2>
     <span class="count">14 games</span>
@@ -23843,7 +23902,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="building" class="category gold" data-section data-genre="building">
     <span class="bar"></span>
     <h2>Building</h2>
     <span class="count">8 games</span>
@@ -23923,7 +23982,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="archery" class="category gold" data-section data-genre="archery">
     <span class="bar"></span>
     <h2>Archery</h2>
     <span class="count">5 games</span>
@@ -23976,7 +24035,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="chess" class="category gold" data-section data-genre="chess">
     <span class="bar"></span>
     <h2>Chess</h2>
     <span class="count">3 games</span>
@@ -24011,7 +24070,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="fashion" class="category gold" data-section data-genre="fashion">
     <span class="bar"></span>
     <h2>Fashion</h2>
     <span class="count">6 games</span>
@@ -24073,7 +24132,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="granny" class="category gold" data-section data-genre="granny">
     <span class="bar"></span>
     <h2>Granny</h2>
     <span class="count">3 games</span>
@@ -24108,7 +24167,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="tap" class="category gold" data-section data-genre="tap">
     <span class="bar"></span>
     <h2>Tap</h2>
     <span class="count">6 games</span>
@@ -24170,7 +24229,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="zombie" class="category gold" data-section data-genre="zombie">
     <span class="bar"></span>
     <h2>Zombie</h2>
     <span class="count">27 games</span>
@@ -24421,7 +24480,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="escape" class="category gold" data-section data-genre="escape">
     <span class="bar"></span>
     <h2>Escape</h2>
     <span class="count">15 games</span>
@@ -24564,7 +24623,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="checkers" class="category gold" data-section data-genre="checkers">
     <span class="bar"></span>
     <h2>Checkers</h2>
     <span class="count">3 games</span>
@@ -24599,7 +24658,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="gangster" class="category gold" data-section data-genre="gangster">
     <span class="bar"></span>
     <h2>Gangster</h2>
     <span class="count">7 games</span>
@@ -24670,7 +24729,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="tetris" class="category gold" data-section data-genre="tetris">
     <span class="bar"></span>
     <h2>Tetris</h2>
     <span class="count">4 games</span>
@@ -24714,7 +24773,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="airplane" class="category gold" data-section data-genre="airplane">
     <span class="bar"></span>
     <h2>Airplane</h2>
     <span class="count">7 games</span>
@@ -24785,7 +24844,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="boxing" class="category gold" data-section data-genre="boxing">
     <span class="bar"></span>
     <h2>Boxing</h2>
     <span class="count">2 games</span>
@@ -24811,7 +24870,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="hunting" class="category gold" data-section data-genre="hunting">
     <span class="bar"></span>
     <h2>Hunting</h2>
     <span class="count">4 games</span>
@@ -24855,7 +24914,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="pixel" class="category gold" data-section data-genre="pixel">
     <span class="bar"></span>
     <h2>Pixel</h2>
     <span class="count">9 games</span>
@@ -24944,7 +25003,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="soccer" class="category gold" data-section data-genre="soccer">
     <span class="bar"></span>
     <h2>Soccer</h2>
     <span class="count">10 games</span>
@@ -25042,7 +25101,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="jewel" class="category gold" data-section data-genre="jewel">
     <span class="bar"></span>
     <h2>Jewel</h2>
     <span class="count">3 games</span>
@@ -25077,7 +25136,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="crazy" class="category gold" data-section data-genre="crazy">
     <span class="bar"></span>
     <h2>Crazy</h2>
     <span class="count">3 games</span>
@@ -25112,7 +25171,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="dress-up" class="category gold" data-section data-genre="dress-up">
     <span class="bar"></span>
     <h2>Dress-Up</h2>
     <span class="count">9 games</span>
@@ -25201,7 +25260,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="fishing" class="category gold" data-section data-genre="fishing">
     <span class="bar"></span>
     <h2>Fishing</h2>
     <span class="count">6 games</span>
@@ -25263,7 +25322,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="coloring" class="category gold" data-section data-genre="coloring">
     <span class="bar"></span>
     <h2>Coloring</h2>
     <span class="count">9 games</span>
@@ -25352,7 +25411,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="bowling" class="category gold" data-section data-genre="bowling">
     <span class="bar"></span>
     <h2>Bowling</h2>
     <span class="count">4 games</span>
@@ -25396,7 +25455,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="surgery" class="category gold" data-section data-genre="surgery">
     <span class="bar"></span>
     <h2>Surgery</h2>
     <span class="count">4 games</span>
@@ -25440,7 +25499,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="spinner" class="category gold" data-section data-genre="spinner">
     <span class="bar"></span>
     <h2>Spinner</h2>
     <span class="count">2 games</span>
@@ -25466,7 +25525,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="farming" class="category gold" data-section data-genre="farming">
     <span class="bar"></span>
     <h2>Farming</h2>
     <span class="count">7 games</span>
@@ -25537,7 +25596,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="gun" class="category gold" data-section data-genre="gun">
     <span class="bar"></span>
     <h2>Gun</h2>
     <span class="count">7 games</span>
@@ -25608,7 +25667,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="minecraft" class="category gold" data-section data-genre="minecraft">
     <span class="bar"></span>
     <h2>Minecraft</h2>
     <span class="count">4 games</span>
@@ -25652,7 +25711,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="jumping" class="category gold" data-section data-genre="jumping">
     <span class="bar"></span>
     <h2>Jumping</h2>
     <span class="count">8 games</span>
@@ -25732,7 +25791,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="baseball" class="category gold" data-section data-genre="baseball">
     <span class="bar"></span>
     <h2>Baseball</h2>
     <span class="count">4 games</span>
@@ -25776,7 +25835,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="ninja" class="category gold" data-section data-genre="ninja">
     <span class="bar"></span>
     <h2>Ninja</h2>
     <span class="count">3 games</span>
@@ -25811,7 +25870,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="multiplayer" class="category gold" data-section data-genre="multiplayer">
     <span class="bar"></span>
     <h2>Multiplayer</h2>
     <span class="count">2 games</span>
@@ -25837,7 +25896,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="bike" class="category gold" data-section data-genre="bike">
     <span class="bar"></span>
     <h2>Bike</h2>
     <span class="count">6 games</span>
@@ -25899,7 +25958,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="restaurant" class="category gold" data-section data-genre="restaurant">
     <span class="bar"></span>
     <h2>Restaurant</h2>
     <span class="count">1 game</span>
@@ -25916,7 +25975,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="games-for-girls" class="category gold" data-section data-genre="games-for-girls">
     <span class="bar"></span>
     <h2>Games-For-Girls</h2>
     <span class="count">16 games</span>
@@ -26068,7 +26127,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="mining" class="category gold" data-section data-genre="mining">
     <span class="bar"></span>
     <h2>Mining</h2>
     <span class="count">6 games</span>
@@ -26130,7 +26189,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="flash" class="category gold" data-section data-genre="flash">
     <span class="bar"></span>
     <h2>Flash</h2>
     <span class="count">1 game</span>
@@ -26147,7 +26206,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="baby" class="category gold" data-section data-genre="baby">
     <span class="bar"></span>
     <h2>Baby</h2>
     <span class="count">2 games</span>
@@ -26173,7 +26232,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="mermaid" class="category gold" data-section data-genre="mermaid">
     <span class="bar"></span>
     <h2>Mermaid</h2>
     <span class="count">1 game</span>
@@ -26190,7 +26249,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="classics" class="category gold" data-section data-genre="classics">
     <span class="bar"></span>
     <h2>Classics</h2>
     <span class="count">3 games</span>
@@ -26225,7 +26284,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="hair-salon" class="category gold" data-section data-genre="hair-salon">
     <span class="bar"></span>
     <h2>Hair-Salon</h2>
     <span class="count">3 games</span>
@@ -26260,7 +26319,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="management" class="category gold" data-section data-genre="management">
     <span class="bar"></span>
     <h2>Management</h2>
     <span class="count">8 games</span>
@@ -26340,7 +26399,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="pirates" class="category gold" data-section data-genre="pirates">
     <span class="bar"></span>
     <h2>Pirates</h2>
     <span class="count">4 games</span>
@@ -26384,7 +26443,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="word" class="category gold" data-section data-genre="word">
     <span class="bar"></span>
     <h2>Word</h2>
     <span class="count">1 game</span>
@@ -26401,7 +26460,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="wrestling" class="category gold" data-section data-genre="wrestling">
     <span class="bar"></span>
     <h2>Wrestling</h2>
     <span class="count">1 game</span>
@@ -26418,7 +26477,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="dragons" class="category gold" data-section data-genre="dragons">
     <span class="bar"></span>
     <h2>Dragons</h2>
     <span class="count">1 game</span>
@@ -26435,7 +26494,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="bejeweled" class="category gold" data-section data-genre="bejeweled">
     <span class="bar"></span>
     <h2>Bejeweled</h2>
     <span class="count">4 games</span>
@@ -26479,7 +26538,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="halloween" class="category gold" data-section data-genre="halloween">
     <span class="bar"></span>
     <h2>Halloween</h2>
     <span class="count">7 games</span>
@@ -26550,7 +26609,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="truck" class="category gold" data-section data-genre="truck">
     <span class="bar"></span>
     <h2>Truck</h2>
     <span class="count">5 games</span>
@@ -26603,7 +26662,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="tycoon" class="category gold" data-section data-genre="tycoon">
     <span class="bar"></span>
     <h2>Tycoon</h2>
     <span class="count">3 games</span>
@@ -26638,7 +26697,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="parking" class="category gold" data-section data-genre="parking">
     <span class="bar"></span>
     <h2>Parking</h2>
     <span class="count">5 games</span>
@@ -26691,7 +26750,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="battle-royale" class="category gold" data-section data-genre="battle-royale">
     <span class="bar"></span>
     <h2>Battle-Royale</h2>
     <span class="count">1 game</span>
@@ -26708,7 +26767,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="worm" class="category gold" data-section data-genre="worm">
     <span class="bar"></span>
     <h2>Worm</h2>
     <span class="count">1 game</span>
@@ -26725,7 +26784,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="offroad" class="category gold" data-section data-genre="offroad">
     <span class="bar"></span>
     <h2>Offroad</h2>
     <span class="count">2 games</span>
@@ -26751,7 +26810,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="ninja-turtle" class="category gold" data-section data-genre="ninja-turtle">
     <span class="bar"></span>
     <h2>Ninja-Turtle</h2>
     <span class="count">1 game</span>
@@ -26768,7 +26827,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="bubble-shooter" class="category gold" data-section data-genre="bubble-shooter">
     <span class="bar"></span>
     <h2>Bubble-Shooter</h2>
     <span class="count">2 games</span>
@@ -26794,7 +26853,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="sword" class="category gold" data-section data-genre="sword">
     <span class="bar"></span>
     <h2>Sword</h2>
     <span class="count">1 game</span>
@@ -26811,7 +26870,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="cooking" class="category gold" data-section data-genre="cooking">
     <span class="bar"></span>
     <h2>Cooking</h2>
     <span class="count">3 games</span>
@@ -26846,7 +26905,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="mario" class="category gold" data-section data-genre="mario">
     <span class="bar"></span>
     <h2>Mario</h2>
     <span class="count">1 game</span>
@@ -26863,7 +26922,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="rpg" class="category gold" data-section data-genre="rpg">
     <span class="bar"></span>
     <h2>Rpg</h2>
     <span class="count">1 game</span>
@@ -26880,7 +26939,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="naval" class="category gold" data-section data-genre="naval">
     <span class="bar"></span>
     <h2>Naval</h2>
     <span class="count">2 games</span>
@@ -26906,7 +26965,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="mahjong" class="category gold" data-section data-genre="mahjong">
     <span class="bar"></span>
     <h2>Mahjong</h2>
     <span class="count">3 games</span>
@@ -26941,7 +27000,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="sharks" class="category gold" data-section data-genre="sharks">
     <span class="bar"></span>
     <h2>Sharks</h2>
     <span class="count">1 game</span>
@@ -26958,7 +27017,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="princess" class="category gold" data-section data-genre="princess">
     <span class="bar"></span>
     <h2>Princess</h2>
     <span class="count">3 games</span>
@@ -26993,7 +27052,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="drifting" class="category gold" data-section data-genre="drifting">
     <span class="bar"></span>
     <h2>Drifting</h2>
     <span class="count">1 game</span>
@@ -27010,7 +27069,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="world-cup" class="category gold" data-section data-genre="world-cup">
     <span class="bar"></span>
     <h2>World-Cup</h2>
     <span class="count">1 game</span>
@@ -27027,7 +27086,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="pool" class="category gold" data-section data-genre="pool">
     <span class="bar"></span>
     <h2>Pool</h2>
     <span class="count">1 game</span>
@@ -27044,7 +27103,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="cricket" class="category gold" data-section data-genre="cricket">
     <span class="bar"></span>
     <h2>Cricket</h2>
     <span class="count">1 game</span>
@@ -27061,7 +27120,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="fire-and-water" class="category gold" data-section data-genre="fire-and-water">
     <span class="bar"></span>
     <h2>Fire-And-Water</h2>
     <span class="count">1 game</span>
@@ -27078,7 +27137,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="police" class="category gold" data-section data-genre="police">
     <span class="bar"></span>
     <h2>Police</h2>
     <span class="count">1 game</span>
@@ -27095,7 +27154,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="makeup" class="category gold" data-section data-genre="makeup">
     <span class="bar"></span>
     <h2>Makeup</h2>
     <span class="count">1 game</span>
@@ -27112,7 +27171,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="solitaire" class="category gold" data-section data-genre="solitaire">
     <span class="bar"></span>
     <h2>Solitaire</h2>
     <span class="count">1 game</span>
@@ -27129,7 +27188,7 @@
     </a>
   </div>
 
-  <div class="category gold" data-section>
+  <div id="anime" class="category gold" data-section data-genre="anime">
     <span class="bar"></span>
     <h2>Anime</h2>
     <span class="count">1 game</span>
@@ -27149,6 +27208,9 @@
   <p id="no-results" class="no-results" hidden>No games match "<span id="no-results-term"></span>". Try a different search.</p>
 
 </main>
+</div>
+</div>
+
 
 <footer class="site-footer">
   <span>© Pixelsprout — Play. Grow. Explore.</span>
@@ -27203,6 +27265,16 @@
     } else {
       noResults.hidden = true;
     }
+  });
+
+  // Sidebar genre links: highlight whichever one was clicked. The actual
+  // jump-to-section behavior is native browser anchor-link scrolling —
+  // no extra JS needed for that, since each section already has a matching id.
+  document.querySelectorAll('.sidebar-link').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
   });
 </script>
 

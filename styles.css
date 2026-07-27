@@ -52,6 +52,64 @@ a { color: inherit; }
 
 .pixel { font-family: 'Press Start 2P', 'IBM Plex Mono', monospace; }
 
+/* ---------- Sidebar layout ---------- */
+
+.layout {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  gap: 0;
+  align-items: flex-start;
+}
+
+.layout-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.sidebar {
+  width: 190px;
+  min-width: 190px;
+  position: sticky;
+  top: 12px;
+  padding: 16px 12px;
+  align-self: flex-start;
+}
+
+.sidebar-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  padding-left: 10px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 9px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+.sidebar-link:hover { background: var(--panel); color: var(--paper); }
+
+.sidebar-link.active {
+  background: var(--panel-2);
+  color: var(--teal);
+  font-weight: 600;
+}
+
 /* ---------- Header ---------- */
 
 .site-header {
@@ -150,6 +208,9 @@ a { color: inherit; }
   display: block;
   margin-bottom: 3px;
 }
+
+.hero-stats div { display: flex; flex-direction: column; }
+.hero-stats strong::after { content: ' '; }
 
 /* ---------- Marquee ticker ---------- */
 
@@ -478,9 +539,10 @@ button.action:hover { background: var(--sprout-lt); }
 /* ---------- Responsive breakpoints ---------- */
 
 @media (max-width: 900px) {
+  .sidebar { display: none; }
   .grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; }
-  .hero-inner { flex-direction: column-reverse; align-items: flex-start; }
-  .hero-logo { width: 120px; max-width: 45vw; }
+  .hero-inner { flex-direction: column; gap: 12px; }
+  .hero-logo { width: 90px; max-width: 30vw; align-self: flex-end; margin-top: -60px; }
 }
 
 @media (max-width: 480px) {
