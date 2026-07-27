@@ -26,8 +26,8 @@
       <h1>One tab.<br><span class="accent">Every game.</span></h1>
       <p>Pixelsprout is a free browser gaming library, built to hold every genre — arcade, puzzle, strategy, and whatever's next. No installs, no accounts, no App Store. Click and you're playing.</p>
       <div class="hero-stats">
-        <div><strong id="game-count">8</strong>games live</div>
-        <div><strong>3</strong>genres</div>
+        <div><strong id="game-count">9</strong>games live</div>
+        <div><strong>4</strong>genres</div>
         <div><strong>0</strong>installs required</div>
       </div>
     </div>
@@ -145,6 +145,23 @@
     </a>
   </div>
 
+  <div class="category gold" data-section>
+    <span class="bar"></span>
+    <h2>Simulation</h2>
+    <span class="count">1 game</span>
+  </div>
+  <div class="grid" data-grid>
+    <a class="card" href="games/bus-driver-simulator-3d.html" data-name="bus driver simulator 3d">
+      <span class="icon-tile gold" style="padding:0; overflow:hidden;">
+        <img src="https://img.gamepix.com/games/bus-driver-simulator-3d/icon/bus-driver-simulator-3d.png?w=105" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;">
+      </span>
+      <div class="card-body">
+        <h3>Bus Driver Simulator 3D</h3>
+        <p>Navigate cities and master the art of bus driving.</p>
+      </div>
+    </a>
+  </div>
+
   <p id="no-results" class="no-results" hidden>No games match "<span id="no-results-term"></span>". Try a different search.</p>
 
 </main>
@@ -155,7 +172,7 @@
 </footer>
 
 <script>
-  const names = ['2048','MEMORY MATCH','MINESWEEPER','SNAKE','FLAPPY HOP','STACKBLOCKS','TIC-TAC-TOE','RALLY'];
+  const names = ['2048','MEMORY MATCH','MINESWEEPER','SNAKE','FLAPPY HOP','STACKBLOCKS','TIC-TAC-TOE','RALLY','BUS DRIVER SIMULATOR 3D'];
   const track = document.getElementById('marquee-track');
   [...names, ...names].forEach(n => {
     const span = document.createElement('span');
