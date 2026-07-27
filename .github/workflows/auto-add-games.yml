@@ -1,0 +1,37 @@
+name: Auto-add new games
+
+# NOTE: this repo is private. GitHub's free plan gives private repos
+# 2,000 free Actions minutes/month. This job is tiny (checkout + python +
+# script, no build step) and typically finishes in under a minute, so running
+# it daily (~30 runs/month, ~30-60 minutes total) stays well within the free
+# allowance. If you ever add heavier steps here, re-check usage under
+# Settings -> Billing -> Actions minutes.
+
+on:
+  schedule:
+    # Runs every day at 6:00 AM UTC (~11:30 AM IST)
+    - cron: '0 6 * * *'
+  workflow_dispatch: {}  # lets you also trigger it manually from the GitHub Actions tab
+
+permissions:
+  contents: write  # allows the workflow to push commits back to this repo
+
+jobs:
+  add-games:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Configure git identity
+        run: |
+          git config --global user.name "Pixelsprout Auto-Bot"
+          git config --global user.email "actions@github.com"
+
+      - name: Run auto-add script
+        run: python auto-add-games.py
