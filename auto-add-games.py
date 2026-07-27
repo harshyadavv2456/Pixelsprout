@@ -40,6 +40,7 @@ GAME_PAGE_TEMPLATE = """<!DOCTYPE html>
 <title>{title} — Pixelsprout</title>
 <meta name="description" content="Play {title} free online, no download needed.">
 <link rel="stylesheet" href="../styles.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8466016918717424" crossorigin="anonymous"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 <style>
   .embed-frame-wrap {{
