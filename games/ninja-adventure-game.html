@@ -11,8 +11,8 @@
 <style>
   .embed-frame-wrap {
     width: 100%;
-    max-width: 480px;
-    aspect-ratio: 480 / 320;
+    max-width: 960px;
+    aspect-ratio: 16 / 10;
     border-radius: 8px;
     overflow: hidden;
     background: #000;
@@ -22,6 +22,9 @@
     height: 100%;
     border: 0;
     display: block;
+  }
+  .fullscreen-btn {
+    margin-top: 4px;
   }
   .source-note {
     margin-top: 4px;
@@ -41,6 +44,14 @@
     <div class="embed-frame-wrap">
       <iframe src="https://play.gamepix.com/ninja-adventure-game/embed?sid=P7924" scrolling="no" allowfullscreen title="Ninja Adventure Game"></iframe>
     </div>
+    <button class="action fullscreen-btn" onclick="
+      const f = document.querySelector('.embed-frame-wrap iframe');
+      const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
+      if (req) req.call(f);
+      if (screen.orientation && screen.orientation.lock) {
+        screen.orientation.lock('landscape').catch(() => {});
+      }
+    ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a thrilling journey in Ninja Adventure, where dexterity is key. Navigate intricate courses filled with surprises, collecting coins and honing your reflexes. Master the art of timing to overcome obstacles, unravel hidden rewards, and push through progressively challenging levels in this captivating ninja escapade.</p>
     <p class="source-note">Game provided via GamePix</p>
   </div>

@@ -11,8 +11,8 @@
 <style>
   .embed-frame-wrap {
     width: 100%;
-    max-width: 480px;
-    aspect-ratio: 480 / 320;
+    max-width: 960px;
+    aspect-ratio: 16 / 10;
     border-radius: 8px;
     overflow: hidden;
     background: #000;
@@ -22,6 +22,9 @@
     height: 100%;
     border: 0;
     display: block;
+  }
+  .fullscreen-btn {
+    margin-top: 4px;
   }
   .source-note {
     margin-top: 4px;
@@ -41,6 +44,14 @@
     <div class="embed-frame-wrap">
       <iframe src="https://play.gamepix.com/raven-3d-front-line/embed?sid=P7924" scrolling="no" allowfullscreen title="Raven 3D - Front Line"></iframe>
     </div>
+    <button class="action fullscreen-btn" onclick="
+      const f = document.querySelector('.embed-frame-wrap iframe');
+      const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
+      if (req) req.call(f);
+      if (screen.orientation && screen.orientation.lock) {
+        screen.orientation.lock('landscape').catch(() => {});
+      }
+    ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the action-packed chaos of Raven 3D - Front Line, where you lead your team to victory in thrilling, blocky battlegrounds. Select your arsenal and outsmart enemies in a relentless clash for territory. Experience the rush of strategic combat as you fight for supremacy.</p>
     <p class="source-note">Game provided via GamePix</p>
   </div>

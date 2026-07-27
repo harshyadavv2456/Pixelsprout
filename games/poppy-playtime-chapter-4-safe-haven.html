@@ -11,8 +11,8 @@
 <style>
   .embed-frame-wrap {
     width: 100%;
-    max-width: 480px;
-    aspect-ratio: 480 / 320;
+    max-width: 960px;
+    aspect-ratio: 16 / 10;
     border-radius: 8px;
     overflow: hidden;
     background: #000;
@@ -22,6 +22,9 @@
     height: 100%;
     border: 0;
     display: block;
+  }
+  .fullscreen-btn {
+    margin-top: 4px;
   }
   .source-note {
     margin-top: 4px;
@@ -41,6 +44,14 @@
     <div class="embed-frame-wrap">
       <iframe src="https://play.gamepix.com/poppy-playtime-chapter-4-safe-haven/embed?sid=P7924" scrolling="no" allowfullscreen title="Poppy Playtime Chapter 4 Safe Haven"></iframe>
     </div>
+    <button class="action fullscreen-btn" onclick="
+      const f = document.querySelector('.embed-frame-wrap iframe');
+      const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
+      if (req) req.call(f);
+      if (screen.orientation && screen.orientation.lock) {
+        screen.orientation.lock('landscape').catch(() => {});
+      }
+    ">⛶ Fullscreen</button>
     <p class="how-to">Enter the twisted depths of the Playtime Co. Factory, where sinister forces and cunning puzzles test your wits and bravery. Join Poppy and Doey as they battle eerie enemies and unravel dark secrets. With every choice a gamble, surviving this chilling odyssey is your ultimate challenge.</p>
     <p class="source-note">Game provided via GamePix</p>
   </div>

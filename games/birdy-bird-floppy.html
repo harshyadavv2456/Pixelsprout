@@ -11,8 +11,8 @@
 <style>
   .embed-frame-wrap {
     width: 100%;
-    max-width: 480px;
-    aspect-ratio: 480 / 320;
+    max-width: 960px;
+    aspect-ratio: 16 / 10;
     border-radius: 8px;
     overflow: hidden;
     background: #000;
@@ -22,6 +22,9 @@
     height: 100%;
     border: 0;
     display: block;
+  }
+  .fullscreen-btn {
+    margin-top: 4px;
   }
   .source-note {
     margin-top: 4px;
@@ -41,6 +44,14 @@
     <div class="embed-frame-wrap">
       <iframe src="https://play.gamepix.com/birdy-bird-floppy/embed?sid=P7924" scrolling="no" allowfullscreen title="Birdy Bird Floppy"></iframe>
     </div>
+    <button class="action fullscreen-btn" onclick="
+      const f = document.querySelector('.embed-frame-wrap iframe');
+      const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
+      if (req) req.call(f);
+      if (screen.orientation && screen.orientation.lock) {
+        screen.orientation.lock('landscape').catch(() => {});
+      }
+    ">⛶ Fullscreen</button>
     <p class="how-to">Guide your feathered friend through sky-high pipe obstacles in Birdy Bird Floppy. Test your timing and precision to master the art of flight. With its addictive rhythm and charming graphics, this challenging journey demands patience and practice. How many pipes can you conquer?</p>
     <p class="source-note">Game provided via GamePix</p>
   </div>

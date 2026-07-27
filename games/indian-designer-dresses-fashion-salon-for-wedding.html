@@ -11,8 +11,8 @@
 <style>
   .embed-frame-wrap {
     width: 100%;
-    max-width: 480px;
-    aspect-ratio: 480 / 320;
+    max-width: 960px;
+    aspect-ratio: 16 / 10;
     border-radius: 8px;
     overflow: hidden;
     background: #000;
@@ -22,6 +22,9 @@
     height: 100%;
     border: 0;
     display: block;
+  }
+  .fullscreen-btn {
+    margin-top: 4px;
   }
   .source-note {
     margin-top: 4px;
@@ -41,6 +44,14 @@
     <div class="embed-frame-wrap">
       <iframe src="https://play.gamepix.com/indian-designer-dresses-fashion-salon-for-wedding/embed?sid=P7924" scrolling="no" allowfullscreen title="Indian Designer Dresses Fashion Salon for Wedding"></iframe>
     </div>
+    <button class="action fullscreen-btn" onclick="
+      const f = document.querySelector('.embed-frame-wrap iframe');
+      const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
+      if (req) req.call(f);
+      if (screen.orientation && screen.orientation.lock) {
+        screen.orientation.lock('landscape').catch(() => {});
+      }
+    ">⛶ Fullscreen</button>
     <p class="how-to">Immerse yourself in the vibrant world of Indian weddings with the ultimate dress-up experience. Mix and match exquisite ethnic outfits, stunning hairstyles, and glamorous makeup to create dazzling bridal looks. Let creativity flow as you transform each bride into a show-stopping vision for her big day.</p>
     <p class="source-note">Game provided via GamePix</p>
   </div>

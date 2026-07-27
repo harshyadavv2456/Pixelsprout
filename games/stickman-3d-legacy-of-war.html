@@ -11,8 +11,8 @@
 <style>
   .embed-frame-wrap {
     width: 100%;
-    max-width: 480px;
-    aspect-ratio: 480 / 320;
+    max-width: 960px;
+    aspect-ratio: 16 / 10;
     border-radius: 8px;
     overflow: hidden;
     background: #000;
@@ -22,6 +22,9 @@
     height: 100%;
     border: 0;
     display: block;
+  }
+  .fullscreen-btn {
+    margin-top: 4px;
   }
   .source-note {
     margin-top: 4px;
@@ -41,6 +44,14 @@
     <div class="embed-frame-wrap">
       <iframe src="https://play.gamepix.com/stickman-legacy-of-war-3d/embed?sid=P7924" scrolling="no" allowfullscreen title="Stickman 3D Legacy of War"></iframe>
     </div>
+    <button class="action fullscreen-btn" onclick="
+      const f = document.querySelector('.embed-frame-wrap iframe');
+      const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
+      if (req) req.call(f);
+      if (screen.orientation && screen.orientation.lock) {
+        screen.orientation.lock('landscape').catch(() => {});
+      }
+    ">⛶ Fullscreen</button>
     <p class="how-to">Lead your stickman army to victory in a dynamic, strategy-driven battleground. Engage in thrilling campaigns with intuitive controls, leveraging immersive 3D graphics. Strategize wisely, manage resources, and adapt to varied maps to outsmart powerful enemies. Diversity and clever unit upgrades will secure your legacy in war.</p>
     <p class="source-note">Game provided via GamePix</p>
   </div>

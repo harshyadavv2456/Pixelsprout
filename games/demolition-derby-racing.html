@@ -11,8 +11,8 @@
 <style>
   .embed-frame-wrap {
     width: 100%;
-    max-width: 480px;
-    aspect-ratio: 480 / 320;
+    max-width: 960px;
+    aspect-ratio: 16 / 10;
     border-radius: 8px;
     overflow: hidden;
     background: #000;
@@ -22,6 +22,9 @@
     height: 100%;
     border: 0;
     display: block;
+  }
+  .fullscreen-btn {
+    margin-top: 4px;
   }
   .source-note {
     margin-top: 4px;
@@ -41,6 +44,14 @@
     <div class="embed-frame-wrap">
       <iframe src="https://play.gamepix.com/demolition-derby-racing/embed?sid=P7924" scrolling="no" allowfullscreen title="Demolition Derby Racing"></iframe>
     </div>
+    <button class="action fullscreen-btn" onclick="
+      const f = document.querySelector('.embed-frame-wrap iframe');
+      const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
+      if (req) req.call(f);
+      if (screen.orientation && screen.orientation.lock) {
+        screen.orientation.lock('landscape').catch(() => {});
+      }
+    ">⛶ Fullscreen</button>
     <p class="how-to">Enter a chaotic world of metal-crunching mayhem in Demolition Derby Racing. Experience high-speed vehicular combat where strategic upgrades and cunning maneuvers determine your survival against fierce competitors. Customize your vehicle, navigate treacherous arenas, and embrace the thrill of destruction as you battle to emerge victorious in this exhilarating multiplayer showdown.</p>
     <p class="source-note">Game provided via GamePix</p>
   </div>

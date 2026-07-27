@@ -11,8 +11,8 @@
 <style>
   .embed-frame-wrap {
     width: 100%;
-    max-width: 480px;
-    aspect-ratio: 480 / 320;
+    max-width: 960px;
+    aspect-ratio: 16 / 10;
     border-radius: 8px;
     overflow: hidden;
     background: #000;
@@ -22,6 +22,9 @@
     height: 100%;
     border: 0;
     display: block;
+  }
+  .fullscreen-btn {
+    margin-top: 4px;
   }
   .source-note {
     margin-top: 4px;
@@ -41,6 +44,14 @@
     <div class="embed-frame-wrap">
       <iframe src="https://play.gamepix.com/truck-simulator-arcade-championship/embed?sid=P7924" scrolling="no" allowfullscreen title="Truck Simulator Arcade Championship"></iframe>
     </div>
+    <button class="action fullscreen-btn" onclick="
+      const f = document.querySelector('.embed-frame-wrap iframe');
+      const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
+      if (req) req.call(f);
+      if (screen.orientation && screen.orientation.lock) {
+        screen.orientation.lock('landscape').catch(() => {});
+      }
+    ">⛶ Fullscreen</button>
     <p class="how-to">Jump into the fast lane with Truck Simulator Arcade Championship! Feel the thrill of high-speed racing as you maneuver powerful trucks through dynamic environments. Master sharp turns, outmaneuver rivals, and dodge obstacles in action-packed races. Can you balance speed with precision and dominate the ultimate truck racing competition?</p>
     <p class="source-note">Game provided via GamePix</p>
   </div>

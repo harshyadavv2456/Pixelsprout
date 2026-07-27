@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="preconnect" href="https://img.gamepix.com">
+<link rel="dns-prefetch" href="https://img.gamepix.com">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pixelsprout — Play. Grow. Explore.</title>
@@ -13,7 +15,8 @@
 <body>
 
 <header class="site-header">
-  <a class="logo" href="/">
+  <button id="sidebar-toggle" class="sidebar-toggle" aria-label="Toggle genre menu">☰</button>
+    <a class="logo" href="/">
     <img class="logo-mark" src="assets/logo-icon.png" alt="Pixelsprout">
     <span class="logo-word">PIXEL<span class="sprout-part">SPROUT</span></span>
   </a>
@@ -74,38 +77,14 @@
   <span class="count">Featured</span>
 </div>
 <div class="grid" data-grid>
-  <a class="card" href="games/subway-princess-run.html" data-name="subway princess run">
-    <span class="icon-tile gold"><svg viewBox="0 0 24 24" fill="none"><path d="M4 17V9a2 2 0 012-2h12a2 2 0 012 2v8M4 17l-1 3h18l-1-3M4 17h16" stroke="currentColor" stroke-width="1.8"/><circle cx="8" cy="17" r="1.4" fill="currentColor"/><circle cx="16" cy="17" r="1.4" fill="currentColor"/></svg></span>
-    <div class="card-body"><h3>Subway Princess Run</h3></div>
-  </a>
-  <a class="card" href="games/worms-zone.html" data-name="worms zone">
-    <span class="icon-tile teal"><svg viewBox="0 0 24 24" fill="none"><path d="M4 8h9a4 4 0 010 8H8a3 3 0 010-6h6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
-    <div class="card-body"><h3>Worms Zone</h3></div>
-  </a>
-  <a class="card" href="games/uno-online.html" data-name="uno online">
-    <span class="icon-tile signal"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="9" height="14" rx="2" fill="currentColor" opacity="0.55" transform="rotate(-8 8.5 10)"/><rect x="11" y="3" width="9" height="14" rx="2" fill="currentColor" transform="rotate(8 15.5 10)"/></svg></span>
-    <div class="card-body"><h3>Uno Online</h3></div>
-  </a>
-  <a class="card" href="games/baba-is-you.html" data-name="baba is you">
-    <span class="icon-tile gold"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="8" height="8" fill="currentColor"/><rect x="13" y="13" width="8" height="8" fill="currentColor" opacity="0.6"/></svg></span>
-    <div class="card-body"><h3>Baba Is You</h3></div>
-  </a>
-  <a class="card" href="games/getting-over-it.html" data-name="getting over it">
-    <span class="icon-tile teal"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="6" fill="currentColor"/></svg></span>
-    <div class="card-body"><h3>Getting Over It</h3></div>
-  </a>
-  <a class="card" href="games/suika-world.html" data-name="suika world">
-    <span class="icon-tile signal"><svg viewBox="0 0 24 24" fill="none"><circle cx="8" cy="14" r="5" fill="currentColor" opacity="0.6"/><circle cx="15" cy="10" r="6" fill="currentColor"/></svg></span>
-    <div class="card-body"><h3>Suika World</h3></div>
-  </a>
-  <a class="card" href="games/tank-1990.html" data-name="tank 1990">
-    <span class="icon-tile gold"><svg viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="6" rx="1" fill="currentColor"/><rect x="10" y="5" width="4" height="7" fill="currentColor"/></svg></span>
-    <div class="card-body"><h3>Tank 1990</h3></div>
-  </a>
-  <a class="card" href="games/ultimate-solitaire-classic.html" data-name="ultimate solitaire classic">
-    <span class="icon-tile teal"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="9" height="14" rx="2" fill="currentColor" opacity="0.55" transform="rotate(-8 8.5 10)"/><rect x="11" y="3" width="9" height="14" rx="2" fill="currentColor" transform="rotate(8 15.5 10)"/></svg></span>
-    <div class="card-body"><h3>Ultimate Solitaire Classic</h3></div>
-  </a>
+    <a class="card popular-slot" href="games/subway-princess-run.html" data-clone-from="games/subway-princess-run.html"></a>
+    <a class="card popular-slot" href="games/worms-zone.html" data-clone-from="games/worms-zone.html"></a>
+    <a class="card popular-slot" href="games/uno-online.html" data-clone-from="games/uno-online.html"></a>
+    <a class="card popular-slot" href="games/baba-is-you.html" data-clone-from="games/baba-is-you.html"></a>
+    <a class="card popular-slot" href="games/getting-over-it.html" data-clone-from="games/getting-over-it.html"></a>
+    <a class="card popular-slot" href="games/suika-world.html" data-clone-from="games/suika-world.html"></a>
+    <a class="card popular-slot" href="games/tank-1990.html" data-clone-from="games/tank-1990.html"></a>
+    <a class="card popular-slot" href="games/ultimate-solitaire-classic.html" data-clone-from="games/ultimate-solitaire-classic.html"></a>
 </div>
 
 <div id="puzzle" class="category gold" data-section data-genre="puzzle">
@@ -27275,6 +27254,37 @@
       document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
       link.classList.add('active');
     });
+  });
+
+  // Sidebar: click the hamburger to open/close it as a slide-in drawer.
+  const sidebarToggle = document.getElementById('sidebar-toggle');
+  const sidebarEl = document.getElementById('sidebar');
+  if (sidebarToggle && sidebarEl) {
+    sidebarToggle.addEventListener('click', () => {
+      sidebarEl.classList.toggle('open');
+    });
+    document.addEventListener('click', (e) => {
+      if (!sidebarEl.contains(e.target) && !sidebarToggle.contains(e.target)) {
+        sidebarEl.classList.remove('open');
+      }
+    });
+    // Close it after picking a genre, since the click already navigated.
+    document.querySelectorAll('.sidebar-link').forEach(link => {
+      link.addEventListener('click', () => sidebarEl.classList.remove('open'));
+    });
+  }
+
+  // Popular Picks: clone the REAL card (with its real photo) for each
+  // featured game from wherever it actually lives on the page, instead of
+  // showing a fake placeholder icon.
+  document.querySelectorAll('.popular-slot').forEach(slot => {
+    const targetHref = slot.dataset.cloneFrom;
+    const realCard = Array.from(document.querySelectorAll('.card:not(.popular-slot)'))
+      .find(c => c.getAttribute('href') === targetHref);
+    if (realCard) {
+      slot.innerHTML = realCard.innerHTML;
+      slot.dataset.name = realCard.dataset.name;
+    }
   });
 </script>
 
