@@ -284,12 +284,9 @@ a { color: inherit; }
   flex-wrap: wrap;
   position: sticky;
   top: 0;
-  background: rgba(11, 14, 26, 0.82);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
+  background: transparent;
   z-index: 20;
-  padding: 12px 4px;
+  padding: 12px 0;
 }
 
 .search-box {

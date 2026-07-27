@@ -42,10 +42,11 @@
 
   <div class="game-board-frame">
     <div class="embed-frame-wrap">
-      <iframe src="https://play.gamepix.com/star-battles/embed?sid=P7924" scrolling="no" allowfullscreen title="Star Battles"></iframe>
+      <iframe src="https://play.gamepix.com/star-battles/embed?sid=P7924" allow="fullscreen; autoplay; screen-orientation;" scrolling="no" allowfullscreen title="Star Battles"></iframe>
     </div>
     <button class="action fullscreen-btn" onclick="
-      const f = document.querySelector('.embed-frame-wrap iframe');
+      
+      const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
       if (screen.orientation && screen.orientation.lock) {

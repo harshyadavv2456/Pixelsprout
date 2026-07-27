@@ -45,10 +45,6 @@
   <div class="wrap hero-inner">
     <div class="hero-text">
       <h1>One tab.<br><span class="accent">Every game.</span></h1>
-      <p>Pixelsprout is a free browser gaming library with thousands of titles across every genre — puzzle, arcade, strategy, simulation, and more. No downloads, no sign-ups. Pick a genre from the menu, or search for something specific, and you're playing in seconds.</p>
-      <div class="hero-stats">
-        <div><strong id="game-count">2897</strong>games live</div>
-      </div>
     </div>
     <img class="hero-logo" src="assets/logo-full.png" alt="Pixelsprout">
   </div>
@@ -65,15 +61,16 @@
       <svg class="search-icon" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M20 20L16.5 16.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       <input type="text" id="search" placeholder="Search games..." autocomplete="off">
     </div>
-    <span id="result-count" class="result-count">2897 games</span>
+    <span id="result-count" class="result-count">2889 games</span>
   </div>
 
+<!-- POPULAR_PICKS_START -->
   <div id="popular-picks" class="category gold" data-section>
     <span class="bar"></span>
     <h2>Popular Picks</h2>
     <span class="count">Featured</span>
   </div>
-  <div class="grid" data-grid>
+  <div id="popular-picks-grid" class="grid" data-grid>
     <a class="card popular-slot" href="games/subway-princess-run.html" data-clone-from="games/subway-princess-run.html"></a>
     <a class="card popular-slot" href="games/worms-zone.html" data-clone-from="games/worms-zone.html"></a>
     <a class="card popular-slot" href="games/uno-online.html" data-clone-from="games/uno-online.html"></a>
@@ -83,22 +80,7 @@
     <a class="card popular-slot" href="games/tank-1990.html" data-clone-from="games/tank-1990.html"></a>
     <a class="card popular-slot" href="games/ultimate-solitaire-classic.html" data-clone-from="games/ultimate-solitaire-classic.html"></a>
   </div>
-
-<div id="popular-picks" class="category gold" data-section data-genre="popular-picks">
-    <span class="bar"></span>
-    <h2>Popular Picks</h2>
-  <span class="count">Featured</span>
-</div>
-<div class="grid" data-grid>
-    <a class="card popular-slot" href="games/subway-princess-run.html" data-clone-from="games/subway-princess-run.html"></a>
-    <a class="card popular-slot" href="games/worms-zone.html" data-clone-from="games/worms-zone.html"></a>
-    <a class="card popular-slot" href="games/uno-online.html" data-clone-from="games/uno-online.html"></a>
-    <a class="card popular-slot" href="games/baba-is-you.html" data-clone-from="games/baba-is-you.html"></a>
-    <a class="card popular-slot" href="games/getting-over-it.html" data-clone-from="games/getting-over-it.html"></a>
-    <a class="card popular-slot" href="games/suika-world.html" data-clone-from="games/suika-world.html"></a>
-    <a class="card popular-slot" href="games/tank-1990.html" data-clone-from="games/tank-1990.html"></a>
-    <a class="card popular-slot" href="games/ultimate-solitaire-classic.html" data-clone-from="games/ultimate-solitaire-classic.html"></a>
-</div>
+<!-- POPULAR_PICKS_END -->
 
 <div id="puzzle" class="category gold" data-section data-genre="puzzle">
     <span class="bar"></span>
@@ -27198,6 +27180,7 @@
   </div>
 
   
+  
   <p id="no-results" class="no-results" hidden>No games match "<span id="no-results-term"></span>". Try a different search.</p>
 
 </main>
@@ -27209,18 +27192,26 @@
 
 <script>
   const cards = Array.from(document.querySelectorAll('.card:not(.popular-slot)'));
-  const sections = Array.from(document.querySelectorAll('[data-section]'));
-  const grids = Array.from(document.querySelectorAll('[data-grid]'));
+  const sections = Array.from(document.querySelectorAll('[data-section]')).filter(s => s.id !== 'popular-picks');
+  const grids = Array.from(document.querySelectorAll('[data-grid]')).filter(g => g.id !== 'popular-picks-grid');
   const resultCount = document.getElementById('result-count');
   const noResults = document.getElementById('no-results');
   const noResultsTerm = document.getElementById('no-results-term');
   const searchInput = document.getElementById('search');
+  const popularSection = document.getElementById('popular-picks');
+  const popularGrid = document.getElementById('popular-picks-grid');
 
   resultCount.textContent = cards.length + ' games';
 
   searchInput.addEventListener('input', () => {
     const q = searchInput.value.trim().toLowerCase();
     let visible = 0;
+
+    if (popularSection && popularGrid) {
+      popularSection.style.display = q ? 'none' : '';
+      popularGrid.style.display = q ? 'none' : '';
+    }
+
     cards.forEach(card => {
       const match = card.dataset.name && card.dataset.name.includes(q);
       card.style.display = match ? '' : 'none';
