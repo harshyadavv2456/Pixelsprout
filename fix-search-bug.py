@@ -47,7 +47,7 @@ def main():
         print("ERROR: couldn't locate the marquee names array to replace. Aborting without changes.")
         sys.exit(1)
 
-    html = pattern.sub(fixed_names_line, html, count=1)
+    html = pattern.sub(lambda m: fixed_names_line, html, count=1)
 
     # Make the search result counter correct from page load, not just after typing.
     if "resultCount.textContent = cards.length" not in html:
