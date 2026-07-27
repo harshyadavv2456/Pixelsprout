@@ -21,7 +21,6 @@
   --blue: #4FC3F7;
   --border: #263156;
 
-  /* legacy aliases so existing game pages keep working without edits */
   --soil: var(--ink);
   --soil-2: var(--panel);
   --sprout: var(--teal);
@@ -49,7 +48,7 @@ body {
 }
 
 a { color: inherit; }
-.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+.wrap { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
 
 .pixel { font-family: 'Press Start 2P', 'IBM Plex Mono', monospace; }
 
@@ -59,69 +58,69 @@ a { color: inherit; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 24px;
-  max-width: 1120px;
+  padding: 16px 20px;
+  max-width: 1280px;
   margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   text-decoration: none;
   color: var(--paper);
 }
 
 .logo-mark {
-  width: 46px;
-  height: 46px;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
   image-rendering: pixelated;
 }
 
 .logo-word {
   font-family: 'Press Start 2P', monospace;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1;
-  letter-spacing: 0.01em;
 }
 
 .logo-word .sprout-part { color: var(--teal); }
 
 .tagline {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 11px;
+  font-size: 10px;
   color: var(--blue);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 /* ---------- Hero ---------- */
 
-.hero { padding: 30px 24px 0; }
+.hero { padding: 20px 20px 0; }
 
 .hero-inner {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 32px;
   flex-wrap: wrap;
 }
 
-.hero-text { flex: 1; min-width: 280px; }
+.hero-text { flex: 1; min-width: 260px; }
 
 .hero-logo {
-  width: 220px;
-  max-width: 40vw;
+  width: 160px;
+  max-width: 35vw;
   image-rendering: pixelated;
 }
 
 .hero h1 {
   font-family: 'Press Start 2P', monospace;
   font-weight: 400;
-  font-size: clamp(18px, 3.4vw, 30px);
-  line-height: 1.6;
-  letter-spacing: 0;
-  margin: 0 0 18px;
+  font-size: clamp(15px, 3vw, 24px);
+  line-height: 1.7;
+  margin: 0 0 14px;
   max-width: 620px;
 }
 
@@ -130,26 +129,26 @@ a { color: inherit; }
 .hero p {
   max-width: 540px;
   color: var(--muted);
-  font-size: 16px;
-  margin: 0 0 22px;
+  font-size: 15px;
+  margin: 0 0 18px;
 }
 
 .hero-stats {
   display: flex;
-  gap: 30px;
+  gap: 24px;
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
+  font-size: 11px;
   color: var(--muted);
   flex-wrap: wrap;
-  margin-bottom: 26px;
+  margin-bottom: 18px;
 }
 
 .hero-stats strong {
   color: var(--paper);
   font-family: 'Press Start 2P', monospace;
-  font-size: 16px;
+  font-size: 14px;
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 /* ---------- Marquee ticker ---------- */
@@ -161,29 +160,29 @@ a { color: inherit; }
   overflow: hidden;
   white-space: nowrap;
   margin-bottom: 8px;
-  margin-top: 20px;
+  margin-top: 16px;
 }
 
 .marquee-track {
   display: inline-flex;
-  animation: scroll-marquee 28s linear infinite;
-  padding: 12px 0;
+  animation: scroll-marquee 40s linear infinite;
+  padding: 10px 0;
 }
 
 .marquee-track span {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 13px;
-  letter-spacing: 0.06em;
+  font-size: 12px;
+  letter-spacing: 0.05em;
   color: var(--gold);
-  padding: 0 28px;
+  padding: 0 22px;
   text-transform: uppercase;
 }
 
 .marquee-track span::after {
   content: '★';
   color: var(--muted);
-  margin-left: 28px;
-  font-size: 10px;
+  margin-left: 22px;
+  font-size: 9px;
 }
 
 @keyframes scroll-marquee {
@@ -197,25 +196,30 @@ a { color: inherit; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-  margin-top: 36px;
+  gap: 14px;
+  margin-top: 24px;
   flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  background: var(--ink);
+  z-index: 10;
+  padding: 10px 0;
 }
 
 .search-box {
   position: relative;
   flex: 1;
-  min-width: 220px;
+  min-width: 200px;
   max-width: 420px;
 }
 
 .search-icon {
   position: absolute;
-  left: 14px;
+  left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
   color: var(--muted);
   pointer-events: none;
 }
@@ -225,7 +229,7 @@ a { color: inherit; }
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 11px 14px 11px 38px;
+  padding: 10px 12px 10px 36px;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   color: var(--paper);
@@ -253,15 +257,15 @@ a { color: inherit; }
 /* ---------- Genre sections ---------- */
 
 .category {
-  margin: 48px 0 18px;
+  margin: 32px 0 14px;
   display: flex;
   align-items: baseline;
-  gap: 12px;
+  gap: 10px;
 }
 
 .category .bar {
   width: 4px;
-  height: 20px;
+  height: 18px;
   border-radius: 2px;
   background: var(--gold);
 }
@@ -272,88 +276,106 @@ a { color: inherit; }
 .category h2 {
   font-family: 'Press Start 2P', monospace;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 13px;
   margin: 0;
   color: var(--paper);
 }
 
 .category .count {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
+  font-size: 11px;
   color: var(--muted);
 }
 
-/* ---------- Game cards ---------- */
+/* ---------- Game cards — thumbnail-forward grid ---------- */
+/* This is a CSS-only redesign: it re-skins every existing card (all ~2,889
+   of them) into a big-thumbnail, image-led tile without needing to touch
+   the underlying HTML of a single one. */
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: 16px;
-  margin-bottom: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .card {
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 10px;
-  padding: 18px;
+  overflow: hidden;
   text-decoration: none;
   color: var(--paper);
   display: flex;
-  align-items: center;
-  gap: 14px;
-  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  flex-direction: column;
+  transition: transform 0.15s ease, border-color 0.15s ease;
 }
 
 .card:hover, .card:focus-visible {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   border-color: var(--teal);
-  background: var(--panel-2);
   outline: none;
 }
 
 .card:focus-visible { box-shadow: 0 0 0 2px var(--teal); }
 
+/* The old "icon-tile" is repurposed as the full-width thumbnail area */
 .icon-tile {
-  width: 46px;
-  height: 46px;
-  min-width: 46px;
-  border-radius: 9px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--ink);
+  overflow: hidden;
 }
 
-.icon-tile svg { width: 24px; height: 24px; }
+.icon-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 !important;
+  display: block;
+}
+
+.icon-tile svg { width: 46px; height: 46px; }
 
 .icon-tile.gold { background: var(--gold); }
 .icon-tile.teal { background: var(--teal); }
 .icon-tile.signal { background: var(--signal); color: var(--paper); }
 
-.card-body h3 {
-  margin: 0 0 4px;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.4;
+.card-body {
+  padding: 8px 9px 10px;
 }
 
-.card-body p {
+.card-body h3 {
   margin: 0;
+  font-family: 'Inter', sans-serif;
   font-size: 12.5px;
-  color: var(--muted);
-  line-height: 1.4;
+  font-weight: 600;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Descriptions stay in the HTML (useful for search/SEO) but are hidden
+   visually now, matching the dense visual-grid style of portals like
+   Poki/CrazyGames rather than a text-heavy list. */
+.card-body p {
+  display: none;
 }
 
 /* ---------- Footer ---------- */
 
 .site-footer {
-  max-width: 1120px;
-  margin: 64px auto 30px;
-  padding: 24px;
+  max-width: 1280px;
+  margin: 48px auto 24px;
+  padding: 20px;
   border-top: 1px solid var(--border);
-  font-size: 13px;
+  font-size: 12px;
   color: var(--muted);
   display: flex;
   justify-content: space-between;
@@ -369,7 +391,7 @@ a { color: inherit; }
 .game-shell {
   max-width: 640px;
   margin: 0 auto;
-  padding: 28px 20px 60px;
+  padding: 24px 16px 50px;
 }
 
 .back-link {
@@ -380,7 +402,7 @@ a { color: inherit; }
   font-size: 13px;
   color: var(--teal);
   text-decoration: none;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .back-link:hover { color: var(--gold); }
@@ -388,34 +410,34 @@ a { color: inherit; }
 .game-title {
   font-family: 'Press Start 2P', monospace;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
-  margin: 0 0 10px;
+  margin: 0 0 8px;
 }
 
 .game-meta {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
+  font-size: 11px;
   color: var(--muted);
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 
 .game-board-frame {
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 20px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 
 .hud {
   display: flex;
-  gap: 20px;
+  gap: 18px;
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 13px;
+  font-size: 12px;
   color: var(--paper);
   align-items: center;
   flex-wrap: wrap;
@@ -426,14 +448,14 @@ a { color: inherit; }
 
 button.action {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   background: var(--teal);
   color: var(--ink);
   border: none;
   border-radius: 6px;
-  padding: 9px 16px;
+  padding: 8px 14px;
   cursor: pointer;
   transition: background 0.15s ease;
   font-weight: 500;
@@ -442,9 +464,32 @@ button.action {
 button.action:hover { background: var(--sprout-lt); }
 
 .how-to {
-  margin-top: 18px;
-  font-size: 13px;
+  margin-top: 14px;
+  font-size: 12px;
   color: var(--muted);
   text-align: center;
   max-width: 420px;
+}
+
+/* ---------- Responsive breakpoints ---------- */
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; }
+  .hero-inner { flex-direction: column-reverse; align-items: flex-start; }
+  .hero-logo { width: 120px; max-width: 45vw; }
+}
+
+@media (max-width: 480px) {
+  .site-header { padding: 12px 14px; }
+  .logo-word { font-size: 10px; }
+  .tagline { display: none; }
+  .hero { padding: 14px 14px 0; }
+  .hero h1 { font-size: clamp(13px, 4.2vw, 18px); line-height: 1.8; }
+  .hero p { font-size: 13px; }
+  .hero-stats { gap: 16px; }
+  .grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 7px; }
+  .card-body { padding: 6px 7px 8px; }
+  .card-body h3 { font-size: 11.5px; }
+  .category h2 { font-size: 11px; }
+  .search-row { top: 0; }
 }
