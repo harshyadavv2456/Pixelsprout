@@ -79,6 +79,16 @@ GAME_PAGE_TEMPLATE = """<!DOCTYPE html>
   <h1 class="game-title">{title}</h1>
   <div class="game-meta">{category}</div>
 
+  <div class="ad-slot ad-slot-banner">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-8466016918717424"
+         data-ad-slot="REPLACE_WITH_BANNER_SLOT_ID"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
+  </div>
+
   <div class="game-board-frame">
     <div class="embed-frame-wrap">
       <iframe src="{embed_url}" allow="fullscreen; autoplay; screen-orientation;" scrolling="no" allowfullscreen title="{title}"></iframe>
@@ -90,6 +100,16 @@ GAME_PAGE_TEMPLATE = """<!DOCTYPE html>
       {orientation_lock_js}
     ">⛶ Fullscreen</button>
     <p class="how-to">{description}</p>
+
+    <div class="ad-slot ad-slot-ribbon">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-8466016918717424"
+           data-ad-slot="REPLACE_WITH_RIBBON_SLOT_ID"
+           data-ad-format="horizontal"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
+    </div>
 
     <div class="similar-games">
       <h3 class="similar-games-title">You might also like</h3>

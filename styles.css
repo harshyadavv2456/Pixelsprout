@@ -132,6 +132,22 @@ a { color: inherit; }
   font-weight: 600;
 }
 
+/* ---------- Ad slots on game pages (banner above, ribbon below) ---------- */
+
+.ad-slot {
+  width: 100%;
+  max-width: 480px;
+  margin: 4px 0 8px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ad-slot-banner { margin-top: 8px; }
+.ad-slot-ribbon { margin-top: 4px; }
+
 /* ---------- Similar games recommendations (per game page) ---------- */
 
 .similar-games {
