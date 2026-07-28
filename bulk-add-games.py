@@ -49,7 +49,6 @@ GAME_PAGE_TEMPLATE = """<!DOCTYPE html>
 <title>{title} — Pixelsprout</title>
 <meta name="description" content="Play {title} free online, no download needed.">
 <link rel="stylesheet" href="../styles.css">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8466016918717424" crossorigin="anonymous"></script>
 <script defer src="/_vercel/insights/script.js"></script>
 <style>
   .embed-frame-wrap {{
@@ -84,7 +83,7 @@ GAME_PAGE_TEMPLATE = """<!DOCTYPE html>
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-8466016918717424"
-         data-ad-slot="REPLACE_WITH_BANNER_SLOT_ID"
+         data-ad-slot="4936643192"
          data-ad-format="auto"
          data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
@@ -106,8 +105,8 @@ GAME_PAGE_TEMPLATE = """<!DOCTYPE html>
       <ins class="adsbygoogle"
            style="display:block"
            data-ad-client="ca-pub-8466016918717424"
-           data-ad-slot="REPLACE_WITH_RIBBON_SLOT_ID"
-           data-ad-format="horizontal"
+           data-ad-slot="1457517471"
+           data-ad-format="auto"
            data-full-width-responsive="true"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
     </div>
