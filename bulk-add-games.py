@@ -23,6 +23,11 @@ import re
 import subprocess
 import sys
 import urllib.request
+from datetime import datetime, timezone
+from xml.sax.saxutils import escape
+
+RSS_FILE = "rss.xml"
+RSS_MAX_ITEMS = 60
 
 # ---- CONFIG ----
 FEED_URL = "https://feeds.gamepix.com/v2/json?sid=P7924&pagination=48&page=1"
@@ -362,6 +367,47 @@ def add_to_sitemap(game):
         f.write(sitemap)
 
 
+def add_to_rss(game):
+    try:
+        with open(RSS_FILE, encoding='utf-8') as f:
+            rss = f.read()
+    except FileNotFoundError:
+        return
+
+    now = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S GMT")
+    title = escape(game["title"])
+    link = f"{DOMAIN}/games/{game['slug']}.html"
+    description = escape(f"Play {game['title']} free online at Pixelsprout — no download needed.")
+    thumbnail = game.get("thumbnail", "")
+    enclosure = f'<enclosure url="{escape(thumbnail)}" type="image/jpeg"/>' if thumbnail else ""
+
+    new_item = f"""  <item>
+    <title>{title}</title>
+    <link>{link}</link>
+    <guid>{link}</guid>
+    <description>{description}</description>
+    <pubDate>{now}</pubDate>
+    {enclosure}
+  </item>
+"""
+    first_item_idx = rss.find("  <item>")
+    if first_item_idx == -1:
+        rss = rss.replace("</channel>", new_item + "</channel>")
+    else:
+        rss = rss[:first_item_idx] + new_item + rss[first_item_idx:]
+
+    items = re.findall(r"  <item>.*?</item>\n", rss, re.DOTALL)
+    if len(items) > RSS_MAX_ITEMS:
+        header_end = rss.find("  <item>")
+        header = rss[:header_end]
+        footer = "</channel>\n</rss>\n"
+        trimmed_items = "".join(items[:RSS_MAX_ITEMS])
+        rss = header + trimmed_items + footer
+
+    with open(RSS_FILE, "w", encoding='utf-8') as f:
+        f.write(rss)
+
+
 def git_commit_and_push(added_titles):
     if not added_titles:
         print("No new games added — nothing to commit.")
@@ -397,6 +443,7 @@ def main():
         build_game_page(game)
         add_card_to_index(game)
         add_to_sitemap(game)
+        add_to_rss(game)
         tracking["added_ids"].append(game["id"])
         added_titles.append(game["title"])
         print(f"Added: {game['title']} ({game['category']})")
