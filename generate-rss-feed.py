@@ -41,9 +41,8 @@ def build_rss(games):
         title = escape(g["title"])
         link = f"{DOMAIN}/games/{g['slug']}.html"
         description = escape(f"Play {g['title']} free online at Pixelsprout — no download needed.")
-        thumbnail = g.get("thumbnail", "")
-
-        enclosure = f'<enclosure url="{escape(thumbnail)}" type="image/jpeg"/>' if thumbnail else ""
+        thumbnail = g.get("thumbnail", "") or f"{DOMAIN}/assets/logo-icon.png"
+        enclosure = f'<enclosure url="{escape(thumbnail)}" type="image/jpeg"/>'
 
         items_xml.append(f"""  <item>
     <title>{title}</title>

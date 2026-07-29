@@ -368,8 +368,8 @@ def add_to_rss(game):
     title = escape(game["title"])
     link = f"{DOMAIN}/games/{game['slug']}.html"
     description = escape(f"Play {game['title']} free online at Pixelsprout — no download needed.")
-    thumbnail = game.get("thumbnail", "")
-    enclosure = f'<enclosure url="{escape(thumbnail)}" type="image/jpeg"/>' if thumbnail else ""
+    thumbnail = game.get("thumbnail", "") or f"{DOMAIN}/assets/logo-icon.png"
+    enclosure = f'<enclosure url="{escape(thumbnail)}" type="image/jpeg"/>'
 
     new_item = f"""  <item>
     <title>{title}</title>
