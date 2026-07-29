@@ -72,6 +72,7 @@ GAME_PAGE_TEMPLATE = """<!DOCTYPE html>
     font-family: 'IBM Plex Mono', monospace;
   }}
 </style>
+<script type="application/ld+json">{schema_json}</script>
 </head>
 <body>
 <div class="game-shell">
@@ -227,6 +228,21 @@ def build_game_page(game):
     else:
         orientation_lock_js = ""
 
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": game["title"],
+        "description": game["description"],
+        "genre": game["category"],
+        "url": f"https://playpixelsprout.com/games/{game['slug']}.html",
+        "applicationCategory": "Game",
+        "operatingSystem": "Web Browser",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+    }
+    if game.get("thumbnail"):
+        schema["image"] = game["thumbnail"]
+    schema_json = json.dumps(schema)
+
     html = GAME_PAGE_TEMPLATE.format(
         title=game["title"],
         category=game["category"],
@@ -234,6 +250,7 @@ def build_game_page(game):
         description=game["description"],
         slug=game["slug"],
         orientation_lock_js=orientation_lock_js,
+        schema_json=schema_json,
     )
     path = f"{GAMES_DIR}/{game['slug']}.html"
     with open(path, "w", encoding='utf-8') as f:
