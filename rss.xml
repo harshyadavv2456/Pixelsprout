@@ -5,6 +5,14 @@
   <link>https://playpixelsprout.com/</link>
   <description>Newest games added to Pixelsprout, a free browser gaming library.</description>
   <item>
+    <title>Gravity Merge</title>
+    <link>https://playpixelsprout.com/games/gravity-merge.html</link>
+    <guid>https://playpixelsprout.com/games/gravity-merge.html</guid>
+    <description>Play Gravity Merge free online at Pixelsprout — no download needed.</description>
+    <pubDate>Thu, 30 Jul 2026 06:34:33 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/gravity-merge/cover/gravity-merge.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
     <title>Sins and Desires</title>
     <link>https://playpixelsprout.com/games/sins-and-desires.html</link>
     <guid>https://playpixelsprout.com/games/sins-and-desires.html</guid>
@@ -475,14 +483,6 @@
     <description>Play Bunge Jungle free online at Pixelsprout — no download needed.</description>
     <pubDate>Mon, 01 Jun 2026 18:32:08 GMT</pubDate>
     <enclosure url="https://img.gamepix.com/games/bunge-jungle/cover/bunge-jungle.png?w=320" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>2 Player Red Blue Pirates</title>
-    <link>https://playpixelsprout.com/games/2-player-red-blue-pirates.html</link>
-    <guid>https://playpixelsprout.com/games/2-player-red-blue-pirates.html</guid>
-    <description>Play 2 Player Red Blue Pirates free online at Pixelsprout — no download needed.</description>
-    <pubDate>Sun, 31 May 2026 18:32:08 GMT</pubDate>
-    <enclosure url="https://img.gamepix.com/games/2-player-red-blue-pirates/cover/2-player-red-blue-pirates.png?w=320" type="image/jpeg"/>
   </item>
 </channel>
 </rss>
