@@ -70,9 +70,13 @@ GAME_PAGE_TEMPLATE = """<!DOCTYPE html>
   }}
 </style>
 <script type="application/ld+json">{schema_json}</script>
+<script type="application/ld+json">{breadcrumb_schema_json}</script>
 </head>
 <body>
 <div class="game-shell">
+  <div class="breadcrumb" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:8px;">
+    <a href="../index.html" style="color:var(--teal);text-decoration:none;">Home</a> / {category} / {title}
+  </div>
   <a class="back-link" href="../index.html">← back to Pixelsprout</a>
   <h1 class="game-title">{title}</h1>
   <div class="game-meta">{category}</div>
@@ -225,6 +229,17 @@ def build_game_page(game):
         schema["image"] = game["thumbnail"]
     schema_json = json.dumps(schema)
 
+    breadcrumb_schema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"},
+            {"@type": "ListItem", "position": 2, "name": game["category"], "item": f"https://playpixelsprout.com/games/{game['slug']}.html"},
+            {"@type": "ListItem", "position": 3, "name": game["title"], "item": f"https://playpixelsprout.com/games/{game['slug']}.html"},
+        ],
+    }
+    breadcrumb_schema_json = json.dumps(breadcrumb_schema)
+
     html = GAME_PAGE_TEMPLATE.format(
         title=game["title"],
         category=game["category"],
@@ -233,6 +248,7 @@ def build_game_page(game):
         slug=game["slug"],
         orientation_lock_js=orientation_lock_js,
         schema_json=schema_json,
+        breadcrumb_schema_json=breadcrumb_schema_json,
     )
     path = f"{GAMES_DIR}/{game['slug']}.html"
     with open(path, "w", encoding='utf-8') as f:

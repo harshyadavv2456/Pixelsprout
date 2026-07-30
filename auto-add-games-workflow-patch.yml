@@ -1,0 +1,26 @@
+name: Auto-add new games
+
+on:
+  workflow_dispatch:   # manual trigger only, from the Actions tab - the
+                        # scheduled cron trigger is intentionally removed.
+                        # Task Scheduler on your own PC is now the actual
+                        # daily driver, to avoid both running the same day
+                        # and causing a rejected git push.
+
+permissions:
+  contents: write
+
+jobs:
+  auto-add-games:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python auto-add-games.py
+        env:
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_AUTHOR_EMAIL: github-actions[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: github-actions[bot]
+          GIT_COMMITTER_EMAIL: github-actions[bot]@users.noreply.github.com
