@@ -53,7 +53,7 @@ BOARD_NAME = "Pixelsprout Games Sandbox" if USE_SANDBOX else "Pixelsprout Games"
 APP_ID = config.get("app_id") or os.environ.get("PINTEREST_APP_ID", "")
 APP_SECRET = config.get("app_secret") or os.environ.get("PINTEREST_APP_SECRET", "")
 REFRESH_TOKEN = config.get("refresh_token") or os.environ.get("PINTEREST_REFRESH_TOKEN", "")
-SANDBOX_TOKEN = config.get("sandbox_token", "")
+SANDBOX_TOKEN = config.get("sandbox_token") or os.environ.get("PINTEREST_SANDBOX_TOKEN", "")
 
 
 def api_request(method, path, access_token, body=None):

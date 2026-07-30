@@ -1,26 +1,43 @@
 name: Auto-add new games
 
 on:
-  workflow_dispatch:   # manual trigger only, from the Actions tab - the
-                        # scheduled cron trigger is intentionally removed.
-                        # Task Scheduler on your own PC is now the actual
-                        # daily driver, to avoid both running the same day
-                        # and causing a rejected git push.
+  schedule:
+    - cron: '0 6 * * *'   # daily, 6:00 UTC (~11:30 AM IST)
+  workflow_dispatch: {}   # also lets you trigger manually from the Actions tab
 
 permissions:
   contents: write
 
 jobs:
-  auto-add-games:
+  add-games:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
-      - run: python auto-add-games.py
-        env:
-          GIT_AUTHOR_NAME: github-actions[bot]
-          GIT_AUTHOR_EMAIL: github-actions[bot]@users.noreply.github.com
-          GIT_COMMITTER_NAME: github-actions[bot]
-          GIT_COMMITTER_EMAIL: github-actions[bot]@users.noreply.github.com
+          python-version: '3.11'
+
+      - name: Configure git identity
+        run: |
+          git config --global user.name "Pixelsprout Auto-Bot"
+          git config --global user.email "actions@github.com"
+
+      - name: Run auto-add script
+        run: python auto-add-games.py
+
+      - name: Refresh category pages
+        run: |
+          python generate-category-pages.py
+          python add-category-pages-to-sitemap.py
+
+      - name: Check catalog quality
+        run: python check-catalog-quality.py
+
+      - name: Commit category/quality updates
+        run: |
+          git add .
+          git commit -m "Daily category page refresh" || echo "Nothing to commit"
+          git push
