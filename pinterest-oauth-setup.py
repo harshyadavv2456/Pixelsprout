@@ -16,7 +16,7 @@ import webbrowser
 
 # ---- FILL THIS IN ----
 CLIENT_ID = "1595676"
-CLIENT_SECRET = "PASTE_YOUR_APP_SECRET_HERE"
+CLIENT_SECRET = "0a54b94c2b9bef3ef800ca69d4469611e0652220"
 REDIRECT_URI = "http://localhost:8080/callback"
 SCOPES = "boards:read,pins:read,pins:write"
 
