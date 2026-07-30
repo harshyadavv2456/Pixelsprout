@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Nooby And Obby 2 Player", "description": "Join the hilariously clumsy sibling duo in a wild parkour journey! Navigate tricky courses without touching the deadly red blocks. Help Nooby and Obby overcome their ineptitude using distinct controls, solving challenges together in a delightfully funny and chaotic adventure. Can you guide them to finish triumphantly?", "genre": "Two-Player", "url": "https://playpixelsprout.com/games/games\\nooby-and-obby-2-player.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Two-Player", "item": "https://playpixelsprout.com/games/games\\nooby-and-obby-2-player.html"}, {"@type": "ListItem", "position": 3, "name": "Nooby And Obby 2 Player", "item": "https://playpixelsprout.com/games/games\\nooby-and-obby-2-player.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Join the hilariously clumsy sibling duo in a wild parkour journey! Navigate tricky courses without touching the deadly red blocks. Help Nooby and Obby overcome their ineptitude using distinct controls, solving challenges together in a delightfully funny and chaotic adventure. Can you guide them to finish triumphantly?</p>
 

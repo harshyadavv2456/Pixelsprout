@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Sword Battle.io", "description": "Engage in electrifying multiplayer sword duels, where strategy and survival are key. Navigate diverse biomes, gather coins to grow stronger, and outsmart opponents. Customize your warrior, forge alliances, and evolve amid thrilling PvP battles, striving to become the ultimate force on the ever-expanding battlefield.", "genre": "Adventure", "url": "https://playpixelsprout.com/games/games\\sword-battle-io.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Adventure", "item": "https://playpixelsprout.com/games/games\\sword-battle-io.html"}, {"@type": "ListItem", "position": 3, "name": "Sword Battle.io", "item": "https://playpixelsprout.com/games/games\\sword-battle-io.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Engage in electrifying multiplayer sword duels, where strategy and survival are key. Navigate diverse biomes, gather coins to grow stronger, and outsmart opponents. Customize your warrior, forge alliances, and evolve amid thrilling PvP battles, striving to become the ultimate force on the ever-expanding battlefield.</p>
 

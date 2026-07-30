@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Cyberman V", "description": "Join Cyberman, a humanoid robot hero, in Cyberman V as he navigates treacherous levels teeming with hostile robots. Engage in strategic run-and-gun gameplay where precision and caution are key. Collect gems, dodge deadly spikes, and blast enemies while exploring tight spaces in this nostalgic platform adventure.", "genre": "Action", "url": "https://playpixelsprout.com/games/games\\cyberman-v.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Action", "item": "https://playpixelsprout.com/games/games\\cyberman-v.html"}, {"@type": "ListItem", "position": 3, "name": "Cyberman V", "item": "https://playpixelsprout.com/games/games\\cyberman-v.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Join Cyberman, a humanoid robot hero, in Cyberman V as he navigates treacherous levels teeming with hostile robots. Engage in strategic run-and-gun gameplay where precision and caution are key. Collect gems, dodge deadly spikes, and blast enemies while exploring tight spaces in this nostalgic platform adventure.</p>
 

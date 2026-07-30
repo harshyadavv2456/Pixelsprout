@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Bomb is in the air", "description": "Navigate thrilling skies in Bomb is in the Air, where your piloting prowess and strategic bombing create an electrifying adventure. Master challenging landings and defeat cunning enemies as your global journey demands precision and tactical genius. Dare to soar, adapt, and conquer every plot-twisting mission.", "genre": "Airplane", "url": "https://playpixelsprout.com/games/games\\bomb-is-in-the-air.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Airplane", "item": "https://playpixelsprout.com/games/games\\bomb-is-in-the-air.html"}, {"@type": "ListItem", "position": 3, "name": "Bomb is in the air", "item": "https://playpixelsprout.com/games/games\\bomb-is-in-the-air.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate thrilling skies in Bomb is in the Air, where your piloting prowess and strategic bombing create an electrifying adventure. Master challenging landings and defeat cunning enemies as your global journey demands precision and tactical genius. Dare to soar, adapt, and conquer every plot-twisting mission.</p>
 

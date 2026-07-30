@@ -27,6 +27,13 @@
 <link rel="stylesheet" href="styles.css">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8466016918717424" crossorigin="anonymous"></script>
 <script defer src="/_vercel/insights/script.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 
@@ -27223,6 +27230,14 @@
   resultCount.textContent = cards.length + ' games';
 
   searchInput.addEventListener('input', () => {
+    if (searchInput.value.trim().length > 2) {
+      clearTimeout(window._searchTrackTimeout);
+      window._searchTrackTimeout = setTimeout(() => {
+        if (typeof gtag === 'function') {
+          gtag('event', 'search_used', { search_term: searchInput.value.trim() });
+        }
+      }, 1000);
+    }
     const q = searchInput.value.trim().toLowerCase();
     let visible = 0;
 

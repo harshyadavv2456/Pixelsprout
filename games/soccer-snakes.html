@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Soccer Snakes", "description": "Experience the comedic chaos of Soccer Snakes, where clumsy serpents take on a hilariously thrilling soccer match. Navigate the field with intuitive controls, unleash powerful headbutts, and score outrageous goals alone or with a friend. This game promises non-stop laughter and competitive fun as you aim for serpentine soccer glory.", "genre": "Sports", "url": "https://playpixelsprout.com/games/games\\soccer-snakes.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Sports", "item": "https://playpixelsprout.com/games/games\\soccer-snakes.html"}, {"@type": "ListItem", "position": 3, "name": "Soccer Snakes", "item": "https://playpixelsprout.com/games/games\\soccer-snakes.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the comedic chaos of Soccer Snakes, where clumsy serpents take on a hilariously thrilling soccer match. Navigate the field with intuitive controls, unleash powerful headbutts, and score outrageous goals alone or with a friend. This game promises non-stop laughter and competitive fun as you aim for serpentine soccer glory.</p>
 

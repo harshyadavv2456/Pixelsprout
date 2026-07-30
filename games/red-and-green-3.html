@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Red and Green 3", "description": "Dive into Red and Green 3, a dynamic two-player journey where teamwork is key. Navigate through thrilling chapters, dodge menacing lasers, and collect tantalizing candies. With escalating challenges and vibrant graphics, this adventure tests your strategy and reflexes in a vivid, action-packed world.", "genre": "Two-Player", "url": "https://playpixelsprout.com/games/games\\red-and-green-3.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Two-Player", "item": "https://playpixelsprout.com/games/games\\red-and-green-3.html"}, {"@type": "ListItem", "position": 3, "name": "Red and Green 3", "item": "https://playpixelsprout.com/games/games\\red-and-green-3.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Red and Green 3, a dynamic two-player journey where teamwork is key. Navigate through thrilling chapters, dodge menacing lasers, and collect tantalizing candies. With escalating challenges and vibrant graphics, this adventure tests your strategy and reflexes in a vivid, action-packed world.</p>
 

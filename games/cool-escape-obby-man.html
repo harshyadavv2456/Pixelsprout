@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Cool Escape Obby Man", "description": "Navigate a treacherous prison escape, outsmarting guards at every turn. Leap over perilous platforms, dodge deadly traps, and unravel clever riddles. Unearth hidden clues and utilize makeshift tools to carve your path to freedom. Can you outwit your captors in this thrilling and brain-teasing adventure?", "genre": "Escape", "url": "https://playpixelsprout.com/games/games\\cool-escape-obby-man.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Escape", "item": "https://playpixelsprout.com/games/games\\cool-escape-obby-man.html"}, {"@type": "ListItem", "position": 3, "name": "Cool Escape Obby Man", "item": "https://playpixelsprout.com/games/games\\cool-escape-obby-man.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Navigate a treacherous prison escape, outsmarting guards at every turn. Leap over perilous platforms, dodge deadly traps, and unravel clever riddles. Unearth hidden clues and utilize makeshift tools to carve your path to freedom. Can you outwit your captors in this thrilling and brain-teasing adventure?</p>
 

@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Obby and Noob Barry Prison", "description": "Embark on a pixelated prison escape in Obby and Noob Barry Prison. Team up to outsmart ruthless cop Barry by collecting keys and navigating through treacherous paths. Master controls, evade capture, and strategize in this thrilling dual-player adventure of cunning tactics and teamwork.", "genre": "Two-Player", "url": "https://playpixelsprout.com/games/games\\obby-and-noob-barry-prison.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Two-Player", "item": "https://playpixelsprout.com/games/games\\obby-and-noob-barry-prison.html"}, {"@type": "ListItem", "position": 3, "name": "Obby and Noob Barry Prison", "item": "https://playpixelsprout.com/games/games\\obby-and-noob-barry-prison.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embark on a pixelated prison escape in Obby and Noob Barry Prison. Team up to outsmart ruthless cop Barry by collecting keys and navigating through treacherous paths. Master controls, evade capture, and strategize in this thrilling dual-player adventure of cunning tactics and teamwork.</p>
 

@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "ASMR Beauty Japanese Spa", "description": "Immerse yourself in tranquil serenity with ASMR Beauty Japanese Spa. Indulge in calming rituals, from soothing massages to refreshing facials, all enhanced by soothing ASMR sounds. Conclude by dressing your client in elegant yukata, combining timeless Japanese style with ultimate relaxation. Unwind and rejuvenate in a peaceful spa journey.", "genre": "Games-For-Girls", "url": "https://playpixelsprout.com/games/games\\asmr-beauty-japanese-spa.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Games-For-Girls", "item": "https://playpixelsprout.com/games/games\\asmr-beauty-japanese-spa.html"}, {"@type": "ListItem", "position": 3, "name": "ASMR Beauty Japanese Spa", "item": "https://playpixelsprout.com/games/games\\asmr-beauty-japanese-spa.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Immerse yourself in tranquil serenity with ASMR Beauty Japanese Spa. Indulge in calming rituals, from soothing massages to refreshing facials, all enhanced by soothing ASMR sounds. Conclude by dressing your client in elegant yukata, combining timeless Japanese style with ultimate relaxation. Unwind and rejuvenate in a peaceful spa journey.</p>
 

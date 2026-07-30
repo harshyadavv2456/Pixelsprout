@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Night City Racing", "description": "Experience nocturnal neon thrills with Night City Racing, where daring drivers navigate gleaming streets at breakneck speeds. Master the art of risk-taking with indestructible cars, unlimited nitro, and clearly marked tracks. Race, challenge, or free drive to elevate your skills and conquer the luminous urban playground.", "genre": "Sports", "url": "https://playpixelsprout.com/games/games\\night-city-racing.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Sports", "item": "https://playpixelsprout.com/games/games\\night-city-racing.html"}, {"@type": "ListItem", "position": 3, "name": "Night City Racing", "item": "https://playpixelsprout.com/games/games\\night-city-racing.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience nocturnal neon thrills with Night City Racing, where daring drivers navigate gleaming streets at breakneck speeds. Master the art of risk-taking with indestructible cars, unlimited nitro, and clearly marked tracks. Race, challenge, or free drive to elevate your skills and conquer the luminous urban playground.</p>
 

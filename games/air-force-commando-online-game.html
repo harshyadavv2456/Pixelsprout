@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Air Force Commando Online Game", "description": "Experience the thrill of high-octane dogfights in 1945, piloting powerful warplanes. Outsmart rivals with tactical maneuvers, precision attacks, and sharp reflexes. Face intense aerial battles where survival hinges on skill and strategy, challenging your limits in the quest for dominance. Will you be the ace of the skies?", "genre": "Shooter", "url": "https://playpixelsprout.com/games/games\\air-force-commando-online-game.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Shooter", "item": "https://playpixelsprout.com/games/games\\air-force-commando-online-game.html"}, {"@type": "ListItem", "position": 3, "name": "Air Force Commando Online Game", "item": "https://playpixelsprout.com/games/games\\air-force-commando-online-game.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the thrill of high-octane dogfights in 1945, piloting powerful warplanes. Outsmart rivals with tactical maneuvers, precision attacks, and sharp reflexes. Face intense aerial battles where survival hinges on skill and strategy, challenging your limits in the quest for dominance. Will you be the ace of the skies?</p>
 

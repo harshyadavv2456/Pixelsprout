@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Fruit Slasher", "description": "Unleash your inner ninja and slice your way to victory in Fruit Slasher! Test your reflexes and precision as you carve juicy fruits with swift finger swipes. Avoid explosive obstacles, nail combos for high scores, and craft delicious juices in this vibrant, fast-paced 3D arcade adventure.", "genre": "Action", "url": "https://playpixelsprout.com/games/games\\fruit-slasher.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Action", "item": "https://playpixelsprout.com/games/games\\fruit-slasher.html"}, {"@type": "ListItem", "position": 3, "name": "Fruit Slasher", "item": "https://playpixelsprout.com/games/games\\fruit-slasher.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner ninja and slice your way to victory in Fruit Slasher! Test your reflexes and precision as you carve juicy fruits with swift finger swipes. Avoid explosive obstacles, nail combos for high scores, and craft delicious juices in this vibrant, fast-paced 3D arcade adventure.</p>
 

@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Bad Cat Simulator Pet Game", "description": "Embrace your inner feline troublemaker as you roam a cozy home, causing chaos with pranks on unsuspecting humans. Leap, sneak, and scratch your way through fun challenges, leveling up to unlock new cat abilities. Create mischief with interactive environments and become the ultimate prankster kitty!", "genre": "Cats", "url": "https://playpixelsprout.com/games/games\\bad-cat-simulator-pet-game.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Cats", "item": "https://playpixelsprout.com/games/games\\bad-cat-simulator-pet-game.html"}, {"@type": "ListItem", "position": 3, "name": "Bad Cat Simulator Pet Game", "item": "https://playpixelsprout.com/games/games\\bad-cat-simulator-pet-game.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Embrace your inner feline troublemaker as you roam a cozy home, causing chaos with pranks on unsuspecting humans. Leap, sneak, and scratch your way through fun challenges, leveling up to unlock new cat abilities. Create mischief with interactive environments and become the ultimate prankster kitty!</p>
 

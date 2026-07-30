@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Purrrification", "description": "Dive into \"Purrrification,\" a haunting retro venture filled with eerie glitches and mysterious creatures. Unravel its unsettling narrative as you navigate through chilling surprises. Can you endure the unsettling atmosphere and overcome the challenges of this enigmatic '80s creation? Prepare for a spine-tingling experience.", "genre": "Platformer", "url": "https://playpixelsprout.com/games/games\\purrrification.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Platformer", "item": "https://playpixelsprout.com/games/games\\purrrification.html"}, {"@type": "ListItem", "position": 3, "name": "Purrrification", "item": "https://playpixelsprout.com/games/games\\purrrification.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into "Purrrification," a haunting retro venture filled with eerie glitches and mysterious creatures. Unravel its unsettling narrative as you navigate through chilling surprises. Can you endure the unsettling atmosphere and overcome the challenges of this enigmatic '80s creation? Prepare for a spine-tingling experience.</p>
 

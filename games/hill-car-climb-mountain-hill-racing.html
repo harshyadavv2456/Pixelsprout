@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Hill Car Climb Mountain Hill Racing", "description": "Experience the thrill of mastering rugged terrains in Hill Car Climb! Tackle steep slopes and daring curves using precise controls and strategic balance. Unlock unique cars as you collect rewards, while racing through breathtaking landscapes. Challenge friends to beat your records in this exhilarating uphill adventure.", "genre": "Driving", "url": "https://playpixelsprout.com/games/games\\hill-car-climb-mountain-hill-racing.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Driving", "item": "https://playpixelsprout.com/games/games\\hill-car-climb-mountain-hill-racing.html"}, {"@type": "ListItem", "position": 3, "name": "Hill Car Climb Mountain Hill Racing", "item": "https://playpixelsprout.com/games/games\\hill-car-climb-mountain-hill-racing.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the thrill of mastering rugged terrains in Hill Car Climb! Tackle steep slopes and daring curves using precise controls and strategic balance. Unlock unique cars as you collect rewards, while racing through breathtaking landscapes. Challenge friends to beat your records in this exhilarating uphill adventure.</p>
 

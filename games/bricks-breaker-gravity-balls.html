@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Bricks Breaker. Gravity Balls", "description": "Unleash chaos in Bricks Breaker: Gravity Balls as you shatter intricate brick patterns with physics-driven bounces. Challenge your strategic aim across diverse puzzles while leveraging power-ups and special balls for explosive fun. Each level intensifies with fresh hurdles, making every shot a calculated leap towards victory.", "genre": "Ball", "url": "https://playpixelsprout.com/games/games\\bricks-breaker-gravity-balls.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Ball", "item": "https://playpixelsprout.com/games/games\\bricks-breaker-gravity-balls.html"}, {"@type": "ListItem", "position": 3, "name": "Bricks Breaker. Gravity Balls", "item": "https://playpixelsprout.com/games/games\\bricks-breaker-gravity-balls.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash chaos in Bricks Breaker: Gravity Balls as you shatter intricate brick patterns with physics-driven bounces. Challenge your strategic aim across diverse puzzles while leveraging power-ups and special balls for explosive fun. Each level intensifies with fresh hurdles, making every shot a calculated leap towards victory.</p>
 

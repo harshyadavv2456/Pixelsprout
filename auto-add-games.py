@@ -71,6 +71,13 @@ GAME_PAGE_TEMPLATE = """<!DOCTYPE html>
 </style>
 <script type="application/ld+json">{schema_json}</script>
 <script type="application/ld+json">{breadcrumb_schema_json}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -99,6 +106,7 @@ GAME_PAGE_TEMPLATE = """<!DOCTYPE html>
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') {{ gtag('event', 'fullscreen_click', {{ game_title: document.title }}); }}
       {orientation_lock_js}
     ">⛶ Fullscreen</button>
     <p class="how-to">{description}</p>

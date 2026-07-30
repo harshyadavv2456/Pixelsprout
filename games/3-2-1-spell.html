@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "3 2 1 Spell", "description": "Unleash your inner wizard in 3 2 1 Spell, where fast-paced magic duels test your reflexes and strategy. Sharpen your observation to counter foes with precision spells. This thrilling game challenges your skills in an exhilarating, dynamic adventure that\u2019s accessible across devices. Dive into the enchanting world of spellbinding fun!", "genre": "Strategy", "url": "https://playpixelsprout.com/games/games\\3-2-1-spell.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Strategy", "item": "https://playpixelsprout.com/games/games\\3-2-1-spell.html"}, {"@type": "ListItem", "position": 3, "name": "3 2 1 Spell", "item": "https://playpixelsprout.com/games/games\\3-2-1-spell.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Unleash your inner wizard in 3 2 1 Spell, where fast-paced magic duels test your reflexes and strategy. Sharpen your observation to counter foes with precision spells. This thrilling game challenges your skills in an exhilarating, dynamic adventure that’s accessible across devices. Dive into the enchanting world of spellbinding fun!</p>
 

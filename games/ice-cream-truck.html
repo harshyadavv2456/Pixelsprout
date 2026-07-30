@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Ice Cream Truck", "description": "\"Become a master of sweet creation in Ice Cream Truck! Merge identical scoops for upgraded cones, boosting your earnings as you serve excited kids. Enjoy vibrant graphics while strategically combining flavors to maximize rewards before your board fills up. Think fast and serve smart in this delightful puzzle adventure!\"", "genre": "Kids", "url": "https://playpixelsprout.com/games/games\\ice-cream-truck.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Kids", "item": "https://playpixelsprout.com/games/games\\ice-cream-truck.html"}, {"@type": "ListItem", "position": 3, "name": "Ice Cream Truck", "item": "https://playpixelsprout.com/games/games\\ice-cream-truck.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">"Become a master of sweet creation in Ice Cream Truck! Merge identical scoops for upgraded cones, boosting your earnings as you serve excited kids. Enjoy vibrant graphics while strategically combining flavors to maximize rewards before your board fills up. Think fast and serve smart in this delightful puzzle adventure!"</p>
 

@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Hole and Fill Collect Master", "description": "Dive into Hole and Fill Collect Master, where you control a magical void that devours treats for power. Absorb cakes, donuts, and more to grow and upgrade before time runs out. Feed the collected feast to monkeys and earn rewards, all while conquering challenging levels.", "genre": "Casual", "url": "https://playpixelsprout.com/games/games\\hole-and-fill-collect-master.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Casual", "item": "https://playpixelsprout.com/games/games\\hole-and-fill-collect-master.html"}, {"@type": "ListItem", "position": 3, "name": "Hole and Fill Collect Master", "item": "https://playpixelsprout.com/games/games\\hole-and-fill-collect-master.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Hole and Fill Collect Master, where you control a magical void that devours treats for power. Absorb cakes, donuts, and more to grow and upgrade before time runs out. Feed the collected feast to monkeys and earn rewards, all while conquering challenging levels.</p>
 

@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Pixeroids", "description": "Experience the retro arcade excitement of Pixeroids, where your quick reflexes guide a nimble spaceship dodging and destroying incoming boulders. With each shot, rocks fragment into challenging smaller pieces, testing your precision and strategy. Master this thrilling adventure for maximum points and exhilarating fun.", "genre": "Retro", "url": "https://playpixelsprout.com/games/games\\pixeroids.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Retro", "item": "https://playpixelsprout.com/games/games\\pixeroids.html"}, {"@type": "ListItem", "position": 3, "name": "Pixeroids", "item": "https://playpixelsprout.com/games/games\\pixeroids.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Experience the retro arcade excitement of Pixeroids, where your quick reflexes guide a nimble spaceship dodging and destroying incoming boulders. With each shot, rocks fragment into challenging smaller pieces, testing your precision and strategy. Master this thrilling adventure for maximum points and exhilarating fun.</p>
 

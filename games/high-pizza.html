@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "High Pizza", "description": "Deliver piping-hot pizzas in High Pizza, where you navigate hurdles, dodge spoiled ingredients, and serve feasts with finesse! Test your speed and precision in an exhilarating arcade setting, climb the competitive leaderboard, and embrace the deliciously fast-paced adventure that demands sharp reflexes and strategic movement.", "genre": "Casual", "url": "https://playpixelsprout.com/games/games\\high-pizza.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Casual", "item": "https://playpixelsprout.com/games/games\\high-pizza.html"}, {"@type": "ListItem", "position": 3, "name": "High Pizza", "item": "https://playpixelsprout.com/games/games\\high-pizza.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Deliver piping-hot pizzas in High Pizza, where you navigate hurdles, dodge spoiled ingredients, and serve feasts with finesse! Test your speed and precision in an exhilarating arcade setting, climb the competitive leaderboard, and embrace the deliciously fast-paced adventure that demands sharp reflexes and strategic movement.</p>
 

@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Pomni Coloring Book", "description": "Dive into Pomni Coloring Book, a playful digital adventure where your creativity breathes life into charming circus scenes. Enjoy intuitive controls to effortlessly select and color vibrant images as you explore endless color possibilities. Perfect for all ages, this artistic journey is full of fun and creativity.", "genre": "Kids", "url": "https://playpixelsprout.com/games/games\\pomni-coloring-book.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Kids", "item": "https://playpixelsprout.com/games/games\\pomni-coloring-book.html"}, {"@type": "ListItem", "position": 3, "name": "Pomni Coloring Book", "item": "https://playpixelsprout.com/games/games\\pomni-coloring-book.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into Pomni Coloring Book, a playful digital adventure where your creativity breathes life into charming circus scenes. Enjoy intuitive controls to effortlessly select and color vibrant images as you explore endless color possibilities. Perfect for all ages, this artistic journey is full of fun and creativity.</p>
 

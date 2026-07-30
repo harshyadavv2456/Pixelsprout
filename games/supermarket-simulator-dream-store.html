@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Supermarket Simulator Dream Store", "description": "Transform your small shop into a bustling retail paradise! Design and decorate to captivate customers, hire and train the perfect team, and cleverly manage orders and discounts. Watch as your supermarket flourishes with each new day and profitably scales up in this engaging management challenge.", "genre": "Simulation", "url": "https://playpixelsprout.com/games/games\\supermarket-simulator-dream-store.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Simulation", "item": "https://playpixelsprout.com/games/games\\supermarket-simulator-dream-store.html"}, {"@type": "ListItem", "position": 3, "name": "Supermarket Simulator Dream Store", "item": "https://playpixelsprout.com/games/games\\supermarket-simulator-dream-store.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Transform your small shop into a bustling retail paradise! Design and decorate to captivate customers, hire and train the perfect team, and cleverly manage orders and discounts. Watch as your supermarket flourishes with each new day and profitably scales up in this engaging management challenge.</p>
 

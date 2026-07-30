@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Awareness Game - The Robot Bar", "description": "Dive into the vivid world of a robot nightclub in this thrilling memory challenge. Quickly absorb your surroundings during a brief video, then answer intricate trivia questions to prove your keen observation skills. Perfect for sharp minds seeking the ultimate cognitive test, only the swiftest and most perceptive will triumph.", "genre": "Trivia", "url": "https://playpixelsprout.com/games/games\\awareness-game-the-robot-bar.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Trivia", "item": "https://playpixelsprout.com/games/games\\awareness-game-the-robot-bar.html"}, {"@type": "ListItem", "position": 3, "name": "Awareness Game - The Robot Bar", "item": "https://playpixelsprout.com/games/games\\awareness-game-the-robot-bar.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into the vivid world of a robot nightclub in this thrilling memory challenge. Quickly absorb your surroundings during a brief video, then answer intricate trivia questions to prove your keen observation skills. Perfect for sharp minds seeking the ultimate cognitive test, only the swiftest and most perceptive will triumph.</p>
 

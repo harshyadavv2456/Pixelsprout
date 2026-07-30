@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Geometry Maze Maps", "description": "Geometry Maze Maps is an enthralling arcade experience where quick reactions and strategic timing are key. Navigate abstract landscapes filled with geometric obstacles, relying on instinct to leap to safety. Its minimalist design and addictive, score-chasing gameplay make every jump a thrilling challenge.", "genre": "Arcade", "url": "https://playpixelsprout.com/games/games\\geometry-maze-maps.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Arcade", "item": "https://playpixelsprout.com/games/games\\geometry-maze-maps.html"}, {"@type": "ListItem", "position": 3, "name": "Geometry Maze Maps", "item": "https://playpixelsprout.com/games/games\\geometry-maze-maps.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Geometry Maze Maps is an enthralling arcade experience where quick reactions and strategic timing are key. Navigate abstract landscapes filled with geometric obstacles, relying on instinct to leap to safety. Its minimalist design and addictive, score-chasing gameplay make every jump a thrilling challenge.</p>
 

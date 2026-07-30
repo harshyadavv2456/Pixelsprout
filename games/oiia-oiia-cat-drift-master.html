@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "OIIA OIIA CAT Drift Master", "description": "Master the art of precision drifting with OIIA OIIA Cat by your side. Navigate thrilling courses, hit every snow pile, and avoid barriers with deft timing and skillful maneuvers. Each run tests your reflexes and strategy, pushing you closer to becoming the ultimate Drift Master.", "genre": "Drifting", "url": "https://playpixelsprout.com/games/games\\oiia-oiia-cat-drift-master.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Drifting", "item": "https://playpixelsprout.com/games/games\\oiia-oiia-cat-drift-master.html"}, {"@type": "ListItem", "position": 3, "name": "OIIA OIIA CAT Drift Master", "item": "https://playpixelsprout.com/games/games\\oiia-oiia-cat-drift-master.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Master the art of precision drifting with OIIA OIIA Cat by your side. Navigate thrilling courses, hit every snow pile, and avoid barriers with deft timing and skillful maneuvers. Each run tests your reflexes and strategy, pushing you closer to becoming the ultimate Drift Master.</p>
 

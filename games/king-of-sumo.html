@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "King Of Sumo", "description": "Step into the ring as Takeshi in King Of Sumo, where every bout is a battle of strength and intellect. Master strategic attacks, unveil the mystery of a vanished legend, and navigate intense, unpredictable sumo clashes. With captivating graphics and a gripping storyline, each victory brings you closer to the ultimate championship.", "genre": "Sports", "url": "https://playpixelsprout.com/games/games\\king-of-sumo.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Sports", "item": "https://playpixelsprout.com/games/games\\king-of-sumo.html"}, {"@type": "ListItem", "position": 3, "name": "King Of Sumo", "item": "https://playpixelsprout.com/games/games\\king-of-sumo.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Step into the ring as Takeshi in King Of Sumo, where every bout is a battle of strength and intellect. Master strategic attacks, unveil the mystery of a vanished legend, and navigate intense, unpredictable sumo clashes. With captivating graphics and a gripping storyline, each victory brings you closer to the ultimate championship.</p>
 

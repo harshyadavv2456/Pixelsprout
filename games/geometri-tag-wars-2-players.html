@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Geometri Tag Wars - 2 Players", "description": "Dive into a vibrant world of geometry in Geometri Tag Wars, where two players compete to tag their opponent in ever-changing arenas. Use swift reflexes and strategic moves to navigate colorful mazes. Challenge friends or players worldwide in this thrilling, fast-paced multiplayer experience.", "genre": "Two-Player", "url": "https://playpixelsprout.com/games/games\\geometri-tag-wars-2-players.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Two-Player", "item": "https://playpixelsprout.com/games/games\\geometri-tag-wars-2-players.html"}, {"@type": "ListItem", "position": 3, "name": "Geometri Tag Wars - 2 Players", "item": "https://playpixelsprout.com/games/games\\geometri-tag-wars-2-players.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Dive into a vibrant world of geometry in Geometri Tag Wars, where two players compete to tag their opponent in ever-changing arenas. Use swift reflexes and strategic moves to navigate colorful mazes. Challenge friends or players worldwide in this thrilling, fast-paced multiplayer experience.</p>
 

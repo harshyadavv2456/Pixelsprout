@@ -39,6 +39,13 @@
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Penguin.io", "description": "Enter a frosty arena in Penguin.io, where your agile penguin vies for icy supremacy. Outsmart others, dodge hazards, and stay masterfully balanced to be the last one standing on the crumbling iceberg. Each unpredictable round tests your wits and split-second timing in this thrilling battle for survival.", "genre": "Fun", "url": "https://playpixelsprout.com/games/games\\penguin-io.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Fun", "item": "https://playpixelsprout.com/games/games\\penguin-io.html"}, {"@type": "ListItem", "position": 3, "name": "Penguin.io", "item": "https://playpixelsprout.com/games/games\\penguin-io.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
 </head>
 <body>
 <div class="game-shell">
@@ -69,6 +76,7 @@
       const f = document.querySelector('.embed-frame-wrap');
       const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
       if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
     ">⛶ Fullscreen</button>
     <p class="how-to">Enter a frosty arena in Penguin.io, where your agile penguin vies for icy supremacy. Outsmart others, dodge hazards, and stay masterfully balanced to be the last one standing on the crumbling iceberg. Each unpredictable round tests your wits and split-second timing in this thrilling battle for survival.</p>
 
