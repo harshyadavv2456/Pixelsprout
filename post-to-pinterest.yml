@@ -1,0 +1,36 @@
+name: Post new games to Pinterest
+
+on:
+  schedule:
+    - cron: "0 8 * * *"   # daily, 8:00 UTC (~1:30 PM IST)
+  workflow_dispatch:      # lets you trigger it manually too, from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  post-to-pinterest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Post to Pinterest
+        env:
+          PINTEREST_APP_ID: ${{ secrets.PINTEREST_APP_ID }}
+          PINTEREST_APP_SECRET: ${{ secrets.PINTEREST_APP_SECRET }}
+          PINTEREST_REFRESH_TOKEN: ${{ secrets.PINTEREST_REFRESH_TOKEN }}
+        run: python post-to-pinterest.py
+
+      - name: Commit updated tracking file
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add pinterest-posted.json
+          git diff --staged --quiet || git commit -m "Update Pinterest posting tracker"
+          git push

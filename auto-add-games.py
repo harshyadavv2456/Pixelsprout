@@ -22,6 +22,7 @@ from xml.sax.saxutils import escape
 
 RSS_FILE = "rss.xml"
 RSS_MAX_ITEMS = 60
+INDEXNOW_KEY = "09266bfbb51ba867175e9483e9d5fa6d"
 
 # ---- CONFIG — fill in FEED_URL before first run ----
 FEED_URL = "https://feeds.gamepix.com/v2/json?sid=P7924&pagination=12&page=1"
@@ -402,6 +403,30 @@ def add_to_rss(game):
         f.write(rss)
 
 
+def ping_indexnow(urls):
+    """Tell Bing/Yandex (and increasingly Google) about new/updated pages
+    immediately, instead of waiting for their crawler's own schedule.
+    Never blocks or fails the main run — this is a nice-to-have signal,
+    not a critical step."""
+    try:
+        payload = json.dumps({
+            "host": "playpixelsprout.com",
+            "key": INDEXNOW_KEY,
+            "keyLocation": f"{DOMAIN}/{INDEXNOW_KEY}.txt",
+            "urlList": urls,
+        }).encode("utf-8")
+        req = urllib.request.Request(
+            "https://api.indexnow.org/indexnow",
+            data=payload,
+            headers={"Content-Type": "application/json; charset=utf-8"},
+            method="POST",
+        )
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            print(f"IndexNow: notified {len(urls)} URL(s), status {resp.status}")
+    except Exception as e:
+        print(f"IndexNow ping failed (non-critical, continuing): {e}")
+
+
 def git_commit_and_push(added_titles):
     if not added_titles:
         print("No new games added — nothing to commit.")
@@ -434,6 +459,7 @@ def main():
         return
 
     added_titles = []
+    new_urls = []
     for game in new_games:
         game["slug"] = slugify(game["title"])
         build_game_page(game)
@@ -442,10 +468,12 @@ def main():
         add_to_rss(game)
         tracking["added_ids"].append(game["id"])
         added_titles.append(game["title"])
+        new_urls.append(f"{DOMAIN}/games/{game['slug']}.html")
         print(f"Added: {game['title']}")
 
     save_tracking(tracking)
     git_commit_and_push(added_titles)
+    ping_indexnow(new_urls + [f"{DOMAIN}/"])
 
 
 if __name__ == "__main__":
