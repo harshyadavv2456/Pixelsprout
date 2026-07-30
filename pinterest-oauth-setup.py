@@ -18,7 +18,7 @@ import webbrowser
 CLIENT_ID = "1595676"
 CLIENT_SECRET = "0a54b94c2b9bef3ef800ca69d4469611e0652220"
 REDIRECT_URI = "http://localhost:8080/callback"
-SCOPES = "boards:read,pins:read,pins:write"
+SCOPES = "boards:read,boards:write,pins:read,pins:write"
 
 auth_code = None
 
