@@ -51,8 +51,14 @@
     <p>Browse 20 free driving games, playable instantly in your browser. No downloads, no accounts, no waiting — just click and play. New driving games are added regularly, so check back for more.</p>
   </div>
 
-  <div class="category-grid">
-    <a class="card" href="../games/mega-ramp-car.html">
+  <div class="search-row" style="margin-bottom:16px;">
+    <input type="text" id="category-search" placeholder="Search Driving games..." autocomplete="off"
+      style="width:100%; max-width:400px; padding:10px 16px; border-radius:999px; border:1px solid var(--border); background:var(--panel); color:var(--paper); font-size:14px;">
+    <span id="category-result-count" style="margin-left:10px; font-size:13px; color:var(--muted);">20 games</span>
+  </div>
+
+  <div class="category-grid" id="category-grid">
+    <a class="card" href="../games/mega-ramp-car.html" data-name="mega ramp car">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/mega-ramp-car/cover/mega-ramp-car.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -60,7 +66,7 @@
         <h3>Mega Ramp Car</h3>
       </div>
     </a>
-    <a class="card" href="../games/tung-tung-sahur-kart.html">
+    <a class="card" href="../games/tung-tung-sahur-kart.html" data-name="tung tung sahur kart">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/tung-tung-sahur-kart/cover/tung-tung-sahur-kart.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -68,7 +74,7 @@
         <h3>Tung Tung Sahur Kart</h3>
       </div>
     </a>
-    <a class="card" href="../games/drifting-mania.html">
+    <a class="card" href="../games/drifting-mania.html" data-name="drifting mania">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/drifting-mania/cover/drifting-mania.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -76,7 +82,7 @@
         <h3>Drifting Mania</h3>
       </div>
     </a>
-    <a class="card" href="../games/car-driving.html">
+    <a class="card" href="../games/car-driving.html" data-name="car driving">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/car-driving/cover/car-driving.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -84,7 +90,7 @@
         <h3>Car Driving</h3>
       </div>
     </a>
-    <a class="card" href="../games/puzzle-farming.html">
+    <a class="card" href="../games/puzzle-farming.html" data-name="puzzle farming">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/puzzle-farming/cover/puzzle-farming.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -92,7 +98,7 @@
         <h3>Puzzle Farming</h3>
       </div>
     </a>
-    <a class="card" href="../games/hill-car-climb-mountain-hill-racing.html">
+    <a class="card" href="../games/hill-car-climb-mountain-hill-racing.html" data-name="hill car climb mountain hill racing">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/hill-car-climb-mountain-hill-racing/cover/hill-car-climb-mountain-hill-racing.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -100,7 +106,7 @@
         <h3>Hill Car Climb Mountain Hill Racing</h3>
       </div>
     </a>
-    <a class="card" href="../games/bruum.html">
+    <a class="card" href="../games/bruum.html" data-name="bruum">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/bruum/cover/bruum.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -108,7 +114,7 @@
         <h3>Bruum</h3>
       </div>
     </a>
-    <a class="card" href="../games/traffic-hater.html">
+    <a class="card" href="../games/traffic-hater.html" data-name="traffic hater">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/traffic-hater/cover/traffic-hater.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -116,7 +122,7 @@
         <h3>Traffic Hater</h3>
       </div>
     </a>
-    <a class="card" href="../games/drive-race-crash.html">
+    <a class="card" href="../games/drive-race-crash.html" data-name="drive race crash">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/drive-race-crash/cover/drive-race-crash.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -124,7 +130,7 @@
         <h3>Drive Race Crash</h3>
       </div>
     </a>
-    <a class="card" href="../games/rato-milton-extreme-ramp-stunts.html">
+    <a class="card" href="../games/rato-milton-extreme-ramp-stunts.html" data-name="rato milton extreme ramp stunts">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/rato-milton-extreme-ramp-stunts/cover/rato-milton-extreme-ramp-stunts.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -132,7 +138,7 @@
         <h3>Rato Milton Extreme Ramp Stunts</h3>
       </div>
     </a>
-    <a class="card" href="../games/speed-racer.html">
+    <a class="card" href="../games/speed-racer.html" data-name="speed racer">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/speed-racer/cover/speed-racer.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -140,7 +146,7 @@
         <h3>Speed Racer</h3>
       </div>
     </a>
-    <a class="card" href="../games/street-driver.html">
+    <a class="card" href="../games/street-driver.html" data-name="street driver">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/street-driver/cover/street-driver.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -148,7 +154,7 @@
         <h3>Street Driver</h3>
       </div>
     </a>
-    <a class="card" href="../games/furious-speed.html">
+    <a class="card" href="../games/furious-speed.html" data-name="furious speed">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/furious-speed/cover/furious-speed.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -156,7 +162,7 @@
         <h3>Furious Speed</h3>
       </div>
     </a>
-    <a class="card" href="../games/road-fury.html">
+    <a class="card" href="../games/road-fury.html" data-name="road fury">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/road-fury/cover/road-fury.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -164,7 +170,7 @@
         <h3>Road Fury</h3>
       </div>
     </a>
-    <a class="card" href="../games/final-freeway.html">
+    <a class="card" href="../games/final-freeway.html" data-name="final freeway">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/final-freeway/cover/final-freeway.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -172,7 +178,7 @@
         <h3>Final Freeway</h3>
       </div>
     </a>
-    <a class="card" href="../games/car-chase-parking.html">
+    <a class="card" href="../games/car-chase-parking.html" data-name="car chase parking">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/car-chase-parking/cover/car-chase-parking.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -180,7 +186,7 @@
         <h3>Car Chase Parking</h3>
       </div>
     </a>
-    <a class="card" href="../games/final-freeway-2r.html">
+    <a class="card" href="../games/final-freeway-2r.html" data-name="final freeway 2r">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/final-freeway-2r/cover/final-freeway-2r.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -188,7 +194,7 @@
         <h3>Final Freeway 2R</h3>
       </div>
     </a>
-    <a class="card" href="../games/sprunki-stunt-driving-simulator.html">
+    <a class="card" href="../games/sprunki-stunt-driving-simulator.html" data-name="sprunki stunt driving simulator">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/sprunki-stunt-driving-simulator/cover/sprunki-stunt-driving-simulator.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -196,7 +202,7 @@
         <h3>Sprunki Stunt Driving Simulator</h3>
       </div>
     </a>
-    <a class="card" href="../games/super-bike-racing.html">
+    <a class="card" href="../games/super-bike-racing.html" data-name="super bike racing">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/super-bike-racing/cover/super-bike-racing.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -204,7 +210,7 @@
         <h3>Super Bike Racing</h3>
       </div>
     </a>
-    <a class="card" href="../games/italian-brainrot-extreme-driver.html">
+    <a class="card" href="../games/italian-brainrot-extreme-driver.html" data-name="italian brainrot extreme driver">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/italian-brainrot-extreme-driver/cover/italian-brainrot-extreme-driver.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -213,7 +219,34 @@
       </div>
     </a>
   </div>
+
+  <p id="category-no-results" style="display:none; color:var(--muted); font-size:14px; margin-top:20px;">
+    No games found for "<span id="category-no-results-term"></span>".
+  </p>
 </div>
+
+<script>
+  (function() {
+    const searchInput = document.getElementById('category-search');
+    const cards = Array.from(document.querySelectorAll('#category-grid .card'));
+    const resultCount = document.getElementById('category-result-count');
+    const noResults = document.getElementById('category-no-results');
+    const noResultsTerm = document.getElementById('category-no-results-term');
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const match = !q || (card.dataset.name && card.dataset.name.includes(q));
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      resultCount.textContent = visible + (visible === 1 ? ' game' : ' games');
+      noResults.style.display = visible === 0 ? '' : 'none';
+      if (visible === 0) noResultsTerm.textContent = searchInput.value.trim();
+    });
+  })();
+</script>
 
 <footer class="site-footer">
   <span>© Pixelsprout — Play. Grow. Explore. Some games provided via GamePix.</span>

@@ -51,8 +51,14 @@
     <p>Browse 19 free battle games, playable instantly in your browser. No downloads, no accounts, no waiting — just click and play. New battle games are added regularly, so check back for more.</p>
   </div>
 
-  <div class="category-grid">
-    <a class="card" href="../games/among-squid-challenge.html">
+  <div class="search-row" style="margin-bottom:16px;">
+    <input type="text" id="category-search" placeholder="Search Battle games..." autocomplete="off"
+      style="width:100%; max-width:400px; padding:10px 16px; border-radius:999px; border:1px solid var(--border); background:var(--panel); color:var(--paper); font-size:14px;">
+    <span id="category-result-count" style="margin-left:10px; font-size:13px; color:var(--muted);">19 games</span>
+  </div>
+
+  <div class="category-grid" id="category-grid">
+    <a class="card" href="../games/among-squid-challenge.html" data-name="among squid challenge">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/among-squid-challenge/cover/among-squid-challenge.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -60,7 +66,7 @@
         <h3>Among Squid Challenge</h3>
       </div>
     </a>
-    <a class="card" href="../games/color-warz.html">
+    <a class="card" href="../games/color-warz.html" data-name="color warz">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/color-wars/cover/color-wars.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -68,7 +74,7 @@
         <h3>Color Warz</h3>
       </div>
     </a>
-    <a class="card" href="../games/javelin-battle.html">
+    <a class="card" href="../games/javelin-battle.html" data-name="javelin battle">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/javelin-battle/cover/javelin-battle.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -76,7 +82,7 @@
         <h3>Javelin Battle</h3>
       </div>
     </a>
-    <a class="card" href="../games/battlegrid-online-pvp-tank-battles.html">
+    <a class="card" href="../games/battlegrid-online-pvp-tank-battles.html" data-name="battlegrid online pvp tank battles">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/battlegrid-online-pvp-tank-battles/cover/battlegrid-online-pvp-tank-battles.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -84,7 +90,7 @@
         <h3>BattleGrid online PvP tank battles</h3>
       </div>
     </a>
-    <a class="card" href="../games/italian-brainrot-tung-tung-tug-war.html">
+    <a class="card" href="../games/italian-brainrot-tung-tung-tug-war.html" data-name="italian brainrot tung tung tug war">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/italian-brainrot-tung-tung-tug-war/cover/italian-brainrot-tung-tung-tug-war.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -92,7 +98,7 @@
         <h3>Italian Brainrot Tung Tung Tug War</h3>
       </div>
     </a>
-    <a class="card" href="../games/ia-destruction.html">
+    <a class="card" href="../games/ia-destruction.html" data-name="ia destruction">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/ia-destruction/cover/ia-destruction.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -100,7 +106,7 @@
         <h3>IA Destruction</h3>
       </div>
     </a>
-    <a class="card" href="../games/card-legends-battle-royale.html">
+    <a class="card" href="../games/card-legends-battle-royale.html" data-name="card legends battle royale">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/card-legends-battle-royale/cover/card-legends-battle-royale.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -108,7 +114,7 @@
         <h3>Card Legends Battle Royale</h3>
       </div>
     </a>
-    <a class="card" href="../games/mutant-plants-vs-zombie.html">
+    <a class="card" href="../games/mutant-plants-vs-zombie.html" data-name="mutant plants vs zombie">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/mutant-plants-vs-zombie/cover/mutant-plants-vs-zombie.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -116,7 +122,7 @@
         <h3>Mutant Plants Vs Zombie</h3>
       </div>
     </a>
-    <a class="card" href="../games/brawlers-arena-battle-stars.html">
+    <a class="card" href="../games/brawlers-arena-battle-stars.html" data-name="brawlers arena battle stars">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/brawlers-arena-battle-stars/cover/brawlers-arena-battle-stars.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -124,7 +130,7 @@
         <h3>Brawlers Arena Battle Stars</h3>
       </div>
     </a>
-    <a class="card" href="../games/battle-of-pirate-caribbean-battle.html">
+    <a class="card" href="../games/battle-of-pirate-caribbean-battle.html" data-name="battle of pirate caribbean battle">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/battle-of-pirate-caribbean-battle/cover/battle-of-pirate-caribbean-battle.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -132,7 +138,7 @@
         <h3>Battle of Pirate Caribbean Battle</h3>
       </div>
     </a>
-    <a class="card" href="../games/capybara-go.html">
+    <a class="card" href="../games/capybara-go.html" data-name="capybara go!">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/capybara-go/cover/capybara-go.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -140,7 +146,7 @@
         <h3>Capybara Go!</h3>
       </div>
     </a>
-    <a class="card" href="../games/stickman-epic.html">
+    <a class="card" href="../games/stickman-epic.html" data-name="stickman epic">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/stickman-epic/cover/stickman-epic.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -148,7 +154,7 @@
         <h3>Stickman Epic</h3>
       </div>
     </a>
-    <a class="card" href="../games/who-will-win-create-a-battle.html">
+    <a class="card" href="../games/who-will-win-create-a-battle.html" data-name="who will win? create a battle!">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/who-will-win-create-a-battle/cover/who-will-win-create-a-battle.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -156,7 +162,7 @@
         <h3>Who Will Win? Create a Battle!</h3>
       </div>
     </a>
-    <a class="card" href="../games/robot-terminator-t-rex.html">
+    <a class="card" href="../games/robot-terminator-t-rex.html" data-name="robot terminator t-rex">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/robot-terminator-t-rex/cover/robot-terminator-t-rex.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -164,7 +170,7 @@
         <h3>Robot Terminator T-Rex</h3>
       </div>
     </a>
-    <a class="card" href="../games/dark-world.html">
+    <a class="card" href="../games/dark-world.html" data-name="dark world">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/dark-world/cover/dark-world.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -172,7 +178,7 @@
         <h3>Dark World</h3>
       </div>
     </a>
-    <a class="card" href="../games/battleship-infinity-war.html">
+    <a class="card" href="../games/battleship-infinity-war.html" data-name="battleship - infinity war">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/naval-battle-infinite-war/cover/naval-battle-infinite-war.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -180,7 +186,7 @@
         <h3>Battleship - Infinity War</h3>
       </div>
     </a>
-    <a class="card" href="../games/mobile-legends-slime-3v3.html">
+    <a class="card" href="../games/mobile-legends-slime-3v3.html" data-name="mobile legends slime 3v3">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/mobile-legends-slime-3v3/cover/mobile-legends-slime-3v3.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -188,7 +194,7 @@
         <h3>Mobile Legends Slime 3v3</h3>
       </div>
     </a>
-    <a class="card" href="../games/epic-defense-clash.html">
+    <a class="card" href="../games/epic-defense-clash.html" data-name="epic defense clash">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/epic-defense-clash-1/cover/epic-defense-clash-1.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -196,7 +202,7 @@
         <h3>Epic Defense Clash</h3>
       </div>
     </a>
-    <a class="card" href="../games/war-the-knights.html">
+    <a class="card" href="../games/war-the-knights.html" data-name="war the knights">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/war-the-knights/cover/war-the-knights.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -205,7 +211,34 @@
       </div>
     </a>
   </div>
+
+  <p id="category-no-results" style="display:none; color:var(--muted); font-size:14px; margin-top:20px;">
+    No games found for "<span id="category-no-results-term"></span>".
+  </p>
 </div>
+
+<script>
+  (function() {
+    const searchInput = document.getElementById('category-search');
+    const cards = Array.from(document.querySelectorAll('#category-grid .card'));
+    const resultCount = document.getElementById('category-result-count');
+    const noResults = document.getElementById('category-no-results');
+    const noResultsTerm = document.getElementById('category-no-results-term');
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const match = !q || (card.dataset.name && card.dataset.name.includes(q));
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      resultCount.textContent = visible + (visible === 1 ? ' game' : ' games');
+      noResults.style.display = visible === 0 ? '' : 'none';
+      if (visible === 0) noResultsTerm.textContent = searchInput.value.trim();
+    });
+  })();
+</script>
 
 <footer class="site-footer">
   <span>© Pixelsprout — Play. Grow. Explore. Some games provided via GamePix.</span>

@@ -51,8 +51,14 @@
     <p>Browse 16 free addictive games, playable instantly in your browser. No downloads, no accounts, no waiting — just click and play. New addictive games are added regularly, so check back for more.</p>
   </div>
 
-  <div class="category-grid">
-    <a class="card" href="../games/ninja-slice-n-dice.html">
+  <div class="search-row" style="margin-bottom:16px;">
+    <input type="text" id="category-search" placeholder="Search Addictive games..." autocomplete="off"
+      style="width:100%; max-width:400px; padding:10px 16px; border-radius:999px; border:1px solid var(--border); background:var(--panel); color:var(--paper); font-size:14px;">
+    <span id="category-result-count" style="margin-left:10px; font-size:13px; color:var(--muted);">16 games</span>
+  </div>
+
+  <div class="category-grid" id="category-grid">
+    <a class="card" href="../games/ninja-slice-n-dice.html" data-name="ninja slice n dice">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/ninja-slice-n-dice/cover/ninja-slice-n-dice.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -60,7 +66,7 @@
         <h3>Ninja Slice N Dice</h3>
       </div>
     </a>
-    <a class="card" href="../games/the-word-search.html">
+    <a class="card" href="../games/the-word-search.html" data-name="the word search">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/the-word-search/cover/the-word-search.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -68,7 +74,7 @@
         <h3>The Word Search</h3>
       </div>
     </a>
-    <a class="card" href="../games/dogs-vs-aliens.html">
+    <a class="card" href="../games/dogs-vs-aliens.html" data-name="dogs vs aliens">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/dogs-vs-aliens/cover/dogs-vs-aliens.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -76,7 +82,7 @@
         <h3>Dogs vs Aliens</h3>
       </div>
     </a>
-    <a class="card" href="../games/mincraft-cube-puzzle.html">
+    <a class="card" href="../games/mincraft-cube-puzzle.html" data-name="mincraft cube puzzle">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/minecraft-cube-puzzle/cover/minecraft-cube-puzzle.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -84,7 +90,7 @@
         <h3>Mincraft Cube Puzzle</h3>
       </div>
     </a>
-    <a class="card" href="../games/kiko-adventure.html">
+    <a class="card" href="../games/kiko-adventure.html" data-name="kiko adventure">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/kiko-adventure/cover/kiko-adventure.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -92,7 +98,7 @@
         <h3>Kiko Adventure</h3>
       </div>
     </a>
-    <a class="card" href="../games/eggdog-among-us.html">
+    <a class="card" href="../games/eggdog-among-us.html" data-name="eggdog among us">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/eggdog-among-us/cover/eggdog-among-us.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -100,7 +106,7 @@
         <h3>Eggdog Among Us</h3>
       </div>
     </a>
-    <a class="card" href="../games/squid-game-in-dalgona-panic.html">
+    <a class="card" href="../games/squid-game-in-dalgona-panic.html" data-name="squid game in dalgona panic">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/squid-game-in-dalgona-panic/cover/squid-game-in-dalgona-panic.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -108,7 +114,7 @@
         <h3>Squid Game in Dalgona Panic</h3>
       </div>
     </a>
-    <a class="card" href="../games/puzzle-block.html">
+    <a class="card" href="../games/puzzle-block.html" data-name="puzzle block">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/puzzle-block/cover/puzzle-block.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -116,7 +122,7 @@
         <h3>Puzzle Block</h3>
       </div>
     </a>
-    <a class="card" href="../games/tattoo-master-3d-crazy-art.html">
+    <a class="card" href="../games/tattoo-master-3d-crazy-art.html" data-name="tattoo master 3d: crazy art">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/tattoo-master-3d-crazy-art/cover/tattoo-master-3d-crazy-art.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -124,7 +130,7 @@
         <h3>Tattoo Master 3D: Crazy Art</h3>
       </div>
     </a>
-    <a class="card" href="../games/trz-pop-it.html">
+    <a class="card" href="../games/trz-pop-it.html" data-name="trz pop it">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/trz-pop-it/cover/trz-pop-it.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -132,7 +138,7 @@
         <h3>TRZ Pop it</h3>
       </div>
     </a>
-    <a class="card" href="../games/ratomilton-red-light-green-light.html">
+    <a class="card" href="../games/ratomilton-red-light-green-light.html" data-name="ratomilton red light green light">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/ratomilton-red-light-green-light/cover/ratomilton-red-light-green-light.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -140,7 +146,7 @@
         <h3>Ratomilton Red Light Green Light</h3>
       </div>
     </a>
-    <a class="card" href="../games/tung-tung-sahur-lol-face.html">
+    <a class="card" href="../games/tung-tung-sahur-lol-face.html" data-name="tung tung sahur lol face">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/tung-tung-sahur-lol-face/cover/tung-tung-sahur-lol-face.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -148,7 +154,7 @@
         <h3>Tung Tung Sahur LOL Face</h3>
       </div>
     </a>
-    <a class="card" href="../games/heart-box.html">
+    <a class="card" href="../games/heart-box.html" data-name="heart box">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/heart-box/cover/heart-box.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -156,7 +162,7 @@
         <h3>Heart Box</h3>
       </div>
     </a>
-    <a class="card" href="../games/amazing-sheriff.html">
+    <a class="card" href="../games/amazing-sheriff.html" data-name="amazing sheriff">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/amazing-sheriff/cover/amazing-sheriff.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -164,7 +170,7 @@
         <h3>Amazing Sheriff</h3>
       </div>
     </a>
-    <a class="card" href="../games/tentrix-blast.html">
+    <a class="card" href="../games/tentrix-blast.html" data-name="tentrix blast">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/tentrix-blast/cover/tentrix-blast.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -172,7 +178,7 @@
         <h3>TenTrix Blast</h3>
       </div>
     </a>
-    <a class="card" href="../games/mr-santa-run-2.html">
+    <a class="card" href="../games/mr-santa-run-2.html" data-name="mr santa run 2">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/mr-santa-run-2/cover/mr-santa-run-2.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -181,7 +187,34 @@
       </div>
     </a>
   </div>
+
+  <p id="category-no-results" style="display:none; color:var(--muted); font-size:14px; margin-top:20px;">
+    No games found for "<span id="category-no-results-term"></span>".
+  </p>
 </div>
+
+<script>
+  (function() {
+    const searchInput = document.getElementById('category-search');
+    const cards = Array.from(document.querySelectorAll('#category-grid .card'));
+    const resultCount = document.getElementById('category-result-count');
+    const noResults = document.getElementById('category-no-results');
+    const noResultsTerm = document.getElementById('category-no-results-term');
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const match = !q || (card.dataset.name && card.dataset.name.includes(q));
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      resultCount.textContent = visible + (visible === 1 ? ' game' : ' games');
+      noResults.style.display = visible === 0 ? '' : 'none';
+      if (visible === 0) noResultsTerm.textContent = searchInput.value.trim();
+    });
+  })();
+</script>
 
 <footer class="site-footer">
   <span>© Pixelsprout — Play. Grow. Explore. Some games provided via GamePix.</span>

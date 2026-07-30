@@ -51,8 +51,14 @@
     <p>Browse 25 free brain games, playable instantly in your browser. No downloads, no accounts, no waiting — just click and play. New brain games are added regularly, so check back for more.</p>
   </div>
 
-  <div class="category-grid">
-    <a class="card" href="../games/screw-puzzle-nuts-and-bolts.html">
+  <div class="search-row" style="margin-bottom:16px;">
+    <input type="text" id="category-search" placeholder="Search Brain games..." autocomplete="off"
+      style="width:100%; max-width:400px; padding:10px 16px; border-radius:999px; border:1px solid var(--border); background:var(--panel); color:var(--paper); font-size:14px;">
+    <span id="category-result-count" style="margin-left:10px; font-size:13px; color:var(--muted);">25 games</span>
+  </div>
+
+  <div class="category-grid" id="category-grid">
+    <a class="card" href="../games/screw-puzzle-nuts-and-bolts.html" data-name="screw puzzle - nuts and bolts">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/screw-puzzle-nuts-and-bolts/cover/screw-puzzle-nuts-and-bolts.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -60,7 +66,7 @@
         <h3>Screw Puzzle - Nuts and Bolts</h3>
       </div>
     </a>
-    <a class="card" href="../games/minesweeper.html">
+    <a class="card" href="../games/minesweeper.html" data-name="minesweeper">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/minesweeper/cover/minesweeper.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -68,7 +74,7 @@
         <h3>Minesweeper</h3>
       </div>
     </a>
-    <a class="card" href="../games/brain-puzzle-tricky-choices.html">
+    <a class="card" href="../games/brain-puzzle-tricky-choices.html" data-name="brain puzzle tricky choices">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/brain-puzzle-tricky-choices/cover/brain-puzzle-tricky-choices.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -76,7 +82,7 @@
         <h3>Brain Puzzle Tricky Choices</h3>
       </div>
     </a>
-    <a class="card" href="../games/color-dispatch.html">
+    <a class="card" href="../games/color-dispatch.html" data-name="color dispatch">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/color-dispatch/cover/color-dispatch.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -84,7 +90,7 @@
         <h3>Color Dispatch</h3>
       </div>
     </a>
-    <a class="card" href="../games/sort-my-parking-area.html">
+    <a class="card" href="../games/sort-my-parking-area.html" data-name="sort my parking area">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/sort-my-parking-area/cover/sort-my-parking-area.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -92,7 +98,7 @@
         <h3>Sort my Parking Area</h3>
       </div>
     </a>
-    <a class="card" href="../games/squid-match-game.html">
+    <a class="card" href="../games/squid-match-game.html" data-name="squid match game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/squid-match-game/cover/squid-match-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -100,7 +106,7 @@
         <h3>Squid Match Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/impostor-sort-puzzle.html">
+    <a class="card" href="../games/impostor-sort-puzzle.html" data-name="impostor sort puzzle">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/impostor-sort-puzzle/cover/impostor-sort-puzzle.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -108,7 +114,7 @@
         <h3>Impostor Sort Puzzle</h3>
       </div>
     </a>
-    <a class="card" href="../games/santa-s-quest.html">
+    <a class="card" href="../games/santa-s-quest.html" data-name="santa's quest">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/santa-s-quest/cover/santa-s-quest.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -116,7 +122,7 @@
         <h3>Santa's Quest</h3>
       </div>
     </a>
-    <a class="card" href="../games/skibidi-toilet-five-difference.html">
+    <a class="card" href="../games/skibidi-toilet-five-difference.html" data-name="skibidi toilet five difference">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/skibidi-toilet-five-difference/cover/skibidi-toilet-five-difference.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -124,7 +130,7 @@
         <h3>Skibidi Toilet Five Difference</h3>
       </div>
     </a>
-    <a class="card" href="../games/emoji-game.html">
+    <a class="card" href="../games/emoji-game.html" data-name="emoji game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/emoji-game/cover/emoji-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -132,7 +138,7 @@
         <h3>Emoji Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/garten-of-banban-puzzle-game.html">
+    <a class="card" href="../games/garten-of-banban-puzzle-game.html" data-name="garten of banban puzzle game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/garten-of-banban-puzzle-game/cover/garten-of-banban-puzzle-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -140,7 +146,7 @@
         <h3>Garten of Banban Puzzle Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/candy-cup-boom.html">
+    <a class="card" href="../games/candy-cup-boom.html" data-name="candy cup boom">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/candy-cup-boom/cover/candy-cup-boom.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -148,7 +154,7 @@
         <h3>Candy Cup Boom</h3>
       </div>
     </a>
-    <a class="card" href="../games/abstract-sliding.html">
+    <a class="card" href="../games/abstract-sliding.html" data-name="abstract sliding">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/abstract-sliding/cover/abstract-sliding.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -156,7 +162,7 @@
         <h3>Abstract Sliding</h3>
       </div>
     </a>
-    <a class="card" href="../games/color-fill.html">
+    <a class="card" href="../games/color-fill.html" data-name="color fill">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/color-fill/cover/color-fill.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -164,7 +170,7 @@
         <h3>Color Fill</h3>
       </div>
     </a>
-    <a class="card" href="../games/bad-drawings-memory-game.html">
+    <a class="card" href="../games/bad-drawings-memory-game.html" data-name="bad drawings memory game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/bad-drawings-memory-game/cover/bad-drawings-memory-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -172,7 +178,7 @@
         <h3>Bad Drawings Memory Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/komera.html">
+    <a class="card" href="../games/komera.html" data-name="komera">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/komera/cover/komera.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -180,7 +186,7 @@
         <h3>Komera</h3>
       </div>
     </a>
-    <a class="card" href="../games/liquid-sort.html">
+    <a class="card" href="../games/liquid-sort.html" data-name="liquid sort">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/liquid-sort/cover/liquid-sort.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -188,7 +194,7 @@
         <h3>Liquid Sort</h3>
       </div>
     </a>
-    <a class="card" href="../games/save-the-alphabet-lore.html">
+    <a class="card" href="../games/save-the-alphabet-lore.html" data-name="save the alphabet lore">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/save-the-alphabet-lore/cover/save-the-alphabet-lore.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -196,7 +202,7 @@
         <h3>Save the Alphabet lore</h3>
       </div>
     </a>
-    <a class="card" href="../games/2048-fnaf.html">
+    <a class="card" href="../games/2048-fnaf.html" data-name="2048 - fnaf">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/2048-fnaf/cover/2048-fnaf.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -204,7 +210,7 @@
         <h3>2048 - FNAF</h3>
       </div>
     </a>
-    <a class="card" href="../games/battleship-war-multiplayer.html">
+    <a class="card" href="../games/battleship-war-multiplayer.html" data-name="battleship war multiplayer">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/battleship-war-multiplayer/cover/battleship-war-multiplayer.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -212,7 +218,7 @@
         <h3>Battleship War Multiplayer</h3>
       </div>
     </a>
-    <a class="card" href="../games/christmas-brain-teasers.html">
+    <a class="card" href="../games/christmas-brain-teasers.html" data-name="christmas brain teasers">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/christmas-brain-teasers/cover/christmas-brain-teasers.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -220,7 +226,7 @@
         <h3>Christmas Brain Teasers</h3>
       </div>
     </a>
-    <a class="card" href="../games/flow-mania.html">
+    <a class="card" href="../games/flow-mania.html" data-name="flow mania">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/flow-mania/cover/flow-mania.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -228,7 +234,7 @@
         <h3>Flow Mania</h3>
       </div>
     </a>
-    <a class="card" href="../games/obunga-nextbot-spot-difference.html">
+    <a class="card" href="../games/obunga-nextbot-spot-difference.html" data-name="obunga nextbot spot difference">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/obunga-nextbot-spot-difference/cover/obunga-nextbot-spot-difference.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -236,7 +242,7 @@
         <h3>Obunga Nextbot Spot Difference</h3>
       </div>
     </a>
-    <a class="card" href="../games/lipuzz-water-sort-puzzle.html">
+    <a class="card" href="../games/lipuzz-water-sort-puzzle.html" data-name="lipuzz - water sort puzzle">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/lipuzz-water-sort-puzzle/cover/lipuzz-water-sort-puzzle.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -244,7 +250,7 @@
         <h3>Lipuzz - Water Sort Puzzle</h3>
       </div>
     </a>
-    <a class="card" href="../games/monster-go.html">
+    <a class="card" href="../games/monster-go.html" data-name="monster go">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/monster-go/cover/monster-go.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -253,7 +259,34 @@
       </div>
     </a>
   </div>
+
+  <p id="category-no-results" style="display:none; color:var(--muted); font-size:14px; margin-top:20px;">
+    No games found for "<span id="category-no-results-term"></span>".
+  </p>
 </div>
+
+<script>
+  (function() {
+    const searchInput = document.getElementById('category-search');
+    const cards = Array.from(document.querySelectorAll('#category-grid .card'));
+    const resultCount = document.getElementById('category-result-count');
+    const noResults = document.getElementById('category-no-results');
+    const noResultsTerm = document.getElementById('category-no-results-term');
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const match = !q || (card.dataset.name && card.dataset.name.includes(q));
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      resultCount.textContent = visible + (visible === 1 ? ' game' : ' games');
+      noResults.style.display = visible === 0 ? '' : 'none';
+      if (visible === 0) noResultsTerm.textContent = searchInput.value.trim();
+    });
+  })();
+</script>
 
 <footer class="site-footer">
   <span>© Pixelsprout — Play. Grow. Explore. Some games provided via GamePix.</span>

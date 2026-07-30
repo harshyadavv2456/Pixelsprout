@@ -51,8 +51,14 @@
     <p>Browse 20 free retro games, playable instantly in your browser. No downloads, no accounts, no waiting — just click and play. New retro games are added regularly, so check back for more.</p>
   </div>
 
-  <div class="category-grid">
-    <a class="card" href="../games/pac-chef.html">
+  <div class="search-row" style="margin-bottom:16px;">
+    <input type="text" id="category-search" placeholder="Search Retro games..." autocomplete="off"
+      style="width:100%; max-width:400px; padding:10px 16px; border-radius:999px; border:1px solid var(--border); background:var(--panel); color:var(--paper); font-size:14px;">
+    <span id="category-result-count" style="margin-left:10px; font-size:13px; color:var(--muted);">20 games</span>
+  </div>
+
+  <div class="category-grid" id="category-grid">
+    <a class="card" href="../games/pac-chef.html" data-name="pac-chef">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/pac-chef/cover/pac-chef.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -60,7 +66,7 @@
         <h3>Pac-Chef</h3>
       </div>
     </a>
-    <a class="card" href="../games/fireblob.html">
+    <a class="card" href="../games/fireblob.html" data-name="fireblob">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/fireblob/cover/fireblob.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -68,7 +74,7 @@
         <h3>FireBlob</h3>
       </div>
     </a>
-    <a class="card" href="../games/tomb-of-the-cat.html">
+    <a class="card" href="../games/tomb-of-the-cat.html" data-name="tomb of the cat">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/tomb-of-the-cat/cover/tomb-of-the-cat.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -76,7 +82,7 @@
         <h3>Tomb of the Cat</h3>
       </div>
     </a>
-    <a class="card" href="../games/slimoban.html">
+    <a class="card" href="../games/slimoban.html" data-name="slimoban">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/slimoban/cover/slimoban.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -84,7 +90,7 @@
         <h3>Slimoban</h3>
       </div>
     </a>
-    <a class="card" href="../games/metalbot.html">
+    <a class="card" href="../games/metalbot.html" data-name="metalbot">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/metalbot/cover/metalbot.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -92,7 +98,7 @@
         <h3>Metalbot</h3>
       </div>
     </a>
-    <a class="card" href="../games/dunjun.html">
+    <a class="card" href="../games/dunjun.html" data-name="dunjun">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/dunjun/cover/dunjun.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -100,7 +106,7 @@
         <h3>Dunjun</h3>
       </div>
     </a>
-    <a class="card" href="../games/emerald-and-amber.html">
+    <a class="card" href="../games/emerald-and-amber.html" data-name="emerald and amber">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/emerald-and-amber/cover/emerald-and-amber.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -108,7 +114,7 @@
         <h3>Emerald and Amber</h3>
       </div>
     </a>
-    <a class="card" href="../games/mini-switcher.html">
+    <a class="card" href="../games/mini-switcher.html" data-name="mini switcher">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/mini-switcher/cover/mini-switcher.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -116,7 +122,7 @@
         <h3>Mini Switcher</h3>
       </div>
     </a>
-    <a class="card" href="../games/3d-pinball-space-cadet.html">
+    <a class="card" href="../games/3d-pinball-space-cadet.html" data-name="3d pinball - space cadet">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/3d-pinball-space-cadet/cover/3d-pinball-space-cadet.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -124,7 +130,7 @@
         <h3>3D Pinball - Space Cadet</h3>
       </div>
     </a>
-    <a class="card" href="../games/brick-breaker-retro.html">
+    <a class="card" href="../games/brick-breaker-retro.html" data-name="brick breaker retro">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/brick-breaker-retro/cover/brick-breaker-retro.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -132,7 +138,7 @@
         <h3>Brick Breaker Retro</h3>
       </div>
     </a>
-    <a class="card" href="../games/i-can-transform.html">
+    <a class="card" href="../games/i-can-transform.html" data-name="i can transform">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/i-can-transform/cover/i-can-transform.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -140,7 +146,7 @@
         <h3>I Can Transform</h3>
       </div>
     </a>
-    <a class="card" href="../games/compassion.html">
+    <a class="card" href="../games/compassion.html" data-name="compassion">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/compassion/cover/compassion.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -148,7 +154,7 @@
         <h3>Compassion</h3>
       </div>
     </a>
-    <a class="card" href="../games/shadoworld-adventure.html">
+    <a class="card" href="../games/shadoworld-adventure.html" data-name="shadoworld adventure">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/shadoworld-adventure/cover/shadoworld-adventure.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -156,7 +162,7 @@
         <h3>Shadoworld Adventure</h3>
       </div>
     </a>
-    <a class="card" href="../games/neon-brick-breaker.html">
+    <a class="card" href="../games/neon-brick-breaker.html" data-name="neon brick breaker">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/neon-brick-breaker/cover/neon-brick-breaker.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -164,7 +170,7 @@
         <h3>Neon Brick Breaker</h3>
       </div>
     </a>
-    <a class="card" href="../games/pixeroids.html">
+    <a class="card" href="../games/pixeroids.html" data-name="pixeroids">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/pixeroids/cover/pixeroids.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -172,7 +178,7 @@
         <h3>Pixeroids</h3>
       </div>
     </a>
-    <a class="card" href="../games/wormpocalypse.html">
+    <a class="card" href="../games/wormpocalypse.html" data-name="wormpocalypse">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/wormpocalypse/cover/wormpocalypse.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -180,7 +186,7 @@
         <h3>Wormpocalypse</h3>
       </div>
     </a>
-    <a class="card" href="../games/gem-twins.html">
+    <a class="card" href="../games/gem-twins.html" data-name="gem twins">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/gem-twins/cover/gem-twins.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -188,7 +194,7 @@
         <h3>Gem Twins</h3>
       </div>
     </a>
-    <a class="card" href="../games/jungle-game.html">
+    <a class="card" href="../games/jungle-game.html" data-name="jungle game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/jungle-game-ui/cover/jungle-game-ui.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -196,7 +202,7 @@
         <h3>Jungle Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/boing-bang.html">
+    <a class="card" href="../games/boing-bang.html" data-name="boing bang">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/boing-bang/cover/boing-bang.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -204,7 +210,7 @@
         <h3>Boing Bang</h3>
       </div>
     </a>
-    <a class="card" href="../games/dotto-botto.html">
+    <a class="card" href="../games/dotto-botto.html" data-name="dotto botto">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/dotto-botto/cover/dotto-botto.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -213,7 +219,34 @@
       </div>
     </a>
   </div>
+
+  <p id="category-no-results" style="display:none; color:var(--muted); font-size:14px; margin-top:20px;">
+    No games found for "<span id="category-no-results-term"></span>".
+  </p>
 </div>
+
+<script>
+  (function() {
+    const searchInput = document.getElementById('category-search');
+    const cards = Array.from(document.querySelectorAll('#category-grid .card'));
+    const resultCount = document.getElementById('category-result-count');
+    const noResults = document.getElementById('category-no-results');
+    const noResultsTerm = document.getElementById('category-no-results-term');
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const match = !q || (card.dataset.name && card.dataset.name.includes(q));
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      resultCount.textContent = visible + (visible === 1 ? ' game' : ' games');
+      noResults.style.display = visible === 0 ? '' : 'none';
+      if (visible === 0) noResultsTerm.textContent = searchInput.value.trim();
+    });
+  })();
+</script>
 
 <footer class="site-footer">
   <span>© Pixelsprout — Play. Grow. Explore. Some games provided via GamePix.</span>

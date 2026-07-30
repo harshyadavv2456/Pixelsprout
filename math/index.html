@@ -51,8 +51,14 @@
     <p>Browse 16 free math games, playable instantly in your browser. No downloads, no accounts, no waiting — just click and play. New math games are added regularly, so check back for more.</p>
   </div>
 
-  <div class="category-grid">
-    <a class="card" href="../games/hexa-merge-puzzle.html">
+  <div class="search-row" style="margin-bottom:16px;">
+    <input type="text" id="category-search" placeholder="Search Math games..." autocomplete="off"
+      style="width:100%; max-width:400px; padding:10px 16px; border-radius:999px; border:1px solid var(--border); background:var(--panel); color:var(--paper); font-size:14px;">
+    <span id="category-result-count" style="margin-left:10px; font-size:13px; color:var(--muted);">16 games</span>
+  </div>
+
+  <div class="category-grid" id="category-grid">
+    <a class="card" href="../games/hexa-merge-puzzle.html" data-name="hexa merge puzzle">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/hexa-merge-puzzle/cover/hexa-merge-puzzle.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -60,7 +66,7 @@
         <h3>Hexa Merge Puzzle</h3>
       </div>
     </a>
-    <a class="card" href="../games/mathwiz.html">
+    <a class="card" href="../games/mathwiz.html" data-name="mathwiz">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/mathwiz/cover/mathwiz.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -68,7 +74,7 @@
         <h3>MathWiz</h3>
       </div>
     </a>
-    <a class="card" href="../games/merge-master-puzzle.html">
+    <a class="card" href="../games/merge-master-puzzle.html" data-name="merge master - puzzle">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/merge-master-puzzle/cover/merge-master-puzzle.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -76,7 +82,7 @@
         <h3>Merge Master - Puzzle</h3>
       </div>
     </a>
-    <a class="card" href="../games/2048-drag-and-drop.html">
+    <a class="card" href="../games/2048-drag-and-drop.html" data-name="2048 drag and drop">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/2048-drag-and-drop/cover/2048-drag-and-drop.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -84,7 +90,7 @@
         <h3>2048 Drag and Drop</h3>
       </div>
     </a>
-    <a class="card" href="../games/skibidi-toilet-math-challenge.html">
+    <a class="card" href="../games/skibidi-toilet-math-challenge.html" data-name="skibidi toilet math challenge">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/skibidi-toilet-math-challenge/cover/skibidi-toilet-math-challenge.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -92,7 +98,7 @@
         <h3>Skibidi Toilet Math challenge</h3>
       </div>
     </a>
-    <a class="card" href="../games/get-10-ultimate.html">
+    <a class="card" href="../games/get-10-ultimate.html" data-name="get 10 ultimate">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/get-10-ultimate/cover/get-10-ultimate.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -100,7 +106,7 @@
         <h3>Get 10 Ultimate</h3>
       </div>
     </a>
-    <a class="card" href="../games/math-fight-club.html">
+    <a class="card" href="../games/math-fight-club.html" data-name="math fight club">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/math-fight-club/cover/math-fight-club.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -108,7 +114,7 @@
         <h3>Math Fight Club</h3>
       </div>
     </a>
-    <a class="card" href="../games/number-sums.html">
+    <a class="card" href="../games/number-sums.html" data-name="number sums">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/number-sum/cover/number-sum.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -116,7 +122,7 @@
         <h3>Number Sums</h3>
       </div>
     </a>
-    <a class="card" href="../games/merge-to-million.html">
+    <a class="card" href="../games/merge-to-million.html" data-name="merge to million">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/merge-to-million/cover/merge-to-million.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -124,7 +130,7 @@
         <h3>Merge To Million</h3>
       </div>
     </a>
-    <a class="card" href="../games/flags-maniac.html">
+    <a class="card" href="../games/flags-maniac.html" data-name="flags maniac">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/flags-maniac/cover/flags-maniac.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -132,7 +138,7 @@
         <h3>Flags Maniac</h3>
       </div>
     </a>
-    <a class="card" href="../games/scary-math.html">
+    <a class="card" href="../games/scary-math.html" data-name="scary math">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/scary-math/cover/scary-math.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -140,7 +146,7 @@
         <h3>Scary Math</h3>
       </div>
     </a>
-    <a class="card" href="../games/get-10.html">
+    <a class="card" href="../games/get-10.html" data-name="get 10">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/get-10/cover/get-10.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -148,7 +154,7 @@
         <h3>Get 10</h3>
       </div>
     </a>
-    <a class="card" href="../games/heart-calcopus.html">
+    <a class="card" href="../games/heart-calcopus.html" data-name="heart calcopus">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/heart-calcopus/cover/heart-calcopus.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -156,7 +162,7 @@
         <h3>Heart Calcopus</h3>
       </div>
     </a>
-    <a class="card" href="../games/super-chains.html">
+    <a class="card" href="../games/super-chains.html" data-name="super chains">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/super-chains/cover/super-chains.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -164,7 +170,7 @@
         <h3>Super Chains</h3>
       </div>
     </a>
-    <a class="card" href="../games/2048.html">
+    <a class="card" href="../games/2048.html" data-name="2048">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/2048/cover/2048.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -172,7 +178,7 @@
         <h3>2048</h3>
       </div>
     </a>
-    <a class="card" href="../games/kobadoo-arithmetic.html">
+    <a class="card" href="../games/kobadoo-arithmetic.html" data-name="kobadoo arithmetic">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/kobadoo-arithmetic/cover/kobadoo-arithmetic.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -181,7 +187,34 @@
       </div>
     </a>
   </div>
+
+  <p id="category-no-results" style="display:none; color:var(--muted); font-size:14px; margin-top:20px;">
+    No games found for "<span id="category-no-results-term"></span>".
+  </p>
 </div>
+
+<script>
+  (function() {
+    const searchInput = document.getElementById('category-search');
+    const cards = Array.from(document.querySelectorAll('#category-grid .card'));
+    const resultCount = document.getElementById('category-result-count');
+    const noResults = document.getElementById('category-no-results');
+    const noResultsTerm = document.getElementById('category-no-results-term');
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const match = !q || (card.dataset.name && card.dataset.name.includes(q));
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      resultCount.textContent = visible + (visible === 1 ? ' game' : ' games');
+      noResults.style.display = visible === 0 ? '' : 'none';
+      if (visible === 0) noResultsTerm.textContent = searchInput.value.trim();
+    });
+  })();
+</script>
 
 <footer class="site-footer">
   <span>© Pixelsprout — Play. Grow. Explore. Some games provided via GamePix.</span>

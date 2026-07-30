@@ -51,8 +51,14 @@
     <p>Browse 44 free simulation games, playable instantly in your browser. No downloads, no accounts, no waiting — just click and play. New simulation games are added regularly, so check back for more.</p>
   </div>
 
-  <div class="category-grid">
-    <a class="card" href="../games/the-stone-miner.html">
+  <div class="search-row" style="margin-bottom:16px;">
+    <input type="text" id="category-search" placeholder="Search Simulation games..." autocomplete="off"
+      style="width:100%; max-width:400px; padding:10px 16px; border-radius:999px; border:1px solid var(--border); background:var(--panel); color:var(--paper); font-size:14px;">
+    <span id="category-result-count" style="margin-left:10px; font-size:13px; color:var(--muted);">44 games</span>
+  </div>
+
+  <div class="category-grid" id="category-grid">
+    <a class="card" href="../games/the-stone-miner.html" data-name="the stone miner">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/the-stone-miner/cover/the-stone-miner.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -60,7 +66,7 @@
         <h3>The Stone Miner</h3>
       </div>
     </a>
-    <a class="card" href="../games/moscow-metro-driver-3d.html">
+    <a class="card" href="../games/moscow-metro-driver-3d.html" data-name="moscow metro driver 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/moscow-metro-driver-3d/cover/moscow-metro-driver-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -68,7 +74,7 @@
         <h3>Moscow Metro Driver 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/emergency-ambulance-driving-game.html">
+    <a class="card" href="../games/emergency-ambulance-driving-game.html" data-name="emergency ambulance driving game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/emergency-ambulance-driving-game/cover/emergency-ambulance-driving-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -76,7 +82,7 @@
         <h3>Emergency Ambulance Driving Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/iam-security.html">
+    <a class="card" href="../games/iam-security.html" data-name="iam security">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/iam-security/cover/iam-security.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -84,7 +90,7 @@
         <h3>Iam Security</h3>
       </div>
     </a>
-    <a class="card" href="../games/craftmart.html">
+    <a class="card" href="../games/craftmart.html" data-name="craftmart">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/craftmart/cover/craftmart.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -92,7 +98,7 @@
         <h3>CraftMart</h3>
       </div>
     </a>
-    <a class="card" href="../games/blade-forge-3d.html">
+    <a class="card" href="../games/blade-forge-3d.html" data-name="blade forge 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/blade-forge-3d/cover/blade-forge-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -100,7 +106,7 @@
         <h3>Blade Forge 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/pixel-cat-simulator-my-pets.html">
+    <a class="card" href="../games/pixel-cat-simulator-my-pets.html" data-name="pixel cat simulator my pets">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/pixel-cat-simulator-my-pets/cover/pixel-cat-simulator-my-pets.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -108,7 +114,7 @@
         <h3>Pixel Cat Simulator My Pets</h3>
       </div>
     </a>
-    <a class="card" href="../games/my-style-hotel-empire.html">
+    <a class="card" href="../games/my-style-hotel-empire.html" data-name="my style hotel empire">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/my-style-hotel-empire/cover/my-style-hotel-empire.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -116,7 +122,7 @@
         <h3>My Style Hotel Empire</h3>
       </div>
     </a>
-    <a class="card" href="../games/italian-brainrot-call.html">
+    <a class="card" href="../games/italian-brainrot-call.html" data-name="italian brainrot call">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/italian-brainrot-call/cover/italian-brainrot-call.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -124,7 +130,7 @@
         <h3>Italian Brainrot Call</h3>
       </div>
     </a>
-    <a class="card" href="../games/supermarket-simulator.html">
+    <a class="card" href="../games/supermarket-simulator.html" data-name="supermarket simulator">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/supermarket-simulator-1/cover/supermarket-simulator-1.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -132,7 +138,7 @@
         <h3>Supermarket Simulator</h3>
       </div>
     </a>
-    <a class="card" href="../games/scary-shawarma-kiosk-the-anomaly.html">
+    <a class="card" href="../games/scary-shawarma-kiosk-the-anomaly.html" data-name="scary shawarma kiosk the anomaly">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/scary-shawarma-kiosk-the-anomaly/cover/scary-shawarma-kiosk-the-anomaly.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -140,7 +146,7 @@
         <h3>Scary Shawarma Kiosk the Anomaly</h3>
       </div>
     </a>
-    <a class="card" href="../games/hill-travel-3d.html">
+    <a class="card" href="../games/hill-travel-3d.html" data-name="hill travel 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/hill-travel-3d/cover/hill-travel-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -148,7 +154,7 @@
         <h3>Hill Travel 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/woodturning-simulator.html">
+    <a class="card" href="../games/woodturning-simulator.html" data-name="woodturning simulator">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/woodturning-simulator-1/cover/woodturning-simulator-1.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -156,7 +162,7 @@
         <h3>Woodturning Simulator</h3>
       </div>
     </a>
-    <a class="card" href="../games/lovely-cat-pet-life.html">
+    <a class="card" href="../games/lovely-cat-pet-life.html" data-name="lovely cat pet life">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/lovely-cat-pet-life/cover/lovely-cat-pet-life.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -164,7 +170,7 @@
         <h3>Lovely Cat Pet Life</h3>
       </div>
     </a>
-    <a class="card" href="../games/cinema-empire-idle-tycoon.html">
+    <a class="card" href="../games/cinema-empire-idle-tycoon.html" data-name="cinema empire idle tycoon">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/cinema-empire-idle-tycoon/cover/cinema-empire-idle-tycoon.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -172,7 +178,7 @@
         <h3>Cinema Empire Idle Tycoon</h3>
       </div>
     </a>
-    <a class="card" href="../games/cat-chaos-simulator.html">
+    <a class="card" href="../games/cat-chaos-simulator.html" data-name="cat chaos simulator">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/cat-chaos-simulator/cover/cat-chaos-simulator.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -180,7 +186,7 @@
         <h3>Cat Chaos Simulator</h3>
       </div>
     </a>
-    <a class="card" href="../games/idle-game-prison-life.html">
+    <a class="card" href="../games/idle-game-prison-life.html" data-name="idle game prison life">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/idle-game-prison-life/cover/idle-game-prison-life.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -188,7 +194,7 @@
         <h3>Idle Game Prison Life</h3>
       </div>
     </a>
-    <a class="card" href="../games/pixels-supermarket-simulator.html">
+    <a class="card" href="../games/pixels-supermarket-simulator.html" data-name="pixels supermarket simulator">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/pixels-supermarket-simulator/cover/pixels-supermarket-simulator.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -196,7 +202,7 @@
         <h3>Pixels Supermarket Simulator</h3>
       </div>
     </a>
-    <a class="card" href="../games/pregnant-mommy-care-mother-simulator.html">
+    <a class="card" href="../games/pregnant-mommy-care-mother-simulator.html" data-name="pregnant mommy care - mother simulator">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/mother-simulator-mom-games/cover/mother-simulator-mom-games.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -204,7 +210,7 @@
         <h3>Pregnant Mommy Care - Mother Simulator</h3>
       </div>
     </a>
-    <a class="card" href="../games/car-mechanic-simulator-2025.html">
+    <a class="card" href="../games/car-mechanic-simulator-2025.html" data-name="car mechanic simulator 2025">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/car-mechanic-simulator-2025/cover/car-mechanic-simulator-2025.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -212,7 +218,7 @@
         <h3>Car Mechanic Simulator 2025</h3>
       </div>
     </a>
-    <a class="card" href="../games/crazy-goose-simulator.html">
+    <a class="card" href="../games/crazy-goose-simulator.html" data-name="crazy goose simulator">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/crazy-goose-simulator/cover/crazy-goose-simulator.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -220,7 +226,7 @@
         <h3>Crazy Goose Simulator</h3>
       </div>
     </a>
-    <a class="card" href="../games/airport-security-3d.html">
+    <a class="card" href="../games/airport-security-3d.html" data-name="airport security 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/airport-security-3d/cover/airport-security-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -228,7 +234,7 @@
         <h3>Airport Security 3d</h3>
       </div>
     </a>
-    <a class="card" href="../games/moutain-jeep-drive.html">
+    <a class="card" href="../games/moutain-jeep-drive.html" data-name="moutain jeep drive">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/moutain-jeep-drive/cover/moutain-jeep-drive.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -236,7 +242,7 @@
         <h3>Moutain Jeep Drive</h3>
       </div>
     </a>
-    <a class="card" href="../games/construction-site-simulator.html">
+    <a class="card" href="../games/construction-site-simulator.html" data-name="construction site simulator">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/construction-site-simulator/cover/construction-site-simulator.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -244,7 +250,7 @@
         <h3>Construction Site Simulator</h3>
       </div>
     </a>
-    <a class="card" href="../games/spaceflight-simulator.html">
+    <a class="card" href="../games/spaceflight-simulator.html" data-name="spaceflight simulator">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/spaceflight-simulator/cover/spaceflight-simulator.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -252,7 +258,7 @@
         <h3>Spaceflight Simulator</h3>
       </div>
     </a>
-    <a class="card" href="../games/truck-simulator-power-slider.html">
+    <a class="card" href="../games/truck-simulator-power-slider.html" data-name="truck simulator power slider">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/truck-simulator-power-slider/cover/truck-simulator-power-slider.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -260,7 +266,7 @@
         <h3>Truck Simulator Power Slider</h3>
       </div>
     </a>
-    <a class="card" href="../games/do-not-feed-the-monkeys.html">
+    <a class="card" href="../games/do-not-feed-the-monkeys.html" data-name="do not feed the monkeys">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/do-not-feed-the-monkeys/cover/do-not-feed-the-monkeys.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -268,7 +274,7 @@
         <h3>Do Not Feed the Monkeys</h3>
       </div>
     </a>
-    <a class="card" href="../games/offroad-4x4-driving-simulator.html">
+    <a class="card" href="../games/offroad-4x4-driving-simulator.html" data-name="offroad 4x4 driving simulator">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/offroad-4x4-driving-simulator/cover/offroad-4x4-driving-simulator.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -276,7 +282,7 @@
         <h3>OffRoad 4x4 Driving Simulator</h3>
       </div>
     </a>
-    <a class="card" href="../games/hole-digger-in-russia.html">
+    <a class="card" href="../games/hole-digger-in-russia.html" data-name="hole digger in russia">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/dig-a-hole-in-russia/cover/dig-a-hole-in-russia.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -284,7 +290,7 @@
         <h3>Hole Digger in Russia</h3>
       </div>
     </a>
-    <a class="card" href="../games/the-windows-game.html">
+    <a class="card" href="../games/the-windows-game.html" data-name="the windows game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/the-windows-game/cover/the-windows-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -292,7 +298,7 @@
         <h3>The Windows Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/cat-from-hell-cat-simulator.html">
+    <a class="card" href="../games/cat-from-hell-cat-simulator.html" data-name="cat from hell cat simulator">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/cat-from-hell-cat-simulator/cover/cat-from-hell-cat-simulator.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -300,7 +306,7 @@
         <h3>Cat From Hell Cat Simulator</h3>
       </div>
     </a>
-    <a class="card" href="../games/multi-surgery-hospital-games.html">
+    <a class="card" href="../games/multi-surgery-hospital-games.html" data-name="multi surgery hospital games">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/multi-surgery-hospital-games/cover/multi-surgery-hospital-games.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -308,7 +314,7 @@
         <h3>Multi Surgery Hospital Games</h3>
       </div>
     </a>
-    <a class="card" href="../games/junkyard-keeper.html">
+    <a class="card" href="../games/junkyard-keeper.html" data-name="junkyard keeper">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/junkyard-keeper/cover/junkyard-keeper.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -316,7 +322,7 @@
         <h3>Junkyard Keeper</h3>
       </div>
     </a>
-    <a class="card" href="../games/last-play-ragdoll-sandbox.html">
+    <a class="card" href="../games/last-play-ragdoll-sandbox.html" data-name="last play. ragdoll sandbox">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/last-play-ragdoll-sandbox/cover/last-play-ragdoll-sandbox.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -324,7 +330,7 @@
         <h3>Last Play. Ragdoll Sandbox</h3>
       </div>
     </a>
-    <a class="card" href="../games/prison-break-architect-tycoon.html">
+    <a class="card" href="../games/prison-break-architect-tycoon.html" data-name="prison break architect tycoon">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/prison-break-architect-tycoon/cover/prison-break-architect-tycoon.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -332,7 +338,7 @@
         <h3>Prison Break Architect Tycoon</h3>
       </div>
     </a>
-    <a class="card" href="../games/idle-influencer-simulator.html">
+    <a class="card" href="../games/idle-influencer-simulator.html" data-name="idle influencer simulator">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/idle-influencer-simulator/cover/idle-influencer-simulator.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -340,7 +346,7 @@
         <h3>Idle Influencer Simulator</h3>
       </div>
     </a>
-    <a class="card" href="../games/my-city-hospital.html">
+    <a class="card" href="../games/my-city-hospital.html" data-name="my city hospital">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/my-city-hospital/cover/my-city-hospital.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -348,7 +354,7 @@
         <h3>My City Hospital</h3>
       </div>
     </a>
-    <a class="card" href="../games/gram-simulator.html">
+    <a class="card" href="../games/gram-simulator.html" data-name="gram simulator">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/gram-simulator/cover/gram-simulator.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -356,7 +362,7 @@
         <h3>Gram Simulator</h3>
       </div>
     </a>
-    <a class="card" href="../games/emergency-dispatcher-911.html">
+    <a class="card" href="../games/emergency-dispatcher-911.html" data-name="emergency dispatcher 911">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/emergency-dispatcher-911/cover/emergency-dispatcher-911.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -364,7 +370,7 @@
         <h3>Emergency Dispatcher 911</h3>
       </div>
     </a>
-    <a class="card" href="../games/gas-station-stick-simulator.html">
+    <a class="card" href="../games/gas-station-stick-simulator.html" data-name="gas station - stick simulator">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/gas-station-stick-simulator/cover/gas-station-stick-simulator.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -372,7 +378,7 @@
         <h3>Gas Station - Stick Simulator</h3>
       </div>
     </a>
-    <a class="card" href="../games/supermarket-simulator-dream-store.html">
+    <a class="card" href="../games/supermarket-simulator-dream-store.html" data-name="supermarket simulator dream store">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/supermarket-simulator-dream-store/cover/supermarket-simulator-dream-store.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -380,7 +386,7 @@
         <h3>Supermarket Simulator Dream Store</h3>
       </div>
     </a>
-    <a class="card" href="../games/battle-simulator-sandbox.html">
+    <a class="card" href="../games/battle-simulator-sandbox.html" data-name="battle simulator - sandbox">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/battle-simulator-sandbox/cover/battle-simulator-sandbox.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -388,7 +394,7 @@
         <h3>Battle Simulator - Sandbox</h3>
       </div>
     </a>
-    <a class="card" href="../games/body-drop-3d.html">
+    <a class="card" href="../games/body-drop-3d.html" data-name="body drop 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/body-drop-3d/cover/body-drop-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -396,7 +402,7 @@
         <h3>Body Drop 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/bus-driver-simulator-3d.html">
+    <a class="card" href="../games/bus-driver-simulator-3d.html" data-name="bus driver simulator 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/bus-driver-simulator-3d/cover/bus-driver-simulator-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -405,7 +411,34 @@
       </div>
     </a>
   </div>
+
+  <p id="category-no-results" style="display:none; color:var(--muted); font-size:14px; margin-top:20px;">
+    No games found for "<span id="category-no-results-term"></span>".
+  </p>
 </div>
+
+<script>
+  (function() {
+    const searchInput = document.getElementById('category-search');
+    const cards = Array.from(document.querySelectorAll('#category-grid .card'));
+    const resultCount = document.getElementById('category-result-count');
+    const noResults = document.getElementById('category-no-results');
+    const noResultsTerm = document.getElementById('category-no-results-term');
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const match = !q || (card.dataset.name && card.dataset.name.includes(q));
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      resultCount.textContent = visible + (visible === 1 ? ' game' : ' games');
+      noResults.style.display = visible === 0 ? '' : 'none';
+      if (visible === 0) noResultsTerm.textContent = searchInput.value.trim();
+    });
+  })();
+</script>
 
 <footer class="site-footer">
   <span>© Pixelsprout — Play. Grow. Explore. Some games provided via GamePix.</span>

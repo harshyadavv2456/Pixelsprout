@@ -51,8 +51,14 @@
     <p>Browse 18 free skibidi-toilet games, playable instantly in your browser. No downloads, no accounts, no waiting — just click and play. New skibidi-toilet games are added regularly, so check back for more.</p>
   </div>
 
-  <div class="category-grid">
-    <a class="card" href="../games/skibidi-head-roll.html">
+  <div class="search-row" style="margin-bottom:16px;">
+    <input type="text" id="category-search" placeholder="Search Skibidi-Toilet games..." autocomplete="off"
+      style="width:100%; max-width:400px; padding:10px 16px; border-radius:999px; border:1px solid var(--border); background:var(--panel); color:var(--paper); font-size:14px;">
+    <span id="category-result-count" style="margin-left:10px; font-size:13px; color:var(--muted);">18 games</span>
+  </div>
+
+  <div class="category-grid" id="category-grid">
+    <a class="card" href="../games/skibidi-head-roll.html" data-name="skibidi head roll">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/skibidi-head-roll/cover/skibidi-head-roll.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -60,7 +66,7 @@
         <h3>Skibidi Head Roll</h3>
       </div>
     </a>
-    <a class="card" href="../games/skibidi-toilet-tall-neck.html">
+    <a class="card" href="../games/skibidi-toilet-tall-neck.html" data-name="skibidi toilet - tall neck">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/skibidi-toilet-tall-neck/cover/skibidi-toilet-tall-neck.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -68,7 +74,7 @@
         <h3>Skibidi Toilet - Tall Neck</h3>
       </div>
     </a>
-    <a class="card" href="../games/skibidi-toilet-five-difference-2.html">
+    <a class="card" href="../games/skibidi-toilet-five-difference-2.html" data-name="skibidi toilet five difference 2">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/skibidi-toilet-five-difference-2/cover/skibidi-toilet-five-difference-2.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -76,7 +82,7 @@
         <h3>Skibidi Toilet Five Difference 2</h3>
       </div>
     </a>
-    <a class="card" href="../games/agent-cameraman-skibidi-toilet.html">
+    <a class="card" href="../games/agent-cameraman-skibidi-toilet.html" data-name="agent cameraman skibidi toilet">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/agent-cameraman-skibidi-toilet/cover/agent-cameraman-skibidi-toilet.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -84,7 +90,7 @@
         <h3>Agent Cameraman Skibidi Toilet</h3>
       </div>
     </a>
-    <a class="card" href="../games/skibidi-toilet-and-titans.html">
+    <a class="card" href="../games/skibidi-toilet-and-titans.html" data-name="skibidi toilet and titans">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/skibidi-toilet-and-titans/cover/skibidi-toilet-and-titans.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -92,7 +98,7 @@
         <h3>Skibidi Toilet and Titans</h3>
       </div>
     </a>
-    <a class="card" href="../games/fnf-skibidi-toilet-dance-party.html">
+    <a class="card" href="../games/fnf-skibidi-toilet-dance-party.html" data-name="fnf skibidi toilet dance party">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/fnf-skibidi-toilet-dance-party/cover/fnf-skibidi-toilet-dance-party.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -100,7 +106,7 @@
         <h3>FNF Skibidi Toilet Dance Party</h3>
       </div>
     </a>
-    <a class="card" href="../games/when-granny-met-grimace-shake.html">
+    <a class="card" href="../games/when-granny-met-grimace-shake.html" data-name="when granny met grimace shake">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/when-granny-met-grimace-shake/cover/when-granny-met-grimace-shake.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -108,7 +114,7 @@
         <h3>When Granny Met Grimace Shake</h3>
       </div>
     </a>
-    <a class="card" href="../games/skibidi-toilet-vs-sigma-merge.html">
+    <a class="card" href="../games/skibidi-toilet-vs-sigma-merge.html" data-name="skibidi toilet vs sigma merge">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/skibidi-toilet-vs-sigma-merge/cover/skibidi-toilet-vs-sigma-merge.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -116,7 +122,7 @@
         <h3>Skibidi Toilet vs Sigma Merge</h3>
       </div>
     </a>
-    <a class="card" href="../games/grimace-shake-hidden-skibidi-toilet.html">
+    <a class="card" href="../games/grimace-shake-hidden-skibidi-toilet.html" data-name="grimace shake hidden skibidi toilet">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/grimace-shake-hidden-skibidi-toilet/cover/grimace-shake-hidden-skibidi-toilet.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -124,7 +130,7 @@
         <h3>Grimace Shake Hidden Skibidi Toilet</h3>
       </div>
     </a>
-    <a class="card" href="../games/skibidi-laboratory.html">
+    <a class="card" href="../games/skibidi-laboratory.html" data-name="skibidi laboratory">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/skibidi-laboratory/cover/skibidi-laboratory.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -132,7 +138,7 @@
         <h3>Skibidi Laboratory</h3>
       </div>
     </a>
-    <a class="card" href="../games/join-skibidi-clash-3d.html">
+    <a class="card" href="../games/join-skibidi-clash-3d.html" data-name="join skibidi clash 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/join-skibidi-clash-3d-1/cover/join-skibidi-clash-3d-1.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -140,7 +146,7 @@
         <h3>Join Skibidi Clash 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/skibidi-toilet-moto-bike-racing-2.html">
+    <a class="card" href="../games/skibidi-toilet-moto-bike-racing-2.html" data-name="skibidi toilet moto bike racing 2">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/skibidi-toilet-moto-bike-racing-2/cover/skibidi-toilet-moto-bike-racing-2.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -148,7 +154,7 @@
         <h3>Skibidi Toilet Moto Bike Racing 2</h3>
       </div>
     </a>
-    <a class="card" href="../games/skibidi-toilet-adventure.html">
+    <a class="card" href="../games/skibidi-toilet-adventure.html" data-name="skibidi toilet adventure">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/skibidi-toilet-adventure/cover/skibidi-toilet-adventure.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -156,7 +162,7 @@
         <h3>Skibidi Toilet Adventure</h3>
       </div>
     </a>
-    <a class="card" href="../games/truck-simulator-skibidi-toilet.html">
+    <a class="card" href="../games/truck-simulator-skibidi-toilet.html" data-name="truck simulator skibidi toilet">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/truck-simulator-skibidi-toilet/cover/truck-simulator-skibidi-toilet.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -164,7 +170,7 @@
         <h3>Truck Simulator Skibidi Toilet</h3>
       </div>
     </a>
-    <a class="card" href="../games/shoots-skibidi-dop-dop-yes-yes.html">
+    <a class="card" href="../games/shoots-skibidi-dop-dop-yes-yes.html" data-name="shoots skibidi dop dop yes yes">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/shoots-skibidi-dop-dop-yes-yes/cover/shoots-skibidi-dop-dop-yes-yes.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -172,7 +178,7 @@
         <h3>Shoots Skibidi Dop Dop Yes Yes</h3>
       </div>
     </a>
-    <a class="card" href="../games/speakerman-vs-skibidi-toilet.html">
+    <a class="card" href="../games/speakerman-vs-skibidi-toilet.html" data-name="speakerman vs skibidi toilet">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/speakerman-vs-skibidi-toilet/cover/speakerman-vs-skibidi-toilet.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -180,7 +186,7 @@
         <h3>Speakerman Vs Skibidi Toilet</h3>
       </div>
     </a>
-    <a class="card" href="../games/minecraft-skibidi-hidden-toilet.html">
+    <a class="card" href="../games/minecraft-skibidi-hidden-toilet.html" data-name="minecraft skibidi hidden toilet">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/minecraft-skibidi-hidden-toilet/cover/minecraft-skibidi-hidden-toilet.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -188,7 +194,7 @@
         <h3>Minecraft Skibidi Hidden Toilet</h3>
       </div>
     </a>
-    <a class="card" href="../games/heads-up-skibidi.html">
+    <a class="card" href="../games/heads-up-skibidi.html" data-name="heads up skibidi">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/heads-up-skibidi/cover/heads-up-skibidi.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -197,7 +203,34 @@
       </div>
     </a>
   </div>
+
+  <p id="category-no-results" style="display:none; color:var(--muted); font-size:14px; margin-top:20px;">
+    No games found for "<span id="category-no-results-term"></span>".
+  </p>
 </div>
+
+<script>
+  (function() {
+    const searchInput = document.getElementById('category-search');
+    const cards = Array.from(document.querySelectorAll('#category-grid .card'));
+    const resultCount = document.getElementById('category-result-count');
+    const noResults = document.getElementById('category-no-results');
+    const noResultsTerm = document.getElementById('category-no-results-term');
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const match = !q || (card.dataset.name && card.dataset.name.includes(q));
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      resultCount.textContent = visible + (visible === 1 ? ' game' : ' games');
+      noResults.style.display = visible === 0 ? '' : 'none';
+      if (visible === 0) noResultsTerm.textContent = searchInput.value.trim();
+    });
+  })();
+</script>
 
 <footer class="site-footer">
   <span>© Pixelsprout — Play. Grow. Explore. Some games provided via GamePix.</span>

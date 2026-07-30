@@ -51,8 +51,14 @@
     <p>Browse 27 free zombie games, playable instantly in your browser. No downloads, no accounts, no waiting — just click and play. New zombie games are added regularly, so check back for more.</p>
   </div>
 
-  <div class="category-grid">
-    <a class="card" href="../games/project-survival.html">
+  <div class="search-row" style="margin-bottom:16px;">
+    <input type="text" id="category-search" placeholder="Search Zombie games..." autocomplete="off"
+      style="width:100%; max-width:400px; padding:10px 16px; border-radius:999px; border:1px solid var(--border); background:var(--panel); color:var(--paper); font-size:14px;">
+    <span id="category-result-count" style="margin-left:10px; font-size:13px; color:var(--muted);">27 games</span>
+  </div>
+
+  <div class="category-grid" id="category-grid">
+    <a class="card" href="../games/project-survival.html" data-name="project: survival">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/project-survival/cover/project-survival.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -60,7 +66,7 @@
         <h3>Project: Survival</h3>
       </div>
     </a>
-    <a class="card" href="../games/machine-gun-boy.html">
+    <a class="card" href="../games/machine-gun-boy.html" data-name="machine gun boy">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/machine-gun-boy/cover/machine-gun-boy.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -68,7 +74,7 @@
         <h3>Machine Gun Boy</h3>
       </div>
     </a>
-    <a class="card" href="../games/nubiks-build-a-defense-vs-zombies.html">
+    <a class="card" href="../games/nubiks-build-a-defense-vs-zombies.html" data-name="nubiks build a defense vs zombies">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/nubiks-build-a-defense-vs-zombies/cover/nubiks-build-a-defense-vs-zombies.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -76,7 +82,7 @@
         <h3>Nubiks Build a Defense vs Zombies</h3>
       </div>
     </a>
-    <a class="card" href="../games/survive-the-zombies.html">
+    <a class="card" href="../games/survive-the-zombies.html" data-name="survive the zombies">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/survive-the-zombies/cover/survive-the-zombies.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -84,7 +90,7 @@
         <h3>Survive the Zombies</h3>
       </div>
     </a>
-    <a class="card" href="../games/city-of-the-dead-zombie-shooter.html">
+    <a class="card" href="../games/city-of-the-dead-zombie-shooter.html" data-name="city of the dead zombie shooter">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/city-of-the-dead-zombie-shooter/cover/city-of-the-dead-zombie-shooter.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -92,7 +98,7 @@
         <h3>City of the Dead Zombie Shooter</h3>
       </div>
     </a>
-    <a class="card" href="../games/mincraft-zombie-survival.html">
+    <a class="card" href="../games/mincraft-zombie-survival.html" data-name="mincraft zombie survival">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/minecraft-zombie-survial/cover/minecraft-zombie-survial.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -100,7 +106,7 @@
         <h3>Mincraft Zombie Survival</h3>
       </div>
     </a>
-    <a class="card" href="../games/zombie-drive-drift.html">
+    <a class="card" href="../games/zombie-drive-drift.html" data-name="zombie drive drift">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/zombie-drive-drift/cover/zombie-drive-drift.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -108,7 +114,7 @@
         <h3>Zombie Drive Drift</h3>
       </div>
     </a>
-    <a class="card" href="../games/zombie-den-the-lone-survivor.html">
+    <a class="card" href="../games/zombie-den-the-lone-survivor.html" data-name="zombie den: the lone survivor">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/zombie-den-the-lone-survivor/cover/zombie-den-the-lone-survivor.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -116,7 +122,7 @@
         <h3>Zombie Den: The Lone Survivor</h3>
       </div>
     </a>
-    <a class="card" href="../games/survivor-s-nightmare.html">
+    <a class="card" href="../games/survivor-s-nightmare.html" data-name="survivor's nightmare">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/survivors-nightmare/cover/survivors-nightmare.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -124,7 +130,7 @@
         <h3>Survivor's Nightmare</h3>
       </div>
     </a>
-    <a class="card" href="../games/zombie-runner.html">
+    <a class="card" href="../games/zombie-runner.html" data-name="zombie runner">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/zombie-runner/cover/zombie-runner.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -132,7 +138,7 @@
         <h3>Zombie Runner</h3>
       </div>
     </a>
-    <a class="card" href="../games/zombie-apocalypse.html">
+    <a class="card" href="../games/zombie-apocalypse.html" data-name="zombie apocalypse">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/zombie-apocalypse/cover/zombie-apocalypse.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -140,7 +146,7 @@
         <h3>Zombie Apocalypse</h3>
       </div>
     </a>
-    <a class="card" href="../games/zombie-auto-defense.html">
+    <a class="card" href="../games/zombie-auto-defense.html" data-name="zombie auto defense">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/zombie-auto-defense/cover/zombie-auto-defense.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -148,7 +154,7 @@
         <h3>Zombie Auto Defense</h3>
       </div>
     </a>
-    <a class="card" href="../games/z-virus-last-hope-demo.html">
+    <a class="card" href="../games/z-virus-last-hope-demo.html" data-name="z-virus last hope demo">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/z-virus-last-hope/cover/z-virus-last-hope.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -156,7 +162,7 @@
         <h3>Z-Virus Last Hope Demo</h3>
       </div>
     </a>
-    <a class="card" href="../games/dead-target-shoot-zombies.html">
+    <a class="card" href="../games/dead-target-shoot-zombies.html" data-name="dead target shoot zombies">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/dead-target-shoot-zombies/cover/dead-target-shoot-zombies.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -164,7 +170,7 @@
         <h3>Dead Target Shoot Zombies</h3>
       </div>
     </a>
-    <a class="card" href="../games/zombie-reaper-shooter.html">
+    <a class="card" href="../games/zombie-reaper-shooter.html" data-name="zombie reaper shooter">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/zombie-reaper-shooter/cover/zombie-reaper-shooter.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -172,7 +178,7 @@
         <h3>Zombie Reaper Shooter</h3>
       </div>
     </a>
-    <a class="card" href="../games/boxbulletcraft.html">
+    <a class="card" href="../games/boxbulletcraft.html" data-name="boxbulletcraft">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/boxbulletcraft/cover/boxbulletcraft.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -180,7 +186,7 @@
         <h3>BoxBulletCraft</h3>
       </div>
     </a>
-    <a class="card" href="../games/zombie-shooter-shooting-game.html">
+    <a class="card" href="../games/zombie-shooter-shooting-game.html" data-name="zombie shooter-shooting game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/zombie-shooter-shooting-game/cover/zombie-shooter-shooting-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -188,7 +194,7 @@
         <h3>Zombie Shooter-Shooting Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/bowmastery-zombies.html">
+    <a class="card" href="../games/bowmastery-zombies.html" data-name="bowmastery - zombies!">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/bowmastery-zombies/cover/bowmastery-zombies.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -196,7 +202,7 @@
         <h3>Bowmastery - Zombies!</h3>
       </div>
     </a>
-    <a class="card" href="../games/survival-commando.html">
+    <a class="card" href="../games/survival-commando.html" data-name="survival commando">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/survival-commando/cover/survival-commando.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -204,7 +210,7 @@
         <h3>Survival Commando</h3>
       </div>
     </a>
-    <a class="card" href="../games/zombie-world.html">
+    <a class="card" href="../games/zombie-world.html" data-name="zombie world">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/zombie-world/cover/zombie-world.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -212,7 +218,7 @@
         <h3>Zombie World</h3>
       </div>
     </a>
-    <a class="card" href="../games/the-zombie-house.html">
+    <a class="card" href="../games/the-zombie-house.html" data-name="the zombie house">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/the-zombie-house/cover/the-zombie-house.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -220,7 +226,7 @@
         <h3>The Zombie House</h3>
       </div>
     </a>
-    <a class="card" href="../games/zombie-killer.html">
+    <a class="card" href="../games/zombie-killer.html" data-name="zombie killer">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/zombie-killer/cover/zombie-killer.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -228,7 +234,7 @@
         <h3>Zombie Killer</h3>
       </div>
     </a>
-    <a class="card" href="../games/demon-killer.html">
+    <a class="card" href="../games/demon-killer.html" data-name="demon killer">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/demon-killer/cover/demon-killer.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -236,7 +242,7 @@
         <h3>Demon Killer</h3>
       </div>
     </a>
-    <a class="card" href="../games/zombie-hunter-survival.html">
+    <a class="card" href="../games/zombie-hunter-survival.html" data-name="zombie hunter survival">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/zombie-hunter-survival/cover/zombie-hunter-survival.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -244,7 +250,7 @@
         <h3>Zombie Hunter Survival</h3>
       </div>
     </a>
-    <a class="card" href="../games/kuli.html">
+    <a class="card" href="../games/kuli.html" data-name="kuli">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/kuli/cover/kuli.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -252,7 +258,7 @@
         <h3>KULI</h3>
       </div>
     </a>
-    <a class="card" href="../games/guns-n-glory-zombies.html">
+    <a class="card" href="../games/guns-n-glory-zombies.html" data-name="guns'n'glory zombies">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/guns-n-glory-zombies/cover/guns-n-glory-zombies.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -260,7 +266,7 @@
         <h3>Guns'n'Glory Zombies</h3>
       </div>
     </a>
-    <a class="card" href="../games/zombie-can-t-jump.html">
+    <a class="card" href="../games/zombie-can-t-jump.html" data-name="zombie can't jump">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/zombie-cant-jump/cover/zombie-cant-jump.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -269,7 +275,34 @@
       </div>
     </a>
   </div>
+
+  <p id="category-no-results" style="display:none; color:var(--muted); font-size:14px; margin-top:20px;">
+    No games found for "<span id="category-no-results-term"></span>".
+  </p>
 </div>
+
+<script>
+  (function() {
+    const searchInput = document.getElementById('category-search');
+    const cards = Array.from(document.querySelectorAll('#category-grid .card'));
+    const resultCount = document.getElementById('category-result-count');
+    const noResults = document.getElementById('category-no-results');
+    const noResultsTerm = document.getElementById('category-no-results-term');
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const match = !q || (card.dataset.name && card.dataset.name.includes(q));
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      resultCount.textContent = visible + (visible === 1 ? ' game' : ' games');
+      noResults.style.display = visible === 0 ? '' : 'none';
+      if (visible === 0) noResultsTerm.textContent = searchInput.value.trim();
+    });
+  })();
+</script>
 
 <footer class="site-footer">
   <span>© Pixelsprout — Play. Grow. Explore. Some games provided via GamePix.</span>

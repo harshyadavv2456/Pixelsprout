@@ -75,10 +75,43 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
     <p>{intro_copy}</p>
   </div>
 
-  <div class="category-grid">
+  <div class="search-row" style="margin-bottom:16px;">
+    <input type="text" id="category-search" placeholder="Search {category} games..." autocomplete="off"
+      style="width:100%; max-width:400px; padding:10px 16px; border-radius:999px; border:1px solid var(--border); background:var(--panel); color:var(--paper); font-size:14px;">
+    <span id="category-result-count" style="margin-left:10px; font-size:13px; color:var(--muted);">{game_count} games</span>
+  </div>
+
+  <div class="category-grid" id="category-grid">
 {cards}
   </div>
+
+  <p id="category-no-results" style="display:none; color:var(--muted); font-size:14px; margin-top:20px;">
+    No games found for "<span id="category-no-results-term"></span>".
+  </p>
 </div>
+
+<script>
+  (function() {{
+    const searchInput = document.getElementById('category-search');
+    const cards = Array.from(document.querySelectorAll('#category-grid .card'));
+    const resultCount = document.getElementById('category-result-count');
+    const noResults = document.getElementById('category-no-results');
+    const noResultsTerm = document.getElementById('category-no-results-term');
+
+    searchInput.addEventListener('input', () => {{
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {{
+        const match = !q || (card.dataset.name && card.dataset.name.includes(q));
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      }});
+      resultCount.textContent = visible + (visible === 1 ? ' game' : ' games');
+      noResults.style.display = visible === 0 ? '' : 'none';
+      if (visible === 0) noResultsTerm.textContent = searchInput.value.trim();
+    }});
+  }})();
+</script>
 
 <footer class="site-footer">
   <span>© Pixelsprout — Play. Grow. Explore. Some games provided via GamePix.</span>
@@ -88,7 +121,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 </html>
 """
 
-CARD_TEMPLATE = """    <a class="card" href="../games/{slug}.html">
+CARD_TEMPLATE = """    <a class="card" href="../games/{slug}.html" data-name="{name_lower}">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="{thumbnail}" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -141,6 +174,7 @@ def main():
                 slug=g["slug"],
                 thumbnail=g.get("thumbnail") or f"{DOMAIN}/assets/logo-icon.png",
                 title=g["title"],
+                name_lower=g["title"].lower(),
             )
             for g in game_list
         )
@@ -154,6 +188,7 @@ def main():
             category=category,
             intro_copy=intro_for(category, len(game_list)),
             cards=cards_html,
+            game_count=len(game_list),
         )
 
         import os

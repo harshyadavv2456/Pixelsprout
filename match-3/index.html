@@ -51,8 +51,14 @@
     <p>Browse 32 free match-3 games, playable instantly in your browser. No downloads, no accounts, no waiting — just click and play. New match-3 games are added regularly, so check back for more.</p>
   </div>
 
-  <div class="category-grid">
-    <a class="card" href="../games/jewel-christmas-mania.html">
+  <div class="search-row" style="margin-bottom:16px;">
+    <input type="text" id="category-search" placeholder="Search Match-3 games..." autocomplete="off"
+      style="width:100%; max-width:400px; padding:10px 16px; border-radius:999px; border:1px solid var(--border); background:var(--panel); color:var(--paper); font-size:14px;">
+    <span id="category-result-count" style="margin-left:10px; font-size:13px; color:var(--muted);">32 games</span>
+  </div>
+
+  <div class="category-grid" id="category-grid">
+    <a class="card" href="../games/jewel-christmas-mania.html" data-name="jewel christmas mania">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/jewel-christmas-mania/cover/jewel-christmas-mania.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -60,7 +66,7 @@
         <h3>Jewel Christmas Mania</h3>
       </div>
     </a>
-    <a class="card" href="../games/garden.html">
+    <a class="card" href="../games/garden.html" data-name="garden">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/garden/cover/garden.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -68,7 +74,7 @@
         <h3>Garden</h3>
       </div>
     </a>
-    <a class="card" href="../games/jewels-crush-match-3-mania.html">
+    <a class="card" href="../games/jewels-crush-match-3-mania.html" data-name="jewels crush match 3 mania">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/jewels-crush-match-3-mania/cover/jewels-crush-match-3-mania.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -76,7 +82,7 @@
         <h3>Jewels Crush Match 3 Mania</h3>
       </div>
     </a>
-    <a class="card" href="../games/orange-ranch.html">
+    <a class="card" href="../games/orange-ranch.html" data-name="orange ranch">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/orange-ranch/cover/orange-ranch.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -84,7 +90,7 @@
         <h3>Orange Ranch</h3>
       </div>
     </a>
-    <a class="card" href="../games/house-design-match-3.html">
+    <a class="card" href="../games/house-design-match-3.html" data-name="house design match 3">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/house-design-match-3/cover/house-design-match-3.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -92,7 +98,7 @@
         <h3>House Design Match 3</h3>
       </div>
     </a>
-    <a class="card" href="../games/tile-fruits.html">
+    <a class="card" href="../games/tile-fruits.html" data-name="tile fruits">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/tile-fruits/cover/tile-fruits.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -100,7 +106,7 @@
         <h3>Tile Fruits</h3>
       </div>
     </a>
-    <a class="card" href="../games/sun-charms.html">
+    <a class="card" href="../games/sun-charms.html" data-name="sun charms">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/sun-charms/cover/sun-charms.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -108,7 +114,7 @@
         <h3>Sun Charms</h3>
       </div>
     </a>
-    <a class="card" href="../games/marble-smash.html">
+    <a class="card" href="../games/marble-smash.html" data-name="marble smash">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/marble-smash/cover/marble-smash.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -116,7 +122,7 @@
         <h3>Marble Smash</h3>
       </div>
     </a>
-    <a class="card" href="../games/tasty-jewel.html">
+    <a class="card" href="../games/tasty-jewel.html" data-name="tasty jewel">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/tasty-jewel/cover/tasty-jewel.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -124,7 +130,7 @@
         <h3>Tasty Jewel</h3>
       </div>
     </a>
-    <a class="card" href="../games/cookienyan.html">
+    <a class="card" href="../games/cookienyan.html" data-name="cookienyan">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/cookienyan/cover/cookienyan.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -132,7 +138,7 @@
         <h3>CookieNyan</h3>
       </div>
     </a>
-    <a class="card" href="../games/7x7-ultimate.html">
+    <a class="card" href="../games/7x7-ultimate.html" data-name="7x7 ultimate">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/7x7-ultimate/cover/7x7-ultimate.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -140,7 +146,7 @@
         <h3>7x7 Ultimate</h3>
       </div>
     </a>
-    <a class="card" href="../games/jewel-bubbles-3.html">
+    <a class="card" href="../games/jewel-bubbles-3.html" data-name="jewel bubbles 3">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/jewel-bubbles-3/cover/jewel-bubbles-3.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -148,7 +154,7 @@
         <h3>Jewel Bubbles 3</h3>
       </div>
     </a>
-    <a class="card" href="../games/jelly-rock-saga.html">
+    <a class="card" href="../games/jelly-rock-saga.html" data-name="jelly rock saga">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/jelly-rock-ola/cover/jelly-rock-ola.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -156,7 +162,7 @@
         <h3>Jelly Rock Saga</h3>
       </div>
     </a>
-    <a class="card" href="../games/jewels-of-oz.html">
+    <a class="card" href="../games/jewels-of-oz.html" data-name="jewels of oz">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/jewels-of-oz/cover/jewels-of-oz.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -164,7 +170,7 @@
         <h3>Jewels of Oz</h3>
       </div>
     </a>
-    <a class="card" href="../games/sea-adventure.html">
+    <a class="card" href="../games/sea-adventure.html" data-name="sea adventure">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/sea-adventure/cover/sea-adventure.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -172,7 +178,7 @@
         <h3>Sea Adventure</h3>
       </div>
     </a>
-    <a class="card" href="../games/treasures-hunt-2.html">
+    <a class="card" href="../games/treasures-hunt-2.html" data-name="treasures hunt 2">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/treasures-hunt-2/cover/treasures-hunt-2.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -180,7 +186,7 @@
         <h3>Treasures Hunt 2</h3>
       </div>
     </a>
-    <a class="card" href="../games/jewel-duel.html">
+    <a class="card" href="../games/jewel-duel.html" data-name="jewel duel">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/jewel-duel/cover/jewel-duel.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -188,7 +194,7 @@
         <h3>Jewel Duel</h3>
       </div>
     </a>
-    <a class="card" href="../games/sushi-matching.html">
+    <a class="card" href="../games/sushi-matching.html" data-name="sushi matching">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/sushi-matching/cover/sushi-matching.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -196,7 +202,7 @@
         <h3>Sushi Matching</h3>
       </div>
     </a>
-    <a class="card" href="../games/juicy-dash.html">
+    <a class="card" href="../games/juicy-dash.html" data-name="juicy dash">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/juicy-dash/cover/juicy-dash.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -204,7 +210,7 @@
         <h3>Juicy Dash</h3>
       </div>
     </a>
-    <a class="card" href="../games/crazy-pizza.html">
+    <a class="card" href="../games/crazy-pizza.html" data-name="crazy pizza">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/crazy-pizza/cover/crazy-pizza.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -212,7 +218,7 @@
         <h3>Crazy Pizza</h3>
       </div>
     </a>
-    <a class="card" href="../games/bubble-hero-3d.html">
+    <a class="card" href="../games/bubble-hero-3d.html" data-name="bubble hero 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/bubble-hero-3d/cover/bubble-hero-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -220,7 +226,7 @@
         <h3>Bubble Hero 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/fancy-diver.html">
+    <a class="card" href="../games/fancy-diver.html" data-name="fancy diver">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/fancy-diver/cover/fancy-diver.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -228,7 +234,7 @@
         <h3>Fancy Diver</h3>
       </div>
     </a>
-    <a class="card" href="../games/sweet-blast.html">
+    <a class="card" href="../games/sweet-blast.html" data-name="sweet blast">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/sweet-blast-rush/cover/sweet-blast-rush.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -236,7 +242,7 @@
         <h3>Sweet Blast</h3>
       </div>
     </a>
-    <a class="card" href="../games/gemcrafter.html">
+    <a class="card" href="../games/gemcrafter.html" data-name="gemcrafter">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/gemcrafter/cover/gemcrafter.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -244,7 +250,7 @@
         <h3>Gemcrafter</h3>
       </div>
     </a>
-    <a class="card" href="../games/pop-pop-kitties.html">
+    <a class="card" href="../games/pop-pop-kitties.html" data-name="pop-pop kitties">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/pop-pop-kitties/cover/pop-pop-kitties.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -252,7 +258,7 @@
         <h3>Pop-Pop Kitties</h3>
       </div>
     </a>
-    <a class="card" href="../games/merge-for-renovation.html">
+    <a class="card" href="../games/merge-for-renovation.html" data-name="merge for renovation">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/merge-for-renovation/cover/merge-for-renovation.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -260,7 +266,7 @@
         <h3>Merge For Renovation</h3>
       </div>
     </a>
-    <a class="card" href="../games/butterfly-matching.html">
+    <a class="card" href="../games/butterfly-matching.html" data-name="butterfly matching">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/butterfly-matching/cover/butterfly-matching.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -268,7 +274,7 @@
         <h3>Butterfly Matching</h3>
       </div>
     </a>
-    <a class="card" href="../games/candy-egg-blast.html">
+    <a class="card" href="../games/candy-egg-blast.html" data-name="candy egg blast">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/candy-crush-eggs-blast-game-eggs-link-puzzle/cover/candy-crush-eggs-blast-game-eggs-link-puzzle.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -276,7 +282,7 @@
         <h3>Candy Egg Blast</h3>
       </div>
     </a>
-    <a class="card" href="../games/candy-match-saga-2.html">
+    <a class="card" href="../games/candy-match-saga-2.html" data-name="candy match saga 2">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/candy-match-saga-2/cover/candy-match-saga-2.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -284,7 +290,7 @@
         <h3>Candy Match Saga 2</h3>
       </div>
     </a>
-    <a class="card" href="../games/skibidi-match-master.html">
+    <a class="card" href="../games/skibidi-match-master.html" data-name="skibidi match master">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/skibidi-match-master/cover/skibidi-match-master.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -292,7 +298,7 @@
         <h3>Skibidi Match Master</h3>
       </div>
     </a>
-    <a class="card" href="../games/match-mystery.html">
+    <a class="card" href="../games/match-mystery.html" data-name="match mystery">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/match-mystery/cover/match-mystery.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -300,7 +306,7 @@
         <h3>Match Mystery</h3>
       </div>
     </a>
-    <a class="card" href="../games/prism-match-3d.html">
+    <a class="card" href="../games/prism-match-3d.html" data-name="prism match 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/prism-match-3d/cover/prism-match-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -309,7 +315,34 @@
       </div>
     </a>
   </div>
+
+  <p id="category-no-results" style="display:none; color:var(--muted); font-size:14px; margin-top:20px;">
+    No games found for "<span id="category-no-results-term"></span>".
+  </p>
 </div>
+
+<script>
+  (function() {
+    const searchInput = document.getElementById('category-search');
+    const cards = Array.from(document.querySelectorAll('#category-grid .card'));
+    const resultCount = document.getElementById('category-result-count');
+    const noResults = document.getElementById('category-no-results');
+    const noResultsTerm = document.getElementById('category-no-results-term');
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const match = !q || (card.dataset.name && card.dataset.name.includes(q));
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      resultCount.textContent = visible + (visible === 1 ? ' game' : ' games');
+      noResults.style.display = visible === 0 ? '' : 'none';
+      if (visible === 0) noResultsTerm.textContent = searchInput.value.trim();
+    });
+  })();
+</script>
 
 <footer class="site-footer">
   <span>© Pixelsprout — Play. Grow. Explore. Some games provided via GamePix.</span>

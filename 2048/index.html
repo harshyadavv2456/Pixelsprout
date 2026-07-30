@@ -51,8 +51,14 @@
     <p>Browse 22 free 2048 games, playable instantly in your browser. No downloads, no accounts, no waiting — just click and play. New 2048 games are added regularly, so check back for more.</p>
   </div>
 
-  <div class="category-grid">
-    <a class="card" href="../games/merge-planets-space.html">
+  <div class="search-row" style="margin-bottom:16px;">
+    <input type="text" id="category-search" placeholder="Search 2048 games..." autocomplete="off"
+      style="width:100%; max-width:400px; padding:10px 16px; border-radius:999px; border:1px solid var(--border); background:var(--panel); color:var(--paper); font-size:14px;">
+    <span id="category-result-count" style="margin-left:10px; font-size:13px; color:var(--muted);">22 games</span>
+  </div>
+
+  <div class="category-grid" id="category-grid">
+    <a class="card" href="../games/merge-planets-space.html" data-name="merge planets space!">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/merge-planets-space/cover/merge-planets-space.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -60,7 +66,7 @@
         <h3>Merge Planets Space!</h3>
       </div>
     </a>
-    <a class="card" href="../games/chain-cube-2048-3d-merge-game.html">
+    <a class="card" href="../games/chain-cube-2048-3d-merge-game.html" data-name="chain cube 2048 3d merge game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/chain-cube-2048-3d-merge-game/cover/chain-cube-2048-3d-merge-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -68,7 +74,7 @@
         <h3>Chain Cube 2048 3D Merge Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/2048-hex-chain-merge.html">
+    <a class="card" href="../games/2048-hex-chain-merge.html" data-name="2048 hex chain merge">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/2048-hex-chain-merge/cover/2048-hex-chain-merge.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -76,7 +82,7 @@
         <h3>2048 Hex Chain Merge</h3>
       </div>
     </a>
-    <a class="card" href="../games/fit-cats.html">
+    <a class="card" href="../games/fit-cats.html" data-name="fit cats">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/fit-cats/cover/fit-cats.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -84,7 +90,7 @@
         <h3>Fit Cats</h3>
       </div>
     </a>
-    <a class="card" href="../games/fruity-pop.html">
+    <a class="card" href="../games/fruity-pop.html" data-name="fruity pop">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/fruity-pop/cover/fruity-pop.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -92,7 +98,7 @@
         <h3>Fruity Pop</h3>
       </div>
     </a>
-    <a class="card" href="../games/drop-the-number-merge-game.html">
+    <a class="card" href="../games/drop-the-number-merge-game.html" data-name="drop the number - merge game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/drop-the-number-merge-game/cover/drop-the-number-merge-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -100,7 +106,7 @@
         <h3>Drop the Number - Merge Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/2048-number-ball.html">
+    <a class="card" href="../games/2048-number-ball.html" data-name="2048 number ball">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/2048-number-ball/cover/2048-number-ball.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -108,7 +114,7 @@
         <h3>2048 Number Ball</h3>
       </div>
     </a>
-    <a class="card" href="../games/emoji-blush.html">
+    <a class="card" href="../games/emoji-blush.html" data-name="emoji blush">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/emoji-blush/cover/emoji-blush.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -116,7 +122,7 @@
         <h3>Emoji Blush</h3>
       </div>
     </a>
-    <a class="card" href="../games/fruit-festival.html">
+    <a class="card" href="../games/fruit-festival.html" data-name="fruit festival">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/fruit-festival/cover/fruit-festival.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -124,7 +130,7 @@
         <h3>Fruit Festival</h3>
       </div>
     </a>
-    <a class="card" href="../games/falling-fruits.html">
+    <a class="card" href="../games/falling-fruits.html" data-name="falling fruits">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/falling-fruits/cover/falling-fruits.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -132,7 +138,7 @@
         <h3>Falling Fruits</h3>
       </div>
     </a>
-    <a class="card" href="../games/solitaire-puzzle-2048.html">
+    <a class="card" href="../games/solitaire-puzzle-2048.html" data-name="solitaire puzzle 2048">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/solitaire-puzzle-2048/cover/solitaire-puzzle-2048.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -140,7 +146,7 @@
         <h3>Solitaire Puzzle 2048</h3>
       </div>
     </a>
-    <a class="card" href="../games/falling-numbers-2048-puzzle.html">
+    <a class="card" href="../games/falling-numbers-2048-puzzle.html" data-name="falling numbers - 2048 puzzle">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/falling-numbers-2048-puzzle/cover/falling-numbers-2048-puzzle.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -148,7 +154,7 @@
         <h3>Falling Numbers - 2048 puzzle</h3>
       </div>
     </a>
-    <a class="card" href="../games/chain-cube-2048-3d.html">
+    <a class="card" href="../games/chain-cube-2048-3d.html" data-name="chain cube 2048 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/chain-cube-2048-3d-1/cover/chain-cube-2048-3d-1.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -156,7 +162,7 @@
         <h3>Chain Cube 2048 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/match-4.html">
+    <a class="card" href="../games/match-4.html" data-name="match 4">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/match-4/cover/match-4.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -164,7 +170,7 @@
         <h3>Match 4</h3>
       </div>
     </a>
-    <a class="card" href="../games/merge-cubes.html">
+    <a class="card" href="../games/merge-cubes.html" data-name="merge cubes">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/merge-cubes/cover/merge-cubes.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -172,7 +178,7 @@
         <h3>Merge Cubes</h3>
       </div>
     </a>
-    <a class="card" href="../games/jelly-run-in-2048.html">
+    <a class="card" href="../games/jelly-run-in-2048.html" data-name="jelly run in 2048">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/jelly-run-in-2048/cover/jelly-run-in-2048.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -180,7 +186,7 @@
         <h3>Jelly Run in 2048</h3>
       </div>
     </a>
-    <a class="card" href="../games/2048-cube-run.html">
+    <a class="card" href="../games/2048-cube-run.html" data-name="2048 cube run">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/2048-cube-run/cover/2048-cube-run.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -188,7 +194,7 @@
         <h3>2048 Cube Run</h3>
       </div>
     </a>
-    <a class="card" href="../games/merge-grabber-race-to-2048.html">
+    <a class="card" href="../games/merge-grabber-race-to-2048.html" data-name="merge grabber race to 2048">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/merge-grabber-race-to-2048/cover/merge-grabber-race-to-2048.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -196,7 +202,7 @@
         <h3>Merge Grabber Race to 2048</h3>
       </div>
     </a>
-    <a class="card" href="../games/2048-classic-puzzle-challenge.html">
+    <a class="card" href="../games/2048-classic-puzzle-challenge.html" data-name="2048 classic puzzle - challenge">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/2048-classic-puzzle-challenge/cover/2048-classic-puzzle-challenge.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -204,7 +210,7 @@
         <h3>2048 Classic Puzzle - Challenge</h3>
       </div>
     </a>
-    <a class="card" href="../games/snake-2048-io.html">
+    <a class="card" href="../games/snake-2048-io.html" data-name="snake 2048.io">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/snake-2048-io/cover/snake-2048-io.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -212,7 +218,7 @@
         <h3>Snake 2048.io</h3>
       </div>
     </a>
-    <a class="card" href="../games/2048-x2-merge-blocks.html">
+    <a class="card" href="../games/2048-x2-merge-blocks.html" data-name="2048 x2 merge blocks">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/2048-x2-merge-blocks/cover/2048-x2-merge-blocks.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -220,7 +226,7 @@
         <h3>2048 X2 Merge Blocks</h3>
       </div>
     </a>
-    <a class="card" href="../games/merge-royal.html">
+    <a class="card" href="../games/merge-royal.html" data-name="merge royal">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/merge-royal/cover/merge-royal.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -229,7 +235,34 @@
       </div>
     </a>
   </div>
+
+  <p id="category-no-results" style="display:none; color:var(--muted); font-size:14px; margin-top:20px;">
+    No games found for "<span id="category-no-results-term"></span>".
+  </p>
 </div>
+
+<script>
+  (function() {
+    const searchInput = document.getElementById('category-search');
+    const cards = Array.from(document.querySelectorAll('#category-grid .card'));
+    const resultCount = document.getElementById('category-result-count');
+    const noResults = document.getElementById('category-no-results');
+    const noResultsTerm = document.getElementById('category-no-results-term');
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const match = !q || (card.dataset.name && card.dataset.name.includes(q));
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      resultCount.textContent = visible + (visible === 1 ? ' game' : ' games');
+      noResults.style.display = visible === 0 ? '' : 'none';
+      if (visible === 0) noResultsTerm.textContent = searchInput.value.trim();
+    });
+  })();
+</script>
 
 <footer class="site-footer">
   <span>© Pixelsprout — Play. Grow. Explore. Some games provided via GamePix.</span>

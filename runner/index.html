@@ -51,8 +51,14 @@
     <p>Browse 45 free runner games, playable instantly in your browser. No downloads, no accounts, no waiting — just click and play. New runner games are added regularly, so check back for more.</p>
   </div>
 
-  <div class="category-grid">
-    <a class="card" href="../games/gravity-hole.html">
+  <div class="search-row" style="margin-bottom:16px;">
+    <input type="text" id="category-search" placeholder="Search Runner games..." autocomplete="off"
+      style="width:100%; max-width:400px; padding:10px 16px; border-radius:999px; border:1px solid var(--border); background:var(--panel); color:var(--paper); font-size:14px;">
+    <span id="category-result-count" style="margin-left:10px; font-size:13px; color:var(--muted);">45 games</span>
+  </div>
+
+  <div class="category-grid" id="category-grid">
+    <a class="card" href="../games/gravity-hole.html" data-name="gravity hole">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/gravity-hole/cover/gravity-hole.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -60,7 +66,7 @@
         <h3>Gravity Hole</h3>
       </div>
     </a>
-    <a class="card" href="../games/escape-tsunami-waves-for-brainrots.html">
+    <a class="card" href="../games/escape-tsunami-waves-for-brainrots.html" data-name="escape tsunami waves for brainrots">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/escape-tsunami-waves-for-brainrots/cover/escape-tsunami-waves-for-brainrots.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -68,7 +74,7 @@
         <h3>Escape Tsunami Waves for Brainrots</h3>
       </div>
     </a>
-    <a class="card" href="../games/turkey-adventure-runner.html">
+    <a class="card" href="../games/turkey-adventure-runner.html" data-name="turkey adventure runner">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/turkey-adventure-runner/cover/turkey-adventure-runner.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -76,7 +82,7 @@
         <h3>Turkey Adventure Runner</h3>
       </div>
     </a>
-    <a class="card" href="../games/run-dinoo.html">
+    <a class="card" href="../games/run-dinoo.html" data-name="run dinoo">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/run-dinoo/cover/run-dinoo.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -84,7 +90,7 @@
         <h3>Run Dinoo</h3>
       </div>
     </a>
-    <a class="card" href="../games/robot-run.html">
+    <a class="card" href="../games/robot-run.html" data-name="robot run">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/robot-run/cover/robot-run.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -92,7 +98,7 @@
         <h3>Robot Run</h3>
       </div>
     </a>
-    <a class="card" href="../games/crazy-color-run-3d.html">
+    <a class="card" href="../games/crazy-color-run-3d.html" data-name="crazy color run 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/crazy-color-run-3d/cover/crazy-color-run-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -100,7 +106,7 @@
         <h3>Crazy Color Run 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/energy-superman-3d.html">
+    <a class="card" href="../games/energy-superman-3d.html" data-name="energy superman 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/energy-superman-3d/cover/energy-superman-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -108,7 +114,7 @@
         <h3>Energy Superman 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/super-crowd.html">
+    <a class="card" href="../games/super-crowd.html" data-name="super crowd">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/super-crowd/cover/super-crowd.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -116,7 +122,7 @@
         <h3>Super Crowd</h3>
       </div>
     </a>
-    <a class="card" href="../games/tunnelshuttle.html">
+    <a class="card" href="../games/tunnelshuttle.html" data-name="tunnelshuttle">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/tunnelshuttle/cover/tunnelshuttle.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -124,7 +130,7 @@
         <h3>TunnelShuttle</h3>
       </div>
     </a>
-    <a class="card" href="../games/slime-warrior-run.html">
+    <a class="card" href="../games/slime-warrior-run.html" data-name="slime warrior run">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/slime-warrior-run-1/cover/slime-warrior-run-1.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -132,7 +138,7 @@
         <h3>Slime Warrior Run</h3>
       </div>
     </a>
-    <a class="card" href="../games/snowball-rush-3d.html">
+    <a class="card" href="../games/snowball-rush-3d.html" data-name="snowball rush 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/snowball-rush-3d-1/cover/snowball-rush-3d-1.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -140,7 +146,7 @@
         <h3>Snowball Rush 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/maze-runner-remake.html">
+    <a class="card" href="../games/maze-runner-remake.html" data-name="maze runner remake">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/maze-runner-remake/cover/maze-runner-remake.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -148,7 +154,7 @@
         <h3>Maze Runner Remake</h3>
       </div>
     </a>
-    <a class="card" href="../games/wrestle-run.html">
+    <a class="card" href="../games/wrestle-run.html" data-name="wrestle run">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/wrestle-run/cover/wrestle-run.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -156,7 +162,7 @@
         <h3>Wrestle Run</h3>
       </div>
     </a>
-    <a class="card" href="../games/fat-race-3d.html">
+    <a class="card" href="../games/fat-race-3d.html" data-name="fat race 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/fat-race-3d-1/cover/fat-race-3d-1.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -164,7 +170,7 @@
         <h3>Fat Race 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/macho-man-go.html">
+    <a class="card" href="../games/macho-man-go.html" data-name="macho man go">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/macho-man-go/cover/macho-man-go.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -172,7 +178,7 @@
         <h3>Macho Man Go</h3>
       </div>
     </a>
-    <a class="card" href="../games/jetpackboy-3d.html">
+    <a class="card" href="../games/jetpackboy-3d.html" data-name="jetpackboy 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/jetpackboy-3d/cover/jetpackboy-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -180,7 +186,7 @@
         <h3>JetPackBoy 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/rocket-charge-run.html">
+    <a class="card" href="../games/rocket-charge-run.html" data-name="rocket charge run">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/rocket-charge-run/cover/rocket-charge-run.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -188,7 +194,7 @@
         <h3>Rocket Charge Run</h3>
       </div>
     </a>
-    <a class="card" href="../games/cosmic-dash.html">
+    <a class="card" href="../games/cosmic-dash.html" data-name="cosmic dash">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/cosmic-dash/cover/cosmic-dash.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -196,7 +202,7 @@
         <h3>Cosmic Dash</h3>
       </div>
     </a>
-    <a class="card" href="../games/sausage-run.html">
+    <a class="card" href="../games/sausage-run.html" data-name="sausage run">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/sausage-run-1/cover/sausage-run-1.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -204,7 +210,7 @@
         <h3>Sausage Run</h3>
       </div>
     </a>
-    <a class="card" href="../games/stair-run-online-2.html">
+    <a class="card" href="../games/stair-run-online-2.html" data-name="stair run online 2">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/stair-run-online-2-1/cover/stair-run-online-2-1.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -212,7 +218,7 @@
         <h3>Stair Run Online 2</h3>
       </div>
     </a>
-    <a class="card" href="../games/kaiju-run-dzilla-enemies.html">
+    <a class="card" href="../games/kaiju-run-dzilla-enemies.html" data-name="kaiju run dzilla enemies">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/kaiju-run-dzilla-enemies/cover/kaiju-run-dzilla-enemies.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -220,7 +226,7 @@
         <h3>Kaiju Run Dzilla Enemies</h3>
       </div>
     </a>
-    <a class="card" href="../games/human-vehicle-run.html">
+    <a class="card" href="../games/human-vehicle-run.html" data-name="human vehicle run">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/human-vehicle-run/cover/human-vehicle-run.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -228,7 +234,7 @@
         <h3>Human Vehicle Run</h3>
       </div>
     </a>
-    <a class="card" href="../games/hit-and-run-solo-leveling.html">
+    <a class="card" href="../games/hit-and-run-solo-leveling.html" data-name="hit and run solo leveling">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/hit-and-run-solo-leveling/cover/hit-and-run-solo-leveling.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -236,7 +242,7 @@
         <h3>Hit And Run Solo Leveling</h3>
       </div>
     </a>
-    <a class="card" href="../games/count-master-match-color-run.html">
+    <a class="card" href="../games/count-master-match-color-run.html" data-name="count master match color run">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/count-master-match-color-run/cover/count-master-match-color-run.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -244,7 +250,7 @@
         <h3>Count Master Match Color Run</h3>
       </div>
     </a>
-    <a class="card" href="../games/money-rush-3d.html">
+    <a class="card" href="../games/money-rush-3d.html" data-name="money rush 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/money-rush-3d-1/cover/money-rush-3d-1.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -252,7 +258,7 @@
         <h3>Money Rush 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/superhero-race.html">
+    <a class="card" href="../games/superhero-race.html" data-name="superhero race">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/superhero-race/cover/superhero-race.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -260,7 +266,7 @@
         <h3>Superhero Race</h3>
       </div>
     </a>
-    <a class="card" href="../games/merge-number-cube-3d-run-game.html">
+    <a class="card" href="../games/merge-number-cube-3d-run-game.html" data-name="merge number cube 3d run game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/merge-number-cube-3d-run-game/cover/merge-number-cube-3d-run-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -268,7 +274,7 @@
         <h3>Merge Number Cube 3d Run Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/roblox-run-3d.html">
+    <a class="card" href="../games/roblox-run-3d.html" data-name="roblox run 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/roblox-run-3d/cover/roblox-run-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -276,7 +282,7 @@
         <h3>Roblox Run 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/boss-hunter-run.html">
+    <a class="card" href="../games/boss-hunter-run.html" data-name="boss hunter run">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/boss-hunter-run/cover/boss-hunter-run.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -284,7 +290,7 @@
         <h3>Boss Hunter Run</h3>
       </div>
     </a>
-    <a class="card" href="../games/squid-game-craft-runner.html">
+    <a class="card" href="../games/squid-game-craft-runner.html" data-name="squid game craft runner">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/squid-game-craft-runner/cover/squid-game-craft-runner.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -292,7 +298,7 @@
         <h3>Squid Game Craft Runner</h3>
       </div>
     </a>
-    <a class="card" href="../games/extreme-way.html">
+    <a class="card" href="../games/extreme-way.html" data-name="extreme way">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/extreme-way/cover/extreme-way.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -300,7 +306,7 @@
         <h3>Extreme Way</h3>
       </div>
     </a>
-    <a class="card" href="../games/spider-evolution-runner.html">
+    <a class="card" href="../games/spider-evolution-runner.html" data-name="spider evolution runner">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/spider-evolution-runner/cover/spider-evolution-runner.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -308,7 +314,7 @@
         <h3>Spider Evolution Runner</h3>
       </div>
     </a>
-    <a class="card" href="../games/hyper-pixel.html">
+    <a class="card" href="../games/hyper-pixel.html" data-name="hyper pixel">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/hyper-pixel/cover/hyper-pixel.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -316,7 +322,7 @@
         <h3>Hyper Pixel</h3>
       </div>
     </a>
-    <a class="card" href="../games/knock-and-run-100-doors-escape.html">
+    <a class="card" href="../games/knock-and-run-100-doors-escape.html" data-name="knock and run. 100 doors escape">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/knock-and-run-100-doors-escape/cover/knock-and-run-100-doors-escape.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -324,7 +330,7 @@
         <h3>Knock and Run. 100 Doors Escape</h3>
       </div>
     </a>
-    <a class="card" href="../games/superhero-transform-change-race.html">
+    <a class="card" href="../games/superhero-transform-change-race.html" data-name="superhero transform change race">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/superhero-transform-change-race/cover/superhero-transform-change-race.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -332,7 +338,7 @@
         <h3>Superhero Transform Change Race</h3>
       </div>
     </a>
-    <a class="card" href="../games/count-masters.html">
+    <a class="card" href="../games/count-masters.html" data-name="count masters">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/count-masters-1/cover/count-masters-1.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -340,7 +346,7 @@
         <h3>Count Masters</h3>
       </div>
     </a>
-    <a class="card" href="../games/runner-soldiers.html">
+    <a class="card" href="../games/runner-soldiers.html" data-name="runner soldiers">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/runner-soldiers/cover/runner-soldiers.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -348,7 +354,7 @@
         <h3>Runner Soldiers</h3>
       </div>
     </a>
-    <a class="card" href="../games/number-master-run-and-merge.html">
+    <a class="card" href="../games/number-master-run-and-merge.html" data-name="number master: run and merge">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/number-master-run-and-merge/cover/number-master-run-and-merge.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -356,7 +362,7 @@
         <h3>Number Master: Run and Merge</h3>
       </div>
     </a>
-    <a class="card" href="../games/subway-princess-run.html">
+    <a class="card" href="../games/subway-princess-run.html" data-name="subway princess run">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/subway-princess-run-1/cover/subway-princess-run-1.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -364,7 +370,7 @@
         <h3>Subway Princess Run</h3>
       </div>
     </a>
-    <a class="card" href="../games/layer-man-3d-run-collect.html">
+    <a class="card" href="../games/layer-man-3d-run-collect.html" data-name="layer man 3d run collect">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/layer-man-3d-run-collect/cover/layer-man-3d-run-collect.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -372,7 +378,7 @@
         <h3>Layer Man 3d Run Collect</h3>
       </div>
     </a>
-    <a class="card" href="../games/3d-laane-runner.html">
+    <a class="card" href="../games/3d-laane-runner.html" data-name="3d laane runner">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/3d-laane-runner/cover/3d-laane-runner.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -380,7 +386,7 @@
         <h3>3D laane runner</h3>
       </div>
     </a>
-    <a class="card" href="../games/long-neck-run.html">
+    <a class="card" href="../games/long-neck-run.html" data-name="long neck run">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/long-neck-run-1/cover/long-neck-run-1.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -388,7 +394,7 @@
         <h3>Long Neck Run</h3>
       </div>
     </a>
-    <a class="card" href="../games/runner.html">
+    <a class="card" href="../games/runner.html" data-name="runner">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/runner/cover/runner.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -396,7 +402,7 @@
         <h3>Runner</h3>
       </div>
     </a>
-    <a class="card" href="../games/popcorn-race-3d.html">
+    <a class="card" href="../games/popcorn-race-3d.html" data-name="popcorn race 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/popcorn-race-3d-1/cover/popcorn-race-3d-1.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -404,7 +410,7 @@
         <h3>Popcorn Race 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/spider-evolution-runner-game.html">
+    <a class="card" href="../games/spider-evolution-runner-game.html" data-name="spider evolution runner game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/spider-evolution-runner-game/cover/spider-evolution-runner-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -413,7 +419,34 @@
       </div>
     </a>
   </div>
+
+  <p id="category-no-results" style="display:none; color:var(--muted); font-size:14px; margin-top:20px;">
+    No games found for "<span id="category-no-results-term"></span>".
+  </p>
 </div>
+
+<script>
+  (function() {
+    const searchInput = document.getElementById('category-search');
+    const cards = Array.from(document.querySelectorAll('#category-grid .card'));
+    const resultCount = document.getElementById('category-result-count');
+    const noResults = document.getElementById('category-no-results');
+    const noResultsTerm = document.getElementById('category-no-results-term');
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const match = !q || (card.dataset.name && card.dataset.name.includes(q));
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      resultCount.textContent = visible + (visible === 1 ? ' game' : ' games');
+      noResults.style.display = visible === 0 ? '' : 'none';
+      if (visible === 0) noResultsTerm.textContent = searchInput.value.trim();
+    });
+  })();
+</script>
 
 <footer class="site-footer">
   <span>© Pixelsprout — Play. Grow. Explore. Some games provided via GamePix.</span>

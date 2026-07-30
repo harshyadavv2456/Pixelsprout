@@ -51,8 +51,14 @@
     <p>Browse 162 free sports games, playable instantly in your browser. No downloads, no accounts, no waiting — just click and play. New sports games are added regularly, so check back for more.</p>
   </div>
 
-  <div class="category-grid">
-    <a class="card" href="../games/skateboard-challenge.html">
+  <div class="search-row" style="margin-bottom:16px;">
+    <input type="text" id="category-search" placeholder="Search Sports games..." autocomplete="off"
+      style="width:100%; max-width:400px; padding:10px 16px; border-radius:999px; border:1px solid var(--border); background:var(--panel); color:var(--paper); font-size:14px;">
+    <span id="category-result-count" style="margin-left:10px; font-size:13px; color:var(--muted);">162 games</span>
+  </div>
+
+  <div class="category-grid" id="category-grid">
+    <a class="card" href="../games/skateboard-challenge.html" data-name="skateboard challenge">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/skateboard-challenge/cover/skateboard-challenge.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -60,7 +66,7 @@
         <h3>Skateboard Challenge</h3>
       </div>
     </a>
-    <a class="card" href="../games/gt-cars-super-racing.html">
+    <a class="card" href="../games/gt-cars-super-racing.html" data-name="gt cars super racing">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/gt-car-super-racing/cover/gt-car-super-racing.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -68,7 +74,7 @@
         <h3>GT Cars Super Racing</h3>
       </div>
     </a>
-    <a class="card" href="../games/crazy-goal.html">
+    <a class="card" href="../games/crazy-goal.html" data-name="crazy goal">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/crazy-goal/cover/crazy-goal.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -76,7 +82,7 @@
         <h3>Crazy Goal</h3>
       </div>
     </a>
-    <a class="card" href="../games/soccer-snakes.html">
+    <a class="card" href="../games/soccer-snakes.html" data-name="soccer snakes">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/soccer-snakes/cover/soccer-snakes.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -84,7 +90,7 @@
         <h3>Soccer Snakes</h3>
       </div>
     </a>
-    <a class="card" href="../games/ski-king.html">
+    <a class="card" href="../games/ski-king.html" data-name="ski king">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/ski-king/cover/ski-king.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -92,7 +98,7 @@
         <h3>Ski King</h3>
       </div>
     </a>
-    <a class="card" href="../games/super-car-racer.html">
+    <a class="card" href="../games/super-car-racer.html" data-name="super car racer">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/super-car-racer/cover/super-car-racer.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -100,7 +106,7 @@
         <h3>Super Car Racer</h3>
       </div>
     </a>
-    <a class="card" href="../games/stickman-car-racing.html">
+    <a class="card" href="../games/stickman-car-racing.html" data-name="stickman car racing">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/stickman-car-racing/cover/stickman-car-racing.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -108,7 +114,7 @@
         <h3>Stickman Car Racing</h3>
       </div>
     </a>
-    <a class="card" href="../games/kick.html">
+    <a class="card" href="../games/kick.html" data-name="kick">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/kick/cover/kick.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -116,7 +122,7 @@
         <h3>Kick</h3>
       </div>
     </a>
-    <a class="card" href="../games/ninja-head-ball.html">
+    <a class="card" href="../games/ninja-head-ball.html" data-name="ninja head ball">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/ninja-head-bal/cover/ninja-head-bal.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -124,7 +130,7 @@
         <h3>Ninja Head Ball</h3>
       </div>
     </a>
-    <a class="card" href="../games/gully-cricket.html">
+    <a class="card" href="../games/gully-cricket.html" data-name="gully cricket">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/gully-cricket/cover/gully-cricket.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -132,7 +138,7 @@
         <h3>Gully Cricket</h3>
       </div>
     </a>
-    <a class="card" href="../games/golf-challenge.html">
+    <a class="card" href="../games/golf-challenge.html" data-name="golf challenge">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/golf-challenge/cover/golf-challenge.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -140,7 +146,7 @@
         <h3>Golf Challenge</h3>
       </div>
     </a>
-    <a class="card" href="../games/darts-pro-multiplayer.html">
+    <a class="card" href="../games/darts-pro-multiplayer.html" data-name="darts pro multiplayer">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/darts-pro-multiplayer/cover/darts-pro-multiplayer.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -148,7 +154,7 @@
         <h3>Darts Pro Multiplayer</h3>
       </div>
     </a>
-    <a class="card" href="../games/tennis-open-2022.html">
+    <a class="card" href="../games/tennis-open-2022.html" data-name="tennis open 2022">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/tennis-open-2022/cover/tennis-open-2022.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -156,7 +162,7 @@
         <h3>Tennis Open 2022</h3>
       </div>
     </a>
-    <a class="card" href="../games/brazil-vs-argentina-challenge.html">
+    <a class="card" href="../games/brazil-vs-argentina-challenge.html" data-name="brazil vs argentina challenge">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/brazil-vs-argentina-challenge/cover/brazil-vs-argentina-challenge.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -164,7 +170,7 @@
         <h3>Brazil vs Argentina Challenge</h3>
       </div>
     </a>
-    <a class="card" href="../games/bowling-challenge.html">
+    <a class="card" href="../games/bowling-challenge.html" data-name="bowling challenge">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/bowling-challenge/cover/bowling-challenge.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -172,7 +178,7 @@
         <h3>Bowling Challenge</h3>
       </div>
     </a>
-    <a class="card" href="../games/goal-quest.html">
+    <a class="card" href="../games/goal-quest.html" data-name="goal quest">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/goal-quest/cover/goal-quest.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -180,7 +186,7 @@
         <h3>Goal Quest</h3>
       </div>
     </a>
-    <a class="card" href="../games/football-tournament.html">
+    <a class="card" href="../games/football-tournament.html" data-name="football tournament">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/football-tournament/cover/football-tournament.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -188,7 +194,7 @@
         <h3>Football Tournament</h3>
       </div>
     </a>
-    <a class="card" href="../games/basketball-kings-2024.html">
+    <a class="card" href="../games/basketball-kings-2024.html" data-name="basketball kings 2024">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/basketball-kings-2024/cover/basketball-kings-2024.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -196,7 +202,7 @@
         <h3>Basketball Kings 2024</h3>
       </div>
     </a>
-    <a class="card" href="../games/soccer.html">
+    <a class="card" href="../games/soccer.html" data-name="soccer">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/soccer/cover/soccer.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -204,7 +210,7 @@
         <h3>Soccer</h3>
       </div>
     </a>
-    <a class="card" href="../games/procedural-racing.html">
+    <a class="card" href="../games/procedural-racing.html" data-name="procedural racing">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/procedural-racing/cover/procedural-racing.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -212,7 +218,7 @@
         <h3>Procedural Racing</h3>
       </div>
     </a>
-    <a class="card" href="../games/trz-athletic-games.html">
+    <a class="card" href="../games/trz-athletic-games.html" data-name="trz athletic games">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/trz-athletic-games/cover/trz-athletic-games.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -220,7 +226,7 @@
         <h3>TRZ Athletic Games</h3>
       </div>
     </a>
-    <a class="card" href="../games/pocket-drift.html">
+    <a class="card" href="../games/pocket-drift.html" data-name="pocket drift">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/pocket-drift/cover/pocket-drift.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -228,7 +234,7 @@
         <h3>Pocket Drift</h3>
       </div>
     </a>
-    <a class="card" href="../games/russian-niva-hexagon.html">
+    <a class="card" href="../games/russian-niva-hexagon.html" data-name="russian niva - hexagon">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/russian-niva-hexagon/cover/russian-niva-hexagon.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -236,7 +242,7 @@
         <h3>Russian Niva - HexagoN</h3>
       </div>
     </a>
-    <a class="card" href="../games/boxing-hero-punch-champions.html">
+    <a class="card" href="../games/boxing-hero-punch-champions.html" data-name="boxing hero punch champions">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/boxing-hero-punch-champions/cover/boxing-hero-punch-champions.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -244,7 +250,7 @@
         <h3>Boxing Hero Punch Champions</h3>
       </div>
     </a>
-    <a class="card" href="../games/super-nitro-racing-2.html">
+    <a class="card" href="../games/super-nitro-racing-2.html" data-name="super nitro racing 2">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/super-nitro-racing-2/cover/super-nitro-racing-2.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -252,7 +258,7 @@
         <h3>Super Nitro Racing 2</h3>
       </div>
     </a>
-    <a class="card" href="../games/nifty-hoopers.html">
+    <a class="card" href="../games/nifty-hoopers.html" data-name="nifty hoopers">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/nifty-hoopers/cover/nifty-hoopers.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -260,7 +266,7 @@
         <h3>Nifty Hoopers</h3>
       </div>
     </a>
-    <a class="card" href="../games/basketball-challenge-online-game.html">
+    <a class="card" href="../games/basketball-challenge-online-game.html" data-name="basketball challenge online game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/basketball-challenge-online-game/cover/basketball-challenge-online-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -268,7 +274,7 @@
         <h3>Basketball Challenge Online Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/russian-cyber-car-hexagon.html">
+    <a class="card" href="../games/russian-cyber-car-hexagon.html" data-name="russian cyber car - hexagon">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/russian-cyber-car-hexagon/cover/russian-cyber-car-hexagon.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -276,7 +282,7 @@
         <h3>Russian Cyber Car - HexagoN</h3>
       </div>
     </a>
-    <a class="card" href="../games/let-s-go-fishing.html">
+    <a class="card" href="../games/let-s-go-fishing.html" data-name="let's go fishing">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/lets-go-fishing/cover/lets-go-fishing.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -284,7 +290,7 @@
         <h3>Let's go fishing</h3>
       </div>
     </a>
-    <a class="card" href="../games/pool-mania.html">
+    <a class="card" href="../games/pool-mania.html" data-name="pool mania">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/pool-mania/cover/pool-mania.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -292,7 +298,7 @@
         <h3>Pool Mania</h3>
       </div>
     </a>
-    <a class="card" href="../games/basketball-challenge.html">
+    <a class="card" href="../games/basketball-challenge.html" data-name="basketball challenge">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/basketball-challenge/cover/basketball-challenge.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -300,7 +306,7 @@
         <h3>Basketball Challenge</h3>
       </div>
     </a>
-    <a class="card" href="../games/stickman-neon-motorcycle-racing.html">
+    <a class="card" href="../games/stickman-neon-motorcycle-racing.html" data-name="stickman neon motorcycle racing">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/stickman-neon-motorcycle-racing/cover/stickman-neon-motorcycle-racing.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -308,7 +314,7 @@
         <h3>Stickman Neon Motorcycle Racing</h3>
       </div>
     </a>
-    <a class="card" href="../games/snowboard-king-2024.html">
+    <a class="card" href="../games/snowboard-king-2024.html" data-name="snowboard king 2024">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/snowboard-king-2024/cover/snowboard-king-2024.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -316,7 +322,7 @@
         <h3>Snowboard King 2024</h3>
       </div>
     </a>
-    <a class="card" href="../games/soccer-score.html">
+    <a class="card" href="../games/soccer-score.html" data-name="soccer score">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/fifa-score/cover/fifa-score.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -324,7 +330,7 @@
         <h3>Soccer Score</h3>
       </div>
     </a>
-    <a class="card" href="../games/bring-to-rome.html">
+    <a class="card" href="../games/bring-to-rome.html" data-name="bring to rome!">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/bring-to-rome/cover/bring-to-rome.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -332,7 +338,7 @@
         <h3>Bring to Rome!</h3>
       </div>
     </a>
-    <a class="card" href="../games/skater-dude.html">
+    <a class="card" href="../games/skater-dude.html" data-name="skater dude">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/skater-dude/cover/skater-dude.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -340,7 +346,7 @@
         <h3>Skater Dude</h3>
       </div>
     </a>
-    <a class="card" href="../games/minicars.html">
+    <a class="card" href="../games/minicars.html" data-name="minicars">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/minicars/cover/minicars.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -348,7 +354,7 @@
         <h3>Minicars</h3>
       </div>
     </a>
-    <a class="card" href="../games/basketball-smash.html">
+    <a class="card" href="../games/basketball-smash.html" data-name="basketball smash">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/basketball-smash/cover/basketball-smash.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -356,7 +362,7 @@
         <h3>Basketball Smash</h3>
       </div>
     </a>
-    <a class="card" href="../games/nitro-rally.html">
+    <a class="card" href="../games/nitro-rally.html" data-name="nitro rally">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/nitro-rally/cover/nitro-rally.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -364,7 +370,7 @@
         <h3>Nitro Rally</h3>
       </div>
     </a>
-    <a class="card" href="../games/weightlifter.html">
+    <a class="card" href="../games/weightlifter.html" data-name="weightlifter">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/weightlifter/cover/weightlifter.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -372,7 +378,7 @@
         <h3>Weightlifter</h3>
       </div>
     </a>
-    <a class="card" href="../games/tennis-mobile.html">
+    <a class="card" href="../games/tennis-mobile.html" data-name="tennis mobile">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/tennis-mobile/cover/tennis-mobile.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -380,7 +386,7 @@
         <h3>Tennis Mobile</h3>
       </div>
     </a>
-    <a class="card" href="../games/real-soccer.html">
+    <a class="card" href="../games/real-soccer.html" data-name="real soccer">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/real-soccer/cover/real-soccer.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -388,7 +394,7 @@
         <h3>Real Soccer</h3>
       </div>
     </a>
-    <a class="card" href="../games/harness-racing.html">
+    <a class="card" href="../games/harness-racing.html" data-name="harness racing">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/harness-racing/cover/harness-racing.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -396,7 +402,7 @@
         <h3>Harness Racing</h3>
       </div>
     </a>
-    <a class="card" href="../games/basketball-swooshes.html">
+    <a class="card" href="../games/basketball-swooshes.html" data-name="basketball swooshes">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/basketball-swooshes/cover/basketball-swooshes.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -404,7 +410,7 @@
         <h3>Basketball Swooshes</h3>
       </div>
     </a>
-    <a class="card" href="../games/baseball-super.html">
+    <a class="card" href="../games/baseball-super.html" data-name="baseball super">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/baseball-super/cover/baseball-super.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -412,7 +418,7 @@
         <h3>Baseball Super</h3>
       </div>
     </a>
-    <a class="card" href="../games/m3-power-3d-city-racing.html">
+    <a class="card" href="../games/m3-power-3d-city-racing.html" data-name="m3 power 3d city racing">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/m3-power-3d-city-racing/cover/m3-power-3d-city-racing.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -420,7 +426,7 @@
         <h3>M3 Power 3D City Racing</h3>
       </div>
     </a>
-    <a class="card" href="../games/world-cup-penalty-football-game.html">
+    <a class="card" href="../games/world-cup-penalty-football-game.html" data-name="world cup penalty football game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/world-cup-penalty-football-game/cover/world-cup-penalty-football-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -428,7 +434,7 @@
         <h3>World Cup Penalty Football Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/punch-boxing-for-dummy.html">
+    <a class="card" href="../games/punch-boxing-for-dummy.html" data-name="punch boxing for dummy">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/punch-boxing-for-dummy/cover/punch-boxing-for-dummy.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -436,7 +442,7 @@
         <h3>Punch Boxing for Dummy</h3>
       </div>
     </a>
-    <a class="card" href="../games/air-hockey-cup.html">
+    <a class="card" href="../games/air-hockey-cup.html" data-name="air hockey cup">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/air-hockey-cup/cover/air-hockey-cup.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -444,7 +450,7 @@
         <h3>Air Hockey Cup</h3>
       </div>
     </a>
-    <a class="card" href="../games/motor-racing-in-space.html">
+    <a class="card" href="../games/motor-racing-in-space.html" data-name="motor racing in space">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/motor-racing-in-space/cover/motor-racing-in-space.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -452,7 +458,7 @@
         <h3>Motor Racing in Space</h3>
       </div>
     </a>
-    <a class="card" href="../games/bowling-boom.html">
+    <a class="card" href="../games/bowling-boom.html" data-name="bowling boom">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/bowling-boom/cover/bowling-boom.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -460,7 +466,7 @@
         <h3>Bowling Boom</h3>
       </div>
     </a>
-    <a class="card" href="../games/ten-pin-bowling.html">
+    <a class="card" href="../games/ten-pin-bowling.html" data-name="ten pin bowling">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/ten-pin-bowling/cover/ten-pin-bowling.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -468,7 +474,7 @@
         <h3>Ten Pin Bowling</h3>
       </div>
     </a>
-    <a class="card" href="../games/pool-8-ball-mania.html">
+    <a class="card" href="../games/pool-8-ball-mania.html" data-name="pool: 8 ball mania">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/pool-8-ball-mania/cover/pool-8-ball-mania.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -476,7 +482,7 @@
         <h3>Pool: 8 Ball Mania</h3>
       </div>
     </a>
-    <a class="card" href="../games/drag-racing-city.html">
+    <a class="card" href="../games/drag-racing-city.html" data-name="drag racing city">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/drag-racing-city/cover/drag-racing-city.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -484,7 +490,7 @@
         <h3>Drag Racing City</h3>
       </div>
     </a>
-    <a class="card" href="../games/snowboard-king-2022.html">
+    <a class="card" href="../games/snowboard-king-2022.html" data-name="snowboard king 2022">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/snowboard-king-2022/cover/snowboard-king-2022.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -492,7 +498,7 @@
         <h3>Snowboard King 2022</h3>
       </div>
     </a>
-    <a class="card" href="../games/cycle-sprint.html">
+    <a class="card" href="../games/cycle-sprint.html" data-name="cycle sprint">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/cycle-sprint/cover/cycle-sprint.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -500,7 +506,7 @@
         <h3>Cycle Sprint</h3>
       </div>
     </a>
-    <a class="card" href="../games/hurdles.html">
+    <a class="card" href="../games/hurdles.html" data-name="hurdles">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/hurdles/cover/hurdles.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -508,7 +514,7 @@
         <h3>Hurdles</h3>
       </div>
     </a>
-    <a class="card" href="../games/volley-boys.html">
+    <a class="card" href="../games/volley-boys.html" data-name="volley boys">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/volley-boys/cover/volley-boys.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -516,7 +522,7 @@
         <h3>Volley Boys</h3>
       </div>
     </a>
-    <a class="card" href="../games/padel-clash.html">
+    <a class="card" href="../games/padel-clash.html" data-name="padel clash">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/padel-clash/cover/padel-clash.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -524,7 +530,7 @@
         <h3>Padel Clash</h3>
       </div>
     </a>
-    <a class="card" href="../games/kick-score-now.html">
+    <a class="card" href="../games/kick-score-now.html" data-name="kick&score now">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/kickandscore-now/cover/kickandscore-now.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -532,7 +538,7 @@
         <h3>Kick&Score Now</h3>
       </div>
     </a>
-    <a class="card" href="../games/ping-pong-3d.html">
+    <a class="card" href="../games/ping-pong-3d.html" data-name="ping pong 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/ping-pong/cover/ping-pong.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -540,7 +546,7 @@
         <h3>Ping Pong 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/smashy-racing.html">
+    <a class="card" href="../games/smashy-racing.html" data-name="smashy racing">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/smashy-racing/cover/smashy-racing.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -548,7 +554,7 @@
         <h3>Smashy Racing</h3>
       </div>
     </a>
-    <a class="card" href="../games/finger-soccer-world-cup-2022.html">
+    <a class="card" href="../games/finger-soccer-world-cup-2022.html" data-name="finger soccer - world cup 2022">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/finger-soccer-world-cup-2022/cover/finger-soccer-world-cup-2022.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -556,7 +562,7 @@
         <h3>Finger Soccer - World Cup 2022</h3>
       </div>
     </a>
-    <a class="card" href="../games/draw-dash.html">
+    <a class="card" href="../games/draw-dash.html" data-name="draw dash">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/draw-dash/cover/draw-dash.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -564,7 +570,7 @@
         <h3>Draw Dash</h3>
       </div>
     </a>
-    <a class="card" href="../games/spear-toss-challenge.html">
+    <a class="card" href="../games/spear-toss-challenge.html" data-name="spear toss challenge">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/spear-toss-challenge/cover/spear-toss-challenge.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -572,7 +578,7 @@
         <h3>Spear Toss Challenge</h3>
       </div>
     </a>
-    <a class="card" href="../games/tennis-1vs1.html">
+    <a class="card" href="../games/tennis-1vs1.html" data-name="tennis 1vs1">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/tennis-1vs1/cover/tennis-1vs1.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -580,7 +586,7 @@
         <h3>Tennis 1vs1</h3>
       </div>
     </a>
-    <a class="card" href="../games/football-brawl.html">
+    <a class="card" href="../games/football-brawl.html" data-name="football brawl">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/football-brawl/cover/football-brawl.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -588,7 +594,7 @@
         <h3>Football Brawl</h3>
       </div>
     </a>
-    <a class="card" href="../games/crazy-ball-space.html">
+    <a class="card" href="../games/crazy-ball-space.html" data-name="crazy ball space">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/crazy-ball-space/cover/crazy-ball-space.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -596,7 +602,7 @@
         <h3>Crazy Ball Space</h3>
       </div>
     </a>
-    <a class="card" href="../games/t20-cricket.html">
+    <a class="card" href="../games/t20-cricket.html" data-name="t20 cricket">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/t20-cricket/cover/t20-cricket.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -604,7 +610,7 @@
         <h3>T20 Cricket</h3>
       </div>
     </a>
-    <a class="card" href="../games/football-kickoff.html">
+    <a class="card" href="../games/football-kickoff.html" data-name="football kickoff">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/football-kickoff/cover/football-kickoff.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -612,7 +618,7 @@
         <h3>Football Kickoff</h3>
       </div>
     </a>
-    <a class="card" href="../games/dunk-hoop.html">
+    <a class="card" href="../games/dunk-hoop.html" data-name="dunk hoop">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/dunk-hoop/cover/dunk-hoop.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -620,7 +626,7 @@
         <h3>Dunk Hoop</h3>
       </div>
     </a>
-    <a class="card" href="../games/buggy-battle-royale.html">
+    <a class="card" href="../games/buggy-battle-royale.html" data-name="buggy - battle royale">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/buggy-battle-royale/cover/buggy-battle-royale.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -628,7 +634,7 @@
         <h3>Buggy - Battle Royale</h3>
       </div>
     </a>
-    <a class="card" href="../games/basketball-master-kids.html">
+    <a class="card" href="../games/basketball-master-kids.html" data-name="basketball master kids">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/basketball-master/cover/basketball-master.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -636,7 +642,7 @@
         <h3>Basketball Master Kids</h3>
       </div>
     </a>
-    <a class="card" href="../games/football-tricks.html">
+    <a class="card" href="../games/football-tricks.html" data-name="football tricks">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/football-tricks/cover/football-tricks.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -644,7 +650,7 @@
         <h3>Football Tricks</h3>
       </div>
     </a>
-    <a class="card" href="../games/kick-the-ball-and-shoot.html">
+    <a class="card" href="../games/kick-the-ball-and-shoot.html" data-name="kick the ball and shoot">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/kick-the-ball-and-shoot/cover/kick-the-ball-and-shoot.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -652,7 +658,7 @@
         <h3>Kick the ball and shoot</h3>
       </div>
     </a>
-    <a class="card" href="../games/king-of-sumo.html">
+    <a class="card" href="../games/king-of-sumo.html" data-name="king of sumo">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/king-of-sumo/cover/king-of-sumo.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -660,7 +666,7 @@
         <h3>King Of Sumo</h3>
       </div>
     </a>
-    <a class="card" href="../games/sprint-club-nitro.html">
+    <a class="card" href="../games/sprint-club-nitro.html" data-name="sprint club nitro">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/sprint-club-nitro/cover/sprint-club-nitro.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -668,7 +674,7 @@
         <h3>Sprint Club Nitro</h3>
       </div>
     </a>
-    <a class="card" href="../games/my-golf.html">
+    <a class="card" href="../games/my-golf.html" data-name="my golf">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/my-golf/cover/my-golf.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -676,7 +682,7 @@
         <h3>My Golf</h3>
       </div>
     </a>
-    <a class="card" href="../games/muscle-run-io.html">
+    <a class="card" href="../games/muscle-run-io.html" data-name="muscle run io">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/muscle-run-io/cover/muscle-run-io.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -684,7 +690,7 @@
         <h3>Muscle Run io</h3>
       </div>
     </a>
-    <a class="card" href="../games/brazil-cup-2014.html">
+    <a class="card" href="../games/brazil-cup-2014.html" data-name="brazil cup 2014">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/brazil-cup-2014/cover/brazil-cup-2014.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -692,7 +698,7 @@
         <h3>Brazil Cup 2014</h3>
       </div>
     </a>
-    <a class="card" href="../games/mafia-billiard-tricks.html">
+    <a class="card" href="../games/mafia-billiard-tricks.html" data-name="mafia billiard tricks">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/mafia-billiard-tricks/cover/mafia-billiard-tricks.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -700,7 +706,7 @@
         <h3>Mafia Billiard Tricks</h3>
       </div>
     </a>
-    <a class="card" href="../games/world-cricket-champ.html">
+    <a class="card" href="../games/world-cricket-champ.html" data-name="world cricket champ">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/cricket-world-cup/cover/cricket-world-cup.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -708,7 +714,7 @@
         <h3>World Cricket Champ</h3>
       </div>
     </a>
-    <a class="card" href="../games/gt-ghost-racing.html">
+    <a class="card" href="../games/gt-ghost-racing.html" data-name="gt ghost racing">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/gt-ghost-racing/cover/gt-ghost-racing.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -716,7 +722,7 @@
         <h3>GT Ghost Racing</h3>
       </div>
     </a>
-    <a class="card" href="../games/cricket-hero.html">
+    <a class="card" href="../games/cricket-hero.html" data-name="cricket hero">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/cricket-hero/cover/cricket-hero.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -724,7 +730,7 @@
         <h3>Cricket Hero</h3>
       </div>
     </a>
-    <a class="card" href="../games/demolition-derby-racing.html">
+    <a class="card" href="../games/demolition-derby-racing.html" data-name="demolition derby racing">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/demolition-derby-racing/cover/demolition-derby-racing.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -732,7 +738,7 @@
         <h3>Demolition Derby Racing</h3>
       </div>
     </a>
-    <a class="card" href="../games/baseball-for-clowns.html">
+    <a class="card" href="../games/baseball-for-clowns.html" data-name="baseball for clowns">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/baseball-for-clowns/cover/baseball-for-clowns.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -740,7 +746,7 @@
         <h3>Baseball for Clowns</h3>
       </div>
     </a>
-    <a class="card" href="../games/3d-darts.html">
+    <a class="card" href="../games/3d-darts.html" data-name="3d darts">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/3d-darts/cover/3d-darts.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -748,7 +754,7 @@
         <h3>3D Darts</h3>
       </div>
     </a>
-    <a class="card" href="../games/broom.html">
+    <a class="card" href="../games/broom.html" data-name="broom">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/broom/cover/broom.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -756,7 +762,7 @@
         <h3>Broom</h3>
       </div>
     </a>
-    <a class="card" href="../games/bike-mania-3-on-ice.html">
+    <a class="card" href="../games/bike-mania-3-on-ice.html" data-name="bike mania 3 on ice">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/bike-mania-3-on-ice/cover/bike-mania-3-on-ice.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -764,7 +770,7 @@
         <h3>Bike Mania 3 On Ice</h3>
       </div>
     </a>
-    <a class="card" href="../games/archery-king.html">
+    <a class="card" href="../games/archery-king.html" data-name="archery king">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/archery-king/cover/archery-king.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -772,7 +778,7 @@
         <h3>Archery King</h3>
       </div>
     </a>
-    <a class="card" href="../games/football-champ-3d.html">
+    <a class="card" href="../games/football-champ-3d.html" data-name="football champ 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/football-champ-3d/cover/football-champ-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -780,7 +786,7 @@
         <h3>Football Champ 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/pool-8-ball.html">
+    <a class="card" href="../games/pool-8-ball.html" data-name="pool 8 ball">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/pool-8-ball/cover/pool-8-ball.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -788,7 +794,7 @@
         <h3>Pool 8 Ball</h3>
       </div>
     </a>
-    <a class="card" href="../games/moto-maniac.html">
+    <a class="card" href="../games/moto-maniac.html" data-name="moto maniac">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/moto-maniac/cover/moto-maniac.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -796,7 +802,7 @@
         <h3>Moto Maniac</h3>
       </div>
     </a>
-    <a class="card" href="../games/slalom-ski-simulator.html">
+    <a class="card" href="../games/slalom-ski-simulator.html" data-name="slalom ski simulator">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/slalom-ski-simulator/cover/slalom-ski-simulator.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -804,7 +810,7 @@
         <h3>Slalom Ski Simulator</h3>
       </div>
     </a>
-    <a class="card" href="../games/archery-hero.html">
+    <a class="card" href="../games/archery-hero.html" data-name="archery hero">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/archery-hero/cover/archery-hero.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -812,7 +818,7 @@
         <h3>Archery Hero</h3>
       </div>
     </a>
-    <a class="card" href="../games/basketball-master-2.html">
+    <a class="card" href="../games/basketball-master-2.html" data-name="basketball master 2">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/basketball-master-2/cover/basketball-master-2.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -820,7 +826,7 @@
         <h3>Basketball Master 2</h3>
       </div>
     </a>
-    <a class="card" href="../games/basketball.html">
+    <a class="card" href="../games/basketball.html" data-name="basketball">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/basketball/cover/basketball.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -828,7 +834,7 @@
         <h3>BasketBall</h3>
       </div>
     </a>
-    <a class="card" href="../games/muscle-clicker-2.html">
+    <a class="card" href="../games/muscle-clicker-2.html" data-name="muscle clicker 2">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/muscle-clicker-2/cover/muscle-clicker-2.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -836,7 +842,7 @@
         <h3>Muscle Clicker 2</h3>
       </div>
     </a>
-    <a class="card" href="../games/fishing-io.html">
+    <a class="card" href="../games/fishing-io.html" data-name="fishing.io">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/fishing-io/cover/fishing-io.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -844,7 +850,7 @@
         <h3>Fishing.io</h3>
       </div>
     </a>
-    <a class="card" href="../games/extreme-drift-racing.html">
+    <a class="card" href="../games/extreme-drift-racing.html" data-name="extreme drift racing">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/extreme-drift-racing/cover/extreme-drift-racing.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -852,7 +858,7 @@
         <h3>Extreme Drift Racing</h3>
       </div>
     </a>
-    <a class="card" href="../games/leg-soccer.html">
+    <a class="card" href="../games/leg-soccer.html" data-name="leg soccer">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/leg-soccer/cover/leg-soccer.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -860,7 +866,7 @@
         <h3>Leg Soccer</h3>
       </div>
     </a>
-    <a class="card" href="../games/skating-hero.html">
+    <a class="card" href="../games/skating-hero.html" data-name="skating hero">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/skating-hero/cover/skating-hero.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -868,7 +874,7 @@
         <h3>Skating Hero</h3>
       </div>
     </a>
-    <a class="card" href="../games/street-freekick-3d.html">
+    <a class="card" href="../games/street-freekick-3d.html" data-name="street freekick 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/street-freekick-3d/cover/street-freekick-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -876,7 +882,7 @@
         <h3>Street Freekick 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/bike-mania-2.html">
+    <a class="card" href="../games/bike-mania-2.html" data-name="bike mania 2">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/bike-mania-2/cover/bike-mania-2.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -884,7 +890,7 @@
         <h3>Bike Mania 2</h3>
       </div>
     </a>
-    <a class="card" href="../games/city-driver-destroy-car.html">
+    <a class="card" href="../games/city-driver-destroy-car.html" data-name="city driver destroy car">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/city-driver-destroy-car/cover/city-driver-destroy-car.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -892,7 +898,7 @@
         <h3>City Driver Destroy Car</h3>
       </div>
     </a>
-    <a class="card" href="../games/jump-up-3d.html">
+    <a class="card" href="../games/jump-up-3d.html" data-name="jump up 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/jump-up-3d/cover/jump-up-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -900,7 +906,7 @@
         <h3>Jump Up 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/soccer-hero.html">
+    <a class="card" href="../games/soccer-hero.html" data-name="soccer hero">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/soccer-hero/cover/soccer-hero.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -908,7 +914,7 @@
         <h3>Soccer Hero</h3>
       </div>
     </a>
-    <a class="card" href="../games/racing-project-kit.html">
+    <a class="card" href="../games/racing-project-kit.html" data-name="racing project kit">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/racing-project-kit/cover/racing-project-kit.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -916,7 +922,7 @@
         <h3>Racing Project Kit</h3>
       </div>
     </a>
-    <a class="card" href="../games/soccer-heroes.html">
+    <a class="card" href="../games/soccer-heroes.html" data-name="soccer heroes">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/soccer-heroes/cover/soccer-heroes.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -924,7 +930,7 @@
         <h3>Soccer Heroes</h3>
       </div>
     </a>
-    <a class="card" href="../games/cricket-championship.html">
+    <a class="card" href="../games/cricket-championship.html" data-name="cricket championship	">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/cricket-championship/cover/cricket-championship.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -932,7 +938,7 @@
         <h3>Cricket Championship	</h3>
       </div>
     </a>
-    <a class="card" href="../games/penalty-superstar.html">
+    <a class="card" href="../games/penalty-superstar.html" data-name="penalty superstar">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/penalty-superstar/cover/penalty-superstar.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -940,7 +946,7 @@
         <h3>Penalty Superstar</h3>
       </div>
     </a>
-    <a class="card" href="../games/bowling-hero-multiplayer.html">
+    <a class="card" href="../games/bowling-hero-multiplayer.html" data-name="bowling hero multiplayer">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/bowling-hero-multiplayer/cover/bowling-hero-multiplayer.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -948,7 +954,7 @@
         <h3>Bowling Hero Multiplayer</h3>
       </div>
     </a>
-    <a class="card" href="../games/moto-maniac-3.html">
+    <a class="card" href="../games/moto-maniac-3.html" data-name="moto maniac 3">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/moto-maniac-3/cover/moto-maniac-3.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -956,7 +962,7 @@
         <h3>Moto Maniac 3</h3>
       </div>
     </a>
-    <a class="card" href="../games/football-rumble.html">
+    <a class="card" href="../games/football-rumble.html" data-name="football rumble">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/football-rumble/cover/football-rumble.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -964,7 +970,7 @@
         <h3>Football Rumble</h3>
       </div>
     </a>
-    <a class="card" href="../games/tennis-open-2024.html">
+    <a class="card" href="../games/tennis-open-2024.html" data-name="tennis open 2024">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/tennis-open-2024/cover/tennis-open-2024.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -972,7 +978,7 @@
         <h3>Tennis Open 2024</h3>
       </div>
     </a>
-    <a class="card" href="../games/minigolf-master.html">
+    <a class="card" href="../games/minigolf-master.html" data-name="minigolf master">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/minigolf-master/cover/minigolf-master.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -980,7 +986,7 @@
         <h3>Minigolf Master</h3>
       </div>
     </a>
-    <a class="card" href="../games/head-soccer-2023.html">
+    <a class="card" href="../games/head-soccer-2023.html" data-name="head soccer 2023">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/head-soccer-2023/cover/head-soccer-2023.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -988,7 +994,7 @@
         <h3>Head Soccer 2023</h3>
       </div>
     </a>
-    <a class="card" href="../games/choco-ball-draw-line-happy-girl.html">
+    <a class="card" href="../games/choco-ball-draw-line-happy-girl.html" data-name="choco ball-draw line & happy girl">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/choco-ball-draw-line-and-happy-girl/cover/choco-ball-draw-line-and-happy-girl.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -996,7 +1002,7 @@
         <h3>Choco Ball-Draw Line & Happy Girl</h3>
       </div>
     </a>
-    <a class="card" href="../games/retro-basketball.html">
+    <a class="card" href="../games/retro-basketball.html" data-name="retro basketball">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/retro-basketball/cover/retro-basketball.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1004,7 +1010,7 @@
         <h3>Retro Basketball</h3>
       </div>
     </a>
-    <a class="card" href="../games/slalom-hero.html">
+    <a class="card" href="../games/slalom-hero.html" data-name="slalom hero">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/slalom-hero/cover/slalom-hero.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1012,7 +1018,7 @@
         <h3>Slalom Hero</h3>
       </div>
     </a>
-    <a class="card" href="../games/tennis-open-2020.html">
+    <a class="card" href="../games/tennis-open-2020.html" data-name="tennis open 2020">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/tennis-open-2020/cover/tennis-open-2020.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1020,7 +1026,7 @@
         <h3>Tennis Open 2020</h3>
       </div>
     </a>
-    <a class="card" href="../games/stunt-rider.html">
+    <a class="card" href="../games/stunt-rider.html" data-name="stunt rider">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/stunt-rider/cover/stunt-rider.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1028,7 +1034,7 @@
         <h3>Stunt Rider</h3>
       </div>
     </a>
-    <a class="card" href="../games/football-heads.html">
+    <a class="card" href="../games/football-heads.html" data-name="football heads">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/football-heads/cover/football-heads.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1036,7 +1042,7 @@
         <h3>Football Heads</h3>
       </div>
     </a>
-    <a class="card" href="../games/penalty-kick.html">
+    <a class="card" href="../games/penalty-kick.html" data-name="penalty kick">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/penalty-challenge-multiplayer/cover/penalty-challenge-multiplayer.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1044,7 +1050,7 @@
         <h3>Penalty Kick</h3>
       </div>
     </a>
-    <a class="card" href="../games/beach-bowling-3d.html">
+    <a class="card" href="../games/beach-bowling-3d.html" data-name="beach bowling 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/beach-bowling-3d/cover/beach-bowling-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1052,7 +1058,7 @@
         <h3>Beach Bowling 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/ski-king-2022.html">
+    <a class="card" href="../games/ski-king-2022.html" data-name="ski king 2022">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/ski-king-2022/cover/ski-king-2022.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1060,7 +1066,7 @@
         <h3>Ski King 2022</h3>
       </div>
     </a>
-    <a class="card" href="../games/soccer-dash.html">
+    <a class="card" href="../games/soccer-dash.html" data-name="soccer dash">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/soccer-dash/cover/soccer-dash.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1068,7 +1074,7 @@
         <h3>Soccer Dash</h3>
       </div>
     </a>
-    <a class="card" href="../games/cycle-extreme.html">
+    <a class="card" href="../games/cycle-extreme.html" data-name="cycle extreme">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/cycle-extreme/cover/cycle-extreme.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1076,7 +1082,7 @@
         <h3>Cycle Extreme</h3>
       </div>
     </a>
-    <a class="card" href="../games/hockey-hero.html">
+    <a class="card" href="../games/hockey-hero.html" data-name="hockey hero">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/hockey-hero/cover/hockey-hero.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1084,7 +1090,7 @@
         <h3>Hockey Hero</h3>
       </div>
     </a>
-    <a class="card" href="../games/drift-race-in-the-open-world.html">
+    <a class="card" href="../games/drift-race-in-the-open-world.html" data-name="drift race in the open world">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/drift-race-in-the-open-world/cover/drift-race-in-the-open-world.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1092,7 +1098,7 @@
         <h3>Drift Race in the Open World</h3>
       </div>
     </a>
-    <a class="card" href="../games/grand-prix-hero.html">
+    <a class="card" href="../games/grand-prix-hero.html" data-name="grand prix hero">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/grand-prix-hero/cover/grand-prix-hero.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1100,7 +1106,7 @@
         <h3>Grand Prix Hero</h3>
       </div>
     </a>
-    <a class="card" href="../games/penalty-shooters-3.html">
+    <a class="card" href="../games/penalty-shooters-3.html" data-name="penalty shooters 3">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/penalty-shooters-3/cover/penalty-shooters-3.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1108,7 +1114,7 @@
         <h3>Penalty Shooters 3</h3>
       </div>
     </a>
-    <a class="card" href="../games/head-ball-hyper-casual-game.html">
+    <a class="card" href="../games/head-ball-hyper-casual-game.html" data-name="head ball hyper casual game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/head-ball-hyper-casual-game/cover/head-ball-hyper-casual-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1116,7 +1122,7 @@
         <h3>Head Ball Hyper Casual Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/airplane-pilot-simulator.html">
+    <a class="card" href="../games/airplane-pilot-simulator.html" data-name="airplane pilot simulator">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/airplane-pilot-simulator/cover/airplane-pilot-simulator.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1124,7 +1130,7 @@
         <h3>Airplane Pilot Simulator</h3>
       </div>
     </a>
-    <a class="card" href="../games/flipper-dunk-3d.html">
+    <a class="card" href="../games/flipper-dunk-3d.html" data-name="flipper dunk 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/flipper-dunk-3d/cover/flipper-dunk-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1132,7 +1138,7 @@
         <h3>Flipper Dunk 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/basketball-master.html">
+    <a class="card" href="../games/basketball-master.html" data-name="basketball master">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/basketball-masters/cover/basketball-masters.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1140,7 +1146,7 @@
         <h3>Basketball Master</h3>
       </div>
     </a>
-    <a class="card" href="../games/undisputed-mma.html">
+    <a class="card" href="../games/undisputed-mma.html" data-name="undisputed mma">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/undisputed-mma/cover/undisputed-mma.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1148,7 +1154,7 @@
         <h3>Undisputed MMA</h3>
       </div>
     </a>
-    <a class="card" href="../games/boxing-stars.html">
+    <a class="card" href="../games/boxing-stars.html" data-name="boxing stars">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/boxing-stars/cover/boxing-stars.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1156,7 +1162,7 @@
         <h3>Boxing Stars</h3>
       </div>
     </a>
-    <a class="card" href="../games/just-golf.html">
+    <a class="card" href="../games/just-golf.html" data-name="just golf">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/just-golf/cover/just-golf.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1164,7 +1170,7 @@
         <h3>Just Golf</h3>
       </div>
     </a>
-    <a class="card" href="../games/football-crash.html">
+    <a class="card" href="../games/football-crash.html" data-name="football crash">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/football-crash/cover/football-crash.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1172,7 +1178,7 @@
         <h3>Football Crash</h3>
       </div>
     </a>
-    <a class="card" href="../games/penalty-shooters.html">
+    <a class="card" href="../games/penalty-shooters.html" data-name="penalty shooters">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/penalty-shooters/cover/penalty-shooters.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1180,7 +1186,7 @@
         <h3>Penalty Shooters</h3>
       </div>
     </a>
-    <a class="card" href="../games/moto-maniac-2.html">
+    <a class="card" href="../games/moto-maniac-2.html" data-name="moto maniac 2">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/moto-maniac-2/cover/moto-maniac-2.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1188,7 +1194,7 @@
         <h3>Moto Maniac 2</h3>
       </div>
     </a>
-    <a class="card" href="../games/stock-car-hero.html">
+    <a class="card" href="../games/stock-car-hero.html" data-name="stock car hero">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/stock-car-hero/cover/stock-car-hero.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1196,7 +1202,7 @@
         <h3>Stock Car Hero</h3>
       </div>
     </a>
-    <a class="card" href="../games/basket-champs.html">
+    <a class="card" href="../games/basket-champs.html" data-name="basket champs">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/basket-champs/cover/basket-champs.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1204,7 +1210,7 @@
         <h3>Basket Champs</h3>
       </div>
     </a>
-    <a class="card" href="../games/superbike-hero.html">
+    <a class="card" href="../games/superbike-hero.html" data-name="superbike hero">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/superbike-hero/cover/superbike-hero.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1212,7 +1218,7 @@
         <h3>Superbike Hero</h3>
       </div>
     </a>
-    <a class="card" href="../games/grimace-penalty.html">
+    <a class="card" href="../games/grimace-penalty.html" data-name="grimace penalty">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/grimace-penalty/cover/grimace-penalty.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1220,7 +1226,7 @@
         <h3>Grimace Penalty</h3>
       </div>
     </a>
-    <a class="card" href="../games/drag-racing-club.html">
+    <a class="card" href="../games/drag-racing-club.html" data-name="drag racing club">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/drag-racing-club/cover/drag-racing-club.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1228,7 +1234,7 @@
         <h3>Drag Racing Club</h3>
       </div>
     </a>
-    <a class="card" href="../games/novice-fisherman.html">
+    <a class="card" href="../games/novice-fisherman.html" data-name="novice fisherman">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/novice-fisher/cover/novice-fisher.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1236,7 +1242,7 @@
         <h3>Novice Fisherman</h3>
       </div>
     </a>
-    <a class="card" href="../games/head-the-ball.html">
+    <a class="card" href="../games/head-the-ball.html" data-name="head the ball">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/head-the-ball/cover/head-the-ball.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1244,7 +1250,7 @@
         <h3>Head the Ball</h3>
       </div>
     </a>
-    <a class="card" href="../games/night-city-racing.html">
+    <a class="card" href="../games/night-city-racing.html" data-name="night city racing">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/night-city-racing/cover/night-city-racing.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1252,7 +1258,7 @@
         <h3>Night City Racing</h3>
       </div>
     </a>
-    <a class="card" href="../games/street-ball-jam.html">
+    <a class="card" href="../games/street-ball-jam.html" data-name="street ball jam">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/street-ball-jam/cover/street-ball-jam.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1260,7 +1266,7 @@
         <h3>Street Ball Jam</h3>
       </div>
     </a>
-    <a class="card" href="../games/foot-chinko.html">
+    <a class="card" href="../games/foot-chinko.html" data-name="foot chinko">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/foot-chinko/cover/foot-chinko.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1268,7 +1274,7 @@
         <h3>Foot Chinko</h3>
       </div>
     </a>
-    <a class="card" href="../games/flip-trickster-parkour-simulator.html">
+    <a class="card" href="../games/flip-trickster-parkour-simulator.html" data-name="flip trickster - parkour simulator">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/flip-trickster-parkour-simulator/cover/flip-trickster-parkour-simulator.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1276,7 +1282,7 @@
         <h3>Flip Trickster - Parkour Simulator</h3>
       </div>
     </a>
-    <a class="card" href="../games/fish-rain.html">
+    <a class="card" href="../games/fish-rain.html" data-name="fish rain">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/fish-rain/cover/fish-rain.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1284,7 +1290,7 @@
         <h3>Fish Rain</h3>
       </div>
     </a>
-    <a class="card" href="../games/football-masters.html">
+    <a class="card" href="../games/football-masters.html" data-name="football masters">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/football-masters/cover/football-masters.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1292,7 +1298,7 @@
         <h3>Football Masters</h3>
       </div>
     </a>
-    <a class="card" href="../games/swipy-basketball.html">
+    <a class="card" href="../games/swipy-basketball.html" data-name="swipy basketball">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/swipy-basketball/cover/swipy-basketball.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1300,7 +1306,7 @@
         <h3>Swipy Basketball</h3>
       </div>
     </a>
-    <a class="card" href="../games/foot-chinko-world-cup.html">
+    <a class="card" href="../games/foot-chinko-world-cup.html" data-name="foot chinko world cup">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/foot-chinko-world-cup/cover/foot-chinko-world-cup.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1308,7 +1314,7 @@
         <h3>Foot Chinko World Cup</h3>
       </div>
     </a>
-    <a class="card" href="../games/ragdoll-mega-dunk.html">
+    <a class="card" href="../games/ragdoll-mega-dunk.html" data-name="ragdoll mega dunk">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/ragdoll-mega-dunk/cover/ragdoll-mega-dunk.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1316,7 +1322,7 @@
         <h3>Ragdoll Mega Dunk</h3>
       </div>
     </a>
-    <a class="card" href="../games/goal-skibidi-goal.html">
+    <a class="card" href="../games/goal-skibidi-goal.html" data-name="goal skibidi goal">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/goal-skibidi-goal/cover/goal-skibidi-goal.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1324,7 +1330,7 @@
         <h3>Goal Skibidi Goal</h3>
       </div>
     </a>
-    <a class="card" href="../games/basketball-stars.html">
+    <a class="card" href="../games/basketball-stars.html" data-name="basketball stars">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/basketball-stars/cover/basketball-stars.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1332,7 +1338,7 @@
         <h3>Basketball Stars</h3>
       </div>
     </a>
-    <a class="card" href="../games/ultimate-flying-car.html">
+    <a class="card" href="../games/ultimate-flying-car.html" data-name="ultimate flying car">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/ultimate-flying-car/cover/ultimate-flying-car.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1340,7 +1346,7 @@
         <h3>Ultimate Flying Car</h3>
       </div>
     </a>
-    <a class="card" href="../games/penalty-kick-wiz.html">
+    <a class="card" href="../games/penalty-kick-wiz.html" data-name="penalty kick wiz">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/penalty-kick-wiz/cover/penalty-kick-wiz.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -1349,7 +1355,34 @@
       </div>
     </a>
   </div>
+
+  <p id="category-no-results" style="display:none; color:var(--muted); font-size:14px; margin-top:20px;">
+    No games found for "<span id="category-no-results-term"></span>".
+  </p>
 </div>
+
+<script>
+  (function() {
+    const searchInput = document.getElementById('category-search');
+    const cards = Array.from(document.querySelectorAll('#category-grid .card'));
+    const resultCount = document.getElementById('category-result-count');
+    const noResults = document.getElementById('category-no-results');
+    const noResultsTerm = document.getElementById('category-no-results-term');
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const match = !q || (card.dataset.name && card.dataset.name.includes(q));
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      resultCount.textContent = visible + (visible === 1 ? ' game' : ' games');
+      noResults.style.display = visible === 0 ? '' : 'none';
+      if (visible === 0) noResultsTerm.textContent = searchInput.value.trim();
+    });
+  })();
+</script>
 
 <footer class="site-footer">
   <span>© Pixelsprout — Play. Grow. Explore. Some games provided via GamePix.</span>

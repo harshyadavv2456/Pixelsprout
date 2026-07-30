@@ -51,8 +51,14 @@
     <p>Browse 15 free escape games, playable instantly in your browser. No downloads, no accounts, no waiting — just click and play. New escape games are added regularly, so check back for more.</p>
   </div>
 
-  <div class="category-grid">
-    <a class="card" href="../games/hide-and-seek-in-block-craft.html">
+  <div class="search-row" style="margin-bottom:16px;">
+    <input type="text" id="category-search" placeholder="Search Escape games..." autocomplete="off"
+      style="width:100%; max-width:400px; padding:10px 16px; border-radius:999px; border:1px solid var(--border); background:var(--panel); color:var(--paper); font-size:14px;">
+    <span id="category-result-count" style="margin-left:10px; font-size:13px; color:var(--muted);">15 games</span>
+  </div>
+
+  <div class="category-grid" id="category-grid">
+    <a class="card" href="../games/hide-and-seek-in-block-craft.html" data-name="hide and seek in block craft">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/hide-and-seek-in-block-craft/cover/hide-and-seek-in-block-craft.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -60,7 +66,7 @@
         <h3>Hide and Seek in Block Craft</h3>
       </div>
     </a>
-    <a class="card" href="../games/squid-maze-challenge.html">
+    <a class="card" href="../games/squid-maze-challenge.html" data-name="squid maze challenge">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/squid-maze-challenge/cover/squid-maze-challenge.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -68,7 +74,7 @@
         <h3>Squid Maze Challenge</h3>
       </div>
     </a>
-    <a class="card" href="../games/huggy-wuggy-guess-the-right-door.html">
+    <a class="card" href="../games/huggy-wuggy-guess-the-right-door.html" data-name="huggy wuggy - guess the right door">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/huggy-wuggy-guess-the-right-door/cover/huggy-wuggy-guess-the-right-door.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -76,7 +82,7 @@
         <h3>Huggy Wuggy - Guess the right door</h3>
       </div>
     </a>
-    <a class="card" href="../games/escape-story.html">
+    <a class="card" href="../games/escape-story.html" data-name="escape story">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/escape-story/cover/escape-story.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -84,7 +90,7 @@
         <h3>Escape Story</h3>
       </div>
     </a>
-    <a class="card" href="../games/100-rooms-escape.html">
+    <a class="card" href="../games/100-rooms-escape.html" data-name="100 rooms escape">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/100-rooms-escape/cover/100-rooms-escape.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -92,7 +98,7 @@
         <h3>100 Rooms Escape</h3>
       </div>
     </a>
-    <a class="card" href="../games/surval-master-456-challenge.html">
+    <a class="card" href="../games/surval-master-456-challenge.html" data-name="surval master 456 challenge">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/surval-master-456-challenge/cover/surval-master-456-challenge.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -100,7 +106,7 @@
         <h3>Surval Master 456 Challenge</h3>
       </div>
     </a>
-    <a class="card" href="../games/escape-from-the-silence.html">
+    <a class="card" href="../games/escape-from-the-silence.html" data-name="escape from the silence">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/escape-from-the-silence/cover/escape-from-the-silence.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -108,7 +114,7 @@
         <h3>Escape From the Silence</h3>
       </div>
     </a>
-    <a class="card" href="../games/cambini-s-great-escape.html">
+    <a class="card" href="../games/cambini-s-great-escape.html" data-name="cambini's great escape">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/cambini-s-great-escape/cover/cambini-s-great-escape.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -116,7 +122,7 @@
         <h3>Cambini's Great Escape</h3>
       </div>
     </a>
-    <a class="card" href="../games/prison-jail-escaping-game.html">
+    <a class="card" href="../games/prison-jail-escaping-game.html" data-name="prison jail escaping game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/prison-jail-escaping-game/cover/prison-jail-escaping-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -124,7 +130,7 @@
         <h3>Prison Jail Escaping Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/huggy-wuggy-escape.html">
+    <a class="card" href="../games/huggy-wuggy-escape.html" data-name="huggy wuggy escape">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/huggy-wuggy-escape/cover/huggy-wuggy-escape.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -132,7 +138,7 @@
         <h3>Huggy Wuggy Escape</h3>
       </div>
     </a>
-    <a class="card" href="../games/tralalero-tralala-escape-tung-tung-sahur.html">
+    <a class="card" href="../games/tralalero-tralala-escape-tung-tung-sahur.html" data-name="tralalero tralala escape tung tung sahur">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/tralalero-tralala-escape-tung-tung-sahur/cover/tralalero-tralala-escape-tung-tung-sahur.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -140,7 +146,7 @@
         <h3>Tralalero Tralala escape Tung Tung Sahur</h3>
       </div>
     </a>
-    <a class="card" href="../games/thung-thung-sahur-night-escape.html">
+    <a class="card" href="../games/thung-thung-sahur-night-escape.html" data-name="thung thung sahur night escape">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/thung-thung-sahur-night-escape/cover/thung-thung-sahur-night-escape.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -148,7 +154,7 @@
         <h3>Thung Thung Sahur Night Escape</h3>
       </div>
     </a>
-    <a class="card" href="../games/cool-escape-obby-man.html">
+    <a class="card" href="../games/cool-escape-obby-man.html" data-name="cool escape obby man">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/cool-escape-obby-man/cover/cool-escape-obby-man.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -156,7 +162,7 @@
         <h3>Cool Escape Obby Man</h3>
       </div>
     </a>
-    <a class="card" href="../games/tralalero-tralala-red-light-squid-game.html">
+    <a class="card" href="../games/tralalero-tralala-red-light-squid-game.html" data-name="tralalero tralala red light squid game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/tralalero-tralala-red-light-squid-game/cover/tralalero-tralala-red-light-squid-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -164,7 +170,7 @@
         <h3>Tralalero Tralala Red Light Squid Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/100-doors-escape-from-prison.html">
+    <a class="card" href="../games/100-doors-escape-from-prison.html" data-name="100 doors - escape from prison">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/100-doors-escape-from-prison/cover/100-doors-escape-from-prison.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -173,7 +179,34 @@
       </div>
     </a>
   </div>
+
+  <p id="category-no-results" style="display:none; color:var(--muted); font-size:14px; margin-top:20px;">
+    No games found for "<span id="category-no-results-term"></span>".
+  </p>
 </div>
+
+<script>
+  (function() {
+    const searchInput = document.getElementById('category-search');
+    const cards = Array.from(document.querySelectorAll('#category-grid .card'));
+    const resultCount = document.getElementById('category-result-count');
+    const noResults = document.getElementById('category-no-results');
+    const noResultsTerm = document.getElementById('category-no-results-term');
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const match = !q || (card.dataset.name && card.dataset.name.includes(q));
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      resultCount.textContent = visible + (visible === 1 ? ' game' : ' games');
+      noResults.style.display = visible === 0 ? '' : 'none';
+      if (visible === 0) noResultsTerm.textContent = searchInput.value.trim();
+    });
+  })();
+</script>
 
 <footer class="site-footer">
   <span>© Pixelsprout — Play. Grow. Explore. Some games provided via GamePix.</span>

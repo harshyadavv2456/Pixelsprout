@@ -51,8 +51,14 @@
     <p>Browse 54 free monster games, playable instantly in your browser. No downloads, no accounts, no waiting — just click and play. New monster games are added regularly, so check back for more.</p>
   </div>
 
-  <div class="category-grid">
-    <a class="card" href="../games/steveman-lava-world.html">
+  <div class="search-row" style="margin-bottom:16px;">
+    <input type="text" id="category-search" placeholder="Search Monster games..." autocomplete="off"
+      style="width:100%; max-width:400px; padding:10px 16px; border-radius:999px; border:1px solid var(--border); background:var(--panel); color:var(--paper); font-size:14px;">
+    <span id="category-result-count" style="margin-left:10px; font-size:13px; color:var(--muted);">54 games</span>
+  </div>
+
+  <div class="category-grid" id="category-grid">
+    <a class="card" href="../games/steveman-lava-world.html" data-name="steveman lava world">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/steveman-lava-world/cover/steveman-lava-world.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -60,7 +66,7 @@
         <h3>Steveman Lava World</h3>
       </div>
     </a>
-    <a class="card" href="../games/grimace-commando.html">
+    <a class="card" href="../games/grimace-commando.html" data-name="grimace commando">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/grimace-commando/cover/grimace-commando.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -68,7 +74,7 @@
         <h3>Grimace Commando</h3>
       </div>
     </a>
-    <a class="card" href="../games/marshmello-monster.html">
+    <a class="card" href="../games/marshmello-monster.html" data-name="marshmello monster">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/marshmello-monster/cover/marshmello-monster.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -76,7 +82,7 @@
         <h3>Marshmello Monster</h3>
       </div>
     </a>
-    <a class="card" href="../games/deadly-race-droid.html">
+    <a class="card" href="../games/deadly-race-droid.html" data-name="deadly race droid">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/deadly-race-droid/cover/deadly-race-droid.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -84,7 +90,7 @@
         <h3>Deadly Race Droid</h3>
       </div>
     </a>
-    <a class="card" href="../games/steve-and-alex-vs-fnaf.html">
+    <a class="card" href="../games/steve-and-alex-vs-fnaf.html" data-name="steve and alex vs fnaf">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/steve-and-alex-vs-fnaf/cover/steve-and-alex-vs-fnaf.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -92,7 +98,7 @@
         <h3>Steve and Alex vs Fnaf</h3>
       </div>
     </a>
-    <a class="card" href="../games/noob-vs-blue-monster.html">
+    <a class="card" href="../games/noob-vs-blue-monster.html" data-name="noob vs blue monster">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/noob-vs-blue-monster/cover/noob-vs-blue-monster.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -100,7 +106,7 @@
         <h3>Noob vs Blue Monster</h3>
       </div>
     </a>
-    <a class="card" href="../games/legend-of-the-witcher.html">
+    <a class="card" href="../games/legend-of-the-witcher.html" data-name="legend of the witcher">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/legend-of-the-witcher/cover/legend-of-the-witcher.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -108,7 +114,7 @@
         <h3>Legend of The Witcher</h3>
       </div>
     </a>
-    <a class="card" href="../games/jungle-escape-game.html">
+    <a class="card" href="../games/jungle-escape-game.html" data-name="jungle escape game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/jungle-escape-game/cover/jungle-escape-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -116,7 +122,7 @@
         <h3>Jungle Escape Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/steveman.html">
+    <a class="card" href="../games/steveman.html" data-name="steveman">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/steveman/cover/steveman.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -124,7 +130,7 @@
         <h3>Steveman</h3>
       </div>
     </a>
-    <a class="card" href="../games/royal-kingdom.html">
+    <a class="card" href="../games/royal-kingdom.html" data-name="royal kingdom">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/royal-kingdom/cover/royal-kingdom.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -132,7 +138,7 @@
         <h3>Royal Kingdom</h3>
       </div>
     </a>
-    <a class="card" href="../games/orkio.html">
+    <a class="card" href="../games/orkio.html" data-name="orkio">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/orkio/cover/orkio.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -140,7 +146,7 @@
         <h3>Orkio</h3>
       </div>
     </a>
-    <a class="card" href="../games/poppy-it-playtime.html">
+    <a class="card" href="../games/poppy-it-playtime.html" data-name="poppy it playtime">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/poppy-it-playtime/cover/poppy-it-playtime.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -148,7 +154,7 @@
         <h3>Poppy it Playtime</h3>
       </div>
     </a>
-    <a class="card" href="../games/red-ball-bounce.html">
+    <a class="card" href="../games/red-ball-bounce.html" data-name="red ball bounce">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/red-ball-bounce/cover/red-ball-bounce.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -156,7 +162,7 @@
         <h3>Red Ball Bounce</h3>
       </div>
     </a>
-    <a class="card" href="../games/noob-vs-hacker.html">
+    <a class="card" href="../games/noob-vs-hacker.html" data-name="noob vs hacker">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/noob-vs-hacker/cover/noob-vs-hacker.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -164,7 +170,7 @@
         <h3>Noob vs Hacker</h3>
       </div>
     </a>
-    <a class="card" href="../games/scary-vending-machine.html">
+    <a class="card" href="../games/scary-vending-machine.html" data-name="scary vending machine">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/scary-vending-machine/cover/scary-vending-machine.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -172,7 +178,7 @@
         <h3>Scary Vending Machine</h3>
       </div>
     </a>
-    <a class="card" href="../games/alien-slime.html">
+    <a class="card" href="../games/alien-slime.html" data-name="alien slime">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/alien-slime/cover/alien-slime.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -180,7 +186,7 @@
         <h3>Alien Slime</h3>
       </div>
     </a>
-    <a class="card" href="../games/456-impostor.html">
+    <a class="card" href="../games/456-impostor.html" data-name="456 impostor">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/456-impostor/cover/456-impostor.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -188,7 +194,7 @@
         <h3>456 impostor</h3>
       </div>
     </a>
-    <a class="card" href="../games/candy-monsters.html">
+    <a class="card" href="../games/candy-monsters.html" data-name="candy monsters">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/candy-monsters/cover/candy-monsters.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -196,7 +202,7 @@
         <h3>Candy Monsters</h3>
       </div>
     </a>
-    <a class="card" href="../games/platfoban.html">
+    <a class="card" href="../games/platfoban.html" data-name="platfoban">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/platfoban/cover/platfoban.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -204,7 +210,7 @@
         <h3>Platfoban</h3>
       </div>
     </a>
-    <a class="card" href="../games/match-monster.html">
+    <a class="card" href="../games/match-monster.html" data-name="match monster">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/match-monster/cover/match-monster.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -212,7 +218,7 @@
         <h3>Match Monster</h3>
       </div>
     </a>
-    <a class="card" href="../games/fairyland.html">
+    <a class="card" href="../games/fairyland.html" data-name="fairyland">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/fairyland/cover/fairyland.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -220,7 +226,7 @@
         <h3>Fairyland</h3>
       </div>
     </a>
-    <a class="card" href="../games/blobkill.html">
+    <a class="card" href="../games/blobkill.html" data-name="blobkill">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/blobkill/cover/blobkill.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -228,7 +234,7 @@
         <h3>Blobkill</h3>
       </div>
     </a>
-    <a class="card" href="../games/sweet-monsters.html">
+    <a class="card" href="../games/sweet-monsters.html" data-name="sweet monsters">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/sweet-monsters/cover/sweet-monsters.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -236,7 +242,7 @@
         <h3>Sweet Monsters</h3>
       </div>
     </a>
-    <a class="card" href="../games/huggy-skate.html">
+    <a class="card" href="../games/huggy-skate.html" data-name="huggy skate">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/huggy-skate/cover/huggy-skate.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -244,7 +250,7 @@
         <h3>Huggy Skate</h3>
       </div>
     </a>
-    <a class="card" href="../games/jelly-bros-red-and-blue.html">
+    <a class="card" href="../games/jelly-bros-red-and-blue.html" data-name="jelly bros red and blue">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/jelly-bros-red-and-blue/cover/jelly-bros-red-and-blue.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -252,7 +258,7 @@
         <h3>Jelly Bros Red and Blue</h3>
       </div>
     </a>
-    <a class="card" href="../games/exploder-io.html">
+    <a class="card" href="../games/exploder-io.html" data-name="exploder.io">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/exploder-io/cover/exploder-io.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -260,7 +266,7 @@
         <h3>Exploder.io</h3>
       </div>
     </a>
-    <a class="card" href="../games/garten-of-banban-obby.html">
+    <a class="card" href="../games/garten-of-banban-obby.html" data-name="garten of banban obby">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/garten-of-banban-obby/cover/garten-of-banban-obby.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -268,7 +274,7 @@
         <h3>Garten of Banban Obby</h3>
       </div>
     </a>
-    <a class="card" href="../games/ninja-adventure.html">
+    <a class="card" href="../games/ninja-adventure.html" data-name="ninja adventure">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/ninja-adventure/cover/ninja-adventure.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -276,7 +282,7 @@
         <h3>Ninja Adventure</h3>
       </div>
     </a>
-    <a class="card" href="../games/kly-kly.html">
+    <a class="card" href="../games/kly-kly.html" data-name="kly kly">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/kly-kly/cover/kly-kly.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -284,7 +290,7 @@
         <h3>Kly Kly</h3>
       </div>
     </a>
-    <a class="card" href="../games/candy-blast-candy-bomb-puzzle-game.html">
+    <a class="card" href="../games/candy-blast-candy-bomb-puzzle-game.html" data-name="candy blast - candy bomb puzzle game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/candy-blast-candy-bomb-puzzle-game/cover/candy-blast-candy-bomb-puzzle-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -292,7 +298,7 @@
         <h3>Candy Blast - Candy Bomb Puzzle Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/crazy-jumper.html">
+    <a class="card" href="../games/crazy-jumper.html" data-name="crazy jumper">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/crazy-jumper/cover/crazy-jumper.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -300,7 +306,7 @@
         <h3>Crazy Jumper</h3>
       </div>
     </a>
-    <a class="card" href="../games/ufo-shooting-game.html">
+    <a class="card" href="../games/ufo-shooting-game.html" data-name="ufo shooting game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/ufo-shooting-game/cover/ufo-shooting-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -308,7 +314,7 @@
         <h3>UFO Shooting Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/monster-machine.html">
+    <a class="card" href="../games/monster-machine.html" data-name="monster machine">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/monster-machine/cover/monster-machine.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -316,7 +322,7 @@
         <h3>Monster Machine</h3>
       </div>
     </a>
-    <a class="card" href="../games/yeti-sensation.html">
+    <a class="card" href="../games/yeti-sensation.html" data-name="yeti sensation">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/yeti-sensation/cover/yeti-sensation.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -324,7 +330,7 @@
         <h3>Yeti Sensation</h3>
       </div>
     </a>
-    <a class="card" href="../games/guns-n-glory-heroes.html">
+    <a class="card" href="../games/guns-n-glory-heroes.html" data-name="guns n glory heroes">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/guns-n-glory-heroes/cover/guns-n-glory-heroes.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -332,7 +338,7 @@
         <h3>Guns n Glory Heroes</h3>
       </div>
     </a>
-    <a class="card" href="../games/shadow-adventure.html">
+    <a class="card" href="../games/shadow-adventure.html" data-name="shadow adventure">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/shadow-adventure/cover/shadow-adventure.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -340,7 +346,7 @@
         <h3>Shadow Adventure</h3>
       </div>
     </a>
-    <a class="card" href="../games/pro-obunga-vs-creepender.html">
+    <a class="card" href="../games/pro-obunga-vs-creepender.html" data-name="pro obunga vs creepender">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/pro-obunga-vs-creepender/cover/pro-obunga-vs-creepender.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -348,7 +354,7 @@
         <h3>Pro Obunga vs CreepEnder</h3>
       </div>
     </a>
-    <a class="card" href="../games/slimoban-2.html">
+    <a class="card" href="../games/slimoban-2.html" data-name="slimoban 2">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/slimoban-2/cover/slimoban-2.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -356,7 +362,7 @@
         <h3>Slimoban 2</h3>
       </div>
     </a>
-    <a class="card" href="../games/key-shield-2.html">
+    <a class="card" href="../games/key-shield-2.html" data-name="key & shield 2">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/key-shield-2/cover/key-shield-2.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -364,7 +370,7 @@
         <h3>Key & Shield 2</h3>
       </div>
     </a>
-    <a class="card" href="../games/noob-huggy.html">
+    <a class="card" href="../games/noob-huggy.html" data-name="noob huggy">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/noob-huggy/cover/noob-huggy.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -372,7 +378,7 @@
         <h3>Noob Huggy</h3>
       </div>
     </a>
-    <a class="card" href="../games/flappy-alien.html">
+    <a class="card" href="../games/flappy-alien.html" data-name="flappy alien">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/flappy-alien/cover/flappy-alien.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -380,7 +386,7 @@
         <h3>Flappy Alien</h3>
       </div>
     </a>
-    <a class="card" href="../games/goblin-clan.html">
+    <a class="card" href="../games/goblin-clan.html" data-name="goblin clan">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/goblin-clan/cover/goblin-clan.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -388,7 +394,7 @@
         <h3>Goblin Clan</h3>
       </div>
     </a>
-    <a class="card" href="../games/green-and-blue-cuteman.html">
+    <a class="card" href="../games/green-and-blue-cuteman.html" data-name="green and blue cuteman">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/green-and-blue-cuteman/cover/green-and-blue-cuteman.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -396,7 +402,7 @@
         <h3>Green and Blue Cuteman</h3>
       </div>
     </a>
-    <a class="card" href="../games/clash-of-kingdom.html">
+    <a class="card" href="../games/clash-of-kingdom.html" data-name="clash of kingdom">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/clash-of-kingdom/cover/clash-of-kingdom.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -404,7 +410,7 @@
         <h3>Clash of Kingdom</h3>
       </div>
     </a>
-    <a class="card" href="../games/pudding-monsters.html">
+    <a class="card" href="../games/pudding-monsters.html" data-name="pudding monsters">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/pudding-monsters/cover/pudding-monsters.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -412,7 +418,7 @@
         <h3>Pudding Monsters</h3>
       </div>
     </a>
-    <a class="card" href="../games/moonshine-runners-samogonki.html">
+    <a class="card" href="../games/moonshine-runners-samogonki.html" data-name="moonshine runners samogonki">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/moonshine-runners-samogonki/cover/moonshine-runners-samogonki.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -420,7 +426,7 @@
         <h3>Moonshine Runners Samogonki</h3>
       </div>
     </a>
-    <a class="card" href="../games/madness-combat-fangame.html">
+    <a class="card" href="../games/madness-combat-fangame.html" data-name="madness combat fangame">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/madness-combat-fangame/cover/madness-combat-fangame.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -428,7 +434,7 @@
         <h3>Madness Combat Fangame</h3>
       </div>
     </a>
-    <a class="card" href="../games/outer-planet.html">
+    <a class="card" href="../games/outer-planet.html" data-name="outer planet">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/outer-planet/cover/outer-planet.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -436,7 +442,7 @@
         <h3>Outer Planet</h3>
       </div>
     </a>
-    <a class="card" href="../games/bois-d-arc-bow-shooting.html">
+    <a class="card" href="../games/bois-d-arc-bow-shooting.html" data-name="bois d'arc: bow shooting">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/bois-d-arc/cover/bois-d-arc.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -444,7 +450,7 @@
         <h3>Bois d'Arc: Bow Shooting</h3>
       </div>
     </a>
-    <a class="card" href="../games/alien-bubbles.html">
+    <a class="card" href="../games/alien-bubbles.html" data-name="alien bubbles">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/alien-bubbles/cover/alien-bubbles.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -452,7 +458,7 @@
         <h3>Alien Bubbles</h3>
       </div>
     </a>
-    <a class="card" href="../games/battboy-adventure.html">
+    <a class="card" href="../games/battboy-adventure.html" data-name="battboy adventure">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/battboy-adventure/cover/battboy-adventure.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -460,7 +466,7 @@
         <h3>Battboy Adventure</h3>
       </div>
     </a>
-    <a class="card" href="../games/the-lost-joystick.html">
+    <a class="card" href="../games/the-lost-joystick.html" data-name="the lost joystick">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/the-lost-joystick/cover/the-lost-joystick.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -468,7 +474,7 @@
         <h3>The Lost Joystick</h3>
       </div>
     </a>
-    <a class="card" href="../games/flying-grimace.html">
+    <a class="card" href="../games/flying-grimace.html" data-name="flying grimace">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/flying-grimace/cover/flying-grimace.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -476,7 +482,7 @@
         <h3>Flying Grimace</h3>
       </div>
     </a>
-    <a class="card" href="../games/magikmon.html">
+    <a class="card" href="../games/magikmon.html" data-name="magikmon">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/magikmon/cover/magikmon.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -485,7 +491,34 @@
       </div>
     </a>
   </div>
+
+  <p id="category-no-results" style="display:none; color:var(--muted); font-size:14px; margin-top:20px;">
+    No games found for "<span id="category-no-results-term"></span>".
+  </p>
 </div>
+
+<script>
+  (function() {
+    const searchInput = document.getElementById('category-search');
+    const cards = Array.from(document.querySelectorAll('#category-grid .card'));
+    const resultCount = document.getElementById('category-result-count');
+    const noResults = document.getElementById('category-no-results');
+    const noResultsTerm = document.getElementById('category-no-results-term');
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const match = !q || (card.dataset.name && card.dataset.name.includes(q));
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      resultCount.textContent = visible + (visible === 1 ? ' game' : ' games');
+      noResults.style.display = visible === 0 ? '' : 'none';
+      if (visible === 0) noResultsTerm.textContent = searchInput.value.trim();
+    });
+  })();
+</script>
 
 <footer class="site-footer">
   <span>© Pixelsprout — Play. Grow. Explore. Some games provided via GamePix.</span>

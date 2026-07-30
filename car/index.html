@@ -51,8 +51,14 @@
     <p>Browse 32 free car games, playable instantly in your browser. No downloads, no accounts, no waiting — just click and play. New car games are added regularly, so check back for more.</p>
   </div>
 
-  <div class="category-grid">
-    <a class="card" href="../games/extreme-driving.html">
+  <div class="search-row" style="margin-bottom:16px;">
+    <input type="text" id="category-search" placeholder="Search Car games..." autocomplete="off"
+      style="width:100%; max-width:400px; padding:10px 16px; border-radius:999px; border:1px solid var(--border); background:var(--panel); color:var(--paper); font-size:14px;">
+    <span id="category-result-count" style="margin-left:10px; font-size:13px; color:var(--muted);">32 games</span>
+  </div>
+
+  <div class="category-grid" id="category-grid">
+    <a class="card" href="../games/extreme-driving.html" data-name="extreme driving">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/extreme-driving/cover/extreme-driving.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -60,7 +66,7 @@
         <h3>Extreme Driving</h3>
       </div>
     </a>
-    <a class="card" href="../games/gta-car-rush.html">
+    <a class="card" href="../games/gta-car-rush.html" data-name="gta car rush">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/gta-car-rush/cover/gta-car-rush.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -68,7 +74,7 @@
         <h3>GTA Car Rush</h3>
       </div>
     </a>
-    <a class="card" href="../games/car-parking-jam.html">
+    <a class="card" href="../games/car-parking-jam.html" data-name="car parking jam">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/car-parking-jam/cover/car-parking-jam.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -76,7 +82,7 @@
         <h3>Car Parking Jam</h3>
       </div>
     </a>
-    <a class="card" href="../games/car-dealer-idle.html">
+    <a class="card" href="../games/car-dealer-idle.html" data-name="car dealer idle">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/car-dealer-idle/cover/car-dealer-idle.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -84,7 +90,7 @@
         <h3>Car Dealer Idle</h3>
       </div>
     </a>
-    <a class="card" href="../games/minecraft-sportcar-finder.html">
+    <a class="card" href="../games/minecraft-sportcar-finder.html" data-name="minecraft sportcar finder">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/minecraft-sportcar-finder/cover/minecraft-sportcar-finder.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -92,7 +98,7 @@
         <h3>Minecraft Sportcar Finder</h3>
       </div>
     </a>
-    <a class="card" href="../games/car-driving-test.html">
+    <a class="card" href="../games/car-driving-test.html" data-name="car driving test">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/car-driving-test/cover/car-driving-test.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -100,7 +106,7 @@
         <h3>Car Driving Test</h3>
       </div>
     </a>
-    <a class="card" href="../games/impossible-formula-car-stunts.html">
+    <a class="card" href="../games/impossible-formula-car-stunts.html" data-name="impossible formula car stunts">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/impossible-formula-stunts/cover/impossible-formula-stunts.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -108,7 +114,7 @@
         <h3>Impossible Formula Car Stunts</h3>
       </div>
     </a>
-    <a class="card" href="../games/two-cars.html">
+    <a class="card" href="../games/two-cars.html" data-name="two cars">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/two-cars/cover/two-cars.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -116,7 +122,7 @@
         <h3>Two Cars</h3>
       </div>
     </a>
-    <a class="card" href="../games/pato-vs-cops.html">
+    <a class="card" href="../games/pato-vs-cops.html" data-name="pato vs cops">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/pato-vs-cops/cover/pato-vs-cops.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -124,7 +130,7 @@
         <h3>Pato VS Cops</h3>
       </div>
     </a>
-    <a class="card" href="../games/neon-rider.html">
+    <a class="card" href="../games/neon-rider.html" data-name="neon rider">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/neon-rider/cover/neon-rider.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -132,7 +138,7 @@
         <h3>Neon Rider</h3>
       </div>
     </a>
-    <a class="card" href="../games/car-wash-and-repair-game.html">
+    <a class="card" href="../games/car-wash-and-repair-game.html" data-name="car wash and repair game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/car-wash-and-repair-game/cover/car-wash-and-repair-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -140,7 +146,7 @@
         <h3>Car Wash And Repair Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/parking-challenge-car.html">
+    <a class="card" href="../games/parking-challenge-car.html" data-name="parking challenge - car">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/parking-life-car/cover/parking-life-car.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -148,7 +154,7 @@
         <h3>Parking Challenge - Car</h3>
       </div>
     </a>
-    <a class="card" href="../games/speed-racer-pro.html">
+    <a class="card" href="../games/speed-racer-pro.html" data-name="speed racer pro">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/speed-racer-pro/cover/speed-racer-pro.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -156,7 +162,7 @@
         <h3>Speed Racer Pro</h3>
       </div>
     </a>
-    <a class="card" href="../games/driving-test.html">
+    <a class="card" href="../games/driving-test.html" data-name="driving test">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/driving-test/cover/driving-test.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -164,7 +170,7 @@
         <h3>Driving Test</h3>
       </div>
     </a>
-    <a class="card" href="../games/barry-prison-run-gta.html">
+    <a class="card" href="../games/barry-prison-run-gta.html" data-name="barry prison run gta">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/barry-prison-run-gta/cover/barry-prison-run-gta.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -172,7 +178,7 @@
         <h3>Barry Prison Run GTA</h3>
       </div>
     </a>
-    <a class="card" href="../games/tung-tung-sahur-cat-dash.html">
+    <a class="card" href="../games/tung-tung-sahur-cat-dash.html" data-name="tung tung sahur cat dash">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/tung-tung-sahur-cat-dash/cover/tung-tung-sahur-cat-dash.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -180,7 +186,7 @@
         <h3>Tung Tung Sahur Cat Dash</h3>
       </div>
     </a>
-    <a class="card" href="../games/coin-collecter.html">
+    <a class="card" href="../games/coin-collecter.html" data-name="coin collecter">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/coin-collecter/cover/coin-collecter.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -188,7 +194,7 @@
         <h3>Coin Collecter</h3>
       </div>
     </a>
-    <a class="card" href="../games/car-games-draw-and-escape.html">
+    <a class="card" href="../games/car-games-draw-and-escape.html" data-name="car games draw and escape">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/car-games-draw-and-escape/cover/car-games-draw-and-escape.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -196,7 +202,7 @@
         <h3>Car Games Draw And Escape</h3>
       </div>
     </a>
-    <a class="card" href="../games/mega-ramps-car-racing-games-3d.html">
+    <a class="card" href="../games/mega-ramps-car-racing-games-3d.html" data-name="mega ramps car racing games 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/mega-ramps-car-racing-games-3d/cover/mega-ramps-car-racing-games-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -204,7 +210,7 @@
         <h3>Mega Ramps Car Racing Games 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/kart-racer-vs.html">
+    <a class="card" href="../games/kart-racer-vs.html" data-name="kart racer vs">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/kart-racer-vs/cover/kart-racer-vs.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -212,7 +218,7 @@
         <h3>Kart Racer Vs</h3>
       </div>
     </a>
-    <a class="card" href="../games/circle-drive.html">
+    <a class="card" href="../games/circle-drive.html" data-name="circle drive">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/circle-drive/cover/circle-drive.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -220,7 +226,7 @@
         <h3>Circle Drive</h3>
       </div>
     </a>
-    <a class="card" href="../games/minecraft-drift-simulator.html">
+    <a class="card" href="../games/minecraft-drift-simulator.html" data-name="minecraft drift simulator">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/minecraft-drift-simulator/cover/minecraft-drift-simulator.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -228,7 +234,7 @@
         <h3>Minecraft Drift Simulator</h3>
       </div>
     </a>
-    <a class="card" href="../games/monster-demolition-giants-3d.html">
+    <a class="card" href="../games/monster-demolition-giants-3d.html" data-name="monster demolition giants 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/monster-demolition-giants-3d/cover/monster-demolition-giants-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -236,7 +242,7 @@
         <h3>Monster Demolition Giants 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/car-games-car-racing-game.html">
+    <a class="card" href="../games/car-games-car-racing-game.html" data-name="car games: car racing game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/car-games-car-racing-game/cover/car-games-car-racing-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -244,7 +250,7 @@
         <h3>Car Games: Car Racing Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/car-racing.html">
+    <a class="card" href="../games/car-racing.html" data-name="car racing">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/car-racing/cover/car-racing.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -252,7 +258,7 @@
         <h3>Car Racing</h3>
       </div>
     </a>
-    <a class="card" href="../games/coin-hunt.html">
+    <a class="card" href="../games/coin-hunt.html" data-name="coin hunt">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/coin-hunt/cover/coin-hunt.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -260,7 +266,7 @@
         <h3>Coin Hunt</h3>
       </div>
     </a>
-    <a class="card" href="../games/prado-car-driving.html">
+    <a class="card" href="../games/prado-car-driving.html" data-name="prado car driving">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/prado-car-driving/cover/prado-car-driving.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -268,7 +274,7 @@
         <h3>Prado Car Driving</h3>
       </div>
     </a>
-    <a class="card" href="../games/fighter-car-shooting.html">
+    <a class="card" href="../games/fighter-car-shooting.html" data-name="fighter car shooting">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/fighter-car-shooting/cover/fighter-car-shooting.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -276,7 +282,7 @@
         <h3>Fighter Car Shooting</h3>
       </div>
     </a>
-    <a class="card" href="../games/car-defender.html">
+    <a class="card" href="../games/car-defender.html" data-name="car defender">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/car-defender/cover/car-defender.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -284,7 +290,7 @@
         <h3>Car Defender</h3>
       </div>
     </a>
-    <a class="card" href="../games/russian-car-drift-3d.html">
+    <a class="card" href="../games/russian-car-drift-3d.html" data-name="russian car drift 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/russian-car-drift-3d/cover/russian-car-drift-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -292,7 +298,7 @@
         <h3>Russian Car Drift 3D</h3>
       </div>
     </a>
-    <a class="card" href="../games/parking-solution.html">
+    <a class="card" href="../games/parking-solution.html" data-name="parking solution">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/parking-solution/cover/parking-solution.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -300,7 +306,7 @@
         <h3>Parking Solution</h3>
       </div>
     </a>
-    <a class="card" href="../games/val-d-agri-race.html">
+    <a class="card" href="../games/val-d-agri-race.html" data-name="val d'agri race">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/val-d-agri-race/cover/val-d-agri-race.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -309,7 +315,34 @@
       </div>
     </a>
   </div>
+
+  <p id="category-no-results" style="display:none; color:var(--muted); font-size:14px; margin-top:20px;">
+    No games found for "<span id="category-no-results-term"></span>".
+  </p>
 </div>
+
+<script>
+  (function() {
+    const searchInput = document.getElementById('category-search');
+    const cards = Array.from(document.querySelectorAll('#category-grid .card'));
+    const resultCount = document.getElementById('category-result-count');
+    const noResults = document.getElementById('category-no-results');
+    const noResultsTerm = document.getElementById('category-no-results-term');
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const match = !q || (card.dataset.name && card.dataset.name.includes(q));
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      resultCount.textContent = visible + (visible === 1 ? ' game' : ' games');
+      noResults.style.display = visible === 0 ? '' : 'none';
+      if (visible === 0) noResultsTerm.textContent = searchInput.value.trim();
+    });
+  })();
+</script>
 
 <footer class="site-footer">
   <span>© Pixelsprout — Play. Grow. Explore. Some games provided via GamePix.</span>

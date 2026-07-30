@@ -51,8 +51,14 @@
     <p>Browse 15 free trivia games, playable instantly in your browser. No downloads, no accounts, no waiting — just click and play. New trivia games are added regularly, so check back for more.</p>
   </div>
 
-  <div class="category-grid">
-    <a class="card" href="../games/trivigoal.html">
+  <div class="search-row" style="margin-bottom:16px;">
+    <input type="text" id="category-search" placeholder="Search Trivia games..." autocomplete="off"
+      style="width:100%; max-width:400px; padding:10px 16px; border-radius:999px; border:1px solid var(--border); background:var(--panel); color:var(--paper); font-size:14px;">
+    <span id="category-result-count" style="margin-left:10px; font-size:13px; color:var(--muted);">15 games</span>
+  </div>
+
+  <div class="category-grid" id="category-grid">
+    <a class="card" href="../games/trivigoal.html" data-name="trivigoal">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/trivigoal/cover/trivigoal.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -60,7 +66,7 @@
         <h3>TriviGoal</h3>
       </div>
     </a>
-    <a class="card" href="../games/brain-games.html">
+    <a class="card" href="../games/brain-games.html" data-name="brain games">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/brain-games/cover/brain-games.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -68,7 +74,7 @@
         <h3>Brain games</h3>
       </div>
     </a>
-    <a class="card" href="../games/geography-quiz.html">
+    <a class="card" href="../games/geography-quiz.html" data-name="geography quiz">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/geography-quiz/cover/geography-quiz.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -76,7 +82,7 @@
         <h3>Geography Quiz</h3>
       </div>
     </a>
-    <a class="card" href="../games/fight-trivia-2.html">
+    <a class="card" href="../games/fight-trivia-2.html" data-name="fight trivia 2">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/fight-trivia-2/cover/fight-trivia-2.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -84,7 +90,7 @@
         <h3>Fight Trivia 2</h3>
       </div>
     </a>
-    <a class="card" href="../games/zoo-trivia.html">
+    <a class="card" href="../games/zoo-trivia.html" data-name="zoo trivia">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/zoo-trivia/cover/zoo-trivia.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -92,7 +98,7 @@
         <h3>Zoo Trivia</h3>
       </div>
     </a>
-    <a class="card" href="../games/crossword.html">
+    <a class="card" href="../games/crossword.html" data-name="crossword">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/crossword/cover/crossword.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -100,7 +106,7 @@
         <h3>Crossword</h3>
       </div>
     </a>
-    <a class="card" href="../games/flashcolor.html">
+    <a class="card" href="../games/flashcolor.html" data-name="flashcolor">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/flashcolor/cover/flashcolor.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -108,7 +114,7 @@
         <h3>FlashColor</h3>
       </div>
     </a>
-    <a class="card" href="../games/whatquiz.html">
+    <a class="card" href="../games/whatquiz.html" data-name="whatquiz">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/whatquiz/cover/whatquiz.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -116,7 +122,7 @@
         <h3>WhatQuiz</h3>
       </div>
     </a>
-    <a class="card" href="../games/quiz-squid-round.html">
+    <a class="card" href="../games/quiz-squid-round.html" data-name="quiz squid round">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/quiz-squid-round/cover/quiz-squid-round.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -124,7 +130,7 @@
         <h3>Quiz Squid Round</h3>
       </div>
     </a>
-    <a class="card" href="../games/tralala-test.html">
+    <a class="card" href="../games/tralala-test.html" data-name="tralala test">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/tralala-test/cover/tralala-test.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -132,7 +138,7 @@
         <h3>Tralala Test</h3>
       </div>
     </a>
-    <a class="card" href="../games/fight-trivia.html">
+    <a class="card" href="../games/fight-trivia.html" data-name="fight trivia">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/fight-trivia/cover/fight-trivia.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -140,7 +146,7 @@
         <h3>Fight Trivia</h3>
       </div>
     </a>
-    <a class="card" href="../games/how-many-mice.html">
+    <a class="card" href="../games/how-many-mice.html" data-name="how many mice">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/how-many-mice/cover/how-many-mice.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -148,7 +154,7 @@
         <h3>How Many Mice</h3>
       </div>
     </a>
-    <a class="card" href="../games/awareness-game-the-robot-bar.html">
+    <a class="card" href="../games/awareness-game-the-robot-bar.html" data-name="awareness game - the robot bar">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/awareness-game-the-robot-bar/cover/awareness-game-the-robot-bar.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -156,7 +162,7 @@
         <h3>Awareness Game - The Robot Bar</h3>
       </div>
     </a>
-    <a class="card" href="../games/kobadoo-flags.html">
+    <a class="card" href="../games/kobadoo-flags.html" data-name="kobadoo flags">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/kobadoo-flags/cover/kobadoo-flags.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -164,7 +170,7 @@
         <h3>Kobadoo Flags</h3>
       </div>
     </a>
-    <a class="card" href="../games/kobadoo-shapes.html">
+    <a class="card" href="../games/kobadoo-shapes.html" data-name="kobadoo shapes">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/kobadoo-shapes/cover/kobadoo-shapes.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -173,7 +179,34 @@
       </div>
     </a>
   </div>
+
+  <p id="category-no-results" style="display:none; color:var(--muted); font-size:14px; margin-top:20px;">
+    No games found for "<span id="category-no-results-term"></span>".
+  </p>
 </div>
+
+<script>
+  (function() {
+    const searchInput = document.getElementById('category-search');
+    const cards = Array.from(document.querySelectorAll('#category-grid .card'));
+    const resultCount = document.getElementById('category-result-count');
+    const noResults = document.getElementById('category-no-results');
+    const noResultsTerm = document.getElementById('category-no-results-term');
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const match = !q || (card.dataset.name && card.dataset.name.includes(q));
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      resultCount.textContent = visible + (visible === 1 ? ' game' : ' games');
+      noResults.style.display = visible === 0 ? '' : 'none';
+      if (visible === 0) noResultsTerm.textContent = searchInput.value.trim();
+    });
+  })();
+</script>
 
 <footer class="site-footer">
   <span>© Pixelsprout — Play. Grow. Explore. Some games provided via GamePix.</span>

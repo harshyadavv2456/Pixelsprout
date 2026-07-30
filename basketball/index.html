@@ -51,8 +51,14 @@
     <p>Browse 15 free basketball games, playable instantly in your browser. No downloads, no accounts, no waiting — just click and play. New basketball games are added regularly, so check back for more.</p>
   </div>
 
-  <div class="category-grid">
-    <a class="card" href="../games/incredible-basketball.html">
+  <div class="search-row" style="margin-bottom:16px;">
+    <input type="text" id="category-search" placeholder="Search Basketball games..." autocomplete="off"
+      style="width:100%; max-width:400px; padding:10px 16px; border-radius:999px; border:1px solid var(--border); background:var(--panel); color:var(--paper); font-size:14px;">
+    <span id="category-result-count" style="margin-left:10px; font-size:13px; color:var(--muted);">15 games</span>
+  </div>
+
+  <div class="category-grid" id="category-grid">
+    <a class="card" href="../games/incredible-basketball.html" data-name="incredible basketball">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/incredible-basketball/cover/incredible-basketball.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -60,7 +66,7 @@
         <h3>Incredible Basketball</h3>
       </div>
     </a>
-    <a class="card" href="../games/chill-dunk.html">
+    <a class="card" href="../games/chill-dunk.html" data-name="chill dunk">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/chill-dunk/cover/chill-dunk.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -68,7 +74,7 @@
         <h3>Chill Dunk</h3>
       </div>
     </a>
-    <a class="card" href="../games/skibidi-toilet-basketball.html">
+    <a class="card" href="../games/skibidi-toilet-basketball.html" data-name="skibidi toilet basketball">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/skibidi-toilet-basketball/cover/skibidi-toilet-basketball.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -76,7 +82,7 @@
         <h3>Skibidi Toilet Basketball</h3>
       </div>
     </a>
-    <a class="card" href="../games/perfect-shot.html">
+    <a class="card" href="../games/perfect-shot.html" data-name="perfect shot">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/perfect-shot/cover/perfect-shot.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -84,7 +90,7 @@
         <h3>Perfect Shot</h3>
       </div>
     </a>
-    <a class="card" href="../games/basketball-life-3d.html">
+    <a class="card" href="../games/basketball-life-3d.html" data-name="basketball life 3d">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/basketball-life-3d/cover/basketball-life-3d.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -92,7 +98,7 @@
         <h3>Basketball Life 3d</h3>
       </div>
     </a>
-    <a class="card" href="../games/basketball-street.html">
+    <a class="card" href="../games/basketball-street.html" data-name="basketball street">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/basketball-street/cover/basketball-street.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -100,7 +106,7 @@
         <h3>Basketball Street</h3>
       </div>
     </a>
-    <a class="card" href="../games/basketball-runner.html">
+    <a class="card" href="../games/basketball-runner.html" data-name="basketball runner">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/basketball-runner/cover/basketball-runner.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -108,7 +114,7 @@
         <h3>BasketBall Runner</h3>
       </div>
     </a>
-    <a class="card" href="../games/basketball-park.html">
+    <a class="card" href="../games/basketball-park.html" data-name="basketball park">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/basketball-park/cover/basketball-park.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -116,7 +122,7 @@
         <h3>Basketball Park</h3>
       </div>
     </a>
-    <a class="card" href="../games/hidden-basketball.html">
+    <a class="card" href="../games/hidden-basketball.html" data-name="hidden basketball">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/hidden-basketball/cover/hidden-basketball.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -124,7 +130,7 @@
         <h3>Hidden Basketball</h3>
       </div>
     </a>
-    <a class="card" href="../games/drop-dunks.html">
+    <a class="card" href="../games/drop-dunks.html" data-name="drop dunks">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/drop-dunks/cover/drop-dunks.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -132,7 +138,7 @@
         <h3>Drop Dunks</h3>
       </div>
     </a>
-    <a class="card" href="../games/basketball-school.html">
+    <a class="card" href="../games/basketball-school.html" data-name="basketball school">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/basketballs-school/cover/basketballs-school.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -140,7 +146,7 @@
         <h3>Basketball School</h3>
       </div>
     </a>
-    <a class="card" href="../games/basketball-beans.html">
+    <a class="card" href="../games/basketball-beans.html" data-name="basketball beans">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/basketball-beans/cover/basketball-beans.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -148,7 +154,7 @@
         <h3>Basketball Beans</h3>
       </div>
     </a>
-    <a class="card" href="../games/basket-battle.html">
+    <a class="card" href="../games/basket-battle.html" data-name="basket battle">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/basket-battle-1/cover/basket-battle-1.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -156,7 +162,7 @@
         <h3>Basket Battle</h3>
       </div>
     </a>
-    <a class="card" href="../games/hoops-the-game.html">
+    <a class="card" href="../games/hoops-the-game.html" data-name="hoops the game">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/hoops-the-game/cover/hoops-the-game.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -164,7 +170,7 @@
         <h3>HOOPS the Game</h3>
       </div>
     </a>
-    <a class="card" href="../games/hoop-world.html">
+    <a class="card" href="../games/hoop-world.html" data-name="hoop world">
       <span class="icon-tile gold" style="padding:0; overflow:hidden;">
         <img src="https://img.gamepix.com/games/hoop-world/cover/hoop-world.png?w=320" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;" loading="lazy">
       </span>
@@ -173,7 +179,34 @@
       </div>
     </a>
   </div>
+
+  <p id="category-no-results" style="display:none; color:var(--muted); font-size:14px; margin-top:20px;">
+    No games found for "<span id="category-no-results-term"></span>".
+  </p>
 </div>
+
+<script>
+  (function() {
+    const searchInput = document.getElementById('category-search');
+    const cards = Array.from(document.querySelectorAll('#category-grid .card'));
+    const resultCount = document.getElementById('category-result-count');
+    const noResults = document.getElementById('category-no-results');
+    const noResultsTerm = document.getElementById('category-no-results-term');
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      let visible = 0;
+      cards.forEach(card => {
+        const match = !q || (card.dataset.name && card.dataset.name.includes(q));
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      resultCount.textContent = visible + (visible === 1 ? ' game' : ' games');
+      noResults.style.display = visible === 0 ? '' : 'none';
+      if (visible === 0) noResultsTerm.textContent = searchInput.value.trim();
+    });
+  })();
+</script>
 
 <footer class="site-footer">
   <span>© Pixelsprout — Play. Grow. Explore. Some games provided via GamePix.</span>
