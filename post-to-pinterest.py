@@ -22,18 +22,42 @@ import urllib.parse
 import urllib.request
 
 DOMAIN = "https://playpixelsprout.com"
-BOARD_NAME = "Pixelsprout Games"
 POSTS_PER_RUN = 5
 TRACKING_FILE = "pinterest-posted.json"
 GAMES_INDEX_FILE = "games-index.json"
 
-APP_ID = os.environ.get("PINTEREST_APP_ID", "")
-APP_SECRET = os.environ.get("PINTEREST_APP_SECRET", "")
-REFRESH_TOKEN = os.environ.get("PINTEREST_REFRESH_TOKEN", "")
+
+def load_config():
+    """Reads pinterest-config.json instead of environment variables, so
+    credentials never depend on whether a terminal session is still open."""
+    try:
+        with open("pinterest-config.json", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {}
+
+
+config = load_config()
+
+# Sandbox works right now on Trial access (pins visible only to you).
+# Production requires Standard access approval. Controlled by the
+# "sandbox" field in pinterest-config.json, defaults to True.
+USE_SANDBOX = config.get("sandbox", True)
+API_BASE = "https://api-sandbox.pinterest.com/v5" if USE_SANDBOX else "https://api.pinterest.com/v5"
+
+# Sandbox uses a different board name on purpose - Pinterest's sandbox board
+# listing doesn't show real/production boards, but board-name uniqueness is
+# still checked account-wide, so reusing the same name causes a conflict.
+BOARD_NAME = "Pixelsprout Games Sandbox" if USE_SANDBOX else "Pixelsprout Games"
+
+APP_ID = config.get("app_id") or os.environ.get("PINTEREST_APP_ID", "")
+APP_SECRET = config.get("app_secret") or os.environ.get("PINTEREST_APP_SECRET", "")
+REFRESH_TOKEN = config.get("refresh_token") or os.environ.get("PINTEREST_REFRESH_TOKEN", "")
+SANDBOX_TOKEN = config.get("sandbox_token", "")
 
 
 def api_request(method, path, access_token, body=None):
-    url = f"https://api.pinterest.com/v5{path}"
+    url = f"{API_BASE}{path}"
     data = json.dumps(body).encode() if body else None
     req = urllib.request.Request(
         url,
@@ -68,12 +92,18 @@ def refresh_access_token():
     return result["access_token"]
 
 
-def find_board_id(access_token):
+def find_or_create_board_id(access_token):
     result = api_request("GET", "/boards", access_token)
     for board in result.get("items", []):
         if board.get("name") == BOARD_NAME:
             return board["id"]
-    raise RuntimeError(f"Board '{BOARD_NAME}' not found in your Pinterest account.")
+
+    print(f"Board '{BOARD_NAME}' not found — creating it now.")
+    created = api_request("POST", "/boards", access_token, {
+        "name": BOARD_NAME,
+        "description": "Free browser games from Pixelsprout",
+    })
+    return created["id"]
 
 
 def load_json(path, default):
@@ -107,7 +137,7 @@ def create_pin(access_token, board_id, game):
 
 def main():
     if not (APP_ID and APP_SECRET and REFRESH_TOKEN):
-        print("ERROR: missing PINTEREST_APP_ID, PINTEREST_APP_SECRET, or PINTEREST_REFRESH_TOKEN env vars.")
+        print("ERROR: missing app_id, app_secret, or refresh_token in pinterest-config.json.")
         sys.exit(1)
 
     games = load_json(GAMES_INDEX_FILE, [])
@@ -121,8 +151,21 @@ def main():
         return
 
     try:
-        access_token = refresh_access_token()
-        board_id = find_board_id(access_token)
+        if USE_SANDBOX:
+            if not SANDBOX_TOKEN:
+                print("ERROR: sandbox mode is on but 'sandbox_token' is missing from pinterest-config.json.")
+                print("Generate one: your Pinterest app page -> Generate Access Tokens -> select 'Sandbox' -> Generate token.")
+                return
+            access_token = SANDBOX_TOKEN
+            print("Using sandbox-specific token (confirmed: OAuth tokens don't work against the sandbox API).")
+        else:
+            access_token = refresh_access_token()
+            print("Token refresh succeeded. Using PRODUCTION API.")
+        board_id = find_or_create_board_id(access_token)
+        print(f"Board lookup succeeded: {board_id}")
+    except urllib.error.HTTPError as e:
+        print(f"Pinterest auth/board lookup failed (HTTP {e.code}): {e.read().decode()}")
+        return
     except Exception as e:
         print(f"Pinterest auth/board lookup failed (non-critical, skipping this run): {e}")
         return
