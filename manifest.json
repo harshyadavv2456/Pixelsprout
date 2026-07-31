@@ -1,0 +1,21 @@
+{
+  "name": "Pixelsprout - Play. Grow. Explore.",
+  "short_name": "Pixelsprout",
+  "description": "Free browser gaming library with thousands of games. No installs, no accounts.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0E1A",
+  "theme_color": "#0B0E1A",
+  "icons": [
+    {
+      "src": "/assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}

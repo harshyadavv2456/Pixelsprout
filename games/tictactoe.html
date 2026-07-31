@@ -45,6 +45,15 @@
   gtag('js', new Date());
   gtag('config', 'G-VTNJRV4WG8');
 </script>
+<script defer src="../pixelsprout-features.js"></script>
+<link rel="manifest" href="../manifest.json">
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('../service-worker.js').catch(() => {});
+  });
+}
+</script>
 </head>
 <body>
 <div class="game-shell">
