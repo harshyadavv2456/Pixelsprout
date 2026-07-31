@@ -9,8 +9,8 @@
 (function () {
   'use strict';
 
-  const RECENT_KEY = 'pixelsprout_recent';
-  const FAVORITES_KEY = 'pixelsprout_favorites';
+  const RECENT_KEY = 'pixelsprout_recent_v2';
+  const FAVORITES_KEY = 'pixelsprout_favorites_v2';
   const MAX_RECENT = 12;
 
   // ---------- Pure logic (storage helpers) ----------
@@ -145,11 +145,25 @@
     header.appendChild(closeBtn);
     panel.appendChild(header);
 
+    const searchInput = document.createElement('input');
+    searchInput.type = 'text';
+    searchInput.placeholder = `Search ${title.toLowerCase()}...`;
+    searchInput.style.cssText = 'width:100%;padding:8px 14px;border-radius:999px;border:1px solid var(--border,#2a3050);background:var(--bg,#0B0E1A);color:var(--paper,#fff);font-size:13px;margin-bottom:14px;';
+    panel.appendChild(searchInput);
+
     const grid = document.createElement('div');
     grid.className = 'grid';
     grid.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;';
     grid.innerHTML = games.map(g => buildCardHTML(g, '')).join('\n');
     panel.appendChild(grid);
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      Array.from(grid.querySelectorAll('.card')).forEach(card => {
+        const match = !q || (card.dataset.name && card.dataset.name.includes(q));
+        card.style.display = match ? '' : 'none';
+      });
+    });
 
     overlay.appendChild(panel);
     overlay.addEventListener('click', (e) => {
