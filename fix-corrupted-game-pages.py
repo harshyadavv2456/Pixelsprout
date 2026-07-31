@@ -27,9 +27,12 @@ def main():
         slug = path.split("/")[-1].replace(".html", "")
 
         # Fix broken schema URLs: games/games\slug.html or games/games/slug.html -> games/slug.html
+        # Using a lambda for the replacement (not a plain string) - avoids
+        # Python's re.sub interpreting backslashes in the URL as regex
+        # group references, which is exactly what crashed just now.
         content = re.sub(
             r'/games/games[\\/]+' + re.escape(slug) + r'\.html',
-            f'/games/{slug}.html',
+            lambda m: f'/games/{slug}.html',
             content,
         )
         if content != original:
@@ -40,7 +43,7 @@ def main():
         if correct_thumb:
             new_content = re.sub(
                 r'data-thumbnail="[^"]*"',
-                f'data-thumbnail="{correct_thumb}"',
+                lambda m: f'data-thumbnail="{correct_thumb}"',
                 content,
                 count=1,
             )
