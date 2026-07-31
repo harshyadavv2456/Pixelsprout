@@ -82,8 +82,8 @@
     const slug = slugMatch ? slugMatch[1] : '';
     if (!slug) return;
 
-    const thumbImg = document.querySelector('.similar-card img');
-    const thumbnail = thumbImg ? thumbImg.src : '';
+    const gameShell = document.querySelector('.game-shell');
+    const thumbnail = gameShell ? gameShell.dataset.thumbnail || '' : '';
 
     const game = { slug, title, category, thumbnail };
     recordRecentlyPlayed(game);
@@ -125,45 +125,75 @@
     }
   }
 
-  // ---------- Homepage enhancements ----------
+  // ---------- Homepage enhancements: compact popup, not full sections ----------
+
+  function buildModal(title, games) {
+    const overlay = document.createElement('div');
+    overlay.className = 'ps-modal-overlay';
+    overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px;';
+
+    const panel = document.createElement('div');
+    panel.style.cssText = 'background:var(--panel,#151a2e);border:1px solid var(--border,#2a3050);border-radius:12px;max-width:640px;width:100%;max-height:80vh;overflow-y:auto;padding:20px;';
+
+    const header = document.createElement('div');
+    header.style.cssText = 'display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;';
+    header.innerHTML = `<h3 style="font-family:'Press Start 2P',monospace;font-size:14px;color:var(--paper,#fff);margin:0;">${title}</h3>`;
+    const closeBtn = document.createElement('button');
+    closeBtn.textContent = '✕';
+    closeBtn.style.cssText = 'background:none;border:none;color:var(--muted,#8a93b8);font-size:20px;cursor:pointer;padding:4px 8px;';
+    closeBtn.addEventListener('click', () => overlay.remove());
+    header.appendChild(closeBtn);
+    panel.appendChild(header);
+
+    const grid = document.createElement('div');
+    grid.className = 'grid';
+    grid.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;';
+    grid.innerHTML = games.map(g => buildCardHTML(g, '')).join('\n');
+    panel.appendChild(grid);
+
+    overlay.appendChild(panel);
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) overlay.remove();
+    });
+    return overlay;
+  }
 
   function enhanceHomepage() {
-    const main = document.querySelector('main') || document.querySelector('.wrap');
-    if (!main) return;
-
     const recent = loadList(RECENT_KEY);
     const favorites = loadList(FAVORITES_KEY);
     if (recent.length === 0 && favorites.length === 0) return; // new visitor, nothing to show
 
-    const sections = [];
+    // Small, unobtrusive buttons - don't push the catalog down, don't
+    // dilute the "browse everything" homepage experience.
+    const bar = document.createElement('div');
+    bar.style.cssText = 'display:flex;gap:8px;justify-content:flex-end;padding:8px 20px;flex-wrap:wrap;';
 
     if (favorites.length > 0) {
-      sections.push(`
-        <div class="category gold" data-section>
-          <span class="bar"></span><h2>Your Favorites</h2>
-          <span class="count">${favorites.length} game${favorites.length === 1 ? '' : 's'}</span>
-        </div>
-        <div class="grid" data-grid>
-          ${favorites.slice(0, 12).map(g => buildCardHTML(g, '')).join('\n')}
-        </div>
-      `);
+      const favBtn = document.createElement('button');
+      favBtn.textContent = `❤️ Favorites (${favorites.length})`;
+      favBtn.style.cssText = 'background:var(--panel,#151a2e);border:1px solid var(--border,#2a3050);color:var(--paper,#fff);padding:6px 14px;border-radius:999px;font-size:12px;cursor:pointer;';
+      favBtn.addEventListener('click', () => {
+        document.body.appendChild(buildModal('Your Favorites', loadList(FAVORITES_KEY)));
+      });
+      bar.appendChild(favBtn);
     }
 
     if (recent.length > 0) {
-      sections.push(`
-        <div class="category teal" data-section>
-          <span class="bar"></span><h2>Recently Played</h2>
-          <span class="count">${recent.length} game${recent.length === 1 ? '' : 's'}</span>
-        </div>
-        <div class="grid" data-grid>
-          ${recent.map(g => buildCardHTML(g, '')).join('\n')}
-        </div>
-      `);
+      const recentBtn = document.createElement('button');
+      recentBtn.textContent = `🕐 Recently Played (${recent.length})`;
+      recentBtn.style.cssText = 'background:var(--panel,#151a2e);border:1px solid var(--border,#2a3050);color:var(--paper,#fff);padding:6px 14px;border-radius:999px;font-size:12px;cursor:pointer;';
+      recentBtn.addEventListener('click', () => {
+        document.body.appendChild(buildModal('Recently Played', loadList(RECENT_KEY)));
+      });
+      bar.appendChild(recentBtn);
     }
 
-    const container = document.createElement('div');
-    container.innerHTML = sections.join('\n');
-    main.prepend(container);
+    const header = document.querySelector('.site-header');
+    if (header) {
+      header.insertAdjacentElement('afterend', bar);
+    } else {
+      document.body.prepend(bar);
+    }
   }
 
   // ---------- Run on page load ----------

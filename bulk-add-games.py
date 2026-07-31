@@ -88,7 +88,7 @@ GAME_PAGE_TEMPLATE = """<!DOCTYPE html>
 </script>
 </head>
 <body>
-<div class="game-shell">
+<div class="game-shell" data-thumbnail="{thumbnail}">
   <div class="breadcrumb" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:8px;">
     <a href="../index.html" style="color:var(--teal);text-decoration:none;">Home</a> / {category} / {title}
   </div>
@@ -280,6 +280,7 @@ def build_game_page(game):
         orientation_lock_js=orientation_lock_js,
         schema_json=schema_json,
         breadcrumb_schema_json=breadcrumb_schema_json,
+        thumbnail=game.get("thumbnail", ""),
     )
     path = f"{GAMES_DIR}/{game['slug']}.html"
     with open(path, "w", encoding='utf-8') as f:
