@@ -83,9 +83,25 @@
     if (!slug) return;
 
     const gameShell = document.querySelector('.game-shell');
-    const thumbnail = gameShell ? gameShell.dataset.thumbnail || '' : '';
+    let thumbnail = gameShell ? gameShell.dataset.thumbnail || '' : '';
 
     const game = { slug, title, category, thumbnail };
+
+    if (!thumbnail) {
+      // Fallback: the page wasn't patched with the data attribute yet -
+      // look it up directly instead of silently falling back to the logo.
+      fetch('../games-index.json')
+        .then(r => r.json())
+        .then(games => {
+          const match = games.find(g => g.slug === slug);
+          if (match && match.thumbnail) {
+            game.thumbnail = match.thumbnail;
+            recordRecentlyPlayed(game);
+          }
+        })
+        .catch(() => {});
+    }
+
     recordRecentlyPlayed(game);
 
     // Inject Favorite + Share buttons next to the fullscreen button
@@ -139,9 +155,17 @@
     header.style.cssText = 'display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;';
     header.innerHTML = `<h3 style="font-family:'Press Start 2P',monospace;font-size:14px;color:var(--paper,#fff);margin:0;">${title}</h3>`;
     const closeBtn = document.createElement('button');
+    closeBtn.type = 'button';
     closeBtn.textContent = '✕';
-    closeBtn.style.cssText = 'background:none;border:none;color:var(--muted,#8a93b8);font-size:20px;cursor:pointer;padding:4px 8px;';
-    closeBtn.addEventListener('click', () => overlay.remove());
+    closeBtn.setAttribute('aria-label', 'Close');
+    closeBtn.style.cssText = 'background:none;border:none;color:var(--muted,#8a93b8);font-size:20px;cursor:pointer;padding:8px 12px;line-height:1;min-width:36px;min-height:36px;';
+    const closeModal = () => { overlay.remove(); document.removeEventListener('keydown', escHandler); };
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      closeModal();
+    });
+    const escHandler = (e) => { if (e.key === 'Escape') closeModal(); };
+    document.addEventListener('keydown', escHandler);
     header.appendChild(closeBtn);
     panel.appendChild(header);
 
@@ -167,7 +191,7 @@
 
     overlay.appendChild(panel);
     overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) overlay.remove();
+      if (e.target === overlay) closeModal();
     });
     return overlay;
   }
