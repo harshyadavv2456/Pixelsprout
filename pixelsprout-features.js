@@ -181,6 +181,32 @@
     grid.innerHTML = games.map(g => buildCardHTML(g, '')).join('\n');
     panel.appendChild(grid);
 
+    // Self-healing: always re-check against current, correct data instead
+    // of trusting whatever was cached whenever this entry was originally
+    // saved. Fixes any stale/wrong thumbnails permanently, no matter when
+    // they were recorded.
+    fetch('games-index.json')
+      .then(r => r.json())
+      .then(freshGames => {
+        const freshBySlug = {};
+        freshGames.forEach(g => { freshBySlug[g.slug] = g; });
+        let changed = false;
+        games.forEach(g => {
+          const fresh = freshBySlug[g.slug];
+          if (fresh && fresh.thumbnail && fresh.thumbnail !== g.thumbnail) {
+            g.thumbnail = fresh.thumbnail;
+            changed = true;
+          }
+        });
+        if (changed) {
+          grid.innerHTML = games.map(g => buildCardHTML(g, '')).join('\n');
+          // Persist the correction so it's fixed for next time too
+          const key = title === 'Your Favorites' ? FAVORITES_KEY : RECENT_KEY;
+          saveList(key, games);
+        }
+      })
+      .catch(() => {});
+
     searchInput.addEventListener('input', () => {
       const q = searchInput.value.trim().toLowerCase();
       Array.from(grid.querySelectorAll('.card')).forEach(card => {
