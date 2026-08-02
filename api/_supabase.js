@@ -75,3 +75,29 @@ export function applyCors(res) {
   res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 }
+
+// Generic read against any table/view, e.g. restGet("game_views?select=slug,views&order=views.desc&limit=20")
+export async function restGet(pathAndQuery) {
+  const r = await fetch(`${SUPABASE_URL}/rest/v1/${pathAndQuery}`, { headers: headers() });
+  if (!r.ok) {
+    const body = await r.text().catch(() => "");
+    throw new Error(`Supabase REST GET failed: ${r.status} ${body}`);
+  }
+  return r.json();
+}
+
+// Calls a Postgres function exposed via PostgREST's /rpc/ endpoint - used
+// for the one operation that a plain upsert can't do safely under
+// concurrent traffic: atomically incrementing a view counter.
+export async function rpcCall(fnName, params) {
+  const r = await fetch(`${SUPABASE_URL}/rest/v1/rpc/${fnName}`, {
+    method: "POST",
+    headers: headers({ "Content-Type": "application/json" }),
+    body: JSON.stringify(params || {}),
+  });
+  if (!r.ok) {
+    const body = await r.text().catch(() => "");
+    throw new Error(`Supabase RPC ${fnName} failed: ${r.status} ${body}`);
+  }
+  return true;
+}

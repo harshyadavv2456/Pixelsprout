@@ -109,6 +109,17 @@
 
     recordRecentlyPlayed(game);
 
+    // Feed the popularity-ranked homepage - real games only, not the tool
+    // pages (those are pinned separately). Fire-and-forget: a failed or
+    // slow tracking call should never hold up or break the page.
+    if (!isToolPage) {
+      fetch('../api/track-view', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ slug }),
+      }).catch(() => {});
+    }
+
     // Inject Favorite + Share buttons next to the fullscreen button
     const fullscreenBtn = document.querySelector('.fullscreen-btn');
     if (fullscreenBtn && !document.querySelector('.favorite-btn')) {

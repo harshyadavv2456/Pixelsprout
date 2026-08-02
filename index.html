@@ -27383,15 +27383,49 @@ if ('serviceWorker' in navigator) {
   } catch (err) { console.error('Sidebar setup failed:', err); }
 
   try {
-    document.querySelectorAll('.popular-slot').forEach(slot => {
-      const targetHref = slot.getAttribute('href');
-      const realCard = Array.from(document.querySelectorAll('.card:not(.popular-slot)'))
-        .find(c => c.getAttribute('href') === targetHref);
-      if (realCard) {
-        slot.innerHTML = realCard.innerHTML;
-        slot.dataset.name = realCard.dataset.name;
-      }
+    const popularSlots = Array.from(document.querySelectorAll('.popular-slot'));
+    const cardsBySlug = {};
+    cards.forEach(c => {
+      const href = c.getAttribute('href') || '';
+      const m = href.match(/^games\/([^/]+)\.html$/);
+      if (m) cardsBySlug[m[1]] = c;
     });
+
+    function fillFromStaticFallback() {
+      popularSlots.forEach(slot => {
+        const targetHref = slot.getAttribute('href');
+        const realCard = cards.find(c => c.getAttribute('href') === targetHref);
+        if (realCard) {
+          slot.innerHTML = realCard.innerHTML;
+          slot.dataset.name = realCard.dataset.name;
+        }
+      });
+    }
+
+    // Cold Read and Guess It Box stay pinned first (they're not in this
+    // slot system at all - they're the two hand-authored cards ahead of
+    // it in the markup). These 8 slots become "most-visited real game
+    // this week" once enough traffic has come in; until then, or if the
+    // API has nothing yet, they fall back to the original curated list.
+    fetch('/api/popular-games')
+      .then(r => r.ok ? r.json() : Promise.reject())
+      .then(data => {
+        const ranked = (data && data.games) || [];
+        const usable = ranked.filter(g => cardsBySlug[g.slug]);
+        if (usable.length < 4) { fillFromStaticFallback(); return; }
+        popularSlots.forEach((slot, i) => {
+          const pick = usable[i];
+          if (pick) {
+            const realCard = cardsBySlug[pick.slug];
+            slot.innerHTML = realCard.innerHTML;
+            slot.dataset.name = realCard.dataset.name;
+            slot.setAttribute('href', realCard.getAttribute('href'));
+          } else {
+            slot.remove();
+          }
+        });
+      })
+      .catch(fillFromStaticFallback);
   } catch (err) { console.error('Popular Picks setup failed:', err); }
 </script>
 
