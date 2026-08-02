@@ -79,15 +79,19 @@
     const title = titleEl.textContent.trim();
     const category = metaEl ? metaEl.textContent.trim() : '';
     const slugMatch = window.location.pathname.match(/\/games\/([^/]+)\.html/);
-    const slug = slugMatch ? slugMatch[1] : '';
+    // Tool pages (Cold Read, Guess It Box) aren't under /games/*.html, so
+    // they self-identify with a data attribute on <body> instead of trying
+    // to force them through the games-only URL pattern.
+    const slug = slugMatch ? slugMatch[1] : (document.body.dataset.toolSlug || '');
     if (!slug) return;
 
     const gameShell = document.querySelector('.game-shell');
     let thumbnail = gameShell ? gameShell.dataset.thumbnail || '' : '';
 
     const game = { slug, title, category, thumbnail };
+    const isToolPage = !slugMatch;
 
-    if (!thumbnail) {
+    if (!thumbnail && !isToolPage) {
       // Fallback: the page wasn't patched with the data attribute yet -
       // look it up directly instead of silently falling back to the logo.
       fetch('../games-index.json')
@@ -98,6 +102,7 @@
             game.thumbnail = match.thumbnail;
             recordRecentlyPlayed(game);
           }
+
         })
         .catch(() => {});
     }
@@ -222,78 +227,15 @@
     return overlay;
   }
 
-  // ---------- Tool launcher popup (Cold Read / Gift File) ----------
-  // Same overlay chrome as buildModal, but the body is an iframe pointing
-  // at the standalone tool page instead of a game grid - these are
-  // separate mini React apps (own dataset, own persistence), not part of
-  // the game catalog.
-
-  function buildToolModal(title, src) {
-    const overlay = document.createElement('div');
-    overlay.className = 'ps-modal-overlay';
-    overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px;';
-
-    const panel = document.createElement('div');
-    panel.style.cssText = 'background:var(--panel,#151a2e);border:1px solid var(--border,#2a3050);border-radius:12px;max-width:560px;width:100%;max-height:88vh;padding:0;display:flex;flex-direction:column;overflow:hidden;';
-
-    const header = document.createElement('div');
-    header.style.cssText = 'display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--border,#2a3050);flex-shrink:0;';
-    header.innerHTML = `<h3 style="font-family:'Press Start 2P',monospace;font-size:13px;color:var(--paper,#fff);margin:0;">${title}</h3>`;
-    const closeBtn = document.createElement('button');
-    closeBtn.type = 'button';
-    closeBtn.textContent = '✕';
-    closeBtn.setAttribute('aria-label', 'Close');
-    closeBtn.style.cssText = 'background:none;border:none;color:var(--muted,#8a93b8);font-size:20px;cursor:pointer;padding:8px 12px;line-height:1;min-width:36px;min-height:36px;';
-    const closeModal = () => { overlay.remove(); document.removeEventListener('keydown', escHandler); };
-    closeBtn.addEventListener('click', (e) => { e.stopPropagation(); closeModal(); });
-    const escHandler = (e) => { if (e.key === 'Escape') closeModal(); };
-    document.addEventListener('keydown', escHandler);
-    header.appendChild(closeBtn);
-    panel.appendChild(header);
-
-    const iframe = document.createElement('iframe');
-    iframe.src = src;
-    iframe.title = title;
-    iframe.loading = 'lazy';
-    iframe.style.cssText = 'border:0;width:100%;flex:1;min-height:70vh;background:#0B0B0F;';
-    panel.appendChild(iframe);
-
-    overlay.appendChild(panel);
-    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
-    return overlay;
-  }
-
-  function addToolLaunchers(bar) {
-    // User-initiated only - small pill buttons, never an entry popup shown
-    // on load (that pattern draws Google's intrusive-interstitial penalty).
-    const giftBtn = document.createElement('button');
-    giftBtn.textContent = '🎁 Guess It Box';
-    giftBtn.style.cssText = 'background:var(--panel,#151a2e);border:1px solid var(--border,#2a3050);color:var(--paper,#fff);padding:6px 14px;border-radius:999px;font-size:12px;cursor:pointer;';
-    giftBtn.addEventListener('click', () => {
-      document.body.appendChild(buildToolModal('Gift File', 'gift-file/'));
-    });
-    bar.appendChild(giftBtn);
-
-    const coldReadBtn = document.createElement('button');
-    coldReadBtn.textContent = '🔮 Cold Read';
-    coldReadBtn.style.cssText = 'background:var(--panel,#151a2e);border:1px solid var(--border,#2a3050);color:var(--paper,#fff);padding:6px 14px;border-radius:999px;font-size:12px;cursor:pointer;';
-    coldReadBtn.addEventListener('click', () => {
-      document.body.appendChild(buildToolModal('Cold Read', 'cold-read/'));
-    });
-    bar.appendChild(coldReadBtn);
-  }
-
   function enhanceHomepage() {
     const recent = loadList(RECENT_KEY);
     const favorites = loadList(FAVORITES_KEY);
+    if (recent.length === 0 && favorites.length === 0) return; // new visitor, nothing to show
 
     // Small, unobtrusive buttons - don't push the catalog down, don't
     // dilute the "browse everything" homepage experience.
     const bar = document.createElement('div');
     bar.style.cssText = 'display:flex;gap:8px;justify-content:flex-end;padding:8px 20px;flex-wrap:wrap;';
-
-    // Tool launchers always show, independent of returning-visitor history.
-    addToolLaunchers(bar);
 
     if (favorites.length > 0) {
       const favBtn = document.createElement('button');
@@ -325,11 +267,68 @@
 
   // ---------- Run on page load ----------
 
+  // ---------- Global floating tool badge ----------
+  // Small, dismissible, bottom-corner - never a full-screen entry popup
+  // (that pattern draws Google's intrusive-interstitial penalty). Shows on
+  // every page this script loads on (home, categories, game pages), so the
+  // two tools stay discoverable without needing a click to even see them.
+  // Skips itself on cold-read/gift-file (no point promoting the page
+  // you're already on) and remembers a dismissal so it doesn't nag forever.
+
+  const BADGE_DISMISSED_KEY = 'pixelsprout_tool_badge_dismissed_v1';
+
+  function injectFloatingToolBadge() {
+    const slug = document.body.dataset.toolSlug || '';
+    if (slug === 'cold-read' || slug === 'gift-file') return;
+    if (localStorage.getItem(BADGE_DISMISSED_KEY) === '1') return;
+    if (document.getElementById('ps-floating-badge')) return;
+
+    // Every non-homepage page here lives exactly one folder deep
+    // (/games/x.html, /2048/, /cold-read/, etc.), so "../" always reaches
+    // the site root except from the root itself.
+    const isHome = window.location.pathname === '/' || window.location.pathname === '/index.html';
+    const base = isHome ? '' : '../';
+
+    const wrap = document.createElement('div');
+    wrap.id = 'ps-floating-badge';
+    wrap.style.cssText = 'position:fixed;right:16px;bottom:16px;z-index:900;display:flex;flex-direction:column;align-items:flex-end;gap:6px;font-family:system-ui,sans-serif;';
+
+    const closeBtn = document.createElement('button');
+    closeBtn.textContent = '✕';
+    closeBtn.setAttribute('aria-label', 'Dismiss');
+    closeBtn.style.cssText = 'position:absolute;top:-8px;right:-8px;width:20px;height:20px;border-radius:50%;background:var(--panel,#151a2e);border:1px solid var(--border,#2a3050);color:var(--muted,#8a93b8);font-size:11px;line-height:1;cursor:pointer;padding:0;';
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      localStorage.setItem(BADGE_DISMISSED_KEY, '1');
+      wrap.remove();
+    });
+
+    const inner = document.createElement('div');
+    inner.style.cssText = 'position:relative;display:flex;flex-direction:column;gap:6px;';
+
+    const coldReadLink = document.createElement('a');
+    coldReadLink.href = base + 'cold-read/';
+    coldReadLink.textContent = '🔮 Cold Read';
+    coldReadLink.style.cssText = 'background:var(--panel,#151a2e);border:1px solid var(--border,#2a3050);color:var(--paper,#fff);padding:8px 16px;border-radius:999px;font-size:12px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.4);white-space:nowrap;';
+
+    const giftLink = document.createElement('a');
+    giftLink.href = base + 'gift-file/';
+    giftLink.textContent = '🎁 Guess It Box';
+    giftLink.style.cssText = coldReadLink.style.cssText;
+
+    inner.appendChild(closeBtn);
+    inner.appendChild(coldReadLink);
+    inner.appendChild(giftLink);
+    wrap.appendChild(inner);
+    document.body.appendChild(wrap);
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.game-shell')) {
       enhanceGamePage();
     } else {
       enhanceHomepage();
     }
+    injectFloatingToolBadge();
   });
 })();

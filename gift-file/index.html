@@ -42,17 +42,15 @@ if ('serviceWorker' in navigator) {
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <style>
   .tool-embed-wrap { width: 100%; max-width: 960px; margin: 0 auto; border-radius: 8px; overflow: hidden; background: #0B0B0F; }
-  .tool-logo { display: block; max-width: 220px; margin: 0 auto 10px; }
+  .tool-embed-wrap:fullscreen { display: flex; align-items: center; justify-content: center; max-width: none; }
 </style>
 </head>
-<body>
-<div class="game-shell" data-thumbnail="">
+<body data-tool-slug="gift-file">
+<div class="game-shell" data-thumbnail="../assets/gift-file-logo.jpg">
   <div class="breadcrumb" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:8px;">
     <a href="../index.html" style="color:var(--teal);text-decoration:none;">Home</a> / Guess It Box
   </div>
   <a class="back-link" href="../index.html">&larr; back to Pixelsprout</a>
-
-  <img class="tool-logo" src="../assets/gift-file-logo.jpg" alt="Guess It Box - Unbox the Fun" width="220" height="220">
   <h1 class="game-title">Guess It Box <span style="font-size:0.5em;color:var(--muted);font-weight:normal;">(Gift File)</span></h1>
   <div class="game-meta">Tools &middot; Gift Finder</div>
 
@@ -70,6 +68,12 @@ if ('serviceWorker' in navigator) {
     <div class="tool-embed-wrap">
       <div id="gift-file-root"></div>
     </div>
+    <button class="action fullscreen-btn" onclick="
+      const f = document.querySelector('.tool-embed-wrap');
+      const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
+      if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
+    ">&#9974; Fullscreen</button>
 
     <p class="how-to">Most gift guides are just long lists sorted by price, which is why they rarely help when you're stuck. The four things that actually narrow a gift down are who it's for, why you're giving it, what you're willing to spend, and what they're genuinely into - in that order. Guess It Box asks exactly those four questions, then scores a running dataset of gift ideas against your answers instead of showing the same generic top-10 list everyone else gets. It also self-corrects: if none of the three suggestions land, tell it what you actually got - that feeds back into the dataset with a small weight, so the next visitor with a similar answer set sees a slightly better set of ideas. Nothing here is AI-generated; it's a transparent weighted match against a hand-seeded (and visitor-taught) list of gifts. It also asks upfront whether you're shopping from India or elsewhere, so every "Search on Amazon" link and every budget range shown is in the right currency and points at the right store.</p>
 
@@ -362,7 +366,7 @@ function GiftFileApp() {
   }
 
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center relative overflow-hidden px-4 py-10" style={{ background: ink, fontFamily: "'Inter', system-ui, sans-serif" }}>
+    <div className="w-full flex flex-col items-center justify-center relative overflow-hidden px-4 py-8 rounded-lg" style={{ background: ink, fontFamily: "'Inter', system-ui, sans-serif" }}>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@400;500;600;700&display=swap');
         .display { font-family: 'Special Elite', 'Courier New', monospace; }

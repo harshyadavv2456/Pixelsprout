@@ -42,17 +42,15 @@ if ('serviceWorker' in navigator) {
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <style>
   .tool-embed-wrap { width: 100%; max-width: 960px; margin: 0 auto; border-radius: 8px; overflow: hidden; background: #0B0B0F; }
-  .tool-logo { display: block; max-width: 220px; margin: 0 auto 10px; }
+  .tool-embed-wrap:fullscreen { display: flex; align-items: center; justify-content: center; max-width: none; }
 </style>
 </head>
-<body>
-<div class="game-shell" data-thumbnail="">
+<body data-tool-slug="cold-read">
+<div class="game-shell" data-thumbnail="../assets/cold-read-logo.jpg">
   <div class="breadcrumb" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:8px;">
     <a href="../index.html" style="color:var(--teal);text-decoration:none;">Home</a> / Cold Read
   </div>
   <a class="back-link" href="../index.html">&larr; back to Pixelsprout</a>
-
-  <img class="tool-logo" src="../assets/cold-read-logo.jpg" alt="Cold Read - Read Your Mind" width="220" height="220">
   <h1 class="game-title">Cold Read</h1>
   <div class="game-meta">Tools &middot; Guessing Game</div>
 
@@ -70,6 +68,12 @@ if ('serviceWorker' in navigator) {
     <div class="tool-embed-wrap">
       <div id="cold-read-root"></div>
     </div>
+    <button class="action fullscreen-btn" onclick="
+      const f = document.querySelector('.tool-embed-wrap');
+      const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
+      if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
+    ">&#9974; Fullscreen</button>
 
     <p class="how-to">Fix something in your mind - a person, animal, object, or food - and Cold Read asks a series of yes/no/probably questions to narrow it down by elimination. There's no AI model doing the guessing under the hood: it's a plain weighted-scoring algorithm running against a shared dataset that gets a little sharper every time someone plays, whether the guess lands or someone teaches it something new. The dataset starts with a curated list of well-known people, characters, animals, objects, and food - and grows from there.</p>
 
@@ -295,8 +299,12 @@ function blend(oldVal, newVal, w) {
   return oldVal === undefined ? newVal : oldVal * (1 - w) + newVal * w;
 }
 
-function decide(candidates, askedKeys, askedCount) {
+function decide(candidates, askedKeys, askedCount, guessAttempts) {
   if (candidates.length === 0) return { type: "teach" };
+  // Hard stop: after 3 rejected guesses in the same round, asking to be
+  // taught is more useful than cycling through the remaining ranked
+  // candidates one wrong name at a time.
+  if (guessAttempts >= 3) return { type: "teach" };
   const sumScore = candidates.reduce((s, c) => s + c.score, 0);
   const sorted = [...candidates].sort((a, b) => b.score - a.score);
   const top = sorted[0];
@@ -324,7 +332,7 @@ function decide(candidates, askedKeys, askedCount) {
   const pool = ranked.slice(0, Math.min(4, ranked.length));
   const bestKey = pool.length > 0 ? pool[Math.floor(Math.random() * pool.length)].key : null;
   if (bestKey === null) {
-    if (top && topShare > 0.15) return { type: "guess", entity: top, confidence: Math.round(topShare * 100) };
+    if (top && topShare > 0.15 && guessAttempts < 2) return { type: "guess", entity: top, confidence: Math.round(topShare * 100) };
     return { type: "teach" };
   }
   return { type: "question", key: bestKey };
@@ -341,6 +349,7 @@ function ColdReadApp() {
   const [currentQuestionKey, setCurrentQuestionKey] = useState(null);
   const [currentGuess, setCurrentGuess] = useState(null);
   const [guessConfidence, setGuessConfidence] = useState(0);
+  const [guessAttempts, setGuessAttempts] = useState(0);
   const [teachName, setTeachName] = useState("");
 
   useEffect(() => {
@@ -378,8 +387,8 @@ function ColdReadApp() {
 
 
 
-  function proceed(cands, asked, count) {
-    const decision = decide(cands, asked, count);
+  function proceed(cands, asked, count, attempts) {
+    const decision = decide(cands, asked, count, attempts);
     setPhase("thinking");
     setTimeout(() => {
       if (decision.type === "question") {
@@ -403,8 +412,9 @@ function ColdReadApp() {
     setAskedKeys(new Set());
     setAskedCount(0);
     setCurrentGuess(null);
+    setGuessAttempts(0);
     setTeachName("");
-    proceed(cands, new Set(), 0);
+    proceed(cands, new Set(), 0, 0);
   }
 
   function handleAnswer(value, label) {
@@ -427,13 +437,15 @@ function ColdReadApp() {
     setAskedKeys(newAskedKeys);
     setCandidates(newCandidates);
     setAskedCount(newAskedCount);
-    proceed(newCandidates, newAskedKeys, newAskedCount);
+    proceed(newCandidates, newAskedKeys, newAskedCount, guessAttempts);
   }
 
   function rejectGuess() {
     const remaining = candidates.filter((c) => c.name !== currentGuess.name);
+    const newAttempts = guessAttempts + 1;
     setCandidates(remaining);
-    proceed(remaining, askedKeys, askedCount);
+    setGuessAttempts(newAttempts);
+    proceed(remaining, askedKeys, askedCount, newAttempts);
   }
 
   function confirmGuess() {
@@ -488,7 +500,7 @@ function ColdReadApp() {
 
   return (
     <div
-      className="min-h-screen w-full flex flex-col items-center justify-center relative overflow-hidden px-4 py-10"
+      className="w-full flex flex-col items-center justify-center relative overflow-hidden px-4 py-8 rounded-lg"
       style={{ background: "#0B0B0F", fontFamily: "'Inter', system-ui, sans-serif" }}
     >
       <style>{`
