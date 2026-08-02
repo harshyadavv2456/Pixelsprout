@@ -41,7 +41,10 @@ export async function kvGet(key) {
     headers: headers({ Accept: "application/vnd.pgrst.object+json" }),
   });
   if (r.status === 406) return null; // PGRST116: no row found (single-object accept header)
-  if (!r.ok) throw new Error(`Supabase GET failed: ${r.status}`);
+  if (!r.ok) {
+    const body = await r.text().catch(() => "");
+    throw new Error(`Supabase GET failed: ${r.status} ${body}`);
+  }
   const data = await r.json();
   return data.value ?? null;
 }
@@ -57,7 +60,10 @@ export async function kvSet(key, value) {
     }),
     body: JSON.stringify([{ key, value, updated_at: new Date().toISOString() }]),
   });
-  if (!r.ok) throw new Error(`Supabase UPSERT failed: ${r.status}`);
+  if (!r.ok) {
+    const body = await r.text().catch(() => "");
+    throw new Error(`Supabase UPSERT failed: ${r.status} ${body}`);
+  }
   return true;
 }
 
