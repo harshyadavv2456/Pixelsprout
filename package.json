@@ -1,0 +1,6 @@
+{
+  "name": "pixelsprout",
+  "private": true,
+  "type": "module",
+  "description": "Static site with a couple of Vercel serverless API functions (Cold Read / Gift File datasets, backed by Upstash Redis). No build step, no framework."
+}

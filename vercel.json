@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "gifts.playpixelsprout.com" }],
+      "destination": "/gift-file/"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "has": [{ "type": "host", "value": "gifts.playpixelsprout.com" }],
+      "destination": "/gift-file/$1"
+    }
+  ]
+}

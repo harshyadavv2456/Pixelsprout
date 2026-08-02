@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+<link rel="canonical" href="https://playpixelsprout.com/gift-file/">
+<title>Gift File - Find the Right Gift in 4 Questions | Pixelsprout</title>
+<meta name="description" content="Answer 4 quick questions about who it's for, the occasion, and the budget - Gift File finds specific gift ideas with direct Amazon search links, and gets sharper with every use.">
+<link rel="stylesheet" href="../styles.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8466016918717424" crossorigin="anonymous"></script>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://playpixelsprout.com/gift-file/">
+<meta property="og:title" content="Gift File - Find the Right Gift in 4 Questions | Pixelsprout">
+<meta property="og:description" content="Stuck on what to get someone? Four questions, real gift ideas, direct Amazon links - and it learns from every visitor.">
+<meta property="og:image" content="https://playpixelsprout.com/assets/og-banner.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Gift File", "item": "https://playpixelsprout.com/gift-file/"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="../index.html">
+    <img class="logo-mark" src="../assets/logo-icon.png" alt="">
+    <span class="logo-word">PIXELSPROUT</span>
+  </a>
+</header>
+
+<div id="gift-file-root"></div>
+
+<article style="max-width:700px;margin:32px auto 60px;padding:0 20px;font-family:system-ui,sans-serif;color:var(--muted,#8a93b8);font-size:14px;line-height:1.7;">
+  <h2 style="font-family:'Press Start 2P',monospace;font-size:15px;color:var(--paper,#fff);margin-bottom:12px;">How to actually pick the right gift</h2>
+  <p>Most gift guides are just long lists sorted by price, which is why they rarely help when you're stuck. The four things that actually narrow a gift down are <strong>who it's for</strong>, <strong>why you're giving it</strong>, <strong>what you're willing to spend</strong>, and <strong>what they're genuinely into</strong> - in that order. Gift File asks exactly those four questions, nothing else, and scores a running dataset of gift ideas against your answers instead of showing you the same generic top-10 list everyone else gets.</p>
+  <p>It also corrects itself. If none of the three suggestions are right, tell it what you actually ended up getting - that gets folded back into the dataset with a small weight, so the next person with a similar answer set sees a slightly better set of ideas. Nothing here is AI-generated; it's a transparent weighted match between your answers and a hand-seeded (and visitor-taught) list of gifts, so results stay specific instead of vague.</p>
+  <h3 style="font-family:'Press Start 2P',monospace;font-size:13px;color:var(--paper,#fff);margin:20px 0 10px;">India or elsewhere?</h3>
+  <p>Gift File asks upfront rather than guessing from your IP address, then routes every "Search on Amazon" link to amazon.in or amazon.com accordingly, so the results are actually shoppable wherever you are.</p>
+</article>
+
+<footer class="site-footer" style="text-align:center;padding:24px;font-size:12px;color:var(--muted,#8a93b8);">
+  <a href="../index.html" style="color:inherit;">&larr; Back to Pixelsprout</a>
+</footer>
+
+<script type="text/babel" data-presets="react">
+const { useState, useEffect } = React;
+
+const RECIPIENTS = [
+  { key: "for_partner", label: "Partner" },
+  { key: "for_mom", label: "Mom" },
+  { key: "for_dad", label: "Dad" },
+  { key: "for_sibling", label: "Sibling" },
+  { key: "for_friend", label: "Friend" },
+  { key: "for_coworker", label: "Coworker" },
+  { key: "for_kid", label: "Kid" },
+  { key: "for_self", label: "Myself" },
+];
+const OCCASIONS = [
+  { key: "occ_birthday", label: "Birthday" },
+  { key: "occ_anniversary", label: "Anniversary" },
+  { key: "occ_festival", label: "Festival / Holiday" },
+  { key: "occ_justbecause", label: "Just Because" },
+  { key: "occ_wedding", label: "Wedding" },
+  { key: "occ_farewell", label: "Farewell / Thank You" },
+];
+const BUDGETS = [
+  { key: "budget_low", label: "Under ₹500" },
+  { key: "budget_mid", label: "₹500 – 1,500" },
+  { key: "budget_high", label: "₹1,500 – 5,000" },
+  { key: "budget_premium", label: "₹5,000+" },
+];
+const INTERESTS = [
+  { key: "int_tech", label: "Tech & Gadgets" },
+  { key: "int_fashion", label: "Fashion" },
+  { key: "int_books", label: "Books & Reading" },
+  { key: "int_fitness", label: "Fitness & Sports" },
+  { key: "int_cooking", label: "Cooking & Food" },
+  { key: "int_travel", label: "Travel" },
+  { key: "int_gaming", label: "Gaming" },
+  { key: "int_beauty", label: "Beauty & Skincare" },
+  { key: "int_home", label: "Home & Decor" },
+  { key: "int_music", label: "Music" },
+  { key: "int_art", label: "Art & Craft" },
+  { key: "int_outdoors", label: "Outdoors" },
+];
+
+const SEED_GIFTS = [
+  { name: "Wireless Earbuds", v: { int_tech: 1, budget_mid: 1, budget_high: 0.6, for_friend: 0.6, for_partner: 0.6, for_self: 0.7, occ_birthday: 0.7, occ_justbecause: 0.5 } },
+  { name: "Scented Candle Set", v: { int_home: 0.8, int_beauty: 0.4, budget_low: 1, budget_mid: 0.5, for_mom: 0.8, for_friend: 0.7, for_coworker: 0.7, occ_justbecause: 0.7, occ_farewell: 0.6 } },
+  { name: "Curated Book Hamper", v: { int_books: 1, budget_low: 0.8, budget_mid: 0.6, for_friend: 0.7, for_sibling: 0.6, for_self: 0.6, occ_birthday: 0.6, occ_justbecause: 0.6 } },
+  { name: "Perfume", v: { int_beauty: 0.7, int_fashion: 0.5, budget_mid: 0.8, budget_high: 0.6, for_partner: 0.9, for_mom: 0.6, occ_anniversary: 0.9, occ_birthday: 0.7 } },
+  { name: "Smartwatch", v: { int_tech: 1, int_fitness: 0.6, budget_high: 1, budget_premium: 0.8, for_partner: 0.7, for_dad: 0.6, for_self: 0.6, occ_birthday: 0.7, occ_anniversary: 0.6 } },
+  { name: "Yoga Mat & Kit", v: { int_fitness: 1, budget_low: 0.7, budget_mid: 0.6, for_friend: 0.6, for_mom: 0.5, for_self: 0.6, occ_birthday: 0.5, occ_justbecause: 0.5 } },
+  { name: "Gourmet Cooking Kit", v: { int_cooking: 1, budget_mid: 0.7, for_mom: 0.6, for_partner: 0.6, for_friend: 0.5, occ_justbecause: 0.6, occ_birthday: 0.5 } },
+  { name: "Travel Backpack", v: { int_travel: 1, budget_mid: 0.7, budget_high: 0.5, for_friend: 0.6, for_sibling: 0.6, for_self: 0.6, occ_farewell: 0.7, occ_birthday: 0.6 } },
+  { name: "Gaming Headset", v: { int_gaming: 1, int_tech: 0.6, budget_mid: 0.8, budget_high: 0.6, for_friend: 0.7, for_sibling: 0.7, for_self: 0.7, occ_birthday: 0.7 } },
+  { name: "Handmade Jewelry", v: { int_fashion: 0.8, int_art: 0.4, budget_mid: 0.6, budget_low: 0.5, for_mom: 0.7, for_partner: 0.6, for_friend: 0.6, occ_anniversary: 0.7, occ_birthday: 0.6 } },
+  { name: "Framed Wall Art", v: { int_home: 0.8, int_art: 0.6, budget_low: 0.6, budget_mid: 0.6, for_coworker: 0.5, for_friend: 0.5, for_self: 0.5, occ_farewell: 0.5, occ_justbecause: 0.5 } },
+  { name: "Bluetooth Speaker", v: { int_music: 1, int_tech: 0.5, budget_mid: 0.8, for_friend: 0.7, for_sibling: 0.6, for_self: 0.6, occ_birthday: 0.7 } },
+  { name: "Skincare Gift Set", v: { int_beauty: 1, budget_mid: 0.7, budget_low: 0.5, for_mom: 0.7, for_partner: 0.6, for_friend: 0.6, occ_birthday: 0.7, occ_justbecause: 0.6 } },
+  { name: "Leather Wallet", v: { int_fashion: 0.6, budget_mid: 0.7, budget_low: 0.4, for_dad: 0.8, for_partner: 0.5, for_coworker: 0.5, occ_birthday: 0.6, occ_farewell: 0.5 } },
+  { name: "Board Game Set", v: { int_gaming: 0.6, int_art: 0.2, budget_low: 0.6, budget_mid: 0.5, for_friend: 0.7, for_sibling: 0.7, for_kid: 0.6, occ_birthday: 0.6, occ_justbecause: 0.5 } },
+  { name: "Fitness Tracker Band", v: { int_fitness: 0.8, int_tech: 0.5, budget_mid: 0.6, for_friend: 0.6, for_partner: 0.5, for_self: 0.6, occ_birthday: 0.5 } },
+  { name: "Personalized Photo Frame", v: { int_home: 0.5, int_art: 0.3, budget_low: 0.8, for_mom: 0.8, for_partner: 0.6, for_friend: 0.5, occ_anniversary: 0.7, occ_justbecause: 0.6 } },
+  { name: "Indoor Plant Set", v: { int_home: 0.7, int_outdoors: 0.4, budget_low: 0.9, for_coworker: 0.6, for_friend: 0.6, for_mom: 0.5, occ_farewell: 0.5, occ_justbecause: 0.6 } },
+  { name: "Art Supplies Kit", v: { int_art: 1, budget_low: 0.6, budget_mid: 0.5, for_sibling: 0.6, for_friend: 0.5, for_kid: 0.6, occ_birthday: 0.6 } },
+  { name: "Designer Sunglasses", v: { int_fashion: 0.7, budget_mid: 0.6, budget_high: 0.6, for_partner: 0.6, for_friend: 0.5, for_self: 0.5, occ_birthday: 0.6, occ_anniversary: 0.5 } },
+  { name: "Chocolate Hamper", v: { int_cooking: 0.3, budget_low: 1, for_mom: 0.6, for_coworker: 0.7, for_friend: 0.6, for_kid: 0.6, occ_festival: 0.8, occ_justbecause: 0.7 } },
+  { name: "Kids Toy Set", v: { int_gaming: 0.3, int_art: 0.3, budget_low: 0.7, budget_mid: 0.5, for_kid: 1, occ_birthday: 0.8, occ_festival: 0.6 } },
+  { name: "Instant Camera", v: { int_art: 0.5, int_travel: 0.4, int_tech: 0.4, budget_mid: 0.7, budget_high: 0.5, for_friend: 0.6, for_self: 0.6, occ_birthday: 0.6 } },
+  { name: "Gift Card", v: { budget_low: 0.5, budget_mid: 0.5, budget_high: 0.5, for_coworker: 0.8, for_friend: 0.5, for_self: 0.4, occ_farewell: 0.7, occ_justbecause: 0.5 } },
+  { name: "Analog Watch", v: { int_fashion: 0.6, budget_mid: 0.6, budget_high: 0.7, budget_premium: 0.6, for_dad: 0.7, for_partner: 0.6, for_self: 0.5, occ_birthday: 0.6, occ_anniversary: 0.6 } },
+  { name: "Cookware Set", v: { int_cooking: 0.8, int_home: 0.5, budget_high: 0.6, budget_mid: 0.5, for_mom: 0.7, for_partner: 0.5, occ_wedding: 0.8, occ_anniversary: 0.5 } },
+  { name: "Concert / Event Tickets", v: { int_music: 0.8, int_travel: 0.3, budget_high: 0.6, budget_premium: 0.5, for_partner: 0.7, for_friend: 0.6, occ_birthday: 0.6, occ_anniversary: 0.6 } },
+  { name: "Customized Mug", v: { int_home: 0.3, budget_low: 0.9, for_coworker: 0.6, for_friend: 0.6, for_mom: 0.5, occ_farewell: 0.6, occ_justbecause: 0.6 } },
+  { name: "Running Shoes", v: { int_fitness: 1, budget_mid: 0.7, budget_high: 0.6, for_friend: 0.6, for_sibling: 0.6, for_self: 0.6, occ_birthday: 0.5 } },
+  { name: "E-Reader", v: { int_books: 1, int_tech: 0.4, budget_mid: 0.6, budget_high: 0.6, for_partner: 0.5, for_friend: 0.5, for_self: 0.6, occ_birthday: 0.6, occ_anniversary: 0.5 } },
+];
+
+function blend(oldVal, newVal, w) {
+  return oldVal === undefined ? newVal : oldVal * (1 - w) + newVal * w;
+}
+
+function GiftFileApp() {
+  const [dataset, setDataset] = useState(null);
+  const [matchesMade, setMatchesMade] = useState(null);
+  const [phase, setPhase] = useState("intro"); // intro|recipient|occasion|budget|interests|results|learned
+  const [sel, setSel] = useState({ region: null, recipient: null, occasion: null, budget: null, interests: [] });
+  const [results, setResults] = useState([]);
+  const [confirmed, setConfirmed] = useState({});
+  const [teachName, setTeachName] = useState("");
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await fetch("/api/gift-file-dataset");
+        const data = await res.json();
+        if (data.entities && Array.isArray(data.entities) && data.entities.length > 0) {
+          setDataset(data.entities);
+          setMatchesMade(data.matchesMade || 0);
+        } else {
+          setDataset(SEED_GIFTS);
+          setMatchesMade(0);
+          persistAll(SEED_GIFTS, 0);
+        }
+      } catch {
+        setDataset(SEED_GIFTS);
+        setMatchesMade(0);
+      }
+    })();
+  }, []);
+
+  async function persistAll(entities, matches) {
+    try {
+      await fetch("/api/gift-file-dataset", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ entities, matchesMade: matches }),
+      });
+    } catch {}
+  }
+
+  function startOver() {
+    setSel({ region: null, recipient: null, occasion: null, budget: null, interests: [] });
+    setResults([]);
+    setConfirmed({});
+    setTeachName("");
+    setPhase("region");
+  }
+
+  function chooseRegion(key) {
+    setSel((s) => ({ ...s, region: key }));
+    setPhase("recipient");
+  }
+
+  function chooseRecipient(key) {
+    setSel((s) => ({ ...s, recipient: key }));
+    setPhase("occasion");
+  }
+  function chooseOccasion(key) {
+    setSel((s) => ({ ...s, occasion: key }));
+    setPhase("budget");
+  }
+  function chooseBudget(key) {
+    setSel((s) => ({ ...s, budget: key }));
+    setPhase("interests");
+  }
+  function toggleInterest(key) {
+    setSel((s) => {
+      const has = s.interests.includes(key);
+      if (has) return { ...s, interests: s.interests.filter((k) => k !== key) };
+      if (s.interests.length >= 3) return s;
+      return { ...s, interests: [...s.interests, key] };
+    });
+  }
+
+  function findGifts() {
+    const keys = [sel.recipient, sel.occasion, sel.budget, ...sel.interests].filter(Boolean);
+    const scored = dataset.map((g) => {
+      let score = (g.v[sel.recipient] ?? 0) * 1 + (g.v[sel.occasion] ?? 0) * 1 + (g.v[sel.budget] ?? 0) * 1.2;
+      sel.interests.forEach((ik) => (score += (g.v[ik] ?? 0) * 1.5));
+      return { ...g, score, keys };
+    });
+    scored.sort((a, b) => b.score - a.score);
+    setResults(scored.slice(0, 3));
+    const newMatches = (matchesMade || 0) + 1;
+    setMatchesMade(newMatches);
+    persistAll(dataset, newMatches);
+    setPhase("results");
+  }
+
+  function confirmGood(gift) {
+    setDataset((prev) => {
+      const idx = prev.findIndex((e) => e.name === gift.name);
+      if (idx < 0) return prev;
+      const updated = { ...prev[idx], v: { ...prev[idx].v } };
+      gift.keys.forEach((k) => (updated.v[k] = blend(updated.v[k], 1, 0.15)));
+      const next = [...prev];
+      next[idx] = updated;
+      persistAll(next, matchesMade || 0);
+      return next;
+    });
+    setConfirmed((c) => ({ ...c, [gift.name]: true }));
+  }
+
+  function submitTeach() {
+    const trimmed = teachName.trim();
+    if (!trimmed) return;
+    const keys = [sel.recipient, sel.occasion, sel.budget, ...sel.interests].filter(Boolean);
+    setDataset((prev) => {
+      const idx = prev.findIndex((e) => e.name.toLowerCase() === trimmed.toLowerCase());
+      let next;
+      if (idx >= 0) {
+        const updated = { ...prev[idx], v: { ...prev[idx].v } };
+        keys.forEach((k) => (updated.v[k] = blend(updated.v[k], 1, 0.35)));
+        next = [...prev];
+        next[idx] = updated;
+      } else {
+        const v = {};
+        keys.forEach((k) => (v[k] = 1));
+        next = [...prev, { name: trimmed, v }];
+      }
+      persistAll(next, matchesMade || 0);
+      return next;
+    });
+    setPhase("learned");
+  }
+
+  const cream = "#EDE6D6",
+    ink = "#0B0B0F",
+    amber = "#F2A93B",
+    red = "#9B2C2C",
+    smoke = "#6B6B70",
+    charcoal = "#1A1A20";
+
+  function OptionGrid({ items, onPick, multi, selected }) {
+    return (
+      <div className="flex flex-wrap gap-2 justify-center">
+        {items.map((it) => {
+          const isSel = multi ? selected.includes(it.key) : false;
+          return (
+            <button
+              key={it.key}
+              onClick={() => onPick(it.key)}
+              className="text-sm font-medium px-3 py-2 rounded border transition-colors"
+              style={{
+                borderColor: red,
+                color: isSel ? cream : red,
+                background: isSel ? red : "transparent",
+              }}
+            >
+              {it.label}
+            </button>
+          );
+        })}
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen w-full flex flex-col items-center justify-center relative overflow-hidden px-4 py-10" style={{ background: ink, fontFamily: "'Inter', system-ui, sans-serif" }}>
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@400;500;600;700&display=swap');
+        .display { font-family: 'Special Elite', 'Courier New', monospace; }
+        @keyframes sway { 0%,100% { transform: rotate(-1.2deg); } 50% { transform: rotate(1.2deg); } }
+        @keyframes flicker { 0%,19%,21%,23%,25%,54%,56%,100% { opacity: 1; } 20%,24%,55% { opacity: .55; } }
+        @keyframes stampIn { from { opacity: 0; transform: scale(1.3) rotate(-3deg); } to { opacity: 1; transform: scale(1) rotate(0); } }
+        .sway { animation: sway 6s ease-in-out infinite; transform-origin: top center; }
+        .flicker { animation: flicker 5s infinite; }
+        .stamp-in { animation: stampIn .35s ease-out both; }
+        @media (prefers-reduced-motion: reduce) { .sway, .flicker, .stamp-in { animation: none !important; } }
+      `}</style>
+
+      <div className="sway absolute top-0 left-1/2 -translate-x-1/2 flex flex-col items-center pointer-events-none">
+        <div style={{ width: 2, height: 90, background: "#3a3a40" }} />
+        <div className="flicker rounded-full" style={{ width: 14, height: 14, background: amber, boxShadow: `0 0 40px 14px rgba(242,169,59,0.55)` }} />
+      </div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 pointer-events-none" style={{ width: 620, height: 620, background: "radial-gradient(circle at 50% 0%, rgba(242,169,59,0.12), transparent 60%)" }} />
+
+      <div className="relative z-10 text-center mb-6">
+        <p className="display text-xs tracking-[0.3em] uppercase mb-2" style={{ color: smoke }}>The Bulb Moment</p>
+        <h1 className="display text-4xl sm:text-5xl mb-2" style={{ color: amber }}>GIFT FILE</h1>
+        <p className="text-sm max-w-xs mx-auto" style={{ color: "rgba(237,230,214,0.65)" }}>Four questions. We'll find what fits — and get sharper every time.</p>
+      </div>
+
+      <div className="relative z-10 w-full max-w-md">
+        {phase === "intro" && (
+          <div className="rounded-lg p-8 text-center rotate-1 shadow-2xl" style={{ background: cream, border: "1px solid rgba(0,0,0,0.15)" }}>
+            <p className="display text-lg mb-6" style={{ color: charcoal }}>Stuck on what to get someone? Let's narrow it down.</p>
+            <button onClick={startOver} disabled={!dataset} className="display px-6 py-3 rounded text-sm uppercase tracking-wider transition-transform hover:scale-105 disabled:opacity-50" style={{ background: red, color: cream }}>
+              {dataset ? "Open the File" : "Opening…"}
+            </button>
+          </div>
+        )}
+
+        {phase === "region" && (
+          <div className="rounded-lg p-7 rotate-1 shadow-2xl text-center" style={{ background: cream, border: "1px solid rgba(0,0,0,0.15)" }}>
+            <p className="display text-xs uppercase tracking-widest mb-3" style={{ color: red }}>Before we start</p>
+            <p className="display text-xl mb-5" style={{ color: charcoal }}>Shopping from India or elsewhere?</p>
+            <div className="flex flex-wrap gap-2 justify-center">
+              <button onClick={() => chooseRegion("in")} className="text-sm font-medium px-4 py-2 rounded border transition-colors" style={{ borderColor: red, color: red, background: "transparent" }}>
+                🇮🇳 India (amazon.in)
+              </button>
+              <button onClick={() => chooseRegion("us")} className="text-sm font-medium px-4 py-2 rounded border transition-colors" style={{ borderColor: red, color: red, background: "transparent" }}>
+                🌍 Elsewhere (amazon.com)
+              </button>
+            </div>
+          </div>
+        )}
+
+        {phase === "recipient" && (
+          <div className="rounded-lg p-7 rotate-1 shadow-2xl text-center" style={{ background: cream, border: "1px solid rgba(0,0,0,0.15)" }}>
+            <p className="display text-xs uppercase tracking-widest mb-3" style={{ color: red }}>Step 1 of 4</p>
+            <p className="display text-xl mb-5" style={{ color: charcoal }}>Who's it for?</p>
+            <OptionGrid items={RECIPIENTS} onPick={chooseRecipient} multi={false} selected={[]} />
+          </div>
+        )}
+
+        {phase === "occasion" && (
+          <div className="rounded-lg p-7 rotate-1 shadow-2xl text-center" style={{ background: cream, border: "1px solid rgba(0,0,0,0.15)" }}>
+            <p className="display text-xs uppercase tracking-widest mb-3" style={{ color: red }}>Step 2 of 4</p>
+            <p className="display text-xl mb-5" style={{ color: charcoal }}>What's the occasion?</p>
+            <OptionGrid items={OCCASIONS} onPick={chooseOccasion} multi={false} selected={[]} />
+          </div>
+        )}
+
+        {phase === "budget" && (
+          <div className="rounded-lg p-7 rotate-1 shadow-2xl text-center" style={{ background: cream, border: "1px solid rgba(0,0,0,0.15)" }}>
+            <p className="display text-xs uppercase tracking-widest mb-3" style={{ color: red }}>Step 3 of 4</p>
+            <p className="display text-xl mb-5" style={{ color: charcoal }}>What's the budget?</p>
+            <OptionGrid items={BUDGETS} onPick={chooseBudget} multi={false} selected={[]} />
+          </div>
+        )}
+
+        {phase === "interests" && (
+          <div className="rounded-lg p-7 rotate-1 shadow-2xl text-center" style={{ background: cream, border: "1px solid rgba(0,0,0,0.15)" }}>
+            <p className="display text-xs uppercase tracking-widest mb-3" style={{ color: red }}>Step 4 of 4</p>
+            <p className="display text-xl mb-2" style={{ color: charcoal }}>What do they love?</p>
+            <p className="text-xs mb-4" style={{ color: "rgba(0,0,0,0.5)" }}>Pick up to 3</p>
+            <OptionGrid items={INTERESTS} onPick={toggleInterest} multi={true} selected={sel.interests} />
+            <button onClick={findGifts} disabled={sel.interests.length === 0} className="display mt-6 px-6 py-3 rounded text-sm uppercase tracking-wider disabled:opacity-40" style={{ background: amber, color: charcoal }}>
+              Find Gifts
+            </button>
+          </div>
+        )}
+
+        {phase === "results" && (
+          <div>
+            <p className="display text-center text-xs uppercase tracking-widest mb-4" style={{ color: smoke }}>The file points to</p>
+            <div className="flex flex-col gap-3 mb-5">
+              {results.map((g, i) => (
+                <div key={g.name} className="stamp-in rounded-lg p-5" style={{ background: cream, border: "1px solid rgba(0,0,0,0.15)", transform: `rotate(${i % 2 === 0 ? -0.6 : 0.6}deg)` }}>
+                  <p className="display text-lg mb-3" style={{ color: charcoal }}>{g.name}</p>
+                  <div className="flex gap-2 flex-wrap">
+                    <a
+                      href={
+                        sel.region === "us"
+                          ? `https://www.amazon.com/s?k=${encodeURIComponent(g.name)}&tag=pixelsprout-20`
+                          : `https://www.amazon.in/s?k=${encodeURIComponent(g.name)}&tag=pixelsprout0e-21`
+                      }
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className="text-xs font-medium px-3 py-2 rounded"
+                      style={{ background: red, color: cream }}
+                    >
+                      Search on Amazon ↗
+                    </a>
+                    <button
+                      onClick={() => confirmGood(g)}
+                      disabled={confirmed[g.name]}
+                      className="text-xs font-medium px-3 py-2 rounded border disabled:opacity-50"
+                      style={{ borderColor: amber, color: confirmed[g.name] ? smoke : "#8a6100" }}
+                    >
+                      {confirmed[g.name] ? "Noted ✓" : "👍 Good match"}
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="rounded-lg p-5 text-center" style={{ background: charcoal, border: "1px solid rgba(242,169,59,0.25)" }}>
+              <p className="text-sm mb-3" style={{ color: "rgba(237,230,214,0.75)" }}>None of these quite right? Tell us what you actually got — it'll remember.</p>
+              <input value={teachName} onChange={(e) => setTeachName(e.target.value)} placeholder="e.g. Noise-cancelling headphones" className="w-full px-3 py-2 rounded border text-sm mb-3" style={{ borderColor: smoke, background: "#fff", color: charcoal }} />
+              <button onClick={submitTeach} className="display px-5 py-2.5 rounded text-sm uppercase tracking-wider" style={{ background: amber, color: charcoal }}>File it away</button>
+            </div>
+            <button onClick={startOver} className="text-xs mt-4 mx-auto block underline" style={{ color: smoke }}>Start a new search</button>
+          </div>
+        )}
+
+        {phase === "learned" && (
+          <div className="text-center">
+            <p className="display text-2xl mb-2 rotate-1" style={{ color: amber }}>NOTED IN THE FILE</p>
+            <p className="text-sm mb-6" style={{ color: "rgba(237,230,214,0.6)" }}>The next search like this one gets a little sharper.</p>
+            <button onClick={startOver} className="display px-6 py-3 rounded text-sm uppercase tracking-wider" style={{ background: amber, color: charcoal }}>New Search</button>
+          </div>
+        )}
+      </div>
+
+      <p className="relative z-10 text-xs mt-10 font-mono text-center" style={{ color: smoke }}>
+        {dataset ? dataset.length : "—"} gifts on file · {matchesMade === null ? "—" : matchesMade} matches made
+      </p>
+    </div>
+  );
+}
+
+
+const root = ReactDOM.createRoot(document.getElementById("gift-file-root"));
+root.render(<GiftFileApp />);
+</script>
+</body>
+</html>

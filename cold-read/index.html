@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+<link rel="canonical" href="https://playpixelsprout.com/cold-read/">
+<title>Cold Read - Guess What I'm Thinking Of | Pixelsprout</title>
+<meta name="description" content="Think of anything - a person, animal, object, or food. Cold Read asks yes/no questions and narrows it down by elimination. Free, instant, no download.">
+<link rel="stylesheet" href="../styles.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8466016918717424" crossorigin="anonymous"></script>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://playpixelsprout.com/cold-read/">
+<meta property="og:title" content="Cold Read - Guess What I'm Thinking Of | Pixelsprout">
+<meta property="og:description" content="Think of anything and Cold Read will guess it by asking yes/no questions - and gets sharper with every play.">
+<meta property="og:image" content="https://playpixelsprout.com/assets/og-banner.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Cold Read", "item": "https://playpixelsprout.com/cold-read/"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="../index.html">
+    <img class="logo-mark" src="../assets/logo-icon.png" alt="">
+    <span class="logo-word">PIXELSPROUT</span>
+  </a>
+</header>
+
+<div id="cold-read-root"></div>
+
+<div style="max-width:700px;margin:32px auto 60px;padding:0 20px;font-family:system-ui,sans-serif;color:var(--muted,#8a93b8);font-size:14px;line-height:1.7;">
+  <h2 style="font-family:'Press Start 2P',monospace;font-size:15px;color:var(--paper,#fff);margin-bottom:12px;">How it works</h2>
+  <p>Fix something in your mind - a person, animal, object, or food - and Cold Read asks a series of yes/no/probably questions to narrow it down by elimination, the same way the old guessing games work. Under the hood there's no AI model doing the guessing: it's a plain weighted-scoring algorithm running against a shared dataset that gets a little sharper every time someone plays, whether the guess lands or someone teaches it something new.</p>
+</div>
+
+<footer class="site-footer" style="text-align:center;padding:24px;font-size:12px;color:var(--muted,#8a93b8);">
+  <a href="../index.html" style="color:inherit;">&larr; Back to Pixelsprout</a>
+</footer>
+
+<script type="text/babel" data-presets="react">
+const { useState, useEffect } = React;
+
+const Q = {
+  human: "Does it have a human form — a real person or a human-like character?",
+  real: "Is it a real person who actually exists or existed?",
+  animal: "Is it an animal?",
+  object: "Is it a non-living object or item?",
+  food: "Is it something you eat or drink?",
+  male: "Is it typically referred to as male?",
+  screen: "Is it best known from movies, TV, or comics?",
+  power: "Does it have superpowers or magical abilities?",
+  villain: "Is it usually portrayed as a villain?",
+  sports: "Is it associated mainly with sports?",
+  music: "Is it associated mainly with music?",
+  tech: "Is it associated mainly with science or technology?",
+  politics: "Is it associated mainly with politics or leadership?",
+  historic: "Would you call it historical — well known from before 1950?",
+  us: "Is it strongly associated with the United States?",
+  india: "Is it strongly associated with India?",
+  water: "Does it live in or spend most of its time in water?",
+  fly: "Can it fly on its own, without a vehicle?",
+  predator: "Is it a predator that hunts other animals?",
+  pet: "Is it commonly kept as a house pet?",
+  big: "Is it larger than an average adult human?",
+  furred: "Does it have fur or feathers?",
+  indoor: "Would you typically find it inside a home?",
+  elec: "Does it need electricity or batteries to work?",
+  handheld: "Can it be comfortably held in one hand?",
+  travel: "Is it used to travel or move from place to place?",
+  instrument: "Is it a musical instrument?",
+  accessory: "Is it something you'd wear or carry as an accessory?",
+  sweet: "Is it sweet-tasting?",
+  fruit: "Is it a fruit?",
+  hot: "Is it usually eaten or drunk hot?",
+  drink: "Is it a drink rather than a solid food?",
+  kidsKnow: "Would most children instantly recognize it?",
+};
+const ATTR_KEYS = Object.keys(Q);
+
+const SEED_ENTITIES = [
+  { name: "Albert Einstein", v: { human: 1, real: 1, male: 1, tech: 1, historic: 0.6, us: 0.4, kidsKnow: 0.6, screen: 0.1 } },
+  { name: "Cristiano Ronaldo", v: { human: 1, real: 1, male: 1, sports: 1, kidsKnow: 0.8 } },
+  { name: "Taylor Swift", v: { human: 1, real: 1, music: 1, us: 1, kidsKnow: 0.7, screen: 0.2 } },
+  { name: "Mahatma Gandhi", v: { human: 1, real: 1, male: 1, politics: 1, historic: 0.6, india: 1, kidsKnow: 0.5 } },
+  { name: "Elon Musk", v: { human: 1, real: 1, male: 1, tech: 1, us: 0.8, kidsKnow: 0.6 } },
+  { name: "Michael Jackson", v: { human: 1, real: 1, male: 1, music: 1, us: 1, historic: 0.2, kidsKnow: 0.7, screen: 0.4 } },
+  { name: "Barack Obama", v: { human: 1, real: 1, male: 1, politics: 1, us: 1, kidsKnow: 0.7 } },
+  { name: "Marilyn Monroe", v: { human: 1, real: 1, us: 1, historic: 0.4, screen: 0.8, kidsKnow: 0.4 } },
+  { name: "Bruce Lee", v: { human: 1, real: 1, male: 1, sports: 0.3, historic: 0.3, screen: 0.8, kidsKnow: 0.6 } },
+  { name: "Queen Elizabeth II", v: { human: 1, real: 1, politics: 1, historic: 0.3, kidsKnow: 0.6 } },
+  { name: "Batman", v: { human: 1, screen: 1, male: 1, tech: 0.4, us: 1, kidsKnow: 0.8 } },
+  { name: "Spider-Man", v: { human: 1, screen: 1, male: 1, power: 1, tech: 0.3, us: 1, kidsKnow: 0.9 } },
+  { name: "Harry Potter", v: { human: 1, screen: 1, male: 1, power: 1, kidsKnow: 0.9 } },
+  { name: "Mickey Mouse", v: { human: 0.3, animal: 0.6, screen: 1, male: 1, us: 1, indoor: 0.5, kidsKnow: 0.9 } },
+  { name: "SpongeBob SquarePants", v: { animal: 0.6, human: 0.2, screen: 1, male: 1, water: 1, us: 1, kidsKnow: 0.9 } },
+  { name: "Pikachu", v: { animal: 1, screen: 1, power: 1, pet: 0.6, kidsKnow: 0.9 } },
+  { name: "Darth Vader", v: { human: 1, screen: 1, male: 1, power: 1, villain: 1, tech: 0.3, us: 1, big: 0.3, kidsKnow: 0.7 } },
+  { name: "Mario", v: { human: 1, screen: 1, male: 1, power: 0.5, kidsKnow: 0.9 } },
+  { name: "Sherlock Holmes", v: { human: 1, screen: 1, male: 1, tech: 0.4, historic: 0.3, kidsKnow: 0.5 } },
+  { name: "Elsa", v: { human: 1, screen: 1, power: 1, us: 1, kidsKnow: 0.8 } },
+  { name: "Lion", v: { animal: 1, male: 1, predator: 1, big: 1, furred: 1, kidsKnow: 0.9 } },
+  { name: "Dolphin", v: { animal: 1, water: 1, kidsKnow: 0.8 } },
+  { name: "Eagle", v: { animal: 1, fly: 1, predator: 1, furred: 1, kidsKnow: 0.7 } },
+  { name: "Penguin", v: { animal: 1, water: 0.6, furred: 1, kidsKnow: 0.8 } },
+  { name: "Elephant", v: { animal: 1, big: 1, kidsKnow: 0.9 } },
+  { name: "Snake", v: { animal: 1, predator: 0.6, kidsKnow: 0.7 } },
+  { name: "Dog", v: { animal: 1, pet: 1, furred: 1, indoor: 0.5, kidsKnow: 1 } },
+  { name: "Cat", v: { animal: 1, pet: 1, furred: 1, indoor: 0.7, kidsKnow: 1 } },
+  { name: "Shark", v: { animal: 1, water: 1, predator: 1, big: 0.6, kidsKnow: 0.8 } },
+  { name: "Butterfly", v: { animal: 1, fly: 1, handheld: 0.5, kidsKnow: 0.8 } },
+  { name: "Smartphone", v: { object: 1, elec: 1, handheld: 1, indoor: 0.6, kidsKnow: 0.9 } },
+  { name: "Bicycle", v: { object: 1, travel: 1, big: 0.4, kidsKnow: 0.9 } },
+  { name: "Guitar", v: { object: 1, instrument: 1, handheld: 0.6, indoor: 0.5, kidsKnow: 0.7 } },
+  { name: "Umbrella", v: { object: 1, handheld: 1, accessory: 0.6, kidsKnow: 0.7 } },
+  { name: "Refrigerator", v: { object: 1, elec: 1, indoor: 1, big: 0.5, kidsKnow: 0.6 } },
+  { name: "Airplane", v: { object: 1, fly: 1, travel: 1, big: 1, kidsKnow: 0.7 } },
+  { name: "Football", v: { object: 1, sports: 1, handheld: 1, kidsKnow: 0.9 } },
+  { name: "Television", v: { object: 1, elec: 1, indoor: 1, kidsKnow: 0.8 } },
+  { name: "Book", v: { object: 1, handheld: 1, indoor: 0.6, kidsKnow: 0.9 } },
+  { name: "Camera", v: { object: 1, elec: 1, handheld: 1, kidsKnow: 0.6 } },
+  { name: "Pizza", v: { food: 1, hot: 0.8, kidsKnow: 1 } },
+  { name: "Mango", v: { food: 1, fruit: 1, sweet: 0.8, kidsKnow: 0.8, india: 0.4 } },
+  { name: "Chocolate", v: { food: 1, sweet: 1, kidsKnow: 1 } },
+  { name: "Coffee", v: { food: 1, drink: 1, hot: 0.8, kidsKnow: 0.7 } },
+  { name: "Ice Cream", v: { food: 1, sweet: 1, kidsKnow: 1 } },
+  { name: "Banana", v: { food: 1, fruit: 1, sweet: 0.6, handheld: 0.6, kidsKnow: 0.9 } },
+  { name: "Sushi", v: { food: 1, kidsKnow: 0.5 } },
+  { name: "Rice", v: { food: 1, hot: 0.6, kidsKnow: 0.7, india: 0.4 } },
+  { name: "Apple", v: { food: 1, fruit: 1, sweet: 0.5, handheld: 0.6, kidsKnow: 1 } },
+  { name: "Burger", v: { food: 1, hot: 0.7, handheld: 0.6, kidsKnow: 0.9 } },
+];
+
+const ANSWERS = [
+  { label: "Yes", value: 1 },
+  { label: "Probably", value: 0.75 },
+  { label: "Unsure", value: null },
+  { label: "Probably not", value: 0.25 },
+  { label: "No", value: 0 },
+];
+
+function blend(oldVal, newVal, w) {
+  return oldVal === undefined ? newVal : oldVal * (1 - w) + newVal * w;
+}
+
+function decide(candidates, askedKeys, askedCount) {
+  if (candidates.length === 0) return { type: "teach" };
+  const sumScore = candidates.reduce((s, c) => s + c.score, 0);
+  const sorted = [...candidates].sort((a, b) => b.score - a.score);
+  const top = sorted[0];
+  const topShare = sumScore > 0 ? top.score / sumScore : 0;
+  const enoughAsked = askedCount >= 5;
+  if (enoughAsked && (candidates.length === 1 || topShare >= 0.55 || askedCount >= 15)) {
+    return { type: "guess", entity: top, confidence: Math.round(topShare * 100) };
+  }
+  let bestKey = null,
+    bestDist = Infinity;
+  if (sumScore > 0) {
+    for (const key of ATTR_KEYS) {
+      if (askedKeys.has(key)) continue;
+      const wAvg = candidates.reduce((s, c) => s + c.score * (c.v[key] ?? 0), 0) / sumScore;
+      const dist = Math.abs(wAvg - 0.5);
+      if (dist < bestDist) {
+        bestDist = dist;
+        bestKey = key;
+      }
+    }
+  }
+  if (bestKey === null) {
+    if (top && topShare > 0.15) return { type: "guess", entity: top, confidence: Math.round(topShare * 100) };
+    return { type: "teach" };
+  }
+  return { type: "question", key: bestKey };
+}
+
+function ColdReadApp() {
+  const [dataset, setDataset] = useState(null);
+  const [gamesPlayed, setGamesPlayed] = useState(null);
+  const [phase, setPhase] = useState("intro");
+  const [candidates, setCandidates] = useState([]);
+  const [askedKeys, setAskedKeys] = useState(new Set());
+  const [askedCount, setAskedCount] = useState(0);
+  const [history, setHistory] = useState([]);
+  const [currentQuestionKey, setCurrentQuestionKey] = useState(null);
+  const [currentGuess, setCurrentGuess] = useState(null);
+  const [guessConfidence, setGuessConfidence] = useState(0);
+  const [teachName, setTeachName] = useState("");
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await fetch("/api/cold-read-dataset");
+        const data = await res.json();
+        if (data.entities && Array.isArray(data.entities) && data.entities.length > 0) {
+          setDataset(data.entities);
+          setGamesPlayed(data.gamesPlayed || 0);
+        } else {
+          setDataset(SEED_ENTITIES);
+          setGamesPlayed(0);
+          persistAll(SEED_ENTITIES, 0);
+        }
+      } catch {
+        // API unreachable (offline, storage not yet configured) - fall back
+        // to the seed dataset so the game is still fully playable, just
+        // without cross-visitor learning for this session.
+        setDataset(SEED_ENTITIES);
+        setGamesPlayed(0);
+      }
+    })();
+  }, []);
+
+  async function persistAll(entities, games) {
+    try {
+      await fetch("/api/cold-read-dataset", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ entities, gamesPlayed: games }),
+      });
+    } catch {}
+  }
+
+
+
+  function proceed(cands, asked, count) {
+    const decision = decide(cands, asked, count);
+    setPhase("thinking");
+    setTimeout(() => {
+      if (decision.type === "question") {
+        setCurrentQuestionKey(decision.key);
+        setPhase("playing");
+      } else if (decision.type === "guess") {
+        setCurrentGuess(decision.entity);
+        setGuessConfidence(decision.confidence);
+        setPhase("guessing");
+      } else {
+        setPhase("teach");
+      }
+    }, 350);
+  }
+
+  function startGame() {
+    if (!dataset) return;
+    const cands = dataset.map((e) => ({ ...e, v: e.v || {}, score: 1 }));
+    setCandidates(cands);
+    setHistory([]);
+    setAskedKeys(new Set());
+    setAskedCount(0);
+    setCurrentGuess(null);
+    setTeachName("");
+    proceed(cands, new Set(), 0);
+  }
+
+  function handleAnswer(value, label) {
+    const key = currentQuestionKey;
+    const newHistory = [...history, { key, q: Q[key], a: label, value }];
+    const newAskedKeys = new Set(askedKeys);
+    newAskedKeys.add(key);
+    let newCandidates = candidates;
+    if (value !== null) {
+      newCandidates = candidates
+        .map((c) => {
+          const v = c.v[key] ?? 0;
+          const match = 1 - 0.7 * Math.abs(v - value);
+          return { ...c, score: c.score * match };
+        })
+        .filter((c) => c.score > 1e-6);
+    }
+    const newAskedCount = askedCount + 1;
+    setHistory(newHistory);
+    setAskedKeys(newAskedKeys);
+    setCandidates(newCandidates);
+    setAskedCount(newAskedCount);
+    proceed(newCandidates, newAskedKeys, newAskedCount);
+  }
+
+  function rejectGuess() {
+    const remaining = candidates.filter((c) => c.name !== currentGuess.name);
+    setCandidates(remaining);
+    proceed(remaining, askedKeys, askedCount);
+  }
+
+  function confirmGuess() {
+    const roundData = history.filter((h) => h.value !== null);
+    const newGames = (gamesPlayed || 0) + 1;
+    setDataset((prev) => {
+      const idx = prev.findIndex((e) => e.name === currentGuess.name);
+      if (idx < 0) return prev;
+      const updated = { ...prev[idx], v: { ...prev[idx].v } };
+      roundData.forEach(({ key, value }) => {
+        updated.v[key] = blend(updated.v[key], value, 0.15);
+      });
+      const next = [...prev];
+      next[idx] = updated;
+      persistAll(next, newGames);
+      return next;
+    });
+    setGamesPlayed(newGames);
+    setPhase("won");
+  }
+
+  function submitTeach() {
+    const trimmed = teachName.trim();
+    if (!trimmed) return;
+    const roundData = history.filter((h) => h.value !== null);
+    const newGames = (gamesPlayed || 0) + 1;
+    setDataset((prev) => {
+      const idx = prev.findIndex((e) => e.name.toLowerCase() === trimmed.toLowerCase());
+      let next;
+      if (idx >= 0) {
+        const updated = { ...prev[idx], v: { ...prev[idx].v } };
+        roundData.forEach(({ key, value }) => {
+          updated.v[key] = blend(updated.v[key], value, 0.35);
+        });
+        next = [...prev];
+        next[idx] = updated;
+      } else {
+        const v = {};
+        roundData.forEach(({ key, value }) => {
+          v[key] = value;
+        });
+        next = [...prev, { name: trimmed, v }];
+      }
+      persistAll(next, newGames);
+      return next;
+    });
+    setGamesPlayed(newGames);
+    setPhase("learned");
+  }
+
+  const entityCount = dataset ? dataset.length : "—";
+
+  return (
+    <div
+      className="min-h-screen w-full flex flex-col items-center justify-center relative overflow-hidden px-4 py-10"
+      style={{ background: "#0B0B0F", fontFamily: "'Inter', system-ui, sans-serif" }}
+    >
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@400;500;600;700&display=swap');
+        .display { font-family: 'Special Elite', 'Courier New', monospace; }
+        @keyframes sway { 0%,100% { transform: rotate(-1.2deg); } 50% { transform: rotate(1.2deg); } }
+        @keyframes flicker { 0%,19%,21%,23%,25%,54%,56%,100% { opacity: 1; } 20%,24%,55% { opacity: .55; } }
+        @keyframes pinIn { from { opacity: 0; transform: translateY(-8px) scale(.9); } to { opacity: 1; transform: translateY(0) scale(1); } }
+        @keyframes stampIn { from { opacity: 0; transform: scale(2.2) rotate(-8deg); } to { opacity: 1; transform: scale(1) rotate(-8deg); } }
+        .sway { animation: sway 6s ease-in-out infinite; transform-origin: top center; }
+        .flicker { animation: flicker 5s infinite; }
+        .pin-in { animation: pinIn .35s ease-out both; }
+        .stamp-in { animation: stampIn .4s cubic-bezier(.2,1.4,.4,1) both; }
+        @media (prefers-reduced-motion: reduce) { .sway, .flicker, .pin-in, .stamp-in { animation: none !important; } }
+        .scrollbar-none::-webkit-scrollbar { display: none; }
+      `}</style>
+
+      <div className="sway absolute top-0 left-1/2 -translate-x-1/2 flex flex-col items-center pointer-events-none">
+        <div style={{ width: 2, height: 90, background: "#3a3a40" }} />
+        <div
+          className="flicker rounded-full"
+          style={{ width: 14, height: 14, background: "#F2A93B", boxShadow: "0 0 40px 14px rgba(242,169,59,0.55)" }}
+        />
+      </div>
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 pointer-events-none"
+        style={{ width: 620, height: 620, background: "radial-gradient(circle at 50% 0%, rgba(242,169,59,0.12), transparent 60%)" }}
+      />
+
+      <div className="relative z-10 text-center mb-6">
+        <p className="display text-xs tracking-[0.3em] uppercase mb-2" style={{ color: "#6B6B70" }}>
+          The File
+        </p>
+        <h1 className="display text-4xl sm:text-5xl mb-2" style={{ color: "#F2A93B" }}>
+          COLD READ
+        </h1>
+        <p className="text-sm max-w-xs mx-auto" style={{ color: "rgba(237,230,214,0.65)" }}>
+          Think of anything. I'll narrow it down by elimination — no guessing engine but the data itself.
+        </p>
+      </div>
+
+      <div className="relative z-10 w-full max-w-md">
+        {phase === "intro" && (
+          <div className="rounded-lg p-8 text-center rotate-1 shadow-2xl" style={{ background: "#EDE6D6", border: "1px solid rgba(0,0,0,0.15)" }}>
+            <p className="display text-lg mb-6" style={{ color: "#1A1A20" }}>
+              Fix one thing firmly in your mind. Anything at all. I'll ask the questions.
+            </p>
+            <button
+              onClick={startGame}
+              disabled={!dataset}
+              className="display px-6 py-3 rounded text-sm uppercase tracking-wider transition-transform hover:scale-105 disabled:opacity-50"
+              style={{ background: "#9B2C2C", color: "#EDE6D6" }}
+            >
+              {dataset ? "Begin the Reading" : "Opening the file…"}
+            </button>
+          </div>
+        )}
+
+        {(phase === "playing" || phase === "thinking") && (
+          <>
+            <div className="rounded-lg p-7 rotate-1 shadow-2xl" style={{ background: "#EDE6D6", border: "1px solid rgba(0,0,0,0.15)", minHeight: 220 }}>
+              <p className="display text-xs uppercase tracking-widest mb-3" style={{ color: "#9B2C2C" }}>
+                Question {askedCount + 1}
+              </p>
+              {phase === "thinking" ? (
+                <p className="display text-base flicker" style={{ color: "#1A1A20" }}>
+                  Filtering the file…
+                </p>
+              ) : (
+                <p className="display text-xl leading-relaxed mb-6" style={{ color: "#1A1A20" }}>
+                  {Q[currentQuestionKey]}
+                </p>
+              )}
+              {phase === "playing" && (
+                <div className="flex flex-wrap gap-2">
+                  {ANSWERS.map((a) => (
+                    <button
+                      key={a.label}
+                      onClick={() => handleAnswer(a.value, a.label)}
+                      className="text-sm font-medium px-3 py-2 rounded border transition-colors"
+                      style={{ borderColor: "#9B2C2C", color: "#9B2C2C", background: "transparent" }}
+                      onMouseEnter={(e) => (e.currentTarget.style.background = "rgba(155,44,44,0.1)")}
+                      onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
+                    >
+                      {a.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+            {phase === "playing" && (
+              <button onClick={() => setPhase("teach")} className="text-xs mt-3 mx-auto block underline" style={{ color: "#6B6B70" }}>
+                I'd rather stop here
+              </button>
+            )}
+            {history.length > 0 && (
+              <div className="scrollbar-none flex gap-2 overflow-x-auto mt-5 pb-2">
+                {history.map((h, i) => (
+                  <div
+                    key={i}
+                    className="pin-in flex-shrink-0 rounded px-3 py-2 text-xs shadow-md"
+                    style={{
+                      background: "#1A1A20",
+                      color: "rgba(237,230,214,0.85)",
+                      width: 150,
+                      transform: `rotate(${i % 2 === 0 ? -3 : 3}deg)`,
+                      border: "1px solid rgba(242,169,59,0.25)",
+                    }}
+                  >
+                    <p className="line-clamp-2 mb-1" style={{ color: "rgba(237,230,214,0.6)" }}>
+                      {h.q}
+                    </p>
+                    <p className="display" style={{ color: "#F2A93B" }}>
+                      {h.a}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </>
+        )}
+
+        {phase === "guessing" && currentGuess && (
+          <div className="stamp-in rounded-lg p-8 text-center rotate-1 shadow-2xl" style={{ background: "#EDE6D6", border: "1px solid rgba(0,0,0,0.15)" }}>
+            <p className="display text-xs uppercase tracking-widest mb-3" style={{ color: "#9B2C2C" }}>
+              The file points to
+            </p>
+            <p className="display text-2xl mb-4" style={{ color: "#1A1A20" }}>
+              {currentGuess.name}
+            </p>
+            <div className="w-full rounded-full h-2 mb-6" style={{ background: "rgba(0,0,0,0.1)" }}>
+              <div className="h-2 rounded-full" style={{ width: `${guessConfidence}%`, background: "#F2A93B" }} />
+            </div>
+            <div className="flex gap-3 justify-center">
+              <button onClick={confirmGuess} className="display px-5 py-2.5 rounded text-sm uppercase tracking-wider" style={{ background: "#F2A93B", color: "#1A1A20" }}>
+                That's it
+              </button>
+              <button onClick={rejectGuess} className="display px-5 py-2.5 rounded text-sm uppercase tracking-wider border" style={{ borderColor: "#9B2C2C", color: "#9B2C2C" }}>
+                Not quite
+              </button>
+            </div>
+          </div>
+        )}
+
+        {phase === "teach" && (
+          <div className="rounded-lg p-8 text-center rotate-1 shadow-2xl" style={{ background: "#EDE6D6", border: "1px solid rgba(0,0,0,0.15)" }}>
+            <p className="display text-lg mb-2" style={{ color: "#1A1A20" }}>
+              The trail went cold.
+            </p>
+            <p className="text-sm mb-5" style={{ color: "rgba(0,0,0,0.6)" }}>
+              What were you thinking of? I'll add it to the file.
+            </p>
+            <input
+              value={teachName}
+              onChange={(e) => setTeachName(e.target.value)}
+              placeholder="e.g. Cristiano Ronaldo"
+              className="w-full px-3 py-2 rounded border text-sm mb-4"
+              style={{ borderColor: "#6B6B70", background: "#fff", color: "#1A1A20" }}
+            />
+            <button onClick={submitTeach} className="display px-6 py-3 rounded text-sm uppercase tracking-wider" style={{ background: "#9B2C2C", color: "#EDE6D6" }}>
+              File it away
+            </button>
+          </div>
+        )}
+
+        {phase === "learned" && (
+          <div className="text-center">
+            <p className="display text-2xl mb-2 rotate-1" style={{ color: "#F2A93B" }}>
+              NOTED IN THE FILE
+            </p>
+            <p className="text-sm mb-6" style={{ color: "rgba(237,230,214,0.6)" }}>
+              I'll know it a little better next time.
+            </p>
+            <button onClick={startGame} className="display px-6 py-3 rounded text-sm uppercase tracking-wider" style={{ background: "#F2A93B", color: "#1A1A20" }}>
+              New Case
+            </button>
+          </div>
+        )}
+
+        {phase === "won" && (
+          <div className="text-center">
+            <p className="display text-3xl mb-2 rotate-1" style={{ color: "#9B2C2C" }}>
+              CASE CLOSED
+            </p>
+            <p className="text-sm mb-6" style={{ color: "rgba(237,230,214,0.7)" }}>
+              Solved in {askedCount} question{askedCount === 1 ? "" : "s"}.
+            </p>
+            <button onClick={startGame} className="display px-6 py-3 rounded text-sm uppercase tracking-wider" style={{ background: "#F2A93B", color: "#1A1A20" }}>
+              New Case
+            </button>
+          </div>
+        )}
+      </div>
+
+      <p className="relative z-10 text-xs mt-10 font-mono text-center" style={{ color: "#6B6B70" }}>
+        {entityCount} cases on file · {gamesPlayed === null ? "—" : gamesPlayed} reads so far
+      </p>
+    </div>
+  );
+}
+
+
+const root = ReactDOM.createRoot(document.getElementById("cold-read-root"));
+root.render(<ColdReadApp />);
+</script>
+</body>
+</html>

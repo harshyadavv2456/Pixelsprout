@@ -222,15 +222,78 @@
     return overlay;
   }
 
+  // ---------- Tool launcher popup (Cold Read / Gift File) ----------
+  // Same overlay chrome as buildModal, but the body is an iframe pointing
+  // at the standalone tool page instead of a game grid - these are
+  // separate mini React apps (own dataset, own persistence), not part of
+  // the game catalog.
+
+  function buildToolModal(title, src) {
+    const overlay = document.createElement('div');
+    overlay.className = 'ps-modal-overlay';
+    overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:1000;display:flex;align-items:center;justify-content:center;padding:20px;';
+
+    const panel = document.createElement('div');
+    panel.style.cssText = 'background:var(--panel,#151a2e);border:1px solid var(--border,#2a3050);border-radius:12px;max-width:560px;width:100%;max-height:88vh;padding:0;display:flex;flex-direction:column;overflow:hidden;';
+
+    const header = document.createElement('div');
+    header.style.cssText = 'display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:1px solid var(--border,#2a3050);flex-shrink:0;';
+    header.innerHTML = `<h3 style="font-family:'Press Start 2P',monospace;font-size:13px;color:var(--paper,#fff);margin:0;">${title}</h3>`;
+    const closeBtn = document.createElement('button');
+    closeBtn.type = 'button';
+    closeBtn.textContent = '✕';
+    closeBtn.setAttribute('aria-label', 'Close');
+    closeBtn.style.cssText = 'background:none;border:none;color:var(--muted,#8a93b8);font-size:20px;cursor:pointer;padding:8px 12px;line-height:1;min-width:36px;min-height:36px;';
+    const closeModal = () => { overlay.remove(); document.removeEventListener('keydown', escHandler); };
+    closeBtn.addEventListener('click', (e) => { e.stopPropagation(); closeModal(); });
+    const escHandler = (e) => { if (e.key === 'Escape') closeModal(); };
+    document.addEventListener('keydown', escHandler);
+    header.appendChild(closeBtn);
+    panel.appendChild(header);
+
+    const iframe = document.createElement('iframe');
+    iframe.src = src;
+    iframe.title = title;
+    iframe.loading = 'lazy';
+    iframe.style.cssText = 'border:0;width:100%;flex:1;min-height:70vh;background:#0B0B0F;';
+    panel.appendChild(iframe);
+
+    overlay.appendChild(panel);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+    return overlay;
+  }
+
+  function addToolLaunchers(bar) {
+    // User-initiated only - small pill buttons, never an entry popup shown
+    // on load (that pattern draws Google's intrusive-interstitial penalty).
+    const giftBtn = document.createElement('button');
+    giftBtn.textContent = '🎁 Stuck on a Gift?';
+    giftBtn.style.cssText = 'background:var(--panel,#151a2e);border:1px solid var(--border,#2a3050);color:var(--paper,#fff);padding:6px 14px;border-radius:999px;font-size:12px;cursor:pointer;';
+    giftBtn.addEventListener('click', () => {
+      document.body.appendChild(buildToolModal('Gift File', 'gift-file/'));
+    });
+    bar.appendChild(giftBtn);
+
+    const coldReadBtn = document.createElement('button');
+    coldReadBtn.textContent = '🕵️ Guess It';
+    coldReadBtn.style.cssText = 'background:var(--panel,#151a2e);border:1px solid var(--border,#2a3050);color:var(--paper,#fff);padding:6px 14px;border-radius:999px;font-size:12px;cursor:pointer;';
+    coldReadBtn.addEventListener('click', () => {
+      document.body.appendChild(buildToolModal('Cold Read', 'cold-read/'));
+    });
+    bar.appendChild(coldReadBtn);
+  }
+
   function enhanceHomepage() {
     const recent = loadList(RECENT_KEY);
     const favorites = loadList(FAVORITES_KEY);
-    if (recent.length === 0 && favorites.length === 0) return; // new visitor, nothing to show
 
     // Small, unobtrusive buttons - don't push the catalog down, don't
     // dilute the "browse everything" homepage experience.
     const bar = document.createElement('div');
     bar.style.cssText = 'display:flex;gap:8px;justify-content:flex-end;padding:8px 20px;flex-wrap:wrap;';
+
+    // Tool launchers always show, independent of returning-visitor history.
+    addToolLaunchers(bar);
 
     if (favorites.length > 0) {
       const favBtn = document.createElement('button');
