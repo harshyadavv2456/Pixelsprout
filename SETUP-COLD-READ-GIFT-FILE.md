@@ -68,6 +68,19 @@ create table kv_store (
 alter table kv_store enable row level security;
 ```
 
+**One extra step the Supabase dashboard doesn't do automatically on every
+project:** RLS controls *row-level* access, but `service_role` also needs
+explicit *table-level* privileges granted. If you ever recreate this table,
+also run:
+
+```sql
+grant usage on schema public to service_role;
+grant select, insert, update on public.kv_store to service_role;
+```
+
+(If you already got `{"entities":null,...}` back from the `/api/...`
+endpoints, this is already done — this note is only here for next time.)
+
 That's it — one table, two columns of actual data (`key`, `value`), no other
 setup. `enable row level security` with **no policies** means only requests
 using the `service_role` key can touch this table (which is exactly what our

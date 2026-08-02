@@ -5,16 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
 <link rel="canonical" href="https://playpixelsprout.com/cold-read/">
 <title>Cold Read - Guess What I'm Thinking Of | Pixelsprout</title>
 <meta name="description" content="Think of anything - a person, animal, object, or food. Cold Read asks yes/no questions and narrows it down by elimination. Free, instant, no download.">
 <link rel="stylesheet" href="../styles.css">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8466016918717424" crossorigin="anonymous"></script>
+<script defer src="/_vercel/insights/script.js"></script>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://playpixelsprout.com/cold-read/">
 <meta property="og:title" content="Cold Read - Guess What I'm Thinking Of | Pixelsprout">
 <meta property="og:description" content="Think of anything and Cold Read will guess it by asking yes/no questions - and gets sharper with every play.">
-<meta property="og:image" content="https://playpixelsprout.com/assets/og-banner.jpg">
+<meta property="og:image" content="https://playpixelsprout.com/assets/cold-read-logo.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Cold Read", "description": "A yes/no guessing game that narrows down what you're thinking of by elimination, using a shared, self-learning dataset - not a fixed script.", "url": "https://playpixelsprout.com/cold-read/", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Cold Read", "item": "https://playpixelsprout.com/cold-read/"}]}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
 <script>
@@ -23,29 +27,84 @@
   gtag('js', new Date());
   gtag('config', 'G-VTNJRV4WG8');
 </script>
+<script defer src="../pixelsprout-features.js"></script>
+<link rel="manifest" href="../manifest.json">
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('../service-worker.js').catch(() => {});
+  });
+}
+</script>
 <script src="https://cdn.tailwindcss.com"></script>
 <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<style>
+  .tool-embed-wrap { width: 100%; max-width: 960px; margin: 0 auto; border-radius: 8px; overflow: hidden; background: #0B0B0F; }
+  .tool-logo { display: block; max-width: 220px; margin: 0 auto 10px; }
+</style>
 </head>
 <body>
-<header class="site-header">
-  <a class="logo" href="../index.html">
-    <img class="logo-mark" src="../assets/logo-icon.png" alt="">
-    <span class="logo-word">PIXELSPROUT</span>
-  </a>
-</header>
+<div class="game-shell" data-thumbnail="">
+  <div class="breadcrumb" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:8px;">
+    <a href="../index.html" style="color:var(--teal);text-decoration:none;">Home</a> / Cold Read
+  </div>
+  <a class="back-link" href="../index.html">&larr; back to Pixelsprout</a>
 
-<div id="cold-read-root"></div>
+  <img class="tool-logo" src="../assets/cold-read-logo.jpg" alt="Cold Read - Read Your Mind" width="220" height="220">
+  <h1 class="game-title">Cold Read</h1>
+  <div class="game-meta">Tools &middot; Guessing Game</div>
 
-<div style="max-width:700px;margin:32px auto 60px;padding:0 20px;font-family:system-ui,sans-serif;color:var(--muted,#8a93b8);font-size:14px;line-height:1.7;">
-  <h2 style="font-family:'Press Start 2P',monospace;font-size:15px;color:var(--paper,#fff);margin-bottom:12px;">How it works</h2>
-  <p>Fix something in your mind - a person, animal, object, or food - and Cold Read asks a series of yes/no/probably questions to narrow it down by elimination, the same way the old guessing games work. Under the hood there's no AI model doing the guessing: it's a plain weighted-scoring algorithm running against a shared dataset that gets a little sharper every time someone plays, whether the guess lands or someone teaches it something new.</p>
+  <div class="ad-slot ad-slot-banner">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-8466016918717424"
+         data-ad-slot="4936643192"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="game-board-frame">
+    <div class="tool-embed-wrap">
+      <div id="cold-read-root"></div>
+    </div>
+
+    <p class="how-to">Fix something in your mind - a person, animal, object, or food - and Cold Read asks a series of yes/no/probably questions to narrow it down by elimination. There's no AI model doing the guessing under the hood: it's a plain weighted-scoring algorithm running against a shared dataset that gets a little sharper every time someone plays, whether the guess lands or someone teaches it something new. The dataset starts with a curated list of well-known people, characters, animals, objects, and food - and grows from there.</p>
+
+    <div class="ad-slot ad-slot-ribbon">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-8466016918717424"
+           data-ad-slot="1457517471"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <div class="similar-games">
+      <h3 class="similar-games-title">Play something else</h3>
+      <div class="similar-games-grid" id="similar-games-grid"></div>
+    </div>
+    <script>
+      fetch('../games-index.json')
+        .then(r => r.json())
+        .then(games => {
+          const matches = games.sort(() => 0.5 - Math.random()).slice(0, 4);
+          const grid = document.getElementById('similar-games-grid');
+          matches.forEach(g => {
+            const a = document.createElement('a');
+            a.className = 'similar-card';
+            a.href = '../games/' + g.slug + '.html';
+            a.innerHTML = '<img src="' + g.thumbnail + '" alt="" loading="lazy"><span>' + g.title + '</span>';
+            grid.appendChild(a);
+          });
+        })
+        .catch(() => {});
+    </script>
+  </div>
 </div>
-
-<footer class="site-footer" style="text-align:center;padding:24px;font-size:12px;color:var(--muted,#8a93b8);">
-  <a href="../index.html" style="color:inherit;">&larr; Back to Pixelsprout</a>
-</footer>
 
 <script type="text/babel" data-presets="react">
 const { useState, useEffect } = React;
@@ -138,6 +197,90 @@ const SEED_ENTITIES = [
   { name: "Rice", v: { food: 1, hot: 0.6, kidsKnow: 0.7, india: 0.4 } },
   { name: "Apple", v: { food: 1, fruit: 1, sweet: 0.5, handheld: 0.6, kidsKnow: 1 } },
   { name: "Burger", v: { food: 1, hot: 0.7, handheld: 0.6, kidsKnow: 0.9 } },
+
+  // -- Expanded roster: real people, fictional characters, animals, objects, food --
+  { name: "Lord Voldemort", v: { human: 1, real: 0, male: 1, screen: 1, power: 1, villain: 1, kidsKnow: 0.8 } },
+  { name: "Captain America", v: { human: 1, screen: 1, male: 1, power: 1, us: 1, tech: 0.2, kidsKnow: 0.9 } },
+  { name: "Iron Man", v: { human: 1, screen: 1, male: 1, power: 1, tech: 1, us: 1, kidsKnow: 0.9 } },
+  { name: "Thor", v: { human: 1, screen: 1, male: 1, power: 1, historic: 0.2, kidsKnow: 0.9 } },
+  { name: "Hulk", v: { human: 1, screen: 1, male: 1, power: 1, big: 1, us: 1, kidsKnow: 0.9 } },
+  { name: "Wonder Woman", v: { human: 1, screen: 1, power: 1, us: 1, kidsKnow: 0.7 } },
+  { name: "Superman", v: { human: 1, screen: 1, male: 1, power: 1, fly: 1, us: 1, kidsKnow: 0.9 } },
+  { name: "Joker", v: { human: 1, screen: 1, male: 1, villain: 1, us: 1, kidsKnow: 0.7 } },
+  { name: "Yoda", v: { human: 0.4, screen: 1, power: 1, kidsKnow: 0.6 } },
+  { name: "Frodo Baggins", v: { human: 0.7, screen: 1, male: 1, kidsKnow: 0.5 } },
+  { name: "Gandalf", v: { human: 1, screen: 1, male: 1, power: 1, historic: 0.3, kidsKnow: 0.6 } },
+  { name: "Albus Dumbledore", v: { human: 1, screen: 1, male: 1, power: 1, kidsKnow: 0.7 } },
+  { name: "Hermione Granger", v: { human: 1, screen: 1, power: 1, kidsKnow: 0.8 } },
+  { name: "Ron Weasley", v: { human: 1, screen: 1, male: 1, power: 0.6, kidsKnow: 0.7 } },
+  { name: "Luke Skywalker", v: { human: 1, screen: 1, male: 1, power: 1, us: 1, kidsKnow: 0.7 } },
+  { name: "Homer Simpson", v: { human: 1, screen: 1, male: 1, us: 1, kidsKnow: 0.7 } },
+  { name: "Bart Simpson", v: { human: 1, screen: 1, male: 1, us: 1, kidsKnow: 0.7 } },
+  { name: "Shrek", v: { human: 0.6, screen: 1, male: 1, big: 0.6, kidsKnow: 0.9 } },
+  { name: "Buzz Lightyear", v: { human: 0.6, screen: 1, male: 1, tech: 0.5, us: 1, kidsKnow: 0.9 } },
+  { name: "Woody", v: { human: 0.6, screen: 1, male: 1, us: 1, kidsKnow: 0.8 } },
+  { name: "Optimus Prime", v: { object: 0.5, screen: 1, male: 1, power: 1, big: 1, tech: 1, us: 1, kidsKnow: 0.7 } },
+  { name: "Sonic the Hedgehog", v: { animal: 0.6, screen: 1, male: 1, kidsKnow: 0.8 } },
+  { name: "Goku", v: { human: 1, screen: 1, male: 1, power: 1, kidsKnow: 0.7 } },
+  { name: "Naruto Uzumaki", v: { human: 1, screen: 1, male: 1, power: 1, kidsKnow: 0.6 } },
+  { name: "Monkey D. Luffy", v: { human: 1, screen: 1, male: 1, power: 1, kidsKnow: 0.6 } },
+  { name: "Doraemon", v: { animal: 0.5, screen: 1, tech: 0.6, kidsKnow: 0.7 } },
+  { name: "Chhota Bheem", v: { human: 1, screen: 1, male: 1, power: 0.6, india: 1, kidsKnow: 0.8, big: 0.3 } },
+  { name: "Krishna", v: { human: 1, real: 0.3, male: 1, power: 1, india: 1, historic: 1, kidsKnow: 0.7 } },
+  { name: "Shiva", v: { human: 1, real: 0.3, male: 1, power: 1, india: 1, historic: 1, kidsKnow: 0.6 } },
+  { name: "Virat Kohli", v: { human: 1, real: 1, male: 1, sports: 1, india: 1, kidsKnow: 0.8 } },
+  { name: "Sachin Tendulkar", v: { human: 1, real: 1, male: 1, sports: 1, india: 1, historic: 0.2, kidsKnow: 0.7 } },
+  { name: "Shah Rukh Khan", v: { human: 1, real: 1, male: 1, screen: 0.7, india: 1, kidsKnow: 0.6 } },
+  { name: "Amitabh Bachchan", v: { human: 1, real: 1, male: 1, screen: 0.7, india: 1, historic: 0.3, kidsKnow: 0.5 } },
+  { name: "Leonardo DiCaprio", v: { human: 1, real: 1, male: 1, screen: 0.8, us: 1, kidsKnow: 0.6 } },
+  { name: "Lionel Messi", v: { human: 1, real: 1, male: 1, sports: 1, kidsKnow: 0.9 } },
+  { name: "LeBron James", v: { human: 1, real: 1, male: 1, sports: 1, us: 1, big: 0.3, kidsKnow: 0.7 } },
+  { name: "Steve Jobs", v: { human: 1, real: 1, male: 1, tech: 1, us: 1, historic: 0.3, kidsKnow: 0.5 } },
+  { name: "Bill Gates", v: { human: 1, real: 1, male: 1, tech: 1, us: 1, kidsKnow: 0.5 } },
+  { name: "Mark Zuckerberg", v: { human: 1, real: 1, male: 1, tech: 1, us: 1, kidsKnow: 0.5 } },
+  { name: "Jeff Bezos", v: { human: 1, real: 1, male: 1, tech: 0.7, us: 1, kidsKnow: 0.4 } },
+  { name: "Isaac Newton", v: { human: 1, real: 1, male: 1, tech: 1, historic: 1, kidsKnow: 0.5 } },
+  { name: "Nikola Tesla", v: { human: 1, real: 1, male: 1, tech: 1, historic: 0.8, kidsKnow: 0.4 } },
+  { name: "William Shakespeare", v: { human: 1, real: 1, male: 1, historic: 1, kidsKnow: 0.4 } },
+  { name: "Leonardo da Vinci", v: { human: 1, real: 1, male: 1, tech: 0.6, historic: 1, kidsKnow: 0.4 } },
+  { name: "Cleopatra", v: { human: 1, real: 1, historic: 1, politics: 0.6, kidsKnow: 0.3 } },
+  { name: "Napoleon Bonaparte", v: { human: 1, real: 1, male: 1, historic: 1, politics: 1, kidsKnow: 0.3 } },
+  { name: "Tiger", v: { animal: 1, male: 0.5, predator: 1, big: 1, furred: 1, kidsKnow: 0.9 } },
+  { name: "Bear", v: { animal: 1, predator: 0.7, big: 1, furred: 1, kidsKnow: 0.9 } },
+  { name: "Giraffe", v: { animal: 1, big: 1, kidsKnow: 0.9 } },
+  { name: "Kangaroo", v: { animal: 1, kidsKnow: 0.8 } },
+  { name: "Owl", v: { animal: 1, fly: 1, furred: 0.4, kidsKnow: 0.7 } },
+  { name: "Wolf", v: { animal: 1, predator: 1, furred: 1, kidsKnow: 0.7 } },
+  { name: "Horse", v: { animal: 1, big: 0.7, furred: 1, kidsKnow: 0.9 } },
+  { name: "Cow", v: { animal: 1, big: 0.5, furred: 0.5, india: 0.4, kidsKnow: 0.9 } },
+  { name: "Panda", v: { animal: 1, furred: 1, kidsKnow: 0.9 } },
+  { name: "Rabbit", v: { animal: 1, pet: 0.6, furred: 1, kidsKnow: 0.9 } },
+  { name: "Fox", v: { animal: 1, predator: 0.7, furred: 1, kidsKnow: 0.7 } },
+  { name: "Crocodile", v: { animal: 1, water: 0.8, predator: 1, big: 0.6, kidsKnow: 0.7 } },
+  { name: "Octopus", v: { animal: 1, water: 1, kidsKnow: 0.6 } },
+  { name: "Whale", v: { animal: 1, water: 1, big: 1, kidsKnow: 0.8 } },
+  { name: "Frog", v: { animal: 1, water: 0.4, kidsKnow: 0.8 } },
+  { name: "Peacock", v: { animal: 1, fly: 0.4, furred: 0.3, india: 0.5, kidsKnow: 0.7 } },
+  { name: "Laptop", v: { object: 1, elec: 1, handheld: 0.6, indoor: 0.7, kidsKnow: 0.9 } },
+  { name: "Headphones", v: { object: 1, elec: 1, handheld: 1, accessory: 0.5, kidsKnow: 0.9 } },
+  { name: "Wallet", v: { object: 1, handheld: 1, accessory: 1, kidsKnow: 0.8 } },
+  { name: "Wristwatch", v: { object: 1, elec: 0.3, handheld: 1, accessory: 1, kidsKnow: 0.8 } },
+  { name: "Chair", v: { object: 1, indoor: 0.8, big: 0.2, kidsKnow: 0.9 } },
+  { name: "Backpack", v: { object: 1, handheld: 0.6, travel: 0.5, accessory: 0.6, kidsKnow: 0.9 } },
+  { name: "Sunglasses", v: { object: 1, handheld: 1, accessory: 1, kidsKnow: 0.8 } },
+  { name: "Shoes", v: { object: 1, accessory: 1, kidsKnow: 0.9 } },
+  { name: "Clock", v: { object: 1, elec: 0.3, indoor: 0.7, kidsKnow: 0.8 } },
+  { name: "Key", v: { object: 1, handheld: 1, kidsKnow: 0.8 } },
+  { name: "Candle", v: { object: 1, indoor: 0.7, hot: 0.3, kidsKnow: 0.7 } },
+  { name: "Pasta", v: { food: 1, hot: 0.7, kidsKnow: 0.9 } },
+  { name: "Samosa", v: { food: 1, hot: 0.6, india: 1, kidsKnow: 0.7 } },
+  { name: "Biryani", v: { food: 1, hot: 0.8, india: 1, kidsKnow: 0.7 } },
+  { name: "Tea", v: { food: 1, drink: 1, hot: 0.9, india: 0.5, kidsKnow: 0.9 } },
+  { name: "Momos", v: { food: 1, hot: 0.7, india: 0.6, kidsKnow: 0.5 } },
+  { name: "Paneer", v: { food: 1, india: 1, kidsKnow: 0.5 } },
+  { name: "Dosa", v: { food: 1, hot: 0.7, india: 1, kidsKnow: 0.5 } },
+  { name: "Watermelon", v: { food: 1, fruit: 1, sweet: 0.5, big: 0.3, kidsKnow: 0.9 } },
+  { name: "Grapes", v: { food: 1, fruit: 1, sweet: 0.7, handheld: 0.5, kidsKnow: 0.9 } },
 ];
 
 const ANSWERS = [
@@ -162,19 +305,24 @@ function decide(candidates, askedKeys, askedCount) {
   if (enoughAsked && (candidates.length === 1 || topShare >= 0.55 || askedCount >= 15)) {
     return { type: "guess", entity: top, confidence: Math.round(topShare * 100) };
   }
-  let bestKey = null,
-    bestDist = Infinity;
+  // Rank every unasked attribute by how close it splits the remaining
+  // candidates to 50/50 (the most informative question). Instead of always
+  // taking the single best one - which makes the opening question nearly
+  // identical every playthrough while the dataset is small - pick randomly
+  // among the closest few. All of them are close to equally informative,
+  // so this costs almost nothing in efficiency and buys real variety.
+  const ranked = [];
   if (sumScore > 0) {
     for (const key of ATTR_KEYS) {
       if (askedKeys.has(key)) continue;
       const wAvg = candidates.reduce((s, c) => s + c.score * (c.v[key] ?? 0), 0) / sumScore;
       const dist = Math.abs(wAvg - 0.5);
-      if (dist < bestDist) {
-        bestDist = dist;
-        bestKey = key;
-      }
+      ranked.push({ key, dist });
     }
+    ranked.sort((a, b) => a.dist - b.dist);
   }
+  const pool = ranked.slice(0, Math.min(4, ranked.length));
+  const bestKey = pool.length > 0 ? pool[Math.floor(Math.random() * pool.length)].key : null;
   if (bestKey === null) {
     if (top && topShare > 0.15) return { type: "guess", entity: top, confidence: Math.round(topShare * 100) };
     return { type: "teach" };

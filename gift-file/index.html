@@ -5,17 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
 <link rel="canonical" href="https://playpixelsprout.com/gift-file/">
-<title>Gift File - Find the Right Gift in 4 Questions | Pixelsprout</title>
-<meta name="description" content="Answer 4 quick questions about who it's for, the occasion, and the budget - Gift File finds specific gift ideas with direct Amazon search links, and gets sharper with every use.">
+<title>Guess It Box (Gift File) - Find the Right Gift in 4 Questions | Pixelsprout</title>
+<meta name="description" content="Answer 4 quick questions about who it's for, the occasion, and the budget - Guess It Box finds specific gift ideas with direct Amazon search links, and gets sharper with every use.">
 <link rel="stylesheet" href="../styles.css">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8466016918717424" crossorigin="anonymous"></script>
+<script defer src="/_vercel/insights/script.js"></script>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://playpixelsprout.com/gift-file/">
-<meta property="og:title" content="Gift File - Find the Right Gift in 4 Questions | Pixelsprout">
+<meta property="og:title" content="Guess It Box (Gift File) - Find the Right Gift in 4 Questions | Pixelsprout">
 <meta property="og:description" content="Stuck on what to get someone? Four questions, real gift ideas, direct Amazon links - and it learns from every visitor.">
-<meta property="og:image" content="https://playpixelsprout.com/assets/og-banner.jpg">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Gift File", "item": "https://playpixelsprout.com/gift-file/"}]}</script>
+<meta property="og:image" content="https://playpixelsprout.com/assets/gift-file-logo.jpg">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Guess It Box", "description": "A 4-question gift-recommendation tool that scores a self-learning dataset of gift ideas against who it's for, the occasion, and the budget.", "url": "https://playpixelsprout.com/gift-file/", "applicationCategory": "LifestyleApplication", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Guess It Box", "item": "https://playpixelsprout.com/gift-file/"}]}</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -23,32 +27,84 @@
   gtag('js', new Date());
   gtag('config', 'G-VTNJRV4WG8');
 </script>
+<script defer src="../pixelsprout-features.js"></script>
+<link rel="manifest" href="../manifest.json">
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('../service-worker.js').catch(() => {});
+  });
+}
+</script>
 <script src="https://cdn.tailwindcss.com"></script>
 <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<style>
+  .tool-embed-wrap { width: 100%; max-width: 960px; margin: 0 auto; border-radius: 8px; overflow: hidden; background: #0B0B0F; }
+  .tool-logo { display: block; max-width: 220px; margin: 0 auto 10px; }
+</style>
 </head>
 <body>
-<header class="site-header">
-  <a class="logo" href="../index.html">
-    <img class="logo-mark" src="../assets/logo-icon.png" alt="">
-    <span class="logo-word">PIXELSPROUT</span>
-  </a>
-</header>
+<div class="game-shell" data-thumbnail="">
+  <div class="breadcrumb" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:8px;">
+    <a href="../index.html" style="color:var(--teal);text-decoration:none;">Home</a> / Guess It Box
+  </div>
+  <a class="back-link" href="../index.html">&larr; back to Pixelsprout</a>
 
-<div id="gift-file-root"></div>
+  <img class="tool-logo" src="../assets/gift-file-logo.jpg" alt="Guess It Box - Unbox the Fun" width="220" height="220">
+  <h1 class="game-title">Guess It Box <span style="font-size:0.5em;color:var(--muted);font-weight:normal;">(Gift File)</span></h1>
+  <div class="game-meta">Tools &middot; Gift Finder</div>
 
-<article style="max-width:700px;margin:32px auto 60px;padding:0 20px;font-family:system-ui,sans-serif;color:var(--muted,#8a93b8);font-size:14px;line-height:1.7;">
-  <h2 style="font-family:'Press Start 2P',monospace;font-size:15px;color:var(--paper,#fff);margin-bottom:12px;">How to actually pick the right gift</h2>
-  <p>Most gift guides are just long lists sorted by price, which is why they rarely help when you're stuck. The four things that actually narrow a gift down are <strong>who it's for</strong>, <strong>why you're giving it</strong>, <strong>what you're willing to spend</strong>, and <strong>what they're genuinely into</strong> - in that order. Gift File asks exactly those four questions, nothing else, and scores a running dataset of gift ideas against your answers instead of showing you the same generic top-10 list everyone else gets.</p>
-  <p>It also corrects itself. If none of the three suggestions are right, tell it what you actually ended up getting - that gets folded back into the dataset with a small weight, so the next person with a similar answer set sees a slightly better set of ideas. Nothing here is AI-generated; it's a transparent weighted match between your answers and a hand-seeded (and visitor-taught) list of gifts, so results stay specific instead of vague.</p>
-  <h3 style="font-family:'Press Start 2P',monospace;font-size:13px;color:var(--paper,#fff);margin:20px 0 10px;">India or elsewhere?</h3>
-  <p>Gift File asks upfront rather than guessing from your IP address, then routes every "Search on Amazon" link to amazon.in or amazon.com accordingly, so the results are actually shoppable wherever you are.</p>
-</article>
+  <div class="ad-slot ad-slot-banner">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-8466016918717424"
+         data-ad-slot="4936643192"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
 
-<footer class="site-footer" style="text-align:center;padding:24px;font-size:12px;color:var(--muted,#8a93b8);">
-  <a href="../index.html" style="color:inherit;">&larr; Back to Pixelsprout</a>
-</footer>
+  <div class="game-board-frame">
+    <div class="tool-embed-wrap">
+      <div id="gift-file-root"></div>
+    </div>
+
+    <p class="how-to">Most gift guides are just long lists sorted by price, which is why they rarely help when you're stuck. The four things that actually narrow a gift down are who it's for, why you're giving it, what you're willing to spend, and what they're genuinely into - in that order. Guess It Box asks exactly those four questions, then scores a running dataset of gift ideas against your answers instead of showing the same generic top-10 list everyone else gets. It also self-corrects: if none of the three suggestions land, tell it what you actually got - that feeds back into the dataset with a small weight, so the next visitor with a similar answer set sees a slightly better set of ideas. Nothing here is AI-generated; it's a transparent weighted match against a hand-seeded (and visitor-taught) list of gifts. It also asks upfront whether you're shopping from India or elsewhere, so every "Search on Amazon" link and every budget range shown is in the right currency and points at the right store.</p>
+
+    <div class="ad-slot ad-slot-ribbon">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-8466016918717424"
+           data-ad-slot="1457517471"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <div class="similar-games">
+      <h3 class="similar-games-title">Play something else</h3>
+      <div class="similar-games-grid" id="similar-games-grid"></div>
+    </div>
+    <script>
+      fetch('../games-index.json')
+        .then(r => r.json())
+        .then(games => {
+          const matches = games.sort(() => 0.5 - Math.random()).slice(0, 4);
+          const grid = document.getElementById('similar-games-grid');
+          matches.forEach(g => {
+            const a = document.createElement('a');
+            a.className = 'similar-card';
+            a.href = '../games/' + g.slug + '.html';
+            a.innerHTML = '<img src="' + g.thumbnail + '" alt="" loading="lazy"><span>' + g.title + '</span>';
+            grid.appendChild(a);
+          });
+        })
+        .catch(() => {});
+    </script>
+  </div>
+</div>
 
 <script type="text/babel" data-presets="react">
 const { useState, useEffect } = React;
@@ -71,11 +127,17 @@ const OCCASIONS = [
   { key: "occ_wedding", label: "Wedding" },
   { key: "occ_farewell", label: "Farewell / Thank You" },
 ];
-const BUDGETS = [
+const BUDGETS_IN = [
   { key: "budget_low", label: "Under ₹500" },
   { key: "budget_mid", label: "₹500 – 1,500" },
   { key: "budget_high", label: "₹1,500 – 5,000" },
   { key: "budget_premium", label: "₹5,000+" },
+];
+const BUDGETS_US = [
+  { key: "budget_low", label: "Under $15" },
+  { key: "budget_mid", label: "$15 – $40" },
+  { key: "budget_high", label: "$40 – $120" },
+  { key: "budget_premium", label: "$120+" },
 ];
 const INTERESTS = [
   { key: "int_tech", label: "Tech & Gadgets" },
@@ -123,6 +185,20 @@ const SEED_GIFTS = [
   { name: "Customized Mug", v: { int_home: 0.3, budget_low: 0.9, for_coworker: 0.6, for_friend: 0.6, for_mom: 0.5, occ_farewell: 0.6, occ_justbecause: 0.6 } },
   { name: "Running Shoes", v: { int_fitness: 1, budget_mid: 0.7, budget_high: 0.6, for_friend: 0.6, for_sibling: 0.6, for_self: 0.6, occ_birthday: 0.5 } },
   { name: "E-Reader", v: { int_books: 1, int_tech: 0.4, budget_mid: 0.6, budget_high: 0.6, for_partner: 0.5, for_friend: 0.5, for_self: 0.6, occ_birthday: 0.6, occ_anniversary: 0.5 } },
+  { name: "Noise-Cancelling Headphones", v: { int_tech: 1, int_music: 0.6, budget_high: 1, budget_premium: 0.7, for_partner: 0.6, for_self: 0.7, for_friend: 0.5, occ_birthday: 0.7 } },
+  { name: "Weekend Spa Voucher", v: { int_beauty: 0.8, budget_high: 0.7, budget_premium: 0.6, for_mom: 0.8, for_partner: 0.7, occ_anniversary: 0.7, occ_birthday: 0.6 } },
+  { name: "Personalized Leather Journal", v: { int_books: 0.4, int_art: 0.3, budget_low: 0.7, budget_mid: 0.5, for_friend: 0.6, for_coworker: 0.5, for_self: 0.5, occ_farewell: 0.6, occ_justbecause: 0.6 } },
+  { name: "Whiskey / Bar Accessory Set", v: { int_cooking: 0.4, budget_mid: 0.7, budget_high: 0.5, for_dad: 0.7, for_partner: 0.5, for_coworker: 0.5, occ_birthday: 0.6, occ_farewell: 0.5 } },
+  { name: "Subscription Box (Snacks/Books/Beauty)", v: { budget_mid: 0.6, budget_low: 0.4, for_friend: 0.6, for_self: 0.6, for_sibling: 0.5, occ_birthday: 0.6, occ_justbecause: 0.6 } },
+  { name: "Weighted Blanket", v: { int_home: 0.7, budget_mid: 0.7, budget_high: 0.5, for_mom: 0.5, for_partner: 0.5, for_self: 0.6, occ_justbecause: 0.5 } },
+  { name: "Digital Drawing Tablet", v: { int_art: 1, int_tech: 0.5, budget_high: 0.8, budget_premium: 0.6, for_sibling: 0.6, for_self: 0.6, occ_birthday: 0.6 } },
+  { name: "Fancy Tea / Coffee Sampler Set", v: { int_cooking: 0.5, budget_low: 0.8, budget_mid: 0.5, for_mom: 0.6, for_coworker: 0.7, for_dad: 0.5, occ_farewell: 0.6, occ_justbecause: 0.6 } },
+  { name: "Custom Star Map / Constellation Print", v: { int_home: 0.5, int_art: 0.4, budget_low: 0.6, budget_mid: 0.6, for_partner: 0.8, occ_anniversary: 0.9, occ_birthday: 0.5 } },
+  { name: "Portable Bluetooth Projector", v: { int_tech: 0.9, int_gaming: 0.3, budget_high: 0.8, budget_premium: 0.6, for_partner: 0.5, for_friend: 0.5, for_self: 0.6, occ_birthday: 0.6 } },
+  { name: "Resistance Bands / Home Gym Kit", v: { int_fitness: 1, budget_low: 0.7, budget_mid: 0.5, for_friend: 0.5, for_self: 0.6, occ_birthday: 0.4, occ_justbecause: 0.5 } },
+  { name: "Board Game Café / Escape Room Voucher", v: { int_gaming: 0.7, budget_mid: 0.6, for_friend: 0.7, for_sibling: 0.6, occ_birthday: 0.6, occ_justbecause: 0.5 } },
+  { name: "Silk Scarf / Stole", v: { int_fashion: 0.8, budget_mid: 0.6, budget_high: 0.5, for_mom: 0.7, for_partner: 0.5, occ_birthday: 0.5, occ_festival: 0.6 } },
+  { name: "Desk Plant Terrarium", v: { int_home: 0.6, int_outdoors: 0.4, budget_low: 0.8, for_coworker: 0.6, for_self: 0.5, occ_farewell: 0.5, occ_justbecause: 0.5 } },
 ];
 
 function blend(oldVal, newVal, w) {
@@ -356,7 +432,7 @@ function GiftFileApp() {
           <div className="rounded-lg p-7 rotate-1 shadow-2xl text-center" style={{ background: cream, border: "1px solid rgba(0,0,0,0.15)" }}>
             <p className="display text-xs uppercase tracking-widest mb-3" style={{ color: red }}>Step 3 of 4</p>
             <p className="display text-xl mb-5" style={{ color: charcoal }}>What's the budget?</p>
-            <OptionGrid items={BUDGETS} onPick={chooseBudget} multi={false} selected={[]} />
+            <OptionGrid items={sel.region === "us" ? BUDGETS_US : BUDGETS_IN} onPick={chooseBudget} multi={false} selected={[]} />
           </div>
         )}
 

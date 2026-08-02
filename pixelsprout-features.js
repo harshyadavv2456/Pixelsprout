@@ -267,7 +267,7 @@
     // User-initiated only - small pill buttons, never an entry popup shown
     // on load (that pattern draws Google's intrusive-interstitial penalty).
     const giftBtn = document.createElement('button');
-    giftBtn.textContent = '🎁 Stuck on a Gift?';
+    giftBtn.textContent = '🎁 Guess It Box';
     giftBtn.style.cssText = 'background:var(--panel,#151a2e);border:1px solid var(--border,#2a3050);color:var(--paper,#fff);padding:6px 14px;border-radius:999px;font-size:12px;cursor:pointer;';
     giftBtn.addEventListener('click', () => {
       document.body.appendChild(buildToolModal('Gift File', 'gift-file/'));
@@ -275,7 +275,7 @@
     bar.appendChild(giftBtn);
 
     const coldReadBtn = document.createElement('button');
-    coldReadBtn.textContent = '🕵️ Guess It';
+    coldReadBtn.textContent = '🔮 Cold Read';
     coldReadBtn.style.cssText = 'background:var(--panel,#151a2e);border:1px solid var(--border,#2a3050);color:var(--paper,#fff);padding:6px 14px;border-radius:999px;font-size:12px;cursor:pointer;';
     coldReadBtn.addEventListener('click', () => {
       document.body.appendChild(buildToolModal('Cold Read', 'cold-read/'));
