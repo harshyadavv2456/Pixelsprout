@@ -100,13 +100,14 @@
     }
   },
   "supernoob-prison-easter": {
-    "generated_at": "2026-08-03T05:18:56Z",
+    "generated_at": "2026-08-03T07:54:18Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/supernoob-prison-easter-tips/",
       "controls": "/guides/supernoob-prison-easter-controls/",
       "beginner-guide": "/guides/supernoob-prison-easter-beginner-guide/",
-      "similar": "/guides/games-like-supernoob-prison-easter/"
+      "similar": "/guides/games-like-supernoob-prison-easter/",
+      "faq": "/guides/supernoob-prison-easter-faq/"
     }
   },
   "ladder-race-3d": {
