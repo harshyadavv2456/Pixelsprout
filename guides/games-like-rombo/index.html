@@ -24,6 +24,22 @@
   gtag('config', 'G-VTNJRV4WG8');
 </script>
 <script defer src="/pixelsprout-features.js"></script>
+<style>
+  /* Defensive responsive layer for guide/collection pages - makes sure
+     nothing (images, the SVG stat card, long unbroken AI-written text)
+     can force horizontal overflow on narrow/mobile screens, regardless
+     of any fixed pixel width elsewhere on the element itself. */
+  * { box-sizing: border-box; }
+  body { overflow-x: hidden; }
+  img, svg { max-width: 100%; height: auto; }
+  .game-shell, .game-board-frame { max-width: 100%; overflow-x: hidden; }
+  .guide-body, .guide-body * { max-width: 100%; word-wrap: break-word; overflow-wrap: break-word; }
+  .breadcrumb { flex-wrap: wrap; word-break: break-word; }
+  @media (max-width: 600px) {
+    .game-title { font-size: 1.15em; line-height: 1.4; }
+    .similar-games-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important; }
+  }
+</style>
 </head>
 
 <body>

@@ -24,6 +24,22 @@
   gtag('config', 'G-VTNJRV4WG8');
 </script>
 <script defer src="/pixelsprout-features.js"></script>
+<style>
+  /* Defensive responsive layer for guide/collection pages - makes sure
+     nothing (images, the SVG stat card, long unbroken AI-written text)
+     can force horizontal overflow on narrow/mobile screens, regardless
+     of any fixed pixel width elsewhere on the element itself. */
+  * { box-sizing: border-box; }
+  body { overflow-x: hidden; }
+  img, svg { max-width: 100%; height: auto; }
+  .game-shell, .game-board-frame { max-width: 100%; overflow-x: hidden; }
+  .guide-body, .guide-body * { max-width: 100%; word-wrap: break-word; overflow-wrap: break-word; }
+  .breadcrumb { flex-wrap: wrap; word-break: break-word; }
+  @media (max-width: 600px) {
+    .game-title { font-size: 1.15em; line-height: 1.4; }
+    .similar-games-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important; }
+  }
+</style>
 </head>
 
 <body>
@@ -39,7 +55,7 @@
   </div>
 
   <div class="game-board-frame">
-    <img src="https://img.gamepix.com/games/cute-sheep-skyblock/cover/cute-sheep-skyblock.png?w=320" alt="Cute Sheep Skyblock gameplay thumbnail" width="320" height="320" style="display:block;max-width:280px;margin:0 auto 20px;border-radius:10px;" loading="lazy">
+    <a href="/games/cute-sheep-skyblock.html" style="display:block;margin:0 auto 20px;text-align:center;"><img src="https://img.gamepix.com/games/cute-sheep-skyblock/cover/cute-sheep-skyblock.png?w=320" alt="Cute Sheep Skyblock gameplay thumbnail" width="320" height="320" style="display:block;max-width:280px;margin:0 auto 20px;border-radius:10px;" loading="lazy"></a>
 
     <article class="guide-body" style="max-width:760px;margin:0 auto;color:var(--muted,#8a93b8);font-family:system-ui,sans-serif;font-size:15px;line-height:1.75;">
       <p>New to Cute Sheep Skyblock? This covers what you need to know before your first playthrough.</p>
@@ -54,7 +70,7 @@
       <p style="margin-top:16px;"><a href="/two-player/" style="color:var(--teal);">Browse more Two-Player games &rarr;</a></p>
     </article>
 
-    <a href="/games/cute-sheep-skyblock.html" style="display:block;max-width:640px;margin:24px auto;text-decoration:none;" aria-label="Play Cute Sheep Skyblock"><svg width="640" height="200" viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cute Sheep Skyblock - Two-Player game on Pixelsprout">
+    <a href="/games/cute-sheep-skyblock.html" style="display:block;max-width:640px;margin:24px auto;text-decoration:none;" aria-label="Play Cute Sheep Skyblock"><svg width="640" height="200" viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cute Sheep Skyblock - Two-Player game on Pixelsprout" style="width:100%;height:auto;max-width:640px;display:block;">
 <rect width="640" height="200" rx="14" fill="#151a2e"/>
 <rect x="0" y="0" width="8" height="200" rx="4" fill="#C792EA"/>
 <text x="36" y="70" font-family="'Press Start 2P', monospace" font-size="20" fill="#ffffff">Cute Sheep Skyblock</text>
