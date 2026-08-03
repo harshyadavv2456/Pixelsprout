@@ -118,6 +118,37 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ slug }),
       }).catch(() => {});
+
+      // If the content engine has generated guide pages for this game,
+      // link to them from the game page itself - this is the reverse of
+      // the link every guide page already has back to its game.
+      fetch('../guides-index.json')
+        .then(r => r.ok ? r.json() : Promise.reject())
+        .then(guidesIndex => {
+          const pages = guidesIndex[slug];
+          if (!pages) return;
+          const labels = { tips: 'Tips & Strategy', controls: 'Controls', 'beginner-guide': "Beginner's Guide", similar: 'Games Like This' };
+          const frame = document.querySelector('.game-board-frame');
+          if (!frame) return;
+          const section = document.createElement('div');
+          section.className = 'similar-games';
+          section.innerHTML = '<h3 class="similar-games-title">Guides for this game</h3><div class="similar-games-grid"></div>';
+          const grid = section.querySelector('.similar-games-grid');
+          Object.keys(pages).forEach(key => {
+            const a = document.createElement('a');
+            a.className = 'similar-card';
+            a.href = '..' + pages[key];
+            a.innerHTML = '<span>' + (labels[key] || key) + '</span>';
+            grid.appendChild(a);
+          });
+          const existingSimilar = frame.querySelector('.similar-games');
+          if (existingSimilar) {
+            existingSimilar.insertAdjacentElement('beforebegin', section);
+          } else {
+            frame.appendChild(section);
+          }
+        })
+        .catch(() => {});
     }
 
     // Inject Favorite + Share buttons next to the fullscreen button

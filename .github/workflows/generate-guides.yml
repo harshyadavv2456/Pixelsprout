@@ -1,0 +1,60 @@
+name: Generate guide & collection pages
+
+on:
+  schedule:
+    - cron: '30 6 * * *'   # daily, 6:30 UTC - 30 min after auto-add-games.yml
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Max games to process this run (leave blank for default batch size)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  generate-guides:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Configure git identity
+        run: |
+          git config --global user.name "Pixelsprout Auto-Bot"
+          git config --global user.email "actions@github.com"
+
+      - name: Generate per-game guide pages
+        env:
+          GROQ_API_KEY_1: ${{ secrets.GROQ_API_KEY_1 }}
+          GROQ_API_KEY_2: ${{ secrets.GROQ_API_KEY_2 }}
+          GROQ_API_KEY_3: ${{ secrets.GROQ_API_KEY_3 }}
+          GROQ_API_KEY_4: ${{ secrets.GROQ_API_KEY_4 }}
+          GROQ_API_KEY_5: ${{ secrets.GROQ_API_KEY_5 }}
+        run: |
+          if [ -n "${{ github.event.inputs.limit }}" ]; then
+            python content-engine/generate_guides.py --limit "${{ github.event.inputs.limit }}"
+          else
+            python content-engine/generate_guides.py
+          fi
+
+      - name: Refresh "games like X" collection pages
+        env:
+          GROQ_API_KEY_1: ${{ secrets.GROQ_API_KEY_1 }}
+          GROQ_API_KEY_2: ${{ secrets.GROQ_API_KEY_2 }}
+          GROQ_API_KEY_3: ${{ secrets.GROQ_API_KEY_3 }}
+          GROQ_API_KEY_4: ${{ secrets.GROQ_API_KEY_4 }}
+          GROQ_API_KEY_5: ${{ secrets.GROQ_API_KEY_5 }}
+        run: python content-engine/generate_collections.py
+
+      - name: Commit and push new pages
+        run: |
+          git add guides games-like sitemap.xml guides-index.json content-engine/manifest.json
+          git commit -m "Auto-generate guide/collection pages" || echo "Nothing to commit"
+          git push
