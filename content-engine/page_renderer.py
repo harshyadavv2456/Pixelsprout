@@ -138,7 +138,7 @@ def render_guide_page(page_type, game, content, related_games, sibling_guides):
     )
 
     return f"""{head}
-<body data-tool-slug="guide-{page_type}">
+<body>
 <div class="game-shell">
   <div class="breadcrumb" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:8px;">{crumb}</div>
   <a class="back-link" href="/games/{game['slug']}.html">&larr; back to {game['title']}</a>

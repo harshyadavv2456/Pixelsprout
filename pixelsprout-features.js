@@ -325,11 +325,12 @@
     if (localStorage.getItem(BADGE_DISMISSED_KEY) === '1') return;
     if (document.getElementById('ps-floating-badge')) return;
 
-    // Every non-homepage page here lives exactly one folder deep
-    // (/games/x.html, /2048/, /cold-read/, etc.), so "../" always reaches
-    // the site root except from the root itself.
-    const isHome = window.location.pathname === '/' || window.location.pathname === '/index.html';
-    const base = isHome ? '' : '../';
+    // Use absolute paths, not relative "../" - the site now has pages at
+    // multiple depths (games/x.html and 2048/ are 1 level deep, but
+    // guides/x-tips/ and games-like/x/ are 2 levels deep), so a single
+    // relative-depth assumption breaks for some page types. Absolute
+    // paths work correctly regardless of how deep the current page is.
+    const base = '/';
 
     const wrap = document.createElement('div');
     wrap.id = 'ps-floating-badge';
