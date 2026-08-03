@@ -30,6 +30,15 @@ jobs:
           git config --global user.name "Pixelsprout Auto-Bot"
           git config --global user.email "actions@github.com"
 
+      - name: Test Groq connectivity
+        env:
+          GROQ_API_KEY_1: ${{ secrets.GROQ_API_KEY_1 }}
+          GROQ_API_KEY_2: ${{ secrets.GROQ_API_KEY_2 }}
+          GROQ_API_KEY_3: ${{ secrets.GROQ_API_KEY_3 }}
+          GROQ_API_KEY_4: ${{ secrets.GROQ_API_KEY_4 }}
+          GROQ_API_KEY_5: ${{ secrets.GROQ_API_KEY_5 }}
+        run: python content-engine/test_groq_connection.py || echo "::warning::Groq connectivity test failed - this run will use fallback content"
+
       - name: Generate per-game guide pages
         env:
           GROQ_API_KEY_1: ${{ secrets.GROQ_API_KEY_1 }}

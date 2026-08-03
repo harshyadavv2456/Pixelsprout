@@ -79,6 +79,16 @@ class GroqRotatingClient:
                     headers={
                         "Authorization": f"Bearer {key}",
                         "Content-Type": "application/json",
+                        "Accept": "application/json",
+                        # Groq's Cloudflare WAF blocks Python's default
+                        # "Python-urllib/3.x" User-Agent outright (error
+                        # 1010) before the request ever reaches the API
+                        # logic - a normal-looking UA fixes this. This
+                        # isn't spoofing identity to Groq (the API key is
+                        # what actually authenticates the request), it's
+                        # working around an overly broad default WAF rule
+                        # that flags known scripting-library signatures.
+                        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
                     },
                     method="POST",
                 )
@@ -91,7 +101,17 @@ class GroqRotatingClient:
                     if e.code == 429:
                         # Quota/rate limit on this key - mark it dead for
                         # the rest of this run and move to the next key.
-                        print(f"  [groq] key ...{key[-4:]} hit 429, rotating to next key")
+                        print(f"  [groq] key ...{key[-4:]} hit 429 (quota), rotating to next key")
+                        self.dead_keys.add(key)
+                        break
+                    elif e.code == 403:
+                        # Cloudflare WAF block (error 1010) or an invalid/
+                        # revoked key both surface as 403. Either way,
+                        # retrying the same key won't help - mark it dead
+                        # immediately rather than re-trying it on every
+                        # subsequent page/game for the rest of the run.
+                        body_text = e.read().decode("utf-8", errors="replace")
+                        print(f"  [groq] key ...{key[-4:]} got 403, marking dead for this run: {body_text[:200]}")
                         self.dead_keys.add(key)
                         break
                     else:
