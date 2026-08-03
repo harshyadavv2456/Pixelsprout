@@ -49,12 +49,14 @@ class GroqRotatingClient:
     def _usable_keys(self):
         return [k for k in self.keys if k not in self.dead_keys]
 
-    def generate_json(self, system_prompt, user_prompt, max_tokens=1200, temperature=0.7, retries_per_key=1):
+    def generate_json(self, system_prompt, user_prompt, max_tokens=1200, temperature=0.7, max_wait_per_key=90):
         """
         Calls the chat completion endpoint asking for strict JSON output,
-        rotating through keys on quota/rate-limit errors. Returns the
-        parsed JSON dict, or None if every key is exhausted/unavailable
-        (caller should fall back to fallback_content in that case).
+        rotating through keys on real quota exhaustion, but waiting out
+        short per-minute rate limits on the same key first (up to
+        `max_wait_per_key` seconds total per key). Returns the parsed
+        JSON dict, or None if every key is exhausted/unavailable (caller
+        should fall back to fallback_content in that case).
         """
         usable = self._usable_keys()
         if not usable:
@@ -72,7 +74,9 @@ class GroqRotatingClient:
         }).encode("utf-8")
 
         for key in usable:
-            for attempt in range(retries_per_key):
+            waited = 0.0
+            key_abandoned = False
+            while waited < max_wait_per_key and not key_abandoned:
                 req = urllib.request.Request(
                     GROQ_URL,
                     data=body,
@@ -99,11 +103,33 @@ class GroqRotatingClient:
                         return json.loads(text)
                 except urllib.error.HTTPError as e:
                     if e.code == 429:
-                        # Quota/rate limit on this key - mark it dead for
-                        # the rest of this run and move to the next key.
-                        print(f"  [groq] key ...{key[-4:]} hit 429 (quota), rotating to next key")
+                        body_text = e.read().decode("utf-8", errors="replace")
+                        retry_after = e.headers.get("Retry-After")
+                        # Groq's 429 covers two very different situations:
+                        # a short per-minute rate limit (clears in seconds,
+                        # worth waiting out on the SAME key - this matches
+                        # what you observed, "usable again after ~5 min")
+                        # and real daily/token quota exhaustion (won't
+                        # clear until tomorrow, worth abandoning the key).
+                        wait_s = None
+                        if retry_after:
+                            try:
+                                wait_s = float(retry_after)
+                            except ValueError:
+                                wait_s = None
+                        if wait_s is None:
+                            low = body_text.lower()
+                            if "per minute" in low or "rpm" in low:
+                                wait_s = 15.0  # no explicit header, but clearly a short RPM limit
+                        if wait_s is not None and wait_s <= 30:
+                            sleep_for = wait_s + 0.5
+                            print(f"  [groq] key ...{key[-4:]} rate-limited, waiting {sleep_for:.1f}s and retrying same key")
+                            time.sleep(sleep_for)
+                            waited += sleep_for
+                            continue  # retry this same key, don't rotate
+                        print(f"  [groq] key ...{key[-4:]} hit 429 (quota), rotating to next key: {body_text[:200]}")
                         self.dead_keys.add(key)
-                        break
+                        key_abandoned = True
                     elif e.code == 403:
                         # Cloudflare WAF block (error 1010) or an invalid/
                         # revoked key both surface as 403. Either way,
@@ -113,12 +139,14 @@ class GroqRotatingClient:
                         body_text = e.read().decode("utf-8", errors="replace")
                         print(f"  [groq] key ...{key[-4:]} got 403, marking dead for this run: {body_text[:200]}")
                         self.dead_keys.add(key)
-                        break
+                        key_abandoned = True
                     else:
                         body_text = e.read().decode("utf-8", errors="replace")
                         print(f"  [groq] HTTP {e.code} on key ...{key[-4:]}: {body_text[:300]}")
                         time.sleep(2)
+                        waited += 2
                 except (urllib.error.URLError, json.JSONDecodeError, KeyError, TimeoutError) as e:
                     print(f"  [groq] error on key ...{key[-4:]}: {e}")
                     time.sleep(2)
+                    waited += 2
         return None

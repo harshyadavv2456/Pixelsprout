@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-Generates the 4 guide pages for each game that doesn't have them yet:
+Generates the 5 guide pages for each game that doesn't have them yet:
   /guides/<slug>-tips/
   /guides/<slug>-controls/
   /guides/<slug>-beginner-guide/
+  /guides/<slug>-faq/
   /guides/games-like-<slug>/
 
 Incremental and idempotent - tracks progress in content-engine/manifest.json
@@ -89,6 +90,14 @@ def build_prompts(page_type, game, related_titles):
             f'likes {game["title"]} would enjoy these other {game["category"]} games, mentioning '
             f'the genre appeal generally (do not just list the game names back)."}}.'
         )
+    elif page_type == "faq":
+        user = (
+            f'Game: "{game["title"]}" (category: {game["category"]}). Write JSON: '
+            f'{{"faqs": [{{"question": "...", "answer": "..."}}, ...]}} with 5-8 question/answer '
+            f'pairs a real player would search for about this specific game - free-to-play status, '
+            f'mobile support, controls, difficulty, what makes it fun, common confusion points for '
+            f'a {game["category"]} game. Answers should be 1-2 sentences, specific and useful.'
+        )
     else:
         raise ValueError(page_type)
     return common_system, user
@@ -108,17 +117,35 @@ def get_content(client, page_type, game, related_titles, dry_run, stats):
         "controls": fb.fallback_controls,
         "beginner-guide": fb.fallback_beginner_guide,
         "similar": fb.fallback_similar_intro,
+        "faq": fb.fallback_faq,
     }
     return fallback_map[page_type](game), True
+
+
+GUIDE_PAGE_TYPES = ["tips", "controls", "beginner-guide", "similar", "faq"]
+
+
+def category_url_for(game):
+    """
+    Only returns a category page URL if that folder genuinely exists on
+    the site - most of the 100+ distinct category values in games-index.json
+    don't have a matching curated category page, and a broken internal
+    link is worse than no link at all.
+    """
+    slug = game["category"].lower().replace(" ", "-")
+    if os.path.isdir(os.path.join(REPO_ROOT, slug)):
+        return f"/{slug}/"
+    return None
 
 
 def process_game(client, game, all_games, dry_run, stats):
     related = sim.find_similar(game, all_games, limit=8)
     related_titles = [g["title"] for g in related]
+    category_url = category_url_for(game)
 
     page_urls = {}
     page_contents = {}
-    for page_type in ["tips", "controls", "beginner-guide", "similar"]:
+    for page_type in GUIDE_PAGE_TYPES:
         content, is_fallback = get_content(client, page_type, game, related_titles, dry_run, stats)
         page_contents[page_type] = (content, is_fallback)
         slug_suffix = {
@@ -126,6 +153,7 @@ def process_game(client, game, all_games, dry_run, stats):
             "controls": f"{game['slug']}-controls",
             "beginner-guide": f"{game['slug']}-beginner-guide",
             "similar": f"games-like-{game['slug']}",
+            "faq": f"{game['slug']}-faq",
         }[page_type]
         page_urls[page_type] = f"/guides/{slug_suffix}/"
 
@@ -135,7 +163,7 @@ def process_game(client, game, all_games, dry_run, stats):
         slug_suffix = page_urls[page_type].strip("/").split("/")[-1]
         out_dir = os.path.join(REPO_ROOT, "guides", slug_suffix)
         os.makedirs(out_dir, exist_ok=True)
-        html = render.render_guide_page(page_type, game, content, related, page_urls)
+        html = render.render_guide_page(page_type, game, content, related, page_urls, category_url)
         with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
             f.write(html)
 

@@ -58,6 +58,18 @@ def fallback_similar_intro(game):
     }
 
 
+def fallback_faq(game):
+    return {
+        "faqs": [
+            {"question": f"Is {game['title']} free to play?", "answer": f"Yes, {game['title']} is completely free to play in your browser on Pixelsprout, no download or account needed."},
+            {"question": f"Can I play {game['title']} on mobile?", "answer": f"Yes, {game['title']} works on both desktop and mobile browsers with touch controls."},
+            {"question": f"Do I need to download {game['title']}?", "answer": "No download is required - it runs directly in your browser."},
+            {"question": f"What kind of game is {game['title']}?", "answer": f"{game['title']} is a{'n' if game['category'][:1].lower() in 'aeiou' else ''} {game['category'].lower()} game."},
+            {"question": f"Is {game['title']} suitable for kids?", "answer": "Check the game's content before letting younger players try it, as this varies by title."},
+        ],
+    }
+
+
 def fallback_collection_intro(display_name):
     return {
         "intro": f"Looking for games like {display_name}? Here's a hand-picked list you can play free, right in your browser.",

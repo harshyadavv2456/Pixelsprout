@@ -5,6 +5,8 @@ canonical/OG/schema metadata) - these are never meant to look or behave
 like a bolted-on "blog," just more pages of the same site.
 """
 
+from svg_card import render_stat_card_svg
+
 ADSENSE_CLIENT = "ca-pub-8466016918717424"
 AD_SLOT_BANNER = "4936643192"
 AD_SLOT_RIBBON = "1457517471"
@@ -66,30 +68,35 @@ def _related_grid(games, base_prefix):
     return "\n".join(cards)
 
 
-def render_guide_page(page_type, game, content, related_games, sibling_guides):
+def render_guide_page(page_type, game, content, related_games, sibling_guides, category_url=None):
     """
-    page_type: "tips" | "controls" | "beginner-guide" | "similar"
+    page_type: "tips" | "controls" | "beginner-guide" | "similar" | "faq"
     content: dict from either Groq or fallback_content, shape depends on page_type
     related_games: list of similar catalog games (internal linking)
-    sibling_guides: dict of {page_type: url} for this same game's other 3 guide pages
+    sibling_guides: dict of {page_type: url} for this same game's other guide pages
+    category_url: "/<category-slug>/" if that category page actually exists
+                  on the site, else None (never link to a page that isn't real)
     """
     title_map = {
         "tips": f"{game['title']} - Tips, Tricks & How to Get a High Score",
         "controls": f"{game['title']} Controls - How to Play (Desktop & Mobile)",
         "beginner-guide": f"{game['title']} Beginner's Guide - How to Get Started",
         "similar": f"Games Like {game['title']} - {game['category']} Games to Try Next",
+        "faq": f"{game['title']} - Frequently Asked Questions",
     }
     desc_map = {
         "tips": f"Tips and strategies to improve at {game['title']} and get a higher score, from the basics to more advanced play.",
         "controls": f"Full control scheme for {game['title']} on both desktop and mobile - keyboard, mouse, and touch.",
         "beginner-guide": f"New to {game['title']}? Here's everything to know before your first playthrough.",
         "similar": f"Enjoyed {game['title']}? Here are more {game['category'].lower()} games to play free on Pixelsprout.",
+        "faq": f"Common questions about {game['title']} - free play, mobile support, and more.",
     }
     slug_suffix_map = {
         "tips": f"{game['slug']}-tips",
         "controls": f"{game['slug']}-controls",
         "beginner-guide": f"{game['slug']}-beginner-guide",
         "similar": f"games-like-{game['slug']}",
+        "faq": f"{game['slug']}-faq",
     }
     slug_path = slug_suffix_map[page_type]
     canonical_path = f"/guides/{slug_path}/"
@@ -101,6 +108,7 @@ def render_guide_page(page_type, game, content, related_games, sibling_guides):
         "controls": "Controls",
         "beginner-guide": "Beginner's Guide",
         "similar": "Games Like This",
+        "faq": "FAQ",
     }
 
     schema = [
@@ -115,14 +123,25 @@ def render_guide_page(page_type, game, content, related_games, sibling_guides):
             '{"@type":"ListItem","position":3,"name":"%s","item":"%s%s"}]}'
         ) % (SITE, SITE, title.replace('"', "'"), SITE, canonical_path),
     ]
+    if page_type == "faq" and content.get("faqs"):
+        qa_items = ",".join(
+            '{"@type":"Question","name":"%s","acceptedAnswer":{"@type":"Answer","text":"%s"}}'
+            % (q["question"].replace('"', "'"), q["answer"].replace('"', "'"))
+            for q in content["faqs"]
+        )
+        schema.append('{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[%s]}' % qa_items)
 
     head = _head(title + " | Pixelsprout", description, canonical_path, game["thumbnail"], schema)
-    crumb = _breadcrumb([
+
+    crumb_items = [
         ("Home", "/index.html"),
         ("Guides", "/guides/"),
-        (game["title"], f"/games/{game['slug']}.html"),
-        (crumb_label_map[page_type], None),
-    ])
+    ]
+    if category_url:
+        crumb_items.append((game["category"], category_url))
+    crumb_items.append((game["title"], f"/games/{game['slug']}.html"))
+    crumb_items.append((crumb_label_map[page_type], None))
+    crumb = _breadcrumb(crumb_items)
 
     body_html = _render_body_for_type(page_type, game, content)
 
@@ -131,11 +150,19 @@ def render_guide_page(page_type, game, content, related_games, sibling_guides):
         "controls": "Controls",
         "beginner-guide": "Beginner's Guide",
         "similar": "Games Like This",
+        "faq": "FAQ",
     }
     other_guides_links = "\n".join(
         f'<a class="similar-card" href="{url}"><span>{sibling_labels[key]}</span></a>'
         for key, url in sibling_guides.items() if key != page_type
     )
+
+    category_link_html = (
+        f'<p style="margin-top:16px;"><a href="{category_url}" style="color:var(--teal);">Browse more {game["category"]} games &rarr;</a></p>'
+        if category_url else ""
+    )
+
+    stat_card_svg = render_stat_card_svg(game)
 
     return f"""{head}
 <body>
@@ -151,9 +178,14 @@ def render_guide_page(page_type, game, content, related_games, sibling_guides):
   </div>
 
   <div class="game-board-frame">
+    <img src="{game['thumbnail']}" alt="{game['title']} gameplay thumbnail" width="320" height="320" style="display:block;max-width:280px;margin:0 auto 20px;border-radius:10px;" loading="lazy">
+
     <article class="guide-body" style="max-width:760px;margin:0 auto;color:var(--muted,#8a93b8);font-family:system-ui,sans-serif;font-size:15px;line-height:1.75;">
       {body_html}
+      {category_link_html}
     </article>
+
+    <div style="max-width:640px;margin:24px auto;">{stat_card_svg}</div>
 
     <div class="ad-slot ad-slot-ribbon">
       <ins class="adsbygoogle" style="display:block" data-ad-client="{ADSENSE_CLIENT}" data-ad-slot="{AD_SLOT_RIBBON}" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -201,13 +233,25 @@ def _render_body_for_type(page_type, game, content):
 <p>{content.get('who_its_for','')}</p>"""
     if page_type == "similar":
         return f"<p>{content.get('intro','')}</p>"
+    if page_type == "faq":
+        faqs = content.get("faqs", [])
+        items = "\n".join(f"<h2>{q['question']}</h2>\n<p>{q['answer']}</p>" for q in faqs)
+        return items
     return ""
 
 
 def render_collection_page(collection, games, content):
     display_name = collection["display_name"]
-    title = f"Games Like {display_name} - Free Browser Alternatives | Pixelsprout"
-    description = f"Love {display_name}? Here are the best free, browser-playable alternatives on Pixelsprout - no download needed."
+    kind = collection.get("kind", "versus")
+    if kind == "best":
+        page_title = f"Best {display_name} - Free to Play | Pixelsprout"
+        description = f"The best {display_name.lower()} on Pixelsprout, free to play in your browser - no download needed."
+        h1 = f"Best {display_name}"
+    else:
+        page_title = f"Games Like {display_name} - Free Browser Alternatives | Pixelsprout"
+        description = f"Love {display_name}? Here are the best free, browser-playable alternatives on Pixelsprout - no download needed."
+        h1 = f"Games Like {display_name}"
+    title = page_title
     canonical_path = f"/games-like/{collection['slug']}/"
 
     items_json = ",".join(
@@ -220,13 +264,13 @@ def render_collection_page(collection, games, content):
         (
             '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":['
             '{"@type":"ListItem","position":1,"name":"Home","item":"%s/"},'
-            '{"@type":"ListItem","position":2,"name":"Games Like %s","item":"%s%s"}]}'
-        ) % (SITE, display_name, SITE, canonical_path),
+            '{"@type":"ListItem","position":2,"name":"%s","item":"%s%s"}]}'
+        ) % (SITE, h1.replace('"', "'"), SITE, canonical_path),
     ]
 
     og_image = games[0]["thumbnail"] if games else f"{SITE}/assets/logo-icon.png"
     head = _head(title, description, canonical_path, og_image, schema)
-    crumb = _breadcrumb([("Home", "/index.html"), (f"Games Like {display_name}", None)])
+    crumb = _breadcrumb([("Home", "/index.html"), (h1, None)])
     grid = _related_grid(games, "/")
 
     return f"""{head}
@@ -234,7 +278,7 @@ def render_collection_page(collection, games, content):
 <div class="game-shell">
   <div class="breadcrumb" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:8px;">{crumb}</div>
   <a class="back-link" href="/index.html">&larr; back to Pixelsprout</a>
-  <h1 class="game-title">Games Like {display_name}</h1>
+  <h1 class="game-title">{h1}</h1>
   <div class="game-meta">Collection &middot; {len(games)} games</div>
 
   <div class="ad-slot ad-slot-banner">
