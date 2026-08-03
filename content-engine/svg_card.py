@@ -28,7 +28,7 @@ def render_stat_card_svg(game):
     title = _esc(game["title"])
     category = _esc(game["category"])
 
-    return f"""<svg width="640" height="200" viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{title} - {category} game on Pixelsprout">
+    return f"""<svg width="640" height="200" viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="{title} - {category} game on Pixelsprout" style="width:100%;height:auto;max-width:640px;display:block;">
 <rect width="640" height="200" rx="14" fill="#151a2e"/>
 <rect x="0" y="0" width="8" height="200" rx="4" fill="{accent}"/>
 <text x="36" y="70" font-family="'Press Start 2P', monospace" font-size="20" fill="#ffffff">{title}</text>

@@ -43,6 +43,22 @@ def _head(title, description, canonical_path, og_image, schema_blocks):
   gtag('config', '{GA_ID}');
 </script>
 <script defer src="/pixelsprout-features.js"></script>
+<style>
+  /* Defensive responsive layer for guide/collection pages - makes sure
+     nothing (images, the SVG stat card, long unbroken AI-written text)
+     can force horizontal overflow on narrow/mobile screens, regardless
+     of any fixed pixel width elsewhere on the element itself. */
+  * {{ box-sizing: border-box; }}
+  body {{ overflow-x: hidden; }}
+  img, svg {{ max-width: 100%; height: auto; }}
+  .game-shell, .game-board-frame {{ max-width: 100%; overflow-x: hidden; }}
+  .guide-body, .guide-body * {{ max-width: 100%; word-wrap: break-word; overflow-wrap: break-word; }}
+  .breadcrumb {{ flex-wrap: wrap; word-break: break-word; }}
+  @media (max-width: 600px) {{
+    .game-title {{ font-size: 1.15em; line-height: 1.4; }}
+    .similar-games-grid {{ grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important; }}
+  }}
+</style>
 </head>
 """
 
@@ -164,11 +180,12 @@ def render_guide_page(page_type, game, content, related_games, sibling_guides, c
         if category_url else ""
     )
 
-    hero_image = (
-        f'<img src="{game["thumbnail"]}" alt="{game["title"]} gameplay thumbnail" width="320" height="320" style="display:block;max-width:280px;margin:0 auto 20px;border-radius:10px;" loading="lazy">'
+    hero_image_inner = (
+        f'<img src="{game["thumbnail"]}" alt="{game["title"]} gameplay thumbnail" width="320" height="320" style="display:block;max-width:280px;margin:0 auto;border-radius:10px;" loading="lazy">'
         if game.get("thumbnail", "").strip()
-        else f'<img src="/assets/logo-icon.png" alt="{game["title"]} on Pixelsprout" width="200" height="200" style="display:block;max-width:180px;margin:0 auto 20px;border-radius:10px;opacity:0.85;" loading="lazy">'
+        else f'<img src="/assets/logo-icon.png" alt="{game["title"]} on Pixelsprout" width="200" height="200" style="display:block;max-width:180px;margin:0 auto;border-radius:10px;opacity:0.85;" loading="lazy">'
     )
+    hero_image = f'<a href="/games/{game["slug"]}.html" style="display:block;margin:0 auto 20px;text-align:center;" aria-label="Play {game["title"]}">{hero_image_inner}</a>'
     stat_card_svg = render_stat_card_svg(game)
 
     return f"""{head}
