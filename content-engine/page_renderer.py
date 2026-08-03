@@ -61,9 +61,10 @@ def _breadcrumb(items):
 def _related_grid(games, base_prefix):
     cards = []
     for g in games:
+        thumb = g["thumbnail"].strip() if g.get("thumbnail", "").strip() else f"{base_prefix}assets/logo-icon.png"
         cards.append(
             f'<a class="similar-card" href="{base_prefix}games/{g["slug"]}.html">'
-            f'<img src="{g["thumbnail"]}" alt="" loading="lazy"><span>{g["title"]}</span></a>'
+            f'<img src="{thumb}" alt="" loading="lazy"><span>{g["title"]}</span></a>'
         )
     return "\n".join(cards)
 
@@ -102,6 +103,7 @@ def render_guide_page(page_type, game, content, related_games, sibling_guides, c
     canonical_path = f"/guides/{slug_path}/"
     title = title_map[page_type]
     description = desc_map[page_type]
+    safe_thumbnail = game["thumbnail"].strip() if game.get("thumbnail", "").strip() else f"{SITE}/assets/logo-icon.png"
 
     crumb_label_map = {
         "tips": "Tips",
@@ -115,7 +117,7 @@ def render_guide_page(page_type, game, content, related_games, sibling_guides, c
         (
             '{"@context":"https://schema.org","@type":"Article","headline":"%s",'
             '"about":{"@type":"VideoGame","name":"%s"},"image":"%s"}'
-        ) % (title.replace('"', "'"), game["title"].replace('"', "'"), game["thumbnail"]),
+        ) % (title.replace('"', "'"), game["title"].replace('"', "'"), safe_thumbnail),
         (
             '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":['
             '{"@type":"ListItem","position":1,"name":"Home","item":"%s/"},'
@@ -131,7 +133,7 @@ def render_guide_page(page_type, game, content, related_games, sibling_guides, c
         )
         schema.append('{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[%s]}' % qa_items)
 
-    head = _head(title + " | Pixelsprout", description, canonical_path, game["thumbnail"], schema)
+    head = _head(title + " | Pixelsprout", description, canonical_path, safe_thumbnail, schema)
 
     crumb_items = [
         ("Home", "/index.html"),
@@ -162,6 +164,11 @@ def render_guide_page(page_type, game, content, related_games, sibling_guides, c
         if category_url else ""
     )
 
+    hero_image = (
+        f'<img src="{game["thumbnail"]}" alt="{game["title"]} gameplay thumbnail" width="320" height="320" style="display:block;max-width:280px;margin:0 auto 20px;border-radius:10px;" loading="lazy">'
+        if game.get("thumbnail", "").strip()
+        else f'<img src="/assets/logo-icon.png" alt="{game["title"]} on Pixelsprout" width="200" height="200" style="display:block;max-width:180px;margin:0 auto 20px;border-radius:10px;opacity:0.85;" loading="lazy">'
+    )
     stat_card_svg = render_stat_card_svg(game)
 
     return f"""{head}
@@ -178,14 +185,14 @@ def render_guide_page(page_type, game, content, related_games, sibling_guides, c
   </div>
 
   <div class="game-board-frame">
-    <img src="{game['thumbnail']}" alt="{game['title']} gameplay thumbnail" width="320" height="320" style="display:block;max-width:280px;margin:0 auto 20px;border-radius:10px;" loading="lazy">
+    {hero_image}
 
     <article class="guide-body" style="max-width:760px;margin:0 auto;color:var(--muted,#8a93b8);font-family:system-ui,sans-serif;font-size:15px;line-height:1.75;">
       {body_html}
       {category_link_html}
     </article>
 
-    <div style="max-width:640px;margin:24px auto;">{stat_card_svg}</div>
+    <a href="/games/{game['slug']}.html" style="display:block;max-width:640px;margin:24px auto;text-decoration:none;" aria-label="Play {game['title']}">{stat_card_svg}</a>
 
     <div class="ad-slot ad-slot-ribbon">
       <ins class="adsbygoogle" style="display:block" data-ad-client="{ADSENSE_CLIENT}" data-ad-slot="{AD_SLOT_RIBBON}" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -268,7 +275,7 @@ def render_collection_page(collection, games, content):
         ) % (SITE, h1.replace('"', "'"), SITE, canonical_path),
     ]
 
-    og_image = games[0]["thumbnail"] if games else f"{SITE}/assets/logo-icon.png"
+    og_image = next((g["thumbnail"] for g in games if g.get("thumbnail", "").strip()), f"{SITE}/assets/logo-icon.png")
     head = _head(title, description, canonical_path, og_image, schema)
     crumb = _breadcrumb([("Home", "/index.html"), (h1, None)])
     grid = _related_grid(games, "/")

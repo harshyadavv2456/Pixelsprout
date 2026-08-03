@@ -56,8 +56,16 @@ def build_prompts(page_type, game, related_titles):
     related_str = ", ".join(related_titles) if related_titles else "other similar games"
     common_system = (
         "You are writing genuinely useful, specific web content for a free browser games "
-        "site. Never write generic filler. Be concrete about THIS game. Respond with ONLY "
-        "a JSON object matching the exact schema requested - no markdown, no commentary."
+        "site. Never write generic filler. Respond with ONLY a JSON object matching the "
+        "exact schema requested - no markdown, no commentary.\n\n"
+        "CRITICAL ACCURACY RULE: You have NOT played this specific game and do not know its "
+        "exact mechanics, meters, abilities, enemy names, or move names. NEVER invent "
+        "specific named mechanics (e.g. do not make up things like a \"Sprunki Meter\" or "
+        "a \"Whooo Dash\" ability) - that is fabrication, not helpful content. Instead, write "
+        "genuinely useful content based on what a game in this GENRE/CATEGORY typically "
+        "involves, phrased generically enough to be true (e.g. \"time your jumps to avoid "
+        "obstacles\" rather than inventing a named special move). Being accurately generic "
+        "beats being specifically wrong."
     )
     if page_type == "tips":
         user = (
