@@ -119,7 +119,8 @@ def get_content(client, page_type, game, related_titles, dry_run, stats):
             stats["ai"] += 1
             return result, False
         stats["fallback_after_fail"] += 1
-    stats["fallback"] += 1
+    else:
+        stats["fallback"] += 1
     fallback_map = {
         "tips": fb.fallback_tips,
         "controls": fb.fallback_controls,
@@ -195,6 +196,78 @@ def update_sitemap(new_urls):
         f.write(content)
 
 
+def write_guides_landing_page(guides_index):
+    """
+    Every guide page's breadcrumb links to /guides/ - this page has to
+    exist. Client-side renders the full list from guides-index.json
+    (same pattern as the "Play something else" fetches elsewhere on the
+    site) rather than baking thousands of links into a static file -
+    keeps this file small while still being a genuine, crawlable
+    internal-linking hub once JS runs.
+    """
+    html = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://playpixelsprout.com/guides/">
+<title>Game Guides - Tips, Controls & FAQs | Pixelsprout</title>
+<meta name="description" content="Tips, controls, beginner guides, and FAQs for every game on Pixelsprout.">
+<link rel="stylesheet" href="/styles.css">
+<script defer src="/pixelsprout-features.js"></script>
+</head>
+<body>
+<div class="game-shell">
+  <div class="breadcrumb" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:8px;">
+    <a href="/index.html" style="color:var(--teal);text-decoration:none;">Home</a> / Guides
+  </div>
+  <a class="back-link" href="/index.html">&larr; back to Pixelsprout</a>
+  <h1 class="game-title">Game Guides</h1>
+  <div class="game-meta">Tips, controls, beginner guides, and FAQs for every game</div>
+
+  <div class="game-board-frame">
+    <input id="guides-search" type="text" placeholder="Search guides..." style="width:100%;max-width:400px;display:block;margin:16px auto;padding:10px 14px;border-radius:8px;border:1px solid var(--border,#2a3050);background:var(--panel,#151a2e);color:var(--paper,#fff);">
+    <div id="guides-list" style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;"></div>
+  </div>
+</div>
+<script>
+fetch('/guides-index.json')
+  .then(r => r.json())
+  .then(data => {
+    const entries = Object.keys(data).map(slug => ({ slug, pages: data[slug] }));
+    const list = document.getElementById('guides-list');
+    const search = document.getElementById('guides-search');
+
+    function render(filter) {
+      list.innerHTML = '';
+      const f = (filter || '').toLowerCase();
+      entries
+        .filter(e => e.slug.toLowerCase().includes(f))
+        .slice(0, 500)
+        .forEach(e => {
+          const a = document.createElement('a');
+          a.href = e.pages.tips || Object.values(e.pages)[0];
+          a.textContent = e.slug.replace(/-/g, ' ');
+          a.style.cssText = 'color:var(--muted,#8a93b8);text-decoration:none;padding:8px 10px;border:1px solid var(--border,#2a3050);border-radius:6px;font-size:13px;display:block;';
+          list.appendChild(a);
+        });
+    }
+    render('');
+    search.addEventListener('input', () => render(search.value));
+  })
+  .catch(() => {
+    document.getElementById('guides-list').textContent = 'Guides are being generated - check back soon.';
+  });
+</script>
+</body>
+</html>
+"""
+    out_dir = os.path.join(REPO_ROOT, "guides")
+    os.makedirs(out_dir, exist_ok=True)
+    with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
+        f.write(html)
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--limit", type=int, default=BATCH_LIMIT_DEFAULT)
@@ -228,6 +301,7 @@ def main():
 
     if not targets:
         print("No new games to process. Everything in games-index.json already has guide pages.")
+        write_guides_landing_page(guides_index)
         return
 
     print(f"Processing {len(targets)} games...")
@@ -254,6 +328,7 @@ def main():
     save_json(MANIFEST_PATH, manifest)
     save_json(GUIDES_INDEX_PATH, guides_index)
     update_sitemap(new_sitemap_urls)
+    write_guides_landing_page(guides_index)
 
     print(f"\nDone. AI-generated pages: {stats['ai']}, fallback pages: {stats['fallback'] + stats['fallback_after_fail']}")
     print(f"Games processed this run: {len(targets)}. Remaining un-processed games: "

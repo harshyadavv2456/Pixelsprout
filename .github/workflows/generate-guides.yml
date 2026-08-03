@@ -47,10 +47,22 @@ jobs:
           GROQ_API_KEY_4: ${{ secrets.GROQ_API_KEY_4 }}
           GROQ_API_KEY_5: ${{ secrets.GROQ_API_KEY_5 }}
         run: |
+          # --retry-fallback is always on: every run both picks up brand-new
+          # games AND gradually upgrades old fallback-only pages to real AI
+          # content, within whatever quota is actually available that day.
+          # Limit is capped at 80 regardless of manual input - Groq's free-tier
+          # daily token quota (100k/key x 5 keys) only supports ~40-65 games'
+          # worth of real AI content per day; anything past that just burns
+          # the day's budget producing fallback content for extra games with
+          # no quality benefit, which is exactly what happened when this was
+          # manually run with --limit 2890.
           if [ -n "${{ github.event.inputs.limit }}" ]; then
-            python content-engine/generate_guides.py --limit "${{ github.event.inputs.limit }}"
+            REQUESTED="${{ github.event.inputs.limit }}"
+            CAPPED=$(( REQUESTED < 80 ? REQUESTED : 80 ))
+            echo "Requested $REQUESTED, capped to $CAPPED (see comment above for why)"
+            python content-engine/generate_guides.py --retry-fallback --limit "$CAPPED"
           else
-            python content-engine/generate_guides.py
+            python content-engine/generate_guides.py --retry-fallback
           fi
 
       - name: Refresh "games like X" collection pages
