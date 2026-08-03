@@ -1438,5 +1438,355 @@
     "controls": "/guides/microplastics-feeding-controls/",
     "beginner-guide": "/guides/microplastics-feeding-beginner-guide/",
     "similar": "/guides/games-like-microplastics-feeding/"
+  },
+  "skibidi-snake": {
+    "tips": "/guides/skibidi-snake-tips/",
+    "controls": "/guides/skibidi-snake-controls/",
+    "beginner-guide": "/guides/skibidi-snake-beginner-guide/",
+    "similar": "/guides/games-like-skibidi-snake/",
+    "faq": "/guides/skibidi-snake-faq/"
+  },
+  "telekinesis-attack": {
+    "tips": "/guides/telekinesis-attack-tips/",
+    "controls": "/guides/telekinesis-attack-controls/",
+    "beginner-guide": "/guides/telekinesis-attack-beginner-guide/",
+    "similar": "/guides/games-like-telekinesis-attack/",
+    "faq": "/guides/telekinesis-attack-faq/"
+  },
+  "paco-paco": {
+    "tips": "/guides/paco-paco-tips/",
+    "controls": "/guides/paco-paco-controls/",
+    "beginner-guide": "/guides/paco-paco-beginner-guide/",
+    "similar": "/guides/games-like-paco-paco/",
+    "faq": "/guides/paco-paco-faq/"
+  },
+  "guilty-sniper": {
+    "tips": "/guides/guilty-sniper-tips/",
+    "controls": "/guides/guilty-sniper-controls/",
+    "beginner-guide": "/guides/guilty-sniper-beginner-guide/",
+    "similar": "/guides/games-like-guilty-sniper/",
+    "faq": "/guides/guilty-sniper-faq/"
+  },
+  "galactic-pixel-storm": {
+    "tips": "/guides/galactic-pixel-storm-tips/",
+    "controls": "/guides/galactic-pixel-storm-controls/",
+    "beginner-guide": "/guides/galactic-pixel-storm-beginner-guide/",
+    "similar": "/guides/games-like-galactic-pixel-storm/",
+    "faq": "/guides/galactic-pixel-storm-faq/"
+  },
+  "chasinghunters": {
+    "tips": "/guides/chasinghunters-tips/",
+    "controls": "/guides/chasinghunters-controls/",
+    "beginner-guide": "/guides/chasinghunters-beginner-guide/",
+    "similar": "/guides/games-like-chasinghunters/",
+    "faq": "/guides/chasinghunters-faq/"
+  },
+  "brick-blaze": {
+    "tips": "/guides/brick-blaze-tips/",
+    "controls": "/guides/brick-blaze-controls/",
+    "beginner-guide": "/guides/brick-blaze-beginner-guide/",
+    "similar": "/guides/games-like-brick-blaze/",
+    "faq": "/guides/brick-blaze-faq/"
+  },
+  "saguaro": {
+    "tips": "/guides/saguaro-tips/",
+    "controls": "/guides/saguaro-controls/",
+    "beginner-guide": "/guides/saguaro-beginner-guide/",
+    "similar": "/guides/games-like-saguaro/",
+    "faq": "/guides/saguaro-faq/"
+  },
+  "among-at-easter": {
+    "tips": "/guides/among-at-easter-tips/",
+    "controls": "/guides/among-at-easter-controls/",
+    "beginner-guide": "/guides/among-at-easter-beginner-guide/",
+    "similar": "/guides/games-like-among-at-easter/",
+    "faq": "/guides/among-at-easter-faq/"
+  },
+  "evil-invader": {
+    "tips": "/guides/evil-invader-tips/",
+    "controls": "/guides/evil-invader-controls/",
+    "beginner-guide": "/guides/evil-invader-beginner-guide/",
+    "similar": "/guides/games-like-evil-invader/",
+    "faq": "/guides/evil-invader-faq/"
+  },
+  "bouncing-egg": {
+    "tips": "/guides/bouncing-egg-tips/",
+    "controls": "/guides/bouncing-egg-controls/",
+    "beginner-guide": "/guides/bouncing-egg-beginner-guide/",
+    "similar": "/guides/games-like-bouncing-egg/",
+    "faq": "/guides/bouncing-egg-faq/"
+  },
+  "strike-galaxy-attack": {
+    "tips": "/guides/strike-galaxy-attack-tips/",
+    "controls": "/guides/strike-galaxy-attack-controls/",
+    "beginner-guide": "/guides/strike-galaxy-attack-beginner-guide/",
+    "similar": "/guides/games-like-strike-galaxy-attack/",
+    "faq": "/guides/strike-galaxy-attack-faq/"
+  },
+  "run-jump-jumbo-runner": {
+    "tips": "/guides/run-jump-jumbo-runner-tips/",
+    "controls": "/guides/run-jump-jumbo-runner-controls/",
+    "beginner-guide": "/guides/run-jump-jumbo-runner-beginner-guide/",
+    "similar": "/guides/games-like-run-jump-jumbo-runner/",
+    "faq": "/guides/run-jump-jumbo-runner-faq/"
+  },
+  "car-crash-test": {
+    "tips": "/guides/car-crash-test-tips/",
+    "controls": "/guides/car-crash-test-controls/",
+    "beginner-guide": "/guides/car-crash-test-beginner-guide/",
+    "similar": "/guides/games-like-car-crash-test/",
+    "faq": "/guides/car-crash-test-faq/"
+  },
+  "injection-invasion": {
+    "tips": "/guides/injection-invasion-tips/",
+    "controls": "/guides/injection-invasion-controls/",
+    "beginner-guide": "/guides/injection-invasion-beginner-guide/",
+    "similar": "/guides/games-like-injection-invasion/",
+    "faq": "/guides/injection-invasion-faq/"
+  },
+  "epic-duck": {
+    "tips": "/guides/epic-duck-tips/",
+    "controls": "/guides/epic-duck-controls/",
+    "beginner-guide": "/guides/epic-duck-beginner-guide/",
+    "similar": "/guides/games-like-epic-duck/",
+    "faq": "/guides/epic-duck-faq/"
+  },
+  "morphit": {
+    "tips": "/guides/morphit-tips/",
+    "controls": "/guides/morphit-controls/",
+    "beginner-guide": "/guides/morphit-beginner-guide/",
+    "similar": "/guides/games-like-morphit/",
+    "faq": "/guides/morphit-faq/"
+  },
+  "gelatino": {
+    "tips": "/guides/gelatino-tips/",
+    "controls": "/guides/gelatino-controls/",
+    "beginner-guide": "/guides/gelatino-beginner-guide/",
+    "similar": "/guides/games-like-gelatino/",
+    "faq": "/guides/gelatino-faq/"
+  },
+  "parmesan-partisan": {
+    "tips": "/guides/parmesan-partisan-tips/",
+    "controls": "/guides/parmesan-partisan-controls/",
+    "beginner-guide": "/guides/parmesan-partisan-beginner-guide/",
+    "similar": "/guides/games-like-parmesan-partisan/",
+    "faq": "/guides/parmesan-partisan-faq/"
+  },
+  "snake": {
+    "tips": "/guides/snake-tips/",
+    "controls": "/guides/snake-controls/",
+    "beginner-guide": "/guides/snake-beginner-guide/",
+    "similar": "/guides/games-like-snake/",
+    "faq": "/guides/snake-faq/"
+  },
+  "flappy": {
+    "tips": "/guides/flappy-tips/",
+    "controls": "/guides/flappy-controls/",
+    "beginner-guide": "/guides/flappy-beginner-guide/",
+    "similar": "/guides/games-like-flappy/",
+    "faq": "/guides/flappy-faq/"
+  },
+  "tetris": {
+    "tips": "/guides/tetris-tips/",
+    "controls": "/guides/tetris-controls/",
+    "beginner-guide": "/guides/tetris-beginner-guide/",
+    "similar": "/guides/games-like-tetris/",
+    "faq": "/guides/tetris-faq/"
+  },
+  "click-planet": {
+    "tips": "/guides/click-planet-tips/",
+    "controls": "/guides/click-planet-controls/",
+    "beginner-guide": "/guides/click-planet-beginner-guide/",
+    "similar": "/guides/games-like-click-planet/",
+    "faq": "/guides/click-planet-faq/"
+  },
+  "brainrot-tower-defense": {
+    "tips": "/guides/brainrot-tower-defense-tips/",
+    "controls": "/guides/brainrot-tower-defense-controls/",
+    "beginner-guide": "/guides/brainrot-tower-defense-beginner-guide/",
+    "similar": "/guides/games-like-brainrot-tower-defense/",
+    "faq": "/guides/brainrot-tower-defense-faq/"
+  },
+  "city-building": {
+    "tips": "/guides/city-building-tips/",
+    "controls": "/guides/city-building-controls/",
+    "beginner-guide": "/guides/city-building-beginner-guide/",
+    "similar": "/guides/games-like-city-building/",
+    "faq": "/guides/city-building-faq/"
+  },
+  "kiddie-farmers": {
+    "tips": "/guides/kiddie-farmers-tips/",
+    "controls": "/guides/kiddie-farmers-controls/",
+    "beginner-guide": "/guides/kiddie-farmers-beginner-guide/",
+    "similar": "/guides/games-like-kiddie-farmers/",
+    "faq": "/guides/kiddie-farmers-faq/"
+  },
+  "tricky-test": {
+    "tips": "/guides/tricky-test-tips/",
+    "controls": "/guides/tricky-test-controls/",
+    "beginner-guide": "/guides/tricky-test-beginner-guide/",
+    "similar": "/guides/games-like-tricky-test/",
+    "faq": "/guides/tricky-test-faq/"
+  },
+  "my-auto-service": {
+    "tips": "/guides/my-auto-service-tips/",
+    "controls": "/guides/my-auto-service-controls/",
+    "beginner-guide": "/guides/my-auto-service-beginner-guide/",
+    "similar": "/guides/games-like-my-auto-service/",
+    "faq": "/guides/my-auto-service-faq/"
+  },
+  "medical-shop-cash-register-drug-store": {
+    "tips": "/guides/medical-shop-cash-register-drug-store-tips/",
+    "controls": "/guides/medical-shop-cash-register-drug-store-controls/",
+    "beginner-guide": "/guides/medical-shop-cash-register-drug-store-beginner-guide/",
+    "similar": "/guides/games-like-medical-shop-cash-register-drug-store/",
+    "faq": "/guides/medical-shop-cash-register-drug-store-faq/"
+  },
+  "cursed-treasure-2": {
+    "tips": "/guides/cursed-treasure-2-tips/",
+    "controls": "/guides/cursed-treasure-2-controls/",
+    "beginner-guide": "/guides/cursed-treasure-2-beginner-guide/",
+    "similar": "/guides/games-like-cursed-treasure-2/",
+    "faq": "/guides/cursed-treasure-2-faq/"
+  },
+  "air-strike": {
+    "tips": "/guides/air-strike-tips/",
+    "controls": "/guides/air-strike-controls/",
+    "beginner-guide": "/guides/air-strike-beginner-guide/",
+    "similar": "/guides/games-like-air-strike/",
+    "faq": "/guides/air-strike-faq/"
+  },
+  "knight-wars": {
+    "tips": "/guides/knight-wars-tips/",
+    "controls": "/guides/knight-wars-controls/",
+    "beginner-guide": "/guides/knight-wars-beginner-guide/",
+    "similar": "/guides/games-like-knight-wars/",
+    "faq": "/guides/knight-wars-faq/"
+  },
+  "3-2-1-spell": {
+    "tips": "/guides/3-2-1-spell-tips/",
+    "controls": "/guides/3-2-1-spell-controls/",
+    "beginner-guide": "/guides/3-2-1-spell-beginner-guide/",
+    "similar": "/guides/games-like-3-2-1-spell/",
+    "faq": "/guides/3-2-1-spell-faq/"
+  },
+  "the-earth-evolution": {
+    "tips": "/guides/the-earth-evolution-tips/",
+    "controls": "/guides/the-earth-evolution-controls/",
+    "beginner-guide": "/guides/the-earth-evolution-beginner-guide/",
+    "similar": "/guides/games-like-the-earth-evolution/",
+    "faq": "/guides/the-earth-evolution-faq/"
+  },
+  "tile-hex-world-red-vs-blue": {
+    "tips": "/guides/tile-hex-world-red-vs-blue-tips/",
+    "controls": "/guides/tile-hex-world-red-vs-blue-controls/",
+    "beginner-guide": "/guides/tile-hex-world-red-vs-blue-beginner-guide/",
+    "similar": "/guides/games-like-tile-hex-world-red-vs-blue/",
+    "faq": "/guides/tile-hex-world-red-vs-blue-faq/"
+  },
+  "base-defense": {
+    "tips": "/guides/base-defense-tips/",
+    "controls": "/guides/base-defense-controls/",
+    "beginner-guide": "/guides/base-defense-beginner-guide/",
+    "similar": "/guides/games-like-base-defense/",
+    "faq": "/guides/base-defense-faq/"
+  },
+  "jet-micky": {
+    "tips": "/guides/jet-micky-tips/",
+    "controls": "/guides/jet-micky-controls/",
+    "beginner-guide": "/guides/jet-micky-beginner-guide/",
+    "similar": "/guides/games-like-jet-micky/",
+    "faq": "/guides/jet-micky-faq/"
+  },
+  "fishing-clicker": {
+    "tips": "/guides/fishing-clicker-tips/",
+    "controls": "/guides/fishing-clicker-controls/",
+    "beginner-guide": "/guides/fishing-clicker-beginner-guide/",
+    "similar": "/guides/games-like-fishing-clicker/",
+    "faq": "/guides/fishing-clicker-faq/"
+  },
+  "parking-jam-escape": {
+    "tips": "/guides/parking-jam-escape-tips/",
+    "controls": "/guides/parking-jam-escape-controls/",
+    "beginner-guide": "/guides/parking-jam-escape-beginner-guide/",
+    "similar": "/guides/games-like-parking-jam-escape/",
+    "faq": "/guides/parking-jam-escape-faq/"
+  },
+  "navy-missile-fest": {
+    "tips": "/guides/navy-missile-fest-tips/",
+    "controls": "/guides/navy-missile-fest-controls/",
+    "beginner-guide": "/guides/navy-missile-fest-beginner-guide/",
+    "similar": "/guides/games-like-navy-missile-fest/",
+    "faq": "/guides/navy-missile-fest-faq/"
+  },
+  "cursed-treasure-1-5": {
+    "tips": "/guides/cursed-treasure-1-5-tips/",
+    "controls": "/guides/cursed-treasure-1-5-controls/",
+    "beginner-guide": "/guides/cursed-treasure-1-5-beginner-guide/",
+    "similar": "/guides/games-like-cursed-treasure-1-5/",
+    "faq": "/guides/cursed-treasure-1-5-faq/"
+  },
+  "tower-defense-the-last-realm": {
+    "tips": "/guides/tower-defense-the-last-realm-tips/",
+    "controls": "/guides/tower-defense-the-last-realm-controls/",
+    "beginner-guide": "/guides/tower-defense-the-last-realm-beginner-guide/",
+    "similar": "/guides/games-like-tower-defense-the-last-realm/",
+    "faq": "/guides/tower-defense-the-last-realm-faq/"
+  },
+  "idle-destroyer": {
+    "tips": "/guides/idle-destroyer-tips/",
+    "controls": "/guides/idle-destroyer-controls/",
+    "beginner-guide": "/guides/idle-destroyer-beginner-guide/",
+    "similar": "/guides/games-like-idle-destroyer/",
+    "faq": "/guides/idle-destroyer-faq/"
+  },
+  "defend-the-castle": {
+    "tips": "/guides/defend-the-castle-tips/",
+    "controls": "/guides/defend-the-castle-controls/",
+    "beginner-guide": "/guides/defend-the-castle-beginner-guide/",
+    "similar": "/guides/games-like-defend-the-castle/",
+    "faq": "/guides/defend-the-castle-faq/"
+  },
+  "mining-in-notebook": {
+    "tips": "/guides/mining-in-notebook-tips/",
+    "controls": "/guides/mining-in-notebook-controls/",
+    "beginner-guide": "/guides/mining-in-notebook-beginner-guide/",
+    "similar": "/guides/games-like-mining-in-notebook/",
+    "faq": "/guides/mining-in-notebook-faq/"
+  },
+  "noob-army-tycoon": {
+    "tips": "/guides/noob-army-tycoon-tips/",
+    "controls": "/guides/noob-army-tycoon-controls/",
+    "beginner-guide": "/guides/noob-army-tycoon-beginner-guide/",
+    "similar": "/guides/games-like-noob-army-tycoon/",
+    "faq": "/guides/noob-army-tycoon-faq/"
+  },
+  "star-battles": {
+    "tips": "/guides/star-battles-tips/",
+    "controls": "/guides/star-battles-controls/",
+    "beginner-guide": "/guides/star-battles-beginner-guide/",
+    "similar": "/guides/games-like-star-battles/",
+    "faq": "/guides/star-battles-faq/"
+  },
+  "grimace-vs-skibidi": {
+    "tips": "/guides/grimace-vs-skibidi-tips/",
+    "controls": "/guides/grimace-vs-skibidi-controls/",
+    "beginner-guide": "/guides/grimace-vs-skibidi-beginner-guide/",
+    "similar": "/guides/games-like-grimace-vs-skibidi/",
+    "faq": "/guides/grimace-vs-skibidi-faq/"
+  },
+  "tower-defense-world-war": {
+    "tips": "/guides/tower-defense-world-war-tips/",
+    "controls": "/guides/tower-defense-world-war-controls/",
+    "beginner-guide": "/guides/tower-defense-world-war-beginner-guide/",
+    "similar": "/guides/games-like-tower-defense-world-war/",
+    "faq": "/guides/tower-defense-world-war-faq/"
+  },
+  "idle-robots": {
+    "tips": "/guides/idle-robots-tips/",
+    "controls": "/guides/idle-robots-controls/",
+    "beginner-guide": "/guides/idle-robots-beginner-guide/",
+    "similar": "/guides/games-like-idle-robots/",
+    "faq": "/guides/idle-robots-faq/"
   }
 }
