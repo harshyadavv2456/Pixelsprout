@@ -1,0 +1,402 @@
+{
+  "sprunki-whooo": {
+    "generated_at": "2026-08-03T05:17:58Z",
+    "any_fallback": false,
+    "pages": {
+      "tips": "/guides/sprunki-whooo-tips/",
+      "controls": "/guides/sprunki-whooo-controls/",
+      "beginner-guide": "/guides/sprunki-whooo-beginner-guide/",
+      "similar": "/guides/games-like-sprunki-whooo/"
+    }
+  },
+  "webskii": {
+    "generated_at": "2026-08-03T05:18:04Z",
+    "any_fallback": false,
+    "pages": {
+      "tips": "/guides/webskii-tips/",
+      "controls": "/guides/webskii-controls/",
+      "beginner-guide": "/guides/webskii-beginner-guide/",
+      "similar": "/guides/games-like-webskii/"
+    }
+  },
+  "jumpy-noob": {
+    "generated_at": "2026-08-03T05:18:10Z",
+    "any_fallback": false,
+    "pages": {
+      "tips": "/guides/jumpy-noob-tips/",
+      "controls": "/guides/jumpy-noob-controls/",
+      "beginner-guide": "/guides/jumpy-noob-beginner-guide/",
+      "similar": "/guides/games-like-jumpy-noob/"
+    }
+  },
+  "galaxy-wars": {
+    "generated_at": "2026-08-03T05:18:16Z",
+    "any_fallback": false,
+    "pages": {
+      "tips": "/guides/galaxy-wars-tips/",
+      "controls": "/guides/galaxy-wars-controls/",
+      "beginner-guide": "/guides/galaxy-wars-beginner-guide/",
+      "similar": "/guides/games-like-galaxy-wars/"
+    }
+  },
+  "knight-bridge": {
+    "generated_at": "2026-08-03T05:18:22Z",
+    "any_fallback": false,
+    "pages": {
+      "tips": "/guides/knight-bridge-tips/",
+      "controls": "/guides/knight-bridge-controls/",
+      "beginner-guide": "/guides/knight-bridge-beginner-guide/",
+      "similar": "/guides/games-like-knight-bridge/"
+    }
+  },
+  "trap-adventure-2": {
+    "generated_at": "2026-08-03T05:18:28Z",
+    "any_fallback": false,
+    "pages": {
+      "tips": "/guides/trap-adventure-2-tips/",
+      "controls": "/guides/trap-adventure-2-controls/",
+      "beginner-guide": "/guides/trap-adventure-2-beginner-guide/",
+      "similar": "/guides/games-like-trap-adventure-2/"
+    }
+  },
+  "prison-escape-plan": {
+    "generated_at": "2026-08-03T05:18:33Z",
+    "any_fallback": false,
+    "pages": {
+      "tips": "/guides/prison-escape-plan-tips/",
+      "controls": "/guides/prison-escape-plan-controls/",
+      "beginner-guide": "/guides/prison-escape-plan-beginner-guide/",
+      "similar": "/guides/games-like-prison-escape-plan/"
+    }
+  },
+  "cat-drop": {
+    "generated_at": "2026-08-03T05:18:39Z",
+    "any_fallback": false,
+    "pages": {
+      "tips": "/guides/cat-drop-tips/",
+      "controls": "/guides/cat-drop-controls/",
+      "beginner-guide": "/guides/cat-drop-beginner-guide/",
+      "similar": "/guides/games-like-cat-drop/"
+    }
+  },
+  "flying-bat": {
+    "generated_at": "2026-08-03T05:18:45Z",
+    "any_fallback": false,
+    "pages": {
+      "tips": "/guides/flying-bat-tips/",
+      "controls": "/guides/flying-bat-controls/",
+      "beginner-guide": "/guides/flying-bat-beginner-guide/",
+      "similar": "/guides/games-like-flying-bat/"
+    }
+  },
+  "the-tribal-warrior-of-fortune": {
+    "generated_at": "2026-08-03T05:18:53Z",
+    "any_fallback": false,
+    "pages": {
+      "tips": "/guides/the-tribal-warrior-of-fortune-tips/",
+      "controls": "/guides/the-tribal-warrior-of-fortune-controls/",
+      "beginner-guide": "/guides/the-tribal-warrior-of-fortune-beginner-guide/",
+      "similar": "/guides/games-like-the-tribal-warrior-of-fortune/"
+    }
+  },
+  "supernoob-prison-easter": {
+    "generated_at": "2026-08-03T05:18:56Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/supernoob-prison-easter-tips/",
+      "controls": "/guides/supernoob-prison-easter-controls/",
+      "beginner-guide": "/guides/supernoob-prison-easter-beginner-guide/",
+      "similar": "/guides/games-like-supernoob-prison-easter/"
+    }
+  },
+  "ladder-race-3d": {
+    "generated_at": "2026-08-03T05:18:57Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/ladder-race-3d-tips/",
+      "controls": "/guides/ladder-race-3d-controls/",
+      "beginner-guide": "/guides/ladder-race-3d-beginner-guide/",
+      "similar": "/guides/games-like-ladder-race-3d/"
+    }
+  },
+  "flying-triangle": {
+    "generated_at": "2026-08-03T05:18:59Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/flying-triangle-tips/",
+      "controls": "/guides/flying-triangle-controls/",
+      "beginner-guide": "/guides/flying-triangle-beginner-guide/",
+      "similar": "/guides/games-like-flying-triangle/"
+    }
+  },
+  "escape-the-sewer": {
+    "generated_at": "2026-08-03T05:19:00Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/escape-the-sewer-tips/",
+      "controls": "/guides/escape-the-sewer-controls/",
+      "beginner-guide": "/guides/escape-the-sewer-beginner-guide/",
+      "similar": "/guides/games-like-escape-the-sewer/"
+    }
+  },
+  "fly-and-shoot-1-italian-bosses": {
+    "generated_at": "2026-08-03T05:19:02Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/fly-and-shoot-1-italian-bosses-tips/",
+      "controls": "/guides/fly-and-shoot-1-italian-bosses-controls/",
+      "beginner-guide": "/guides/fly-and-shoot-1-italian-bosses-beginner-guide/",
+      "similar": "/guides/games-like-fly-and-shoot-1-italian-bosses/"
+    }
+  },
+  "off-the-track": {
+    "generated_at": "2026-08-03T05:19:03Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/off-the-track-tips/",
+      "controls": "/guides/off-the-track-controls/",
+      "beginner-guide": "/guides/off-the-track-beginner-guide/",
+      "similar": "/guides/games-like-off-the-track/"
+    }
+  },
+  "jump-up-arcade": {
+    "generated_at": "2026-08-03T05:19:05Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/jump-up-arcade-tips/",
+      "controls": "/guides/jump-up-arcade-controls/",
+      "beginner-guide": "/guides/jump-up-arcade-beginner-guide/",
+      "similar": "/guides/games-like-jump-up-arcade/"
+    }
+  },
+  "ugi-bugi": {
+    "generated_at": "2026-08-03T05:19:06Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/ugi-bugi-tips/",
+      "controls": "/guides/ugi-bugi-controls/",
+      "beginner-guide": "/guides/ugi-bugi-beginner-guide/",
+      "similar": "/guides/games-like-ugi-bugi/"
+    }
+  },
+  "rocket-balance": {
+    "generated_at": "2026-08-03T05:19:08Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/rocket-balance-tips/",
+      "controls": "/guides/rocket-balance-controls/",
+      "beginner-guide": "/guides/rocket-balance-beginner-guide/",
+      "similar": "/guides/games-like-rocket-balance/"
+    }
+  },
+  "classic-limo-car-parking": {
+    "generated_at": "2026-08-03T05:19:09Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/classic-limo-car-parking-tips/",
+      "controls": "/guides/classic-limo-car-parking-controls/",
+      "beginner-guide": "/guides/classic-limo-car-parking-beginner-guide/",
+      "similar": "/guides/games-like-classic-limo-car-parking/"
+    }
+  },
+  "merge-plants-and-zombies": {
+    "generated_at": "2026-08-03T05:19:11Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/merge-plants-and-zombies-tips/",
+      "controls": "/guides/merge-plants-and-zombies-controls/",
+      "beginner-guide": "/guides/merge-plants-and-zombies-beginner-guide/",
+      "similar": "/guides/games-like-merge-plants-and-zombies/"
+    }
+  },
+  "no-problamas": {
+    "generated_at": "2026-08-03T05:19:12Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/no-problamas-tips/",
+      "controls": "/guides/no-problamas-controls/",
+      "beginner-guide": "/guides/no-problamas-beginner-guide/",
+      "similar": "/guides/games-like-no-problamas/"
+    }
+  },
+  "squid-game-survival-challenge": {
+    "generated_at": "2026-08-03T05:19:14Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/squid-game-survival-challenge-tips/",
+      "controls": "/guides/squid-game-survival-challenge-controls/",
+      "beginner-guide": "/guides/squid-game-survival-challenge-beginner-guide/",
+      "similar": "/guides/games-like-squid-game-survival-challenge/"
+    }
+  },
+  "blocky-squirrel": {
+    "generated_at": "2026-08-03T05:19:15Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/blocky-squirrel-tips/",
+      "controls": "/guides/blocky-squirrel-controls/",
+      "beginner-guide": "/guides/blocky-squirrel-beginner-guide/",
+      "similar": "/guides/games-like-blocky-squirrel/"
+    }
+  },
+  "save-the-earth-with-slaps": {
+    "generated_at": "2026-08-03T05:19:17Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/save-the-earth-with-slaps-tips/",
+      "controls": "/guides/save-the-earth-with-slaps-controls/",
+      "beginner-guide": "/guides/save-the-earth-with-slaps-beginner-guide/",
+      "similar": "/guides/games-like-save-the-earth-with-slaps/"
+    }
+  },
+  "running-bros-x": {
+    "generated_at": "2026-08-03T05:19:18Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/running-bros-x-tips/",
+      "controls": "/guides/running-bros-x-controls/",
+      "beginner-guide": "/guides/running-bros-x-beginner-guide/",
+      "similar": "/guides/games-like-running-bros-x/"
+    }
+  },
+  "lasers-and-slimes": {
+    "generated_at": "2026-08-03T05:19:20Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/lasers-and-slimes-tips/",
+      "controls": "/guides/lasers-and-slimes-controls/",
+      "beginner-guide": "/guides/lasers-and-slimes-beginner-guide/",
+      "similar": "/guides/games-like-lasers-and-slimes/"
+    }
+  },
+  "monster-dodge": {
+    "generated_at": "2026-08-03T05:19:21Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/monster-dodge-tips/",
+      "controls": "/guides/monster-dodge-controls/",
+      "beginner-guide": "/guides/monster-dodge-beginner-guide/",
+      "similar": "/guides/games-like-monster-dodge/"
+    }
+  },
+  "captain-space": {
+    "generated_at": "2026-08-03T05:19:23Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/captain-space-tips/",
+      "controls": "/guides/captain-space-controls/",
+      "beginner-guide": "/guides/captain-space-beginner-guide/",
+      "similar": "/guides/games-like-captain-space/"
+    }
+  },
+  "invaders-destruction": {
+    "generated_at": "2026-08-03T05:19:24Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/invaders-destruction-tips/",
+      "controls": "/guides/invaders-destruction-controls/",
+      "beginner-guide": "/guides/invaders-destruction-beginner-guide/",
+      "similar": "/guides/games-like-invaders-destruction/"
+    }
+  },
+  "super-retro-ping-pong": {
+    "generated_at": "2026-08-03T05:19:26Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/super-retro-ping-pong-tips/",
+      "controls": "/guides/super-retro-ping-pong-controls/",
+      "beginner-guide": "/guides/super-retro-ping-pong-beginner-guide/",
+      "similar": "/guides/games-like-super-retro-ping-pong/"
+    }
+  },
+  "stone-miner-idle": {
+    "generated_at": "2026-08-03T05:19:27Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/stone-miner-idle-tips/",
+      "controls": "/guides/stone-miner-idle-controls/",
+      "beginner-guide": "/guides/stone-miner-idle-beginner-guide/",
+      "similar": "/guides/games-like-stone-miner-idle/"
+    }
+  },
+  "tribe-escape": {
+    "generated_at": "2026-08-03T05:19:29Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/tribe-escape-tips/",
+      "controls": "/guides/tribe-escape-controls/",
+      "beginner-guide": "/guides/tribe-escape-beginner-guide/",
+      "similar": "/guides/games-like-tribe-escape/"
+    }
+  },
+  "doge-man": {
+    "generated_at": "2026-08-03T05:19:30Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/doge-man-tips/",
+      "controls": "/guides/doge-man-controls/",
+      "beginner-guide": "/guides/doge-man-beginner-guide/",
+      "similar": "/guides/games-like-doge-man/"
+    }
+  },
+  "katana-fruits": {
+    "generated_at": "2026-08-03T05:19:32Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/katana-fruits-tips/",
+      "controls": "/guides/katana-fruits-controls/",
+      "beginner-guide": "/guides/katana-fruits-beginner-guide/",
+      "similar": "/guides/games-like-katana-fruits/"
+    }
+  },
+  "blockminer-run": {
+    "generated_at": "2026-08-03T05:19:33Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/blockminer-run-tips/",
+      "controls": "/guides/blockminer-run-controls/",
+      "beginner-guide": "/guides/blockminer-run-beginner-guide/",
+      "similar": "/guides/games-like-blockminer-run/"
+    }
+  },
+  "block-pile": {
+    "generated_at": "2026-08-03T05:19:35Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/block-pile-tips/",
+      "controls": "/guides/block-pile-controls/",
+      "beginner-guide": "/guides/block-pile-beginner-guide/",
+      "similar": "/guides/games-like-block-pile/"
+    }
+  },
+  "ghost-float": {
+    "generated_at": "2026-08-03T05:19:36Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/ghost-float-tips/",
+      "controls": "/guides/ghost-float-controls/",
+      "beginner-guide": "/guides/ghost-float-beginner-guide/",
+      "similar": "/guides/games-like-ghost-float/"
+    }
+  },
+  "push-the-block": {
+    "generated_at": "2026-08-03T05:19:38Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/push-the-block-tips/",
+      "controls": "/guides/push-the-block-controls/",
+      "beginner-guide": "/guides/push-the-block-beginner-guide/",
+      "similar": "/guides/games-like-push-the-block/"
+    }
+  },
+  "time-dungeon": {
+    "generated_at": "2026-08-03T05:19:39Z",
+    "any_fallback": true,
+    "pages": {
+      "tips": "/guides/time-dungeon-tips/",
+      "controls": "/guides/time-dungeon-controls/",
+      "beginner-guide": "/guides/time-dungeon-beginner-guide/",
+      "similar": "/guides/games-like-time-dungeon/"
+    }
+  }
+}
