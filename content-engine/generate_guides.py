@@ -215,6 +215,16 @@ def write_guides_landing_page(guides_index):
 <meta name="description" content="Tips, controls, beginner guides, and FAQs for every game on Pixelsprout.">
 <link rel="stylesheet" href="/styles.css">
 <script defer src="/pixelsprout-features.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body { overflow-x: hidden; }
+  .game-shell, .game-board-frame { max-width: 100%; overflow-x: hidden; }
+  #guides-list { width: 100%; max-width: 100%; }
+  @media (max-width: 600px) {
+    .game-title { font-size: 1.15em; line-height: 1.4; }
+    #guides-list { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)) !important; }
+  }
+</style>
 </head>
 <body>
 <div class="game-shell">
@@ -227,7 +237,7 @@ def write_guides_landing_page(guides_index):
 
   <div class="game-board-frame">
     <input id="guides-search" type="text" placeholder="Search guides..." style="width:100%;max-width:400px;display:block;margin:16px auto;padding:10px 14px;border-radius:8px;border:1px solid var(--border,#2a3050);background:var(--panel,#151a2e);color:var(--paper,#fff);">
-    <div id="guides-list" style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;"></div>
+    <div id="guides-list" style="margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;"></div>
   </div>
 </div>
 <script>
@@ -248,7 +258,7 @@ fetch('/guides-index.json')
           const a = document.createElement('a');
           a.href = e.pages.tips || Object.values(e.pages)[0];
           a.textContent = e.slug.replace(/-/g, ' ');
-          a.style.cssText = 'color:var(--muted,#8a93b8);text-decoration:none;padding:8px 10px;border:1px solid var(--border,#2a3050);border-radius:6px;font-size:13px;display:block;';
+          a.style.cssText = 'color:var(--muted,#8a93b8);text-decoration:none;padding:8px 10px;border:1px solid var(--border,#2a3050);border-radius:6px;font-size:13px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;';
           list.appendChild(a);
         });
     }
