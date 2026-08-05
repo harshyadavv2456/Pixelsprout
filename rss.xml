@@ -5,6 +5,14 @@
   <link>https://playpixelsprout.com/</link>
   <description>Newest games added to Pixelsprout, a free browser gaming library.</description>
   <item>
+    <title>Zappy</title>
+    <link>https://playpixelsprout.com/games/zappy.html</link>
+    <guid>https://playpixelsprout.com/games/zappy.html</guid>
+    <description>Play Zappy free online at Pixelsprout — no download needed.</description>
+    <pubDate>Wed, 05 Aug 2026 11:03:54 GMT</pubDate>
+    <enclosure url="https://img.gamemonetize.com/77tx1079mf5yk5ecl4piy52muxop4zyn/512x384.jpg" type="image/jpeg"/>
+  </item>
+  <item>
     <title>Pelucaneitor</title>
     <link>https://playpixelsprout.com/games/pelucaneitor.html</link>
     <guid>https://playpixelsprout.com/games/pelucaneitor.html</guid>
@@ -475,14 +483,6 @@
     <description>Play Fill Glass free online at Pixelsprout — no download needed.</description>
     <pubDate>Wed, 05 Aug 2026 05:17:35 GMT</pubDate>
     <enclosure url="https://img.gamemonetize.com/6jhe07v39h6zdamdxhxrxffcjmqrlo0f/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Street Food Deep Fried</title>
-    <link>https://playpixelsprout.com/games/street-food-deep-fried.html</link>
-    <guid>https://playpixelsprout.com/games/street-food-deep-fried.html</guid>
-    <description>Play Street Food Deep Fried free online at Pixelsprout — no download needed.</description>
-    <pubDate>Wed, 05 Aug 2026 05:17:34 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/zec40cp7uhh42uzdah2wjiv14mh6qt79/512x384.jpg" type="image/jpeg"/>
   </item>
 </channel>
 </rss>
