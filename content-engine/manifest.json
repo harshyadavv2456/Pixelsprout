@@ -552,8 +552,8 @@
     }
   },
   "fall-pumpkin": {
-    "generated_at": "2026-08-04T09:25:37Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:16:13Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/fall-pumpkin-tips/",
       "controls": "/guides/fall-pumpkin-controls/",
@@ -563,8 +563,8 @@
     }
   },
   "fluffy-rush": {
-    "generated_at": "2026-08-04T09:25:38Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:16:20Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/fluffy-rush-tips/",
       "controls": "/guides/fluffy-rush-controls/",
@@ -574,8 +574,8 @@
     }
   },
   "candy-bounce": {
-    "generated_at": "2026-08-04T09:25:40Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:16:28Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/candy-bounce-tips/",
       "controls": "/guides/candy-bounce-controls/",
@@ -585,8 +585,8 @@
     }
   },
   "block-breaker": {
-    "generated_at": "2026-08-04T09:25:41Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:16:45Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/block-breaker-tips/",
       "controls": "/guides/block-breaker-controls/",
@@ -596,8 +596,8 @@
     }
   },
   "the-world-of-bob": {
-    "generated_at": "2026-08-04T09:25:43Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:17:01Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/the-world-of-bob-tips/",
       "controls": "/guides/the-world-of-bob-controls/",
@@ -607,8 +607,8 @@
     }
   },
   "epic-gaul": {
-    "generated_at": "2026-08-04T09:25:44Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:17:13Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/epic-gaul-tips/",
       "controls": "/guides/epic-gaul-controls/",
@@ -618,8 +618,8 @@
     }
   },
   "trimat": {
-    "generated_at": "2026-08-04T09:25:46Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:17:25Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/trimat-tips/",
       "controls": "/guides/trimat-controls/",
@@ -629,8 +629,8 @@
     }
   },
   "skibidi-vs-noob-cameraman": {
-    "generated_at": "2026-08-04T09:25:47Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:17:46Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/skibidi-vs-noob-cameraman-tips/",
       "controls": "/guides/skibidi-vs-noob-cameraman-controls/",
@@ -640,323 +640,355 @@
     }
   },
   "jump-the-block": {
-    "generated_at": "2026-08-03T05:24:34Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:17:58Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/jump-the-block-tips/",
       "controls": "/guides/jump-the-block-controls/",
       "beginner-guide": "/guides/jump-the-block-beginner-guide/",
-      "similar": "/guides/games-like-jump-the-block/"
+      "similar": "/guides/games-like-jump-the-block/",
+      "faq": "/guides/jump-the-block-faq/"
     }
   },
   "pigeons-pigeons": {
-    "generated_at": "2026-08-03T05:24:35Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:18:17Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/pigeons-pigeons-tips/",
       "controls": "/guides/pigeons-pigeons-controls/",
       "beginner-guide": "/guides/pigeons-pigeons-beginner-guide/",
-      "similar": "/guides/games-like-pigeons-pigeons/"
+      "similar": "/guides/games-like-pigeons-pigeons/",
+      "faq": "/guides/pigeons-pigeons-faq/"
     }
   },
   "grow-a-garden-obby": {
-    "generated_at": "2026-08-03T05:24:37Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:18:29Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/grow-a-garden-obby-tips/",
       "controls": "/guides/grow-a-garden-obby-controls/",
       "beginner-guide": "/guides/grow-a-garden-obby-beginner-guide/",
-      "similar": "/guides/games-like-grow-a-garden-obby/"
+      "similar": "/guides/games-like-grow-a-garden-obby/",
+      "faq": "/guides/grow-a-garden-obby-faq/"
     }
   },
   "balls-collect-bounce-build": {
-    "generated_at": "2026-08-03T05:24:38Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:18:47Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/balls-collect-bounce-build-tips/",
       "controls": "/guides/balls-collect-bounce-build-controls/",
       "beginner-guide": "/guides/balls-collect-bounce-build-beginner-guide/",
-      "similar": "/guides/games-like-balls-collect-bounce-build/"
+      "similar": "/guides/games-like-balls-collect-bounce-build/",
+      "faq": "/guides/balls-collect-bounce-build-faq/"
     }
   },
   "valiant-knight": {
-    "generated_at": "2026-08-03T05:24:40Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:19:03Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/valiant-knight-tips/",
       "controls": "/guides/valiant-knight-controls/",
       "beginner-guide": "/guides/valiant-knight-beginner-guide/",
-      "similar": "/guides/games-like-valiant-knight/"
+      "similar": "/guides/games-like-valiant-knight/",
+      "faq": "/guides/valiant-knight-faq/"
     }
   },
   "color-tower": {
-    "generated_at": "2026-08-03T05:24:41Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:19:17Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/color-tower-tips/",
       "controls": "/guides/color-tower-controls/",
       "beginner-guide": "/guides/color-tower-beginner-guide/",
-      "similar": "/guides/games-like-color-tower/"
+      "similar": "/guides/games-like-color-tower/",
+      "faq": "/guides/color-tower-faq/"
     }
   },
   "endless-sprunki": {
-    "generated_at": "2026-08-03T05:24:43Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:19:32Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/endless-sprunki-tips/",
       "controls": "/guides/endless-sprunki-controls/",
       "beginner-guide": "/guides/endless-sprunki-beginner-guide/",
-      "similar": "/guides/games-like-endless-sprunki/"
+      "similar": "/guides/games-like-endless-sprunki/",
+      "faq": "/guides/endless-sprunki-faq/"
     }
   },
   "crazy-gravity": {
-    "generated_at": "2026-08-03T05:24:44Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:19:48Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/crazy-gravity-tips/",
       "controls": "/guides/crazy-gravity-controls/",
       "beginner-guide": "/guides/crazy-gravity-beginner-guide/",
-      "similar": "/guides/games-like-crazy-gravity/"
+      "similar": "/guides/games-like-crazy-gravity/",
+      "faq": "/guides/crazy-gravity-faq/"
     }
   },
   "rolling-going-balls": {
-    "generated_at": "2026-08-03T05:24:46Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:20:05Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/rolling-going-balls-tips/",
       "controls": "/guides/rolling-going-balls-controls/",
       "beginner-guide": "/guides/rolling-going-balls-beginner-guide/",
-      "similar": "/guides/games-like-rolling-going-balls/"
+      "similar": "/guides/games-like-rolling-going-balls/",
+      "faq": "/guides/rolling-going-balls-faq/"
     }
   },
   "piano-music-tiles-deluxe": {
-    "generated_at": "2026-08-03T05:24:47Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:20:18Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/piano-music-tiles-deluxe-tips/",
       "controls": "/guides/piano-music-tiles-deluxe-controls/",
       "beginner-guide": "/guides/piano-music-tiles-deluxe-beginner-guide/",
-      "similar": "/guides/games-like-piano-music-tiles-deluxe/"
+      "similar": "/guides/games-like-piano-music-tiles-deluxe/",
+      "faq": "/guides/piano-music-tiles-deluxe-faq/"
     }
   },
   "neon-guitar": {
-    "generated_at": "2026-08-03T05:24:49Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:20:32Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/neon-guitar-tips/",
       "controls": "/guides/neon-guitar-controls/",
       "beginner-guide": "/guides/neon-guitar-beginner-guide/",
-      "similar": "/guides/games-like-neon-guitar/"
+      "similar": "/guides/games-like-neon-guitar/",
+      "faq": "/guides/neon-guitar-faq/"
     }
   },
   "4-games-for-2-player": {
-    "generated_at": "2026-08-03T05:24:50Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:20:47Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/4-games-for-2-player-tips/",
       "controls": "/guides/4-games-for-2-player-controls/",
       "beginner-guide": "/guides/4-games-for-2-player-beginner-guide/",
-      "similar": "/guides/games-like-4-games-for-2-player/"
+      "similar": "/guides/games-like-4-games-for-2-player/",
+      "faq": "/guides/4-games-for-2-player-faq/"
     }
   },
   "doodle-game-ciovid-version": {
-    "generated_at": "2026-08-03T05:24:52Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:21:05Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/doodle-game-ciovid-version-tips/",
       "controls": "/guides/doodle-game-ciovid-version-controls/",
       "beginner-guide": "/guides/doodle-game-ciovid-version-beginner-guide/",
-      "similar": "/guides/games-like-doodle-game-ciovid-version/"
+      "similar": "/guides/games-like-doodle-game-ciovid-version/",
+      "faq": "/guides/doodle-game-ciovid-version-faq/"
     }
   },
   "medieval-pong": {
-    "generated_at": "2026-08-03T05:24:53Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:21:16Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/medieval-pong-tips/",
       "controls": "/guides/medieval-pong-controls/",
       "beginner-guide": "/guides/medieval-pong-beginner-guide/",
-      "similar": "/guides/games-like-medieval-pong/"
+      "similar": "/guides/games-like-medieval-pong/",
+      "faq": "/guides/medieval-pong-faq/"
     }
   },
   "bubble-runner": {
-    "generated_at": "2026-08-03T05:24:55Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:21:29Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/bubble-runner-tips/",
       "controls": "/guides/bubble-runner-controls/",
       "beginner-guide": "/guides/bubble-runner-beginner-guide/",
-      "similar": "/guides/games-like-bubble-runner/"
+      "similar": "/guides/games-like-bubble-runner/",
+      "faq": "/guides/bubble-runner-faq/"
     }
   },
   "steve-red-dark": {
-    "generated_at": "2026-08-03T05:24:56Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:21:47Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/steve-red-dark-tips/",
       "controls": "/guides/steve-red-dark-controls/",
       "beginner-guide": "/guides/steve-red-dark-beginner-guide/",
-      "similar": "/guides/games-like-steve-red-dark/"
+      "similar": "/guides/games-like-steve-red-dark/",
+      "faq": "/guides/steve-red-dark-faq/"
     }
   },
   "galaxy-challenge": {
-    "generated_at": "2026-08-03T05:24:58Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:22:02Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/galaxy-challenge-tips/",
       "controls": "/guides/galaxy-challenge-controls/",
       "beginner-guide": "/guides/galaxy-challenge-beginner-guide/",
-      "similar": "/guides/games-like-galaxy-challenge/"
+      "similar": "/guides/games-like-galaxy-challenge/",
+      "faq": "/guides/galaxy-challenge-faq/"
     }
   },
   "spaceman-adventure": {
-    "generated_at": "2026-08-03T05:24:59Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:22:14Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/spaceman-adventure-tips/",
       "controls": "/guides/spaceman-adventure-controls/",
       "beginner-guide": "/guides/spaceman-adventure-beginner-guide/",
-      "similar": "/guides/games-like-spaceman-adventure/"
+      "similar": "/guides/games-like-spaceman-adventure/",
+      "faq": "/guides/spaceman-adventure-faq/"
     }
   },
   "crowd-enhance": {
-    "generated_at": "2026-08-03T05:25:01Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:22:30Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/crowd-enhance-tips/",
       "controls": "/guides/crowd-enhance-controls/",
       "beginner-guide": "/guides/crowd-enhance-beginner-guide/",
-      "similar": "/guides/games-like-crowd-enhance/"
+      "similar": "/guides/games-like-crowd-enhance/",
+      "faq": "/guides/crowd-enhance-faq/"
     }
   },
   "within-the-borders": {
-    "generated_at": "2026-08-03T05:25:02Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:22:48Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/within-the-borders-tips/",
       "controls": "/guides/within-the-borders-controls/",
       "beginner-guide": "/guides/within-the-borders-beginner-guide/",
-      "similar": "/guides/games-like-within-the-borders/"
+      "similar": "/guides/games-like-within-the-borders/",
+      "faq": "/guides/within-the-borders-faq/"
     }
   },
   "jumper-bot": {
-    "generated_at": "2026-08-03T05:25:04Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:23:02Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/jumper-bot-tips/",
       "controls": "/guides/jumper-bot-controls/",
       "beginner-guide": "/guides/jumper-bot-beginner-guide/",
-      "similar": "/guides/games-like-jumper-bot/"
+      "similar": "/guides/games-like-jumper-bot/",
+      "faq": "/guides/jumper-bot-faq/"
     }
   },
   "rolling-ball-runner": {
-    "generated_at": "2026-08-03T05:25:05Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-05T09:23:16Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/rolling-ball-runner-tips/",
       "controls": "/guides/rolling-ball-runner-controls/",
       "beginner-guide": "/guides/rolling-ball-runner-beginner-guide/",
-      "similar": "/guides/games-like-rolling-ball-runner/"
+      "similar": "/guides/games-like-rolling-ball-runner/",
+      "faq": "/guides/rolling-ball-runner-faq/"
     }
   },
   "just-bubbles": {
-    "generated_at": "2026-08-03T05:25:07Z",
+    "generated_at": "2026-08-05T09:23:35Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/just-bubbles-tips/",
       "controls": "/guides/just-bubbles-controls/",
       "beginner-guide": "/guides/just-bubbles-beginner-guide/",
-      "similar": "/guides/games-like-just-bubbles/"
+      "similar": "/guides/games-like-just-bubbles/",
+      "faq": "/guides/just-bubbles-faq/"
     }
   },
   "cartoon-flight": {
-    "generated_at": "2026-08-03T05:25:09Z",
+    "generated_at": "2026-08-05T09:23:37Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/cartoon-flight-tips/",
       "controls": "/guides/cartoon-flight-controls/",
       "beginner-guide": "/guides/cartoon-flight-beginner-guide/",
-      "similar": "/guides/games-like-cartoon-flight/"
+      "similar": "/guides/games-like-cartoon-flight/",
+      "faq": "/guides/cartoon-flight-faq/"
     }
   },
   "stickman-swing-hook": {
-    "generated_at": "2026-08-03T05:25:10Z",
+    "generated_at": "2026-08-05T09:23:38Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/stickman-swing-hook-tips/",
       "controls": "/guides/stickman-swing-hook-controls/",
       "beginner-guide": "/guides/stickman-swing-hook-beginner-guide/",
-      "similar": "/guides/games-like-stickman-swing-hook/"
+      "similar": "/guides/games-like-stickman-swing-hook/",
+      "faq": "/guides/stickman-swing-hook-faq/"
     }
   },
   "sprunki-stick": {
-    "generated_at": "2026-08-03T05:25:12Z",
+    "generated_at": "2026-08-05T09:23:40Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/sprunki-stick-tips/",
       "controls": "/guides/sprunki-stick-controls/",
       "beginner-guide": "/guides/sprunki-stick-beginner-guide/",
-      "similar": "/guides/games-like-sprunki-stick/"
+      "similar": "/guides/games-like-sprunki-stick/",
+      "faq": "/guides/sprunki-stick-faq/"
     }
   },
   "undead-crate-boy": {
-    "generated_at": "2026-08-03T05:25:13Z",
+    "generated_at": "2026-08-05T09:23:41Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/undead-crate-boy-tips/",
       "controls": "/guides/undead-crate-boy-controls/",
       "beginner-guide": "/guides/undead-crate-boy-beginner-guide/",
-      "similar": "/guides/games-like-undead-crate-boy/"
+      "similar": "/guides/games-like-undead-crate-boy/",
+      "faq": "/guides/undead-crate-boy-faq/"
     }
   },
   "gold-mine": {
-    "generated_at": "2026-08-03T05:25:15Z",
+    "generated_at": "2026-08-05T09:23:43Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/gold-mine-tips/",
       "controls": "/guides/gold-mine-controls/",
       "beginner-guide": "/guides/gold-mine-beginner-guide/",
-      "similar": "/guides/games-like-gold-mine/"
+      "similar": "/guides/games-like-gold-mine/",
+      "faq": "/guides/gold-mine-faq/"
     }
   },
   "steveminer-home": {
-    "generated_at": "2026-08-03T05:25:16Z",
+    "generated_at": "2026-08-05T09:23:44Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/steveminer-home-tips/",
       "controls": "/guides/steveminer-home-controls/",
       "beginner-guide": "/guides/steveminer-home-beginner-guide/",
-      "similar": "/guides/games-like-steveminer-home/"
+      "similar": "/guides/games-like-steveminer-home/",
+      "faq": "/guides/steveminer-home-faq/"
     }
   },
   "apples-lemons": {
-    "generated_at": "2026-08-03T05:25:18Z",
+    "generated_at": "2026-08-05T09:23:46Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/apples-lemons-tips/",
       "controls": "/guides/apples-lemons-controls/",
       "beginner-guide": "/guides/apples-lemons-beginner-guide/",
-      "similar": "/guides/games-like-apples-lemons/"
+      "similar": "/guides/games-like-apples-lemons/",
+      "faq": "/guides/apples-lemons-faq/"
     }
   },
   "fruit-chef": {
-    "generated_at": "2026-08-03T05:25:19Z",
+    "generated_at": "2026-08-05T09:23:47Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/fruit-chef-tips/",
       "controls": "/guides/fruit-chef-controls/",
       "beginner-guide": "/guides/fruit-chef-beginner-guide/",
-      "similar": "/guides/games-like-fruit-chef/"
+      "similar": "/guides/games-like-fruit-chef/",
+      "faq": "/guides/fruit-chef-faq/"
     }
   },
   "zoocraft": {
-    "generated_at": "2026-08-03T05:25:21Z",
+    "generated_at": "2026-08-05T09:23:49Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/zoocraft-tips/",
       "controls": "/guides/zoocraft-controls/",
       "beginner-guide": "/guides/zoocraft-beginner-guide/",
-      "similar": "/guides/games-like-zoocraft/"
+      "similar": "/guides/games-like-zoocraft/",
+      "faq": "/guides/zoocraft-faq/"
     }
   },
   "mob-control": {

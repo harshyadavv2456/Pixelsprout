@@ -403,193 +403,225 @@
     "tips": "/guides/jump-the-block-tips/",
     "controls": "/guides/jump-the-block-controls/",
     "beginner-guide": "/guides/jump-the-block-beginner-guide/",
-    "similar": "/guides/games-like-jump-the-block/"
+    "similar": "/guides/games-like-jump-the-block/",
+    "faq": "/guides/jump-the-block-faq/"
   },
   "pigeons-pigeons": {
     "tips": "/guides/pigeons-pigeons-tips/",
     "controls": "/guides/pigeons-pigeons-controls/",
     "beginner-guide": "/guides/pigeons-pigeons-beginner-guide/",
-    "similar": "/guides/games-like-pigeons-pigeons/"
+    "similar": "/guides/games-like-pigeons-pigeons/",
+    "faq": "/guides/pigeons-pigeons-faq/"
   },
   "grow-a-garden-obby": {
     "tips": "/guides/grow-a-garden-obby-tips/",
     "controls": "/guides/grow-a-garden-obby-controls/",
     "beginner-guide": "/guides/grow-a-garden-obby-beginner-guide/",
-    "similar": "/guides/games-like-grow-a-garden-obby/"
+    "similar": "/guides/games-like-grow-a-garden-obby/",
+    "faq": "/guides/grow-a-garden-obby-faq/"
   },
   "balls-collect-bounce-build": {
     "tips": "/guides/balls-collect-bounce-build-tips/",
     "controls": "/guides/balls-collect-bounce-build-controls/",
     "beginner-guide": "/guides/balls-collect-bounce-build-beginner-guide/",
-    "similar": "/guides/games-like-balls-collect-bounce-build/"
+    "similar": "/guides/games-like-balls-collect-bounce-build/",
+    "faq": "/guides/balls-collect-bounce-build-faq/"
   },
   "valiant-knight": {
     "tips": "/guides/valiant-knight-tips/",
     "controls": "/guides/valiant-knight-controls/",
     "beginner-guide": "/guides/valiant-knight-beginner-guide/",
-    "similar": "/guides/games-like-valiant-knight/"
+    "similar": "/guides/games-like-valiant-knight/",
+    "faq": "/guides/valiant-knight-faq/"
   },
   "color-tower": {
     "tips": "/guides/color-tower-tips/",
     "controls": "/guides/color-tower-controls/",
     "beginner-guide": "/guides/color-tower-beginner-guide/",
-    "similar": "/guides/games-like-color-tower/"
+    "similar": "/guides/games-like-color-tower/",
+    "faq": "/guides/color-tower-faq/"
   },
   "endless-sprunki": {
     "tips": "/guides/endless-sprunki-tips/",
     "controls": "/guides/endless-sprunki-controls/",
     "beginner-guide": "/guides/endless-sprunki-beginner-guide/",
-    "similar": "/guides/games-like-endless-sprunki/"
+    "similar": "/guides/games-like-endless-sprunki/",
+    "faq": "/guides/endless-sprunki-faq/"
   },
   "crazy-gravity": {
     "tips": "/guides/crazy-gravity-tips/",
     "controls": "/guides/crazy-gravity-controls/",
     "beginner-guide": "/guides/crazy-gravity-beginner-guide/",
-    "similar": "/guides/games-like-crazy-gravity/"
+    "similar": "/guides/games-like-crazy-gravity/",
+    "faq": "/guides/crazy-gravity-faq/"
   },
   "rolling-going-balls": {
     "tips": "/guides/rolling-going-balls-tips/",
     "controls": "/guides/rolling-going-balls-controls/",
     "beginner-guide": "/guides/rolling-going-balls-beginner-guide/",
-    "similar": "/guides/games-like-rolling-going-balls/"
+    "similar": "/guides/games-like-rolling-going-balls/",
+    "faq": "/guides/rolling-going-balls-faq/"
   },
   "piano-music-tiles-deluxe": {
     "tips": "/guides/piano-music-tiles-deluxe-tips/",
     "controls": "/guides/piano-music-tiles-deluxe-controls/",
     "beginner-guide": "/guides/piano-music-tiles-deluxe-beginner-guide/",
-    "similar": "/guides/games-like-piano-music-tiles-deluxe/"
+    "similar": "/guides/games-like-piano-music-tiles-deluxe/",
+    "faq": "/guides/piano-music-tiles-deluxe-faq/"
   },
   "neon-guitar": {
     "tips": "/guides/neon-guitar-tips/",
     "controls": "/guides/neon-guitar-controls/",
     "beginner-guide": "/guides/neon-guitar-beginner-guide/",
-    "similar": "/guides/games-like-neon-guitar/"
+    "similar": "/guides/games-like-neon-guitar/",
+    "faq": "/guides/neon-guitar-faq/"
   },
   "4-games-for-2-player": {
     "tips": "/guides/4-games-for-2-player-tips/",
     "controls": "/guides/4-games-for-2-player-controls/",
     "beginner-guide": "/guides/4-games-for-2-player-beginner-guide/",
-    "similar": "/guides/games-like-4-games-for-2-player/"
+    "similar": "/guides/games-like-4-games-for-2-player/",
+    "faq": "/guides/4-games-for-2-player-faq/"
   },
   "doodle-game-ciovid-version": {
     "tips": "/guides/doodle-game-ciovid-version-tips/",
     "controls": "/guides/doodle-game-ciovid-version-controls/",
     "beginner-guide": "/guides/doodle-game-ciovid-version-beginner-guide/",
-    "similar": "/guides/games-like-doodle-game-ciovid-version/"
+    "similar": "/guides/games-like-doodle-game-ciovid-version/",
+    "faq": "/guides/doodle-game-ciovid-version-faq/"
   },
   "medieval-pong": {
     "tips": "/guides/medieval-pong-tips/",
     "controls": "/guides/medieval-pong-controls/",
     "beginner-guide": "/guides/medieval-pong-beginner-guide/",
-    "similar": "/guides/games-like-medieval-pong/"
+    "similar": "/guides/games-like-medieval-pong/",
+    "faq": "/guides/medieval-pong-faq/"
   },
   "bubble-runner": {
     "tips": "/guides/bubble-runner-tips/",
     "controls": "/guides/bubble-runner-controls/",
     "beginner-guide": "/guides/bubble-runner-beginner-guide/",
-    "similar": "/guides/games-like-bubble-runner/"
+    "similar": "/guides/games-like-bubble-runner/",
+    "faq": "/guides/bubble-runner-faq/"
   },
   "steve-red-dark": {
     "tips": "/guides/steve-red-dark-tips/",
     "controls": "/guides/steve-red-dark-controls/",
     "beginner-guide": "/guides/steve-red-dark-beginner-guide/",
-    "similar": "/guides/games-like-steve-red-dark/"
+    "similar": "/guides/games-like-steve-red-dark/",
+    "faq": "/guides/steve-red-dark-faq/"
   },
   "galaxy-challenge": {
     "tips": "/guides/galaxy-challenge-tips/",
     "controls": "/guides/galaxy-challenge-controls/",
     "beginner-guide": "/guides/galaxy-challenge-beginner-guide/",
-    "similar": "/guides/games-like-galaxy-challenge/"
+    "similar": "/guides/games-like-galaxy-challenge/",
+    "faq": "/guides/galaxy-challenge-faq/"
   },
   "spaceman-adventure": {
     "tips": "/guides/spaceman-adventure-tips/",
     "controls": "/guides/spaceman-adventure-controls/",
     "beginner-guide": "/guides/spaceman-adventure-beginner-guide/",
-    "similar": "/guides/games-like-spaceman-adventure/"
+    "similar": "/guides/games-like-spaceman-adventure/",
+    "faq": "/guides/spaceman-adventure-faq/"
   },
   "crowd-enhance": {
     "tips": "/guides/crowd-enhance-tips/",
     "controls": "/guides/crowd-enhance-controls/",
     "beginner-guide": "/guides/crowd-enhance-beginner-guide/",
-    "similar": "/guides/games-like-crowd-enhance/"
+    "similar": "/guides/games-like-crowd-enhance/",
+    "faq": "/guides/crowd-enhance-faq/"
   },
   "within-the-borders": {
     "tips": "/guides/within-the-borders-tips/",
     "controls": "/guides/within-the-borders-controls/",
     "beginner-guide": "/guides/within-the-borders-beginner-guide/",
-    "similar": "/guides/games-like-within-the-borders/"
+    "similar": "/guides/games-like-within-the-borders/",
+    "faq": "/guides/within-the-borders-faq/"
   },
   "jumper-bot": {
     "tips": "/guides/jumper-bot-tips/",
     "controls": "/guides/jumper-bot-controls/",
     "beginner-guide": "/guides/jumper-bot-beginner-guide/",
-    "similar": "/guides/games-like-jumper-bot/"
+    "similar": "/guides/games-like-jumper-bot/",
+    "faq": "/guides/jumper-bot-faq/"
   },
   "rolling-ball-runner": {
     "tips": "/guides/rolling-ball-runner-tips/",
     "controls": "/guides/rolling-ball-runner-controls/",
     "beginner-guide": "/guides/rolling-ball-runner-beginner-guide/",
-    "similar": "/guides/games-like-rolling-ball-runner/"
+    "similar": "/guides/games-like-rolling-ball-runner/",
+    "faq": "/guides/rolling-ball-runner-faq/"
   },
   "just-bubbles": {
     "tips": "/guides/just-bubbles-tips/",
     "controls": "/guides/just-bubbles-controls/",
     "beginner-guide": "/guides/just-bubbles-beginner-guide/",
-    "similar": "/guides/games-like-just-bubbles/"
+    "similar": "/guides/games-like-just-bubbles/",
+    "faq": "/guides/just-bubbles-faq/"
   },
   "cartoon-flight": {
     "tips": "/guides/cartoon-flight-tips/",
     "controls": "/guides/cartoon-flight-controls/",
     "beginner-guide": "/guides/cartoon-flight-beginner-guide/",
-    "similar": "/guides/games-like-cartoon-flight/"
+    "similar": "/guides/games-like-cartoon-flight/",
+    "faq": "/guides/cartoon-flight-faq/"
   },
   "stickman-swing-hook": {
     "tips": "/guides/stickman-swing-hook-tips/",
     "controls": "/guides/stickman-swing-hook-controls/",
     "beginner-guide": "/guides/stickman-swing-hook-beginner-guide/",
-    "similar": "/guides/games-like-stickman-swing-hook/"
+    "similar": "/guides/games-like-stickman-swing-hook/",
+    "faq": "/guides/stickman-swing-hook-faq/"
   },
   "sprunki-stick": {
     "tips": "/guides/sprunki-stick-tips/",
     "controls": "/guides/sprunki-stick-controls/",
     "beginner-guide": "/guides/sprunki-stick-beginner-guide/",
-    "similar": "/guides/games-like-sprunki-stick/"
+    "similar": "/guides/games-like-sprunki-stick/",
+    "faq": "/guides/sprunki-stick-faq/"
   },
   "undead-crate-boy": {
     "tips": "/guides/undead-crate-boy-tips/",
     "controls": "/guides/undead-crate-boy-controls/",
     "beginner-guide": "/guides/undead-crate-boy-beginner-guide/",
-    "similar": "/guides/games-like-undead-crate-boy/"
+    "similar": "/guides/games-like-undead-crate-boy/",
+    "faq": "/guides/undead-crate-boy-faq/"
   },
   "gold-mine": {
     "tips": "/guides/gold-mine-tips/",
     "controls": "/guides/gold-mine-controls/",
     "beginner-guide": "/guides/gold-mine-beginner-guide/",
-    "similar": "/guides/games-like-gold-mine/"
+    "similar": "/guides/games-like-gold-mine/",
+    "faq": "/guides/gold-mine-faq/"
   },
   "steveminer-home": {
     "tips": "/guides/steveminer-home-tips/",
     "controls": "/guides/steveminer-home-controls/",
     "beginner-guide": "/guides/steveminer-home-beginner-guide/",
-    "similar": "/guides/games-like-steveminer-home/"
+    "similar": "/guides/games-like-steveminer-home/",
+    "faq": "/guides/steveminer-home-faq/"
   },
   "apples-lemons": {
     "tips": "/guides/apples-lemons-tips/",
     "controls": "/guides/apples-lemons-controls/",
     "beginner-guide": "/guides/apples-lemons-beginner-guide/",
-    "similar": "/guides/games-like-apples-lemons/"
+    "similar": "/guides/games-like-apples-lemons/",
+    "faq": "/guides/apples-lemons-faq/"
   },
   "fruit-chef": {
     "tips": "/guides/fruit-chef-tips/",
     "controls": "/guides/fruit-chef-controls/",
     "beginner-guide": "/guides/fruit-chef-beginner-guide/",
-    "similar": "/guides/games-like-fruit-chef/"
+    "similar": "/guides/games-like-fruit-chef/",
+    "faq": "/guides/fruit-chef-faq/"
   },
   "zoocraft": {
     "tips": "/guides/zoocraft-tips/",
     "controls": "/guides/zoocraft-controls/",
     "beginner-guide": "/guides/zoocraft-beginner-guide/",
-    "similar": "/guides/games-like-zoocraft/"
+    "similar": "/guides/games-like-zoocraft/",
+    "faq": "/guides/zoocraft-faq/"
   },
   "mob-control": {
     "tips": "/guides/mob-control-tips/",
