@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../assets/logo-icon.png">
+<title>Add to Half — Pixelsprout</title>
+<meta name="description" content="Play Add to Half free online, no download needed.">
+<link rel="stylesheet" href="../styles.css">
+<script defer src="/_vercel/insights/script.js"></script>
+<style>
+  .embed-frame-wrap {
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 480 / 320;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+  }
+  .embed-frame-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Add to Half", "description": "Sharpen your fraction skills in Add to Half, a fast-paced and brain-teasing math puzzle! In this game, your goal is simple&mdash;but tricky: find two fractions that add up to exactly one-half. Each round presents you with a mix of fraction tiles floating or flipping on the screen. Tap or click the correct pair before time runs out! As you progress, the fractions get more challenging &mdash; from simple ones like &frac14; and &frac14; to trickier combinations like and &sup1;&frasl;. Speed, accuracy, and quick thinking are your keys to climbing the leaderboard.", "genre": "Puzzle", "url": "https://playpixelsprout.com/games/add-to-half.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "image": "https://img.gamemonetize.com/5lfr5zmdckpfztyulsov3govcm25y3o1/512x384.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Puzzle", "item": "https://playpixelsprout.com/games/add-to-half.html"}, {"@type": "ListItem", "position": 3, "name": "Add to Half", "item": "https://playpixelsprout.com/games/add-to-half.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
+</head>
+<body>
+<div class="game-shell" data-thumbnail="https://img.gamemonetize.com/5lfr5zmdckpfztyulsov3govcm25y3o1/512x384.jpg">
+  <div class="breadcrumb" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:8px;">
+    <a href="../index.html" style="color:var(--teal);text-decoration:none;">Home</a> / Puzzle / Add to Half
+  </div>
+  <a class="back-link" href="../index.html">← back to Pixelsprout</a>
+  <h1 class="game-title">Add to Half</h1>
+  <div class="game-meta">Puzzle</div>
+
+  <div class="ad-slot ad-slot-banner">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-8466016918717424"
+         data-ad-slot="4936643192"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="game-board-frame">
+    <div class="embed-frame-wrap">
+      <iframe src="https://html5.gamemonetize.co/5lfr5zmdckpfztyulsov3govcm25y3o1/" allow="fullscreen; autoplay; screen-orientation;" scrolling="no" allowfullscreen title="Add to Half"></iframe>
+    </div>
+    <button class="action fullscreen-btn" onclick="
+      const f = document.querySelector('.embed-frame-wrap');
+      const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
+      if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
+    ">⛶ Fullscreen</button>
+    <p class="how-to">Sharpen your fraction skills in Add to Half, a fast-paced and brain-teasing math puzzle! In this game, your goal is simple&mdash;but tricky: find two fractions that add up to exactly one-half. Each round presents you with a mix of fraction tiles floating or flipping on the screen. Tap or click the correct pair before time runs out! As you progress, the fractions get more challenging &mdash; from simple ones like &frac14; and &frac14; to trickier combinations like and &sup1;&frasl;. Speed, accuracy, and quick thinking are your keys to climbing the leaderboard.</p>
+
+    <div class="ad-slot ad-slot-ribbon">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-8466016918717424"
+           data-ad-slot="1457517471"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <div class="similar-games">
+      <h3 class="similar-games-title">You might also like</h3>
+      <div class="similar-games-grid" id="similar-games-grid"></div>
+    </div>
+    <script>
+      fetch('../games-index.json')
+        .then(r => r.json())
+        .then(games => {
+          const currentSlug = 'add-to-half';
+          const currentCategory = 'Puzzle';
+          let matches = games.filter(g => g.category === currentCategory && g.slug !== currentSlug);
+          matches = matches.sort(() => 0.5 - Math.random());
+          if (matches.length < 4) {
+            const others = games.filter(g => g.slug !== currentSlug && !matches.some(m => m.slug === g.slug));
+            matches = matches.concat(others.sort(() => 0.5 - Math.random()).slice(0, 4 - matches.length));
+          }
+          matches = matches.slice(0, 4);
+          const grid = document.getElementById('similar-games-grid');
+          matches.forEach(g => {
+            const a = document.createElement('a');
+            a.className = 'similar-card';
+            a.href = g.slug + '.html';
+            a.innerHTML = '<img src="' + g.thumbnail + '" alt="" loading="lazy"><span>' + g.title + '</span>';
+            grid.appendChild(a);
+          });
+        })
+        .catch(() => {});
+    </script>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../assets/logo-icon.png">
+<title>WORDLY — Pixelsprout</title>
+<meta name="description" content="Play WORDLY free online, no download needed.">
+<link rel="stylesheet" href="../styles.css">
+<script defer src="/_vercel/insights/script.js"></script>
+<style>
+  .embed-frame-wrap {
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 480 / 320;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+  }
+  .embed-frame-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "WORDLY", "description": "Wordly is a fun and relaxing word puzzle game that trains your mind and vocabulary while keeping you entertained. Your goal is simple: form the target word by tapping the letters in the correct order. Each level brings a new challenge with words of increasing difficulty. Earn 15 coins for every correct answer and lose 15 for mistakes - so think carefully before you tap! You have five attempts per level; fail them all and it&rsquo;s game over. Use a Hint to reveal the first letter of the hidden word or Shuffle the tiles for a fresh perspective. The game is suitable for everyone!", "genre": "Puzzle", "url": "https://playpixelsprout.com/games/wordly.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "image": "https://img.gamemonetize.com/vy809reourjzmnf76c7l3b2sj7k2la96/512x384.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Puzzle", "item": "https://playpixelsprout.com/games/wordly.html"}, {"@type": "ListItem", "position": 3, "name": "WORDLY", "item": "https://playpixelsprout.com/games/wordly.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
+</head>
+<body>
+<div class="game-shell" data-thumbnail="https://img.gamemonetize.com/vy809reourjzmnf76c7l3b2sj7k2la96/512x384.jpg">
+  <div class="breadcrumb" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:8px;">
+    <a href="../index.html" style="color:var(--teal);text-decoration:none;">Home</a> / Puzzle / WORDLY
+  </div>
+  <a class="back-link" href="../index.html">← back to Pixelsprout</a>
+  <h1 class="game-title">WORDLY</h1>
+  <div class="game-meta">Puzzle</div>
+
+  <div class="ad-slot ad-slot-banner">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-8466016918717424"
+         data-ad-slot="4936643192"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="game-board-frame">
+    <div class="embed-frame-wrap">
+      <iframe src="https://html5.gamemonetize.co/vy809reourjzmnf76c7l3b2sj7k2la96/" allow="fullscreen; autoplay; screen-orientation;" scrolling="no" allowfullscreen title="WORDLY"></iframe>
+    </div>
+    <button class="action fullscreen-btn" onclick="
+      const f = document.querySelector('.embed-frame-wrap');
+      const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
+      if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
+    ">⛶ Fullscreen</button>
+    <p class="how-to">Wordly is a fun and relaxing word puzzle game that trains your mind and vocabulary while keeping you entertained. Your goal is simple: form the target word by tapping the letters in the correct order. Each level brings a new challenge with words of increasing difficulty. Earn 15 coins for every correct answer and lose 15 for mistakes - so think carefully before you tap! You have five attempts per level; fail them all and it&rsquo;s game over. Use a Hint to reveal the first letter of the hidden word or Shuffle the tiles for a fresh perspective. The game is suitable for everyone!</p>
+
+    <div class="ad-slot ad-slot-ribbon">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-8466016918717424"
+           data-ad-slot="1457517471"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <div class="similar-games">
+      <h3 class="similar-games-title">You might also like</h3>
+      <div class="similar-games-grid" id="similar-games-grid"></div>
+    </div>
+    <script>
+      fetch('../games-index.json')
+        .then(r => r.json())
+        .then(games => {
+          const currentSlug = 'wordly';
+          const currentCategory = 'Puzzle';
+          let matches = games.filter(g => g.category === currentCategory && g.slug !== currentSlug);
+          matches = matches.sort(() => 0.5 - Math.random());
+          if (matches.length < 4) {
+            const others = games.filter(g => g.slug !== currentSlug && !matches.some(m => m.slug === g.slug));
+            matches = matches.concat(others.sort(() => 0.5 - Math.random()).slice(0, 4 - matches.length));
+          }
+          matches = matches.slice(0, 4);
+          const grid = document.getElementById('similar-games-grid');
+          matches.forEach(g => {
+            const a = document.createElement('a');
+            a.className = 'similar-card';
+            a.href = g.slug + '.html';
+            a.innerHTML = '<img src="' + g.thumbnail + '" alt="" loading="lazy"><span>' + g.title + '</span>';
+            grid.appendChild(a);
+          });
+        })
+        .catch(() => {});
+    </script>
+  </div>
+</div>
+</body>
+</html>

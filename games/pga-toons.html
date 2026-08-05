@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../assets/logo-icon.png">
+<title>PGA Toons — Pixelsprout</title>
+<meta name="description" content="Play PGA Toons free online, no download needed.">
+<link rel="stylesheet" href="../styles.css">
+<script defer src="/_vercel/insights/script.js"></script>
+<style>
+  .embed-frame-wrap {
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 480 / 320;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+  }
+  .embed-frame-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "PGA Toons", "description": "Lock and load in a vibrant voxel world where every corner is a playground and every jump can win the round. PGA Toons blends classic arena shooting with modern movement and snappy controls. Parkour across rooftops, slide through alleys, bounce off jump pads, and jetpack into mid-air duels. Web Dev <a href='https://www.poki76.com/'>https://www.poki76.com/</a> .Whether you&rsquo;re clutching a round in Team Deathmatch or snatching the flag with a last-second dash, the action stays tight, readable, and gloriously cartoonish.", "genre": "Multiplayer", "url": "https://playpixelsprout.com/games/pga-toons.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "image": "https://img.gamemonetize.com/gw00mqn2tqrl78k76v4bug5o2ho9qng8/512x384.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Multiplayer", "item": "https://playpixelsprout.com/games/pga-toons.html"}, {"@type": "ListItem", "position": 3, "name": "PGA Toons", "item": "https://playpixelsprout.com/games/pga-toons.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
+</head>
+<body>
+<div class="game-shell" data-thumbnail="https://img.gamemonetize.com/gw00mqn2tqrl78k76v4bug5o2ho9qng8/512x384.jpg">
+  <div class="breadcrumb" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:8px;">
+    <a href="../index.html" style="color:var(--teal);text-decoration:none;">Home</a> / Multiplayer / PGA Toons
+  </div>
+  <a class="back-link" href="../index.html">← back to Pixelsprout</a>
+  <h1 class="game-title">PGA Toons</h1>
+  <div class="game-meta">Multiplayer</div>
+
+  <div class="ad-slot ad-slot-banner">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-8466016918717424"
+         data-ad-slot="4936643192"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="game-board-frame">
+    <div class="embed-frame-wrap">
+      <iframe src="https://html5.gamemonetize.co/gw00mqn2tqrl78k76v4bug5o2ho9qng8/" allow="fullscreen; autoplay; screen-orientation;" scrolling="no" allowfullscreen title="PGA Toons"></iframe>
+    </div>
+    <button class="action fullscreen-btn" onclick="
+      const f = document.querySelector('.embed-frame-wrap');
+      const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
+      if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
+    ">⛶ Fullscreen</button>
+    <p class="how-to">Lock and load in a vibrant voxel world where every corner is a playground and every jump can win the round. PGA Toons blends classic arena shooting with modern movement and snappy controls. Parkour across rooftops, slide through alleys, bounce off jump pads, and jetpack into mid-air duels. Web Dev <a href='https://www.poki76.com/'>https://www.poki76.com/</a> .Whether you&rsquo;re clutching a round in Team Deathmatch or snatching the flag with a last-second dash, the action stays tight, readable, and gloriously cartoonish.</p>
+
+    <div class="ad-slot ad-slot-ribbon">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-8466016918717424"
+           data-ad-slot="1457517471"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <div class="similar-games">
+      <h3 class="similar-games-title">You might also like</h3>
+      <div class="similar-games-grid" id="similar-games-grid"></div>
+    </div>
+    <script>
+      fetch('../games-index.json')
+        .then(r => r.json())
+        .then(games => {
+          const currentSlug = 'pga-toons';
+          const currentCategory = 'Multiplayer';
+          let matches = games.filter(g => g.category === currentCategory && g.slug !== currentSlug);
+          matches = matches.sort(() => 0.5 - Math.random());
+          if (matches.length < 4) {
+            const others = games.filter(g => g.slug !== currentSlug && !matches.some(m => m.slug === g.slug));
+            matches = matches.concat(others.sort(() => 0.5 - Math.random()).slice(0, 4 - matches.length));
+          }
+          matches = matches.slice(0, 4);
+          const grid = document.getElementById('similar-games-grid');
+          matches.forEach(g => {
+            const a = document.createElement('a');
+            a.className = 'similar-card';
+            a.href = g.slug + '.html';
+            a.innerHTML = '<img src="' + g.thumbnail + '" alt="" loading="lazy"><span>' + g.title + '</span>';
+            grid.appendChild(a);
+          });
+        })
+        .catch(() => {});
+    </script>
+  </div>
+</div>
+</body>
+</html>

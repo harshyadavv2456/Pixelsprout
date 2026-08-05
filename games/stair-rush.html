@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../assets/logo-icon.png">
+<title>Stair Rush — Pixelsprout</title>
+<meta name="description" content="Play Stair Rush free online, no download needed.">
+<link rel="stylesheet" href="../styles.css">
+<script defer src="/_vercel/insights/script.js"></script>
+<style>
+  .embed-frame-wrap {
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 480 / 320;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+  }
+  .embed-frame-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Stair Rush", "description": "Stair Rush is a fast-paced hyper-casual runner where your character automatically runs forward on a narrow track filled with obstacles, blocks, and platforms. Your goal is to collect tiles, build stairs, avoid obstacles, and reach the finish line. The more tiles you collect, the further you can climb, and the higher your score will be. Each level increases difficulty with tighter paths, moving obstacles, and bigger challenges. Players must react quickly, time their moves, and keep their balance to survive the course and complete the level.", "genre": "Stickman", "url": "https://playpixelsprout.com/games/stair-rush.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "image": "https://img.gamemonetize.com/qdz9rleg7bpgb74ho1pzumfof61g4kta/512x384.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Stickman", "item": "https://playpixelsprout.com/games/stair-rush.html"}, {"@type": "ListItem", "position": 3, "name": "Stair Rush", "item": "https://playpixelsprout.com/games/stair-rush.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
+</head>
+<body>
+<div class="game-shell" data-thumbnail="https://img.gamemonetize.com/qdz9rleg7bpgb74ho1pzumfof61g4kta/512x384.jpg">
+  <div class="breadcrumb" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:8px;">
+    <a href="../index.html" style="color:var(--teal);text-decoration:none;">Home</a> / Stickman / Stair Rush
+  </div>
+  <a class="back-link" href="../index.html">← back to Pixelsprout</a>
+  <h1 class="game-title">Stair Rush</h1>
+  <div class="game-meta">Stickman</div>
+
+  <div class="ad-slot ad-slot-banner">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-8466016918717424"
+         data-ad-slot="4936643192"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="game-board-frame">
+    <div class="embed-frame-wrap">
+      <iframe src="https://html5.gamemonetize.co/qdz9rleg7bpgb74ho1pzumfof61g4kta/" allow="fullscreen; autoplay; screen-orientation;" scrolling="no" allowfullscreen title="Stair Rush"></iframe>
+    </div>
+    <button class="action fullscreen-btn" onclick="
+      const f = document.querySelector('.embed-frame-wrap');
+      const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
+      if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
+    ">⛶ Fullscreen</button>
+    <p class="how-to">Stair Rush is a fast-paced hyper-casual runner where your character automatically runs forward on a narrow track filled with obstacles, blocks, and platforms. Your goal is to collect tiles, build stairs, avoid obstacles, and reach the finish line. The more tiles you collect, the further you can climb, and the higher your score will be. Each level increases difficulty with tighter paths, moving obstacles, and bigger challenges. Players must react quickly, time their moves, and keep their balance to survive the course and complete the level.</p>
+
+    <div class="ad-slot ad-slot-ribbon">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-8466016918717424"
+           data-ad-slot="1457517471"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <div class="similar-games">
+      <h3 class="similar-games-title">You might also like</h3>
+      <div class="similar-games-grid" id="similar-games-grid"></div>
+    </div>
+    <script>
+      fetch('../games-index.json')
+        .then(r => r.json())
+        .then(games => {
+          const currentSlug = 'stair-rush';
+          const currentCategory = 'Stickman';
+          let matches = games.filter(g => g.category === currentCategory && g.slug !== currentSlug);
+          matches = matches.sort(() => 0.5 - Math.random());
+          if (matches.length < 4) {
+            const others = games.filter(g => g.slug !== currentSlug && !matches.some(m => m.slug === g.slug));
+            matches = matches.concat(others.sort(() => 0.5 - Math.random()).slice(0, 4 - matches.length));
+          }
+          matches = matches.slice(0, 4);
+          const grid = document.getElementById('similar-games-grid');
+          matches.forEach(g => {
+            const a = document.createElement('a');
+            a.className = 'similar-card';
+            a.href = g.slug + '.html';
+            a.innerHTML = '<img src="' + g.thumbnail + '" alt="" loading="lazy"><span>' + g.title + '</span>';
+            grid.appendChild(a);
+          });
+        })
+        .catch(() => {});
+    </script>
+  </div>
+</div>
+</body>
+</html>

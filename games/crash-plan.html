@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../assets/logo-icon.png">
+<title>Crash Plan — Pixelsprout</title>
+<meta name="description" content="Play Crash Plan free online, no download needed.">
+<link rel="stylesheet" href="../styles.css">
+<script defer src="/_vercel/insights/script.js"></script>
+<style>
+  .embed-frame-wrap {
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 480 / 320;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+  }
+  .embed-frame-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "Crash Plan", "description": "Crash Plane is an addictive arcade flying game inspired by classic one-tap games. Control a burning plane and keep it in the air by tapping the screen while avoiding deadly obstacles and incoming bullets. The plane is already on fire, and every hit makes survival harder. Fly through changing weather conditions, including heavy rain, while reacting fast to enemy bullets and dangerous pipes. The longer you survive, the higher your score. Simple controls, fast gameplay, and increasing difficulty make Crash Plane easy to play but hard to master. How long can you survive in the sky?", "genre": "Clicker", "url": "https://playpixelsprout.com/games/crash-plan.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "image": "https://img.gamemonetize.com/3o7p7dddwn7zwedu0w1jff52pfc9ry9x/512x384.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Clicker", "item": "https://playpixelsprout.com/games/crash-plan.html"}, {"@type": "ListItem", "position": 3, "name": "Crash Plan", "item": "https://playpixelsprout.com/games/crash-plan.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
+</head>
+<body>
+<div class="game-shell" data-thumbnail="https://img.gamemonetize.com/3o7p7dddwn7zwedu0w1jff52pfc9ry9x/512x384.jpg">
+  <div class="breadcrumb" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:8px;">
+    <a href="../index.html" style="color:var(--teal);text-decoration:none;">Home</a> / Clicker / Crash Plan
+  </div>
+  <a class="back-link" href="../index.html">← back to Pixelsprout</a>
+  <h1 class="game-title">Crash Plan</h1>
+  <div class="game-meta">Clicker</div>
+
+  <div class="ad-slot ad-slot-banner">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-8466016918717424"
+         data-ad-slot="4936643192"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="game-board-frame">
+    <div class="embed-frame-wrap">
+      <iframe src="https://html5.gamemonetize.co/3o7p7dddwn7zwedu0w1jff52pfc9ry9x/" allow="fullscreen; autoplay; screen-orientation;" scrolling="no" allowfullscreen title="Crash Plan"></iframe>
+    </div>
+    <button class="action fullscreen-btn" onclick="
+      const f = document.querySelector('.embed-frame-wrap');
+      const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
+      if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
+    ">⛶ Fullscreen</button>
+    <p class="how-to">Crash Plane is an addictive arcade flying game inspired by classic one-tap games. Control a burning plane and keep it in the air by tapping the screen while avoiding deadly obstacles and incoming bullets. The plane is already on fire, and every hit makes survival harder. Fly through changing weather conditions, including heavy rain, while reacting fast to enemy bullets and dangerous pipes. The longer you survive, the higher your score. Simple controls, fast gameplay, and increasing difficulty make Crash Plane easy to play but hard to master. How long can you survive in the sky?</p>
+
+    <div class="ad-slot ad-slot-ribbon">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-8466016918717424"
+           data-ad-slot="1457517471"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <div class="similar-games">
+      <h3 class="similar-games-title">You might also like</h3>
+      <div class="similar-games-grid" id="similar-games-grid"></div>
+    </div>
+    <script>
+      fetch('../games-index.json')
+        .then(r => r.json())
+        .then(games => {
+          const currentSlug = 'crash-plan';
+          const currentCategory = 'Clicker';
+          let matches = games.filter(g => g.category === currentCategory && g.slug !== currentSlug);
+          matches = matches.sort(() => 0.5 - Math.random());
+          if (matches.length < 4) {
+            const others = games.filter(g => g.slug !== currentSlug && !matches.some(m => m.slug === g.slug));
+            matches = matches.concat(others.sort(() => 0.5 - Math.random()).slice(0, 4 - matches.length));
+          }
+          matches = matches.slice(0, 4);
+          const grid = document.getElementById('similar-games-grid');
+          matches.forEach(g => {
+            const a = document.createElement('a');
+            a.className = 'similar-card';
+            a.href = g.slug + '.html';
+            a.innerHTML = '<img src="' + g.thumbnail + '" alt="" loading="lazy"><span>' + g.title + '</span>';
+            grid.appendChild(a);
+          });
+        })
+        .catch(() => {});
+    </script>
+  </div>
+</div>
+</body>
+</html>

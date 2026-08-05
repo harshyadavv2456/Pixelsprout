@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="../assets/logo-icon.png">
+<title>The Garbaggio Hotel — Pixelsprout</title>
+<meta name="description" content="Play The Garbaggio Hotel free online, no download needed.">
+<link rel="stylesheet" href="../styles.css">
+<script defer src="/_vercel/insights/script.js"></script>
+<style>
+  .embed-frame-wrap {
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 480 / 320;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+  }
+  .embed-frame-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoGame", "name": "The Garbaggio Hotel", "description": "Welcome to Garbaggio Hotel, where guest comfort takes a backseat to cold, hard cash! Tap to squeeze every penny from your unfortunate visitors, then invest in expanding your sprawling tower of mediocrity. Build new floors, unlock hilarious upgrades, and watch animated guests wander through your establishment with varying degrees of regret. Automate your money-making empire and watch profits soar even when youre away. Accumulate enough wealth to trigger Renovation Credits &ndash; a prestige system that makes your terrible hotel slightly less terrible (but way more profitable). Big number progression, strategic upgrades, and idle gameplay mechanics.", "genre": "Hypercasual", "url": "https://playpixelsprout.com/games/the-garbaggio-hotel.html", "applicationCategory": "Game", "operatingSystem": "Web Browser", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "image": "https://img.gamemonetize.com/vr8dqrjjt1h9uhgi072o5hdj64huavn3/512x384.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"}, {"@type": "ListItem", "position": 2, "name": "Hypercasual", "item": "https://playpixelsprout.com/games/the-garbaggio-hotel.html"}, {"@type": "ListItem", "position": 3, "name": "The Garbaggio Hotel", "item": "https://playpixelsprout.com/games/the-garbaggio-hotel.html"}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VTNJRV4WG8');
+</script>
+</head>
+<body>
+<div class="game-shell" data-thumbnail="https://img.gamemonetize.com/vr8dqrjjt1h9uhgi072o5hdj64huavn3/512x384.jpg">
+  <div class="breadcrumb" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:8px;">
+    <a href="../index.html" style="color:var(--teal);text-decoration:none;">Home</a> / Hypercasual / The Garbaggio Hotel
+  </div>
+  <a class="back-link" href="../index.html">← back to Pixelsprout</a>
+  <h1 class="game-title">The Garbaggio Hotel</h1>
+  <div class="game-meta">Hypercasual</div>
+
+  <div class="ad-slot ad-slot-banner">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-8466016918717424"
+         data-ad-slot="4936643192"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div class="game-board-frame">
+    <div class="embed-frame-wrap">
+      <iframe src="https://html5.gamemonetize.co/vr8dqrjjt1h9uhgi072o5hdj64huavn3/" allow="fullscreen; autoplay; screen-orientation;" scrolling="no" allowfullscreen title="The Garbaggio Hotel"></iframe>
+    </div>
+    <button class="action fullscreen-btn" onclick="
+      const f = document.querySelector('.embed-frame-wrap');
+      const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
+      if (req) req.call(f);
+      if (typeof gtag === 'function') { gtag('event', 'fullscreen_click', { game_title: document.title }); }
+    ">⛶ Fullscreen</button>
+    <p class="how-to">Welcome to Garbaggio Hotel, where guest comfort takes a backseat to cold, hard cash! Tap to squeeze every penny from your unfortunate visitors, then invest in expanding your sprawling tower of mediocrity. Build new floors, unlock hilarious upgrades, and watch animated guests wander through your establishment with varying degrees of regret. Automate your money-making empire and watch profits soar even when youre away. Accumulate enough wealth to trigger Renovation Credits &ndash; a prestige system that makes your terrible hotel slightly less terrible (but way more profitable). Big number progression, strategic upgrades, and idle gameplay mechanics.</p>
+
+    <div class="ad-slot ad-slot-ribbon">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-8466016918717424"
+           data-ad-slot="1457517471"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <div class="similar-games">
+      <h3 class="similar-games-title">You might also like</h3>
+      <div class="similar-games-grid" id="similar-games-grid"></div>
+    </div>
+    <script>
+      fetch('../games-index.json')
+        .then(r => r.json())
+        .then(games => {
+          const currentSlug = 'the-garbaggio-hotel';
+          const currentCategory = 'Hypercasual';
+          let matches = games.filter(g => g.category === currentCategory && g.slug !== currentSlug);
+          matches = matches.sort(() => 0.5 - Math.random());
+          if (matches.length < 4) {
+            const others = games.filter(g => g.slug !== currentSlug && !matches.some(m => m.slug === g.slug));
+            matches = matches.concat(others.sort(() => 0.5 - Math.random()).slice(0, 4 - matches.length));
+          }
+          matches = matches.slice(0, 4);
+          const grid = document.getElementById('similar-games-grid');
+          matches.forEach(g => {
+            const a = document.createElement('a');
+            a.className = 'similar-card';
+            a.href = g.slug + '.html';
+            a.innerHTML = '<img src="' + g.thumbnail + '" alt="" loading="lazy"><span>' + g.title + '</span>';
+            grid.appendChild(a);
+          });
+        })
+        .catch(() => {});
+    </script>
+  </div>
+</div>
+</body>
+</html>

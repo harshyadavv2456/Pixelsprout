@@ -53,7 +53,7 @@ RSS_MAX_ITEMS = 60
 
 # ---- CONFIG ----
 FEED_URL_TEMPLATE = "https://gamemonetize.com/feed.php?format=0&page={page}"
-MAX_TOTAL_DEFAULT = 500          # see docstring point 2 - a real cap, not "everything"
+MAX_TOTAL_DEFAULT = 1500          # see docstring point 2 - a real cap, not "everything"
 MIN_DESCRIPTION_LENGTH = 80      # see docstring point 1 - weak proxy for quality, not a real score
 MAX_PAGES_TO_CHECK_DEFAULT = 100 # safety ceiling to prevent a runaway loop, not a business limit
 DUPLICATE_SCORE_THRESHOLD = 13   # same as auto-add-gamemonetize.py - kept identical on purpose
