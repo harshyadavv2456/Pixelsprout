@@ -46,6 +46,11 @@ GAME_PAGE_TEMPLATE = """<!DOCTYPE html>
 <title>{title} — Pixelsprout</title>
 <meta name="description" content="Play {title} free online, no download needed.">
 <link rel="stylesheet" href="../styles.css">
+<link rel="preconnect" href="https://img.gamepix.com">
+<link rel="preconnect" href="https://img.gamemonetize.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <script defer src="/_vercel/insights/script.js"></script>
 <style>
   .embed-frame-wrap {{

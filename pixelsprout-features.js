@@ -272,7 +272,38 @@
   function enhanceHomepage() {
     const recent = loadList(RECENT_KEY);
     const favorites = loadList(FAVORITES_KEY);
-    if (recent.length === 0 && favorites.length === 0) return; // new visitor, nothing to show
+
+    // "Continue Playing" - genuinely free, reuses data already tracked for
+    // the Recently Played pill button, just surfaced as a real homepage
+    // section instead of hidden behind a click. Hidden entirely for new
+    // visitors with no play history yet - never an empty/awkward section.
+    if (recent.length > 0) {
+      const section = document.getElementById('continue-playing');
+      const grid = document.getElementById('continue-playing-grid');
+      if (section && grid) {
+        recent.slice(0, 8).forEach(g => {
+          const a = document.createElement('a');
+          a.className = 'card';
+          a.href = g.slug.startsWith('cold-read') || g.slug.startsWith('gift-file')
+            ? (g.slug.includes('cold-read') ? 'cold-read/' : 'gift-file/')
+            : `games/${g.slug}.html`;
+          a.dataset.name = g.title.toLowerCase();
+          const thumb = g.thumbnail && g.thumbnail.trim() ? g.thumbnail : 'assets/logo-icon.png';
+          a.innerHTML = `
+            <span class="icon-tile teal" style="padding:0; overflow:hidden;">
+              <img src="${thumb}" alt="" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:9px;">
+            </span>
+            <div class="card-body">
+              <h3>${g.title}</h3>
+              <p>${g.category || ''}</p>
+            </div>`;
+          grid.appendChild(a);
+        });
+        section.style.display = '';
+      }
+    }
+
+    if (recent.length === 0 && favorites.length === 0) return; // nothing else to show
 
     // Small, unobtrusive buttons - don't push the catalog down, don't
     // dilute the "browse everything" homepage experience.

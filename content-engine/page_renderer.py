@@ -28,6 +28,11 @@ def _head(title, description, canonical_path, og_image, schema_blocks):
 <title>{title}</title>
 <meta name="description" content="{description}">
 <link rel="stylesheet" href="/styles.css">
+<link rel="preconnect" href="https://img.gamepix.com">
+<link rel="preconnect" href="https://img.gamemonetize.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE_CLIENT}" crossorigin="anonymous"></script>
 <meta property="og:type" content="article">
 <meta property="og:url" content="{SITE}{canonical_path}">
