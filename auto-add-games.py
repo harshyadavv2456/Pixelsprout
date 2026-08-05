@@ -295,9 +295,11 @@ def add_card_to_index(game):
     if existing_category:
         # Look up the color already used by this category's section, so the
         # new card matches the section it's being dropped into.
+        # Look up the color via the category div's own id attribute
+        # (a slugified version of the category name) - simpler and more
+        # exact than trying to pattern-match the surrounding structure.
         section_pattern = re.compile(
-            r'<div class="category (\w+)" data-section>\s*<span class="bar"></span>\s*'
-            + re.escape(category_heading)
+            r'<div id="' + re.escape(slugify(game["category"])) + r'" class="category (\w+)"'
         )
         section_match = section_pattern.search(index_html)
         game["color"] = section_match.group(1) if section_match else CATEGORY_COLORS[0]
@@ -308,7 +310,7 @@ def add_card_to_index(game):
     short_desc = game['description'][:70] + ('...' if len(game['description']) > 70 else '')
     card_html = f'''    <a class="card" href="games/{game['slug']}.html" data-name="{game['title'].lower()}">
       <span class="icon-tile {game['color']}" style="padding:0; overflow:hidden;">
-        <img src="{game['thumbnail']}" alt="" style="width:100%; height:100%; object-fit:cover; border-radius:9px;">
+        <img src="{game['thumbnail']}" alt="" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:9px;">
       </span>
       <div class="card-body">
         <h3>{game['title']}</h3>
@@ -318,26 +320,46 @@ def add_card_to_index(game):
 '''
 
     if existing_category:
-        # Insert the card right after this category's <div class="grid" data-grid>
-        # opening tag, and bump its displayed count by 1.
-        grid_pattern = re.compile(
-            re.escape(category_heading) + r'.*?<span class="count">(\d+)( games?)</span>.*?<div class="grid" data-grid>\n',
+        # Bump the displayed count for this category.
+        count_pattern = re.compile(
+            r'(' + re.escape(category_heading) + r'.*?<span class="count">)(\d+)( games?)(</span>)',
             re.DOTALL,
         )
-        match = grid_pattern.search(index_html)
-        if match:
-            new_count = int(match.group(1)) + 1
+
+        def _bump_count(m):
+            new_count = int(m.group(2)) + 1
             plural = " games" if new_count != 1 else " game"
-            block = match.group(0)
-            block = block.replace(f'{match.group(1)}{match.group(2)}</span>', f'{new_count}{plural}</span>', 1)
+            return m.group(1) + str(new_count) + plural + m.group(4)
+
+        index_html = count_pattern.sub(_bump_count, index_html, count=1)
+
+        # Append the new card at the END of this category's grid, not the
+        # start - keeps existing games ahead of newly-added ones in display
+        # order (the order they were actually added to the site), instead
+        # of every new addition jumping to the front and pushing everything
+        # else down.
+        grid_start_pattern = re.compile(
+            re.escape(category_heading) + r'.*?<div class="grid" data-grid>\r?\n',
+            re.DOTALL,
+        )
+        start_match = grid_start_pattern.search(index_html)
+        if start_match:
+            grid_content_start = start_match.end()
+            end_match = re.search(
+                r'\r?\n  <div id="[a-z0-9-]*" class="category |\r?\n  <p id="no-results"',
+                index_html[grid_content_start:],
+            )
+            grid_content_end = (
+                grid_content_start + end_match.start() if end_match else len(index_html)
+            )
             index_html = (
-                index_html[:match.start()]
-                + block
+                index_html[:grid_content_end]
                 + card_html
-                + index_html[match.end():]
+                + index_html[grid_content_end:]
             )
     else:
-        new_section = f'''  <div class="category {game['color']}" data-section>
+        category_slug = slugify(game['category'])
+        new_section = f'''  <div id="{category_slug}" class="category {game['color']}" data-section data-genre="{category_slug}">
     <span class="bar"></span>
     <h2>{game['category']}</h2>
     <span class="count">1 game</span>
