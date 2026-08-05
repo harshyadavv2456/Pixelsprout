@@ -1,0 +1,60 @@
+Catalog quality report - 57 issue(s) found
+============================================================
+
+DUPLICATE TITLE 'sprunki whooo': sprunki-whooo, sprunki-whooo
+DUPLICATE TITLE 'invaders destruction': invaders-destruction, invaders-destruction
+DUPLICATE TITLE 'rolling going balls': rolling-going-balls, rolling-going-balls
+DUPLICATE TITLE 'ghost runaway': ghost-runaway, ghost-runaway
+DUPLICATE TITLE 'kiddie farmers': kiddie-farmers, kiddie-farmers
+DUPLICATE TITLE 'blade forge 3d': blade-forge-3d, blade-forge-3d
+DUPLICATE TITLE 'construction site simulator': construction-site-simulator, construction-site-simulator
+DUPLICATE TITLE 'spaceflight simulator': spaceflight-simulator, spaceflight-simulator
+DUPLICATE TITLE 'junkyard keeper': junkyard-keeper, junkyard-keeper
+DUPLICATE TITLE 'lost things': lost-things, lost-things
+DUPLICATE TITLE 'mutant plants vs zombie': mutant-plants-vs-zombie, mutant-plants-vs-zombie
+DUPLICATE TITLE 'capybara go!': capybara-go, capybara-go
+DUPLICATE TITLE 'memory emoji': memory-emoji, memory-emoji
+DUPLICATE TITLE 'sink or float': sink-or-float, sink-or-float
+DUPLICATE TITLE 'hipsters vs rockers': hipsters-vs-rockers, hipsters-vs-rockers
+DUPLICATE TITLE 'going balls 3d': going-balls-3d, going-balls-3d
+DUPLICATE TITLE 'gully cricket': gully-cricket, gully-cricket
+DUPLICATE TITLE 'diner in the storm': diner-in-the-storm, diner-in-the-storm
+DUPLICATE TITLE 'hex planet idle': hex-planet-idle, hex-planet-idle
+DUPLICATE TITLE 'fighting vehicles arena': fighting-vehicles-arena, fighting-vehicles-arena
+DUPLICATE TITLE 'elemental gloves magic power': elemental-gloves-magic-power, elemental-gloves-magic-power
+DUPLICATE TITLE 'twisted auto metal': twisted-auto-metal, twisted-auto-metal
+DUPLICATE TITLE 'abc halloween': abc-halloween, abc-halloween
+DUPLICATE TITLE 'starship': starship, starship
+DUPLICATE TITLE 'go chicken go': go-chicken-go, go-chicken-go
+DUPLICATE TITLE 'count masters superhero': count-masters-superhero, count-masters-superhero
+DUPLICATE TITLE 'mcbros pixelcraft': mcbros-pixelcraft, mcbros-pixelcraft
+DUPLICATE TITLE 'purrrification': purrrification, purrrification
+DUPLICATE TITLE 'energy superman 3d': energy-superman-3d, energy-superman-3d
+DUPLICATE TITLE 'mad joker': mad-joker, mad-joker
+DUPLICATE TITLE 'granny gta vegas': granny-gta-vegas, granny-gta-vegas
+DUPLICATE TITLE 'world of military tanks': world-of-military-tanks, world-of-military-tanks
+DUPLICATE TITLE 'world of wartanks': world-of-wartanks, world-of-wartanks
+DUPLICATE TITLE 'ww2 frontline defense': ww2-frontline-defense, ww2-frontline-defense
+DUPLICATE TITLE 'carrot climber': carrot-climber, carrot-climber
+DUPLICATE TITLE 'plinker': plinker, plinker
+DUPLICATE TITLE 'nest quest': nest-quest, nest-quest
+DUPLICATE TITLE 'daily bento organizer': daily-bento-organizer, daily-bento-organizer
+DUPLICATE TITLE 'baby doll factory': baby-doll-factory, baby-doll-factory
+DUPLICATE TITLE 'data breach': data-breach, data-breach
+DUPLICATE TITLE 'epicrolla': epicrolla, epicrolla
+DUPLICATE TITLE 'the greedy crow': the-greedy-crow, the-greedy-crow
+DUPLICATE TITLE 'mosquito bite 3d': mosquito-bite-3d, mosquito-bite-3d
+DUPLICATE TITLE 'plush eggs vending machine': plush-eggs-vending-machine, plush-eggs-vending-machine
+DUPLICATE TITLE 'mob control shoot': mob-control-shoot, mob-control-shoot
+DUPLICATE TITLE 'breakit': breakit, breakit
+DUPLICATE TITLE 'real flight simulator': real-flight-simulator, real-flight-simulator
+DUPLICATE TITLE 'fruit merger': fruit-merger, fruit-merger
+DUPLICATE TITLE 'left or right women fashions': left-or-right-women-fashions, left-or-right-women-fashions
+DUPLICATE TITLE 'horror granny playtime': horror-granny-playtime, horror-granny-playtime
+DUPLICATE TITLE 'giveaway checkers': giveaway-checkers, giveaway-checkers
+DUPLICATE TITLE 'falcon dogfight': falcon-dogfight, falcon-dogfight
+DUPLICATE TITLE 'lion family sim online': lion-family-sim-online, lion-family-sim-online
+DUPLICATE TITLE 'sheep saga': sheep-saga, sheep-saga
+DUPLICATE TITLE 'fire truck driving simulator': fire-truck-driving-simulator, fire-truck-driving-simulator
+DUPLICATE TITLE 'the merchant': the-merchant, the-merchant
+DUPLICATE TITLE 'sins and desires': sins-and-desires, sins-and-desires
