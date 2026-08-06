@@ -882,8 +882,8 @@
     }
   },
   "just-bubbles": {
-    "generated_at": "2026-08-05T11:40:47Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:19:03Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/just-bubbles-tips/",
       "controls": "/guides/just-bubbles-controls/",
@@ -893,8 +893,8 @@
     }
   },
   "cartoon-flight": {
-    "generated_at": "2026-08-05T11:40:49Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:19:09Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/cartoon-flight-tips/",
       "controls": "/guides/cartoon-flight-controls/",
@@ -904,8 +904,8 @@
     }
   },
   "stickman-swing-hook": {
-    "generated_at": "2026-08-05T11:40:50Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:19:16Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/stickman-swing-hook-tips/",
       "controls": "/guides/stickman-swing-hook-controls/",
@@ -915,8 +915,8 @@
     }
   },
   "sprunki-stick": {
-    "generated_at": "2026-08-05T11:40:52Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:19:23Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/sprunki-stick-tips/",
       "controls": "/guides/sprunki-stick-controls/",
@@ -926,8 +926,8 @@
     }
   },
   "undead-crate-boy": {
-    "generated_at": "2026-08-05T11:40:53Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:19:38Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/undead-crate-boy-tips/",
       "controls": "/guides/undead-crate-boy-controls/",
@@ -937,8 +937,8 @@
     }
   },
   "gold-mine": {
-    "generated_at": "2026-08-05T11:40:55Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:19:51Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/gold-mine-tips/",
       "controls": "/guides/gold-mine-controls/",
@@ -948,8 +948,8 @@
     }
   },
   "steveminer-home": {
-    "generated_at": "2026-08-05T11:40:56Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:20:04Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/steveminer-home-tips/",
       "controls": "/guides/steveminer-home-controls/",
@@ -959,8 +959,8 @@
     }
   },
   "apples-lemons": {
-    "generated_at": "2026-08-05T11:40:58Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:20:18Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/apples-lemons-tips/",
       "controls": "/guides/apples-lemons-controls/",
@@ -970,8 +970,8 @@
     }
   },
   "fruit-chef": {
-    "generated_at": "2026-08-05T11:40:59Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:20:34Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/fruit-chef-tips/",
       "controls": "/guides/fruit-chef-controls/",
@@ -981,8 +981,8 @@
     }
   },
   "zoocraft": {
-    "generated_at": "2026-08-05T11:41:01Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:20:55Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/zoocraft-tips/",
       "controls": "/guides/zoocraft-controls/",
@@ -992,8 +992,8 @@
     }
   },
   "mob-control": {
-    "generated_at": "2026-08-05T11:41:02Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:21:08Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/mob-control-tips/",
       "controls": "/guides/mob-control-controls/",
@@ -1003,8 +1003,8 @@
     }
   },
   "mini-train-io": {
-    "generated_at": "2026-08-05T11:41:04Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:21:23Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/mini-train-io-tips/",
       "controls": "/guides/mini-train-io-controls/",
@@ -1014,8 +1014,8 @@
     }
   },
   "chief-joust": {
-    "generated_at": "2026-08-05T11:41:05Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:21:38Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/chief-joust-tips/",
       "controls": "/guides/chief-joust-controls/",
@@ -1025,8 +1025,8 @@
     }
   },
   "the-simple-piano": {
-    "generated_at": "2026-08-05T11:41:07Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:21:54Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/the-simple-piano-tips/",
       "controls": "/guides/the-simple-piano-controls/",
@@ -1036,8 +1036,8 @@
     }
   },
   "mr-wick-one-bullet": {
-    "generated_at": "2026-08-05T11:41:08Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:22:08Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/mr-wick-one-bullet-tips/",
       "controls": "/guides/mr-wick-one-bullet-controls/",
@@ -1047,8 +1047,8 @@
     }
   },
   "geometry-dash-game": {
-    "generated_at": "2026-08-05T11:41:10Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:22:22Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/geometry-dash-game-tips/",
       "controls": "/guides/geometry-dash-game-controls/",
@@ -1058,8 +1058,8 @@
     }
   },
   "pulse-arcade": {
-    "generated_at": "2026-08-05T11:41:11Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:22:36Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/pulse-arcade-tips/",
       "controls": "/guides/pulse-arcade-controls/",
@@ -1069,8 +1069,8 @@
     }
   },
   "don-t-press-it": {
-    "generated_at": "2026-08-05T11:41:13Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:22:50Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/don-t-press-it-tips/",
       "controls": "/guides/don-t-press-it-controls/",
@@ -1080,8 +1080,8 @@
     }
   },
   "noob-vs-hacker-zombie": {
-    "generated_at": "2026-08-05T11:41:14Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:23:08Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/noob-vs-hacker-zombie-tips/",
       "controls": "/guides/noob-vs-hacker-zombie-controls/",
@@ -1091,8 +1091,8 @@
     }
   },
   "christmas-candy-cane": {
-    "generated_at": "2026-08-05T11:41:16Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:23:23Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/christmas-candy-cane-tips/",
       "controls": "/guides/christmas-candy-cane-controls/",
@@ -1102,8 +1102,8 @@
     }
   },
   "magic-circle-online": {
-    "generated_at": "2026-08-05T11:41:17Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:23:37Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/magic-circle-online-tips/",
       "controls": "/guides/magic-circle-online-controls/",
@@ -1113,8 +1113,8 @@
     }
   },
   "flappy-blob": {
-    "generated_at": "2026-08-05T11:41:19Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:23:49Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/flappy-blob-tips/",
       "controls": "/guides/flappy-blob-controls/",
@@ -1124,8 +1124,8 @@
     }
   },
   "valiant-knight-save-the-princess": {
-    "generated_at": "2026-08-05T11:41:20Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:24:04Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/valiant-knight-save-the-princess-tips/",
       "controls": "/guides/valiant-knight-save-the-princess-controls/",
@@ -1135,8 +1135,8 @@
     }
   },
   "andys-factory": {
-    "generated_at": "2026-08-05T11:41:22Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:24:17Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/andys-factory-tips/",
       "controls": "/guides/andys-factory-controls/",
@@ -1146,8 +1146,8 @@
     }
   },
   "king-of-majesty": {
-    "generated_at": "2026-08-05T11:41:23Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:24:31Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/king-of-majesty-tips/",
       "controls": "/guides/king-of-majesty-controls/",
@@ -1157,8 +1157,8 @@
     }
   },
   "fallen-apples": {
-    "generated_at": "2026-08-05T11:41:25Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:24:45Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/fallen-apples-tips/",
       "controls": "/guides/fallen-apples-controls/",
@@ -1168,8 +1168,8 @@
     }
   },
   "skibidi-toilet-vs-cameraman": {
-    "generated_at": "2026-08-05T11:41:26Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:25:00Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/skibidi-toilet-vs-cameraman-tips/",
       "controls": "/guides/skibidi-toilet-vs-cameraman-controls/",
@@ -1179,8 +1179,8 @@
     }
   },
   "asteroids-survival": {
-    "generated_at": "2026-08-05T11:41:28Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:25:14Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/asteroids-survival-tips/",
       "controls": "/guides/asteroids-survival-controls/",
@@ -1190,8 +1190,8 @@
     }
   },
   "mysolar": {
-    "generated_at": "2026-08-05T11:41:29Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-06T09:25:28Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/mysolar-tips/",
       "controls": "/guides/mysolar-controls/",
@@ -1201,7 +1201,7 @@
     }
   },
   "street-fighter-online-game": {
-    "generated_at": "2026-08-05T11:41:31Z",
+    "generated_at": "2026-08-06T09:25:30Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/street-fighter-online-game-tips/",
@@ -1212,7 +1212,7 @@
     }
   },
   "gun-simulator": {
-    "generated_at": "2026-08-05T11:41:32Z",
+    "generated_at": "2026-08-06T09:25:32Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/gun-simulator-tips/",
@@ -1223,7 +1223,7 @@
     }
   },
   "candy-buff": {
-    "generated_at": "2026-08-05T11:41:34Z",
+    "generated_at": "2026-08-06T09:25:33Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/candy-buff-tips/",
@@ -1234,7 +1234,7 @@
     }
   },
   "santa-run": {
-    "generated_at": "2026-08-05T11:41:35Z",
+    "generated_at": "2026-08-06T09:25:35Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/santa-run-tips/",
@@ -1245,7 +1245,7 @@
     }
   },
   "timber-guy": {
-    "generated_at": "2026-08-05T11:41:37Z",
+    "generated_at": "2026-08-06T09:25:36Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/timber-guy-tips/",
@@ -1256,7 +1256,7 @@
     }
   },
   "snow-rain-fall-jumping": {
-    "generated_at": "2026-08-05T11:41:38Z",
+    "generated_at": "2026-08-06T09:25:38Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/snow-rain-fall-jumping-tips/",
@@ -1267,7 +1267,7 @@
     }
   },
   "santa-gift-breaker": {
-    "generated_at": "2026-08-05T11:41:40Z",
+    "generated_at": "2026-08-06T09:25:39Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/santa-gift-breaker-tips/",
@@ -1278,7 +1278,7 @@
     }
   },
   "mannequin-head-jumping-challenge": {
-    "generated_at": "2026-08-05T11:41:42Z",
+    "generated_at": "2026-08-06T09:25:41Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/mannequin-head-jumping-challenge-tips/",
@@ -1289,7 +1289,7 @@
     }
   },
   "christmas-fishing": {
-    "generated_at": "2026-08-05T11:41:43Z",
+    "generated_at": "2026-08-06T09:25:42Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/christmas-fishing-tips/",
@@ -1300,7 +1300,7 @@
     }
   },
   "flight-in-rain": {
-    "generated_at": "2026-08-05T11:41:45Z",
+    "generated_at": "2026-08-06T09:25:44Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/flight-in-rain-tips/",
@@ -1311,7 +1311,7 @@
     }
   },
   "neon-blitz": {
-    "generated_at": "2026-08-05T11:41:46Z",
+    "generated_at": "2026-08-06T09:25:45Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/neon-blitz-tips/",
