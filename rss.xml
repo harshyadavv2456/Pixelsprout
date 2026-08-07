@@ -5,6 +5,22 @@
   <link>https://playpixelsprout.com/</link>
   <description>Newest games added to Pixelsprout, a free browser gaming library.</description>
   <item>
+    <title>Evo Pit</title>
+    <link>https://playpixelsprout.com/games/evo-pit.html</link>
+    <guid>https://playpixelsprout.com/games/evo-pit.html</guid>
+    <description>Play Evo Pit free online at Pixelsprout — no download needed.</description>
+    <pubDate>Fri, 07 Aug 2026 06:58:54 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/evo-pit/cover/evo-pit.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
+    <title>Emberdeck</title>
+    <link>https://playpixelsprout.com/games/emberdeck.html</link>
+    <guid>https://playpixelsprout.com/games/emberdeck.html</guid>
+    <description>Play Emberdeck free online at Pixelsprout — no download needed.</description>
+    <pubDate>Fri, 07 Aug 2026 06:58:54 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/emberdeck/cover/emberdeck.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
     <title>Astronaut vs Aliens</title>
     <link>https://playpixelsprout.com/games/astronaut-vs-aliens.html</link>
     <guid>https://playpixelsprout.com/games/astronaut-vs-aliens.html</guid>
@@ -467,22 +483,6 @@
     <description>Play Indygirl and the Golden Skull free online at Pixelsprout — no download needed.</description>
     <pubDate>Wed, 05 Aug 2026 05:17:37 GMT</pubDate>
     <enclosure url="https://img.gamemonetize.com/9u8feqv3grgc780n912qubegy00a8tg1/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>ZombieCrash</title>
-    <link>https://playpixelsprout.com/games/zombiecrash.html</link>
-    <guid>https://playpixelsprout.com/games/zombiecrash.html</guid>
-    <description>Play ZombieCrash free online at Pixelsprout — no download needed.</description>
-    <pubDate>Wed, 05 Aug 2026 05:17:37 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/lf6ttexnma1ism1qkm056cfjb8dvvxi7/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Diner in the Storm</title>
-    <link>https://playpixelsprout.com/games/diner-in-the-storm.html</link>
-    <guid>https://playpixelsprout.com/games/diner-in-the-storm.html</guid>
-    <description>Play Diner in the Storm free online at Pixelsprout — no download needed.</description>
-    <pubDate>Wed, 05 Aug 2026 05:17:36 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/dxerm97p0pioazt3zsxhphhtueq3pavf/512x384.jpg" type="image/jpeg"/>
   </item>
 </channel>
 </rss>
