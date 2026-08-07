@@ -1201,8 +1201,8 @@
     }
   },
   "street-fighter-online-game": {
-    "generated_at": "2026-08-06T09:25:30Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:49:51Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/street-fighter-online-game-tips/",
       "controls": "/guides/street-fighter-online-game-controls/",
@@ -1212,8 +1212,8 @@
     }
   },
   "gun-simulator": {
-    "generated_at": "2026-08-06T09:25:32Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:49:58Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/gun-simulator-tips/",
       "controls": "/guides/gun-simulator-controls/",
@@ -1223,8 +1223,8 @@
     }
   },
   "candy-buff": {
-    "generated_at": "2026-08-06T09:25:33Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:50:05Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/candy-buff-tips/",
       "controls": "/guides/candy-buff-controls/",
@@ -1234,8 +1234,8 @@
     }
   },
   "santa-run": {
-    "generated_at": "2026-08-06T09:25:35Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:50:13Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/santa-run-tips/",
       "controls": "/guides/santa-run-controls/",
@@ -1245,8 +1245,8 @@
     }
   },
   "timber-guy": {
-    "generated_at": "2026-08-06T09:25:36Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:50:27Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/timber-guy-tips/",
       "controls": "/guides/timber-guy-controls/",
@@ -1256,8 +1256,8 @@
     }
   },
   "snow-rain-fall-jumping": {
-    "generated_at": "2026-08-06T09:25:38Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:50:44Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/snow-rain-fall-jumping-tips/",
       "controls": "/guides/snow-rain-fall-jumping-controls/",
@@ -1267,8 +1267,8 @@
     }
   },
   "santa-gift-breaker": {
-    "generated_at": "2026-08-06T09:25:39Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:50:56Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/santa-gift-breaker-tips/",
       "controls": "/guides/santa-gift-breaker-controls/",
@@ -1278,8 +1278,8 @@
     }
   },
   "mannequin-head-jumping-challenge": {
-    "generated_at": "2026-08-06T09:25:41Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:51:10Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/mannequin-head-jumping-challenge-tips/",
       "controls": "/guides/mannequin-head-jumping-challenge-controls/",
@@ -1289,8 +1289,8 @@
     }
   },
   "christmas-fishing": {
-    "generated_at": "2026-08-06T09:25:42Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:51:25Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/christmas-fishing-tips/",
       "controls": "/guides/christmas-fishing-controls/",
@@ -1300,8 +1300,8 @@
     }
   },
   "flight-in-rain": {
-    "generated_at": "2026-08-06T09:25:44Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:51:37Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/flight-in-rain-tips/",
       "controls": "/guides/flight-in-rain-controls/",
@@ -1311,8 +1311,8 @@
     }
   },
   "neon-blitz": {
-    "generated_at": "2026-08-06T09:25:45Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:51:52Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/neon-blitz-tips/",
       "controls": "/guides/neon-blitz-controls/",
@@ -1322,8 +1322,8 @@
     }
   },
   "tiny-boxes": {
-    "generated_at": "2026-08-05T11:41:48Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:52:05Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/tiny-boxes-tips/",
       "controls": "/guides/tiny-boxes-controls/",
@@ -1333,8 +1333,8 @@
     }
   },
   "alien-blocks": {
-    "generated_at": "2026-08-05T11:41:49Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:52:21Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/alien-blocks-tips/",
       "controls": "/guides/alien-blocks-controls/",
@@ -1344,8 +1344,8 @@
     }
   },
   "rombo": {
-    "generated_at": "2026-08-05T11:41:51Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:52:37Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/rombo-tips/",
       "controls": "/guides/rombo-controls/",
@@ -1355,8 +1355,8 @@
     }
   },
   "crazy-police": {
-    "generated_at": "2026-08-05T11:41:52Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:52:49Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/crazy-police-tips/",
       "controls": "/guides/crazy-police-controls/",
@@ -1366,8 +1366,8 @@
     }
   },
   "pac-vs-ghosts-2024": {
-    "generated_at": "2026-08-05T11:41:54Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:53:01Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/pac-vs-ghosts-2024-tips/",
       "controls": "/guides/pac-vs-ghosts-2024-controls/",
@@ -1377,8 +1377,8 @@
     }
   },
   "color-hoop-stack": {
-    "generated_at": "2026-08-05T11:41:55Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:53:21Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/color-hoop-stack-tips/",
       "controls": "/guides/color-hoop-stack-controls/",
@@ -1388,8 +1388,8 @@
     }
   },
   "car-nabbing-race-the-police-car-chase": {
-    "generated_at": "2026-08-05T11:41:57Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:53:35Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/car-nabbing-race-the-police-car-chase-tips/",
       "controls": "/guides/car-nabbing-race-the-police-car-chase-controls/",
@@ -1399,8 +1399,8 @@
     }
   },
   "floppy-paper": {
-    "generated_at": "2026-08-05T11:41:58Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:53:53Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/floppy-paper-tips/",
       "controls": "/guides/floppy-paper-controls/",
@@ -1410,8 +1410,8 @@
     }
   },
   "skeleton-knight": {
-    "generated_at": "2026-08-05T11:42:00Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:54:08Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/skeleton-knight-tips/",
       "controls": "/guides/skeleton-knight-controls/",
@@ -1421,8 +1421,8 @@
     }
   },
   "bouncing-blobs": {
-    "generated_at": "2026-08-05T11:42:01Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:54:20Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/bouncing-blobs-tips/",
       "controls": "/guides/bouncing-blobs-controls/",
@@ -1432,8 +1432,8 @@
     }
   },
   "space-war": {
-    "generated_at": "2026-08-05T11:42:03Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:54:39Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/space-war-tips/",
       "controls": "/guides/space-war-controls/",
@@ -1443,8 +1443,8 @@
     }
   },
   "zombie-coming-roguelike-siege": {
-    "generated_at": "2026-08-05T11:42:04Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:54:50Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/zombie-coming-roguelike-siege-tips/",
       "controls": "/guides/zombie-coming-roguelike-siege-controls/",
@@ -1454,8 +1454,8 @@
     }
   },
   "space-miner": {
-    "generated_at": "2026-08-05T11:42:06Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:55:04Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/space-miner-tips/",
       "controls": "/guides/space-miner-controls/",
@@ -1465,8 +1465,8 @@
     }
   },
   "merge-ant-insect-fusion": {
-    "generated_at": "2026-08-05T11:42:07Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:55:18Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/merge-ant-insect-fusion-tips/",
       "controls": "/guides/merge-ant-insect-fusion-controls/",
@@ -1476,8 +1476,8 @@
     }
   },
   "snake-io-war": {
-    "generated_at": "2026-08-05T11:42:09Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:55:32Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/snake-io-war-tips/",
       "controls": "/guides/snake-io-war-controls/",
@@ -1487,8 +1487,8 @@
     }
   },
   "space-cord": {
-    "generated_at": "2026-08-05T11:42:10Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:55:46Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/space-cord-tips/",
       "controls": "/guides/space-cord-controls/",
@@ -1498,8 +1498,8 @@
     }
   },
   "jump-drop-shell": {
-    "generated_at": "2026-08-05T11:42:12Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:55:59Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/jump-drop-shell-tips/",
       "controls": "/guides/jump-drop-shell-controls/",
@@ -1509,8 +1509,8 @@
     }
   },
   "dash-heroes-labyrinth": {
-    "generated_at": "2026-08-05T11:42:13Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:56:13Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/dash-heroes-labyrinth-tips/",
       "controls": "/guides/dash-heroes-labyrinth-controls/",
@@ -1520,8 +1520,8 @@
     }
   },
   "gorilla-tag-drag-and-drop-game": {
-    "generated_at": "2026-08-05T11:42:15Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-07T07:56:28Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/gorilla-tag-drag-and-drop-game-tips/",
       "controls": "/guides/gorilla-tag-drag-and-drop-game-controls/",
@@ -1531,7 +1531,7 @@
     }
   },
   "triangle-trip": {
-    "generated_at": "2026-08-05T11:42:16Z",
+    "generated_at": "2026-08-07T07:56:53Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/triangle-trip-tips/",
@@ -1542,7 +1542,7 @@
     }
   },
   "color-pumpkin-match": {
-    "generated_at": "2026-08-05T11:42:18Z",
+    "generated_at": "2026-08-07T07:56:54Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/color-pumpkin-match-tips/",
@@ -1553,7 +1553,7 @@
     }
   },
   "circle-fish": {
-    "generated_at": "2026-08-05T11:42:19Z",
+    "generated_at": "2026-08-07T07:56:56Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/circle-fish-tips/",
@@ -1564,7 +1564,7 @@
     }
   },
   "zrist-dx": {
-    "generated_at": "2026-08-05T11:42:21Z",
+    "generated_at": "2026-08-07T07:56:57Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/zrist-dx-tips/",
@@ -1575,7 +1575,7 @@
     }
   },
   "gf-fnf-dance-fight": {
-    "generated_at": "2026-08-05T11:42:22Z",
+    "generated_at": "2026-08-07T07:56:59Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/gf-fnf-dance-fight-tips/",
@@ -1586,7 +1586,7 @@
     }
   },
   "join-scroll-run": {
-    "generated_at": "2026-08-05T11:42:24Z",
+    "generated_at": "2026-08-07T07:57:00Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/join-scroll-run-tips/",
@@ -1597,7 +1597,7 @@
     }
   },
   "eatable-fishes": {
-    "generated_at": "2026-08-05T11:42:25Z",
+    "generated_at": "2026-08-07T07:57:02Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/eatable-fishes-tips/",
@@ -1608,7 +1608,7 @@
     }
   },
   "skibidi-toilet-creator": {
-    "generated_at": "2026-08-05T11:42:27Z",
+    "generated_at": "2026-08-07T07:57:03Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/skibidi-toilet-creator-tips/",
@@ -1619,7 +1619,7 @@
     }
   },
   "car-rapide": {
-    "generated_at": "2026-08-05T11:42:28Z",
+    "generated_at": "2026-08-07T07:57:05Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/car-rapide-tips/",
@@ -1630,7 +1630,7 @@
     }
   },
   "noob-steve-cave": {
-    "generated_at": "2026-08-05T11:42:30Z",
+    "generated_at": "2026-08-07T07:57:06Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/noob-steve-cave-tips/",
