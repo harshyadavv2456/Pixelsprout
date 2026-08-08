@@ -1117,115 +1117,134 @@
     "tips": "/guides/steve-alex-spooky-2-player-tips/",
     "controls": "/guides/steve-alex-spooky-2-player-controls/",
     "beginner-guide": "/guides/steve-alex-spooky-2-player-beginner-guide/",
-    "similar": "/guides/games-like-steve-alex-spooky-2-player/"
+    "similar": "/guides/games-like-steve-alex-spooky-2-player/",
+    "faq": "/guides/steve-alex-spooky-2-player-faq/"
   },
   "potion-frenzy-color-sorting-game": {
     "tips": "/guides/potion-frenzy-color-sorting-game-tips/",
     "controls": "/guides/potion-frenzy-color-sorting-game-controls/",
     "beginner-guide": "/guides/potion-frenzy-color-sorting-game-beginner-guide/",
-    "similar": "/guides/games-like-potion-frenzy-color-sorting-game/"
+    "similar": "/guides/games-like-potion-frenzy-color-sorting-game/",
+    "faq": "/guides/potion-frenzy-color-sorting-game-faq/"
   },
   "ufo-run": {
     "tips": "/guides/ufo-run-tips/",
     "controls": "/guides/ufo-run-controls/",
     "beginner-guide": "/guides/ufo-run-beginner-guide/",
-    "similar": "/guides/games-like-ufo-run/"
+    "similar": "/guides/games-like-ufo-run/",
+    "faq": "/guides/ufo-run-faq/"
   },
   "geometry-maze-maps": {
     "tips": "/guides/geometry-maze-maps-tips/",
     "controls": "/guides/geometry-maze-maps-controls/",
     "beginner-guide": "/guides/geometry-maze-maps-beginner-guide/",
-    "similar": "/guides/games-like-geometry-maze-maps/"
+    "similar": "/guides/games-like-geometry-maze-maps/",
+    "faq": "/guides/geometry-maze-maps-faq/"
   },
   "rule-out-the-dangerous-circle": {
     "tips": "/guides/rule-out-the-dangerous-circle-tips/",
     "controls": "/guides/rule-out-the-dangerous-circle-controls/",
     "beginner-guide": "/guides/rule-out-the-dangerous-circle-beginner-guide/",
-    "similar": "/guides/games-like-rule-out-the-dangerous-circle/"
+    "similar": "/guides/games-like-rule-out-the-dangerous-circle/",
+    "faq": "/guides/rule-out-the-dangerous-circle-faq/"
   },
   "steve-go-kart-portal": {
     "tips": "/guides/steve-go-kart-portal-tips/",
     "controls": "/guides/steve-go-kart-portal-controls/",
     "beginner-guide": "/guides/steve-go-kart-portal-beginner-guide/",
-    "similar": "/guides/games-like-steve-go-kart-portal/"
+    "similar": "/guides/games-like-steve-go-kart-portal/",
+    "faq": "/guides/steve-go-kart-portal-faq/"
   },
   "galaxy-bricks-breaker": {
     "tips": "/guides/galaxy-bricks-breaker-tips/",
     "controls": "/guides/galaxy-bricks-breaker-controls/",
     "beginner-guide": "/guides/galaxy-bricks-breaker-beginner-guide/",
-    "similar": "/guides/games-like-galaxy-bricks-breaker/"
+    "similar": "/guides/games-like-galaxy-bricks-breaker/",
+    "faq": "/guides/galaxy-bricks-breaker-faq/"
   },
   "throw-fast": {
     "tips": "/guides/throw-fast-tips/",
     "controls": "/guides/throw-fast-controls/",
     "beginner-guide": "/guides/throw-fast-beginner-guide/",
-    "similar": "/guides/games-like-throw-fast/"
+    "similar": "/guides/games-like-throw-fast/",
+    "faq": "/guides/throw-fast-faq/"
   },
   "frog-byte": {
     "tips": "/guides/frog-byte-tips/",
     "controls": "/guides/frog-byte-controls/",
     "beginner-guide": "/guides/frog-byte-beginner-guide/",
-    "similar": "/guides/games-like-frog-byte/"
+    "similar": "/guides/games-like-frog-byte/",
+    "faq": "/guides/frog-byte-faq/"
   },
   "clock-head": {
     "tips": "/guides/clock-head-tips/",
     "controls": "/guides/clock-head-controls/",
     "beginner-guide": "/guides/clock-head-beginner-guide/",
-    "similar": "/guides/games-like-clock-head/"
+    "similar": "/guides/games-like-clock-head/",
+    "faq": "/guides/clock-head-faq/"
   },
   "save-the-baby-home-rush": {
     "tips": "/guides/save-the-baby-home-rush-tips/",
     "controls": "/guides/save-the-baby-home-rush-controls/",
     "beginner-guide": "/guides/save-the-baby-home-rush-beginner-guide/",
-    "similar": "/guides/games-like-save-the-baby-home-rush/"
+    "similar": "/guides/games-like-save-the-baby-home-rush/",
+    "faq": "/guides/save-the-baby-home-rush-faq/"
   },
   "shooting-range": {
     "tips": "/guides/shooting-range-tips/",
     "controls": "/guides/shooting-range-controls/",
     "beginner-guide": "/guides/shooting-range-beginner-guide/",
-    "similar": "/guides/games-like-shooting-range/"
+    "similar": "/guides/games-like-shooting-range/",
+    "faq": "/guides/shooting-range-faq/"
   },
   "mini-springs": {
     "tips": "/guides/mini-springs-tips/",
     "controls": "/guides/mini-springs-controls/",
     "beginner-guide": "/guides/mini-springs-beginner-guide/",
-    "similar": "/guides/games-like-mini-springs/"
+    "similar": "/guides/games-like-mini-springs/",
+    "faq": "/guides/mini-springs-faq/"
   },
   "warriors-vs-evil-spirits": {
     "tips": "/guides/warriors-vs-evil-spirits-tips/",
     "controls": "/guides/warriors-vs-evil-spirits-controls/",
     "beginner-guide": "/guides/warriors-vs-evil-spirits-beginner-guide/",
-    "similar": "/guides/games-like-warriors-vs-evil-spirits/"
+    "similar": "/guides/games-like-warriors-vs-evil-spirits/",
+    "faq": "/guides/warriors-vs-evil-spirits-faq/"
   },
   "brick-breaker-classic-arcade-fun": {
     "tips": "/guides/brick-breaker-classic-arcade-fun-tips/",
     "controls": "/guides/brick-breaker-classic-arcade-fun-controls/",
     "beginner-guide": "/guides/brick-breaker-classic-arcade-fun-beginner-guide/",
-    "similar": "/guides/games-like-brick-breaker-classic-arcade-fun/"
+    "similar": "/guides/games-like-brick-breaker-classic-arcade-fun/",
+    "faq": "/guides/brick-breaker-classic-arcade-fun-faq/"
   },
   "galaxy-bricks": {
     "tips": "/guides/galaxy-bricks-tips/",
     "controls": "/guides/galaxy-bricks-controls/",
     "beginner-guide": "/guides/galaxy-bricks-beginner-guide/",
-    "similar": "/guides/games-like-galaxy-bricks/"
+    "similar": "/guides/games-like-galaxy-bricks/",
+    "faq": "/guides/galaxy-bricks-faq/"
   },
   "wizard-santa-jump": {
     "tips": "/guides/wizard-santa-jump-tips/",
     "controls": "/guides/wizard-santa-jump-controls/",
     "beginner-guide": "/guides/wizard-santa-jump-beginner-guide/",
-    "similar": "/guides/games-like-wizard-santa-jump/"
+    "similar": "/guides/games-like-wizard-santa-jump/",
+    "faq": "/guides/wizard-santa-jump-faq/"
   },
   "fruitmaster": {
     "tips": "/guides/fruitmaster-tips/",
     "controls": "/guides/fruitmaster-controls/",
     "beginner-guide": "/guides/fruitmaster-beginner-guide/",
-    "similar": "/guides/games-like-fruitmaster/"
+    "similar": "/guides/games-like-fruitmaster/",
+    "faq": "/guides/fruitmaster-faq/"
   },
   "battalion-commander": {
     "tips": "/guides/battalion-commander-tips/",
     "controls": "/guides/battalion-commander-controls/",
     "beginner-guide": "/guides/battalion-commander-beginner-guide/",
-    "similar": "/guides/games-like-battalion-commander/"
+    "similar": "/guides/games-like-battalion-commander/",
+    "faq": "/guides/battalion-commander-faq/"
   },
   "snake-simple-retro-game": {
     "tips": "/guides/snake-simple-retro-game-tips/",
