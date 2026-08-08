@@ -5,6 +5,14 @@
   <link>https://playpixelsprout.com/</link>
   <description>Newest games added to Pixelsprout, a free browser gaming library.</description>
   <item>
+    <title>Lotl Spa</title>
+    <link>https://playpixelsprout.com/games/lotl-spa.html</link>
+    <guid>https://playpixelsprout.com/games/lotl-spa.html</guid>
+    <description>Play Lotl Spa free online at Pixelsprout — no download needed.</description>
+    <pubDate>Sat, 08 Aug 2026 06:32:43 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/lotl-spa/cover/lotl-spa.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
     <title>Rocketcar Cup</title>
     <link>https://playpixelsprout.com/games/rocketcar-cup.html</link>
     <guid>https://playpixelsprout.com/games/rocketcar-cup.html</guid>
@@ -475,14 +483,6 @@
     <description>Play Wind Travelor free online at Pixelsprout — no download needed.</description>
     <pubDate>Wed, 05 Aug 2026 05:17:39 GMT</pubDate>
     <enclosure url="https://img.gamemonetize.com/s37eadhke08hmm32hb9nm8gqxsy81c0l/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Orcs: new lands</title>
-    <link>https://playpixelsprout.com/games/orcs-new-lands.html</link>
-    <guid>https://playpixelsprout.com/games/orcs-new-lands.html</guid>
-    <description>Play Orcs: new lands free online at Pixelsprout — no download needed.</description>
-    <pubDate>Wed, 05 Aug 2026 05:17:39 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/q8f7w2acdpcl0kz3lkq0tfh416gijgoe/512x384.jpg" type="image/jpeg"/>
   </item>
 </channel>
 </rss>
