@@ -5,6 +5,30 @@
   <link>https://playpixelsprout.com/</link>
   <description>Newest games added to Pixelsprout, a free browser gaming library.</description>
   <item>
+    <title>Sumo Shove</title>
+    <link>https://playpixelsprout.com/games/sumo-shove.html</link>
+    <guid>https://playpixelsprout.com/games/sumo-shove.html</guid>
+    <description>Play Sumo Shove free online at Pixelsprout — no download needed.</description>
+    <pubDate>Sun, 09 Aug 2026 06:36:42 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/sumo-shove/cover/sumo-shove.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
+    <title>Everything Forge</title>
+    <link>https://playpixelsprout.com/games/everything-forge.html</link>
+    <guid>https://playpixelsprout.com/games/everything-forge.html</guid>
+    <description>Play Everything Forge free online at Pixelsprout — no download needed.</description>
+    <pubDate>Sun, 09 Aug 2026 06:36:42 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/everything-forge/cover/everything-forge.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
+    <title>Impossible Repair Shop</title>
+    <link>https://playpixelsprout.com/games/impossible-repair-shop.html</link>
+    <guid>https://playpixelsprout.com/games/impossible-repair-shop.html</guid>
+    <description>Play Impossible Repair Shop free online at Pixelsprout — no download needed.</description>
+    <pubDate>Sun, 09 Aug 2026 06:36:41 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/impossible-repair-shop/cover/impossible-repair-shop.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
     <title>Charade 3D Game</title>
     <link>https://playpixelsprout.com/games/charade-3d-game.html</link>
     <guid>https://playpixelsprout.com/games/charade-3d-game.html</guid>
@@ -459,30 +483,6 @@
     <description>Play CobraZ io free online at Pixelsprout — no download needed.</description>
     <pubDate>Wed, 05 Aug 2026 05:17:43 GMT</pubDate>
     <enclosure url="https://img.gamemonetize.com/zq8jygdk9xuwh7puv21h1hvtn2m7xff9/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>MineRaid</title>
-    <link>https://playpixelsprout.com/games/mineraid.html</link>
-    <guid>https://playpixelsprout.com/games/mineraid.html</guid>
-    <description>Play MineRaid free online at Pixelsprout — no download needed.</description>
-    <pubDate>Wed, 05 Aug 2026 05:17:41 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/xhd8j2d0qrj2riqz1n708lo6f6leyyn5/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Push the Colors</title>
-    <link>https://playpixelsprout.com/games/push-the-colors.html</link>
-    <guid>https://playpixelsprout.com/games/push-the-colors.html</guid>
-    <description>Play Push the Colors free online at Pixelsprout — no download needed.</description>
-    <pubDate>Wed, 05 Aug 2026 05:17:41 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/mhrjc3pxgvzexdtch1bj602zbl69tlmh/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Wolf Life Simulator</title>
-    <link>https://playpixelsprout.com/games/wolf-life-simulator.html</link>
-    <guid>https://playpixelsprout.com/games/wolf-life-simulator.html</guid>
-    <description>Play Wolf Life Simulator free online at Pixelsprout — no download needed.</description>
-    <pubDate>Wed, 05 Aug 2026 05:17:40 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/d7d1b3h85p68dh7byofdqxgd6d5wirlf/512x384.jpg" type="image/jpeg"/>
   </item>
 </channel>
 </rss>
