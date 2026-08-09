@@ -44,6 +44,12 @@ atOptions = {
 <script src="https://www.highperformanceformat.com/da5095b2daea5c6ba87d034975239610/invoke.js"></script>
 </div>"""
 
+ADSTERRA_NATIVE = """<!-- ADSTERRA-NATIVE -->
+<div class="adsterra-slot adsterra-native" style="margin:16px auto;max-width:700px;">
+<script async="async" data-cfasync="false" src="https://pl30771855.effectivecpmnetwork.com/c3f3d41bbefde3a25a4d5d341b5582d1/invoke.js"></script>
+<div id="container-c3f3d41bbefde3a25a4d5d341b5582d1"></div>
+</div>"""
+
 
 def _head(title, description, canonical_path, og_image, schema_blocks):
     schema_html = "\n".join(
@@ -247,6 +253,8 @@ def render_guide_page(page_type, game, content, related_games, sibling_guides, c
       {category_link_html}
     </article>
 
+    {ADSTERRA_NATIVE}
+
     <a href="/games/{game['slug']}.html" style="display:block;max-width:640px;margin:24px auto;text-decoration:none;" aria-label="Play {game['title']}">{stat_card_svg}</a>
 
     {ADSTERRA_300x250}
@@ -355,6 +363,8 @@ def render_collection_page(collection, games, content):
   <div class="game-board-frame">
     <p style="max-width:760px;margin:0 auto 20px;color:var(--muted,#8a93b8);font-family:system-ui,sans-serif;font-size:15px;line-height:1.75;">{content.get('intro','')}</p>
     <div class="similar-games-grid">{grid}</div>
+
+    {ADSTERRA_NATIVE}
 
     {ADSTERRA_300x250}
 

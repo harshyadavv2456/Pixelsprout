@@ -1,62 +1,84 @@
-# Adsterra Integration — Deployment Steps
+# Adsterra Fix: Remove Popunder, Add Native Banner
+
+## Why
+Popunder is the format most tied to redirect/malware-blacklist complaints
+on Adsterra specifically (multiple publisher reports of sites getting
+flagged by antivirus vendors and Chrome after enabling it). Not worth the
+risk to Pixelsprout's traffic and SEO trust. Swapped it for Native Banner
+instead — stays on-page, blends with your layout, no redirect risk.
+
+## Final ad stack per game page
+1. AdSense banner (top) — unchanged
+2. **Native Banner (4:1)** — directly under the game embed / Fullscreen
+   button. This is the "ad when you open a game" slot you wanted —
+   Adsterra's own placement guide recommends exactly this spot ("Under the
+   player") for video/game content.
+3. Adsterra 300x250
+4. AdSense ribbon — unchanged
+5. Adsterra 728x90
+
+## Final ad stack per guide/collection ("blog") page
+1. AdSense banner (top) — unchanged
+2. Adsterra 728x90
+3. Article body
+4. **Native Banner** — middle of the page, after the article content
+   (Adsterra's recommended placement for text/mixed-content pages)
+5. Adsterra 300x250
+6. AdSense ribbon — unchanged
+
+No popunder anywhere, on any page type.
 
 ## What's in this folder
-Only the files that were actually changed, so you can drop them straight
-into your real local repo without a messy full-repo diff:
+- `fix-adsterra-native.py` — NEW. Run this once against your already-
+  deployed repo. It:
+  - Removes the Popunder marker + script from every `games/*.html` file.
+  - Adds the Native Banner block to every `games/*.html`,
+    `guides/*/index.html`, and `games-like/*/index.html` file, right
+    before the existing `ADSTERRA-300x250` marker.
+  - Idempotent — safe to re-run, skips files already fixed.
+- `auto-add-games.py`, `auto-add-gamemonetize.py`, `bulk-add-games.py`,
+  `bulk-add-gamemonetize.py` — the 4 game-page templates, updated so
+  every future game (from tomorrow's cron run onward) is generated
+  without popunder and with the Native Banner already in place.
+- `content-engine/page_renderer.py` — guide/collection template, same fix
+  applied for future guide/collection pages.
 
-- `inject-adsterra.py` — NEW. One-time bulk script, retrofits all existing
-  pages. Idempotent (safe to re-run).
-- `auto-add-games.py`, `auto-add-gamemonetize.py` — daily-cron templates
-  (GamePix / GameMonetize), now include Adsterra for all *future* games.
-- `bulk-add-games.py`, `bulk-add-gamemonetize.py` — your manual one-time
-  bulk-import scripts, updated to match.
-- `content-engine/page_renderer.py` — guide + collection page template
-  (used by `generate_guides.py` / `generate_collections.py`, also on a
-  daily cron). Now includes Adsterra for all future guide/collection pages.
-
-## What was NOT touched (verified)
-- `ads.txt` — untouched, your AdSense line is still there.
-- `index.html` (homepage) — untouched, zero ads, as you asked.
-- All existing AdSense `<ins class="adsbygoogle">` slots and scripts —
-  untouched, still firing exactly as before.
-- Category landing pages (`board/`, `ball/`, `soccer/`, etc.) — not in
-  scope, left alone.
-
-## Placement logic
-- **Game pages** (`games/*.html`): Adsterra 300x250 banner + 728x90 banner
-  (both additive, next to existing AdSense slots) + the Popunder script
-  loaded in `<head>`. Adsterra's popunder attaches its own click listener
-  site-wide once loaded — since it's only on game pages, it effectively
-  fires on the Play/Fullscreen click, not on page load.
-- **Guide pages** (`guides/*/index.html`) and **collection pages**
-  (`games-like/*/index.html`): 728x90 near the top, 300x250 near the
-  bottom. No popunder on these (matches what you asked — popunder only on
-  the "opening a game" moment).
+## What was NOT touched
+- `ads.txt`, homepage `index.html` — untouched.
+- Existing AdSense slots — untouched.
+- Existing Adsterra 300x250 / 728x90 banners — untouched, still there.
+- 5 hand-built custom games (`memory.html`, `pong.html`, `snake.html`,
+  `tetris.html`, `tictactoe.html`) — these never had any ad markup at all
+  (not even AdSense), so they were correctly skipped by both scripts, not
+  a bug. Flagging in case you want ads added there separately later.
 
 ## Deploy steps
-1. Copy these 6 files into your real local repo at the matching paths
-   (overwrite the existing ones at the same relative locations).
-2. Copy `inject-adsterra.py` into your repo root.
-3. From your repo root, run:
+1. Copy `fix-adsterra-native.py` into your repo root.
+2. From repo root, run:
    ```
-   python inject-adsterra.py
+   python fix-adsterra-native.py
    ```
-   This retrofits all ~4,842 existing game pages, ~13,824 guide pages, and
-   26 collection pages in place. It prints a summary of how many files were
-   updated. Safe to re-run — already-patched files are skipped.
-4. Review `git diff` on a couple of sample files (e.g. `games/<any-game>.html`)
-   to confirm it looks right.
-5. `git add -A && git commit -m "Add Adsterra ad units (banner 300x250, 728x90, popunder)" && git push`
-6. GitHub Actions / Vercel deploy takes it from there — no other changes
-   needed for the daily automation, since the templates are now updated
-   too.
+   It prints a summary: how many files had popunder removed, how many got
+   the native banner added.
+3. Copy the other 5 files (`auto-add-games.py`, `auto-add-gamemonetize.py`,
+   `bulk-add-games.py`, `bulk-add-gamemonetize.py`,
+   `content-engine/page_renderer.py`) over your existing ones at the same
+   paths.
+4. Spot-check a game page and a guide page in `git diff` — should show the
+   popunder lines removed and the native banner block added.
+5. `git add -A && git commit -m "Replace Adsterra popunder with Native Banner (UX/safety fix)" && git push`
 
 ## Verified before handoff
-- All 5 edited Python files pass `python3 -m py_compile`.
-- `page_renderer.py` was actually executed end-to-end (rendered a sample
-  guide page and a sample collection page) to confirm no f-string/brace
-  errors and that both Adsterra blocks render correctly alongside the
-  existing AdSense blocks.
-- Ran `inject-adsterra.py` against the full uploaded codebase: 4842/4842
-  game pages, 13824/13824 guide pages, 26/26 collection pages updated on
-  first pass, 0/0/0 on re-run (confirms idempotency).
+- Ran `fix-adsterra-native.py` against the full previously-deployed
+  codebase: popunder removed from 4,842/4,842 game pages; Native Banner
+  added to 4,837/4,842 game pages (5 exceptions are the hand-built games
+  noted above), 13,824/13,824 guide pages, 26/26 collection pages.
+- Re-ran it — 0 changes on second pass, confirms idempotency.
+- Confirmed zero leftover references to the popunder script domain
+  anywhere in `games/`, `guides/`, `games-like/`.
+- All 5 edited/created Python files pass `python3 -m py_compile`.
+- Actually executed `page_renderer.py` end-to-end (rendered a sample guide
+  page and collection page) — confirmed Native Banner present, Popunder
+  absent, no f-string/brace errors.
+- Confirmed all 4 game-page template scripts contain exactly 1 native
+  marker and 0 popunder references each.
