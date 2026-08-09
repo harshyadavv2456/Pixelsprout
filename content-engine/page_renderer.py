@@ -13,6 +13,37 @@ AD_SLOT_RIBBON = "1457517471"
 GA_ID = "G-VTNJRV4WG8"
 SITE = "https://playpixelsprout.com"
 
+# Adsterra - guide/collection ("blog-style") pages get the two banner
+# formats only, no popunder (popunder is reserved for game pages, fired on
+# the play/fullscreen click). Additive to AdSense, never replaces it.
+ADSTERRA_300x250 = """<!-- ADSTERRA-300x250 -->
+<div class="adsterra-slot adsterra-300x250" style="margin:16px auto;text-align:center;max-width:300px;">
+<script>
+atOptions = {
+  'key' : '9de242ffc7b556a74ae29033348b18bd',
+  'format' : 'iframe',
+  'height' : 250,
+  'width' : 300,
+  'params' : {}
+};
+</script>
+<script src="https://www.highperformanceformat.com/9de242ffc7b556a74ae29033348b18bd/invoke.js"></script>
+</div>"""
+
+ADSTERRA_728x90 = """<!-- ADSTERRA-728x90 -->
+<div class="adsterra-slot adsterra-728x90" style="margin:16px auto;text-align:center;max-width:728px;">
+<script>
+atOptions = {
+  'key' : 'da5095b2daea5c6ba87d034975239610',
+  'format' : 'iframe',
+  'height' : 90,
+  'width' : 728,
+  'params' : {}
+};
+</script>
+<script src="https://www.highperformanceformat.com/da5095b2daea5c6ba87d034975239610/invoke.js"></script>
+</div>"""
+
 
 def _head(title, description, canonical_path, og_image, schema_blocks):
     schema_html = "\n".join(
@@ -206,6 +237,8 @@ def render_guide_page(page_type, game, content, related_games, sibling_guides, c
     <script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
   </div>
 
+  {ADSTERRA_728x90}
+
   <div class="game-board-frame">
     {hero_image}
 
@@ -215,6 +248,8 @@ def render_guide_page(page_type, game, content, related_games, sibling_guides, c
     </article>
 
     <a href="/games/{game['slug']}.html" style="display:block;max-width:640px;margin:24px auto;text-decoration:none;" aria-label="Play {game['title']}">{stat_card_svg}</a>
+
+    {ADSTERRA_300x250}
 
     <div class="ad-slot ad-slot-ribbon">
       <ins class="adsbygoogle" style="display:block" data-ad-client="{ADSENSE_CLIENT}" data-ad-slot="{AD_SLOT_RIBBON}" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -315,9 +350,13 @@ def render_collection_page(collection, games, content):
     <script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
   </div>
 
+  {ADSTERRA_728x90}
+
   <div class="game-board-frame">
     <p style="max-width:760px;margin:0 auto 20px;color:var(--muted,#8a93b8);font-family:system-ui,sans-serif;font-size:15px;line-height:1.75;">{content.get('intro','')}</p>
     <div class="similar-games-grid">{grid}</div>
+
+    {ADSTERRA_300x250}
 
     <div class="ad-slot ad-slot-ribbon">
       <ins class="adsbygoogle" style="display:block" data-ad-client="{ADSENSE_CLIENT}" data-ad-slot="{AD_SLOT_RIBBON}" data-ad-format="auto" data-full-width-responsive="true"></ins>

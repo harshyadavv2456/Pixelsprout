@@ -1,90 +1,62 @@
-# Pixelsprout — Project Brief (FINAL, v5)
+# Adsterra Integration — Deployment Steps
 
-**Owner:** Harsh
-**Status as of:** July 30, 2026
-**Supersedes:** v4 (July 30, earlier today).
+## What's in this folder
+Only the files that were actually changed, so you can drop them straight
+into your real local repo without a messy full-repo diff:
 
----
+- `inject-adsterra.py` — NEW. One-time bulk script, retrofits all existing
+  pages. Idempotent (safe to re-run).
+- `auto-add-games.py`, `auto-add-gamemonetize.py` — daily-cron templates
+  (GamePix / GameMonetize), now include Adsterra for all *future* games.
+- `bulk-add-games.py`, `bulk-add-gamemonetize.py` — your manual one-time
+  bulk-import scripts, updated to match.
+- `content-engine/page_renderer.py` — guide + collection page template
+  (used by `generate_guides.py` / `generate_collections.py`, also on a
+  daily cron). Now includes Adsterra for all future guide/collection pages.
 
-## 1. What's New Since v4
+## What was NOT touched (verified)
+- `ads.txt` — untouched, your AdSense line is still there.
+- `index.html` (homepage) — untouched, zero ads, as you asked.
+- All existing AdSense `<ins class="adsbygoogle">` slots and scripts —
+  untouched, still firing exactly as before.
+- Category landing pages (`board/`, `ball/`, `soccer/`, etc.) — not in
+  scope, left alone.
 
-- **Search bars added to all 42 category pages** — each scoped to that category only (e.g., Arcade's 262 games are now searchable, not just scrollable). Same filter logic as the homepage search, mirrored exactly.
-- Sidebar genre navigation rebuilt to link to the real 42 category pages (was previously using outdated on-page anchors, missing top categories like Action and Sports)
+## Placement logic
+- **Game pages** (`games/*.html`): Adsterra 300x250 banner + 728x90 banner
+  (both additive, next to existing AdSense slots) + the Popunder script
+  loaded in `<head>`. Adsterra's popunder attaches its own click listener
+  site-wide once loaded — since it's only on game pages, it effectively
+  fires on the Play/Fullscreen click, not on page load.
+- **Guide pages** (`guides/*/index.html`) and **collection pages**
+  (`games-like/*/index.html`): 728x90 near the top, 300x250 near the
+  bottom. No popunder on these (matches what you asked — popunder only on
+  the "opening a game" moment).
 
-Everything else from v4 (Pinterest submitted/pending, GA4 live, IndexNow, schema, breadcrumbs, quality checker, alerting) — unchanged, still accurate.
+## Deploy steps
+1. Copy these 6 files into your real local repo at the matching paths
+   (overwrite the existing ones at the same relative locations).
+2. Copy `inject-adsterra.py` into your repo root.
+3. From your repo root, run:
+   ```
+   python inject-adsterra.py
+   ```
+   This retrofits all ~4,842 existing game pages, ~13,824 guide pages, and
+   26 collection pages in place. It prints a summary of how many files were
+   updated. Safe to re-run — already-patched files are skipped.
+4. Review `git diff` on a couple of sample files (e.g. `games/<any-game>.html`)
+   to confirm it looks right.
+5. `git add -A && git commit -m "Add Adsterra ad units (banner 300x250, 728x90, popunder)" && git push`
+6. GitHub Actions / Vercel deploy takes it from there — no other changes
+   needed for the daily automation, since the templates are now updated
+   too.
 
----
-
-## 2. The Direct Monthly Earnings Answer — One Number, Not a Range
-
-Per your request for a clear "most likely" figure rather than the full scenario table: using the case that matches your actual current plan (friend's consistent marketing + this session's SEO infrastructure + Phase 2 open-source migration on schedule):
-
-| Year | USD/month | INR/month |
-|---|---|---|
-| 1 | ~$6 | ~₹519 |
-| 2 | ~$34 | ~₹2,853 |
-| 3 | ~$111 | ~₹9,197 |
-| 4 | ~$206 | ~₹17,065 |
-| 5 | ~$316 | ~₹26,249 |
-
-**Read honestly:** Years 1-2 are genuinely negligible — new-site traffic takes real time regardless of code quality. Year 4-5 is where it starts looking like real supplementary income. This is the "most likely if the current plan holds" case, not a guarantee — actual results depend heavily on whether the marketing effort (the dominant lever, always) actually happens consistently.
-
----
-
-## 3. Full Scenario Table (unchanged reference, for context)
-
-| Scenario | Yr 5 annual revenue | 5-yr NPV |
-|---|---|---|
-| Conservative | ~$450/yr | ~$590 (~₹49,000) |
-| Base | ~$3,000/yr | ~$3,650 (~₹3.0 lakh) |
-| Base + SEO/Pinterest Infrastructure | ~$3,300/yr | ~$4,000 (~₹3.3 lakh) |
-| Base + SEO + Open-Source Migration | ~$3,795/yr | ~$4,550 (~₹3.8 lakh) |
-| Optimistic | ~$19,200/yr | ~$22,100 (~₹18.4 lakh) |
-
-The Section 2 monthly table above is drawn from the "Base + SEO + Open-Source Migration" row — the scenario matching your actual current plan.
-
----
-
-## 4. Everything Built This Session (cumulative, unchanged from v3/v4)
-
-- IndexNow, structured data, breadcrumbs, 42 category pages (now with search)
-- Favicon, OG banner, ribbon format, orientation lock, mobile sizing — all bugs fixed
-- About/Contact pages, corrected Terms content
-- GA4 tracking with custom events (fullscreen clicks, searches used)
-- Catalog quality checker
-- Push notification alerting on automation failure
-- Pinterest pipeline built, tested, Standard access submitted and pending
-- GitHub Actions consolidated as sole automation driver, schedule active
-
----
-
-## 5. What's Still Open
-
-**Passive, waiting on external review:**
-- AdSense review
-- Pinterest Standard access review
-
-**Date-locked:**
-- Apply to GameDistribution on/after August 2, 2026
-
-**Confirm working (not yet independently verified):**
-- GitHub Actions scheduled run actually succeeding now that minutes should have reset
-
-**Unresolved decision:**
-- Vercel Hobby tier is non-commercial only — resolve before leaning on ad revenue at scale
-
-**Post-November, your active decision:**
-- Review real traffic/revenue data (GA4 now collecting it)
-- Begin Phase 2 open-source migration if numbers justify it
-- Resolve hosting decision
-- Spot-check catalog quality
-
----
-
-## 6. Direct Answer: Is This Steady, Perpetual Income?
-
-Unchanged conclusion, now with a concrete number attached: **no, not immediately, and not without the marketing effort continuing.** Section 2's table is the honest picture — genuinely small for the first two years, meaningful but still modest by Year 5, and entirely contingent on the plan (marketing + infrastructure + Phase 2) actually being executed, not just built once and left alone.
-
----
-
-*Single source of truth for Pixelsprout as of July 30, 2026. Update directly rather than creating parallel notes.*
+## Verified before handoff
+- All 5 edited Python files pass `python3 -m py_compile`.
+- `page_renderer.py` was actually executed end-to-end (rendered a sample
+  guide page and a sample collection page) to confirm no f-string/brace
+  errors and that both Adsterra blocks render correctly alongside the
+  existing AdSense blocks.
+- Ran `inject-adsterra.py` against the full uploaded codebase: 4842/4842
+  game pages, 13824/13824 guide pages, 26/26 collection pages updated on
+  first pass, 0/0/0 on re-run (confirms idempotency).

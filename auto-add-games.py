@@ -83,6 +83,8 @@ GAME_PAGE_TEMPLATE = """<!DOCTYPE html>
   gtag('js', new Date());
   gtag('config', 'G-VTNJRV4WG8');
 </script>
+<!-- ADSTERRA-POPUNDER -->
+<script src="https://pl30769900.effectivecpmnetwork.com/51/6e/a8/516ea83fbec98f4dc14cea105216b6c1.js"></script>
 </head>
 <body>
 <div class="game-shell" data-thumbnail="{thumbnail}">
@@ -116,6 +118,20 @@ GAME_PAGE_TEMPLATE = """<!DOCTYPE html>
     ">⛶ Fullscreen</button>
     <p class="how-to">{description}</p>
 
+    <!-- ADSTERRA-300x250 -->
+    <div class="adsterra-slot adsterra-300x250" style="margin:16px auto;text-align:center;max-width:300px;">
+    <script>
+    atOptions = {{
+      'key' : '9de242ffc7b556a74ae29033348b18bd',
+      'format' : 'iframe',
+      'height' : 250,
+      'width' : 300,
+      'params' : {{}}
+    }};
+    </script>
+    <script src="https://www.highperformanceformat.com/9de242ffc7b556a74ae29033348b18bd/invoke.js"></script>
+    </div>
+
     <div class="ad-slot ad-slot-ribbon">
       <ins class="adsbygoogle"
            style="display:block"
@@ -124,6 +140,20 @@ GAME_PAGE_TEMPLATE = """<!DOCTYPE html>
            data-ad-format="auto"
            data-full-width-responsive="true"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
+    </div>
+
+    <!-- ADSTERRA-728x90 -->
+    <div class="adsterra-slot adsterra-728x90" style="margin:16px auto;text-align:center;max-width:728px;">
+    <script>
+    atOptions = {{
+      'key' : 'da5095b2daea5c6ba87d034975239610',
+      'format' : 'iframe',
+      'height' : 90,
+      'width' : 728,
+      'params' : {{}}
+    }};
+    </script>
+    <script src="https://www.highperformanceformat.com/da5095b2daea5c6ba87d034975239610/invoke.js"></script>
     </div>
 
     <div class="similar-games">
