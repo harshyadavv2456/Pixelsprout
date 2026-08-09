@@ -1250,199 +1250,232 @@
     "tips": "/guides/snake-simple-retro-game-tips/",
     "controls": "/guides/snake-simple-retro-game-controls/",
     "beginner-guide": "/guides/snake-simple-retro-game-beginner-guide/",
-    "similar": "/guides/games-like-snake-simple-retro-game/"
+    "similar": "/guides/games-like-snake-simple-retro-game/",
+    "faq": "/guides/snake-simple-retro-game-faq/"
   },
   "o-m-i-n-o": {
     "tips": "/guides/o-m-i-n-o-tips/",
     "controls": "/guides/o-m-i-n-o-controls/",
     "beginner-guide": "/guides/o-m-i-n-o-beginner-guide/",
-    "similar": "/guides/games-like-o-m-i-n-o/"
+    "similar": "/guides/games-like-o-m-i-n-o/",
+    "faq": "/guides/o-m-i-n-o-faq/"
   },
   "mummy-land": {
     "tips": "/guides/mummy-land-tips/",
     "controls": "/guides/mummy-land-controls/",
     "beginner-guide": "/guides/mummy-land-beginner-guide/",
-    "similar": "/guides/games-like-mummy-land/"
+    "similar": "/guides/games-like-mummy-land/",
+    "faq": "/guides/mummy-land-faq/"
   },
   "bricks-breaker-deluxe": {
     "tips": "/guides/bricks-breaker-deluxe-tips/",
     "controls": "/guides/bricks-breaker-deluxe-controls/",
     "beginner-guide": "/guides/bricks-breaker-deluxe-beginner-guide/",
-    "similar": "/guides/games-like-bricks-breaker-deluxe/"
+    "similar": "/guides/games-like-bricks-breaker-deluxe/",
+    "faq": "/guides/bricks-breaker-deluxe-faq/"
   },
   "save-the-galaxy": {
     "tips": "/guides/save-the-galaxy-tips/",
     "controls": "/guides/save-the-galaxy-controls/",
     "beginner-guide": "/guides/save-the-galaxy-beginner-guide/",
-    "similar": "/guides/games-like-save-the-galaxy/"
+    "similar": "/guides/games-like-save-the-galaxy/",
+    "faq": "/guides/save-the-galaxy-faq/"
   },
   "mutant-assassin-3d": {
     "tips": "/guides/mutant-assassin-3d-tips/",
     "controls": "/guides/mutant-assassin-3d-controls/",
     "beginner-guide": "/guides/mutant-assassin-3d-beginner-guide/",
-    "similar": "/guides/games-like-mutant-assassin-3d/"
+    "similar": "/guides/games-like-mutant-assassin-3d/",
+    "faq": "/guides/mutant-assassin-3d-faq/"
   },
   "noobcraft-house-escape": {
     "tips": "/guides/noobcraft-house-escape-tips/",
     "controls": "/guides/noobcraft-house-escape-controls/",
     "beginner-guide": "/guides/noobcraft-house-escape-beginner-guide/",
-    "similar": "/guides/games-like-noobcraft-house-escape/"
+    "similar": "/guides/games-like-noobcraft-house-escape/",
+    "faq": "/guides/noobcraft-house-escape-faq/"
   },
   "bushman-bamboo": {
     "tips": "/guides/bushman-bamboo-tips/",
     "controls": "/guides/bushman-bamboo-controls/",
     "beginner-guide": "/guides/bushman-bamboo-beginner-guide/",
-    "similar": "/guides/games-like-bushman-bamboo/"
+    "similar": "/guides/games-like-bushman-bamboo/",
+    "faq": "/guides/bushman-bamboo-faq/"
   },
   "break-the-candy": {
     "tips": "/guides/break-the-candy-tips/",
     "controls": "/guides/break-the-candy-controls/",
     "beginner-guide": "/guides/break-the-candy-beginner-guide/",
-    "similar": "/guides/games-like-break-the-candy/"
+    "similar": "/guides/games-like-break-the-candy/",
+    "faq": "/guides/break-the-candy-faq/"
   },
   "tall-and-rush": {
     "tips": "/guides/tall-and-rush-tips/",
     "controls": "/guides/tall-and-rush-controls/",
     "beginner-guide": "/guides/tall-and-rush-beginner-guide/",
-    "similar": "/guides/games-like-tall-and-rush/"
+    "similar": "/guides/games-like-tall-and-rush/",
+    "faq": "/guides/tall-and-rush-faq/"
   },
   "slicetall": {
     "tips": "/guides/slicetall-tips/",
     "controls": "/guides/slicetall-controls/",
     "beginner-guide": "/guides/slicetall-beginner-guide/",
-    "similar": "/guides/games-like-slicetall/"
+    "similar": "/guides/games-like-slicetall/",
+    "faq": "/guides/slicetall-faq/"
   },
   "safety-sheriff-labrador": {
     "tips": "/guides/safety-sheriff-labrador-tips/",
     "controls": "/guides/safety-sheriff-labrador-controls/",
     "beginner-guide": "/guides/safety-sheriff-labrador-beginner-guide/",
-    "similar": "/guides/games-like-safety-sheriff-labrador/"
+    "similar": "/guides/games-like-safety-sheriff-labrador/",
+    "faq": "/guides/safety-sheriff-labrador-faq/"
   },
   "slime-color": {
     "tips": "/guides/slime-color-tips/",
     "controls": "/guides/slime-color-controls/",
     "beginner-guide": "/guides/slime-color-beginner-guide/",
-    "similar": "/guides/games-like-slime-color/"
+    "similar": "/guides/games-like-slime-color/",
+    "faq": "/guides/slime-color-faq/"
   },
   "flip-bird": {
     "tips": "/guides/flip-bird-tips/",
     "controls": "/guides/flip-bird-controls/",
     "beginner-guide": "/guides/flip-bird-beginner-guide/",
-    "similar": "/guides/games-like-flip-bird/"
+    "similar": "/guides/games-like-flip-bird/",
+    "faq": "/guides/flip-bird-faq/"
   },
   "baby-injection": {
     "tips": "/guides/baby-injection-tips/",
     "controls": "/guides/baby-injection-controls/",
     "beginner-guide": "/guides/baby-injection-beginner-guide/",
-    "similar": "/guides/games-like-baby-injection/"
+    "similar": "/guides/games-like-baby-injection/",
+    "faq": "/guides/baby-injection-faq/"
   },
   "kaiten-sushi": {
     "tips": "/guides/kaiten-sushi-tips/",
     "controls": "/guides/kaiten-sushi-controls/",
     "beginner-guide": "/guides/kaiten-sushi-beginner-guide/",
-    "similar": "/guides/games-like-kaiten-sushi/"
+    "similar": "/guides/games-like-kaiten-sushi/",
+    "faq": "/guides/kaiten-sushi-faq/"
   },
   "mr-orange-flappy-jump": {
     "tips": "/guides/mr-orange-flappy-jump-tips/",
     "controls": "/guides/mr-orange-flappy-jump-controls/",
     "beginner-guide": "/guides/mr-orange-flappy-jump-beginner-guide/",
-    "similar": "/guides/games-like-mr-orange-flappy-jump/"
+    "similar": "/guides/games-like-mr-orange-flappy-jump/",
+    "faq": "/guides/mr-orange-flappy-jump-faq/"
   },
   "crazy-knife": {
     "tips": "/guides/crazy-knife-tips/",
     "controls": "/guides/crazy-knife-controls/",
     "beginner-guide": "/guides/crazy-knife-beginner-guide/",
-    "similar": "/guides/games-like-crazy-knife/"
+    "similar": "/guides/games-like-crazy-knife/",
+    "faq": "/guides/crazy-knife-faq/"
   },
   "hit-master": {
     "tips": "/guides/hit-master-tips/",
     "controls": "/guides/hit-master-controls/",
     "beginner-guide": "/guides/hit-master-beginner-guide/",
-    "similar": "/guides/games-like-hit-master/"
+    "similar": "/guides/games-like-hit-master/",
+    "faq": "/guides/hit-master-faq/"
   },
   "santa-games": {
     "tips": "/guides/santa-games-tips/",
     "controls": "/guides/santa-games-controls/",
     "beginner-guide": "/guides/santa-games-beginner-guide/",
-    "similar": "/guides/games-like-santa-games/"
+    "similar": "/guides/games-like-santa-games/",
+    "faq": "/guides/santa-games-faq/"
   },
   "brick-out-candy": {
     "tips": "/guides/brick-out-candy-tips/",
     "controls": "/guides/brick-out-candy-controls/",
     "beginner-guide": "/guides/brick-out-candy-beginner-guide/",
-    "similar": "/guides/games-like-brick-out-candy/"
+    "similar": "/guides/games-like-brick-out-candy/",
+    "faq": "/guides/brick-out-candy-faq/"
   },
   "ghost-runaway": {
     "tips": "/guides/ghost-runaway-tips/",
     "controls": "/guides/ghost-runaway-controls/",
     "beginner-guide": "/guides/ghost-runaway-beginner-guide/",
-    "similar": "/guides/games-like-ghost-runaway/"
+    "similar": "/guides/games-like-ghost-runaway/",
+    "faq": "/guides/ghost-runaway-faq/"
   },
   "color-tower-2-drop-the-boxes-3d": {
     "tips": "/guides/color-tower-2-drop-the-boxes-3d-tips/",
     "controls": "/guides/color-tower-2-drop-the-boxes-3d-controls/",
     "beginner-guide": "/guides/color-tower-2-drop-the-boxes-3d-beginner-guide/",
-    "similar": "/guides/games-like-color-tower-2-drop-the-boxes-3d/"
+    "similar": "/guides/games-like-color-tower-2-drop-the-boxes-3d/",
+    "faq": "/guides/color-tower-2-drop-the-boxes-3d-faq/"
   },
   "kara-s-cafeteria": {
     "tips": "/guides/kara-s-cafeteria-tips/",
     "controls": "/guides/kara-s-cafeteria-controls/",
     "beginner-guide": "/guides/kara-s-cafeteria-beginner-guide/",
-    "similar": "/guides/games-like-kara-s-cafeteria/"
+    "similar": "/guides/games-like-kara-s-cafeteria/",
+    "faq": "/guides/kara-s-cafeteria-faq/"
   },
   "the-dead-among-us": {
     "tips": "/guides/the-dead-among-us-tips/",
     "controls": "/guides/the-dead-among-us-controls/",
     "beginner-guide": "/guides/the-dead-among-us-beginner-guide/",
-    "similar": "/guides/games-like-the-dead-among-us/"
+    "similar": "/guides/games-like-the-dead-among-us/",
+    "faq": "/guides/the-dead-among-us-faq/"
   },
   "crazy-runner-boy": {
     "tips": "/guides/crazy-runner-boy-tips/",
     "controls": "/guides/crazy-runner-boy-controls/",
     "beginner-guide": "/guides/crazy-runner-boy-beginner-guide/",
-    "similar": "/guides/games-like-crazy-runner-boy/"
+    "similar": "/guides/games-like-crazy-runner-boy/",
+    "faq": "/guides/crazy-runner-boy-faq/"
   },
   "bloxdhop": {
     "tips": "/guides/bloxdhop-tips/",
     "controls": "/guides/bloxdhop-controls/",
     "beginner-guide": "/guides/bloxdhop-beginner-guide/",
-    "similar": "/guides/games-like-bloxdhop/"
+    "similar": "/guides/games-like-bloxdhop/",
+    "faq": "/guides/bloxdhop-faq/"
   },
   "vegan-quest": {
     "tips": "/guides/vegan-quest-tips/",
     "controls": "/guides/vegan-quest-controls/",
     "beginner-guide": "/guides/vegan-quest-beginner-guide/",
-    "similar": "/guides/games-like-vegan-quest/"
+    "similar": "/guides/games-like-vegan-quest/",
+    "faq": "/guides/vegan-quest-faq/"
   },
   "steve-adventurecraft": {
     "tips": "/guides/steve-adventurecraft-tips/",
     "controls": "/guides/steve-adventurecraft-controls/",
     "beginner-guide": "/guides/steve-adventurecraft-beginner-guide/",
-    "similar": "/guides/games-like-steve-adventurecraft/"
+    "similar": "/guides/games-like-steve-adventurecraft/",
+    "faq": "/guides/steve-adventurecraft-faq/"
   },
   "mini-huggy-2-players": {
     "tips": "/guides/mini-huggy-2-players-tips/",
     "controls": "/guides/mini-huggy-2-players-controls/",
     "beginner-guide": "/guides/mini-huggy-2-players-beginner-guide/",
-    "similar": "/guides/games-like-mini-huggy-2-players/"
+    "similar": "/guides/games-like-mini-huggy-2-players/",
+    "faq": "/guides/mini-huggy-2-players-faq/"
   },
   "planet-escape": {
     "tips": "/guides/planet-escape-tips/",
     "controls": "/guides/planet-escape-controls/",
     "beginner-guide": "/guides/planet-escape-beginner-guide/",
-    "similar": "/guides/games-like-planet-escape/"
+    "similar": "/guides/games-like-planet-escape/",
+    "faq": "/guides/planet-escape-faq/"
   },
   "mr-shooter": {
     "tips": "/guides/mr-shooter-tips/",
     "controls": "/guides/mr-shooter-controls/",
     "beginner-guide": "/guides/mr-shooter-beginner-guide/",
-    "similar": "/guides/games-like-mr-shooter/"
+    "similar": "/guides/games-like-mr-shooter/",
+    "faq": "/guides/mr-shooter-faq/"
   },
   "rolling-donut": {
     "tips": "/guides/rolling-donut-tips/",
     "controls": "/guides/rolling-donut-controls/",
     "beginner-guide": "/guides/rolling-donut-beginner-guide/",
-    "similar": "/guides/games-like-rolling-donut/"
+    "similar": "/guides/games-like-rolling-donut/",
+    "faq": "/guides/rolling-donut-faq/"
   },
   "noob-huggy-winter": {
     "tips": "/guides/noob-huggy-winter-tips/",
