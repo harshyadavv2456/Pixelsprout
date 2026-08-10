@@ -1481,157 +1481,183 @@
     "tips": "/guides/noob-huggy-winter-tips/",
     "controls": "/guides/noob-huggy-winter-controls/",
     "beginner-guide": "/guides/noob-huggy-winter-beginner-guide/",
-    "similar": "/guides/games-like-noob-huggy-winter/"
+    "similar": "/guides/games-like-noob-huggy-winter/",
+    "faq": "/guides/noob-huggy-winter-faq/"
   },
   "football-panda": {
     "tips": "/guides/football-panda-tips/",
     "controls": "/guides/football-panda-controls/",
     "beginner-guide": "/guides/football-panda-beginner-guide/",
-    "similar": "/guides/games-like-football-panda/"
+    "similar": "/guides/games-like-football-panda/",
+    "faq": "/guides/football-panda-faq/"
   },
   "steve-adventurecraft-nether": {
     "tips": "/guides/steve-adventurecraft-nether-tips/",
     "controls": "/guides/steve-adventurecraft-nether-controls/",
     "beginner-guide": "/guides/steve-adventurecraft-nether-beginner-guide/",
-    "similar": "/guides/games-like-steve-adventurecraft-nether/"
+    "similar": "/guides/games-like-steve-adventurecraft-nether/",
+    "faq": "/guides/steve-adventurecraft-nether-faq/"
   },
   "skibidi-toilet-jump-challenge": {
     "tips": "/guides/skibidi-toilet-jump-challenge-tips/",
     "controls": "/guides/skibidi-toilet-jump-challenge-controls/",
     "beginner-guide": "/guides/skibidi-toilet-jump-challenge-beginner-guide/",
-    "similar": "/guides/games-like-skibidi-toilet-jump-challenge/"
+    "similar": "/guides/games-like-skibidi-toilet-jump-challenge/",
+    "faq": "/guides/skibidi-toilet-jump-challenge-faq/"
   },
   "fireball-vs-ice-cream": {
     "tips": "/guides/fireball-vs-ice-cream-tips/",
     "controls": "/guides/fireball-vs-ice-cream-controls/",
     "beginner-guide": "/guides/fireball-vs-ice-cream-beginner-guide/",
-    "similar": "/guides/games-like-fireball-vs-ice-cream/"
+    "similar": "/guides/games-like-fireball-vs-ice-cream/",
+    "faq": "/guides/fireball-vs-ice-cream-faq/"
   },
   "fail-run-online": {
     "tips": "/guides/fail-run-online-tips/",
     "controls": "/guides/fail-run-online-controls/",
     "beginner-guide": "/guides/fail-run-online-beginner-guide/",
-    "similar": "/guides/games-like-fail-run-online/"
+    "similar": "/guides/games-like-fail-run-online/",
+    "faq": "/guides/fail-run-online-faq/"
   },
   "knife-smash": {
     "tips": "/guides/knife-smash-tips/",
     "controls": "/guides/knife-smash-controls/",
     "beginner-guide": "/guides/knife-smash-beginner-guide/",
-    "similar": "/guides/games-like-knife-smash/"
+    "similar": "/guides/games-like-knife-smash/",
+    "faq": "/guides/knife-smash-faq/"
   },
   "daruma-matching": {
     "tips": "/guides/daruma-matching-tips/",
     "controls": "/guides/daruma-matching-controls/",
     "beginner-guide": "/guides/daruma-matching-beginner-guide/",
-    "similar": "/guides/games-like-daruma-matching/"
+    "similar": "/guides/games-like-daruma-matching/",
+    "faq": "/guides/daruma-matching-faq/"
   },
   "stickman-army-the-resistance": {
     "tips": "/guides/stickman-army-the-resistance-tips/",
     "controls": "/guides/stickman-army-the-resistance-controls/",
     "beginner-guide": "/guides/stickman-army-the-resistance-beginner-guide/",
-    "similar": "/guides/games-like-stickman-army-the-resistance/"
+    "similar": "/guides/games-like-stickman-army-the-resistance/",
+    "faq": "/guides/stickman-army-the-resistance-faq/"
   },
   "rise-up-hero": {
     "tips": "/guides/rise-up-hero-tips/",
     "controls": "/guides/rise-up-hero-controls/",
     "beginner-guide": "/guides/rise-up-hero-beginner-guide/",
-    "similar": "/guides/games-like-rise-up-hero/"
+    "similar": "/guides/games-like-rise-up-hero/",
+    "faq": "/guides/rise-up-hero-faq/"
   },
   "flappy-pumpkin": {
     "tips": "/guides/flappy-pumpkin-tips/",
     "controls": "/guides/flappy-pumpkin-controls/",
     "beginner-guide": "/guides/flappy-pumpkin-beginner-guide/",
-    "similar": "/guides/games-like-flappy-pumpkin/"
+    "similar": "/guides/games-like-flappy-pumpkin/",
+    "faq": "/guides/flappy-pumpkin-faq/"
   },
   "knives": {
     "tips": "/guides/knives-tips/",
     "controls": "/guides/knives-controls/",
     "beginner-guide": "/guides/knives-beginner-guide/",
-    "similar": "/guides/games-like-knives/"
+    "similar": "/guides/games-like-knives/",
+    "faq": "/guides/knives-faq/"
   },
   "bodybuilder-karate-fighting": {
     "tips": "/guides/bodybuilder-karate-fighting-tips/",
     "controls": "/guides/bodybuilder-karate-fighting-controls/",
     "beginner-guide": "/guides/bodybuilder-karate-fighting-beginner-guide/",
-    "similar": "/guides/games-like-bodybuilder-karate-fighting/"
+    "similar": "/guides/games-like-bodybuilder-karate-fighting/",
+    "faq": "/guides/bodybuilder-karate-fighting-faq/"
   },
   "evolution-of-hamster-clicker": {
     "tips": "/guides/evolution-of-hamster-clicker-tips/",
     "controls": "/guides/evolution-of-hamster-clicker-controls/",
     "beginner-guide": "/guides/evolution-of-hamster-clicker-beginner-guide/",
-    "similar": "/guides/games-like-evolution-of-hamster-clicker/"
+    "similar": "/guides/games-like-evolution-of-hamster-clicker/",
+    "faq": "/guides/evolution-of-hamster-clicker-faq/"
   },
   "halloween-horror-massacre": {
     "tips": "/guides/halloween-horror-massacre-tips/",
     "controls": "/guides/halloween-horror-massacre-controls/",
     "beginner-guide": "/guides/halloween-horror-massacre-beginner-guide/",
-    "similar": "/guides/games-like-halloween-horror-massacre/"
+    "similar": "/guides/games-like-halloween-horror-massacre/",
+    "faq": "/guides/halloween-horror-massacre-faq/"
   },
   "super-slashman": {
     "tips": "/guides/super-slashman-tips/",
     "controls": "/guides/super-slashman-controls/",
     "beginner-guide": "/guides/super-slashman-beginner-guide/",
-    "similar": "/guides/games-like-super-slashman/"
+    "similar": "/guides/games-like-super-slashman/",
+    "faq": "/guides/super-slashman-faq/"
   },
   "ninja-in-cape": {
     "tips": "/guides/ninja-in-cape-tips/",
     "controls": "/guides/ninja-in-cape-controls/",
     "beginner-guide": "/guides/ninja-in-cape-beginner-guide/",
-    "similar": "/guides/games-like-ninja-in-cape/"
+    "similar": "/guides/games-like-ninja-in-cape/",
+    "faq": "/guides/ninja-in-cape-faq/"
   },
   "knifer": {
     "tips": "/guides/knifer-tips/",
     "controls": "/guides/knifer-controls/",
     "beginner-guide": "/guides/knifer-beginner-guide/",
-    "similar": "/guides/games-like-knifer/"
+    "similar": "/guides/games-like-knifer/",
+    "faq": "/guides/knifer-faq/"
   },
   "12-minibattles-two-players": {
     "tips": "/guides/12-minibattles-two-players-tips/",
     "controls": "/guides/12-minibattles-two-players-controls/",
     "beginner-guide": "/guides/12-minibattles-two-players-beginner-guide/",
-    "similar": "/guides/games-like-12-minibattles-two-players/"
+    "similar": "/guides/games-like-12-minibattles-two-players/",
+    "faq": "/guides/12-minibattles-two-players-faq/"
   },
   "hook": {
     "tips": "/guides/hook-tips/",
     "controls": "/guides/hook-controls/",
     "beginner-guide": "/guides/hook-beginner-guide/",
-    "similar": "/guides/games-like-hook/"
+    "similar": "/guides/games-like-hook/",
+    "faq": "/guides/hook-faq/"
   },
   "geometry-gunner": {
     "tips": "/guides/geometry-gunner-tips/",
     "controls": "/guides/geometry-gunner-controls/",
     "beginner-guide": "/guides/geometry-gunner-beginner-guide/",
-    "similar": "/guides/games-like-geometry-gunner/"
+    "similar": "/guides/games-like-geometry-gunner/",
+    "faq": "/guides/geometry-gunner-faq/"
   },
   "ice-ball-run": {
     "tips": "/guides/ice-ball-run-tips/",
     "controls": "/guides/ice-ball-run-controls/",
     "beginner-guide": "/guides/ice-ball-run-beginner-guide/",
-    "similar": "/guides/games-like-ice-ball-run/"
+    "similar": "/guides/games-like-ice-ball-run/",
+    "faq": "/guides/ice-ball-run-faq/"
   },
   "buba-jump": {
     "tips": "/guides/buba-jump-tips/",
     "controls": "/guides/buba-jump-controls/",
     "beginner-guide": "/guides/buba-jump-beginner-guide/",
-    "similar": "/guides/games-like-buba-jump/"
+    "similar": "/guides/games-like-buba-jump/",
+    "faq": "/guides/buba-jump-faq/"
   },
   "stick-merge": {
     "tips": "/guides/stick-merge-tips/",
     "controls": "/guides/stick-merge-controls/",
     "beginner-guide": "/guides/stick-merge-beginner-guide/",
-    "similar": "/guides/games-like-stick-merge/"
+    "similar": "/guides/games-like-stick-merge/",
+    "faq": "/guides/stick-merge-faq/"
   },
   "spikes-feathers": {
     "tips": "/guides/spikes-feathers-tips/",
     "controls": "/guides/spikes-feathers-controls/",
     "beginner-guide": "/guides/spikes-feathers-beginner-guide/",
-    "similar": "/guides/games-like-spikes-feathers/"
+    "similar": "/guides/games-like-spikes-feathers/",
+    "faq": "/guides/spikes-feathers-faq/"
   },
   "microplastics-feeding": {
     "tips": "/guides/microplastics-feeding-tips/",
     "controls": "/guides/microplastics-feeding-controls/",
     "beginner-guide": "/guides/microplastics-feeding-beginner-guide/",
-    "similar": "/guides/games-like-microplastics-feeding/"
+    "similar": "/guides/games-like-microplastics-feeding/",
+    "faq": "/guides/microplastics-feeding-faq/"
   },
   "skibidi-snake": {
     "tips": "/guides/skibidi-snake-tips/",
