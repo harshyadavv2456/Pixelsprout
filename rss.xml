@@ -5,6 +5,30 @@
   <link>https://playpixelsprout.com/</link>
   <description>Newest games added to Pixelsprout, a free browser gaming library.</description>
   <item>
+    <title>Boost Balloon</title>
+    <link>https://playpixelsprout.com/games/boost-balloon.html</link>
+    <guid>https://playpixelsprout.com/games/boost-balloon.html</guid>
+    <description>Play Boost Balloon free online at Pixelsprout — no download needed.</description>
+    <pubDate>Mon, 10 Aug 2026 07:07:51 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/boost-balloon/cover/boost-balloon.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
+    <title>Dodge the Bull</title>
+    <link>https://playpixelsprout.com/games/dodge-the-bull.html</link>
+    <guid>https://playpixelsprout.com/games/dodge-the-bull.html</guid>
+    <description>Play Dodge the Bull free online at Pixelsprout — no download needed.</description>
+    <pubDate>Mon, 10 Aug 2026 07:07:51 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/dodge-the-bull/cover/dodge-the-bull.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
+    <title>Billiards on Ice</title>
+    <link>https://playpixelsprout.com/games/billiards-on-ice.html</link>
+    <guid>https://playpixelsprout.com/games/billiards-on-ice.html</guid>
+    <description>Play Billiards on Ice free online at Pixelsprout — no download needed.</description>
+    <pubDate>Mon, 10 Aug 2026 07:07:51 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/billiards-on-ice/cover/billiards-on-ice.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
     <title>rotating triangle</title>
     <link>https://playpixelsprout.com/games/rotating-triangle.html</link>
     <guid>https://playpixelsprout.com/games/rotating-triangle.html</guid>
@@ -459,30 +483,6 @@
     <description>Play XRacer 2 free online at Pixelsprout — no download needed.</description>
     <pubDate>Wed, 05 Aug 2026 05:17:46 GMT</pubDate>
     <enclosure url="https://img.gamemonetize.com/gjwbwccwi1zlxl23sz4j6z20m17nb7m9/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Armed Forces.io</title>
-    <link>https://playpixelsprout.com/games/armed-forces-io.html</link>
-    <guid>https://playpixelsprout.com/games/armed-forces-io.html</guid>
-    <description>Play Armed Forces.io free online at Pixelsprout — no download needed.</description>
-    <pubDate>Wed, 05 Aug 2026 05:17:46 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/31sze1xgnq00dw16hvmett3re4q2qx9w/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Karas Cafeteria</title>
-    <link>https://playpixelsprout.com/games/karas-cafeteria.html</link>
-    <guid>https://playpixelsprout.com/games/karas-cafeteria.html</guid>
-    <description>Play Karas Cafeteria free online at Pixelsprout — no download needed.</description>
-    <pubDate>Wed, 05 Aug 2026 05:17:45 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/e9er64inx20i232kai7hr1hpmptscva2/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Foam World</title>
-    <link>https://playpixelsprout.com/games/foam-world.html</link>
-    <guid>https://playpixelsprout.com/games/foam-world.html</guid>
-    <description>Play Foam World free online at Pixelsprout — no download needed.</description>
-    <pubDate>Wed, 05 Aug 2026 05:17:45 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/ov40ro6ulovujr7mxljjm6kldhh47gsx/512x384.jpg" type="image/jpeg"/>
   </item>
 </channel>
 </rss>
