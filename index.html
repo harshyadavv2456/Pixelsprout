@@ -45659,8 +45659,12 @@ if ('serviceWorker' in navigator) {
     // slot system at all - they're the two hand-authored cards ahead of
     // it in the markup). These 8 slots become "most-visited real game
     // this week" once enough traffic has come in; until then, or if the
-    // API has nothing yet, they fall back to the original curated list.
-    fetch('/api/popular-games')
+    // snapshot has nothing yet, they fall back to the original curated list.
+    //
+    // This reads a static JSON file refreshed once a day by a GitHub Action
+    // (.github/workflows/refresh-popular-games.yml), not a live Supabase
+    // call - avoids the per-visitor query lag on every homepage load.
+    fetch('/popular-games.json')
       .then(r => r.ok ? r.json() : Promise.reject())
       .then(data => {
         const ranked = (data && data.games) || [];
