@@ -2,26 +2,26 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 58
+      "views": 70
     },
     {
       "slug": "getting-over-it",
-      "views": 29
+      "views": 33
+    },
+    {
+      "slug": "protect-my-dog",
+      "views": 15
     },
     {
       "slug": "uno-online",
       "views": 13
     },
     {
-      "slug": "protect-my-dog",
-      "views": 13
-    },
-    {
-      "slug": "2048-cube-merge-block",
-      "views": 11
-    },
-    {
       "slug": "save-the-doge",
+      "views": 12
+    },
+    {
+      "slug": "test-tubes-water-sort",
       "views": 11
     },
     {
@@ -29,7 +29,11 @@
       "views": 11
     },
     {
-      "slug": "subway-princess-run",
+      "slug": "2048-cube-merge-block",
+      "views": 11
+    },
+    {
+      "slug": "klondike-solitaire-paradise",
       "views": 10
     },
     {
@@ -37,11 +41,11 @@
       "views": 10
     },
     {
-      "slug": "slide-ball-puzzle",
+      "slug": "subway-princess-run",
       "views": 10
     },
     {
-      "slug": "test-tubes-water-sort",
+      "slug": "slide-ball-puzzle",
       "views": 10
     },
     {
@@ -49,20 +53,20 @@
       "views": 9
     },
     {
-      "slug": "klondike-solitaire-paradise",
+      "slug": "road-designer",
       "views": 8
     },
     {
       "slug": "water-sort-color-sort-puzzle",
-      "views": 7
-    },
-    {
-      "slug": "road-designer",
-      "views": 7
+      "views": 8
     },
     {
       "slug": "tank-1990",
       "views": 7
+    },
+    {
+      "slug": "jump-jump-arcade",
+      "views": 6
     },
     {
       "slug": "push-out-puzzle-adventure",
@@ -73,12 +77,8 @@
       "views": 6
     },
     {
-      "slug": "dop-in-love-story-find-part",
-      "views": 5
-    },
-    {
-      "slug": "snake-swipe-puzzle",
-      "views": 5
+      "slug": "thung-thung-sahur-night-escape",
+      "views": 6
     }
   ]
 }
