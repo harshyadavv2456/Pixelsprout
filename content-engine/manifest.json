@@ -2587,8 +2587,8 @@
     }
   },
   "stick-merge": {
-    "generated_at": "2026-08-10T08:19:07Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:44:11Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/stick-merge-tips/",
       "controls": "/guides/stick-merge-controls/",
@@ -2598,8 +2598,8 @@
     }
   },
   "spikes-feathers": {
-    "generated_at": "2026-08-10T08:19:08Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:44:22Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/spikes-feathers-tips/",
       "controls": "/guides/spikes-feathers-controls/",
@@ -2609,8 +2609,8 @@
     }
   },
   "microplastics-feeding": {
-    "generated_at": "2026-08-10T08:19:10Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:44:33Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/microplastics-feeding-tips/",
       "controls": "/guides/microplastics-feeding-controls/",
@@ -2697,8 +2697,8 @@
     }
   },
   "saguaro": {
-    "generated_at": "2026-08-10T08:19:11Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:44:43Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/saguaro-tips/",
       "controls": "/guides/saguaro-controls/",
@@ -2708,8 +2708,8 @@
     }
   },
   "among-at-easter": {
-    "generated_at": "2026-08-10T08:19:13Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:44:51Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/among-at-easter-tips/",
       "controls": "/guides/among-at-easter-controls/",
@@ -2719,8 +2719,8 @@
     }
   },
   "evil-invader": {
-    "generated_at": "2026-08-10T08:19:15Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:45:05Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/evil-invader-tips/",
       "controls": "/guides/evil-invader-controls/",
@@ -2730,8 +2730,8 @@
     }
   },
   "bouncing-egg": {
-    "generated_at": "2026-08-10T08:19:16Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:45:18Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/bouncing-egg-tips/",
       "controls": "/guides/bouncing-egg-controls/",
@@ -2741,8 +2741,8 @@
     }
   },
   "strike-galaxy-attack": {
-    "generated_at": "2026-08-10T08:19:18Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:45:33Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/strike-galaxy-attack-tips/",
       "controls": "/guides/strike-galaxy-attack-controls/",
@@ -2752,8 +2752,8 @@
     }
   },
   "run-jump-jumbo-runner": {
-    "generated_at": "2026-08-03T05:58:02Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:45:47Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/run-jump-jumbo-runner-tips/",
       "controls": "/guides/run-jump-jumbo-runner-controls/",
@@ -2763,8 +2763,8 @@
     }
   },
   "car-crash-test": {
-    "generated_at": "2026-08-03T05:58:04Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:46:01Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/car-crash-test-tips/",
       "controls": "/guides/car-crash-test-controls/",
@@ -2774,8 +2774,8 @@
     }
   },
   "injection-invasion": {
-    "generated_at": "2026-08-03T05:58:05Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:46:14Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/injection-invasion-tips/",
       "controls": "/guides/injection-invasion-controls/",
@@ -2785,8 +2785,8 @@
     }
   },
   "epic-duck": {
-    "generated_at": "2026-08-03T05:58:07Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:46:29Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/epic-duck-tips/",
       "controls": "/guides/epic-duck-controls/",
@@ -2796,8 +2796,8 @@
     }
   },
   "morphit": {
-    "generated_at": "2026-08-03T05:58:08Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:46:43Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/morphit-tips/",
       "controls": "/guides/morphit-controls/",
@@ -2807,8 +2807,8 @@
     }
   },
   "gelatino": {
-    "generated_at": "2026-08-03T05:58:10Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:47:02Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/gelatino-tips/",
       "controls": "/guides/gelatino-controls/",
@@ -2818,8 +2818,8 @@
     }
   },
   "parmesan-partisan": {
-    "generated_at": "2026-08-03T05:58:11Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:47:16Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/parmesan-partisan-tips/",
       "controls": "/guides/parmesan-partisan-controls/",
@@ -2829,8 +2829,8 @@
     }
   },
   "snake": {
-    "generated_at": "2026-08-03T05:58:13Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:47:30Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/snake-tips/",
       "controls": "/guides/snake-controls/",
@@ -2840,8 +2840,8 @@
     }
   },
   "flappy": {
-    "generated_at": "2026-08-03T05:58:14Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:47:48Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/flappy-tips/",
       "controls": "/guides/flappy-controls/",
@@ -2851,8 +2851,8 @@
     }
   },
   "tetris": {
-    "generated_at": "2026-08-03T05:58:16Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:48:02Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/tetris-tips/",
       "controls": "/guides/tetris-controls/",
@@ -2862,8 +2862,8 @@
     }
   },
   "click-planet": {
-    "generated_at": "2026-08-03T05:58:17Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:48:16Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/click-planet-tips/",
       "controls": "/guides/click-planet-controls/",
@@ -2873,8 +2873,8 @@
     }
   },
   "brainrot-tower-defense": {
-    "generated_at": "2026-08-03T05:58:19Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:48:34Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/brainrot-tower-defense-tips/",
       "controls": "/guides/brainrot-tower-defense-controls/",
@@ -2884,8 +2884,8 @@
     }
   },
   "city-building": {
-    "generated_at": "2026-08-03T05:58:20Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:48:47Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/city-building-tips/",
       "controls": "/guides/city-building-controls/",
@@ -2895,8 +2895,8 @@
     }
   },
   "kiddie-farmers": {
-    "generated_at": "2026-08-03T05:58:22Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:49:02Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/kiddie-farmers-tips/",
       "controls": "/guides/kiddie-farmers-controls/",
@@ -2906,8 +2906,8 @@
     }
   },
   "tricky-test": {
-    "generated_at": "2026-08-03T05:58:23Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:49:20Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/tricky-test-tips/",
       "controls": "/guides/tricky-test-controls/",
@@ -2917,8 +2917,8 @@
     }
   },
   "my-auto-service": {
-    "generated_at": "2026-08-03T05:58:25Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:49:34Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/my-auto-service-tips/",
       "controls": "/guides/my-auto-service-controls/",
@@ -2928,8 +2928,8 @@
     }
   },
   "medical-shop-cash-register-drug-store": {
-    "generated_at": "2026-08-03T05:58:26Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:49:48Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/medical-shop-cash-register-drug-store-tips/",
       "controls": "/guides/medical-shop-cash-register-drug-store-controls/",
@@ -2939,8 +2939,8 @@
     }
   },
   "cursed-treasure-2": {
-    "generated_at": "2026-08-03T05:58:28Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:50:02Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/cursed-treasure-2-tips/",
       "controls": "/guides/cursed-treasure-2-controls/",
@@ -2950,8 +2950,8 @@
     }
   },
   "air-strike": {
-    "generated_at": "2026-08-03T05:58:29Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:50:16Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/air-strike-tips/",
       "controls": "/guides/air-strike-controls/",
@@ -2961,8 +2961,8 @@
     }
   },
   "knight-wars": {
-    "generated_at": "2026-08-03T05:58:31Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:50:30Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/knight-wars-tips/",
       "controls": "/guides/knight-wars-controls/",
@@ -2972,8 +2972,8 @@
     }
   },
   "3-2-1-spell": {
-    "generated_at": "2026-08-03T05:58:32Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:50:45Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/3-2-1-spell-tips/",
       "controls": "/guides/3-2-1-spell-controls/",
@@ -2983,8 +2983,8 @@
     }
   },
   "the-earth-evolution": {
-    "generated_at": "2026-08-03T05:58:34Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-11T07:51:03Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/the-earth-evolution-tips/",
       "controls": "/guides/the-earth-evolution-controls/",
@@ -2994,7 +2994,7 @@
     }
   },
   "tile-hex-world-red-vs-blue": {
-    "generated_at": "2026-08-03T05:58:35Z",
+    "generated_at": "2026-08-11T07:51:17Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/tile-hex-world-red-vs-blue-tips/",
@@ -3005,7 +3005,7 @@
     }
   },
   "base-defense": {
-    "generated_at": "2026-08-03T05:58:37Z",
+    "generated_at": "2026-08-11T07:51:18Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/base-defense-tips/",
@@ -3016,7 +3016,7 @@
     }
   },
   "jet-micky": {
-    "generated_at": "2026-08-03T05:58:38Z",
+    "generated_at": "2026-08-11T07:51:20Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/jet-micky-tips/",
@@ -3027,7 +3027,7 @@
     }
   },
   "fishing-clicker": {
-    "generated_at": "2026-08-03T05:58:40Z",
+    "generated_at": "2026-08-11T07:51:21Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/fishing-clicker-tips/",
@@ -3038,7 +3038,7 @@
     }
   },
   "parking-jam-escape": {
-    "generated_at": "2026-08-03T05:58:41Z",
+    "generated_at": "2026-08-11T07:51:23Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/parking-jam-escape-tips/",
@@ -3049,7 +3049,7 @@
     }
   },
   "navy-missile-fest": {
-    "generated_at": "2026-08-03T05:58:43Z",
+    "generated_at": "2026-08-11T07:51:24Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/navy-missile-fest-tips/",
@@ -3060,7 +3060,7 @@
     }
   },
   "cursed-treasure-1-5": {
-    "generated_at": "2026-08-03T05:58:44Z",
+    "generated_at": "2026-08-11T07:51:26Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/cursed-treasure-1-5-tips/",
@@ -3071,7 +3071,7 @@
     }
   },
   "tower-defense-the-last-realm": {
-    "generated_at": "2026-08-03T05:58:46Z",
+    "generated_at": "2026-08-11T07:51:27Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/tower-defense-the-last-realm-tips/",
@@ -3082,7 +3082,7 @@
     }
   },
   "idle-destroyer": {
-    "generated_at": "2026-08-03T05:58:47Z",
+    "generated_at": "2026-08-11T07:51:29Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/idle-destroyer-tips/",
@@ -3093,7 +3093,7 @@
     }
   },
   "defend-the-castle": {
-    "generated_at": "2026-08-03T05:58:49Z",
+    "generated_at": "2026-08-11T07:51:30Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/defend-the-castle-tips/",
