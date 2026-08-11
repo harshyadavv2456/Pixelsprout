@@ -5,6 +5,30 @@
   <link>https://playpixelsprout.com/</link>
   <description>Newest games added to Pixelsprout, a free browser gaming library.</description>
   <item>
+    <title>Nova Hop</title>
+    <link>https://playpixelsprout.com/games/nova-hop.html</link>
+    <guid>https://playpixelsprout.com/games/nova-hop.html</guid>
+    <description>Play Nova Hop free online at Pixelsprout — no download needed.</description>
+    <pubDate>Tue, 11 Aug 2026 06:45:15 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/nova-hop/cover/nova-hop.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
+    <title>Stack Rocket</title>
+    <link>https://playpixelsprout.com/games/stack-rocket.html</link>
+    <guid>https://playpixelsprout.com/games/stack-rocket.html</guid>
+    <description>Play Stack Rocket free online at Pixelsprout — no download needed.</description>
+    <pubDate>Tue, 11 Aug 2026 06:45:15 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/stack-rocket/cover/stack-rocket.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
+    <title>Seat the Guests</title>
+    <link>https://playpixelsprout.com/games/seat-the-guests.html</link>
+    <guid>https://playpixelsprout.com/games/seat-the-guests.html</guid>
+    <description>Play Seat the Guests free online at Pixelsprout — no download needed.</description>
+    <pubDate>Tue, 11 Aug 2026 06:45:15 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/seat-the-guests/cover/seat-the-guests.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
     <title>Motocross Jumper</title>
     <link>https://playpixelsprout.com/games/motocross-jumper.html</link>
     <guid>https://playpixelsprout.com/games/motocross-jumper.html</guid>
@@ -459,30 +483,6 @@
     <description>Play Falling Hearts free online at Pixelsprout — no download needed.</description>
     <pubDate>Wed, 05 Aug 2026 05:17:50 GMT</pubDate>
     <enclosure url="https://img.gamemonetize.com/sk6cv0igofuzv8fyp9oe4xftwpwjorky/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Resolve Images</title>
-    <link>https://playpixelsprout.com/games/resolve-images.html</link>
-    <guid>https://playpixelsprout.com/games/resolve-images.html</guid>
-    <description>Play Resolve Images free online at Pixelsprout — no download needed.</description>
-    <pubDate>Wed, 05 Aug 2026 05:17:49 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/us7cgrd2aw891jn7ynhv01tgxpx2ix6k/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Stars Crush</title>
-    <link>https://playpixelsprout.com/games/stars-crush.html</link>
-    <guid>https://playpixelsprout.com/games/stars-crush.html</guid>
-    <description>Play Stars Crush free online at Pixelsprout — no download needed.</description>
-    <pubDate>Wed, 05 Aug 2026 05:17:49 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/ghn3r2h45pufqrplmy2tbo7rzmhqz028/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Beauty Coloring</title>
-    <link>https://playpixelsprout.com/games/beauty-coloring.html</link>
-    <guid>https://playpixelsprout.com/games/beauty-coloring.html</guid>
-    <description>Play Beauty Coloring free online at Pixelsprout — no download needed.</description>
-    <pubDate>Wed, 05 Aug 2026 05:17:48 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/1ouj7pi9oywme9u05s2z5em8kohtejx6/512x384.jpg" type="image/jpeg"/>
   </item>
 </channel>
 </rss>
