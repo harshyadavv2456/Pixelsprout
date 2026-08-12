@@ -2994,8 +2994,8 @@
     }
   },
   "tile-hex-world-red-vs-blue": {
-    "generated_at": "2026-08-11T07:51:17Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T07:58:08Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/tile-hex-world-red-vs-blue-tips/",
       "controls": "/guides/tile-hex-world-red-vs-blue-controls/",
@@ -3005,8 +3005,8 @@
     }
   },
   "base-defense": {
-    "generated_at": "2026-08-11T07:51:18Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T07:58:14Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/base-defense-tips/",
       "controls": "/guides/base-defense-controls/",
@@ -3016,8 +3016,8 @@
     }
   },
   "jet-micky": {
-    "generated_at": "2026-08-11T07:51:20Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T07:58:28Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/jet-micky-tips/",
       "controls": "/guides/jet-micky-controls/",
@@ -3027,8 +3027,8 @@
     }
   },
   "fishing-clicker": {
-    "generated_at": "2026-08-11T07:51:21Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T07:58:35Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/fishing-clicker-tips/",
       "controls": "/guides/fishing-clicker-controls/",
@@ -3038,8 +3038,8 @@
     }
   },
   "parking-jam-escape": {
-    "generated_at": "2026-08-11T07:51:23Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T07:58:49Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/parking-jam-escape-tips/",
       "controls": "/guides/parking-jam-escape-controls/",
@@ -3049,8 +3049,8 @@
     }
   },
   "navy-missile-fest": {
-    "generated_at": "2026-08-11T07:51:24Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T07:59:00Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/navy-missile-fest-tips/",
       "controls": "/guides/navy-missile-fest-controls/",
@@ -3060,8 +3060,8 @@
     }
   },
   "cursed-treasure-1-5": {
-    "generated_at": "2026-08-11T07:51:26Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T07:59:17Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/cursed-treasure-1-5-tips/",
       "controls": "/guides/cursed-treasure-1-5-controls/",
@@ -3071,8 +3071,8 @@
     }
   },
   "tower-defense-the-last-realm": {
-    "generated_at": "2026-08-11T07:51:27Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T07:59:28Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/tower-defense-the-last-realm-tips/",
       "controls": "/guides/tower-defense-the-last-realm-controls/",
@@ -3082,8 +3082,8 @@
     }
   },
   "idle-destroyer": {
-    "generated_at": "2026-08-11T07:51:29Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T07:59:45Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/idle-destroyer-tips/",
       "controls": "/guides/idle-destroyer-controls/",
@@ -3093,8 +3093,8 @@
     }
   },
   "defend-the-castle": {
-    "generated_at": "2026-08-11T07:51:30Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:00:01Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/defend-the-castle-tips/",
       "controls": "/guides/defend-the-castle-controls/",
@@ -3104,8 +3104,8 @@
     }
   },
   "mining-in-notebook": {
-    "generated_at": "2026-08-03T05:58:50Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:00:10Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/mining-in-notebook-tips/",
       "controls": "/guides/mining-in-notebook-controls/",
@@ -3115,8 +3115,8 @@
     }
   },
   "noob-army-tycoon": {
-    "generated_at": "2026-08-03T05:58:52Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:00:24Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/noob-army-tycoon-tips/",
       "controls": "/guides/noob-army-tycoon-controls/",
@@ -3126,8 +3126,8 @@
     }
   },
   "star-battles": {
-    "generated_at": "2026-08-03T05:58:53Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:00:40Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/star-battles-tips/",
       "controls": "/guides/star-battles-controls/",
@@ -3137,8 +3137,8 @@
     }
   },
   "grimace-vs-skibidi": {
-    "generated_at": "2026-08-03T05:58:55Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:00:54Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/grimace-vs-skibidi-tips/",
       "controls": "/guides/grimace-vs-skibidi-controls/",
@@ -3148,8 +3148,8 @@
     }
   },
   "tower-defense-world-war": {
-    "generated_at": "2026-08-03T05:58:56Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:01:08Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/tower-defense-world-war-tips/",
       "controls": "/guides/tower-defense-world-war-controls/",
@@ -3159,8 +3159,8 @@
     }
   },
   "idle-robots": {
-    "generated_at": "2026-08-03T05:58:58Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:01:21Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/idle-robots-tips/",
       "controls": "/guides/idle-robots-controls/",
@@ -3170,8 +3170,8 @@
     }
   },
   "office-io": {
-    "generated_at": "2026-08-03T06:24:39Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:01:44Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/office-io-tips/",
       "controls": "/guides/office-io-controls/",
@@ -3181,8 +3181,8 @@
     }
   },
   "sally-bbq-joint": {
-    "generated_at": "2026-08-03T06:24:41Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:02:00Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/sally-bbq-joint-tips/",
       "controls": "/guides/sally-bbq-joint-controls/",
@@ -3192,8 +3192,8 @@
     }
   },
   "medieval-farms": {
-    "generated_at": "2026-08-03T06:24:42Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:02:12Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/medieval-farms-tips/",
       "controls": "/guides/medieval-farms-controls/",
@@ -3203,8 +3203,8 @@
     }
   },
   "miner-merge": {
-    "generated_at": "2026-08-03T06:24:44Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:02:25Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/miner-merge-tips/",
       "controls": "/guides/miner-merge-controls/",
@@ -3214,8 +3214,8 @@
     }
   },
   "tower-defense-zombies": {
-    "generated_at": "2026-08-03T06:24:45Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:02:41Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/tower-defense-zombies-tips/",
       "controls": "/guides/tower-defense-zombies-controls/",
@@ -3225,8 +3225,8 @@
     }
   },
   "parking-lot": {
-    "generated_at": "2026-08-03T06:24:47Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:02:55Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/parking-lot-tips/",
       "controls": "/guides/parking-lot-controls/",
@@ -3236,8 +3236,8 @@
     }
   },
   "counter-terror-battle-simulator": {
-    "generated_at": "2026-08-03T06:24:48Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:03:10Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/counter-terror-battle-simulator-tips/",
       "controls": "/guides/counter-terror-battle-simulator-controls/",
@@ -3247,8 +3247,8 @@
     }
   },
   "vampire-survival": {
-    "generated_at": "2026-08-03T06:24:50Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:03:29Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/vampire-survival-tips/",
       "controls": "/guides/vampire-survival-controls/",
@@ -3258,8 +3258,8 @@
     }
   },
   "paper-craft-wars": {
-    "generated_at": "2026-08-03T06:24:51Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:03:42Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/paper-craft-wars-tips/",
       "controls": "/guides/paper-craft-wars-controls/",
@@ -3269,8 +3269,8 @@
     }
   },
   "squad-assembler-red-vs-blue": {
-    "generated_at": "2026-08-03T06:24:53Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:03:58Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/squad-assembler-red-vs-blue-tips/",
       "controls": "/guides/squad-assembler-red-vs-blue-controls/",
@@ -3280,8 +3280,8 @@
     }
   },
   "endless-siege": {
-    "generated_at": "2026-08-03T06:24:54Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:04:17Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/endless-siege-tips/",
       "controls": "/guides/endless-siege-controls/",
@@ -3291,8 +3291,8 @@
     }
   },
   "let-me-in": {
-    "generated_at": "2026-08-03T06:24:56Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:04:29Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/let-me-in-tips/",
       "controls": "/guides/let-me-in-controls/",
@@ -3302,8 +3302,8 @@
     }
   },
   "arsenal-online": {
-    "generated_at": "2026-08-03T06:24:57Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:04:44Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/arsenal-online-tips/",
       "controls": "/guides/arsenal-online-controls/",
@@ -3313,8 +3313,8 @@
     }
   },
   "getting-over-it": {
-    "generated_at": "2026-08-03T06:24:59Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:04:58Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/getting-over-it-tips/",
       "controls": "/guides/getting-over-it-controls/",
@@ -3324,8 +3324,8 @@
     }
   },
   "my-ice-cream-shop": {
-    "generated_at": "2026-08-03T06:25:00Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-12T08:05:17Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/my-ice-cream-shop-tips/",
       "controls": "/guides/my-ice-cream-shop-controls/",
@@ -3335,7 +3335,7 @@
     }
   },
   "among-spider-at-easter": {
-    "generated_at": "2026-08-03T06:25:02Z",
+    "generated_at": "2026-08-12T08:05:27Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/among-spider-at-easter-tips/",
@@ -3346,7 +3346,7 @@
     }
   },
   "roller-coaster-simulator": {
-    "generated_at": "2026-08-03T06:25:03Z",
+    "generated_at": "2026-08-12T08:05:28Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/roller-coaster-simulator-tips/",
@@ -3357,7 +3357,7 @@
     }
   },
   "army-commander": {
-    "generated_at": "2026-08-03T06:25:05Z",
+    "generated_at": "2026-08-12T08:05:30Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/army-commander-tips/",
@@ -3368,7 +3368,7 @@
     }
   },
   "mining-rush": {
-    "generated_at": "2026-08-03T06:25:06Z",
+    "generated_at": "2026-08-12T08:05:31Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/mining-rush-tips/",
@@ -3379,7 +3379,7 @@
     }
   },
   "idle-military-base-army-tycoon": {
-    "generated_at": "2026-08-03T06:25:08Z",
+    "generated_at": "2026-08-12T08:05:33Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/idle-military-base-army-tycoon-tips/",
@@ -3390,7 +3390,7 @@
     }
   },
   "transport-tycoon-deluxe-open-ttd": {
-    "generated_at": "2026-08-03T06:25:09Z",
+    "generated_at": "2026-08-12T08:05:34Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/transport-tycoon-deluxe-open-ttd-tips/",
@@ -3401,7 +3401,7 @@
     }
   },
   "cake-shop-cafe-pastries-waffles-cooking-game": {
-    "generated_at": "2026-08-03T06:25:11Z",
+    "generated_at": "2026-08-12T08:05:36Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/cake-shop-cafe-pastries-waffles-cooking-game-tips/",
@@ -3412,7 +3412,7 @@
     }
   },
   "loaf-clicker": {
-    "generated_at": "2026-08-03T06:25:12Z",
+    "generated_at": "2026-08-12T08:05:37Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/loaf-clicker-tips/",
@@ -3423,7 +3423,7 @@
     }
   },
   "idle-gravity-breakout": {
-    "generated_at": "2026-08-03T06:25:14Z",
+    "generated_at": "2026-08-12T08:05:39Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/idle-gravity-breakout-tips/",
