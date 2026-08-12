@@ -2,23 +2,23 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 70
+      "views": 73
     },
     {
       "slug": "getting-over-it",
-      "views": 33
+      "views": 34
     },
     {
       "slug": "protect-my-dog",
-      "views": 15
+      "views": 16
+    },
+    {
+      "slug": "save-the-doge",
+      "views": 13
     },
     {
       "slug": "uno-online",
       "views": 13
-    },
-    {
-      "slug": "save-the-doge",
-      "views": 12
     },
     {
       "slug": "test-tubes-water-sort",
