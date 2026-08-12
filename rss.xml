@@ -5,6 +5,22 @@
   <link>https://playpixelsprout.com/</link>
   <description>Newest games added to Pixelsprout, a free browser gaming library.</description>
   <item>
+    <title>Skater Kitty</title>
+    <link>https://playpixelsprout.com/games/skater-kitty.html</link>
+    <guid>https://playpixelsprout.com/games/skater-kitty.html</guid>
+    <description>Play Skater Kitty free online at Pixelsprout — no download needed.</description>
+    <pubDate>Wed, 12 Aug 2026 07:06:23 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/skater-kitty/cover/skater-kitty.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
+    <title>Quarantine Zombies</title>
+    <link>https://playpixelsprout.com/games/quarantine-zombies.html</link>
+    <guid>https://playpixelsprout.com/games/quarantine-zombies.html</guid>
+    <description>Play Quarantine Zombies free online at Pixelsprout — no download needed.</description>
+    <pubDate>Wed, 12 Aug 2026 07:06:23 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/quarantine-zombies/cover/quarantine-zombies.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
     <title>Pro Golfer Game</title>
     <link>https://playpixelsprout.com/games/pro-golfer-game.html</link>
     <guid>https://playpixelsprout.com/games/pro-golfer-game.html</guid>
@@ -467,22 +483,6 @@
     <description>Play Valentines Day: The Digital Circus free online at Pixelsprout — no download needed.</description>
     <pubDate>Wed, 05 Aug 2026 05:17:52 GMT</pubDate>
     <enclosure url="https://img.gamemonetize.com/9bhlfl4kwhas7uxxp3uafw5tlltcjfcw/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Best Friends Puzzle</title>
-    <link>https://playpixelsprout.com/games/best-friends-puzzle.html</link>
-    <guid>https://playpixelsprout.com/games/best-friends-puzzle.html</guid>
-    <description>Play Best Friends Puzzle free online at Pixelsprout — no download needed.</description>
-    <pubDate>Wed, 05 Aug 2026 05:17:52 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/1vs2hwmvsrsj3wes31qujc33budw5crx/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Eggstreme Eggscape</title>
-    <link>https://playpixelsprout.com/games/eggstreme-eggscape.html</link>
-    <guid>https://playpixelsprout.com/games/eggstreme-eggscape.html</guid>
-    <description>Play Eggstreme Eggscape free online at Pixelsprout — no download needed.</description>
-    <pubDate>Wed, 05 Aug 2026 05:17:51 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/k82rrnbpj6s9f20qkbgs2qz26ovg2pxf/512x384.jpg" type="image/jpeg"/>
   </item>
 </channel>
 </rss>
