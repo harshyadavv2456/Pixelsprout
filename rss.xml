@@ -5,6 +5,14 @@
   <link>https://playpixelsprout.com/</link>
   <description>Newest games added to Pixelsprout, a free browser gaming library.</description>
   <item>
+    <title>The Floor Is Lying</title>
+    <link>https://playpixelsprout.com/games/the-floor-is-lying.html</link>
+    <guid>https://playpixelsprout.com/games/the-floor-is-lying.html</guid>
+    <description>Play The Floor Is Lying free online at Pixelsprout — no download needed.</description>
+    <pubDate>Thu, 13 Aug 2026 07:10:16 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/the-floor-is-lying/cover/the-floor-is-lying.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
     <title>Meccha Chameleon Online</title>
     <link>https://playpixelsprout.com/games/meccha-chameleon-online.html</link>
     <guid>https://playpixelsprout.com/games/meccha-chameleon-online.html</guid>
@@ -475,14 +483,6 @@
     <description>Play TinyCars free online at Pixelsprout — no download needed.</description>
     <pubDate>Wed, 05 Aug 2026 05:17:54 GMT</pubDate>
     <enclosure url="https://img.gamemonetize.com/anvg9koxb58atul7n9hoafb9s5k42kjv/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Swordbattle.io</title>
-    <link>https://playpixelsprout.com/games/swordbattle-io.html</link>
-    <guid>https://playpixelsprout.com/games/swordbattle-io.html</guid>
-    <description>Play Swordbattle.io free online at Pixelsprout — no download needed.</description>
-    <pubDate>Wed, 05 Aug 2026 05:17:54 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/m2yzvbmyf75dl11i5lrtzlykjkzrgb85/512x384.jpg" type="image/jpeg"/>
   </item>
 </channel>
 </rss>
