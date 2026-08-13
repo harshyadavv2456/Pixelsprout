@@ -2,34 +2,34 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 73
+      "views": 79
     },
     {
       "slug": "getting-over-it",
-      "views": 34
+      "views": 38
     },
     {
       "slug": "protect-my-dog",
-      "views": 16
+      "views": 18
+    },
+    {
+      "slug": "uno-online",
+      "views": 14
     },
     {
       "slug": "save-the-doge",
       "views": 13
     },
     {
-      "slug": "uno-online",
-      "views": 13
+      "slug": "test-tubes-water-sort",
+      "views": 12
     },
     {
-      "slug": "test-tubes-water-sort",
+      "slug": "2048-cube-merge-block",
       "views": 11
     },
     {
       "slug": "gravity-merge",
-      "views": 11
-    },
-    {
-      "slug": "2048-cube-merge-block",
       "views": 11
     },
     {
@@ -41,11 +41,11 @@
       "views": 10
     },
     {
-      "slug": "subway-princess-run",
+      "slug": "slide-ball-puzzle",
       "views": 10
     },
     {
-      "slug": "slide-ball-puzzle",
+      "slug": "subway-princess-run",
       "views": 10
     },
     {
@@ -53,11 +53,11 @@
       "views": 9
     },
     {
-      "slug": "road-designer",
+      "slug": "water-sort-color-sort-puzzle",
       "views": 8
     },
     {
-      "slug": "water-sort-color-sort-puzzle",
+      "slug": "road-designer",
       "views": 8
     },
     {
