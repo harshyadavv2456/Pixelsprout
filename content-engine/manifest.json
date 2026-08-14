@@ -3379,8 +3379,8 @@
     }
   },
   "idle-military-base-army-tycoon": {
-    "generated_at": "2026-08-13T07:59:55Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-14T07:56:19Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/idle-military-base-army-tycoon-tips/",
       "controls": "/guides/idle-military-base-army-tycoon-controls/",
@@ -3390,8 +3390,8 @@
     }
   },
   "transport-tycoon-deluxe-open-ttd": {
-    "generated_at": "2026-08-13T07:59:57Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-14T07:56:27Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/transport-tycoon-deluxe-open-ttd-tips/",
       "controls": "/guides/transport-tycoon-deluxe-open-ttd-controls/",
@@ -3401,8 +3401,8 @@
     }
   },
   "cake-shop-cafe-pastries-waffles-cooking-game": {
-    "generated_at": "2026-08-13T07:59:58Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-14T07:56:34Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/cake-shop-cafe-pastries-waffles-cooking-game-tips/",
       "controls": "/guides/cake-shop-cafe-pastries-waffles-cooking-game-controls/",
@@ -3412,8 +3412,8 @@
     }
   },
   "loaf-clicker": {
-    "generated_at": "2026-08-13T08:00:00Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-14T07:56:41Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/loaf-clicker-tips/",
       "controls": "/guides/loaf-clicker-controls/",
@@ -3423,8 +3423,8 @@
     }
   },
   "idle-gravity-breakout": {
-    "generated_at": "2026-08-13T08:00:01Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-14T07:56:49Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/idle-gravity-breakout-tips/",
       "controls": "/guides/idle-gravity-breakout-controls/",
@@ -3434,8 +3434,8 @@
     }
   },
   "merge-battler": {
-    "generated_at": "2026-08-13T08:00:03Z",
-    "any_fallback": true,
+    "generated_at": "2026-08-14T07:56:59Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/merge-battler-tips/",
       "controls": "/guides/merge-battler-controls/",
@@ -3445,7 +3445,7 @@
     }
   },
   "king-rugni-tower-defense": {
-    "generated_at": "2026-08-13T08:00:04Z",
+    "generated_at": "2026-08-14T07:57:03Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/king-rugni-tower-defense-tips/",
@@ -3456,7 +3456,7 @@
     }
   },
   "europe-at-war": {
-    "generated_at": "2026-08-13T08:00:06Z",
+    "generated_at": "2026-08-14T07:57:05Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/europe-at-war-tips/",
@@ -3467,7 +3467,7 @@
     }
   },
   "stickman-3d-legacy-of-war": {
-    "generated_at": "2026-08-13T08:00:07Z",
+    "generated_at": "2026-08-14T07:57:06Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/stickman-3d-legacy-of-war-tips/",
@@ -3478,7 +3478,7 @@
     }
   },
   "castel-war-3d": {
-    "generated_at": "2026-08-13T08:00:09Z",
+    "generated_at": "2026-08-14T07:57:08Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/castel-war-3d-tips/",
@@ -3489,7 +3489,7 @@
     }
   },
   "tower-defense": {
-    "generated_at": "2026-08-13T08:00:10Z",
+    "generated_at": "2026-08-14T07:57:09Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/tower-defense-tips/",
@@ -3500,7 +3500,7 @@
     }
   },
   "empire-tower-defense-zombie-fortress": {
-    "generated_at": "2026-08-13T08:00:12Z",
+    "generated_at": "2026-08-14T07:57:11Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/empire-tower-defense-zombie-fortress-tips/",
@@ -3511,7 +3511,7 @@
     }
   },
   "tower-crush": {
-    "generated_at": "2026-08-13T08:00:13Z",
+    "generated_at": "2026-08-14T07:57:12Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/tower-crush-tips/",
@@ -3522,7 +3522,7 @@
     }
   },
   "ww1-battle-simulator": {
-    "generated_at": "2026-08-13T08:00:15Z",
+    "generated_at": "2026-08-14T07:57:14Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/ww1-battle-simulator-tips/",
@@ -3533,7 +3533,7 @@
     }
   },
   "babel-tower": {
-    "generated_at": "2026-08-13T08:00:16Z",
+    "generated_at": "2026-08-14T07:57:15Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/babel-tower-tips/",
@@ -3544,7 +3544,7 @@
     }
   },
   "stickman-simulator-final-battle": {
-    "generated_at": "2026-08-13T08:00:18Z",
+    "generated_at": "2026-08-14T07:57:17Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/stickman-simulator-final-battle-tips/",
@@ -3555,7 +3555,7 @@
     }
   },
   "perimeter-legate-edition": {
-    "generated_at": "2026-08-13T08:00:19Z",
+    "generated_at": "2026-08-14T07:57:18Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/perimeter-legate-edition-tips/",
@@ -3566,7 +3566,7 @@
     }
   },
   "tictactoe": {
-    "generated_at": "2026-08-13T08:00:21Z",
+    "generated_at": "2026-08-14T07:57:20Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/tictactoe-tips/",
@@ -3577,7 +3577,7 @@
     }
   },
   "pong": {
-    "generated_at": "2026-08-13T08:00:22Z",
+    "generated_at": "2026-08-14T07:57:21Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/pong-tips/",
@@ -3588,7 +3588,7 @@
     }
   },
   "the-stone-miner": {
-    "generated_at": "2026-08-13T08:00:24Z",
+    "generated_at": "2026-08-14T07:57:23Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/the-stone-miner-tips/",
@@ -3599,7 +3599,7 @@
     }
   },
   "moscow-metro-driver-3d": {
-    "generated_at": "2026-08-13T08:00:25Z",
+    "generated_at": "2026-08-14T07:57:24Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/moscow-metro-driver-3d-tips/",
@@ -3610,7 +3610,7 @@
     }
   },
   "emergency-ambulance-driving-game": {
-    "generated_at": "2026-08-13T08:00:27Z",
+    "generated_at": "2026-08-14T07:57:26Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/emergency-ambulance-driving-game-tips/",
@@ -3621,7 +3621,7 @@
     }
   },
   "iam-security": {
-    "generated_at": "2026-08-13T08:00:28Z",
+    "generated_at": "2026-08-14T07:57:27Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/iam-security-tips/",
@@ -3632,7 +3632,7 @@
     }
   },
   "craftmart": {
-    "generated_at": "2026-08-13T08:00:30Z",
+    "generated_at": "2026-08-14T07:57:29Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/craftmart-tips/",
@@ -3643,7 +3643,7 @@
     }
   },
   "blade-forge-3d": {
-    "generated_at": "2026-08-13T08:00:31Z",
+    "generated_at": "2026-08-14T07:57:30Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/blade-forge-3d-tips/",
@@ -3654,7 +3654,7 @@
     }
   },
   "pixel-cat-simulator-my-pets": {
-    "generated_at": "2026-08-13T08:00:33Z",
+    "generated_at": "2026-08-14T07:57:32Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/pixel-cat-simulator-my-pets-tips/",
@@ -3665,7 +3665,7 @@
     }
   },
   "my-style-hotel-empire": {
-    "generated_at": "2026-08-13T08:00:34Z",
+    "generated_at": "2026-08-14T07:57:33Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/my-style-hotel-empire-tips/",
@@ -3676,7 +3676,7 @@
     }
   },
   "italian-brainrot-call": {
-    "generated_at": "2026-08-13T08:00:36Z",
+    "generated_at": "2026-08-14T07:57:35Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/italian-brainrot-call-tips/",
@@ -3687,7 +3687,7 @@
     }
   },
   "supermarket-simulator": {
-    "generated_at": "2026-08-13T08:00:37Z",
+    "generated_at": "2026-08-14T07:57:36Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/supermarket-simulator-tips/",
@@ -3698,7 +3698,7 @@
     }
   },
   "scary-shawarma-kiosk-the-anomaly": {
-    "generated_at": "2026-08-13T08:00:39Z",
+    "generated_at": "2026-08-14T07:57:38Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/scary-shawarma-kiosk-the-anomaly-tips/",
@@ -3709,7 +3709,7 @@
     }
   },
   "hill-travel-3d": {
-    "generated_at": "2026-08-13T08:00:40Z",
+    "generated_at": "2026-08-14T07:57:39Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/hill-travel-3d-tips/",
@@ -3720,7 +3720,7 @@
     }
   },
   "woodturning-simulator": {
-    "generated_at": "2026-08-13T08:00:42Z",
+    "generated_at": "2026-08-14T07:57:41Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/woodturning-simulator-tips/",
@@ -3731,7 +3731,7 @@
     }
   },
   "lovely-cat-pet-life": {
-    "generated_at": "2026-08-13T08:00:43Z",
+    "generated_at": "2026-08-14T07:57:42Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/lovely-cat-pet-life-tips/",
@@ -3742,7 +3742,7 @@
     }
   },
   "cinema-empire-idle-tycoon": {
-    "generated_at": "2026-08-13T08:00:45Z",
+    "generated_at": "2026-08-14T07:57:44Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/cinema-empire-idle-tycoon-tips/",
@@ -3753,7 +3753,7 @@
     }
   },
   "cat-chaos-simulator": {
-    "generated_at": "2026-08-13T08:00:46Z",
+    "generated_at": "2026-08-14T07:57:45Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/cat-chaos-simulator-tips/",
@@ -3764,7 +3764,7 @@
     }
   },
   "idle-game-prison-life": {
-    "generated_at": "2026-08-13T08:00:48Z",
+    "generated_at": "2026-08-14T07:57:47Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/idle-game-prison-life-tips/",
@@ -3775,7 +3775,7 @@
     }
   },
   "pixels-supermarket-simulator": {
-    "generated_at": "2026-08-03T06:26:02Z",
+    "generated_at": "2026-08-14T07:57:49Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/pixels-supermarket-simulator-tips/",
@@ -3786,7 +3786,7 @@
     }
   },
   "pregnant-mommy-care-mother-simulator": {
-    "generated_at": "2026-08-03T06:26:03Z",
+    "generated_at": "2026-08-14T07:57:50Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/pregnant-mommy-care-mother-simulator-tips/",
@@ -3797,7 +3797,7 @@
     }
   },
   "car-mechanic-simulator-2025": {
-    "generated_at": "2026-08-03T06:26:05Z",
+    "generated_at": "2026-08-14T07:57:52Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/car-mechanic-simulator-2025-tips/",
@@ -3808,7 +3808,7 @@
     }
   },
   "crazy-goose-simulator": {
-    "generated_at": "2026-08-03T06:26:06Z",
+    "generated_at": "2026-08-14T07:57:53Z",
     "any_fallback": true,
     "pages": {
       "tips": "/guides/crazy-goose-simulator-tips/",
