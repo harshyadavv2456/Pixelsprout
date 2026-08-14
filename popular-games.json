@@ -2,7 +2,7 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 79
+      "views": 81
     },
     {
       "slug": "getting-over-it",
@@ -17,27 +17,27 @@
       "views": 14
     },
     {
-      "slug": "save-the-doge",
+      "slug": "test-tubes-water-sort",
       "views": 13
     },
     {
-      "slug": "test-tubes-water-sort",
-      "views": 12
-    },
-    {
-      "slug": "2048-cube-merge-block",
-      "views": 11
+      "slug": "save-the-doge",
+      "views": 13
     },
     {
       "slug": "gravity-merge",
       "views": 11
     },
     {
-      "slug": "klondike-solitaire-paradise",
-      "views": 10
+      "slug": "2048-cube-merge-block",
+      "views": 11
     },
     {
       "slug": "worms-zone",
+      "views": 10
+    },
+    {
+      "slug": "klondike-solitaire-paradise",
       "views": 10
     },
     {
@@ -53,11 +53,11 @@
       "views": 9
     },
     {
-      "slug": "water-sort-color-sort-puzzle",
-      "views": 8
+      "slug": "road-designer",
+      "views": 9
     },
     {
-      "slug": "road-designer",
+      "slug": "water-sort-color-sort-puzzle",
       "views": 8
     },
     {
@@ -69,11 +69,11 @@
       "views": 6
     },
     {
-      "slug": "push-out-puzzle-adventure",
+      "slug": "2048",
       "views": 6
     },
     {
-      "slug": "2048",
+      "slug": "push-out-puzzle-adventure",
       "views": 6
     },
     {
