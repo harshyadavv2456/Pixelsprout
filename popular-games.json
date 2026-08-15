@@ -2,23 +2,23 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 81
+      "views": 83
     },
     {
       "slug": "getting-over-it",
-      "views": 38
+      "views": 42
     },
     {
       "slug": "protect-my-dog",
-      "views": 18
+      "views": 23
     },
     {
       "slug": "uno-online",
-      "views": 14
+      "views": 16
     },
     {
       "slug": "test-tubes-water-sort",
-      "views": 13
+      "views": 14
     },
     {
       "slug": "save-the-doge",
@@ -37,7 +37,7 @@
       "views": 10
     },
     {
-      "slug": "klondike-solitaire-paradise",
+      "slug": "subway-princess-run",
       "views": 10
     },
     {
@@ -45,7 +45,7 @@
       "views": 10
     },
     {
-      "slug": "subway-princess-run",
+      "slug": "klondike-solitaire-paradise",
       "views": 10
     },
     {
@@ -61,6 +61,10 @@
       "views": 8
     },
     {
+      "slug": "2048",
+      "views": 7
+    },
+    {
       "slug": "tank-1990",
       "views": 7
     },
@@ -69,15 +73,11 @@
       "views": 6
     },
     {
-      "slug": "2048",
-      "views": 6
-    },
-    {
       "slug": "push-out-puzzle-adventure",
       "views": 6
     },
     {
-      "slug": "thung-thung-sahur-night-escape",
+      "slug": "dop-in-love-story-find-part",
       "views": 6
     }
   ]
