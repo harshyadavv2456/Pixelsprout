@@ -2,15 +2,15 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 83
+      "views": 89
     },
     {
       "slug": "getting-over-it",
-      "views": 42
+      "views": 45
     },
     {
       "slug": "protect-my-dog",
-      "views": 23
+      "views": 25
     },
     {
       "slug": "uno-online",
@@ -18,14 +18,22 @@
     },
     {
       "slug": "test-tubes-water-sort",
-      "views": 14
+      "views": 15
     },
     {
       "slug": "save-the-doge",
-      "views": 13
+      "views": 14
+    },
+    {
+      "slug": "slide-ball-puzzle",
+      "views": 12
     },
     {
       "slug": "gravity-merge",
+      "views": 11
+    },
+    {
+      "slug": "worms-zone",
       "views": 11
     },
     {
@@ -33,7 +41,7 @@
       "views": 11
     },
     {
-      "slug": "worms-zone",
+      "slug": "baba-is-you",
       "views": 10
     },
     {
@@ -41,16 +49,8 @@
       "views": 10
     },
     {
-      "slug": "slide-ball-puzzle",
-      "views": 10
-    },
-    {
       "slug": "klondike-solitaire-paradise",
       "views": 10
-    },
-    {
-      "slug": "baba-is-you",
-      "views": 9
     },
     {
       "slug": "road-designer",
@@ -62,7 +62,11 @@
     },
     {
       "slug": "2048",
-      "views": 7
+      "views": 8
+    },
+    {
+      "slug": "katana-fruits",
+      "views": 8
     },
     {
       "slug": "tank-1990",
@@ -74,10 +78,6 @@
     },
     {
       "slug": "push-out-puzzle-adventure",
-      "views": 6
-    },
-    {
-      "slug": "dop-in-love-story-find-part",
       "views": 6
     }
   ]
