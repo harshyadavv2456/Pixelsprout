@@ -5,6 +5,14 @@
   <link>https://playpixelsprout.com/</link>
   <description>Newest games added to Pixelsprout, a free browser gaming library.</description>
   <item>
+    <title>Knockback Knights</title>
+    <link>https://playpixelsprout.com/games/knockback-knights.html</link>
+    <guid>https://playpixelsprout.com/games/knockback-knights.html</guid>
+    <description>Play Knockback Knights free online at Pixelsprout — no download needed.</description>
+    <pubDate>Mon, 17 Aug 2026 06:32:10 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/knockback-knights/cover/knockback-knights.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
     <title>Paletto</title>
     <link>https://playpixelsprout.com/games/paletto.html</link>
     <guid>https://playpixelsprout.com/games/paletto.html</guid>
@@ -475,14 +483,6 @@
     <description>Play Safety Pin Couple free online at Pixelsprout — no download needed.</description>
     <pubDate>Wed, 05 Aug 2026 05:18:00 GMT</pubDate>
     <enclosure url="https://img.gamemonetize.com/899s34075xbiz51jo9rtyh2h7pgy1j4n/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Mass Sink</title>
-    <link>https://playpixelsprout.com/games/mass-sink.html</link>
-    <guid>https://playpixelsprout.com/games/mass-sink.html</guid>
-    <description>Play Mass Sink free online at Pixelsprout — no download needed.</description>
-    <pubDate>Wed, 05 Aug 2026 05:18:00 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/u5hhlak7rg5b69uwako4v9cnw51nt2ge/512x384.jpg" type="image/jpeg"/>
   </item>
 </channel>
 </rss>
