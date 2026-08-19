@@ -2,7 +2,7 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 92
+      "views": 93
     },
     {
       "slug": "getting-over-it",
@@ -14,11 +14,11 @@
     },
     {
       "slug": "uno-online",
-      "views": 18
+      "views": 20
     },
     {
       "slug": "test-tubes-water-sort",
-      "views": 18
+      "views": 19
     },
     {
       "slug": "save-the-doge",
@@ -29,15 +29,15 @@
       "views": 14
     },
     {
-      "slug": "worms-zone",
-      "views": 11
-    },
-    {
       "slug": "2048-cube-merge-block",
-      "views": 11
+      "views": 13
     },
     {
       "slug": "gravity-merge",
+      "views": 11
+    },
+    {
+      "slug": "worms-zone",
       "views": 11
     },
     {
@@ -45,7 +45,7 @@
       "views": 10
     },
     {
-      "slug": "klondike-solitaire-paradise",
+      "slug": "2048",
       "views": 10
     },
     {
@@ -53,19 +53,19 @@
       "views": 10
     },
     {
+      "slug": "klondike-solitaire-paradise",
+      "views": 10
+    },
+    {
       "slug": "road-designer",
       "views": 9
     },
     {
-      "slug": "2048",
+      "slug": "water-sort-color-sort-puzzle",
       "views": 8
     },
     {
       "slug": "katana-fruits",
-      "views": 8
-    },
-    {
-      "slug": "water-sort-color-sort-puzzle",
       "views": 8
     },
     {
@@ -77,8 +77,8 @@
       "views": 7
     },
     {
-      "slug": "jump-jump-arcade",
-      "views": 6
+      "slug": "100-seconds-labyrinth",
+      "views": 7
     }
   ]
 }
