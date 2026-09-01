@@ -2,19 +2,19 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 93
+      "views": 115
     },
     {
       "slug": "getting-over-it",
-      "views": 50
+      "views": 52
     },
     {
       "slug": "protect-my-dog",
-      "views": 26
+      "views": 27
     },
     {
       "slug": "test-tubes-water-sort",
-      "views": 20
+      "views": 21
     },
     {
       "slug": "uno-online",
@@ -22,15 +22,27 @@
     },
     {
       "slug": "save-the-doge",
-      "views": 16
+      "views": 17
+    },
+    {
+      "slug": "2048-cube-merge-block",
+      "views": 17
     },
     {
       "slug": "slide-ball-puzzle",
       "views": 14
     },
     {
-      "slug": "2048-cube-merge-block",
+      "slug": "2048",
       "views": 13
+    },
+    {
+      "slug": "klondike-solitaire-paradise",
+      "views": 12
+    },
+    {
+      "slug": "baba-is-you",
+      "views": 11
     },
     {
       "slug": "worms-zone",
@@ -41,15 +53,15 @@
       "views": 11
     },
     {
-      "slug": "klondike-solitaire-paradise",
-      "views": 10
+      "slug": "100-seconds-labyrinth",
+      "views": 11
     },
     {
-      "slug": "2048",
-      "views": 10
+      "slug": "100-doors-escape-puzzle",
+      "views": 11
     },
     {
-      "slug": "baba-is-you",
+      "slug": "100-doors-escape-from-prison",
       "views": 10
     },
     {
@@ -58,27 +70,15 @@
     },
     {
       "slug": "road-designer",
-      "views": 9
+      "views": 10
+    },
+    {
+      "slug": "2048-x2-merge-blocks",
+      "views": 10
     },
     {
       "slug": "water-sort-color-sort-puzzle",
-      "views": 8
-    },
-    {
-      "slug": "katana-fruits",
-      "views": 8
-    },
-    {
-      "slug": "100-seconds-labyrinth",
-      "views": 8
-    },
-    {
-      "slug": "tank-1990",
-      "views": 7
-    },
-    {
-      "slug": "dop-in-love-story-find-part",
-      "views": 7
+      "views": 9
     }
   ]
 }
