@@ -1,4 +1,4 @@
-Catalog quality report - 57 issue(s) found
+Catalog quality report - 58 issue(s) found
 ============================================================
 
 DUPLICATE TITLE 'sprunki whooo': sprunki-whooo, sprunki-whooo
@@ -22,6 +22,7 @@ DUPLICATE TITLE 'diner in the storm': diner-in-the-storm, diner-in-the-storm
 DUPLICATE TITLE 'hex planet idle': hex-planet-idle, hex-planet-idle
 DUPLICATE TITLE 'fighting vehicles arena': fighting-vehicles-arena, fighting-vehicles-arena
 DUPLICATE TITLE 'elemental gloves magic power': elemental-gloves-magic-power, elemental-gloves-magic-power
+DUPLICATE TITLE 'ant colony': ant-colony, ant-colony
 DUPLICATE TITLE 'twisted auto metal': twisted-auto-metal, twisted-auto-metal
 DUPLICATE TITLE 'abc halloween': abc-halloween, abc-halloween
 DUPLICATE TITLE 'starship': starship, starship
