@@ -2,11 +2,11 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 115
+      "views": 120
     },
     {
       "slug": "getting-over-it",
-      "views": 52
+      "views": 54
     },
     {
       "slug": "protect-my-dog",
@@ -14,18 +14,18 @@
     },
     {
       "slug": "test-tubes-water-sort",
-      "views": 21
+      "views": 22
     },
     {
       "slug": "uno-online",
       "views": 20
     },
     {
-      "slug": "save-the-doge",
+      "slug": "2048-cube-merge-block",
       "views": 17
     },
     {
-      "slug": "2048-cube-merge-block",
+      "slug": "save-the-doge",
       "views": 17
     },
     {
@@ -38,6 +38,10 @@
     },
     {
       "slug": "klondike-solitaire-paradise",
+      "views": 13
+    },
+    {
+      "slug": "dot-link-puzzle-connect-the-dots",
       "views": 12
     },
     {
@@ -75,10 +79,6 @@
     {
       "slug": "2048-x2-merge-blocks",
       "views": 10
-    },
-    {
-      "slug": "water-sort-color-sort-puzzle",
-      "views": 9
     }
   ]
 }
