@@ -2,7 +2,7 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 120
+      "views": 125
     },
     {
       "slug": "getting-over-it",
@@ -10,7 +10,7 @@
     },
     {
       "slug": "protect-my-dog",
-      "views": 27
+      "views": 28
     },
     {
       "slug": "test-tubes-water-sort",
@@ -21,39 +21,31 @@
       "views": 20
     },
     {
+      "slug": "save-the-doge",
+      "views": 17
+    },
+    {
       "slug": "2048-cube-merge-block",
       "views": 17
     },
     {
-      "slug": "save-the-doge",
-      "views": 17
+      "slug": "dot-link-puzzle-connect-the-dots",
+      "views": 15
     },
     {
       "slug": "slide-ball-puzzle",
       "views": 14
     },
     {
-      "slug": "2048",
-      "views": 13
-    },
-    {
       "slug": "klondike-solitaire-paradise",
       "views": 13
     },
     {
-      "slug": "dot-link-puzzle-connect-the-dots",
-      "views": 12
-    },
-    {
-      "slug": "baba-is-you",
-      "views": 11
+      "slug": "2048",
+      "views": 13
     },
     {
       "slug": "worms-zone",
-      "views": 11
-    },
-    {
-      "slug": "gravity-merge",
       "views": 11
     },
     {
@@ -61,15 +53,23 @@
       "views": 11
     },
     {
+      "slug": "baba-is-you",
+      "views": 11
+    },
+    {
+      "slug": "gravity-merge",
+      "views": 11
+    },
+    {
       "slug": "100-doors-escape-puzzle",
       "views": 11
     },
     {
-      "slug": "100-doors-escape-from-prison",
+      "slug": "subway-princess-run",
       "views": 10
     },
     {
-      "slug": "subway-princess-run",
+      "slug": "2048-x2-merge-blocks",
       "views": 10
     },
     {
@@ -77,7 +77,7 @@
       "views": 10
     },
     {
-      "slug": "2048-x2-merge-blocks",
+      "slug": "100-doors-escape-from-prison",
       "views": 10
     }
   ]
