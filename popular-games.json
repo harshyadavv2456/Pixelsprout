@@ -2,7 +2,7 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 133
+      "views": 136
     },
     {
       "slug": "getting-over-it",
@@ -22,22 +22,22 @@
     },
     {
       "slug": "dot-link-puzzle-connect-the-dots",
-      "views": 19
+      "views": 20
     },
     {
       "slug": "save-the-doge",
-      "views": 17
+      "views": 18
     },
     {
       "slug": "2048-cube-merge-block",
       "views": 17
     },
     {
-      "slug": "2048",
-      "views": 14
+      "slug": "slide-ball-puzzle",
+      "views": 15
     },
     {
-      "slug": "slide-ball-puzzle",
+      "slug": "2048",
       "views": 14
     },
     {
@@ -53,16 +53,20 @@
       "views": 13
     },
     {
-      "slug": "worms-zone",
-      "views": 11
-    },
-    {
       "slug": "baba-is-you",
       "views": 11
     },
     {
       "slug": "100-doors-escape-puzzle",
       "views": 11
+    },
+    {
+      "slug": "worms-zone",
+      "views": 11
+    },
+    {
+      "slug": "100-doors-escape-from-prison",
+      "views": 10
     },
     {
       "slug": "subway-princess-run",
@@ -74,10 +78,6 @@
     },
     {
       "slug": "2048-x2-merge-blocks",
-      "views": 10
-    },
-    {
-      "slug": "100-doors-escape-from-prison",
       "views": 10
     }
   ]
