@@ -23,6 +23,9 @@ import re
 import subprocess
 import sys
 import urllib.request
+
+import site_pages
+import site_shell
 from datetime import datetime, timezone
 from xml.sax.saxutils import escape
 
@@ -40,164 +43,13 @@ DUPLICATE_SCORE_THRESHOLD = 13   # same category (10) + at least one shared titl
 SITE_ROOT = "."
 TRACKING_FILE = f"{SITE_ROOT}/gamemonetize-data.json"   # separate from games-data.json (GamePix) - avoids any ID collision risk
 GAMES_INDEX_FILE = f"{SITE_ROOT}/games-index.json"
-INDEX_FILE = f"{SITE_ROOT}/index.html"
 SITEMAP_FILE = f"{SITE_ROOT}/sitemap.xml"
 GAMES_DIR = f"{SITE_ROOT}/games"
 DOMAIN = "https://playpixelsprout.com"
 
-CATEGORY_COLORS = ["gold", "teal", "signal"]
 
 # Identical template to auto-add-games.py, byte-for-byte, so a GameMonetize
 # page is visually and structurally indistinguishable from a GamePix one.
-GAME_PAGE_TEMPLATE = """<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="../assets/logo-icon.png">
-<title>{title} — Pixelsprout</title>
-<meta name="description" content="Play {title} free online, no download needed.">
-<link rel="stylesheet" href="../styles.css">
-<link rel="preconnect" href="https://img.gamepix.com">
-<link rel="preconnect" href="https://img.gamemonetize.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<script defer src="/_vercel/insights/script.js"></script>
-<style>
-  .embed-frame-wrap {{
-    width: 100%;
-    max-width: 480px;
-    aspect-ratio: 480 / 320;
-    border-radius: 8px;
-    overflow: hidden;
-    background: #000;
-  }}
-  .embed-frame-wrap iframe {{
-    width: 100%;
-    height: 100%;
-    border: 0;
-    display: block;
-  }}
-</style>
-<script type="application/ld+json">{schema_json}</script>
-<script type="application/ld+json">{breadcrumb_schema_json}</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VTNJRV4WG8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){{dataLayer.push(arguments);}}
-  gtag('js', new Date());
-  gtag('config', 'G-VTNJRV4WG8');
-</script>
-</head>
-<body>
-<div class="game-shell" data-thumbnail="{thumbnail}">
-  <div class="breadcrumb" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:8px;">
-    <a href="../index.html" style="color:var(--teal);text-decoration:none;">Home</a> / {category} / {title}
-  </div>
-  <a class="back-link" href="../index.html">← back to Pixelsprout</a>
-  <h1 class="game-title">{title}</h1>
-  <div class="game-meta">{category}</div>
-
-  <div class="ad-slot ad-slot-banner">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-8466016918717424"
-         data-ad-slot="4936643192"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
-  </div>
-
-  <div class="game-board-frame">
-    <div class="embed-frame-wrap">
-      <iframe src="{embed_url}" allow="fullscreen; autoplay; screen-orientation;" scrolling="no" allowfullscreen title="{title}"></iframe>
-    </div>
-    <button class="action fullscreen-btn" onclick="
-      const f = document.querySelector('.embed-frame-wrap');
-      const req = f.requestFullscreen || f.webkitRequestFullscreen || f.msRequestFullscreen;
-      if (req) req.call(f);
-      if (typeof gtag === 'function') {{ gtag('event', 'fullscreen_click', {{ game_title: document.title }}); }}
-    ">⛶ Fullscreen</button>
-    <p class="how-to">{description}</p>
-
-    <!-- ADSTERRA-NATIVE -->
-    <div class="adsterra-slot adsterra-native" style="margin:16px auto;max-width:700px;">
-    <script async="async" data-cfasync="false" src="https://pl30771855.effectivecpmnetwork.com/c3f3d41bbefde3a25a4d5d341b5582d1/invoke.js"></script>
-    <div id="container-c3f3d41bbefde3a25a4d5d341b5582d1"></div>
-    </div>
-
-    <!-- ADSTERRA-300x250 -->
-    <div class="adsterra-slot adsterra-300x250" style="margin:16px auto;text-align:center;max-width:300px;">
-    <script>
-    atOptions = {{
-      'key' : '9de242ffc7b556a74ae29033348b18bd',
-      'format' : 'iframe',
-      'height' : 250,
-      'width' : 300,
-      'params' : {{}}
-    }};
-    </script>
-    <script src="https://www.highperformanceformat.com/9de242ffc7b556a74ae29033348b18bd/invoke.js"></script>
-    </div>
-
-    <div class="ad-slot ad-slot-ribbon">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-8466016918717424"
-           data-ad-slot="1457517471"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
-    </div>
-
-    <!-- ADSTERRA-728x90 -->
-    <div class="adsterra-slot adsterra-728x90" style="margin:16px auto;text-align:center;max-width:728px;">
-    <script>
-    atOptions = {{
-      'key' : 'da5095b2daea5c6ba87d034975239610',
-      'format' : 'iframe',
-      'height' : 90,
-      'width' : 728,
-      'params' : {{}}
-    }};
-    </script>
-    <script src="https://www.highperformanceformat.com/da5095b2daea5c6ba87d034975239610/invoke.js"></script>
-    </div>
-
-    <div class="similar-games">
-      <h3 class="similar-games-title">You might also like</h3>
-      <div class="similar-games-grid" id="similar-games-grid"></div>
-    </div>
-    <script>
-      fetch('../games-index.json')
-        .then(r => r.json())
-        .then(games => {{
-          const currentSlug = '{slug}';
-          const currentCategory = '{category}';
-          let matches = games.filter(g => g.category === currentCategory && g.slug !== currentSlug);
-          matches = matches.sort(() => 0.5 - Math.random());
-          if (matches.length < 4) {{
-            const others = games.filter(g => g.slug !== currentSlug && !matches.some(m => m.slug === g.slug));
-            matches = matches.concat(others.sort(() => 0.5 - Math.random()).slice(0, 4 - matches.length));
-          }}
-          matches = matches.slice(0, 4);
-          const grid = document.getElementById('similar-games-grid');
-          matches.forEach(g => {{
-            const a = document.createElement('a');
-            a.className = 'similar-card';
-            a.href = g.slug + '.html';
-            a.innerHTML = '<img src="' + g.thumbnail + '" alt="" loading="lazy"><span>' + g.title + '</span>';
-            grid.appendChild(a);
-          }});
-        }})
-        .catch(() => {{}});
-    </script>
-  </div>
-</div>
-</body>
-</html>
-"""
 
 
 def slugify(title):
@@ -299,46 +151,12 @@ def fetch_new_games(already_added_ids, already_skipped_ids, existing_catalog, ga
 
 
 def build_game_page(game):
-    schema = {
-        "@context": "https://schema.org",
-        "@type": "VideoGame",
-        "name": game["title"],
-        "description": game["description"],
-        "genre": game["category"],
-        "url": f"https://playpixelsprout.com/games/{game['slug']}.html",
-        "applicationCategory": "Game",
-        "operatingSystem": "Web Browser",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-    }
-    if game.get("thumbnail"):
-        schema["image"] = game["thumbnail"]
-    schema_json = json.dumps(schema)
-
-    breadcrumb_schema = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://playpixelsprout.com/"},
-            {"@type": "ListItem", "position": 2, "name": game["category"], "item": f"https://playpixelsprout.com/games/{game['slug']}.html"},
-            {"@type": "ListItem", "position": 3, "name": game["title"], "item": f"https://playpixelsprout.com/games/{game['slug']}.html"},
-        ],
-    }
-    breadcrumb_schema_json = json.dumps(breadcrumb_schema)
-
-    html = GAME_PAGE_TEMPLATE.format(
-        title=game["title"],
-        category=game["category"],
-        embed_url=game["embed_url"],
-        description=game["description"],
-        slug=game["slug"],
-        schema_json=schema_json,
-        breadcrumb_schema_json=breadcrumb_schema_json,
-        thumbnail=game.get("thumbnail", ""),
-    )
-    path = f"{GAMES_DIR}/{game['slug']}.html"
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(html)
     update_games_index(game)
+    catalog = site_shell.load_catalog()
+    html = site_pages.render_game_page(site_pages.new_game_fields(game), catalog, total_games=len(catalog))
+    path = f"{GAMES_DIR}/{game['slug']}.html"
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
+        f.write(html)
     return path
 
 
@@ -358,107 +176,6 @@ def update_games_index(game):
     with open(GAMES_INDEX_FILE, "w", encoding="utf-8") as f:
         json.dump(games_list, f)
 
-
-def add_card_to_index(game):
-    with open(INDEX_FILE, encoding="utf-8") as f:
-        index_html = f.read()
-
-    category_heading = f"<h2>{game['category']}</h2>"
-    existing_category = category_heading in index_html
-
-    if existing_category:
-        # Look up the color via the category div's own id attribute
-        # (a slugified version of the category name) - simpler and more
-        # exact than trying to pattern-match the surrounding structure.
-        section_pattern = re.compile(
-            r'<div id="' + re.escape(slugify(game["category"])) + r'" class="category (\w+)"'
-        )
-        section_match = section_pattern.search(index_html)
-        game["color"] = section_match.group(1) if section_match else CATEGORY_COLORS[0]
-    else:
-        used_colors = re.findall(r'class="category (\w+)"', index_html)
-        game["color"] = CATEGORY_COLORS[len(set(used_colors)) % len(CATEGORY_COLORS)]
-
-    short_desc = game["description"][:70] + ("..." if len(game["description"]) > 70 else "")
-    card_html = f'''    <a class="card" href="games/{game['slug']}.html" data-name="{game['title'].lower()}">
-      <span class="icon-tile {game['color']}" style="padding:0; overflow:hidden;">
-        <img src="{game['thumbnail']}" alt="" loading="lazy" style="width:100%; height:100%; object-fit:cover; border-radius:9px;">
-      </span>
-      <div class="card-body">
-        <h3>{game['title']}</h3>
-        <p>{short_desc}</p>
-      </div>
-    </a>
-'''
-
-    if existing_category:
-        # Bump the displayed count for this category.
-        count_pattern = re.compile(
-            r'(' + re.escape(category_heading) + r'.*?<span class="count">)(\d+)( games?)(</span>)',
-            re.DOTALL,
-        )
-
-        def _bump_count(m):
-            new_count = int(m.group(2)) + 1
-            plural = " games" if new_count != 1 else " game"
-            return m.group(1) + str(new_count) + plural + m.group(4)
-
-        index_html = count_pattern.sub(_bump_count, index_html, count=1)
-
-        # Append the new card at the END of this category's grid, not the
-        # start - keeps existing games ahead of newly-added ones in display
-        # order (the order they were actually added to the site), instead
-        # of every new addition jumping to the front and pushing everything
-        # else down.
-        grid_start_pattern = re.compile(
-            re.escape(category_heading) + r'.*?<div class="grid" data-grid>\r?\n',
-            re.DOTALL,
-        )
-        start_match = grid_start_pattern.search(index_html)
-        if start_match:
-            grid_content_start = start_match.end()
-            end_match = re.search(
-                r'\r?\n  <div id="[a-z0-9-]*" class="category |\r?\n  <p id="no-results"',
-                index_html[grid_content_start:],
-            )
-            grid_content_end = (
-                grid_content_start + end_match.start() if end_match else len(index_html)
-            )
-            index_html = (
-                index_html[:grid_content_end]
-                + card_html
-                + index_html[grid_content_end:]
-            )
-    else:
-        category_slug = slugify(game['category'])
-        new_section = f'''  <div id="{category_slug}" class="category {game['color']}" data-section data-genre="{category_slug}">
-    <span class="bar"></span>
-    <h2>{game['category']}</h2>
-    <span class="count">1 game</span>
-  </div>
-  <div class="grid" data-grid>
-{card_html}  </div>
-
-'''
-        marker = '  <p id="no-results"'
-        index_html = index_html.replace(marker, new_section + marker, 1)
-
-    total_match = re.search(r'<strong id="game-count">(\d+)</strong>', index_html)
-    if total_match:
-        new_total = int(total_match.group(1)) + 1
-        index_html = index_html.replace(
-            f'<strong id="game-count">{total_match.group(1)}</strong>',
-            f'<strong id="game-count">{new_total}</strong>',
-            1,
-        )
-
-    marquee_match = re.search(r"const names = \[(.*?)\];", index_html)
-    if marquee_match:
-        new_names = marquee_match.group(1) + f",'{game['title'].upper()}'"
-        index_html = index_html.replace(marquee_match.group(0), f"const names = [{new_names}];", 1)
-
-    with open(INDEX_FILE, "w", encoding="utf-8") as f:
-        f.write(index_html)
 
 
 def add_to_sitemap(game):
@@ -570,7 +287,6 @@ def main():
     for game in new_games:
         game["slug"] = slugify(game["title"])
         build_game_page(game)
-        add_card_to_index(game)
         add_to_sitemap(game)
         add_to_rss(game)
         tracking["added_ids"].append(game["id"])
@@ -579,6 +295,7 @@ def main():
         print(f"Added: {game['title']} ({game['category']})")
 
     save_tracking(tracking)
+    site_pages.build_home(site_shell.load_catalog())
     git_commit_and_push(added_titles)
     ping_indexnow(new_urls + [f"{DOMAIN}/"])
 

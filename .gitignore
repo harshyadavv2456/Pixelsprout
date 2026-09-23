@@ -1,1 +1,7 @@
 pinterest-config.json
+__pycache__/
+*.pyc
+qa-screenshots/
+qa/
+node_modules/
+.claude/launch.json

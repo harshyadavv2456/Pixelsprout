@@ -26,6 +26,7 @@ import sys
 import time
 
 sys.path.insert(0, os.path.dirname(__file__))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from groq_client import GroqRotatingClient
 import fallback_content as fb
 import similar_games as sim
@@ -197,88 +198,23 @@ def update_sitemap(new_urls):
 
 
 def write_guides_landing_page(guides_index):
-    """
-    Every guide page's breadcrumb links to /guides/ - this page has to
-    exist. Client-side renders the full list from guides-index.json
-    (same pattern as the "Play something else" fetches elsewhere on the
-    site) rather than baking thousands of links into a static file -
-    keeps this file small while still being a genuine, crawlable
-    internal-linking hub once JS runs.
-    """
-    html = """<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://playpixelsprout.com/guides/">
-<title>Game Guides - Tips, Controls & FAQs | Pixelsprout</title>
-<meta name="description" content="Tips, controls, beginner guides, and FAQs for every game on Pixelsprout.">
-<link rel="stylesheet" href="/styles.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<script defer src="/pixelsprout-features.js"></script>
-<style>
-  * { box-sizing: border-box; }
-  body { overflow-x: hidden; }
-  .game-shell, .game-board-frame { max-width: 100%; overflow-x: hidden; }
-  #guides-list { width: 100%; max-width: 100%; }
-  @media (max-width: 600px) {
-    .game-title { font-size: 1.15em; line-height: 1.4; }
-    #guides-list { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)) !important; }
-  }
-</style>
-</head>
-<body>
-<div class="game-shell">
-  <div class="breadcrumb" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:8px;">
-    <a href="/index.html" style="color:var(--teal);text-decoration:none;">Home</a> / Guides
-  </div>
-  <a class="back-link" href="/index.html">&larr; back to Pixelsprout</a>
-  <h1 class="game-title">Game Guides</h1>
-  <div class="game-meta">Tips, controls, beginner guides, and FAQs for every game</div>
-
-  <div class="game-board-frame">
-    <input id="guides-search" type="text" placeholder="Search guides..." style="width:100%;max-width:400px;display:block;margin:16px auto;padding:10px 14px;border-radius:8px;border:1px solid var(--border,#2a3050);background:var(--panel,#151a2e);color:var(--paper,#fff);">
-    <div id="guides-list" style="margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;"></div>
-  </div>
-</div>
-<script>
-fetch('/guides-index.json')
-  .then(r => r.json())
-  .then(data => {
-    const entries = Object.keys(data).map(slug => ({ slug, pages: data[slug] }));
-    const list = document.getElementById('guides-list');
-    const search = document.getElementById('guides-search');
-
-    function render(filter) {
-      list.innerHTML = '';
-      const f = (filter || '').toLowerCase();
-      entries
-        .filter(e => e.slug.toLowerCase().includes(f))
-        .slice(0, 500)
-        .forEach(e => {
-          const a = document.createElement('a');
-          a.href = e.pages.tips || Object.values(e.pages)[0];
-          a.textContent = e.slug.replace(/-/g, ' ');
-          a.style.cssText = 'color:var(--muted,#8a93b8);text-decoration:none;padding:8px 10px;border:1px solid var(--border,#2a3050);border-radius:6px;font-size:13px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;';
-          list.appendChild(a);
-        });
-    }
-    render('');
-    search.addEventListener('input', () => render(search.value));
-  })
-  .catch(() => {
-    document.getElementById('guides-list').textContent = 'Guides are being generated - check back soon.';
-  });
-</script>
-</body>
-</html>
-"""
+    """Every guide page's breadcrumb links to /guides/, so this hub must exist.
+    It renders its list client-side from guides-index.json."""
+    import site_pages as P
     out_dir = os.path.join(REPO_ROOT, "guides")
     os.makedirs(out_dir, exist_ok=True)
-    with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
-        f.write(html)
+    import site_shell as S
+    with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8", newline="\n") as f:
+        f.write(P.render_guides_hub(total_games=len(S.load_catalog())))
+
+
+def refresh_game_pages(slugs, all_games, guides_index):
+    """Re-render game pages so they link to their newly generated guides."""
+    import site_pages as P
+    import site_shell as S
+    catalog = S.load_catalog()
+    for slug in slugs:
+        P.refresh_game_page(slug, catalog, guides_index)
 
 
 def main():
@@ -342,6 +278,7 @@ def main():
     save_json(GUIDES_INDEX_PATH, guides_index)
     update_sitemap(new_sitemap_urls)
     write_guides_landing_page(guides_index)
+    refresh_game_pages([g["slug"] for g in targets], all_games, guides_index)
 
     print(f"\nDone. AI-generated pages: {stats['ai']}, fallback pages: {stats['fallback'] + stats['fallback_after_fail']}")
     print(f"Games processed this run: {len(targets)}. Remaining un-processed games: "

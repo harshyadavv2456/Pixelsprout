@@ -36,6 +36,9 @@ jobs:
           python generate-category-pages.py
           python add-category-pages-to-sitemap.py
 
+      - name: Rebuild homepage and A-Z page
+        run: python generate-homepage.py
+
       - name: Check catalog quality
         run: python check-catalog-quality.py
 

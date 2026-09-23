@@ -1,130 +1,46 @@
 """
-Renders guide pages and collection pages into the same site-wide template
-used everywhere else (game-shell layout, real ad slots, real GA4 tag,
-canonical/OG/schema metadata) - these are never meant to look or behave
-like a bolted-on "blog," just more pages of the same site.
+Renders guide pages and collection pages. Builds the page fields here, then
+hands them to the site-wide templates in site_pages (repo root), so these
+pages share the exact shell, cards and ad slots as every other page.
 """
 
-from svg_card import render_stat_card_svg
+import json
+import os
+import sys
 
-ADSENSE_CLIENT = "ca-pub-8466016918717424"
-AD_SLOT_BANNER = "4936643192"
-AD_SLOT_RIBBON = "1457517471"
-GA_ID = "G-VTNJRV4WG8"
-SITE = "https://playpixelsprout.com"
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import site_pages as P  # noqa: E402
+import site_shell as S  # noqa: E402
 
-# Adsterra - guide/collection ("blog-style") pages get the two banner
-# formats only, no popunder (popunder is reserved for game pages, fired on
-# the play/fullscreen click). Additive to AdSense, never replaces it.
-ADSTERRA_300x250 = """<!-- ADSTERRA-300x250 -->
-<div class="adsterra-slot adsterra-300x250" style="margin:16px auto;text-align:center;max-width:300px;">
-<script>
-atOptions = {
-  'key' : '9de242ffc7b556a74ae29033348b18bd',
-  'format' : 'iframe',
-  'height' : 250,
-  'width' : 300,
-  'params' : {}
-};
-</script>
-<script src="https://www.highperformanceformat.com/9de242ffc7b556a74ae29033348b18bd/invoke.js"></script>
-</div>"""
+SITE = S.DOMAIN
 
-ADSTERRA_728x90 = """<!-- ADSTERRA-728x90 -->
-<div class="adsterra-slot adsterra-728x90" style="margin:16px auto;text-align:center;max-width:728px;">
-<script>
-atOptions = {
-  'key' : 'da5095b2daea5c6ba87d034975239610',
-  'format' : 'iframe',
-  'height' : 90,
-  'width' : 728,
-  'params' : {}
-};
-</script>
-<script src="https://www.highperformanceformat.com/da5095b2daea5c6ba87d034975239610/invoke.js"></script>
-</div>"""
-
-ADSTERRA_NATIVE = """<!-- ADSTERRA-NATIVE -->
-<div class="adsterra-slot adsterra-native" style="margin:16px auto;max-width:700px;">
-<script async="async" data-cfasync="false" src="https://pl30771855.effectivecpmnetwork.com/c3f3d41bbefde3a25a4d5d341b5582d1/invoke.js"></script>
-<div id="container-c3f3d41bbefde3a25a4d5d341b5582d1"></div>
-</div>"""
+TITLE_MAP = {
+    "tips": "{t} - Tips, Tricks & How to Get a High Score",
+    "controls": "{t} Controls - How to Play (Desktop & Mobile)",
+    "beginner-guide": "{t} Beginner's Guide - How to Get Started",
+    "similar": "Games Like {t} - {c} Games to Try Next",
+    "faq": "{t} - Frequently Asked Questions",
+}
+DESC_MAP = {
+    "tips": "Tips and strategies to improve at {t} and get a higher score, from the basics to more advanced play.",
+    "controls": "Full control scheme for {t} on both desktop and mobile - keyboard, mouse, and touch.",
+    "beginner-guide": "New to {t}? Here's everything to know before your first playthrough.",
+    "similar": "Enjoyed {t}? Here are more {cl} games to play free on Pixelsprout.",
+    "faq": "Common questions about {t} - free play, mobile support, and more.",
+}
+SLUG_MAP = {
+    "tips": "{s}-tips",
+    "controls": "{s}-controls",
+    "beginner-guide": "{s}-beginner-guide",
+    "similar": "games-like-{s}",
+    "faq": "{s}-faq",
+}
+CRUMB_LABELS = {"tips": "Tips", "controls": "Controls", "beginner-guide": "Beginner's Guide", "similar": "Games Like This", "faq": "FAQ"}
+SIBLING_LABELS = {"tips": "Tips & Strategy", "controls": "Controls", "beginner-guide": "Beginner's Guide", "similar": "Games Like This", "faq": "FAQ"}
 
 
-def _head(title, description, canonical_path, og_image, schema_blocks):
-    schema_html = "\n".join(
-        f'<script type="application/ld+json">{s}</script>' for s in schema_blocks
-    )
-    return f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="canonical" href="{SITE}{canonical_path}">
-<title>{title}</title>
-<meta name="description" content="{description}">
-<link rel="stylesheet" href="/styles.css">
-<link rel="preconnect" href="https://img.gamepix.com">
-<link rel="preconnect" href="https://img.gamemonetize.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={ADSENSE_CLIENT}" crossorigin="anonymous"></script>
-<meta property="og:type" content="article">
-<meta property="og:url" content="{SITE}{canonical_path}">
-<meta property="og:title" content="{title}">
-<meta property="og:description" content="{description}">
-<meta property="og:image" content="{og_image}">
-{schema_html}
-<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){{dataLayer.push(arguments);}}
-  gtag('js', new Date());
-  gtag('config', '{GA_ID}');
-</script>
-<script defer src="/pixelsprout-features.js"></script>
-<style>
-  /* Defensive responsive layer for guide/collection pages - makes sure
-     nothing (images, the SVG stat card, long unbroken AI-written text)
-     can force horizontal overflow on narrow/mobile screens, regardless
-     of any fixed pixel width elsewhere on the element itself. */
-  * {{ box-sizing: border-box; }}
-  body {{ overflow-x: hidden; }}
-  img, svg {{ max-width: 100%; height: auto; }}
-  .game-shell, .game-board-frame {{ max-width: 100%; overflow-x: hidden; }}
-  .guide-body, .guide-body * {{ max-width: 100%; word-wrap: break-word; overflow-wrap: break-word; }}
-  .breadcrumb {{ flex-wrap: wrap; word-break: break-word; }}
-  @media (max-width: 600px) {{
-    .game-title {{ font-size: 1.15em; line-height: 1.4; }}
-    .similar-games-grid {{ grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important; }}
-  }}
-</style>
-</head>
-"""
-
-
-def _breadcrumb(items):
-    """items: list of (label, href_or_None_for_current)"""
-    parts = []
-    for label, href in items:
-        if href:
-            parts.append(f'<a href="{href}" style="color:var(--teal);text-decoration:none;">{label}</a>')
-        else:
-            parts.append(label)
-    return " / ".join(parts)
-
-
-def _related_grid(games, base_prefix):
-    cards = []
-    for g in games:
-        thumb = g["thumbnail"].strip() if g.get("thumbnail", "").strip() else f"{base_prefix}assets/logo-icon.png"
-        cards.append(
-            f'<a class="similar-card" href="{base_prefix}games/{g["slug"]}.html">'
-            f'<img src="{thumb}" alt="" loading="lazy"><span>{g["title"]}</span></a>'
-        )
-    return "\n".join(cards)
+def _fmt(template, game):
+    return template.format(t=game["title"], c=game["category"], cl=game["category"].lower(), s=game["slug"])
 
 
 def render_guide_page(page_type, game, content, related_games, sibling_guides, category_url=None):
@@ -133,151 +49,64 @@ def render_guide_page(page_type, game, content, related_games, sibling_guides, c
     content: dict from either Groq or fallback_content, shape depends on page_type
     related_games: list of similar catalog games (internal linking)
     sibling_guides: dict of {page_type: url} for this same game's other guide pages
-    category_url: "/<category-slug>/" if that category page actually exists
-                  on the site, else None (never link to a page that isn't real)
+    category_url: "/<category-slug>/" if that category page exists, else None
     """
-    title_map = {
-        "tips": f"{game['title']} - Tips, Tricks & How to Get a High Score",
-        "controls": f"{game['title']} Controls - How to Play (Desktop & Mobile)",
-        "beginner-guide": f"{game['title']} Beginner's Guide - How to Get Started",
-        "similar": f"Games Like {game['title']} - {game['category']} Games to Try Next",
-        "faq": f"{game['title']} - Frequently Asked Questions",
-    }
-    desc_map = {
-        "tips": f"Tips and strategies to improve at {game['title']} and get a higher score, from the basics to more advanced play.",
-        "controls": f"Full control scheme for {game['title']} on both desktop and mobile - keyboard, mouse, and touch.",
-        "beginner-guide": f"New to {game['title']}? Here's everything to know before your first playthrough.",
-        "similar": f"Enjoyed {game['title']}? Here are more {game['category'].lower()} games to play free on Pixelsprout.",
-        "faq": f"Common questions about {game['title']} - free play, mobile support, and more.",
-    }
-    slug_suffix_map = {
-        "tips": f"{game['slug']}-tips",
-        "controls": f"{game['slug']}-controls",
-        "beginner-guide": f"{game['slug']}-beginner-guide",
-        "similar": f"games-like-{game['slug']}",
-        "faq": f"{game['slug']}-faq",
-    }
-    slug_path = slug_suffix_map[page_type]
-    canonical_path = f"/guides/{slug_path}/"
-    title = title_map[page_type]
-    description = desc_map[page_type]
-    safe_thumbnail = game["thumbnail"].strip() if game.get("thumbnail", "").strip() else f"{SITE}/assets/logo-icon.png"
-
-    crumb_label_map = {
-        "tips": "Tips",
-        "controls": "Controls",
-        "beginner-guide": "Beginner's Guide",
-        "similar": "Games Like This",
-        "faq": "FAQ",
-    }
+    title = _fmt(TITLE_MAP[page_type], game)
+    canonical_path = f"/guides/{_fmt(SLUG_MAP[page_type], game)}/"
+    thumb = (game.get("thumbnail") or "").strip()
+    safe_thumbnail = thumb or f"{SITE}/assets/logo-icon.png"
 
     schema = [
-        (
-            '{"@context":"https://schema.org","@type":"Article","headline":"%s",'
-            '"about":{"@type":"VideoGame","name":"%s"},"image":"%s"}'
-        ) % (title.replace('"', "'"), game["title"].replace('"', "'"), safe_thumbnail),
-        (
-            '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":['
-            '{"@type":"ListItem","position":1,"name":"Home","item":"%s/"},'
-            '{"@type":"ListItem","position":2,"name":"Guides","item":"%s/guides/"},'
-            '{"@type":"ListItem","position":3,"name":"%s","item":"%s%s"}]}'
-        ) % (SITE, SITE, title.replace('"', "'"), SITE, canonical_path),
+        json.dumps({"@context": "https://schema.org", "@type": "Article", "headline": title,
+                    "about": {"@type": "VideoGame", "name": game["title"]}, "image": safe_thumbnail}),
+        json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE}/"},
+            {"@type": "ListItem", "position": 2, "name": "Guides", "item": f"{SITE}/guides/"},
+            {"@type": "ListItem", "position": 3, "name": title, "item": f"{SITE}{canonical_path}"},
+        ]}),
     ]
     if page_type == "faq" and content.get("faqs"):
-        qa_items = ",".join(
-            '{"@type":"Question","name":"%s","acceptedAnswer":{"@type":"Answer","text":"%s"}}'
-            % (q["question"].replace('"', "'"), q["answer"].replace('"', "'"))
+        schema.append(json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": q["question"], "acceptedAnswer": {"@type": "Answer", "text": q["answer"]}}
             for q in content["faqs"]
-        )
-        schema.append('{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[%s]}' % qa_items)
+        ]}))
 
-    head = _head(title + " | Pixelsprout", description, canonical_path, safe_thumbnail, schema)
-
-    crumb_items = [
-        ("Home", "/index.html"),
-        ("Guides", "/guides/"),
-    ]
+    crumbs = [("Home", "/"), ("Guides", "/guides/")]
     if category_url:
-        crumb_items.append((game["category"], category_url))
-    crumb_items.append((game["title"], f"/games/{game['slug']}.html"))
-    crumb_items.append((crumb_label_map[page_type], None))
-    crumb = _breadcrumb(crumb_items)
+        crumbs.append((S.esc(game["category"]), category_url))
+    crumbs.append((S.esc(game["title"]), f"/games/{game['slug']}.html"))
+    crumbs.append((CRUMB_LABELS[page_type], None))
 
-    body_html = _render_body_for_type(page_type, game, content)
+    body = _render_body_for_type(page_type, game, content)
+    if category_url:
+        body += f'\n<p><a href="{category_url}">Browse more {S.esc(game["category"])} games &rarr;</a></p>'
 
-    sibling_labels = {
-        "tips": "Tips & Strategy",
-        "controls": "Controls",
-        "beginner-guide": "Beginner's Guide",
-        "similar": "Games Like This",
-        "faq": "FAQ",
+    og = "\n".join([
+        '<meta property="og:type" content="article">',
+        f'<meta property="og:url" content="{SITE}{canonical_path}">',
+        f'<meta property="og:title" content="{S.esc(title)} | Pixelsprout">',
+        f'<meta property="og:description" content="{S.esc(_fmt(DESC_MAP[page_type], game))}">',
+        f'<meta property="og:image" content="{S.esc(safe_thumbnail)}">',
+    ])
+
+    fields = {
+        "title_tag": S.esc(title + " | Pixelsprout"),
+        "meta_desc": S.esc(_fmt(DESC_MAP[page_type], game)),
+        "canonical": f"{SITE}{canonical_path}",
+        "og": og,
+        "jsonld": schema,
+        "crumbs": crumbs,
+        "h1": S.esc(title),
+        "eyebrow": f"Guide &middot; {S.esc(game['category'])}",
+        "game_slug": game["slug"],
+        "game_title": game["title"],
+        "genre": game["category"],
+        "thumbnail": thumb,
+        "body": body,
+        "siblings": [(url, SIBLING_LABELS[key]) for key, url in sibling_guides.items() if key != page_type],
+        "related": [{"slug": g["slug"], "title": g["title"], "thumbnail": (g.get("thumbnail") or "").strip()} for g in related_games],
     }
-    other_guides_links = "\n".join(
-        f'<a class="similar-card" href="{url}"><span>{sibling_labels[key]}</span></a>'
-        for key, url in sibling_guides.items() if key != page_type
-    )
-
-    category_link_html = (
-        f'<p style="margin-top:16px;"><a href="{category_url}" style="color:var(--teal);">Browse more {game["category"]} games &rarr;</a></p>'
-        if category_url else ""
-    )
-
-    hero_image_inner = (
-        f'<img src="{game["thumbnail"]}" alt="{game["title"]} gameplay thumbnail" width="320" height="320" style="display:block;max-width:280px;margin:0 auto;border-radius:10px;" loading="lazy">'
-        if game.get("thumbnail", "").strip()
-        else f'<img src="/assets/logo-icon.png" alt="{game["title"]} on Pixelsprout" width="200" height="200" style="display:block;max-width:180px;margin:0 auto;border-radius:10px;opacity:0.85;" loading="lazy">'
-    )
-    hero_image = f'<a href="/games/{game["slug"]}.html" style="display:block;margin:0 auto 20px;text-align:center;" aria-label="Play {game["title"]}">{hero_image_inner}</a>'
-    stat_card_svg = render_stat_card_svg(game)
-
-    return f"""{head}
-<body>
-<div class="game-shell">
-  <div class="breadcrumb" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:8px;">{crumb}</div>
-  <a class="back-link" href="/games/{game['slug']}.html">&larr; back to {game['title']}</a>
-  <h1 class="game-title">{title}</h1>
-  <div class="game-meta">Guide &middot; {game['category']}</div>
-
-  <div class="ad-slot ad-slot-banner">
-    <ins class="adsbygoogle" style="display:block" data-ad-client="{ADSENSE_CLIENT}" data-ad-slot="{AD_SLOT_BANNER}" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
-  </div>
-
-  {ADSTERRA_728x90}
-
-  <div class="game-board-frame">
-    {hero_image}
-
-    <article class="guide-body" style="max-width:760px;margin:0 auto;color:var(--muted,#8a93b8);font-family:system-ui,sans-serif;font-size:15px;line-height:1.75;">
-      {body_html}
-      {category_link_html}
-    </article>
-
-    {ADSTERRA_NATIVE}
-
-    <a href="/games/{game['slug']}.html" style="display:block;max-width:640px;margin:24px auto;text-decoration:none;" aria-label="Play {game['title']}">{stat_card_svg}</a>
-
-    {ADSTERRA_300x250}
-
-    <div class="ad-slot ad-slot-ribbon">
-      <ins class="adsbygoogle" style="display:block" data-ad-client="{ADSENSE_CLIENT}" data-ad-slot="{AD_SLOT_RIBBON}" data-ad-format="auto" data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
-    </div>
-
-    <div class="similar-games">
-      <h3 class="similar-games-title">More about {game['title']}</h3>
-      <div class="similar-games-grid">{other_guides_links}</div>
-    </div>
-
-    <div class="similar-games">
-      <h3 class="similar-games-title">Play something similar</h3>
-      <div class="similar-games-grid">{_related_grid(related_games, "/")}</div>
-    </div>
-  </div>
-</div>
-</body>
-</html>
-"""
+    return P.render_guide_page(fields)
 
 
 def _render_body_for_type(page_type, game, content):
@@ -307,73 +136,48 @@ def _render_body_for_type(page_type, game, content):
         return f"<p>{content.get('intro','')}</p>"
     if page_type == "faq":
         faqs = content.get("faqs", [])
-        items = "\n".join(f"<h2>{q['question']}</h2>\n<p>{q['answer']}</p>" for q in faqs)
-        return items
+        return "\n".join(f"<h2>{q['question']}</h2>\n<p>{q['answer']}</p>" for q in faqs)
     return ""
 
 
 def render_collection_page(collection, games, content):
     display_name = collection["display_name"]
-    kind = collection.get("kind", "versus")
-    if kind == "best":
-        page_title = f"Best {display_name} - Free to Play | Pixelsprout"
+    if collection.get("kind", "versus") == "best":
+        title = f"Best {display_name} - Free to Play | Pixelsprout"
         description = f"The best {display_name.lower()} on Pixelsprout, free to play in your browser - no download needed."
         h1 = f"Best {display_name}"
     else:
-        page_title = f"Games Like {display_name} - Free Browser Alternatives | Pixelsprout"
+        title = f"Games Like {display_name} - Free Browser Alternatives | Pixelsprout"
         description = f"Love {display_name}? Here are the best free, browser-playable alternatives on Pixelsprout - no download needed."
         h1 = f"Games Like {display_name}"
-    title = page_title
     canonical_path = f"/games-like/{collection['slug']}/"
-
-    items_json = ",".join(
-        '{"@type":"ListItem","position":%d,"name":"%s","url":"%s/games/%s.html"}'
-        % (i + 1, g["title"].replace('"', "'"), SITE, g["slug"])
-        for i, g in enumerate(games)
-    )
     schema = [
-        '{"@context":"https://schema.org","@type":"ItemList","itemListElement":[%s]}' % items_json,
-        (
-            '{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":['
-            '{"@type":"ListItem","position":1,"name":"Home","item":"%s/"},'
-            '{"@type":"ListItem","position":2,"name":"%s","item":"%s%s"}]}'
-        ) % (SITE, h1.replace('"', "'"), SITE, canonical_path),
+        json.dumps({"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "name": g["title"], "url": f"{SITE}/games/{g['slug']}.html"}
+            for i, g in enumerate(games)
+        ]}),
+        json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE}/"},
+            {"@type": "ListItem", "position": 2, "name": h1, "item": f"{SITE}{canonical_path}"},
+        ]}),
     ]
-
-    og_image = next((g["thumbnail"] for g in games if g.get("thumbnail", "").strip()), f"{SITE}/assets/logo-icon.png")
-    head = _head(title, description, canonical_path, og_image, schema)
-    crumb = _breadcrumb([("Home", "/index.html"), (h1, None)])
-    grid = _related_grid(games, "/")
-
-    return f"""{head}
-<body>
-<div class="game-shell">
-  <div class="breadcrumb" style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-bottom:8px;">{crumb}</div>
-  <a class="back-link" href="/index.html">&larr; back to Pixelsprout</a>
-  <h1 class="game-title">{h1}</h1>
-  <div class="game-meta">Collection &middot; {len(games)} games</div>
-
-  <div class="ad-slot ad-slot-banner">
-    <ins class="adsbygoogle" style="display:block" data-ad-client="{ADSENSE_CLIENT}" data-ad-slot="{AD_SLOT_BANNER}" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
-  </div>
-
-  {ADSTERRA_728x90}
-
-  <div class="game-board-frame">
-    <p style="max-width:760px;margin:0 auto 20px;color:var(--muted,#8a93b8);font-family:system-ui,sans-serif;font-size:15px;line-height:1.75;">{content.get('intro','')}</p>
-    <div class="similar-games-grid">{grid}</div>
-
-    {ADSTERRA_NATIVE}
-
-    {ADSTERRA_300x250}
-
-    <div class="ad-slot ad-slot-ribbon">
-      <ins class="adsbygoogle" style="display:block" data-ad-client="{ADSENSE_CLIENT}" data-ad-slot="{AD_SLOT_RIBBON}" data-ad-format="auto" data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({{}});</script>
-    </div>
-  </div>
-</div>
-</body>
-</html>
-"""
+    og_image = next((g["thumbnail"] for g in games if (g.get("thumbnail") or "").strip()), f"{SITE}/assets/logo-icon.png")
+    og = "\n".join([
+        '<meta property="og:type" content="article">',
+        f'<meta property="og:url" content="{SITE}{canonical_path}">',
+        f'<meta property="og:title" content="{S.esc(title)}">',
+        f'<meta property="og:description" content="{S.esc(description)}">',
+        f'<meta property="og:image" content="{S.esc(og_image)}">',
+    ])
+    fields = {
+        "title_tag": S.esc(title),
+        "meta_desc": S.esc(description),
+        "canonical": f"{SITE}{canonical_path}",
+        "og": og,
+        "jsonld": schema,
+        "h1": S.esc(h1),
+        "intro": content.get("intro", ""),
+        "games": [{"slug": g["slug"], "title": g["title"], "thumbnail": (g.get("thumbnail") or "").strip()} for g in games],
+    }
+    by_slug = {g["slug"]: g for g in games}
+    return P.render_collection_page(fields, by_slug)

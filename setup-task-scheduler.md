@@ -4,16 +4,19 @@ This runs both scripts from your own PC daily, using zero GitHub Actions minutes
 Only requirement: your PC needs to be on and awake at the scheduled time (or set
 it to run on next login if the PC was off).
 
-## Step 1: Create a batch file to run both scripts in sequence
+## Step 1: The batch file
 
-Create a new file `run-daily-automation.bat` in your project folder:
+`run-daily-automation.bat` is already in the repo. In order, it runs:
 
-```bat
-@echo off
-cd /d "C:\Users\HARSH\Downloads\pixelsprout\pixelsprout"
-python auto-add-games.py
-python post-to-pinterest.py
-```
+1. `git pull`
+2. `python auto-add-games.py` — adds new games; also rebuilds the homepage and `/all-games/`
+3. `python post-to-pinterest.py`
+4. `python generate-category-pages.py` + `python add-category-pages-to-sitemap.py`
+5. `python generate-homepage.py` — rebuilds `index.html` and `/all-games/` even on days with no new games
+6. `python check-catalog-quality.py`
+7. `git add` / `commit` / `push`, with ntfy.sh alerts on failure
+
+The homepage is generated from `games-index.json` — never hand-edit `index.html`.
 
 ## Step 2: Open Task Scheduler
 

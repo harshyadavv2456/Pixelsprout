@@ -31,8 +31,11 @@ jobs:
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: python refresh-popular-games.py
 
+      - name: Rebuild homepage with the new popularity ranking
+        run: python generate-homepage.py
+
       - name: Commit updated snapshot
         run: |
-          git add popular-games.json
+          git add popular-games.json index.html all-games/index.html
           git commit -m "Daily popular games snapshot refresh" || echo "Nothing to commit"
           git push

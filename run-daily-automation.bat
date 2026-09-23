@@ -26,6 +26,9 @@ echo Refreshing category pages...
 python generate-category-pages.py
 python add-category-pages-to-sitemap.py
 
+echo Rebuilding homepage...
+python generate-homepage.py
+
 echo Checking catalog quality...
 python check-catalog-quality.py
 
