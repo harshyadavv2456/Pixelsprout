@@ -5,6 +5,22 @@
   <link>https://playpixelsprout.com/</link>
   <description>Newest games added to Pixelsprout, a free browser gaming library.</description>
   <item>
+    <title>Trap the Convoy</title>
+    <link>https://playpixelsprout.com/games/trap-the-convoy.html</link>
+    <guid>https://playpixelsprout.com/games/trap-the-convoy.html</guid>
+    <description>Play Trap the Convoy free online at Pixelsprout — no download needed.</description>
+    <pubDate>Thu, 01 Oct 2026 09:49:22 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/trap-the-convoy/cover/trap-the-convoy.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
+    <title>Ancient Armies vs Modern Weapons</title>
+    <link>https://playpixelsprout.com/games/ancient-armies-vs-modern-weapons.html</link>
+    <guid>https://playpixelsprout.com/games/ancient-armies-vs-modern-weapons.html</guid>
+    <description>Play Ancient Armies vs Modern Weapons free online at Pixelsprout — no download needed.</description>
+    <pubDate>Thu, 01 Oct 2026 09:49:21 GMT</pubDate>
+    <enclosure url="https://img.gamepix.com/games/ancient-armies-vs-modern-weapons/cover/ancient-armies-vs-modern-weapons.png?w=320" type="image/jpeg"/>
+  </item>
+  <item>
     <title>Drone vs Tractor Challenge</title>
     <link>https://playpixelsprout.com/games/drone-vs-tractor-challenge.html</link>
     <guid>https://playpixelsprout.com/games/drone-vs-tractor-challenge.html</guid>
@@ -467,22 +483,6 @@
     <description>Play Seat the Guests free online at Pixelsprout — no download needed.</description>
     <pubDate>Tue, 11 Aug 2026 06:45:15 GMT</pubDate>
     <enclosure url="https://img.gamepix.com/games/seat-the-guests/cover/seat-the-guests.png?w=320" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Motocross Jumper</title>
-    <link>https://playpixelsprout.com/games/motocross-jumper.html</link>
-    <guid>https://playpixelsprout.com/games/motocross-jumper.html</guid>
-    <description>Play Motocross Jumper free online at Pixelsprout — no download needed.</description>
-    <pubDate>Mon, 10 Aug 2026 07:07:58 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/6isksqrzax6vpbdgz39vk72d4v33zdxw/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Dechipher</title>
-    <link>https://playpixelsprout.com/games/dechipher.html</link>
-    <guid>https://playpixelsprout.com/games/dechipher.html</guid>
-    <description>Play Dechipher free online at Pixelsprout — no download needed.</description>
-    <pubDate>Mon, 10 Aug 2026 07:07:58 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/prrbgovwq0ezbdnhsob0vf75pq8l2mbm/512x384.jpg" type="image/jpeg"/>
   </item>
 </channel>
 </rss>

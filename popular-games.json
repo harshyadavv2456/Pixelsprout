@@ -2,83 +2,83 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 136
+      "views": 153
     },
     {
       "slug": "getting-over-it",
-      "views": 55
+      "views": 85
     },
     {
       "slug": "protect-my-dog",
-      "views": 28
-    },
-    {
-      "slug": "test-tubes-water-sort",
-      "views": 22
-    },
-    {
-      "slug": "uno-online",
-      "views": 21
+      "views": 33
     },
     {
       "slug": "dot-link-puzzle-connect-the-dots",
-      "views": 20
+      "views": 25
     },
     {
-      "slug": "save-the-doge",
-      "views": 18
+      "slug": "test-tubes-water-sort",
+      "views": 24
     },
     {
       "slug": "2048-cube-merge-block",
-      "views": 17
+      "views": 23
     },
     {
-      "slug": "slide-ball-puzzle",
-      "views": 15
+      "slug": "uno-online",
+      "views": 22
+    },
+    {
+      "slug": "save-the-doge",
+      "views": 22
     },
     {
       "slug": "2048",
-      "views": 14
-    },
-    {
-      "slug": "gravity-merge",
-      "views": 14
-    },
-    {
-      "slug": "klondike-solitaire-paradise",
-      "views": 13
-    },
-    {
-      "slug": "100-seconds-labyrinth",
-      "views": 13
+      "views": 20
     },
     {
       "slug": "baba-is-you",
-      "views": 11
+      "views": 20
+    },
+    {
+      "slug": "100-seconds-labyrinth",
+      "views": 19
+    },
+    {
+      "slug": "2048-cube-run",
+      "views": 18
+    },
+    {
+      "slug": "slide-ball-puzzle",
+      "views": 17
+    },
+    {
+      "slug": "klondike-solitaire-paradise",
+      "views": 17
+    },
+    {
+      "slug": "gravity-merge",
+      "views": 15
     },
     {
       "slug": "100-doors-escape-puzzle",
-      "views": 11
+      "views": 14
     },
     {
-      "slug": "worms-zone",
-      "views": 11
+      "slug": "katana-fruits",
+      "views": 13
     },
     {
-      "slug": "100-doors-escape-from-prison",
-      "views": 10
+      "slug": "2d-platformer-coin",
+      "views": 13
     },
     {
-      "slug": "subway-princess-run",
-      "views": 10
+      "slug": "12-minibattles-two-players",
+      "views": 13
     },
     {
       "slug": "road-designer",
-      "views": 10
-    },
-    {
-      "slug": "2048-x2-merge-blocks",
-      "views": 10
+      "views": 13
     }
   ]
 }
