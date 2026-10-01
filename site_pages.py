@@ -850,6 +850,31 @@ def render_all_games(catalog):
     return S.page(head, main, body_attrs='class="az-page" data-page="all-games"', active="/all-games/", total_games=len(games))
 
 
+FEATURED_GUIDES = [
+    ("Getting Over It", "getting-over-it", "A hammer-climbing challenge played with the mouse. This is a fan-made browser remake.",
+     [("Short video on YouTube", "https://www.youtube.com/shorts/glZERu6lgBE"), ("Reel on Facebook", "https://www.facebook.com/reel/956487844203977"), ("Carousel on Instagram", "https://www.instagram.com/p/Dd8M05Tm-lc/"), ("Post on X", "https://x.com/Playpixelsprout/status/2105534668061958589"), ("Join the conversation on Discord", "https://discord.com/channels/1554923717556183120/1554923718181126305/1555096012270469233")]),
+    ("Bubble Up Endless", "bubble-up-endless", "A bubble shooter where you press and hold to aim, release to shoot, and chain combos before the red line.", []),
+    ("Dot Link Puzzle", "dot-link-puzzle-connect-the-dots", "A connect-the-dots puzzle with boards from 5x5 up to 9x9, plus undo, reset and hint buttons.", []),
+    ("Baba Is You", "baba-is-you", "A turn-based puzzle where you push word blocks to change the rules. This is a fan-made browser remake.", []),
+    ("2048 Cube Run", "2048-cube-run", "A three-lane runner where numbered cubes merge as you run toward the finish gate.", []),
+]
+
+
+def _featured_guides_html():
+    out = ['<section aria-labelledby="featured-guides-title"><h2 class="block__title" id="featured-guides-title">Featured guides</h2>',
+           '<p class="page-lede">Written after playing each game. Every game is free in your browser, with no download.</p>']
+    for name, slug, blurb, social in FEATURED_GUIDES:
+        links = [("Play", f"/games/{slug}.html"), ("Tips", f"/guides/{slug}-tips/"), ("Controls", f"/guides/{slug}-controls/"),
+                 ("Beginner guide", f"/guides/{slug}-beginner-guide/"), ("FAQ", f"/guides/{slug}-faq/"), ("Similar games", f"/guides/games-like-{slug}/")]
+        li = ' &middot; '.join(f'<a href="{h}">{esc(t)}</a>' for t, h in links)
+        so = ''
+        if social:
+            so = '<p>' + ' &middot; '.join(f'<a href="{h}" rel="noopener" target="_blank">{esc(t)}</a>' for t, h in social) + '</p>'
+        out.append(f'<h3>{esc(name)}</h3><p>{esc(blurb)}</p><p>{li}</p>{so}')
+    out.append('</section>')
+    return ''.join(out)
+
+
 def render_guides_hub(total_games=None):
     title = "Game Guides - Tips, Controls & FAQs | Pixelsprout"
     description = "Tips, controls, beginner guides, and FAQs for every game on Pixelsprout."
@@ -860,6 +885,8 @@ def render_guides_hub(total_games=None):
 <h1 class="page-title">Game guides</h1>
 <p class="page-lede">Tips, controls, beginner guides and FAQs for the games on Pixelsprout.</p>
 </header>
+{_featured_guides_html()}
+<h2 class="block__title">All game guides</h2>
 <div class="catalog-bar"><label class="field"><span class="visually-hidden">Filter guides</span>{S.icon('search')}<input id="guides-search" type="search" placeholder="Find a game's guides" autocomplete="off"></label><span class="catalog-bar__count" id="guides-count"></span></div>
 <ul class="az-list" id="guides-list"></ul>
 <script>
