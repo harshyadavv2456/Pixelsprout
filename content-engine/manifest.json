@@ -30518,5 +30518,23 @@
       "tips"
     ],
     "bot_updated_at": "2026-10-01T10:46:16Z"
+  },
+  "dot-link-puzzle-connect-the-dots": {
+    "pages": {
+      "tips": "/guides/dot-link-puzzle-connect-the-dots-tips/",
+      "controls": "/guides/dot-link-puzzle-connect-the-dots-controls/",
+      "beginner-guide": "/guides/dot-link-puzzle-connect-the-dots-beginner-guide/",
+      "similar": "/guides/games-like-dot-link-puzzle-connect-the-dots/",
+      "faq": "/guides/dot-link-puzzle-connect-the-dots-faq/"
+    },
+    "any_fallback": false,
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-10-01T10:49:48Z"
   }
 }

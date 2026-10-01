@@ -19403,5 +19403,12 @@
     "beginner-guide": "/guides/bubble-up-endless-beginner-guide/",
     "similar": "/guides/games-like-bubble-up-endless/",
     "faq": "/guides/bubble-up-endless-faq/"
+  },
+  "dot-link-puzzle-connect-the-dots": {
+    "tips": "/guides/dot-link-puzzle-connect-the-dots-tips/",
+    "controls": "/guides/dot-link-puzzle-connect-the-dots-controls/",
+    "beginner-guide": "/guides/dot-link-puzzle-connect-the-dots-beginner-guide/",
+    "similar": "/guides/games-like-dot-link-puzzle-connect-the-dots/",
+    "faq": "/guides/dot-link-puzzle-connect-the-dots-faq/"
   }
 }
