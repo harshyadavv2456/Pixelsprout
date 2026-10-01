@@ -1,0 +1,99 @@
+{
+ "slug": "2048-cube-run",
+ "played": true,
+ "pages": {
+  "tips": {
+   "intro": "2048 Cube Run mixes two ideas: a runner that moves forward on its own and the number-merging goal of 2048. These tips come from clearing the first six levels in one sitting, and they stick to what showed up on screen. Runs were short, so the best help is knowing what each screen is telling you.",
+   "tips": [
+    "Click Ok, Play Now! and wait for the loading counter to finish before you do anything else. The game only appeared after the counter reached 100%, and clicking around early did nothing useful.",
+    "Press CLICK TO START! to begin a run. After that the cube runs forward by itself, so you do not need to hold a key to keep moving.",
+    "Read the numbers on the cubes as you approach them. Values I saw ran from 2, 4, 8 and 16 on early levels up to 512 and 4096 later, and the page says the goal is to merge identical numbers.",
+    "Look ahead at the track layout. Later levels put more cubes in the side lanes and used larger values, so a quick glance at what is coming tells you how busy the run will be.",
+    "Watch for the checkered finish line. Past it, colored strips labeled x2, x3 and x4 appear, and a bonus wheel at the end showed x2, x3, x4, x3 and x2.",
+    "Check the coin total at the start of each level to see your progress. Mine read 500, 650, 770, 840, 920 and 990 on levels one to six.",
+    "Treat WATCH ADS & GET as optional. The result screen also has a NEXT LEVEL button, and that moved me on to the next level."
+   ],
+   "conclusion": "Steering was the one thing I could not confirm, so keep your expectations modest and watch what your cube does on each run. If you find a method that changes lanes reliably, it is worth noting for later levels.",
+   "extra_sections": [
+    {
+     "heading": "What the numbers on the cubes are telling you",
+     "paragraphs": [
+      "Every cube carries a number, and the in-game text says to merge identical numbered cubes on the way to 2048. On the first levels the numbers were small, such as 2, 4, 8 and 16 stacked in a triangle shape ahead of the player.",
+      "By level six the side lanes held bigger stacks, and I also saw a 4096 cube. Because I could not steer reliably, I cannot say how merging plays out when you pick your own lane, so treat the numbers as a preview of what is coming rather than a plan."
+     ]
+    }
+   ]
+  },
+  "controls": {
+   "intro": "Controls were the least clear part of 2048 Cube Run when I played it in a desktop browser. The game gives you one prompt and then runs forward on its own, so here is exactly what I saw and tried.",
+   "desktop": "The only control prompt on screen was CLICK TO START!, so click that to begin a run. After it starts, the cube moves forward automatically. I tried the arrow keys, the A and D keys, clicking, moving the mouse and dragging side to side, and none of them gave me a lane change I could be sure of. No control legend appeared at any point.",
+   "mobile": "The page text mentions swiping to dodge obstacles, which suggests touch steering. I played on a desktop browser only and did not test a phone or tablet, so I cannot say how swiping feels or how well it works.",
+   "tips": [
+    "Click Ok, Play Now! first, then wait for the loading counter to reach 100% before you try to start.",
+    "Click CLICK TO START! to begin. You do not need to hold anything down to keep the cube moving.",
+    "If a key or drag seems to do nothing, you are not alone: I could not confirm a steering method on desktop.",
+    "After a run, the result screen offers WATCH ADS & GET and NEXT LEVEL. Use NEXT LEVEL to keep going."
+   ]
+  },
+  "beginner-guide": {
+   "intro": "New to 2048 Cube Run? This guide covers what the game is, what a level looks like from the first click to the result screen, and what to do first.",
+   "what_it_is": "2048 Cube Run is a short 3D arcade runner that plays in your browser for free. You see a bright low-poly road against a cyan background, with glossy colored cubes carrying numbers. Your cube runs forward on its own toward a checkered finish line, and beyond it are strips marked x2, x3 and x4. The page describes the goal as merging identical numbered cubes toward 2048. Levels I played finished in several seconds each, with a coin counter that went up after every clear.",
+   "first_steps": [
+    "Open the game page and click Ok, Play Now! Wait until the loading counter finishes.",
+    "Click CLICK TO START! and watch the cube run down the track.",
+    "Look at the numbers on the cubes ahead and the layout of the lanes.",
+    "When the run ends, read the LEVEL CLEARED! screen and the coin reward it shows.",
+    "Press NEXT LEVEL to continue, or skip WATCH ADS & GET if you do not want a bonus."
+   ],
+   "who_its_for": "It suits players who want a quick, low-effort game in short bursts. If you want a game where you control every move, note that I could not confirm how steering works.",
+   "extra_sections": [
+    {
+     "heading": "What a level looks like from start to finish",
+     "paragraphs": [
+      "A level starts on a white three-lane track with numbered cubes ahead. Early levels had small numbers and few cubes; by level six there were more cubes in the side lanes and larger values.",
+      "At the finish you cross a checkered line into colored strips marked x2, x3 and x4, and a bonus wheel shows those same multipliers. A LEVEL CLEARED! screen then shows your reward. Across six levels I saw +150, +120, +70, +80, +70 and +100."
+     ]
+    }
+   ]
+  },
+  "similar": {
+   "intro": "If you like 2048 Cube Run, you probably enjoy quick arcade games where numbers or colors matter and a round lasts seconds rather than minutes. Look for runners with a clear finish line, number-merging puzzles in the style of 2048, and casual games that show a coin or level counter so you can see progress. Games with a simple start button and short levels give the same easy, play-anywhere feel."
+  },
+  "faq": {
+   "faqs": [
+    {
+     "question": "Is 2048 Cube Run free to play?",
+     "answer": "Yes. It runs in your browser on Pixelsprout with no download. A side ad panel sits to the right of the game, and it did not cover the game while I played."
+    },
+    {
+     "question": "How do you start a run?",
+     "answer": "Click Ok, Play Now! and wait for loading to finish, then click CLICK TO START! The cube then runs forward on its own."
+    },
+    {
+     "question": "How do you steer the cube?",
+     "answer": "I could not confirm this. On desktop I tried arrow keys, A and D, clicking, mouse movement and dragging, and none gave a lane change I was sure of. The page text mentions swiping to dodge obstacles."
+    },
+    {
+     "question": "What is the goal?",
+     "answer": "The page says to merge identical numbered cubes toward 2048. In the levels I saw, you run to a checkered finish line and then through strips marked x2, x3 and x4."
+    },
+    {
+     "question": "How many levels are there?",
+     "answer": "I played levels one to six, and each showed LEVEL CLEARED! at the end. I did not reach a last level, so I cannot say how many there are."
+    },
+    {
+     "question": "Can you lose or run out of time?",
+     "answer": "I saw no timer, lives or fail screen in six levels. Every run I played ended with a cleared message."
+    },
+    {
+     "question": "What do the coins do?",
+     "answer": "A coin total showed at the start of each level and went up after each clear, from 500 to 990 over six levels. I did not see anything to spend them on."
+    },
+    {
+     "question": "Does it work on mobile?",
+     "answer": "I only tested on a desktop browser. The page text mentions swiping, but I did not try it on a phone or tablet."
+    }
+   ]
+  }
+ }
+}
