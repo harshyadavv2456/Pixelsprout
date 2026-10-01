@@ -4719,14 +4719,22 @@
   },
   "2048-cube-run": {
     "generated_at": "2026-08-03T06:28:09Z",
-    "any_fallback": true,
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/2048-cube-run-tips/",
       "controls": "/guides/2048-cube-run-controls/",
       "beginner-guide": "/guides/2048-cube-run-beginner-guide/",
       "similar": "/guides/games-like-2048-cube-run/",
       "faq": "/guides/2048-cube-run-faq/"
-    }
+    },
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-10-01T11:07:58Z"
   },
   "merge-grabber-race-to-2048": {
     "generated_at": "2026-08-03T06:28:11Z",
