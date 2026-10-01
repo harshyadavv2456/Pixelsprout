@@ -1,0 +1,77 @@
+{
+  "slug": "baba-is-you",
+  "played": true,
+  "pages": {
+    "tips": {
+      "intro": "Baba Is You on Pixelsprout is a fan-made remake of the rule-changing puzzle idea, played one square at a time. These tips come from my time on the first board, where I pushed rocks toward the flag, and they focus on slow, careful moves.",
+      "tips": [
+        "Read the word blocks before you move. On the first board I saw BABA IS YOU, FLAG IS WIN, WALL IS STOP and ROCK IS PUSH, and together they tell you what you control, what wins and what blocks you.",
+        "Click the game once so the keyboard works. Arrow keys did nothing for me until I focused the game area, and then the character moved right away.",
+        "Look at where the rocks sit before you push anything. A line of rocks in the middle of a corridor can block your path, but pushing the central one sideways opened a way through for me.",
+        "Move one square, then look again. The game is turn-based with no timer that I could see, so there is no reason to rush a push.",
+        "Remember that walls stop you. If the board has a wall you cannot pass, look for a rock or a word block you can move instead of trying to walk through it.",
+        "Know where RESTART and UNDO are on the screen before you get stuck. I did not need them on my short run, but both buttons were visible and a bad push is easier to fix with a plan.",
+        "Keep the flag in mind while you work. Once the flag is the win target, every push should either clear a path to it or keep a path open."
+      ],
+      "conclusion": "Treat each board like a small riddle. Study the words, make one push at a time, and think about what each push changes before you make it."
+    },
+    "controls": {
+      "intro": "Baba Is You uses the keyboard for movement and a couple of on-screen buttons for fixing mistakes. Here is what worked when I played it in a desktop browser.",
+      "desktop": "Click once on the game so it has focus, then use the arrow keys to move one square at a time. Moving into a rock pushes it if there is space behind it. The Right arrow moved the character and pushed rocks, and Left worked as a movement key too. WASD did not visibly do anything for me.",
+      "mobile": "I did not see any on-screen touch controls while playing, and I did not test the game on a phone or tablet. If you try it on a touch screen, expect that the game may be built around a keyboard, so a desktop browser is the safer choice.",
+      "tips": [
+        "If the arrow keys seem dead, click inside the game area first, because the page needs to focus the game before it reads key presses.",
+        "Look for the RESTART and UNDO buttons on the screen. They were visible during my play, though I did not press them.",
+        "Mouse clicks only focused the game or started it for me. Pushing and moving is done with the keys, not the mouse.",
+        "An Ok, Play Now button appears before the game loads, so click it and wait for the loading bar to finish."
+      ]
+    },
+    "beginner-guide": {
+      "intro": "New to Baba Is You? This guide explains what the game asks of you, what the first board looks like and a few steps to get moving.",
+      "what_it_is": "This version of Baba Is You is a fan-made remake of the original rule-changing puzzle game, and it runs free in your browser on Pixelsprout. You move a small character around a pixel-art grid in single steps. Words sit on the board as blocks, and phrases such as BABA IS YOU, FLAG IS WIN, WALL IS STOP and ROCK IS PUSH describe how things behave. On the first board I saw, you push rocks out of the way and head for the flag.",
+      "first_steps": [
+        "Click Ok, Play Now and wait for the loading bar to finish, then click the game once so it can read your keyboard.",
+        "Look at the board and read the word blocks to understand what you control and what the flag does.",
+        "Use the arrow keys to walk up to the line of rocks. Moving into a rock pushes it one square if the space behind it is free.",
+        "Push the central rock sideways to open a gap, then walk through toward the flag on the right.",
+        "If you box yourself in, use the UNDO or RESTART button shown on the screen."
+      ],
+      "who_its_for": "It suits people who like thinking through a puzzle slowly and do not mind a bit of trial and error. If you want fast action or a timer, this is not that kind of game."
+    },
+    "similar": {
+      "intro": "If you like Baba Is You, you probably enjoy puzzles where you study the layout and think a few moves ahead before acting. Sokoban-style games that have you push blocks around a grid are the closest cousins, and logic games with no timer give the same calm, deliberate pace. Look for puzzles that start with a simple board, let you take back a move, and slowly add new ideas as you go."
+    },
+    "faq": {
+      "faqs": [
+        {
+          "question": "What are the controls in Baba Is You?",
+          "answer": "Click the game to focus it, then use the arrow keys to move one square at a time. Moving into a rock pushes it if there is space behind it. WASD did not visibly work when I tried it."
+        },
+        {
+          "question": "How do you win a level?",
+          "answer": "On the first board the word blocks read FLAG IS WIN, so you win by getting to the flag. You first have to push rocks out of the way to open a path to it."
+        },
+        {
+          "question": "Can I undo a move or restart a level?",
+          "answer": "The game shows UNDO and RESTART buttons on screen. I saw both, but I did not press them during my short play session, so I cannot describe exactly how they behave."
+        },
+        {
+          "question": "Is this the original Baba Is You?",
+          "answer": "No. This is a fan-made remake that runs in your browser, so it is not the original game and it may not match the original in levels or features."
+        },
+        {
+          "question": "Is there a timer?",
+          "answer": "I did not see a timer or a move counter. The game is turn-based, and nothing happens until you press a key."
+        },
+        {
+          "question": "Does Baba Is You work on mobile?",
+          "answer": "I did not see on-screen touch controls and I did not test it on a phone. The game uses arrow keys, so a desktop browser with a keyboard is the safest way to play."
+        },
+        {
+          "question": "Is Baba Is You free to play on Pixelsprout?",
+          "answer": "Yes. It plays free in your browser with no download and no account. An Ok, Play Now button appears first, and an advertisement sits beside the game area."
+        }
+      ]
+    }
+  }
+}
