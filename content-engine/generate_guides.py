@@ -148,24 +148,30 @@ def category_url_for(game):
     return None
 
 
-def process_game(client, game, all_games, dry_run, stats):
+def guide_urls_for(game):
+    return {
+        "tips": f"/guides/{game['slug']}-tips/",
+        "controls": f"/guides/{game['slug']}-controls/",
+        "beginner-guide": f"/guides/{game['slug']}-beginner-guide/",
+        "similar": f"/guides/games-like-{game['slug']}/",
+        "faq": f"/guides/{game['slug']}-faq/",
+    }
+
+
+def process_game(client, game, all_games, dry_run, stats, locked=()):
+    """locked: page types written by the SEO Bot from real play (see apply_queue.py).
+    Those are never regenerated or overwritten here."""
     related = sim.find_similar(game, all_games, limit=8)
     related_titles = [g["title"] for g in related]
     category_url = category_url_for(game)
 
-    page_urls = {}
+    page_urls = guide_urls_for(game)
     page_contents = {}
     for page_type in GUIDE_PAGE_TYPES:
+        if page_type in locked:
+            continue
         content, is_fallback = get_content(client, page_type, game, related_titles, dry_run, stats)
         page_contents[page_type] = (content, is_fallback)
-        slug_suffix = {
-            "tips": f"{game['slug']}-tips",
-            "controls": f"{game['slug']}-controls",
-            "beginner-guide": f"{game['slug']}-beginner-guide",
-            "similar": f"games-like-{game['slug']}",
-            "faq": f"{game['slug']}-faq",
-        }[page_type]
-        page_urls[page_type] = f"/guides/{slug_suffix}/"
 
     any_fallback = any(v[1] for v in page_contents.values())
 
@@ -222,6 +228,9 @@ def main():
     parser.add_argument("--limit", type=int, default=BATCH_LIMIT_DEFAULT)
     parser.add_argument("--dry-run", action="store_true", help="Use fallback content only, no API calls")
     parser.add_argument("--retry-fallback", action="store_true", help="Reprocess games that only got fallback content")
+    parser.add_argument("--max-minutes", type=float, default=0,
+                        help="Stop starting new games after this many minutes (0 = no limit). "
+                             "Keeps a slow/rate-limited Groq day from burning GitHub Actions minutes.")
     args = parser.parse_args()
 
     all_games = load_json(GAMES_INDEX_PATH, [])
@@ -257,18 +266,30 @@ def main():
     stats = {"ai": 0, "fallback": 0, "fallback_after_fail": 0}
     new_sitemap_urls = []
 
+    started = time.time()
+    processed = []
     for i, game in enumerate(targets):
+        if args.max_minutes and (time.time() - started) / 60 >= args.max_minutes:
+            print(f"Time budget of {args.max_minutes} min reached - stopping; the rest continue next run.")
+            break
         print(f"[{i+1}/{len(targets)}] {game['title']} ({game['slug']})")
-        page_urls, any_fallback = process_game(client, game, all_games, args.dry_run, stats)
+        locked = (manifest.get(game["slug"]) or {}).get("locked", [])
+        page_urls, any_fallback = process_game(client, game, all_games, args.dry_run, stats, locked=locked)
+        processed.append(game)
 
         manifest[game["slug"]] = {
             "generated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
             "any_fallback": any_fallback,
             "pages": page_urls,
         }
+        if locked:
+            manifest[game["slug"]]["locked"] = sorted(locked)
         guides_index[game["slug"]] = page_urls
         for url in page_urls.values():
             new_sitemap_urls.append(url)
+        # Save progress after every game, so a job killed by its timeout keeps the work it finished.
+        save_json(MANIFEST_PATH, manifest)
+        save_json(GUIDES_INDEX_PATH, guides_index)
 
         # Be polite to Groq's rate limits between games.
         if not args.dry_run and client.has_keys:
@@ -278,10 +299,10 @@ def main():
     save_json(GUIDES_INDEX_PATH, guides_index)
     update_sitemap(new_sitemap_urls)
     write_guides_landing_page(guides_index)
-    refresh_game_pages([g["slug"] for g in targets], all_games, guides_index)
+    refresh_game_pages([g["slug"] for g in processed], all_games, guides_index)
 
     print(f"\nDone. AI-generated pages: {stats['ai']}, fallback pages: {stats['fallback'] + stats['fallback_after_fail']}")
-    print(f"Games processed this run: {len(targets)}. Remaining un-processed games: "
+    print(f"Games processed this run: {len(processed)}. Remaining un-processed games: "
           f"{sum(1 for g in all_games if g['slug'] not in manifest)}")
 
 

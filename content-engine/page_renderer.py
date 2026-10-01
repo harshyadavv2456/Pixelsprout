@@ -78,6 +78,10 @@ def render_guide_page(page_type, game, content, related_games, sibling_guides, c
     crumbs.append((CRUMB_LABELS[page_type], None))
 
     body = _render_body_for_type(page_type, game, content)
+    # Optional deeper sections (SEO Bot pages): [{"heading": str, "paragraphs": [str, ...]}]
+    for section in content.get("extra_sections", []) or []:
+        body += f"\n<h2>{section.get('heading', '')}</h2>"
+        body += "".join(f"\n<p>{para}</p>" for para in section.get("paragraphs", []))
     if category_url:
         body += f'\n<p><a href="{category_url}">Browse more {S.esc(game["category"])} games &rarr;</a></p>'
 

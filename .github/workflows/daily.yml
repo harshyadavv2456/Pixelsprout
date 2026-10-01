@@ -1,0 +1,144 @@
+name: Daily site automation
+
+# One job instead of four: the repo is ~500 MB, so every separate workflow paid
+# for its own checkout and Python setup, and each run is rounded up to the minute.
+# Each step keeps going if an earlier one fails, and hard time limits stop a slow
+# Groq day from burning hours of Actions minutes.
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # daily, 6:00 UTC (~11:30 AM IST)
+  workflow_dispatch:
+    inputs:
+      guide_limit:
+        description: 'Max games for Groq guide generation (default 40, capped at 80)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-automation
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Configure git identity
+        run: |
+          git config --global user.name "Pixelsprout Auto-Bot"
+          git config --global user.email "actions@github.com"
+
+      - name: Refresh popular games snapshot
+        continue-on-error: true
+        timeout-minutes: 3
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python refresh-popular-games.py
+
+      - name: Add new games (GamePix)
+        continue-on-error: true
+        timeout-minutes: 5
+        run: python auto-add-games.py
+
+      - name: Add new games (GameMonetize)
+        continue-on-error: true
+        timeout-minutes: 5
+        run: python auto-add-gamemonetize.py
+
+      - name: Refresh category pages, homepage, quality report
+        continue-on-error: true
+        timeout-minutes: 5
+        run: |
+          python generate-category-pages.py
+          python add-category-pages-to-sitemap.py
+          python generate-homepage.py
+          python check-catalog-quality.py
+
+      - name: Publish SEO Bot pages (seo-queue branch)
+        continue-on-error: true
+        timeout-minutes: 5
+        run: |
+          if git fetch --depth 1 origin seo-queue 2>/dev/null; then
+            git checkout FETCH_HEAD -- seo-queue 2>/dev/null || echo "seo-queue branch has no seo-queue/ folder yet"
+            python content-engine/apply_queue.py
+            # The queue files live only on the seo-queue branch, never on main.
+            git rm -r -q --cached seo-queue 2>/dev/null || true
+            rm -rf seo-queue
+          else
+            echo "No seo-queue branch yet - skipping"
+          fi
+
+      - name: Generate guide pages with Groq (time-boxed)
+        continue-on-error: true
+        timeout-minutes: 20
+        env:
+          GROQ_API_KEY_1: ${{ secrets.GROQ_API_KEY_1 }}
+          GROQ_API_KEY_2: ${{ secrets.GROQ_API_KEY_2 }}
+          GROQ_API_KEY_3: ${{ secrets.GROQ_API_KEY_3 }}
+          GROQ_API_KEY_4: ${{ secrets.GROQ_API_KEY_4 }}
+          GROQ_API_KEY_5: ${{ secrets.GROQ_API_KEY_5 }}
+        run: |
+          LIMIT=40
+          if [ -n "${{ github.event.inputs.guide_limit }}" ]; then
+            REQUESTED="${{ github.event.inputs.guide_limit }}"
+            LIMIT=$(( REQUESTED < 80 ? REQUESTED : 80 ))
+          fi
+          python content-engine/generate_guides.py --retry-fallback --limit "$LIMIT" --max-minutes 15
+
+      - name: Refresh "games like X" collection pages
+        continue-on-error: true
+        timeout-minutes: 5
+        env:
+          GROQ_API_KEY_1: ${{ secrets.GROQ_API_KEY_1 }}
+          GROQ_API_KEY_2: ${{ secrets.GROQ_API_KEY_2 }}
+          GROQ_API_KEY_3: ${{ secrets.GROQ_API_KEY_3 }}
+          GROQ_API_KEY_4: ${{ secrets.GROQ_API_KEY_4 }}
+          GROQ_API_KEY_5: ${{ secrets.GROQ_API_KEY_5 }}
+        run: python content-engine/generate_collections.py
+
+      - name: Keep template guide pages out of Google (noindex + sitemap)
+        timeout-minutes: 3
+        run: python content-engine/seo_cleanup.py
+
+      - name: Post new games to Pinterest
+        continue-on-error: true
+        timeout-minutes: 5
+        env:
+          PINTEREST_APP_ID: ${{ secrets.PINTEREST_APP_ID }}
+          PINTEREST_APP_SECRET: ${{ secrets.PINTEREST_APP_SECRET }}
+          PINTEREST_REFRESH_TOKEN: ${{ secrets.PINTEREST_REFRESH_TOKEN }}
+          PINTEREST_SANDBOX_TOKEN: ${{ secrets.PINTEREST_SANDBOX_TOKEN }}
+        run: python post-to-pinterest.py
+
+      - name: Commit and push (one commit = one Vercel deploy per day)
+        if: always()
+        run: |
+          rm -rf seo-queue
+          git add -A
+          if git diff --staged --quiet; then
+            echo "Nothing to commit"
+            exit 0
+          fi
+          git commit -q -m "Daily automation $(date -u +%Y-%m-%d)"
+          for attempt in 1 2 3; do
+            if git push; then exit 0; fi
+            echo "Push rejected (attempt $attempt) - rebasing on latest main"
+            git pull --rebase -X theirs origin main || { git rebase --abort; sleep 5; }
+          done
+          echo "::error::Push failed after 3 attempts"
+          exit 1

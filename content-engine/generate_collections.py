@@ -27,6 +27,7 @@ from collections_data import COLLECTIONS
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GAMES_INDEX_PATH = os.path.join(REPO_ROOT, "games-index.json")
 SITEMAP_PATH = os.path.join(REPO_ROOT, "sitemap.xml")
+INTROS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "collection-intros.json")
 
 
 def load_json(path, default):
@@ -68,6 +69,12 @@ def main():
     if not args.dry_run and not client.has_keys:
         print("No GROQ_API_KEY_1..5 found - running in fallback mode.")
 
+    # Intros are written once and reused (by the SEO Bot via apply_queue.py, or by Groq on its
+    # first success). This stops 26 Groq calls a day and stops a failed Groq day from replacing
+    # a good intro with the generic fallback line.
+    intros = load_json(INTROS_PATH, {})
+    intros_changed = False
+
     new_urls = []
     for coll in COLLECTIONS:
         matches = sim.find_by_keywords(
@@ -80,7 +87,10 @@ def main():
             print(f"SKIP {coll['slug']}: only {len(matches)} matches, too few to publish")
             continue
 
-        if not args.dry_run and client.has_keys:
+        cached = intros.get(coll["slug"])
+        if cached and cached.get("intro"):
+            content = {"intro": cached["intro"]}
+        elif not args.dry_run and client.has_keys:
             system = (
                 "You write concise, genuine intro copy for a free browser games site. "
                 "Respond with ONLY a JSON object, no markdown, no commentary."
@@ -91,7 +101,11 @@ def main():
                 f'to play something free right now, no download or account needed."}}.'
             )
             content = client.generate_json(system, user)
-            if not content:
+            if content and isinstance(content.get("intro"), str) and content["intro"].strip():
+                intros[coll["slug"]] = {"intro": content["intro"].strip(), "source": "groq",
+                                        "updated_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
+                intros_changed = True
+            else:
                 content = fb.fallback_collection_intro(coll["display_name"])
             time.sleep(1.5)
         else:
@@ -106,6 +120,9 @@ def main():
         new_urls.append(f"/games-like/{coll['slug']}/")
         print(f"OK {coll['slug']}: {len(matches)} games")
 
+    if intros_changed and not args.dry_run:
+        with open(INTROS_PATH, "w", encoding="utf-8") as fh:
+            json.dump(intros, fh, indent=2, ensure_ascii=False)
     update_sitemap(new_urls)
     print(f"\nDone. {len(new_urls)} collection pages generated.")
 
