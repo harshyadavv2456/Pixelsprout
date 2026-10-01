@@ -2,11 +2,11 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 153
+      "views": 154
     },
     {
       "slug": "getting-over-it",
-      "views": 85
+      "views": 86
     },
     {
       "slug": "protect-my-dog",
@@ -14,7 +14,7 @@
     },
     {
       "slug": "dot-link-puzzle-connect-the-dots",
-      "views": 25
+      "views": 26
     },
     {
       "slug": "test-tubes-water-sort",
@@ -33,11 +33,11 @@
       "views": 22
     },
     {
-      "slug": "2048",
-      "views": 20
+      "slug": "baba-is-you",
+      "views": 21
     },
     {
-      "slug": "baba-is-you",
+      "slug": "2048",
       "views": 20
     },
     {
@@ -46,7 +46,7 @@
     },
     {
       "slug": "2048-cube-run",
-      "views": 18
+      "views": 19
     },
     {
       "slug": "slide-ball-puzzle",
@@ -69,11 +69,11 @@
       "views": 13
     },
     {
-      "slug": "2d-platformer-coin",
+      "slug": "12-minibattles-two-players",
       "views": 13
     },
     {
-      "slug": "12-minibattles-two-players",
+      "slug": "2d-platformer-coin",
       "views": 13
     },
     {
