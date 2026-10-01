@@ -3321,7 +3321,15 @@
       "beginner-guide": "/guides/getting-over-it-beginner-guide/",
       "similar": "/guides/games-like-getting-over-it/",
       "faq": "/guides/getting-over-it-faq/"
-    }
+    },
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-10-01T10:46:16Z"
   },
   "my-ice-cream-shop": {
     "generated_at": "2026-08-12T08:05:17Z",
@@ -30492,5 +30500,23 @@
       "similar": "/guides/games-like-gravity-merge/",
       "faq": "/guides/gravity-merge-faq/"
     }
+  },
+  "bubble-up-endless": {
+    "pages": {
+      "tips": "/guides/bubble-up-endless-tips/",
+      "controls": "/guides/bubble-up-endless-controls/",
+      "beginner-guide": "/guides/bubble-up-endless-beginner-guide/",
+      "similar": "/guides/games-like-bubble-up-endless/",
+      "faq": "/guides/bubble-up-endless-faq/"
+    },
+    "any_fallback": false,
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-10-01T10:46:16Z"
   }
 }

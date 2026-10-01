@@ -19396,5 +19396,12 @@
     "beginner-guide": "/guides/gravity-merge-beginner-guide/",
     "similar": "/guides/games-like-gravity-merge/",
     "faq": "/guides/gravity-merge-faq/"
+  },
+  "bubble-up-endless": {
+    "tips": "/guides/bubble-up-endless-tips/",
+    "controls": "/guides/bubble-up-endless-controls/",
+    "beginner-guide": "/guides/bubble-up-endless-beginner-guide/",
+    "similar": "/guides/games-like-bubble-up-endless/",
+    "faq": "/guides/bubble-up-endless-faq/"
   }
 }

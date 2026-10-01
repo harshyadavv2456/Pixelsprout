@@ -1,0 +1,50 @@
+{
+  "applied_hashes": {
+    "bubble-up-endless.json": "220c32d80169337805128f49ff5e42a6602946aae0364b04b299d82d1d9521c1",
+    "getting-over-it.json": "2ac777be070ede6704b13cf5f01e95976b8e173af6f8ab206375626d17582e85"
+  },
+  "runs": [
+    {
+      "ran_at": "2026-10-01T10:46:16Z",
+      "published": [
+        {
+          "file": "bubble-up-endless.json",
+          "slug": "bubble-up-endless",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/bubble-up-endless-beginner-guide/",
+            "https://playpixelsprout.com/guides/bubble-up-endless-controls/",
+            "https://playpixelsprout.com/guides/bubble-up-endless-faq/",
+            "https://playpixelsprout.com/guides/games-like-bubble-up-endless/",
+            "https://playpixelsprout.com/guides/bubble-up-endless-tips/"
+          ]
+        },
+        {
+          "file": "getting-over-it.json",
+          "slug": "getting-over-it",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/getting-over-it-beginner-guide/",
+            "https://playpixelsprout.com/guides/getting-over-it-controls/",
+            "https://playpixelsprout.com/guides/getting-over-it-faq/",
+            "https://playpixelsprout.com/guides/games-like-getting-over-it/",
+            "https://playpixelsprout.com/guides/getting-over-it-tips/"
+          ]
+        }
+      ],
+      "rejected": []
+    }
+  ]
+}
