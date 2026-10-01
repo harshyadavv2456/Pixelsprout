@@ -3709,8 +3709,8 @@
     }
   },
   "hill-travel-3d": {
-    "generated_at": "2026-08-17T07:32:29Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T09:57:05Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/hill-travel-3d-tips/",
       "controls": "/guides/hill-travel-3d-controls/",
@@ -3720,8 +3720,8 @@
     }
   },
   "woodturning-simulator": {
-    "generated_at": "2026-08-17T07:32:30Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T09:57:11Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/woodturning-simulator-tips/",
       "controls": "/guides/woodturning-simulator-controls/",
@@ -3731,8 +3731,8 @@
     }
   },
   "lovely-cat-pet-life": {
-    "generated_at": "2026-08-17T07:32:32Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T09:57:16Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/lovely-cat-pet-life-tips/",
       "controls": "/guides/lovely-cat-pet-life-controls/",
@@ -3742,8 +3742,8 @@
     }
   },
   "cinema-empire-idle-tycoon": {
-    "generated_at": "2026-08-17T07:32:33Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T09:57:26Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/cinema-empire-idle-tycoon-tips/",
       "controls": "/guides/cinema-empire-idle-tycoon-controls/",
@@ -3753,8 +3753,8 @@
     }
   },
   "cat-chaos-simulator": {
-    "generated_at": "2026-08-17T07:32:35Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T09:57:35Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/cat-chaos-simulator-tips/",
       "controls": "/guides/cat-chaos-simulator-controls/",
@@ -3764,8 +3764,8 @@
     }
   },
   "idle-game-prison-life": {
-    "generated_at": "2026-08-17T07:32:36Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T09:57:52Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/idle-game-prison-life-tips/",
       "controls": "/guides/idle-game-prison-life-controls/",
@@ -3775,8 +3775,8 @@
     }
   },
   "pixels-supermarket-simulator": {
-    "generated_at": "2026-08-17T07:32:38Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T09:58:05Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/pixels-supermarket-simulator-tips/",
       "controls": "/guides/pixels-supermarket-simulator-controls/",
@@ -3786,8 +3786,8 @@
     }
   },
   "pregnant-mommy-care-mother-simulator": {
-    "generated_at": "2026-08-17T07:32:39Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T09:58:20Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/pregnant-mommy-care-mother-simulator-tips/",
       "controls": "/guides/pregnant-mommy-care-mother-simulator-controls/",
@@ -3797,8 +3797,8 @@
     }
   },
   "car-mechanic-simulator-2025": {
-    "generated_at": "2026-08-17T07:32:41Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T09:58:36Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/car-mechanic-simulator-2025-tips/",
       "controls": "/guides/car-mechanic-simulator-2025-controls/",
@@ -3808,8 +3808,8 @@
     }
   },
   "crazy-goose-simulator": {
-    "generated_at": "2026-08-17T07:32:42Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T09:58:50Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/crazy-goose-simulator-tips/",
       "controls": "/guides/crazy-goose-simulator-controls/",
@@ -3819,8 +3819,8 @@
     }
   },
   "airport-security-3d": {
-    "generated_at": "2026-08-17T07:32:44Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T09:59:07Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/airport-security-3d-tips/",
       "controls": "/guides/airport-security-3d-controls/",
@@ -3830,8 +3830,8 @@
     }
   },
   "moutain-jeep-drive": {
-    "generated_at": "2026-08-17T07:32:45Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T09:59:21Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/moutain-jeep-drive-tips/",
       "controls": "/guides/moutain-jeep-drive-controls/",
@@ -3841,8 +3841,8 @@
     }
   },
   "construction-site-simulator": {
-    "generated_at": "2026-08-17T07:32:47Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T09:59:32Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/construction-site-simulator-tips/",
       "controls": "/guides/construction-site-simulator-controls/",
@@ -3852,8 +3852,8 @@
     }
   },
   "spaceflight-simulator": {
-    "generated_at": "2026-08-17T07:32:48Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T09:59:51Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/spaceflight-simulator-tips/",
       "controls": "/guides/spaceflight-simulator-controls/",
@@ -3863,8 +3863,8 @@
     }
   },
   "truck-simulator-power-slider": {
-    "generated_at": "2026-08-17T07:32:50Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:00:05Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/truck-simulator-power-slider-tips/",
       "controls": "/guides/truck-simulator-power-slider-controls/",
@@ -3874,8 +3874,8 @@
     }
   },
   "do-not-feed-the-monkeys": {
-    "generated_at": "2026-08-17T07:32:51Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:00:29Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/do-not-feed-the-monkeys-tips/",
       "controls": "/guides/do-not-feed-the-monkeys-controls/",
@@ -3885,8 +3885,8 @@
     }
   },
   "offroad-4x4-driving-simulator": {
-    "generated_at": "2026-08-17T07:32:53Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:00:35Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/offroad-4x4-driving-simulator-tips/",
       "controls": "/guides/offroad-4x4-driving-simulator-controls/",
@@ -3896,8 +3896,8 @@
     }
   },
   "hole-digger-in-russia": {
-    "generated_at": "2026-08-17T07:32:54Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:00:45Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/hole-digger-in-russia-tips/",
       "controls": "/guides/hole-digger-in-russia-controls/",
@@ -3907,8 +3907,8 @@
     }
   },
   "the-windows-game": {
-    "generated_at": "2026-08-17T07:32:56Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:01:00Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/the-windows-game-tips/",
       "controls": "/guides/the-windows-game-controls/",
@@ -3918,8 +3918,8 @@
     }
   },
   "cat-from-hell-cat-simulator": {
-    "generated_at": "2026-08-17T07:32:57Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:01:15Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/cat-from-hell-cat-simulator-tips/",
       "controls": "/guides/cat-from-hell-cat-simulator-controls/",
@@ -3929,8 +3929,8 @@
     }
   },
   "multi-surgery-hospital-games": {
-    "generated_at": "2026-08-17T07:32:59Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:01:27Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/multi-surgery-hospital-games-tips/",
       "controls": "/guides/multi-surgery-hospital-games-controls/",
@@ -3940,8 +3940,8 @@
     }
   },
   "junkyard-keeper": {
-    "generated_at": "2026-08-17T07:33:00Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:01:44Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/junkyard-keeper-tips/",
       "controls": "/guides/junkyard-keeper-controls/",
@@ -3951,8 +3951,8 @@
     }
   },
   "last-play-ragdoll-sandbox": {
-    "generated_at": "2026-08-17T07:33:02Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:01:56Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/last-play-ragdoll-sandbox-tips/",
       "controls": "/guides/last-play-ragdoll-sandbox-controls/",
@@ -3962,8 +3962,8 @@
     }
   },
   "prison-break-architect-tycoon": {
-    "generated_at": "2026-08-17T07:33:03Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:02:11Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/prison-break-architect-tycoon-tips/",
       "controls": "/guides/prison-break-architect-tycoon-controls/",
@@ -3973,8 +3973,8 @@
     }
   },
   "idle-influencer-simulator": {
-    "generated_at": "2026-08-17T07:33:05Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:02:22Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/idle-influencer-simulator-tips/",
       "controls": "/guides/idle-influencer-simulator-controls/",
@@ -3984,8 +3984,8 @@
     }
   },
   "my-city-hospital": {
-    "generated_at": "2026-08-17T07:33:06Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:02:33Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/my-city-hospital-tips/",
       "controls": "/guides/my-city-hospital-controls/",
@@ -3995,8 +3995,8 @@
     }
   },
   "gram-simulator": {
-    "generated_at": "2026-08-17T07:33:08Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:02:45Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/gram-simulator-tips/",
       "controls": "/guides/gram-simulator-controls/",
@@ -4006,8 +4006,8 @@
     }
   },
   "emergency-dispatcher-911": {
-    "generated_at": "2026-08-03T06:26:33Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:02:58Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/emergency-dispatcher-911-tips/",
       "controls": "/guides/emergency-dispatcher-911-controls/",
@@ -4017,8 +4017,8 @@
     }
   },
   "gas-station-stick-simulator": {
-    "generated_at": "2026-08-03T06:26:35Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:03:13Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/gas-station-stick-simulator-tips/",
       "controls": "/guides/gas-station-stick-simulator-controls/",
@@ -4028,8 +4028,8 @@
     }
   },
   "supermarket-simulator-dream-store": {
-    "generated_at": "2026-08-03T06:26:36Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:03:22Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/supermarket-simulator-dream-store-tips/",
       "controls": "/guides/supermarket-simulator-dream-store-controls/",
@@ -4039,8 +4039,8 @@
     }
   },
   "battle-simulator-sandbox": {
-    "generated_at": "2026-08-03T06:26:38Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:03:35Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/battle-simulator-sandbox-tips/",
       "controls": "/guides/battle-simulator-sandbox-controls/",
@@ -4050,8 +4050,8 @@
     }
   },
   "body-drop-3d": {
-    "generated_at": "2026-08-03T06:26:39Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:03:51Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/body-drop-3d-tips/",
       "controls": "/guides/body-drop-3d-controls/",
@@ -4061,8 +4061,8 @@
     }
   },
   "bus-driver-simulator-3d": {
-    "generated_at": "2026-08-03T06:26:41Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:04:00Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/bus-driver-simulator-3d-tips/",
       "controls": "/guides/bus-driver-simulator-3d-controls/",
@@ -4072,8 +4072,8 @@
     }
   },
   "clean-before-your-wife-returns-hidden-object": {
-    "generated_at": "2026-08-03T06:26:42Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:04:15Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/clean-before-your-wife-returns-hidden-object-tips/",
       "controls": "/guides/clean-before-your-wife-returns-hidden-object-controls/",
@@ -4083,8 +4083,8 @@
     }
   },
   "italian-brainrot-find-the-difference": {
-    "generated_at": "2026-08-03T06:26:44Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:04:29Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/italian-brainrot-find-the-difference-tips/",
       "controls": "/guides/italian-brainrot-find-the-difference-controls/",
@@ -4094,8 +4094,8 @@
     }
   },
   "lost-things": {
-    "generated_at": "2026-08-03T06:26:45Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:04:39Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/lost-things-tips/",
       "controls": "/guides/lost-things-controls/",
@@ -4105,8 +4105,8 @@
     }
   },
   "dark-strokes-sins-of-the-fathers": {
-    "generated_at": "2026-08-03T06:26:47Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:04:57Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/dark-strokes-sins-of-the-fathers-tips/",
       "controls": "/guides/dark-strokes-sins-of-the-fathers-controls/",
@@ -4116,8 +4116,8 @@
     }
   },
   "tung-tung-sahur-hidden-bedug": {
-    "generated_at": "2026-08-03T06:26:48Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:05:08Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/tung-tung-sahur-hidden-bedug-tips/",
       "controls": "/guides/tung-tung-sahur-hidden-bedug-controls/",
@@ -4127,8 +4127,8 @@
     }
   },
   "house-of-1000-doors-evil-inside": {
-    "generated_at": "2026-08-03T06:26:50Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:05:23Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/house-of-1000-doors-evil-inside-tips/",
       "controls": "/guides/house-of-1000-doors-evil-inside-controls/",
@@ -4138,8 +4138,8 @@
     }
   },
   "hidden-objects-lost-island-2": {
-    "generated_at": "2026-08-03T06:26:51Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-01T10:05:32Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/hidden-objects-lost-island-2-tips/",
       "controls": "/guides/hidden-objects-lost-island-2-controls/",
