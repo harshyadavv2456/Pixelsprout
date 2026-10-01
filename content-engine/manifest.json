@@ -30536,5 +30536,23 @@
       "tips"
     ],
     "bot_updated_at": "2026-10-01T10:49:48Z"
+  },
+  "baba-is-you": {
+    "pages": {
+      "tips": "/guides/baba-is-you-tips/",
+      "controls": "/guides/baba-is-you-controls/",
+      "beginner-guide": "/guides/baba-is-you-beginner-guide/",
+      "similar": "/guides/games-like-baba-is-you/",
+      "faq": "/guides/baba-is-you-faq/"
+    },
+    "any_fallback": false,
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-10-01T10:59:40Z"
   }
 }

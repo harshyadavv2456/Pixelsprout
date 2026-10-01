@@ -19410,5 +19410,12 @@
     "beginner-guide": "/guides/dot-link-puzzle-connect-the-dots-beginner-guide/",
     "similar": "/guides/games-like-dot-link-puzzle-connect-the-dots/",
     "faq": "/guides/dot-link-puzzle-connect-the-dots-faq/"
+  },
+  "baba-is-you": {
+    "tips": "/guides/baba-is-you-tips/",
+    "controls": "/guides/baba-is-you-controls/",
+    "beginner-guide": "/guides/baba-is-you-beginner-guide/",
+    "similar": "/guides/games-like-baba-is-you/",
+    "faq": "/guides/baba-is-you-faq/"
   }
 }

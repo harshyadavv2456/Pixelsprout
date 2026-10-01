@@ -2,9 +2,34 @@
   "applied_hashes": {
     "bubble-up-endless.json": "220c32d80169337805128f49ff5e42a6602946aae0364b04b299d82d1d9521c1",
     "getting-over-it.json": "2ac777be070ede6704b13cf5f01e95976b8e173af6f8ab206375626d17582e85",
-    "dot-link-puzzle-connect-the-dots.json": "a5e0755ff9cf1496b3fa22a479dcdf91276c2ed0f12c346d8b65cd9fd1b24d3d"
+    "dot-link-puzzle-connect-the-dots.json": "a5e0755ff9cf1496b3fa22a479dcdf91276c2ed0f12c346d8b65cd9fd1b24d3d",
+    "baba-is-you.json": "fff0a6bd94db0b80d39bee142638af5fd5685d808f3ce218f50a7310d7c4e724"
   },
   "runs": [
+    {
+      "ran_at": "2026-10-01T10:59:40Z",
+      "published": [
+        {
+          "file": "baba-is-you.json",
+          "slug": "baba-is-you",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/baba-is-you-beginner-guide/",
+            "https://playpixelsprout.com/guides/baba-is-you-controls/",
+            "https://playpixelsprout.com/guides/baba-is-you-faq/",
+            "https://playpixelsprout.com/guides/games-like-baba-is-you/",
+            "https://playpixelsprout.com/guides/baba-is-you-tips/"
+          ]
+        }
+      ],
+      "rejected": []
+    },
     {
       "ran_at": "2026-10-01T10:49:48Z",
       "published": [
