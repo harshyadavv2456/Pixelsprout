@@ -4597,8 +4597,8 @@
     }
   },
   "drop-the-number-merge-game": {
-    "generated_at": "2026-08-03T06:27:53Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:44:02Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/drop-the-number-merge-game-tips/",
       "controls": "/guides/drop-the-number-merge-game-controls/",
@@ -4608,8 +4608,8 @@
     }
   },
   "2048-number-ball": {
-    "generated_at": "2026-08-03T06:27:54Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:44:07Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/2048-number-ball-tips/",
       "controls": "/guides/2048-number-ball-controls/",
@@ -4619,8 +4619,8 @@
     }
   },
   "emoji-blush": {
-    "generated_at": "2026-08-03T06:27:56Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:44:13Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/emoji-blush-tips/",
       "controls": "/guides/emoji-blush-controls/",
@@ -4630,8 +4630,8 @@
     }
   },
   "fruit-festival": {
-    "generated_at": "2026-08-03T06:27:57Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:44:18Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/fruit-festival-tips/",
       "controls": "/guides/fruit-festival-controls/",
@@ -4641,8 +4641,8 @@
     }
   },
   "falling-fruits": {
-    "generated_at": "2026-08-03T06:27:59Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:44:32Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/falling-fruits-tips/",
       "controls": "/guides/falling-fruits-controls/",
@@ -4652,8 +4652,8 @@
     }
   },
   "solitaire-puzzle-2048": {
-    "generated_at": "2026-08-03T06:28:00Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:44:49Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/solitaire-puzzle-2048-tips/",
       "controls": "/guides/solitaire-puzzle-2048-controls/",
@@ -4663,8 +4663,8 @@
     }
   },
   "falling-numbers-2048-puzzle": {
-    "generated_at": "2026-08-03T06:28:02Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:45:05Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/falling-numbers-2048-puzzle-tips/",
       "controls": "/guides/falling-numbers-2048-puzzle-controls/",
@@ -4674,8 +4674,8 @@
     }
   },
   "chain-cube-2048-3d": {
-    "generated_at": "2026-08-03T06:28:03Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:45:23Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/chain-cube-2048-3d-tips/",
       "controls": "/guides/chain-cube-2048-3d-controls/",
@@ -4685,8 +4685,8 @@
     }
   },
   "match-4": {
-    "generated_at": "2026-08-03T06:28:05Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:45:44Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/match-4-tips/",
       "controls": "/guides/match-4-controls/",
@@ -4696,8 +4696,8 @@
     }
   },
   "merge-cubes": {
-    "generated_at": "2026-08-03T06:28:06Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:45:59Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/merge-cubes-tips/",
       "controls": "/guides/merge-cubes-controls/",
@@ -4707,8 +4707,8 @@
     }
   },
   "jelly-run-in-2048": {
-    "generated_at": "2026-08-03T06:28:08Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:46:17Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/jelly-run-in-2048-tips/",
       "controls": "/guides/jelly-run-in-2048-controls/",
@@ -4737,8 +4737,8 @@
     "bot_updated_at": "2026-10-01T11:07:58Z"
   },
   "merge-grabber-race-to-2048": {
-    "generated_at": "2026-08-03T06:28:11Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:46:33Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/merge-grabber-race-to-2048-tips/",
       "controls": "/guides/merge-grabber-race-to-2048-controls/",
@@ -4748,8 +4748,8 @@
     }
   },
   "2048-classic-puzzle-challenge": {
-    "generated_at": "2026-08-03T06:28:12Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:46:47Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/2048-classic-puzzle-challenge-tips/",
       "controls": "/guides/2048-classic-puzzle-challenge-controls/",
@@ -4759,8 +4759,8 @@
     }
   },
   "snake-2048-io": {
-    "generated_at": "2026-08-03T06:28:14Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:47:02Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/snake-2048-io-tips/",
       "controls": "/guides/snake-2048-io-controls/",
@@ -4770,8 +4770,8 @@
     }
   },
   "2048-x2-merge-blocks": {
-    "generated_at": "2026-08-03T06:28:15Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:47:22Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/2048-x2-merge-blocks-tips/",
       "controls": "/guides/2048-x2-merge-blocks-controls/",
@@ -4781,8 +4781,8 @@
     }
   },
   "merge-royal": {
-    "generated_at": "2026-08-03T06:28:17Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:47:33Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/merge-royal-tips/",
       "controls": "/guides/merge-royal-controls/",
@@ -4792,8 +4792,8 @@
     }
   },
   "among-squid-challenge": {
-    "generated_at": "2026-08-03T06:28:18Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:47:47Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/among-squid-challenge-tips/",
       "controls": "/guides/among-squid-challenge-controls/",
@@ -4803,8 +4803,8 @@
     }
   },
   "color-warz": {
-    "generated_at": "2026-08-03T06:28:20Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:47:56Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/color-warz-tips/",
       "controls": "/guides/color-warz-controls/",
@@ -4814,8 +4814,8 @@
     }
   },
   "javelin-battle": {
-    "generated_at": "2026-08-03T06:28:21Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:48:10Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/javelin-battle-tips/",
       "controls": "/guides/javelin-battle-controls/",
@@ -4825,8 +4825,8 @@
     }
   },
   "battlegrid-online-pvp-tank-battles": {
-    "generated_at": "2026-08-03T06:28:23Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:48:29Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/battlegrid-online-pvp-tank-battles-tips/",
       "controls": "/guides/battlegrid-online-pvp-tank-battles-controls/",
@@ -4836,8 +4836,8 @@
     }
   },
   "italian-brainrot-tung-tung-tug-war": {
-    "generated_at": "2026-08-03T06:28:24Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:48:39Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/italian-brainrot-tung-tung-tug-war-tips/",
       "controls": "/guides/italian-brainrot-tung-tung-tug-war-controls/",
@@ -4847,8 +4847,8 @@
     }
   },
   "ia-destruction": {
-    "generated_at": "2026-08-03T06:28:26Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:48:50Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/ia-destruction-tips/",
       "controls": "/guides/ia-destruction-controls/",
@@ -4858,8 +4858,8 @@
     }
   },
   "card-legends-battle-royale": {
-    "generated_at": "2026-08-03T06:28:27Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:49:03Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/card-legends-battle-royale-tips/",
       "controls": "/guides/card-legends-battle-royale-controls/",
@@ -4869,8 +4869,8 @@
     }
   },
   "mutant-plants-vs-zombie": {
-    "generated_at": "2026-08-03T06:28:29Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:49:19Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/mutant-plants-vs-zombie-tips/",
       "controls": "/guides/mutant-plants-vs-zombie-controls/",
@@ -4880,8 +4880,8 @@
     }
   },
   "brawlers-arena-battle-stars": {
-    "generated_at": "2026-08-03T06:28:30Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:49:30Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/brawlers-arena-battle-stars-tips/",
       "controls": "/guides/brawlers-arena-battle-stars-controls/",
@@ -4891,8 +4891,8 @@
     }
   },
   "battle-of-pirate-caribbean-battle": {
-    "generated_at": "2026-08-03T06:28:32Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:49:42Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/battle-of-pirate-caribbean-battle-tips/",
       "controls": "/guides/battle-of-pirate-caribbean-battle-controls/",
@@ -4902,8 +4902,8 @@
     }
   },
   "capybara-go": {
-    "generated_at": "2026-08-03T06:28:33Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:49:56Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/capybara-go-tips/",
       "controls": "/guides/capybara-go-controls/",
@@ -4913,8 +4913,8 @@
     }
   },
   "stickman-epic": {
-    "generated_at": "2026-08-03T06:28:35Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:50:07Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/stickman-epic-tips/",
       "controls": "/guides/stickman-epic-controls/",
@@ -4924,8 +4924,8 @@
     }
   },
   "who-will-win-create-a-battle": {
-    "generated_at": "2026-08-03T06:28:36Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:50:20Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/who-will-win-create-a-battle-tips/",
       "controls": "/guides/who-will-win-create-a-battle-controls/",
@@ -4935,8 +4935,8 @@
     }
   },
   "robot-terminator-t-rex": {
-    "generated_at": "2026-08-03T06:28:38Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:50:32Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/robot-terminator-t-rex-tips/",
       "controls": "/guides/robot-terminator-t-rex-controls/",
@@ -4946,8 +4946,8 @@
     }
   },
   "dark-world": {
-    "generated_at": "2026-08-03T06:28:39Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:50:44Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/dark-world-tips/",
       "controls": "/guides/dark-world-controls/",
@@ -4957,8 +4957,8 @@
     }
   },
   "battleship-infinity-war": {
-    "generated_at": "2026-08-03T06:28:41Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:50:54Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/battleship-infinity-war-tips/",
       "controls": "/guides/battleship-infinity-war-controls/",
@@ -4968,8 +4968,8 @@
     }
   },
   "mobile-legends-slime-3v3": {
-    "generated_at": "2026-08-03T06:28:42Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:51:09Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/mobile-legends-slime-3v3-tips/",
       "controls": "/guides/mobile-legends-slime-3v3-controls/",
@@ -4979,8 +4979,8 @@
     }
   },
   "epic-defense-clash": {
-    "generated_at": "2026-08-03T06:28:44Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:51:21Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/epic-defense-clash-tips/",
       "controls": "/guides/epic-defense-clash-controls/",
@@ -4990,8 +4990,8 @@
     }
   },
   "war-the-knights": {
-    "generated_at": "2026-08-03T06:28:45Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:51:34Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/war-the-knights-tips/",
       "controls": "/guides/war-the-knights-controls/",
@@ -5001,8 +5001,8 @@
     }
   },
   "memory-emoji": {
-    "generated_at": "2026-08-03T06:28:47Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:51:45Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/memory-emoji-tips/",
       "controls": "/guides/memory-emoji-controls/",
@@ -5012,8 +5012,8 @@
     }
   },
   "toca-life-memory-card-match": {
-    "generated_at": "2026-08-03T06:28:48Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:51:59Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/toca-life-memory-card-match-tips/",
       "controls": "/guides/toca-life-memory-card-match-controls/",
@@ -5023,8 +5023,8 @@
     }
   },
   "memory-cards": {
-    "generated_at": "2026-08-03T06:28:50Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:52:10Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/memory-cards-tips/",
       "controls": "/guides/memory-cards-controls/",
@@ -5034,8 +5034,8 @@
     }
   },
   "funny-animals-memory-game": {
-    "generated_at": "2026-08-03T06:28:52Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:52:22Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/funny-animals-memory-game-tips/",
       "controls": "/guides/funny-animals-memory-game-controls/",
@@ -5045,8 +5045,8 @@
     }
   },
   "flag-memory-match": {
-    "generated_at": "2026-08-03T06:28:53Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-02T11:52:34Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/flag-memory-match-tips/",
       "controls": "/guides/flag-memory-match-controls/",
