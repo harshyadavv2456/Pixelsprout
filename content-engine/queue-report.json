@@ -5,10 +5,58 @@
     "dot-link-puzzle-connect-the-dots.json": "a5e0755ff9cf1496b3fa22a479dcdf91276c2ed0f12c346d8b65cd9fd1b24d3d",
     "baba-is-you.json": "fff0a6bd94db0b80d39bee142638af5fd5685d808f3ce218f50a7310d7c4e724",
     "2048-cube-run.json": "0a26259558976f8da53ad4bf2a3f71e347019250e435483fb60c4e1104737c01",
-    "2048.json": "5e952f777d2745a40197778f48ef6347375c6e866c7f55c90c6dcc0c4f223227",
-    "toilet-rush-draw-to-pee.json": "26cd07eec76661f73b1bc381bb1405813943dc39b2aca9227c7b84b7cc8b5f62"
+    "2048.json": "fd3749f1b4ea2dd4465df6c5dacdb8181a7cc1dce4c3c1360b19875255faa7e9",
+    "toilet-rush-draw-to-pee.json": "f9e15e1f637aca083ed5a91695a6713c7b8b1ca5ce3faf83f4034f360c4440bc"
   },
   "runs": [
+    {
+      "ran_at": "2026-10-03T04:20:59Z",
+      "published": [
+        {
+          "file": "toilet-rush-draw-to-pee.json",
+          "slug": "toilet-rush-draw-to-pee",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/toilet-rush-draw-to-pee-beginner-guide/",
+            "https://playpixelsprout.com/guides/toilet-rush-draw-to-pee-controls/",
+            "https://playpixelsprout.com/guides/toilet-rush-draw-to-pee-faq/",
+            "https://playpixelsprout.com/guides/games-like-toilet-rush-draw-to-pee/",
+            "https://playpixelsprout.com/guides/toilet-rush-draw-to-pee-tips/"
+          ]
+        }
+      ],
+      "rejected": []
+    },
+    {
+      "ran_at": "2026-10-03T04:20:59Z",
+      "published": [
+        {
+          "file": "2048.json",
+          "slug": "2048",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/2048-beginner-guide/",
+            "https://playpixelsprout.com/guides/2048-controls/",
+            "https://playpixelsprout.com/guides/2048-faq/",
+            "https://playpixelsprout.com/guides/games-like-2048/",
+            "https://playpixelsprout.com/guides/2048-tips/"
+          ]
+        }
+      ],
+      "rejected": []
+    },
     {
       "ran_at": "2026-10-03T04:14:37Z",
       "published": [
