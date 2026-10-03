@@ -3,7 +3,7 @@
  "played": true,
  "pages": {
   "tips": {
-   "intro": "Getting Over It on Pixelsprout is a slow, precise climbing game where you swing a hammer with your mouse. These tips come from about five minutes of real attempts, including a few hard falls.",
+   "intro": "Getting Over It on Pixelsprout is a fan-made Scratch remake, not the original game by Bennett Foddy. It is a slow, precise climbing game where you swing a hammer with your mouse. These tips come from about five minutes of real attempts, including a few hard falls.",
    "tips": [
     "Move the mouse slowly. Slow, deliberate movements worked best for me, while fast sweeping swings were the most likely to tip the cat over.",
     "Plant the hammer head against a platform first, then pull the mouse in the opposite or upward direction to move yourself. Push and pull instead of flailing.",
@@ -42,8 +42,8 @@
    ]
   },
   "beginner-guide": {
-   "intro": "New to Getting Over It? This guide explains what the game is on Pixelsprout, what you are trying to do and how to avoid the most common early falls.",
-   "what_it_is": "Getting Over It on Pixelsprout is a free browser version with no download. The start screen calls it a Scratch Edition remix by Raph112star. You guide an orange cat in a flower pot who uses a long yellow-handled hammer with a gray head to climb through a world of platforms and junk. Movement is momentum-based and hard to control, which is the challenge.",
+   "intro": "New to Getting Over It? This guide covers the fan-made Scratch remake on Pixelsprout, what you are trying to do and how to avoid the most common early falls.",
+   "what_it_is": "Getting Over It on Pixelsprout is a free browser version with no download. It is a fan-made Scratch remake, not the original game by Bennett Foddy, and the start screen calls it a Scratch Edition remix by Raph112star. You guide an orange cat in a flower pot who uses a long yellow-handled hammer with a gray head to climb through a world of platforms and junk. Movement is momentum-based and hard to control, which is the challenge.",
    "first_steps": [
     "Click Ok, Play Now! when the game finishes loading, then choose New Game.",
     "Move the mouse a little and watch how the hammer follows the cursor before you try to climb.",
