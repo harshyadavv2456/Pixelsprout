@@ -1,7 +1,7 @@
 {
   "applied_hashes": {
     "bubble-up-endless.json": "220c32d80169337805128f49ff5e42a6602946aae0364b04b299d82d1d9521c1",
-    "getting-over-it.json": "3a9663e9725cdda73e3813c1d561e84a93bb9f7a887e08c6f55e3b737058db5c",
+    "getting-over-it.json": "097e0b3b1f4c860f38068782417c1859975557eee5264d00236319161a1f787a",
     "dot-link-puzzle-connect-the-dots.json": "a5e0755ff9cf1496b3fa22a479dcdf91276c2ed0f12c346d8b65cd9fd1b24d3d",
     "baba-is-you.json": "fff0a6bd94db0b80d39bee142638af5fd5685d808f3ce218f50a7310d7c4e724",
     "2048-cube-run.json": "0a26259558976f8da53ad4bf2a3f71e347019250e435483fb60c4e1104737c01",
@@ -9,6 +9,30 @@
     "toilet-rush-draw-to-pee.json": "26cd07eec76661f73b1bc381bb1405813943dc39b2aca9227c7b84b7cc8b5f62"
   },
   "runs": [
+    {
+      "ran_at": "2026-10-03T04:14:37Z",
+      "published": [
+        {
+          "file": "getting-over-it.json",
+          "slug": "getting-over-it",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/getting-over-it-beginner-guide/",
+            "https://playpixelsprout.com/guides/getting-over-it-controls/",
+            "https://playpixelsprout.com/guides/getting-over-it-faq/",
+            "https://playpixelsprout.com/guides/games-like-getting-over-it/",
+            "https://playpixelsprout.com/guides/getting-over-it-tips/"
+          ]
+        }
+      ],
+      "rejected": []
+    },
     {
       "ran_at": "2026-10-03T04:13:04Z",
       "published": [
