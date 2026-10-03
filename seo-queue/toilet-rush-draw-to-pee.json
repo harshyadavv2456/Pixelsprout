@@ -1,0 +1,102 @@
+{
+ "slug": "toilet-rush-draw-to-pee",
+ "played": true,
+ "pages": {
+  "tips": {
+   "intro": "These tips come from playing Toilet Rush: Draw to Pee in a desktop browser on Pixelsprout. I cleared Level 1 by drawing a path and then spent more time on Level 2, where drawing stopped responding. Everything below is what appeared on screen.",
+   "tips": [
+    "Click Ok, Play Now! and wait through the loading overlay until it finishes, then tap the large triangular play button on the menu that shows Toilet Rush: Draw to Pee and Level 0/85.",
+    "On Level 1, drag with the mouse from the character to the blue toilet. A direct path along the green dotted guide gave me Victory with a +10 coin reward.",
+    "Watch the coin counter after a win. Mine moved from 0 to 10 when the +10 coin reward appeared with the progress bar.",
+    "Use Next after Victory to continue, or Retry if you want the same level again. Both buttons showed on the Level 1 clear screen.",
+    "If a later level stops drawing a visible path, do not keep grinding the same drag. On Level 2 my repeated mouse routes produced no path, movement, fail, or victory.",
+    "Use the gear or back icon when you need the menu again. That control returned me to the title screen with the level progress label.",
+    "A side ad may sit to the right of the game. In my session it stayed outside the playfield and did not block drawing on Level 1."
+   ],
+   "conclusion": "Level 1 plays as a short draw-a-path puzzle to the toilet. Treat later levels carefully if drawing stops registering, and fall back to the menu rather than assuming every stage works the same way.",
+   "extra_sections": [
+    {
+     "heading": "What worked on Level 1",
+     "paragraphs": [
+      "Level 1 showed one character, one blue toilet, and a vertical green dotted path. Dragging a direct mouse line from the character to the toilet produced Victory, a +10 coin reward, a progress bar, and Retry and Next buttons.",
+      "That clear was enough to confirm the core loop: draw the route, reach the bathroom, collect the coin reward, then choose Retry or Next. No timer appeared on the levels I tested."
+     ]
+    },
+    {
+     "heading": "Where Level 2 got stuck",
+     "paragraphs": [
+      "Level 2 showed a yellow Level 2 badge, two cartoon children above two light-blue stalls with red female and purple male symbols, plus bottom icons for a circular arrow, a lightbulb, and a double-arrow.",
+      "Repeated mouse drag attempts made no visible path and triggered no movement, fail, or victory. If you hit the same freeze, leave via the gear or back control and try again later rather than assuming you are drawing wrong."
+     ]
+    }
+   ]
+  },
+  "controls": {
+   "intro": "This build is mouse-driven on desktop. Here is exactly what I used to start the game and clear Level 1.",
+   "desktop": "Click Ok, Play Now! on the loading overlay, then click the large triangular play button on the menu. In a level, click menu buttons normally and hold-drag with the mouse to draw a path from the character toward the toilet. On Level 1 that drag created the route that led to Victory. I saw no keyboard control text, and arrow keys were not part of how I played.",
+   "mobile": "I played only in a desktop browser and saw no separate mobile control legend. Touch drawing may work like the mouse drag I used, but I cannot confirm phone or tablet behavior from this session.",
+   "tips": [
+    "Wait until loading finishes after Ok, Play Now! before you hunt for the triangular play button.",
+    "On Level 1, drag from the character to the toilet in one continuous stroke rather than tapping both ends.",
+    "After Victory, use Next to advance or Retry to redraw the same level.",
+    "If dragging leaves no line on a later level, use the gear or back icon to return to the menu."
+   ]
+  },
+  "beginner-guide": {
+   "intro": "New to Toilet Rush: Draw to Pee? This guide covers what the game is, how to start, and what a first clear looks like from a real browser session.",
+   "what_it_is": "Toilet Rush: Draw to Pee is a free browser puzzle with a white rounded playfield, hand-drawn black outlines, and cartoon kids. The page says you guide frantic kids to the nearest bathroom by drawing paths, avoid obstacles and collisions, and finish before time runs out. The menu title reads Toilet Rush: Draw to Pee with a Level 0/85 label. Levels use a yellow cloud-shaped badge. A right-side ad was visible while I played but did not cover the playfield.",
+   "first_steps": [
+    "Open the game and click Ok, Play Now!, then wait through the loading overlay.",
+    "Click the large triangular play button on the menu that shows the game title and level progress.",
+    "On Level 1, drag a path from the character to the blue toilet, following the green dotted guide if it helps.",
+    "When Victory appears with +10 coins, choose Next to continue or Retry to try the same level.",
+    "If a later level ignores your drawing, use the gear or back icon to leave rather than repeating the same drag."
+   ],
+   "who_its_for": "It suits players who like short draw-a-path puzzles with cartoon levels. If you need every stage rock-solid, note that Level 2 stopped responding to drawing in my session after Level 1 worked fine.",
+   "extra_sections": [
+    {
+     "heading": "A first clear from menu to Victory",
+     "paragraphs": [
+      "From the menu I entered Level 1 with one character and one blue toilet plus a green dotted guide. Drawing a direct path produced Victory, a +10 coin icon reward, a progress bar, and Retry and Next. Coins went from 0 to 10.",
+      "Level 2 then showed two children and two stalls with gender symbols, but my mouse routes never appeared and nothing moved. I never saw a timer on either level despite the page mentioning time running out."
+     ]
+    }
+   ]
+  },
+  "similar": {
+   "intro": "If you like Toilet Rush: Draw to Pee, you probably enjoy short draw-the-path puzzles where one stroke sends a character to a goal. Look for casual browser games with cartoon levels, clear success screens, and simple mouse or touch drawing. Path-drawing puzzles that unlock many numbered stages and other light physics-route games give the same quick try-the-next-level loop."
+  },
+  "faq": {
+   "faqs": [
+    {
+     "question": "Is Toilet Rush: Draw to Pee free?",
+     "answer": "Yes. It runs in the browser on Pixelsprout with no download. A right-side ad was visible in my session but did not cover the playfield."
+    },
+    {
+     "question": "How do you start the game?",
+     "answer": "Click Ok, Play Now! and wait through loading, then click the large triangular play button on the menu titled Toilet Rush: Draw to Pee."
+    },
+    {
+     "question": "How do you control the character?",
+     "answer": "On desktop I drew with a mouse drag from the character to the toilet. Menu and result screens used normal mouse clicks. No keyboard control text appeared."
+    },
+    {
+     "question": "What is the goal?",
+     "answer": "The page says to guide kids to the nearest bathroom by drawing paths, avoid obstacles and collisions, and finish before time runs out. On Level 1, reaching the blue toilet triggered Victory."
+    },
+    {
+     "question": "How many levels are there?",
+     "answer": "The menu showed Level 0/85 when I opened it, which points to a long level list. I only cleared Level 1 in this session."
+    },
+    {
+     "question": "What rewards do you get for winning?",
+     "answer": "After Level 1 Victory I saw a +10 coin reward, a progress bar, and Retry and Next buttons. My coin counter moved from 0 to 10."
+    },
+    {
+     "question": "Does every level work?",
+     "answer": "Level 1 worked. On Level 2, repeated mouse draws made no visible path and caused no movement, fail, or victory, so that stage looked unresponsive in my session."
+    }
+   ]
+  }
+ }
+}
