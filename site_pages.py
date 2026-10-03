@@ -852,7 +852,7 @@ def render_all_games(catalog):
 
 FEATURED_GUIDES = [
     ("Getting Over It", "getting-over-it", "A hammer-climbing challenge played with the mouse. This is a fan-made browser remake.",
-     [("Short video on YouTube", "https://www.youtube.com/shorts/glZERu6lgBE"), ("Reel on Facebook", "https://www.facebook.com/reel/956487844203977"), ("Carousel on Instagram", "https://www.instagram.com/p/Dd8M05Tm-lc/"), ("Post on X", "https://x.com/Playpixelsprout/status/2105534668061958589"), ("Join the conversation on Discord", "https://discord.com/channels/1554923717556183120/1554923718181126305/1555096012270469233")]),
+     [("Short video on YouTube", "https://www.youtube.com/shorts/glZERu6lgBE"), ("Reel on Facebook", "https://www.facebook.com/reel/956487844203977"), ("Carousel on Instagram", "https://www.instagram.com/p/Dd8M05Tm-lc/"), ("Post on X", "https://x.com/Playpixelsprout/status/2105534668061958589")]),
     ("Bubble Up Endless", "bubble-up-endless", "A bubble shooter where you press and hold to aim, release to shoot, and chain combos before the red line.",
      [("Short video on YouTube", "https://youtube.com/shorts/zeVo-cKj_qE"), ("Reel on Facebook", "https://www.facebook.com/reel/1127971539689130"), ("Carousel on Instagram", "https://www.instagram.com/playpixelsprout/p/Dd-Bee5m7Fe/"), ("Post on X", "https://x.com/Playpixelsprout/status/2105787341965332762")]),
     ("Dot Link Puzzle", "dot-link-puzzle-connect-the-dots", "A connect-the-dots puzzle with boards from 5x5 up to 9x9, plus undo, reset and hint buttons.",
