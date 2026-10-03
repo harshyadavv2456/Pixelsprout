@@ -22019,14 +22019,22 @@
   },
   "2048": {
     "generated_at": "2026-08-03T07:07:31Z",
-    "any_fallback": true,
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/2048-tips/",
       "controls": "/guides/2048-controls/",
       "beginner-guide": "/guides/2048-beginner-guide/",
       "similar": "/guides/games-like-2048/",
       "faq": "/guides/2048-faq/"
-    }
+    },
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-10-03T04:12:38Z"
   },
   "kobadoo-arithmetic": {
     "generated_at": "2026-08-03T07:07:33Z",
