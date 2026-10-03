@@ -1,0 +1,101 @@
+{
+ "slug": "2048",
+ "played": true,
+ "pages": {
+  "tips": {
+   "intro": "These tips come from a real browser session of 2048 on Pixelsprout, with dozens of arrow-key moves on the 4x4 board. I reached a 512 tile and a score of 5,032 before the board filled. Everything below is what showed up on screen.",
+   "tips": [
+    "Click OK, PLAY NOW! on the GamePix prompt, then click the board so arrow keys register. Without focus, the tiles stay still.",
+    "Keep empty cells open as long as you can. Matching tiles merge into the next value, and the board gets much harder once most cells are filled.",
+    "Watch the Score and Best counters at the top. Score rises as you merge; Best stays after a loss so you can compare runs.",
+    "Plan merges toward higher tiles rather than scattering pairs. I climbed through mid values up to 512 by chaining matches instead of random moves.",
+    "When the board looks stuck, scan for any two matching numbers that still have a clear path. One merge often frees a cell and unlocks the next move.",
+    "After Game Over, use Try again. That reset Score to 0 while Best stayed at 5,032, so you keep your high mark across runs.",
+    "There was no Undo button in this version. Treat each arrow press as final and think one move ahead when the board is crowded."
+   ],
+   "conclusion": "2048 rewards patience more than speed. Keep space on the board, chase merges toward one corner of high tiles, and accept that a full board with no moves ends the run.",
+   "extra_sections": [
+    {
+     "heading": "How the board fills and why that matters",
+     "paragraphs": [
+      "The game starts with two tiles on a 4x4 grid. Each move slides every tile as far as it can in that direction, then a new tile appears. As numbers climb, empty cells shrink and you have fewer places to recover from a bad slide.",
+      "In my run the board stayed manageable while I still had open cells, then tightened once higher tiles took space. That crowded endgame is when one wrong direction can lock the grid with no legal move left."
+     ]
+    },
+    {
+     "heading": "Reading Score and Best during a run",
+     "paragraphs": [
+      "Score tracks the current run and climbs whenever matching tiles merge. Best stores your highest score across resets. After I hit Game Over at 5,032, Try again cleared Score but left Best alone, which made it easy to see whether the next run was improving."
+     ]
+    }
+   ]
+  },
+  "controls": {
+   "intro": "Controls in this browser build are simple: four arrow keys slide the whole board. Here is exactly what worked when I played on desktop.",
+   "desktop": "Click the game board once so it has focus, then use Arrow Left, Arrow Right, Arrow Up, and Arrow Down. Each press slides every tile in that direction. Matching numbers that collide merge into one higher tile. I did not find working mouse-drag moves for sliding; the arrows were the controls that moved the tiles.",
+   "mobile": "I played only in a desktop browser and saw no on-screen mobile control legend. If you are on a phone, expect touch or swipe behavior may differ; I cannot confirm it from this session.",
+   "tips": [
+    "Click OK, PLAY NOW! first if the GamePix overlay appears, then click New Game or the board before using the arrows.",
+    "If arrows do nothing, click inside the 4x4 grid to focus the game, then try again.",
+    "One arrow press equals one full-board slide. There is no Undo, so pause before a move when the board is nearly full.",
+    "After Game Over, click Try again to start a fresh run without leaving the page."
+   ]
+  },
+  "beginner-guide": {
+   "intro": "New to 2048 on Pixelsprout? This guide covers what the game is, how a run starts, and what to do first based on a full play session that ended at Game Over.",
+   "what_it_is": "2048 is a free browser puzzle on a cream-colored 4x4 grid of muted beige empty cells and colored numbered tiles. The on-screen goal is Join the numbers and get to the 2048 tile. You slide the whole board with the arrow keys so matching numbers merge into higher values. Score and Best counters sit near the large dark 2048 title, and a New Game control lets you restart. A side ad was visible to the right but did not cover the board while I played.",
+   "first_steps": [
+    "Open the game and click OK, PLAY NOW! if that prompt appears.",
+    "Click the board so keyboard focus is on the grid, then use the arrow keys to slide tiles.",
+    "Merge matching numbers to grow higher tiles. Watch Score rise and keep an eye on Best.",
+    "When the board fills with no legal move, the Game Over overlay appears with Try again.",
+    "Click Try again to reset Score to 0 and start another run; Best keeps your high score."
+   ],
+   "who_its_for": "It suits players who like calm number puzzles with short thinking pauses between moves. If you want twitch action or a win every time, note that I reached 512 and lost before ever seeing the 2048 tile.",
+   "extra_sections": [
+    {
+     "heading": "What a first run looks like from start to Game Over",
+     "paragraphs": [
+      "A run begins with two tiles on the empty 4x4 board. Each arrow slide moves everything that direction, merges equals that hit, and adds a new tile. Score climbs as merges happen. In my session I built tiles up through mid values to 512 and finished with Score and Best at 5,032.",
+      "When every cell is filled and no two matching tiles can slide together, the overlay shows Game Over and Try again. Clicking Try again cleared Score to 0 while Best stayed at 5,032. I never reached the 2048 tile, so I did not see a win screen."
+     ]
+    }
+   ]
+  },
+  "similar": {
+   "intro": "If you like 2048, you probably enjoy grid puzzles where one move shifts the whole board and matching pieces combine into higher values. Look for calm single-player games with a clear score target, short runs you can restart quickly, and boards that get tighter as you succeed. Number-merging puzzles and other free browser brain games with a Best score to beat give the same steady, try-again loop."
+  },
+  "faq": {
+   "faqs": [
+    {
+     "question": "Is 2048 free to play on Pixelsprout?",
+     "answer": "Yes. It runs in the browser with no download. A right-side ad was visible while I played but did not cover the board."
+    },
+    {
+     "question": "How do you move the tiles?",
+     "answer": "Click the board to focus it, then use the arrow keys: Left, Right, Up, and Down. Each key slides every tile in that direction."
+    },
+    {
+     "question": "What is the goal of 2048?",
+     "answer": "The game text says Join the numbers and get to the 2048 tile. Matching tiles merge into higher values as you slide the board."
+    },
+    {
+     "question": "What do Score and Best mean?",
+     "answer": "Score tracks the current run and rises when tiles merge. Best keeps your highest score after a reset. After Game Over, Try again set Score to 0 while Best stayed at 5,032."
+    },
+    {
+     "question": "Is there an Undo button?",
+     "answer": "I did not see an Undo control. Visible UI included the 2048 title, Score, Best, and New Game."
+    },
+    {
+     "question": "What happens when you lose?",
+     "answer": "When the board is full with no moves left, a Game Over overlay appears with Try again. Clicking it starts a new run."
+    },
+    {
+     "question": "Did you reach the 2048 tile?",
+     "answer": "No. My best tile in this session was 512, with a final score of 5,032 before Game Over. I did not see a win screen."
+    }
+   ]
+  }
+ }
+}
