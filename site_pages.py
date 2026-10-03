@@ -864,6 +864,8 @@ FEATURED_GUIDES = [
      [("Short video on YouTube", "https://youtube.com/shorts/OR3MsgtAMQU"), ("Reel on Facebook", "https://www.facebook.com/reel/2109658733245485"), ("Carousel on Instagram", "https://www.instagram.com/playpixelsprout/p/DeAmPNtmz50/"), ("Post on X", "https://x.com/Playpixelsprout/status/2106149730463957308")]),
     ("Baba Is You", "baba-is-you", "A turn-based puzzle where you push word blocks to change the rules. This is a fan-made browser remake.", []),
     ("2048 Cube Run", "2048-cube-run", "A three-lane runner where numbered cubes merge as you run toward the finish gate.", []),
+    ("2048", "2048", "A 4x4 sliding-number puzzle played with the arrow keys: merge matching tiles to build higher numbers.", []),
+    ("Toilet Rush: Draw to Pee", "toilet-rush-draw-to-pee", "A draw-a-path puzzle played with the mouse: drag a route from the character to the toilet.", []),
 ]
 
 
