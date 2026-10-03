@@ -14,11 +14,11 @@
     },
     {
       "slug": "dot-link-puzzle-connect-the-dots",
-      "views": 27
+      "views": 30
     },
     {
       "slug": "test-tubes-water-sort",
-      "views": 24
+      "views": 25
     },
     {
       "slug": "uno-online",
@@ -27,6 +27,10 @@
     {
       "slug": "2048-cube-merge-block",
       "views": 23
+    },
+    {
+      "slug": "2048",
+      "views": 22
     },
     {
       "slug": "baba-is-you",
@@ -38,10 +42,6 @@
     },
     {
       "slug": "2048-cube-run",
-      "views": 20
-    },
-    {
-      "slug": "2048",
       "views": 20
     },
     {
@@ -58,14 +58,14 @@
     },
     {
       "slug": "gravity-merge",
-      "views": 15
+      "views": 16
     },
     {
       "slug": "100-doors-escape-puzzle",
       "views": 14
     },
     {
-      "slug": "road-designer",
+      "slug": "2d-platformer-coin",
       "views": 13
     },
     {
@@ -73,11 +73,11 @@
       "views": 13
     },
     {
-      "slug": "12-minibattles-two-players",
+      "slug": "100-doors-escape-from-prison",
       "views": 13
     },
     {
-      "slug": "100-doors-escape-from-prison",
+      "slug": "road-designer",
       "views": 13
     }
   ]
