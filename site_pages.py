@@ -200,6 +200,9 @@ GUIDE_LABELS = [
 ]
 
 
+FAN_MADE_SLUGS = {"getting-over-it", "baba-is-you"}
+
+
 def render_game_page(f, catalog, guides=None, total_games=None):
     slug, title, category = f["slug"], f["title"], f["category"]
     genre_label = S.pretty_genre(category)
@@ -210,6 +213,8 @@ def render_game_page(f, catalog, guides=None, total_games=None):
     if len(shelf_list) < 6:
         shelf_list = similar[:12]
 
+    # Fan-made Scratch remakes get a one-line disclosure under the description.
+    fan_made_note = '<p class="how-to">This is a fan-made Scratch remake, not the original game.</p>\n' if slug in FAN_MADE_SLUGS else ""
     description = (f.get("description_html") or "").strip()
     if not text(description):
         description = esc(f"{title} is a free {genre_label.lower()} game you can play right here in your browser — no download, no sign-up.")
@@ -291,7 +296,7 @@ def render_game_page(f, catalog, guides=None, total_games=None):
 <section class="game-about" aria-labelledby="about-title">
 <h2 id="about-title">About {esc(title)}</h2>
 <p class="how-to"><!--ps:desc-->{description}<!--/ps:desc--></p>
-<div class="facts"><span class="chip">Free to play</span><span class="chip">No download</span><span class="chip">Plays in your browser</span></div>
+{fan_made_note}<div class="facts"><span class="chip">Free to play</span><span class="chip">No download</span><span class="chip">Plays in your browser</span></div>
 </section>
 {S.ad_native()}
 {guides_html}
