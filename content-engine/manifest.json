@@ -5486,14 +5486,22 @@
   },
   "toilet-rush-draw-to-pee": {
     "generated_at": "2026-08-03T06:29:53Z",
-    "any_fallback": true,
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/toilet-rush-draw-to-pee-tips/",
       "controls": "/guides/toilet-rush-draw-to-pee-controls/",
       "beginner-guide": "/guides/toilet-rush-draw-to-pee-beginner-guide/",
       "similar": "/guides/games-like-toilet-rush-draw-to-pee/",
       "faq": "/guides/toilet-rush-draw-to-pee-faq/"
-    }
+    },
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-10-03T04:13:04Z"
   },
   "timberman": {
     "generated_at": "2026-08-03T06:29:55Z",
