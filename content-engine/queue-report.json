@@ -6,9 +6,33 @@
     "baba-is-you.json": "fff0a6bd94db0b80d39bee142638af5fd5685d808f3ce218f50a7310d7c4e724",
     "2048-cube-run.json": "0a26259558976f8da53ad4bf2a3f71e347019250e435483fb60c4e1104737c01",
     "2048.json": "0358c5d7f2e13b947d9201ac211c5bf1ebbfb27e6fb6cef27cab9271114d6d09",
-    "toilet-rush-draw-to-pee.json": "f9e15e1f637aca083ed5a91695a6713c7b8b1ca5ce3faf83f4034f360c4440bc"
+    "toilet-rush-draw-to-pee.json": "fdd6754ca1970f77f043383aa646ad6a6f9bdb774e072a49f7504e8c0b3581cc"
   },
   "runs": [
+    {
+      "ran_at": "2026-10-03T04:33:41Z",
+      "published": [
+        {
+          "file": "toilet-rush-draw-to-pee.json",
+          "slug": "toilet-rush-draw-to-pee",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/toilet-rush-draw-to-pee-beginner-guide/",
+            "https://playpixelsprout.com/guides/toilet-rush-draw-to-pee-controls/",
+            "https://playpixelsprout.com/guides/toilet-rush-draw-to-pee-faq/",
+            "https://playpixelsprout.com/guides/games-like-toilet-rush-draw-to-pee/",
+            "https://playpixelsprout.com/guides/toilet-rush-draw-to-pee-tips/"
+          ]
+        }
+      ],
+      "rejected": []
+    },
     {
       "ran_at": "2026-10-03T04:29:00Z",
       "published": [
