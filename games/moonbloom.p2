@@ -1,0 +1,175 @@
+      ctx.arc(x + size / 2, y + size / 2, size * 0.32, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    function cellDrawPos(r, c, m, cell) {
+      var y = m.gy + r * m.cell;
+      if (cell && cell.fallFrom != null && anim && anim.kind === "grav") {
+        var u = Math.min(1, anim.t / anim.dur);
+        u = 1 - Math.pow(1 - u, 3);
+        var from = m.gy + cell.fallFrom * m.cell;
+        y = from + (y - from) * u;
+      }
+      return { x: m.gx + c * m.cell, y: y };
+    }
+
+    function update(dt) {
+      if (anim) {
+        anim.t += dt;
+        if (anim.t >= anim.dur) finishAnim();
+      }
+      if (deny >= 0) deny = Math.max(-1, deny - dt * 3);
+      chainBanner = Math.max(0, chainBanner - dt);
+      shake = Math.max(0, shake - dt * 18);
+      for (var r = 0; r < ROWS; r++) {
+        for (var c = 0; c < COLS; c++) {
+          var cell = grid[r][c];
+          if (cell && cell.pop > 1) cell.pop = Math.max(1, cell.pop - dt * 2.2);
+        }
+      }
+      particles.forEach(function (p) {
+        p.t += dt;
+        p.x += p.vx * dt;
+        p.y += p.vy * dt;
+        p.vy += 80 * dt;
+      });
+      particles = particles.filter(function (p) { return p.t < p.life; });
+      floats.forEach(function (f) { f.t += dt; f.y -= 28 * dt; });
+      floats = floats.filter(function (f) { return f.t < f.life; });
+    }
+
+    function drawHud(m) {
+      ctx.fillStyle = "#f4ecd8";
+      ctx.font = "600 " + Math.round(m.cell * 0.42) + "px 'Bricolage Grotesque', Georgia, serif";
+      ctx.textAlign = "left";
+      ctx.textBaseline = "top";
+      ctx.fillText(String(score), 16, 14);
+      ctx.font = "500 " + Math.round(m.cell * 0.22) + "px Geist, sans-serif";
+      ctx.fillStyle = "rgba(244,236,216,0.62)";
+      ctx.fillText("best " + best, 16, 14 + m.cell * 0.46);
+      ctx.textAlign = "center";
+      ctx.fillStyle = "#f4ecd8";
+      ctx.font = "600 " + Math.round(m.cell * 0.26) + "px 'Bricolage Grotesque', Georgia, serif";
+      var ev = EVENINGS[evening];
+      ctx.fillText(ev.name, cssW / 2, 16);
+      if (ev.goal) {
+        var bw = Math.min(180, cssW * 0.36);
+        var bx = cssW / 2 - bw / 2;
+        var by = 16 + m.cell * 0.34;
+        ctx.fillStyle = "rgba(255,255,255,0.1)";
+        roundRect(bx, by, bw, 6, 3);
+        ctx.fill();
+        ctx.fillStyle = "#e2b15a";
+        roundRect(bx, by, bw * Math.max(0, Math.min(1, score / ev.goal)), 6, 3);
+        ctx.fill();
+      } else {
+        ctx.font = "500 " + Math.round(m.cell * 0.2) + "px Geist, sans-serif";
+        ctx.fillStyle = "rgba(244,236,216,0.6)";
+        ctx.fillText("endless", cssW / 2, 16 + m.cell * 0.32);
+      }
+      if (chainBanner > 0 && chainValue > 1) {
+        ctx.globalAlpha = Math.min(1, chainBanner * 2);
+        ctx.fillStyle = "#d7e7ff";
+        ctx.font = "700 " + Math.round(m.cell * 0.28) + "px 'Bricolage Grotesque', Georgia, serif";
+        ctx.fillText("chain ×" + chainValue, cssW / 2, m.hud - 8);
+        ctx.globalAlpha = 1;
+      }
+      var ns = Math.round(Math.min(m.cell * 0.62, 44));
+      var right = cssW - 92;
+      drawSprite(pieceSprite(current), right - ns * 2 - 28, 10, ns);
+      drawSprite(pieceSprite(next), right - ns - 8, 10, ns);
+      ctx.textAlign = "center";
+      ctx.fillStyle = "rgba(244,236,216,0.55)";
+      ctx.font = "500 10px Geist, sans-serif";
+      ctx.fillText("now", right - ns * 1.5 - 28, ns + 20);
+      ctx.fillText("next", right - ns / 2 - 8, ns + 20);
+
+      buttons = [
+        { id: "mute", x: cssW - 46, y: 14, w: 32, h: 32 },
+        { id: "help", x: cssW - 84, y: 14, w: 32, h: 32 }
+      ];
+      buttons.forEach(function (b) {
+        ctx.fillStyle = "rgba(255,255,255,0.08)";
+        roundRect(b.x, b.y, b.w, b.h, 10);
+        ctx.fill();
+        ctx.fillStyle = "#f4ecd8";
+        ctx.font = "600 14px Geist, sans-serif";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(b.id === "mute" ? (save.mute ? "✕" : "♪") : "?", b.x + 16, b.y + 16);
+      });
+      ctx.textBaseline = "alphabetic";
+    }
+
+    function drawBoard(m) {
+      ctx.save();
+      roundRect(m.gx - 8, m.gy - 8, m.gridW + 16, m.gridH + 16, 18);
+      ctx.fillStyle = "#241910";
+      ctx.fill();
+      var col = useKey ? keyCol : pointerCol;
+      if (mode === "play" && col >= 0 && col < COLS) {
+        ctx.fillStyle = "rgba(226,177,90,0.08)";
+        ctx.fillRect(m.gx + col * m.cell, m.gy, m.cell, m.gridH);
+      }
+      for (var r = 0; r < ROWS; r++) {
+        for (var c = 0; c < COLS; c++) {
+          var x = m.gx + c * m.cell;
+          var y = m.gy + r * m.cell;
+          ctx.fillStyle = (r + c) % 2 ? "rgba(255,255,255,0.025)" : "rgba(0,0,0,0.12)";
+          ctx.fillRect(x + 2, y + 2, m.cell - 4, m.cell - 4);
+        }
+      }
+      if (mode === "play" && !busy && current && current.kind !== "rain") {
+        var hc = useKey ? keyCol : (pointerCol >= 0 ? pointerCol : -1);
+        if (hc >= 0) {
+          var lr = landingRow(hc);
+          if (lr >= 0) {
+            ctx.globalAlpha = 0.38;
+            var s = m.cell * 0.86;
+            drawSprite(pieceSprite(current), m.gx + hc * m.cell + (m.cell - s) / 2, m.gy + lr * m.cell + (m.cell - s) / 2, s);
+            ctx.globalAlpha = 1;
+          }
+        }
+      }
+      if (anim && anim.kind === "fall") {
+        var u = Math.min(1, anim.t / anim.dur);
+        u = 1 - Math.pow(1 - u, 3);
+        var s2 = m.cell * 0.86;
+        var y0 = m.gy - m.cell;
+        var y1 = m.gy + anim.row * m.cell + (m.cell - s2) / 2;
+        drawSprite(pieceSprite(anim.piece), m.gx + anim.col * m.cell + (m.cell - s2) / 2, y0 + (y1 - y0) * u, s2);
+      }
+      for (var r2 = 0; r2 < ROWS; r2++) {
+        for (var c2 = 0; c2 < COLS; c2++) {
+          var cell = grid[r2][c2];
+          if (!cell) continue;
+          var popping = anim && anim.kind === "pop" && anim.groups.some(function (g) {
+            return g.cells.some(function (p) { return p[0] === r2 && p[1] === c2; });
+          });
+          var pos = cellDrawPos(r2, c2, m, cell);
+          var scale = (cell.pop || 1) * (popping ? 1.12 : 1);
+          var size = m.cell * 0.9 * scale;
+          var dx = pos.x + (m.cell - size) / 2;
+          var dy = pos.y + (m.cell - size) / 2;
+          if (popping) ctx.globalAlpha = 1 - Math.min(1, anim.t / anim.dur);
+          drawSprite(cell.kind === "pebble" ? 6 : cell.t, dx, dy, size);
+          if (cell.kind === "pebble" && cell.hp < 2) {
+            ctx.strokeStyle = "rgba(244,236,216,0.7)";
+            ctx.lineWidth = 1.5;
+            ctx.beginPath();
+            ctx.moveTo(dx + size * 0.35, dy + size * 0.42);
+            ctx.lineTo(dx + size * 0.62, dy + size * 0.66);
+            ctx.stroke();
+          }
+          ctx.globalAlpha = 1;
+        }
+      }
+      ctx.restore();
+    }
+
+    function drawFloats() {
+      floats.forEach(function (f) {
+        ctx.globalAlpha = 1 - f.t / f.life;
+        ctx.fillStyle = "#f4ecd8";
+        ctx.font = "700 16px 'Bricolage Grotesque', Georgia, serif";
+        ctx.textAlign = "center";
