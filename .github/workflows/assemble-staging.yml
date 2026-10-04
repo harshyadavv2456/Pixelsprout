@@ -1,0 +1,44 @@
+name: Assemble staged publish
+
+# Turns .github/publish-staging/<batch>/part-* back into real repo files
+# and pushes them. Used when a publisher can commit text but not large
+# binaries in a single API call. Trigger by pushing .github/publish-staging/READY
+# after every part is already on main.
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/publish-staging/READY"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: assemble-staging
+  cancel-in-progress: false
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Assemble chunks
+        run: python3 .github/assemble_staging.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "Pixelsprout publisher"
+          git config user.email "218413579+harshyadavv2456@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to publish"
+            exit 0
+          fi
+          git commit -m "Publish staged Pixel Sprout update"
+          git push
