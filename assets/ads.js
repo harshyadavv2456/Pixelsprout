@@ -137,6 +137,12 @@
 
 /* Pixel Sprout Originals: shelf + menu link, driven by /assets/originals.json */
 (function () {
+  function recount(section) {
+    var count = section.querySelector('.shelf__count');
+    var left = section.querySelectorAll('a.card').length;
+    if (count) count.textContent = left + (left === 1 ? ' game' : ' games');
+    if (!left) section.remove();
+  }
   function boot() {
     var labels = document.querySelectorAll('.rail__label');
     var label = null;
@@ -154,6 +160,8 @@
     if (!document.body.classList.contains('home-page') || document.getElementById('pixel-sprout-originals')) return;
     fetch('/assets/originals.json').then(function (r) { return r.ok ? r.json() : []; }).then(function (games) {
       if (!games || !games.length || document.getElementById('pixel-sprout-originals')) return;
+      games = games.filter(function (g) { return g && g.thumbnail; });
+      if (!games.length) return;
       var cards = games.map(function (g) {
         var title = String(g.title || '');
         var slug = String(g.slug || '');
@@ -175,6 +183,13 @@
         '<span class="shelf__count">' + n + (n === 1 ? ' game' : ' games') + '</span>' +
         '<span class="shelf__spacer"></span><a class="shelf__more" href="/originals/">See all</a></div>' +
         '<div class="shelf__track" data-shelf-track>' + cards + '</div>';
+      section.querySelectorAll('.card__media img').forEach(function (img) {
+        img.addEventListener('error', function () {
+          var card = img.closest('a.card');
+          if (card) card.remove();
+          recount(section);
+        });
+      });
       var anchor = document.querySelector('.hero') || document.querySelector('.home-intro');
       if (anchor) anchor.insertAdjacentElement('afterend', section);
     }).catch(function () {});
