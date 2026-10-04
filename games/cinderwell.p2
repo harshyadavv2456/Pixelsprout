@@ -1,4 +1,25 @@
-);
+    ctx.fillText("Best " + best, 16, 48);
+    if(combo > 1){
+      ctx.fillStyle = "#ffd27a";
+      ctx.fillText("Combo " + combo, w - 110, 28);
+    }
+    if(state === "title" || state === "over"){
+      ctx.fillStyle = "rgba(8,6,12,0.72)";
+      ctx.fillRect(24, h*0.32, w-48, 180);
+      ctx.fillStyle = "#ffd7a2";
+      ctx.font = "700 32px sans-serif";
+      ctx.textAlign = "center";
+      ctx.fillText(state === "title" ? "Cinderwell" : "Fire out", w/2, h*0.32+58);
+      ctx.font = "500 16px sans-serif";
+      ctx.fillStyle = "#f0d8b4";
+      var msg = state === "title" ? "Tap or press Space to drop coals" : ("Score " + score + "  \u00b7  tap to retry");
+      ctx.fillText(msg, w/2, h*0.32+96);
+      ctx.fillText("Center the bright wick", w/2, h*0.32+124);
+      ctx.textAlign = "left";
+    }
+  }
+  function frame(){
+    step();
     draw();
     requestAnimationFrame(frame);
   }
