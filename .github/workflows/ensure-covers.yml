@@ -1,0 +1,48 @@
+name: Ensure original covers
+
+# A Pixel Sprout Original must not appear with a broken thumbnail.
+# If originals.json points at assets/originals/<slug>/cover.jpg and that
+# JPEG is missing, draw it and commit it before the next Vercel deploy.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "assets/originals.json"
+      - ".github/scripts/ensure_covers.py"
+      - ".github/workflows/ensure-covers.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ensure-covers
+  cancel-in-progress: false
+
+jobs:
+  covers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Draw missing covers
+        run: |
+          python3 -m pip install --quiet pillow
+          python3 .github/scripts/ensure_covers.py
+
+      - name: Commit covers
+        run: |
+          git config user.name "Pixelsprout publisher"
+          git config user.email "218413579+harshyadavv2456@users.noreply.github.com"
+          git add assets/originals
+          if git diff --cached --quiet; then
+            echo "Covers already present"
+            exit 0
+          fi
+          git commit -m "Add missing Pixel Sprout cover JPEGs"
+          git push
