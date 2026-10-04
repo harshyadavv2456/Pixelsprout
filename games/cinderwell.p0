@@ -95,3 +95,4 @@ Cinderwell.mount = function(canvas){
         if(mover.x < margin){ mover.x = margin; mover.dir = 1; }
         if(mover.x + mover.w > w - margin){ mover.x = w - margin - mover.w; mover.dir = -1; }
       } else {
+ 
