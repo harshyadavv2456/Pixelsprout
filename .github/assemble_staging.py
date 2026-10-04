@@ -19,6 +19,11 @@ def main():
         print("no staging directory")
         return
     batches = sorted(p for p in ROOT.iterdir() if p.is_dir())
+    # Only the batch named in READY, so leftover parts cannot abort the job.
+    ready = ROOT / "READY"
+    only = ready.read_text(encoding="utf-8").strip() if ready.is_file() else ""
+    if only:
+        batches = [p for p in batches if p.name == only]
     if not batches:
         print("no batches")
         return
@@ -35,5 +40,5 @@ def main():
     shutil.rmtree(ROOT, ignore_errors=True)
 
 
-if __name__ == "__main__":
+if __name__ == "main":
     main()
