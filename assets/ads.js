@@ -159,7 +159,8 @@
         var slug = String(g.slug || '');
         var cat = String(g.category || '');
         var thumb = String(g.thumbnail || '');
-        return '<a class="card" href="/games/' + slug + '.html" data-name="' + title.toLowerCase() + '">' +
+        var href = g.href ? String(g.href) : ('/games/' + slug + '.html');
+        return '<a class="card" href="' + href + '" data-name="' + title.toLowerCase() + '">' +
           '<span class="card__media"><img src="' + thumb + '" alt="' + title + '" width="320" height="320" loading="lazy" decoding="async"></span>' +
           '<span class="card__title">' + title + '</span>' +
           (cat ? '<span class="card__meta">' + cat + '</span>' : '') +

@@ -1,1 +1,5 @@
-[{"slug":"moonbloom","title":"Moonbloom","category":"Puzzle","source":"pixelsprout","thumbnail":"https://playpixelsprout.com/assets/originals/moonbloom/cover.svg"}]
+[
+  {"slug":"moonbloom","title":"Moonbloom","category":"Puzzle","href":"/games/moonbloom.html","thumbnail":"https://playpixelsprout.com/assets/originals/moonbloom/cover.svg"},
+  {"slug":"cold-read","title":"Cold Read","category":"Original","href":"/cold-read/","thumbnail":"https://playpixelsprout.com/assets/cold-read-logo.jpg"},
+  {"slug":"guess-it-box","title":"Guess It Box","category":"Original","href":"/gift-file/","thumbnail":"https://playpixelsprout.com/assets/gift-file-logo.jpg"}
+]
