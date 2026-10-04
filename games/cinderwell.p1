@@ -1,0 +1,102 @@
+       mover.vy += 0.55;
+        mover.y += mover.vy;
+        var top = stack[stack.length-1];
+        if(mover.y + 24 >= top.y){
+          mover.y = top.y - 28;
+          land();
+        }
+      }
+    }
+    for(var i=scraps.length-1;i>=0;i--){
+      scraps[i].vy += 0.4;
+      scraps[i].y += scraps[i].vy;
+      if(scraps[i].y > H()+20) scraps.splice(i,1);
+    }
+    if(flash > 0) flash *= 0.92;
+  }
+  function roundRect(x,y,w,h,r){
+    ctx.beginPath();
+    ctx.moveTo(x+r,y);
+    ctx.arcTo(x+w,y,x+w,y+h,r);
+    ctx.arcTo(x+w,y+h,x,y+h,r);
+    ctx.arcTo(x,y+h,x,y,r);
+    ctx.arcTo(x,y,x+w,y,r);
+    ctx.closePath();
+  }
+  function drawCoal(b, y){
+    var col = b.wick ? "#ffd27a" : "#e07a3a";
+    ctx.fillStyle = col;
+    roundRect(b.x, y, b.w, 24, 6);
+    ctx.fill();
+    ctx.fillStyle = "rgba(255,230,180,0.35)";
+    roundRect(b.x+4, y+3, Math.max(0, b.w-8), 7, 4);
+    ctx.fill();
+    if(b.wick){
+      ctx.fillStyle = "#fff6d2";
+      ctx.fillRect(b.x + b.w/2 - 4, y+6, 8, 12);
+    }
+  }
+  function draw(){
+    var w = W(), h = H();
+    ctx.clearRect(0,0,w,h);
+    var g = ctx.createLinearGradient(0,0,0,h);
+    g.addColorStop(0, "#1a1630");
+    g.addColorStop(1, "#2a160f");
+    ctx.fillStyle = g;
+    ctx.fillRect(0,0,w,h);
+    ctx.fillStyle = "rgba(255,220,160,0.7)";
+    for(var i=0;i<18;i++){
+      var sx = (i*97 + 20) % w, sy = (i*53) % (h*0.45);
+      ctx.fillRect(sx, sy, 2, 2);
+    }
+    ctx.fillStyle = "#3a2a24";
+    ctx.fillRect(0, h*0.78, w, h*0.22);
+    ctx.fillStyle = "#120c10";
+    ctx.beginPath();
+    ctx.ellipse(w/2, h*0.8, w*0.34, 28, 0, 0, Math.PI*2);
+    ctx.fill();
+    ctx.strokeStyle = "#8a6244";
+    ctx.lineWidth = 8;
+    ctx.stroke();
+    stack.forEach(function(b){ drawCoal(b, b.y); });
+    scraps.forEach(function(s){ drawCoal(s, s.y); });
+    if(mover && state !== "title"){
+      ctx.strokeStyle = "#6eaa62";
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.moveTo(w/2, 8);
+      ctx.quadraticCurveTo(mover.x + mover.w/2, 40, mover.x + mover.w/2, mover.y);
+      ctx.stroke();
+      drawCoal(mover, mover.y);
+    }
+    if(flash > 0.05){
+      ctx.fillStyle = "rgba(255,190,80," + (flash*0.35) + ")";
+      ctx.fillRect(0,0,w,h);
+    }
+    ctx.fillStyle = "#ffe7c2";
+    ctx.font = "700 18px sans-serif";
+    ctx.fillText("Score " + score, 16, 28);
+    ctx.font = "600 14px sans-serif";
+    ctx.fillStyle = "#e6c49a";
+    ctx.fillText("Best " + best, 16, 48);
+    if(combo > 1){
+      ctx.fillStyle = "#ffd27a";
+      ctx.fillText("Combo " + combo, w - 110, 28);
+    }
+    if(state === "title" || state === "over"){
+      ctx.fillStyle = "rgba(8,6,12,0.72)";
+      ctx.fillRect(24, h*0.32, w-48, 180);
+      ctx.fillStyle = "#ffd7a2";
+      ctx.font = "700 32px sans-serif";
+      ctx.textAlign = "center";
+      ctx.fillText(state === "title" ? "Cinderwell" : "Fire out", w/2, h*0.32+58);
+      ctx.font = "500 16px sans-serif";
+      ctx.fillStyle = "#f0d8b4";
+      var msg = state === "title" ? "Tap or press Space to drop coals" : ("Score " + score + "  \u00b7  tap to retry");
+      ctx.fillText(msg, w/2, h*0.32+96);
+      ctx.fillText("Center the bright wick", w/2, h*0.32+124);
+      ctx.textAlign = "left";
+    }
+  }
+  function frame(){
+    step(
