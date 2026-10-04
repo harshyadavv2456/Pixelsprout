@@ -27,7 +27,8 @@ def main():
         if not parts:
             print("skip", batch.name)
             continue
-        raw = base64.b64decode("".join(p.read_text(encoding="utf-8").split()))
+        blob = "".join(part.read_text(encoding="utf-8") for part in parts)
+        raw = base64.b64decode("".join(blob.split()))
         with tarfile.open(fileobj=io.BytesIO(raw), mode="r:gz") as tar:
             tar.extractall(path=".")
         print(f"extracted {batch.name}: {len(parts)} parts, {len(raw)} bytes")
