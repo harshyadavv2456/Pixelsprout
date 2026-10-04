@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Moonbloom">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14182a"/>
+      <stop offset="1" stop-color="#2a3148"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#sky)"/>
+  <circle cx="470" cy="92" r="42" fill="#f3e6c4"/>
+  <circle cx="452" cy="80" r="36" fill="#14182a"/>
+  <rect x="150" y="250" width="340" height="70" rx="16" fill="#3a342c"/>
+  <rect x="166" y="262" width="308" height="42" rx="10" fill="#241c16"/>
+  <g fill="#7fa872">
+    <ellipse cx="230" cy="250" rx="16" ry="28"/>
+    <ellipse cx="320" cy="236" rx="22" ry="40"/>
+    <ellipse cx="410" cy="248" rx="18" ry="32"/>
+  </g>
+  <circle cx="320" cy="188" r="16" fill="#d7e7ff"/>
+  <circle cx="320" cy="188" r="6" fill="#f3e6c4"/>
+</svg>
