@@ -2,10 +2,11 @@
 """Write missing Pixel Sprout cover JPEGs.
 
 A catalog entry must not point at a file that is not a JPEG. This script
-draws the originals that have a built-in logo and refuses to leave a
-non-JPEG at the cover path.
+draws the originals that have a built-in logo. Unknown missing covers are
+reported, but a drawable cover is still written so one gap cannot block the rest.
 """
 import json
+import sys
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
@@ -100,9 +101,9 @@ def main():
         if not is_jpeg(path):
             raise SystemExit(f"drew {slug} but it is not a JPEG")
         wrote.append(str(path.relative_to(ROOT)))
-    if missing:
-        raise SystemExit("catalog points at a missing cover: " + ", ".join(missing))
     print("wrote", ", ".join(wrote) or "nothing")
+    if missing:
+        print("still missing covers:", ", ".join(missing), file=sys.stderr)
 
 
 if __name__ == "__main__":
