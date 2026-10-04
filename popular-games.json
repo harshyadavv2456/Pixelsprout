@@ -2,11 +2,11 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 161
+      "views": 163
     },
     {
       "slug": "getting-over-it",
-      "views": 86
+      "views": 87
     },
     {
       "slug": "protect-my-dog",
@@ -21,23 +21,23 @@
       "views": 25
     },
     {
-      "slug": "uno-online",
-      "views": 23
+      "slug": "baba-is-you",
+      "views": 24
     },
     {
       "slug": "2048-cube-merge-block",
       "views": 23
     },
     {
-      "slug": "2048",
-      "views": 22
-    },
-    {
-      "slug": "baba-is-you",
-      "views": 22
+      "slug": "uno-online",
+      "views": 23
     },
     {
       "slug": "save-the-doge",
+      "views": 23
+    },
+    {
+      "slug": "2048",
       "views": 22
     },
     {
@@ -49,11 +49,11 @@
       "views": 19
     },
     {
-      "slug": "slide-ball-puzzle",
+      "slug": "klondike-solitaire-paradise",
       "views": 17
     },
     {
-      "slug": "klondike-solitaire-paradise",
+      "slug": "slide-ball-puzzle",
       "views": 17
     },
     {
@@ -65,6 +65,10 @@
       "views": 14
     },
     {
+      "slug": "road-designer",
+      "views": 13
+    },
+    {
       "slug": "2d-platformer-coin",
       "views": 13
     },
@@ -74,10 +78,6 @@
     },
     {
       "slug": "100-doors-escape-from-prison",
-      "views": 13
-    },
-    {
-      "slug": "road-designer",
       "views": 13
     }
   ]
