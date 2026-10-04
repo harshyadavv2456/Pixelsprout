@@ -1,0 +1,189 @@
+        ctx.fillText("+" + f.n, f.x, f.y);
+      });
+      ctx.globalAlpha = 1;
+      particles.forEach(function (p) {
+        ctx.globalAlpha = 1 - p.t / p.life;
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      ctx.globalAlpha = 1;
+    }
+
+    function panel(title, body, actions) {
+      ctx.fillStyle = "rgba(8,9,12,0.55)";
+      ctx.fillRect(0, 0, cssW, cssH);
+      var w = Math.min(440, cssW - 24);
+      var h = Math.min(340, cssH - 16);
+      var x = (cssW - w) / 2;
+      var y = (cssH - h) / 2;
+      roundRect(x, y, w, h, 18);
+      ctx.fillStyle = "#1c1814";
+      ctx.fill();
+      ctx.strokeStyle = "rgba(244,236,216,0.14)";
+      ctx.stroke();
+      ctx.textAlign = "center";
+      ctx.fillStyle = "#e2b15a";
+      ctx.font = "600 11px Geist, sans-serif";
+      ctx.fillText("PIXELSPROUT ORIGINAL", cssW / 2, y + 28);
+      ctx.fillStyle = "#f4ecd8";
+      ctx.font = "600 " + (h < 260 ? 28 : 36) + "px 'Bricolage Grotesque', Georgia, serif";
+      ctx.fillText(title, cssW / 2, y + (h < 260 ? 64 : 76));
+      ctx.font = "400 14px Geist, sans-serif";
+      ctx.fillStyle = "rgba(244,236,216,0.78)";
+      wrapText(body, cssW / 2, y + (h < 260 ? 92 : 108), w - 40, 20);
+      var bw = Math.min(240, w - 48);
+      buttons = actions.map(function (a, i) {
+        var bx = (cssW - bw) / 2;
+        var by = y + h - 18 - (actions.length - i) * 48;
+        return { id: a.id, x: bx, y: by, w: bw, h: 40, label: a.label, primary: a.primary };
+      });
+      buttons.forEach(function (b) {
+        roundRect(b.x, b.y, b.w, b.h, 12);
+        ctx.fillStyle = b.primary ? "#e2b15a" : "rgba(255,255,255,0.06)";
+        ctx.fill();
+        ctx.fillStyle = b.primary ? "#1c1814" : "#f4ecd8";
+        ctx.font = "600 15px Geist, sans-serif";
+        ctx.textBaseline = "middle";
+        ctx.fillText(b.label, b.x + b.w / 2, b.y + b.h / 2 + 1);
+      });
+      ctx.textBaseline = "alphabetic";
+      return { x: x, y: y, w: w, h: h };
+    }
+
+    function drawEveningPills(box) {
+      var gap = 8;
+      var w = 32;
+      var total = 5 * w + 4 * gap;
+      var x0 = (cssW - total) / 2;
+      var y = box.y + box.h - 18 - 48 - 44;
+      for (var i = 0; i < 5; i++) {
+        var locked = i + 1 > save.unlocked;
+        var bx = x0 + i * (w + gap);
+        buttons.push({ id: "ev" + i, x: bx, y: y, w: w, h: w });
+        roundRect(bx, y, w, w, 8);
+        ctx.fillStyle = i === evening ? "#e2b15a" : "rgba(255,255,255,0.08)";
+        ctx.fill();
+        ctx.fillStyle = i === evening ? "#1c1814" : (locked ? "rgba(244,236,216,0.35)" : "#f4ecd8");
+        ctx.font = "600 13px Geist, sans-serif";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(locked ? "·" : String(i + 1), bx + w / 2, y + w / 2 + 1);
+      }
+      ctx.textBaseline = "alphabetic";
+    }
+
+    function wrapText(text, x, y, maxW, lh) {
+      var words = text.split(" ");
+      var line = "";
+      var yy = y;
+      for (var i = 0; i < words.length; i++) {
+        var test = line ? line + " " + words[i] : words[i];
+        if (ctx.measureText(test).width > maxW && line) {
+          ctx.fillText(line, x, yy);
+          line = words[i];
+          yy += lh;
+        } else line = test;
+      }
+      if (line) ctx.fillText(line, x, yy);
+      return yy;
+    }
+
+    function draw() {
+      var m = measure();
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.clearRect(0, 0, cssW, cssH);
+      var g = ctx.createLinearGradient(0, 0, 0, cssH);
+      g.addColorStop(0, "#1a2230");
+      g.addColorStop(1, "#10141b");
+      ctx.fillStyle = g;
+      ctx.fillRect(0, 0, cssW, cssH);
+      ctx.save();
+      if (shake > 0) ctx.translate((Math.random() - 0.5) * shake, (Math.random() - 0.5) * shake);
+      drawHud(m);
+      drawBoard(m);
+      drawFloats();
+      ctx.restore();
+
+      if (mode === "title") {
+        var box = panel("Moonbloom", EVENINGS[evening].line, [
+          { id: "play", label: "Play", primary: true }
+        ]);
+        drawEveningPills(box);
+      } else if (mode === "help") {
+        panel("How to grow", "Tap a column to drop. Match three or more by the edges. Rain upgrades, pebbles block, and a moonbloom ends the biggest chains.", [
+          { id: "back", label: "Back to the garden", primary: true }
+        ]);
+      } else if (mode === "clear") {
+        panel("The evening held", "You reached " + score + " in " + EVENINGS[evening].name + ".", evening < 4
+          ? [{ id: "next", label: "Next evening", primary: true }, { id: "title", label: "Garden gate", primary: false }]
+          : [{ id: "title", label: "Garden gate", primary: true }]);
+      } else if (mode === "over") {
+        panel("The bed is full", "This evening ends at " + score + ". Best is " + best + ".", [
+          { id: "retry", label: "Try this evening again", primary: true },
+          { id: "title", label: "Garden gate", primary: false }
+        ]);
+      }
+    }
+
+    function hit(x, y) {
+      for (var i = buttons.length - 1; i >= 0; i--) {
+        var b = buttons[i];
+        if (x >= b.x && y >= b.y && x <= b.x + b.w && y <= b.y + b.h) return b.id;
+      }
+      return null;
+    }
+
+    function onButton(id) {
+      unlockAudio();
+      resumeAudio();
+      if (id === "mute") { save.mute = !save.mute; persist(); return; }
+      if (id === "help") { if (mode === "play") mode = "help"; return; }
+      if (id === "back") { mode = "play"; return; }
+      if (id === "play") { freshRun(evening); return; }
+      if (id === "retry") { freshRun(evening); return; }
+      if (id === "next") { freshRun(Math.min(4, evening + 1)); return; }
+      if (id === "title") { mode = "title"; return; }
+      if (id && id.indexOf("ev") === 0) {
+        var n = parseInt(id.slice(2), 10);
+        if (n + 1 <= save.unlocked) evening = n;
+      }
+    }
+
+    function localPoint(ev) {
+      var rect = canvas.getBoundingClientRect();
+      var src = ev.changedTouches ? ev.changedTouches[0] : ev;
+      return {
+        x: (src.clientX - rect.left) * (cssW / rect.width),
+        y: (src.clientY - rect.top) * (cssH / rect.height)
+      };
+    }
+
+    function pointerDown(ev) {
+      if (dead) return;
+      ev.preventDefault();
+      var p = localPoint(ev);
+      var id = hit(p.x, p.y);
+      if (id) { onButton(id); return; }
+      if (mode !== "play") return;
+      useKey = false;
+      var c = colAt(p.x, p.y);
+      pointerCol = c;
+      if (c >= 0) drop(c);
+    }
+
+    function pointerMove(ev) {
+      var p = localPoint(ev);
+      if (mode === "play") pointerCol = colAt(p.x, p.y);
+    }
+
+    function keydown(ev) {
+      if (dead) return;
+      var k = ev.key;
+      if (k === "m" || k === "M") { onButton("mute"); return; }
+      if (mode === "title" && (k === "Enter" || k === " ")) { ev.preventDefault(); onButton("play"); return; }
+      if (mode !== "play") {
+        if (k === "Escape") mode = "title";
+        return;
+      }
