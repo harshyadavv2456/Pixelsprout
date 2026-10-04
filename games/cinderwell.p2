@@ -1,0 +1,12 @@
+);
+    draw();
+    requestAnimationFrame(frame);
+  }
+  canvas.addEventListener("pointerdown", function(e){ e.preventDefault(); drop(); });
+  window.addEventListener("keydown", function(e){
+    if(e.code === "Space" || e.code === "Enter"){ e.preventDefault(); drop(); }
+  });
+  window.addEventListener("resize", resize);
+  resize();
+  requestAnimationFrame(frame);
+};
