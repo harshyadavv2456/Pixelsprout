@@ -1,1 +1,0 @@
-FILE:/tmp/pixelsprout/featured.json
