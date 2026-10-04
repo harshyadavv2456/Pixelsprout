@@ -1,4 +1,14 @@
-       mover.vy += 0.55;
+    var w = W();
+    if(state === "play" && mover){
+      if(!mover.falling){
+        var speed = 2.2 + Math.min(4.4, drops * 0.18);
+        var gust = wind * 0.04;
+        mover.x += mover.dir * speed + gust;
+        var margin = 10;
+        if(mover.x < margin){ mover.x = margin; mover.dir = 1; }
+        if(mover.x + mover.w > w - margin){ mover.x = w - margin - mover.w; mover.dir = -1; }
+      } else {
+        mover.vy += 0.55;
         mover.y += mover.vy;
         var top = stack[stack.length-1];
         if(mover.y + 24 >= top.y){
@@ -78,25 +88,3 @@
     ctx.fillText("Score " + score, 16, 28);
     ctx.font = "600 14px sans-serif";
     ctx.fillStyle = "#e6c49a";
-    ctx.fillText("Best " + best, 16, 48);
-    if(combo > 1){
-      ctx.fillStyle = "#ffd27a";
-      ctx.fillText("Combo " + combo, w - 110, 28);
-    }
-    if(state === "title" || state === "over"){
-      ctx.fillStyle = "rgba(8,6,12,0.72)";
-      ctx.fillRect(24, h*0.32, w-48, 180);
-      ctx.fillStyle = "#ffd7a2";
-      ctx.font = "700 32px sans-serif";
-      ctx.textAlign = "center";
-      ctx.fillText(state === "title" ? "Cinderwell" : "Fire out", w/2, h*0.32+58);
-      ctx.font = "500 16px sans-serif";
-      ctx.fillStyle = "#f0d8b4";
-      var msg = state === "title" ? "Tap or press Space to drop coals" : ("Score " + score + "  \u00b7  tap to retry");
-      ctx.fillText(msg, w/2, h*0.32+96);
-      ctx.fillText("Center the bright wick", w/2, h*0.32+124);
-      ctx.textAlign = "left";
-    }
-  }
-  function frame(){
-    step(
