@@ -85,14 +85,3 @@ Cinderwell.mount = function(canvas){
   }
   function step(){
     t += 1;
-    var w = W();
-    if(state === "play" && mover){
-      if(!mover.falling){
-        var speed = 2.2 + Math.min(4.4, drops * 0.18);
-        var gust = wind * 0.04;
-        mover.x += mover.dir * speed + gust;
-        var margin = 10;
-        if(mover.x < margin){ mover.x = margin; mover.dir = 1; }
-        if(mover.x + mover.w > w - margin){ mover.x = w - margin - mover.w; mover.dir = -1; }
-      } else {
- 
