@@ -2,11 +2,11 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 163
+      "views": 166
     },
     {
       "slug": "getting-over-it",
-      "views": 87
+      "views": 88
     },
     {
       "slug": "protect-my-dog",
@@ -14,26 +14,30 @@
     },
     {
       "slug": "dot-link-puzzle-connect-the-dots",
-      "views": 30
+      "views": 32
+    },
+    {
+      "slug": "2048-cube-run",
+      "views": 26
     },
     {
       "slug": "test-tubes-water-sort",
       "views": 25
     },
     {
-      "slug": "baba-is-you",
+      "slug": "save-the-doge",
       "views": 24
     },
     {
-      "slug": "2048-cube-merge-block",
-      "views": 23
+      "slug": "baba-is-you",
+      "views": 24
     },
     {
       "slug": "uno-online",
       "views": 23
     },
     {
-      "slug": "save-the-doge",
+      "slug": "2048-cube-merge-block",
       "views": 23
     },
     {
@@ -41,19 +45,15 @@
       "views": 22
     },
     {
-      "slug": "2048-cube-run",
-      "views": 20
-    },
-    {
       "slug": "100-seconds-labyrinth",
       "views": 19
     },
     {
-      "slug": "klondike-solitaire-paradise",
+      "slug": "slide-ball-puzzle",
       "views": 17
     },
     {
-      "slug": "slide-ball-puzzle",
+      "slug": "klondike-solitaire-paradise",
       "views": 17
     },
     {
@@ -65,15 +65,15 @@
       "views": 14
     },
     {
+      "slug": "100-doors-games-escape-from-school",
+      "views": 14
+    },
+    {
       "slug": "road-designer",
       "views": 13
     },
     {
       "slug": "2d-platformer-coin",
-      "views": 13
-    },
-    {
-      "slug": "katana-fruits",
       "views": 13
     },
     {
