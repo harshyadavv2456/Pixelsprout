@@ -1,5 +1,13 @@
 [
   {
+    "slug": "kilnstack",
+    "title": "Kilnstack",
+    "category": "Arcade",
+    "source": "pixelsprout",
+    "href": "/games/kilnstack.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/kilnstack/cover.jpg"
+  },
+  {
     "slug": "lanternspire",
     "title": "Lanternspire",
     "category": "Arcade",
