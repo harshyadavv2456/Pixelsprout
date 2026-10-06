@@ -1,5 +1,13 @@
 [
   {
+    "slug": "cairnfall",
+    "title": "Cairnfall",
+    "category": "Arcade",
+    "source": "pixelsprout",
+    "href": "/games/cairnfall.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/cairnfall/cover.jpg"
+  },
+  {
     "slug": "kilnstack",
     "title": "Kilnstack",
     "category": "Arcade",
