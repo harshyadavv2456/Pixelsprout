@@ -1,0 +1,90 @@
+name: Kilnstack cover
+
+on:
+  push:
+    paths:
+      - .github/workflows/kilnstack-cover.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Draw logo
+        run: |
+          python3 -m pip install --quiet pillow
+          python3 << 'PY'
+          from PIL import Image, ImageDraw, ImageFont, ImageFilter
+          import math, os, random
+          W = H = 960
+          img = Image.new("RGB", (W, H), (18, 12, 16))
+          px = img.load()
+          for y in range(H):
+              for x in range(W):
+                  nx, ny = x / W, y / H
+                  r = int(28 + 40 * nx + 18 * (1 - ny))
+                  g = int(14 + 10 * ny)
+                  b = int(22 + 28 * (1 - ny))
+                  dx, dy = nx - 0.5, ny - 0.62
+                  glow = max(0, 1 - (dx * dx * 3.2 + dy * dy * 2.4) * 2.4)
+                  r = min(255, int(r + glow * 160))
+                  g = min(255, int(g + glow * 70))
+                  b = min(255, int(b + glow * 20))
+                  px[x, y] = (r, g, b)
+          vig = Image.new("L", (W, H), 0)
+          ImageDraw.Draw(vig).ellipse((-80, -40, W + 80, H + 120), fill=255)
+          vig = vig.filter(ImageFilter.GaussianBlur(80))
+          img = Image.composite(img, Image.new("RGB", (W, H), (8, 4, 8)), vig)
+          d = ImageDraw.Draw(img, "RGBA")
+          random.seed(7)
+          for i in range(70):
+              x = random.randint(80, 880)
+              y = random.randint(120, 820)
+              s = random.choice([2, 3, 4])
+              d.ellipse((x, y, x + s, y + s), fill=(255, 190, 90, random.randint(80, 180)))
+          def post(x):
+              d.rounded_rectangle((x, 210, x + 28, 760), radius=6, fill=(62, 36, 28, 255))
+              d.rectangle((x + 6, 230, x + 22, 740), fill=(92, 54, 38, 255))
+          post(150)
+          post(782)
+          bricks = [
+              (250, 640, 460, 78, (180, 62, 36)),
+              (280, 568, 400, 72, (204, 78, 40)),
+              (310, 500, 340, 68, (220, 96, 42)),
+              (340, 436, 280, 64, (232, 118, 46)),
+              (365, 376, 230, 60, (240, 140, 52)),
+              (390, 320, 180, 56, (248, 168, 64)),
+          ]
+          for x, y, w, h, col in bricks:
+              d.rounded_rectangle((x + 8, y + 10, x + w + 8, y + h + 8), radius=10, fill=(20, 8, 6, 90))
+              d.rounded_rectangle((x, y, x + w, y + h), radius=10, fill=col + (255,))
+              d.rounded_rectangle((x + 6, y + 6, x + w - 6, y + h - 6), radius=8, outline=(255, 210, 140, 180), width=3)
+          fx, fy, fw, fh = 430, 230, 150, 48
+          d.rounded_rectangle((fx, fy, fx + fw, fy + fh), radius=8, fill=(255, 186, 72, 255))
+          d.ellipse((fx + fw // 2 - 16, fy + 10, fx + fw // 2 + 16, fy + fh - 8), fill=(255, 90, 40, 200))
+          d.line((fx + fw // 2, 90, fx + fw // 2, fy), fill=(255, 214, 150, 200), width=4)
+          d.rounded_rectangle((150, 760, 810, 900), radius=28, fill=(16, 8, 10, 210))
+          d.rounded_rectangle((150, 760, 810, 900), radius=28, outline=(255, 176, 90, 180), width=3)
+          font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 92)
+          sub = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 28)
+          d.text((480, 808), "KILNSTACK", font=font, fill=(255, 214, 150, 255), anchor="ma")
+          d.text((480, 868), "PIXEL SPROUT ORIGINAL", font=sub, fill=(255, 160, 90, 230), anchor="ma")
+          os.makedirs("assets/originals/kilnstack", exist_ok=True)
+          img.save("assets/originals/kilnstack/cover.jpg", "JPEG", quality=90)
+          print(os.path.getsize("assets/originals/kilnstack/cover.jpg"))
+          PY
+      - name: Commit cover
+        run: |
+          git config user.name "Pixelsprout publisher"
+          git config user.email "218413579+harshyadavv2456@users.noreply.github.com"
+          git add assets/originals/kilnstack/cover.jpg
+          if git diff --cached --quiet; then
+            echo "cover already present"
+            exit 0
+          fi
+          git commit -m "Add Kilnstack cover logo"
+          git push
