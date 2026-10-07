@@ -1,5 +1,13 @@
 [
   {
+    "slug": "nectarjar",
+    "title": "Nectarjar",
+    "category": "Puzzle",
+    "source": "pixelsprout",
+    "href": "/games/nectarjar.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/nectarjar/cover.jpg"
+  },
+  {
     "slug": "cairnfall",
     "title": "Cairnfall",
     "category": "Arcade",
