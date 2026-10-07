@@ -2,7 +2,7 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 166
+      "views": 169
     },
     {
       "slug": "getting-over-it",
@@ -46,7 +46,7 @@
     },
     {
       "slug": "100-seconds-labyrinth",
-      "views": 20
+      "views": 21
     },
     {
       "slug": "slide-ball-puzzle",
@@ -61,23 +61,23 @@
       "views": 17
     },
     {
-      "slug": "100-doors-escape-puzzle",
-      "views": 14
-    },
-    {
       "slug": "100-doors-games-escape-from-school",
       "views": 14
     },
     {
-      "slug": "12-minibattles-two-players",
+      "slug": "100-doors-escape-puzzle",
+      "views": 14
+    },
+    {
+      "slug": "dop-in-love-story-find-part",
+      "views": 14
+    },
+    {
+      "slug": "100-doors-escape-from-prison",
       "views": 13
     },
     {
       "slug": "road-designer",
-      "views": 13
-    },
-    {
-      "slug": "dop-in-love-story-find-part",
       "views": 13
     }
   ]
