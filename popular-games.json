@@ -2,11 +2,11 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 169
+      "views": 170
     },
     {
       "slug": "getting-over-it",
-      "views": 90
+      "views": 91
     },
     {
       "slug": "protect-my-dog",
@@ -14,14 +14,18 @@
     },
     {
       "slug": "dot-link-puzzle-connect-the-dots",
-      "views": 32
+      "views": 33
     },
     {
       "slug": "2048-cube-run",
-      "views": 26
+      "views": 28
     },
     {
       "slug": "test-tubes-water-sort",
+      "views": 25
+    },
+    {
+      "slug": "baba-is-you",
       "views": 25
     },
     {
@@ -29,15 +33,11 @@
       "views": 24
     },
     {
-      "slug": "baba-is-you",
+      "slug": "2048-cube-merge-block",
       "views": 24
     },
     {
       "slug": "uno-online",
-      "views": 23
-    },
-    {
-      "slug": "2048-cube-merge-block",
       "views": 23
     },
     {
@@ -46,7 +46,7 @@
     },
     {
       "slug": "100-seconds-labyrinth",
-      "views": 21
+      "views": 22
     },
     {
       "slug": "slide-ball-puzzle",
@@ -61,15 +61,15 @@
       "views": 17
     },
     {
-      "slug": "100-doors-games-escape-from-school",
-      "views": 14
+      "slug": "dop-in-love-story-find-part",
+      "views": 15
     },
     {
       "slug": "100-doors-escape-puzzle",
-      "views": 14
+      "views": 15
     },
     {
-      "slug": "dop-in-love-story-find-part",
+      "slug": "100-doors-games-escape-from-school",
       "views": 14
     },
     {
