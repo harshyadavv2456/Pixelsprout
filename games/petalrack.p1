@@ -1,0 +1,120 @@
+      g.addColorStop(0, "#14201a");
+      g.addColorStop(1, "#0c1410");
+      ctx.fillStyle = g;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#f6e7c4";
+      ctx.font = "bold " + Math.round(22 * dpr) + "px Inter, sans-serif";
+      ctx.fillText("Petalrack", 16 * dpr, 32 * dpr);
+      ctx.font = Math.round(14 * dpr) + "px Inter, sans-serif";
+      ctx.fillStyle = "#d7c49a";
+      ctx.fillText("Score " + score + "   Best " + best, 16 * dpr, 54 * dpr);
+      if (msg) {
+        ctx.fillStyle = "#f6c15b";
+        ctx.fillText(msg, canvas.width - 120 * dpr, 54 * dpr);
+      }
+      var x, y;
+      for (y = 0; y < ROWS; y++) {
+        for (x = 0; x < COLS; x++) {
+          ctx.fillStyle = (x + y) % 2 ? "#243028" : "#1c2820";
+          ctx.fillRect(o.x + x * s + 1, o.y + y * s + 1, s - 2, s - 2);
+          if (board && board[y][x]) blossom(o.x + x * s + s / 2, o.y + y * s + s / 2, s, board[y][x]);
+        }
+      }
+      if (state === "play" && hover && tray[selected] && fits(board, tray[selected], hover.c, hover.r)) {
+        drawPiece(tray[selected], o.x + hover.c * s, o.y + hover.r * s, s, 0.45);
+      }
+      var trayY = o.y + ROWS * s + 16 * dpr;
+      var i;
+      for (i = 0; i < 3; i++) {
+        var tx = 24 * dpr + i * (canvas.width / 3.3);
+        if (i === selected && state === "play") {
+          ctx.strokeStyle = "#f6c15b";
+          ctx.lineWidth = 2;
+          ctx.strokeRect(tx - 6, trayY - 6, 92 * dpr, 70 * dpr);
+        }
+        if (tray && tray[i]) drawPiece(tray[i], tx, trayY, Math.min(22 * dpr, s * 0.55), 1);
+      }
+      if (state !== "play") {
+        ctx.fillStyle = "rgba(8,12,10,0.72)";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "#fff4d6";
+        ctx.font = "bold " + Math.round(32 * dpr) + "px Inter, sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillText(state === "title" ? "Petalrack" : "Bed full", canvas.width / 2, canvas.height * 0.4);
+        ctx.font = Math.round(16 * dpr) + "px Inter, sans-serif";
+        ctx.fillStyle = "#e7d7b0";
+        var line = state === "title" ? "Place blossoms. Fill a row or column to harvest." : "Score " + score + "   Best " + best;
+        ctx.fillText(line, canvas.width / 2, canvas.height * 0.48);
+        ctx.fillStyle = "#f6c15b";
+        ctx.fillText("Tap, Space, or Enter", canvas.width / 2, canvas.height * 0.58);
+        ctx.textAlign = "left";
+      }
+    }
+    function pointerCell(ev) {
+      var rect = canvas.getBoundingClientRect();
+      var x = (ev.clientX - rect.left) * (canvas.width / rect.width);
+      var y = (ev.clientY - rect.top) * (canvas.height / rect.height);
+      var o = origin();
+      return {
+        x: x, y: y,
+        c: Math.floor((x - o.x) / o.s),
+        r: Math.floor((y - o.y) / o.s),
+        trayY: o.y + ROWS * o.s
+      };
+    }
+    function onPointer(ev) {
+      if (state !== "play") {
+        reset();
+        draw();
+        return;
+      }
+      var p = pointerCell(ev);
+      if (p.y > p.trayY) {
+        var slot = Math.floor((p.x / canvas.width) * 3);
+        if (slot < 0) slot = 0;
+        if (slot > 2) slot = 2;
+        if (tray[slot]) selected = slot;
+        draw();
+        return;
+      }
+      if (p.c < 0 || p.r < 0 || p.c >= COLS || p.r >= ROWS) return;
+      if (tray[selected]) place(tray[selected], p.c, p.r);
+      draw();
+    }
+    function onMove(ev) {
+      if (state !== "play") return;
+      var p = pointerCell(ev);
+      hover = { c: p.c, r: p.r };
+      draw();
+    }
+    function onKey(ev) {
+      var k = ev.key;
+      if (k === " " || k === "Enter") {
+        ev.preventDefault();
+        if (state !== "play") reset();
+        else if (hover && tray[selected]) place(tray[selected], hover.c, hover.r);
+        draw();
+        return;
+      }
+      if (state !== "play") return;
+      if (k === "1" || k === "2" || k === "3") {
+        var n = Number(k) - 1;
+        if (tray[n]) selected = n;
+      }
+      if (k === "ArrowLeft" || k === "a" || k === "A") hover = { c: Math.max(0, (hover ? hover.c : 0) - 1), r: hover ? hover.r : 0 };
+      if (k === "ArrowRight" || k === "d" || k === "D") hover = { c: Math.min(COLS - 1, (hover ? hover.c : 0) + 1), r: hover ? hover.r : 0 };
+      if (k === "ArrowUp" || k === "w" || k === "W") hover = { c: hover ? hover.c : 0, r: Math.max(0, (hover ? hover.r : 0) - 1) };
+      if (k === "ArrowDown" || k === "s" || k === "S") hover = { c: hover ? hover.c : 0, r: Math.min(ROWS - 1, (hover ? hover.r : 0) + 1) };
+      if (k === "q" || k === "Q") { var i; for (i = selected - 1; i >= 0; i--) if (tray[i]) { selected = i; break; } }
+      if (k === "e" || k === "E") { var j; for (j = selected + 1; j < 3; j++) if (tray[j]) { selected = j; break; } }
+      draw();
+    }
+    layout();
+    window.addEventListener("resize", function () { layout(); draw(); });
+    canvas.addEventListener("pointerdown", onPointer);
+    canvas.addEventListener("pointermove", onMove);
+    window.addEventListener("keydown", onKey);
+    draw();
+  }
+  window.Petalrack = { mount: mount };
+})();
