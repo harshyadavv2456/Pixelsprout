@@ -1,5 +1,13 @@
 [
   {
+    "slug": "petalrack",
+    "title": "Petalrack",
+    "category": "Puzzle",
+    "source": "pixelsprout",
+    "href": "/games/petalrack.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/petalrack/cover.jpg"
+  },
+  {
     "slug": "nectarjar",
     "title": "Nectarjar",
     "category": "Puzzle",
