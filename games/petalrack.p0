@@ -1,0 +1,165 @@
+(function () {
+  var COLS = 8, ROWS = 8;
+  var SHAPES = [
+    [[0, 0]],
+    [[0, 0], [1, 0]],
+    [[0, 0], [0, 1]],
+    [[0, 0], [1, 0], [2, 0]],
+    [[0, 0], [0, 1], [0, 2]],
+    [[0, 0], [1, 0], [0, 1]],
+    [[0, 0], [1, 0], [1, 1]],
+    [[0, 0], [1, 0], [2, 0], [1, 1]],
+    [[0, 0], [1, 0], [2, 0], [2, 1]],
+    [[0, 0], [1, 0], [2, 0], [3, 0]],
+    [[0, 0], [0, 1], [1, 1], [2, 1]],
+    [[0, 0], [1, 0], [1, 1], [2, 1]],
+    [[0, 1], [1, 0], [1, 1], [1, 2]]
+  ];
+  var COLORS = ["#f28ab0", "#f6c15b", "#8fd18a", "#c4b0f2", "#7ec8d6"];
+
+  function rand(n) { return Math.floor(Math.random() * n); }
+  function piece() {
+    var cells = SHAPES[rand(SHAPES.length)];
+    return { cells: cells, color: COLORS[rand(COLORS.length)] };
+  }
+  function bounds(cells) {
+    var w = 0, h = 0, i;
+    for (i = 0; i < cells.length; i++) {
+      if (cells[i][0] + 1 > w) w = cells[i][0] + 1;
+      if (cells[i][1] + 1 > h) h = cells[i][1] + 1;
+    }
+    return { w: w, h: h };
+  }
+  function fits(board, p, c, r) {
+    var i, x, y;
+    for (i = 0; i < p.cells.length; i++) {
+      x = c + p.cells[i][0];
+      y = r + p.cells[i][1];
+      if (x < 0 || y < 0 || x >= COLS || y >= ROWS || board[y][x]) return false;
+    }
+    return true;
+  }
+  function anyFit(board, p) {
+    var b = bounds(p.cells), c, r;
+    for (r = 0; r <= ROWS - b.h; r++) {
+      for (c = 0; c <= COLS - b.w; c++) if (fits(board, p, c, r)) return true;
+    }
+    return false;
+  }
+
+  function mount(canvas) {
+    var ctx = canvas.getContext("2d");
+    var dpr = 1;
+    var state = "title";
+    var board, tray, selected, score, best, combo, hover, msg;
+    best = parseInt(localStorage.getItem("petalrack-best") || "0", 10) || 0;
+
+    function empty() {
+      var b = [], y, x;
+      for (y = 0; y < ROWS; y++) {
+        b[y] = [];
+        for (x = 0; x < COLS; x++) b[y][x] = null;
+      }
+      return b;
+    }
+    function reset() {
+      board = empty();
+      tray = [piece(), piece(), piece()];
+      selected = 0;
+      score = 0;
+      combo = 0;
+      hover = null;
+      msg = "";
+      state = "play";
+    }
+    function layout() {
+      var rect = canvas.getBoundingClientRect();
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.max(280, rect.width) * dpr;
+      canvas.height = Math.max(420, rect.height) * dpr;
+    }
+    function cellSize() {
+      var pad = 18 * dpr;
+      var top = 78 * dpr;
+      var bot = 118 * dpr;
+      var w = canvas.width - pad * 2;
+      var h = canvas.height - top - bot;
+      return Math.min(w / COLS, h / ROWS);
+    }
+    function origin() {
+      var s = cellSize();
+      var padTop = 78 * dpr;
+      var gridW = s * COLS;
+      return { x: (canvas.width - gridW) / 2, y: padTop, s: s };
+    }
+    function place(p, c, r) {
+      var i, x, y, cleared = 0, rows = [], cols = [], k;
+      if (!fits(board, p, c, r)) return false;
+      for (i = 0; i < p.cells.length; i++) {
+        board[r + p.cells[i][1]][c + p.cells[i][0]] = p.color;
+      }
+      score += p.cells.length * 4;
+      for (y = 0; y < ROWS; y++) {
+        var full = true;
+        for (x = 0; x < COLS; x++) if (!board[y][x]) full = false;
+        if (full) rows.push(y);
+      }
+      for (x = 0; x < COLS; x++) {
+        var fullc = true;
+        for (y = 0; y < ROWS; y++) if (!board[y][x]) fullc = false;
+        if (fullc) cols.push(x);
+      }
+      cleared = rows.length + cols.length;
+      if (cleared) {
+        combo += 1;
+        score += cleared * 50 * combo;
+        for (k = 0; k < rows.length; k++) for (x = 0; x < COLS; x++) board[rows[k]][x] = null;
+        for (k = 0; k < cols.length; k++) for (y = 0; y < ROWS; y++) board[y][cols[k]] = null;
+        msg = cleared > 1 ? "Harvest x" + cleared : "Harvest";
+      } else {
+        combo = 0;
+        msg = "";
+      }
+      tray[selected] = null;
+      var left = false;
+      for (i = 0; i < tray.length; i++) if (tray[i]) left = true;
+      if (!left) tray = [piece(), piece(), piece()];
+      selected = 0;
+      while (selected < 3 && !tray[selected]) selected++;
+      if (selected > 2) selected = 0;
+      var can = false;
+      for (i = 0; i < tray.length; i++) if (tray[i] && anyFit(board, tray[i])) can = true;
+      if (!can) {
+        state = "over";
+        if (score > best) {
+          best = score;
+          localStorage.setItem("petalrack-best", String(best));
+        }
+      }
+      return true;
+    }
+    function blossom(x, y, s, color) {
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(x, y, s * 0.34, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = "rgba(255,236,180,0.9)";
+      ctx.beginPath();
+      ctx.arc(x, y, s * 0.12, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    function drawPiece(p, x, y, s, alpha) {
+      var i;
+      ctx.globalAlpha = alpha;
+      for (i = 0; i < p.cells.length; i++) {
+        var cx = x + p.cells[i][0] * s + s / 2;
+        var cy = y + p.cells[i][1] * s + s / 2;
+        blossom(cx, cy, s, p.color);
+      }
+      ctx.globalAlpha = 1;
+    }
+    function draw() {
+      var o = origin();
+      var s = o.s;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      var g = ctx.createLinearGradient(0, 0, 0, canvas.height);
