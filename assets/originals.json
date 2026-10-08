@@ -1,5 +1,13 @@
 [
   {
+    "slug": "dewdash",
+    "title": "Dewdash",
+    "category": "Arcade",
+    "source": "pixelsprout",
+    "href": "/games/dewdash.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/dewdash/cover.jpg"
+  },
+  {
     "slug": "dewrack",
     "title": "Dewrack",
     "category": "Arcade",
