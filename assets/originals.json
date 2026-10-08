@@ -1,5 +1,13 @@
 [
   {
+    "slug": "dewrack",
+    "title": "Dewrack",
+    "category": "Arcade",
+    "source": "pixelsprout",
+    "href": "/games/dewrack.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/dewrack/cover.jpg"
+  },
+  {
     "slug": "petalrack",
     "title": "Petalrack",
     "category": "Puzzle",
