@@ -7715,8 +7715,8 @@
     }
   },
   "graffiti-time": {
-    "generated_at": "2026-08-03T06:34:57Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:25:39Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/graffiti-time-tips/",
       "controls": "/guides/graffiti-time-controls/",
@@ -7726,8 +7726,8 @@
     }
   },
   "poly-art": {
-    "generated_at": "2026-08-03T06:34:58Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:25:44Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/poly-art-tips/",
       "controls": "/guides/poly-art-controls/",
@@ -7737,8 +7737,8 @@
     }
   },
   "draw-save-puzzle": {
-    "generated_at": "2026-08-03T06:35:00Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:25:49Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/draw-save-puzzle-tips/",
       "controls": "/guides/draw-save-puzzle-controls/",
@@ -7748,8 +7748,8 @@
     }
   },
   "hoops-fruits": {
-    "generated_at": "2026-08-03T06:35:01Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:25:55Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/hoops-fruits-tips/",
       "controls": "/guides/hoops-fruits-controls/",
@@ -7759,8 +7759,8 @@
     }
   },
   "glass-ball-puzzle": {
-    "generated_at": "2026-08-03T06:35:03Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:26:08Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/glass-ball-puzzle-tips/",
       "controls": "/guides/glass-ball-puzzle-controls/",
@@ -7770,8 +7770,8 @@
     }
   },
   "unblock-the-ball": {
-    "generated_at": "2026-08-03T06:35:04Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:26:29Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/unblock-the-ball-tips/",
       "controls": "/guides/unblock-the-ball-controls/",
@@ -7781,8 +7781,8 @@
     }
   },
   "ball-puzzle": {
-    "generated_at": "2026-08-03T06:35:06Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:26:40Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/ball-puzzle-tips/",
       "controls": "/guides/ball-puzzle-controls/",
@@ -7792,8 +7792,8 @@
     }
   },
   "bricks-breaker-crush-quest": {
-    "generated_at": "2026-08-03T06:35:07Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:26:54Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/bricks-breaker-crush-quest-tips/",
       "controls": "/guides/bricks-breaker-crush-quest-controls/",
@@ -7803,8 +7803,8 @@
     }
   },
   "color-circle": {
-    "generated_at": "2026-08-03T06:35:09Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:27:08Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/color-circle-tips/",
       "controls": "/guides/color-circle-controls/",
@@ -7814,8 +7814,8 @@
     }
   },
   "bubble-hit": {
-    "generated_at": "2026-08-03T06:35:10Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:27:24Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/bubble-hit-tips/",
       "controls": "/guides/bubble-hit-controls/",
@@ -7825,8 +7825,8 @@
     }
   },
   "dangerous-circle-online": {
-    "generated_at": "2026-08-03T06:35:12Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:27:38Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/dangerous-circle-online-tips/",
       "controls": "/guides/dangerous-circle-online-controls/",
@@ -7836,8 +7836,8 @@
     }
   },
   "ball-sort-puzzle": {
-    "generated_at": "2026-08-03T06:35:13Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:27:59Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/ball-sort-puzzle-tips/",
       "controls": "/guides/ball-sort-puzzle-controls/",
@@ -7847,8 +7847,8 @@
     }
   },
   "golf-it": {
-    "generated_at": "2026-08-03T06:35:15Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:28:08Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/golf-it-tips/",
       "controls": "/guides/golf-it-controls/",
@@ -7858,8 +7858,8 @@
     }
   },
   "world-cup-score": {
-    "generated_at": "2026-08-03T06:35:16Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:28:26Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/world-cup-score-tips/",
       "controls": "/guides/world-cup-score-controls/",
@@ -7869,8 +7869,8 @@
     }
   },
   "color-ball-challenge": {
-    "generated_at": "2026-08-03T06:35:18Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:28:36Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/color-ball-challenge-tips/",
       "controls": "/guides/color-ball-challenge-controls/",
@@ -7880,8 +7880,8 @@
     }
   },
   "slicer-n-scale": {
-    "generated_at": "2026-08-03T06:35:19Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:28:51Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/slicer-n-scale-tips/",
       "controls": "/guides/slicer-n-scale-controls/",
@@ -7891,8 +7891,8 @@
     }
   },
   "neon-jump": {
-    "generated_at": "2026-08-03T06:35:21Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:29:05Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/neon-jump-tips/",
       "controls": "/guides/neon-jump-controls/",
@@ -7902,8 +7902,8 @@
     }
   },
   "cannon-candy-shooter-bubble-candy-blast": {
-    "generated_at": "2026-08-03T06:35:22Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:29:20Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/cannon-candy-shooter-bubble-candy-blast-tips/",
       "controls": "/guides/cannon-candy-shooter-bubble-candy-blast-controls/",
@@ -7913,8 +7913,8 @@
     }
   },
   "tennis-clash": {
-    "generated_at": "2026-08-03T06:35:24Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:29:32Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/tennis-clash-tips/",
       "controls": "/guides/tennis-clash-controls/",
@@ -7924,8 +7924,8 @@
     }
   },
   "color-jump": {
-    "generated_at": "2026-08-03T06:35:25Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:29:47Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/color-jump-tips/",
       "controls": "/guides/color-jump-controls/",
@@ -7935,8 +7935,8 @@
     }
   },
   "robo-runner-io": {
-    "generated_at": "2026-08-03T06:35:27Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:29:59Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/robo-runner-io-tips/",
       "controls": "/guides/robo-runner-io-controls/",
@@ -7946,8 +7946,8 @@
     }
   },
   "ball-jumping": {
-    "generated_at": "2026-08-03T06:35:28Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:30:11Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/ball-jumping-tips/",
       "controls": "/guides/ball-jumping-controls/",
@@ -7957,8 +7957,8 @@
     }
   },
   "trick-shot-ball-pro": {
-    "generated_at": "2026-08-03T06:35:30Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:30:24Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/trick-shot-ball-pro-tips/",
       "controls": "/guides/trick-shot-ball-pro-controls/",
@@ -7968,8 +7968,8 @@
     }
   },
   "gate-rusher": {
-    "generated_at": "2026-08-03T06:35:31Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:30:37Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/gate-rusher-tips/",
       "controls": "/guides/gate-rusher-controls/",
@@ -7979,8 +7979,8 @@
     }
   },
   "bubble-shooter-blast-master": {
-    "generated_at": "2026-08-03T06:35:33Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:30:49Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/bubble-shooter-blast-master-tips/",
       "controls": "/guides/bubble-shooter-blast-master-controls/",
@@ -7990,8 +7990,8 @@
     }
   },
   "balls-ricochet": {
-    "generated_at": "2026-08-03T06:35:34Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:31:03Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/balls-ricochet-tips/",
       "controls": "/guides/balls-ricochet-controls/",
@@ -8001,8 +8001,8 @@
     }
   },
   "mineblock-hook-adventure": {
-    "generated_at": "2026-08-03T06:35:36Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:31:14Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/mineblock-hook-adventure-tips/",
       "controls": "/guides/mineblock-hook-adventure-controls/",
@@ -8012,8 +8012,8 @@
     }
   },
   "cherry-inhere-circle-pong-king": {
-    "generated_at": "2026-08-03T06:35:37Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:31:28Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/cherry-inhere-circle-pong-king-tips/",
       "controls": "/guides/cherry-inhere-circle-pong-king-controls/",
@@ -8023,8 +8023,8 @@
     }
   },
   "the-floor-is-lava-balls": {
-    "generated_at": "2026-08-03T06:35:39Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:31:39Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/the-floor-is-lava-balls-tips/",
       "controls": "/guides/the-floor-is-lava-balls-controls/",
@@ -8034,8 +8034,8 @@
     }
   },
   "color-jam": {
-    "generated_at": "2026-08-03T06:35:40Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:31:51Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/color-jam-tips/",
       "controls": "/guides/color-jam-controls/",
@@ -8045,8 +8045,8 @@
     }
   },
   "simply-breakout": {
-    "generated_at": "2026-08-03T06:35:42Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:32:02Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/simply-breakout-tips/",
       "controls": "/guides/simply-breakout-controls/",
@@ -8056,8 +8056,8 @@
     }
   },
   "bricks-breaker-gravity-balls": {
-    "generated_at": "2026-08-03T06:35:43Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:32:15Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/bricks-breaker-gravity-balls-tips/",
       "controls": "/guides/bricks-breaker-gravity-balls-controls/",
@@ -8067,8 +8067,8 @@
     }
   },
   "santa-magic-christmas": {
-    "generated_at": "2026-08-03T06:35:45Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:32:26Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/santa-magic-christmas-tips/",
       "controls": "/guides/santa-magic-christmas-controls/",
@@ -8078,8 +8078,8 @@
     }
   },
   "zero": {
-    "generated_at": "2026-08-03T06:35:46Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:32:37Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/zero-tips/",
       "controls": "/guides/zero-controls/",
@@ -8089,8 +8089,8 @@
     }
   },
   "ball-vs-beat": {
-    "generated_at": "2026-08-03T06:35:48Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:32:50Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/ball-vs-beat-tips/",
       "controls": "/guides/ball-vs-beat-controls/",
@@ -8100,8 +8100,8 @@
     }
   },
   "absorbus-game": {
-    "generated_at": "2026-08-03T06:35:49Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:33:00Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/absorbus-game-tips/",
       "controls": "/guides/absorbus-game-controls/",
@@ -8111,8 +8111,8 @@
     }
   },
   "going-balls-3d": {
-    "generated_at": "2026-08-03T06:35:51Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:33:12Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/going-balls-3d-tips/",
       "controls": "/guides/going-balls-3d-controls/",
@@ -8122,8 +8122,8 @@
     }
   },
   "crazy-balls": {
-    "generated_at": "2026-08-03T06:35:52Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:33:25Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/crazy-balls-tips/",
       "controls": "/guides/crazy-balls-controls/",
@@ -8133,8 +8133,8 @@
     }
   },
   "match-earth-online-game": {
-    "generated_at": "2026-08-03T06:35:54Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:33:34Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/match-earth-online-game-tips/",
       "controls": "/guides/match-earth-online-game-controls/",
@@ -8144,8 +8144,8 @@
     }
   },
   "black-jumper": {
-    "generated_at": "2026-08-03T06:35:55Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-09T12:33:50Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/black-jumper-tips/",
       "controls": "/guides/black-jumper-controls/",
