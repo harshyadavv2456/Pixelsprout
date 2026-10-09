@@ -1,5 +1,13 @@
 [
   {
+    "slug": "mossgate",
+    "title": "Mossgate",
+    "category": "Arcade",
+    "source": "pixelsprout",
+    "href": "/games/mossgate.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/mossgate/cover.jpg"
+  },
+  {
     "slug": "dewdash",
     "title": "Dewdash",
     "category": "Arcade",
