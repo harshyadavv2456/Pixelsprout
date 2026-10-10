@@ -41,11 +41,11 @@
       "views": 23
     },
     {
-      "slug": "2048",
+      "slug": "100-seconds-labyrinth",
       "views": 22
     },
     {
-      "slug": "100-seconds-labyrinth",
+      "slug": "2048",
       "views": 22
     },
     {
@@ -69,15 +69,15 @@
       "views": 15
     },
     {
-      "slug": "katana-fruits",
-      "views": 14
-    },
-    {
       "slug": "100-doors-games-escape-from-school",
       "views": 14
     },
     {
-      "slug": "100-doors-escape-from-prison",
+      "slug": "katana-fruits",
+      "views": 14
+    },
+    {
+      "slug": "road-designer",
       "views": 13
     }
   ]
