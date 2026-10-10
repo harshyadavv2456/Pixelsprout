@@ -8155,8 +8155,8 @@
     }
   },
   "matrix-ball": {
-    "generated_at": "2026-08-03T06:35:57Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:44:44Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/matrix-ball-tips/",
       "controls": "/guides/matrix-ball-controls/",
@@ -8166,8 +8166,8 @@
     }
   },
   "candy-pong": {
-    "generated_at": "2026-08-03T06:35:58Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:44:49Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/candy-pong-tips/",
       "controls": "/guides/candy-pong-controls/",
@@ -8177,8 +8177,8 @@
     }
   },
   "sphere-jump": {
-    "generated_at": "2026-08-03T06:36:00Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:44:54Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/sphere-jump-tips/",
       "controls": "/guides/sphere-jump-controls/",
@@ -8188,8 +8188,8 @@
     }
   },
   "balls-bricks-breaker": {
-    "generated_at": "2026-08-03T06:36:01Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:45:02Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/balls-bricks-breaker-tips/",
       "controls": "/guides/balls-bricks-breaker-controls/",
@@ -8199,8 +8199,8 @@
     }
   },
   "rodha": {
-    "generated_at": "2026-08-03T06:36:03Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:45:18Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/rodha-tips/",
       "controls": "/guides/rodha-controls/",
@@ -8210,8 +8210,8 @@
     }
   },
   "pop-the-balloons-bounce": {
-    "generated_at": "2026-08-03T06:36:04Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:45:39Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/pop-the-balloons-bounce-tips/",
       "controls": "/guides/pop-the-balloons-bounce-controls/",
@@ -8221,8 +8221,8 @@
     }
   },
   "bouncing-ball": {
-    "generated_at": "2026-08-03T06:36:06Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:45:55Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/bouncing-ball-tips/",
       "controls": "/guides/bouncing-ball-controls/",
@@ -8232,8 +8232,8 @@
     }
   },
   "switch-colors": {
-    "generated_at": "2026-08-03T06:36:07Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:46:08Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/switch-colors-tips/",
       "controls": "/guides/switch-colors-controls/",
@@ -8243,8 +8243,8 @@
     }
   },
   "fantasy-star-pinball": {
-    "generated_at": "2026-08-03T06:36:09Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:46:20Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/fantasy-star-pinball-tips/",
       "controls": "/guides/fantasy-star-pinball-controls/",
@@ -8254,8 +8254,8 @@
     }
   },
   "targetter-game": {
-    "generated_at": "2026-08-03T06:36:10Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:46:37Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/targetter-game-tips/",
       "controls": "/guides/targetter-game-controls/",
@@ -8265,8 +8265,8 @@
     }
   },
   "save-the-egg": {
-    "generated_at": "2026-08-03T06:36:12Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:46:52Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/save-the-egg-tips/",
       "controls": "/guides/save-the-egg-controls/",
@@ -8276,8 +8276,8 @@
     }
   },
   "roll-this-ball": {
-    "generated_at": "2026-08-03T06:36:13Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:47:04Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/roll-this-ball-tips/",
       "controls": "/guides/roll-this-ball-controls/",
@@ -8287,8 +8287,8 @@
     }
   },
   "twining-color-switch-game": {
-    "generated_at": "2026-08-03T06:36:15Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:47:17Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/twining-color-switch-game-tips/",
       "controls": "/guides/twining-color-switch-game-controls/",
@@ -8298,8 +8298,8 @@
     }
   },
   "bounce-ball-hook": {
-    "generated_at": "2026-08-03T06:36:16Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:47:30Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/bounce-ball-hook-tips/",
       "controls": "/guides/bounce-ball-hook-controls/",
@@ -8309,8 +8309,8 @@
     }
   },
   "block-breaker-game": {
-    "generated_at": "2026-08-03T06:36:18Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:47:43Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/block-breaker-game-tips/",
       "controls": "/guides/block-breaker-game-controls/",
@@ -8320,8 +8320,8 @@
     }
   },
   "crash-glass-boom": {
-    "generated_at": "2026-08-03T06:36:19Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:47:54Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/crash-glass-boom-tips/",
       "controls": "/guides/crash-glass-boom-controls/",
@@ -8331,8 +8331,8 @@
     }
   },
   "snow-mo-cannon-shooting-game": {
-    "generated_at": "2026-08-03T06:36:21Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:48:08Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/snow-mo-cannon-shooting-game-tips/",
       "controls": "/guides/snow-mo-cannon-shooting-game-controls/",
@@ -8342,8 +8342,8 @@
     }
   },
   "face-breaker": {
-    "generated_at": "2026-08-03T06:36:22Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:48:21Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/face-breaker-tips/",
       "controls": "/guides/face-breaker-controls/",
@@ -8353,8 +8353,8 @@
     }
   },
   "slope-racing-3d": {
-    "generated_at": "2026-08-03T06:36:24Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:48:34Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/slope-racing-3d-tips/",
       "controls": "/guides/slope-racing-3d-controls/",
@@ -8364,8 +8364,8 @@
     }
   },
   "sokoballs": {
-    "generated_at": "2026-08-03T06:36:25Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:48:46Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/sokoballs-tips/",
       "controls": "/guides/sokoballs-controls/",
@@ -8375,8 +8375,8 @@
     }
   },
   "cerkio": {
-    "generated_at": "2026-08-03T06:36:27Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:49:00Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/cerkio-tips/",
       "controls": "/guides/cerkio-controls/",
@@ -8386,8 +8386,8 @@
     }
   },
   "stick-war-saga": {
-    "generated_at": "2026-08-03T06:36:28Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:49:14Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/stick-war-saga-tips/",
       "controls": "/guides/stick-war-saga-controls/",
@@ -8397,8 +8397,8 @@
     }
   },
   "stickman-zombie-shooting-3d": {
-    "generated_at": "2026-08-03T06:36:30Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:49:28Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/stickman-zombie-shooting-3d-tips/",
       "controls": "/guides/stickman-zombie-shooting-3d-controls/",
@@ -8408,8 +8408,8 @@
     }
   },
   "stick-man-battle-fighting": {
-    "generated_at": "2026-08-03T06:36:31Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:49:38Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/stick-man-battle-fighting-tips/",
       "controls": "/guides/stick-man-battle-fighting-controls/",
@@ -8419,8 +8419,8 @@
     }
   },
   "stick-rope-hero": {
-    "generated_at": "2026-08-03T06:36:33Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:49:50Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/stick-rope-hero-tips/",
       "controls": "/guides/stick-rope-hero-controls/",
@@ -8430,8 +8430,8 @@
     }
   },
   "stickman-that-one-level": {
-    "generated_at": "2026-08-03T06:36:34Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:50:01Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/stickman-that-one-level-tips/",
       "controls": "/guides/stickman-that-one-level-controls/",
@@ -8441,8 +8441,8 @@
     }
   },
   "stickman-mega-boss-battles": {
-    "generated_at": "2026-08-03T06:36:36Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:50:15Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/stickman-mega-boss-battles-tips/",
       "controls": "/guides/stickman-mega-boss-battles-controls/",
@@ -8452,8 +8452,8 @@
     }
   },
   "turbo-crash-test": {
-    "generated_at": "2026-08-03T06:36:37Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:50:26Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/turbo-crash-test-tips/",
       "controls": "/guides/turbo-crash-test-controls/",
@@ -8463,8 +8463,8 @@
     }
   },
   "skateboard-challenge": {
-    "generated_at": "2026-08-03T06:36:39Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:50:37Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/skateboard-challenge-tips/",
       "controls": "/guides/skateboard-challenge-controls/",
@@ -8474,8 +8474,8 @@
     }
   },
   "gt-cars-super-racing": {
-    "generated_at": "2026-08-03T06:36:40Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:50:50Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/gt-cars-super-racing-tips/",
       "controls": "/guides/gt-cars-super-racing-controls/",
@@ -8485,8 +8485,8 @@
     }
   },
   "crazy-goal": {
-    "generated_at": "2026-08-03T06:36:42Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:51:01Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/crazy-goal-tips/",
       "controls": "/guides/crazy-goal-controls/",
@@ -8496,8 +8496,8 @@
     }
   },
   "soccer-snakes": {
-    "generated_at": "2026-08-03T06:36:43Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:51:13Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/soccer-snakes-tips/",
       "controls": "/guides/soccer-snakes-controls/",
@@ -8507,8 +8507,8 @@
     }
   },
   "ski-king": {
-    "generated_at": "2026-08-03T06:36:45Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:51:27Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/ski-king-tips/",
       "controls": "/guides/ski-king-controls/",
@@ -8518,8 +8518,8 @@
     }
   },
   "super-car-racer": {
-    "generated_at": "2026-08-03T06:36:46Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:51:40Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/super-car-racer-tips/",
       "controls": "/guides/super-car-racer-controls/",
@@ -8529,8 +8529,8 @@
     }
   },
   "stickman-car-racing": {
-    "generated_at": "2026-08-03T06:36:48Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:51:51Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/stickman-car-racing-tips/",
       "controls": "/guides/stickman-car-racing-controls/",
@@ -8540,8 +8540,8 @@
     }
   },
   "kick": {
-    "generated_at": "2026-08-03T06:36:49Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:52:03Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/kick-tips/",
       "controls": "/guides/kick-controls/",
@@ -8551,8 +8551,8 @@
     }
   },
   "ninja-head-ball": {
-    "generated_at": "2026-08-03T06:36:51Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:52:18Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/ninja-head-ball-tips/",
       "controls": "/guides/ninja-head-ball-controls/",
@@ -8562,8 +8562,8 @@
     }
   },
   "gully-cricket": {
-    "generated_at": "2026-08-03T06:36:52Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:52:29Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/gully-cricket-tips/",
       "controls": "/guides/gully-cricket-controls/",
@@ -8573,8 +8573,8 @@
     }
   },
   "golf-challenge": {
-    "generated_at": "2026-08-03T06:36:54Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:52:41Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/golf-challenge-tips/",
       "controls": "/guides/golf-challenge-controls/",
@@ -8584,8 +8584,8 @@
     }
   },
   "darts-pro-multiplayer": {
-    "generated_at": "2026-08-03T06:36:55Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-10T11:52:52Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/darts-pro-multiplayer-tips/",
       "controls": "/guides/darts-pro-multiplayer-controls/",
