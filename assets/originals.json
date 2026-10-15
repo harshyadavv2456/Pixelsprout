@@ -1,5 +1,13 @@
 [
   {
+    "slug": "lumenstack",
+    "title": "Lumenstack",
+    "category": "Arcade",
+    "source": "pixelsprout",
+    "href": "/games/lumenstack.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/lumenstack/cover.jpg"
+  },
+  {
     "slug": "petalstack",
     "title": "Petalstack",
     "category": "Arcade",
