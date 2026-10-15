@@ -1,5 +1,13 @@
 [
   {
+    "slug": "petalstack",
+    "title": "Petalstack",
+    "category": "Arcade",
+    "source": "pixelsprout",
+    "href": "/games/petalstack.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/petalstack/cover.jpg"
+  },
+  {
     "slug": "mossgate",
     "title": "Mossgate",
     "category": "Arcade",
