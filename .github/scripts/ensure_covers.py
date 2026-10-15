@@ -71,7 +71,40 @@ def draw_riverstone(path: Path):
     img.convert("RGB").save(path, "JPEG", quality=88, optimize=True)
 
 
-DRAW = {"riverstone": draw_riverstone}
+def draw_lumenstack(path: Path):
+    w = 800
+    img = Image.new("RGB", (w, w), (10, 18, 32))
+    px = img.load()
+    for y in range(w):
+        for x in range(w):
+            t = y / w
+            r = int(10 + 8 * t)
+            g = int(18 + 20 * t)
+            b = int(32 + 40 * (1 - t))
+            dx = (x - w / 2) / (w / 2)
+            dy = (y - w / 2) / (w / 2)
+            v = max(0.3, 1 - 0.4 * (dx * dx + dy * dy))
+            px[x, y] = (int(r * v), int(g * v), int(b * v))
+    img = img.convert("RGBA")
+    d = ImageDraw.Draw(img, "RGBA")
+    # stacked blocks
+    colors = [(0, 229, 255, 255), (0, 255, 157, 255), (168, 255, 0, 255), (255, 234, 0, 255)]
+    ys = [520, 430, 340, 250]
+    ws = [280, 240, 200, 160]
+    for i, (yy, ww) in enumerate(zip(ys, ws)):
+        cx = 400
+        d.rounded_rectangle((cx - ww//2, yy, cx + ww//2, yy + 70), radius=16, fill=colors[i])
+        # highlight
+        d.rounded_rectangle((cx - ww//2 + 10, yy + 6, cx - ww//4, yy + 24), radius=6, fill=(255, 255, 255, 80))
+    d.rounded_rectangle((48, 48, 560, 180), radius=24, fill=(8, 16, 28, 200))
+    d.text((72, 58), "LUMEN", font=font(64, True), fill=(0, 229, 255, 255))
+    d.text((72, 116), "STACK", font=font(64, True), fill=(0, 255, 157, 255))
+    d.text((76, 188), "PIXEL SPROUT ORIGINAL", font=font(20), fill=(122, 176, 208, 220))
+    path.parent.mkdir(parents=True, exist_ok=True)
+    img.convert("RGB").save(path, "JPEG", quality=88, optimize=True)
+
+
+DRAW = {"riverstone": draw_riverstone, "lumenstack": draw_lumenstack}
 
 
 def is_jpeg(path: Path) -> bool:
