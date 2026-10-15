@@ -2,47 +2,47 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 170
+      "views": 172
     },
     {
       "slug": "getting-over-it",
       "views": 92
     },
     {
+      "slug": "dot-link-puzzle-connect-the-dots",
+      "views": 36
+    },
+    {
       "slug": "protect-my-dog",
       "views": 35
     },
     {
-      "slug": "dot-link-puzzle-connect-the-dots",
-      "views": 33
-    },
-    {
       "slug": "2048-cube-run",
-      "views": 29
+      "views": 30
     },
     {
       "slug": "save-the-doge",
       "views": 26
     },
     {
-      "slug": "test-tubes-water-sort",
-      "views": 25
+      "slug": "baba-is-you",
+      "views": 26
     },
     {
-      "slug": "baba-is-you",
-      "views": 25
+      "slug": "test-tubes-water-sort",
+      "views": 26
     },
     {
       "slug": "2048-cube-merge-block",
-      "views": 24
+      "views": 25
+    },
+    {
+      "slug": "100-seconds-labyrinth",
+      "views": 23
     },
     {
       "slug": "uno-online",
       "views": 23
-    },
-    {
-      "slug": "100-seconds-labyrinth",
-      "views": 22
     },
     {
       "slug": "2048",
@@ -57,12 +57,12 @@
       "views": 17
     },
     {
-      "slug": "klondike-solitaire-paradise",
+      "slug": "100-doors-escape-puzzle",
       "views": 17
     },
     {
-      "slug": "100-doors-escape-puzzle",
-      "views": 16
+      "slug": "klondike-solitaire-paradise",
+      "views": 17
     },
     {
       "slug": "dop-in-love-story-find-part",
@@ -77,7 +77,7 @@
       "views": 14
     },
     {
-      "slug": "100-doors-games-escape-from-school",
+      "slug": "agent-hunt-hitman-shooter",
       "views": 14
     }
   ]
