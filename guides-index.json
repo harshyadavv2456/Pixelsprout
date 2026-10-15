@@ -19417,5 +19417,12 @@
     "beginner-guide": "/guides/baba-is-you-beginner-guide/",
     "similar": "/guides/games-like-baba-is-you/",
     "faq": "/guides/baba-is-you-faq/"
+  },
+  "moonbloom": {
+    "tips": "/guides/moonbloom-tips/",
+    "controls": "/guides/moonbloom-controls/",
+    "beginner-guide": "/guides/moonbloom-beginner-guide/",
+    "similar": "/guides/games-like-moonbloom/",
+    "faq": "/guides/moonbloom-faq/"
   }
 }

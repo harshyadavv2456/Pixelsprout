@@ -8471,7 +8471,15 @@
       "beginner-guide": "/guides/skateboard-challenge-beginner-guide/",
       "similar": "/guides/games-like-skateboard-challenge/",
       "faq": "/guides/skateboard-challenge-faq/"
-    }
+    },
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-10-15T04:14:03Z"
   },
   "gt-cars-super-racing": {
     "generated_at": "2026-10-10T11:50:50Z",
@@ -30578,5 +30586,23 @@
       "tips"
     ],
     "bot_updated_at": "2026-10-01T10:59:40Z"
+  },
+  "moonbloom": {
+    "pages": {
+      "tips": "/guides/moonbloom-tips/",
+      "controls": "/guides/moonbloom-controls/",
+      "beginner-guide": "/guides/moonbloom-beginner-guide/",
+      "similar": "/guides/games-like-moonbloom/",
+      "faq": "/guides/moonbloom-faq/"
+    },
+    "any_fallback": false,
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-10-15T04:14:03Z"
   }
 }

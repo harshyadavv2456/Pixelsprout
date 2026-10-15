@@ -6,9 +6,53 @@
     "baba-is-you.json": "fff0a6bd94db0b80d39bee142638af5fd5685d808f3ce218f50a7310d7c4e724",
     "2048-cube-run.json": "0a26259558976f8da53ad4bf2a3f71e347019250e435483fb60c4e1104737c01",
     "2048.json": "0358c5d7f2e13b947d9201ac211c5bf1ebbfb27e6fb6cef27cab9271114d6d09",
-    "toilet-rush-draw-to-pee.json": "fdd6754ca1970f77f043383aa646ad6a6f9bdb774e072a49f7504e8c0b3581cc"
+    "toilet-rush-draw-to-pee.json": "fdd6754ca1970f77f043383aa646ad6a6f9bdb774e072a49f7504e8c0b3581cc",
+    "moonbloom.json": "f01d5579fc760b0671b1c78b1d260ec09b39ddb9e6e159bef0fc98d86f7ecaef",
+    "skateboard-challenge.json": "83a3285d64fbd68dc991a3fa3c5bea8278de297cfc2a322a77c5b4cb113af675"
   },
   "runs": [
+    {
+      "ran_at": "2026-10-15T04:14:03Z",
+      "published": [
+        {
+          "file": "moonbloom.json",
+          "slug": "moonbloom",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/moonbloom-beginner-guide/",
+            "https://playpixelsprout.com/guides/moonbloom-controls/",
+            "https://playpixelsprout.com/guides/moonbloom-faq/",
+            "https://playpixelsprout.com/guides/games-like-moonbloom/",
+            "https://playpixelsprout.com/guides/moonbloom-tips/"
+          ]
+        },
+        {
+          "file": "skateboard-challenge.json",
+          "slug": "skateboard-challenge",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/skateboard-challenge-beginner-guide/",
+            "https://playpixelsprout.com/guides/skateboard-challenge-controls/",
+            "https://playpixelsprout.com/guides/skateboard-challenge-faq/",
+            "https://playpixelsprout.com/guides/games-like-skateboard-challenge/",
+            "https://playpixelsprout.com/guides/skateboard-challenge-tips/"
+          ]
+        }
+      ],
+      "rejected": []
+    },
     {
       "ran_at": "2026-10-03T04:33:41Z",
       "published": [

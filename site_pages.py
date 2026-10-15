@@ -866,6 +866,8 @@ FEATURED_GUIDES = [
     ("2048 Cube Run", "2048-cube-run", "A three-lane runner where numbered cubes merge as you run toward the finish gate.", []),
     ("2048", "2048", "A 4x4 sliding-number puzzle played with the arrow keys: merge matching tiles to build higher numbers.", []),
     ("Toilet Rush: Draw to Pee", "toilet-rush-draw-to-pee", "A draw-a-path puzzle played with the mouse: drag a route from the character to the toilet.", []),
+    ("Moonbloom", "moonbloom", "A Pixelsprout original puzzle: drop seeds into a 6x7 night planter and match three or more plants to grow them.", []),
+    ("Skateboard Challenge", "skateboard-challenge", "A 2D street skating game: jump cones, collect coins and the letters of SKATE, and pull tricks for points.", []),
 ]
 
 

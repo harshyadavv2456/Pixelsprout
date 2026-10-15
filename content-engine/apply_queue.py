@@ -213,6 +213,10 @@ def main():
 
     all_games = gg.load_json(gg.GAMES_INDEX_PATH, [])
     games_by_slug = {g["slug"]: g for g in all_games}
+    # Pixelsprout originals live in assets/originals.json, not games-index.json
+    for g in gg.load_json(os.path.join(gg.REPO_ROOT, "assets", "originals.json"), []):
+        if isinstance(g, dict) and g.get("slug"):
+            games_by_slug.setdefault(g["slug"], g)
     sim.build_index(all_games)
     manifest = gg.load_json(gg.MANIFEST_PATH, {})
     guides_index = gg.load_json(gg.GUIDES_INDEX_PATH, {})
