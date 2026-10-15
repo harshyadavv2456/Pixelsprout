@@ -1,0 +1,105 @@
+{
+ "slug": "moonbloom",
+ "played": true,
+ "pages": {
+  "tips": {
+   "intro": "These tips come from a real session of Moonbloom on Pixelsprout. I cleared the first evening, First dew, with 270 points and started the second, Second leaf. Everything here is what I saw on the 6 by 7 planter while dropping seeds.",
+   "tips": [
+    "Use the dim ghost circle before you drop. It marks the exact cell your seed will land in, which saves you from placing a seed one column off.",
+    "Stacking three matching seeds in a single column is the easiest merge to set up. I did it twice in First dew, and both times three gold seeds turned into one green sprout.",
+    "Check the now and next icons in the header before each drop. Knowing the following seed lets you leave a gap where it will complete a group of three.",
+    "Matches count by edges only. Line seeds up side by side or on top of each other, not corner to corner.",
+    "Look for drops that start a chain. One placement in my run showed a chain x2 label and pushed the score up to 270, far more than a single merge gives.",
+    "Watch the thin bar under the evening name. It fills as you score, so it tells you how close you are to finishing the current evening.",
+    "Do not rush. I never saw a timer, so you can take a moment to plan each drop."
+   ],
+   "conclusion": "Moonbloom rewards planning over speed. Read the next seed, use the ghost circle, and build groups that can set off chains, and the first evening goes by quickly.",
+   "extra_sections": [
+    {
+     "heading": "How merging works in practice",
+     "paragraphs": [
+      "Each seed falls to the lowest empty cell in the column you pick. When three or more of the same plant touch by an edge, they grow into the next form. In my session, three gold seeds became a single green sprout, and the score jumped from 0 to 36 with a small points popup and sparkles.",
+      "Green seeds then started showing up in the now and next slots, so the merged form becomes something you can match again. A merge that leaves new matches touching can keep going, which is how my chain x2 happened."
+     ]
+    },
+    {
+     "heading": "What I did not get to see",
+     "paragraphs": [
+      "The help card mentions rain, pebbles and a moonbloom. It says rain upgrades the top plant in a column, pebbles block a cell until a neighboring merge cracks them, and a moonbloom shatters them. None of those showed up in my first two evenings, so I cannot give tips for handling them yet."
+     ]
+    }
+   ]
+  },
+  "controls": {
+   "intro": "Moonbloom has very few controls: pick a column, then drop. Here is what worked for me on desktop.",
+   "desktop": "Click a column with the mouse to drop the seed in your hand there. On the keyboard, Right Arrow, A and D moved the highlighted column, and Enter dropped the seed. Space also dropped a seed. The page says Left and Right then Enter works too. Up Arrow, Down Arrow and S did nothing that I could see.",
+   "mobile": "The game text says to tap a column to drop. I played in a desktop browser, where a mouse click on a column worked, and I did not see any extra on-screen buttons, so tapping the column should be the whole control scheme on a phone.",
+   "tips": [
+    "The thin bar under the evening name fills as you score, so you can track progress without leaving the board.",
+    "Watch the ghost circle while moving the cursor. It shows the landing cell before you commit.",
+    "The question mark button opens the How to grow card, and Back to the garden returns you to the board.",
+    "The music note button sits next to the question mark in the header."
+   ]
+  },
+  "beginner-guide": {
+   "intro": "New to Moonbloom? This guide covers what the game is and how your first evening plays out, based on a session where I cleared First dew and moved on to Second leaf.",
+   "what_it_is": "Moonbloom is a free Pixelsprout original puzzle game that runs in the browser with no download. You drop round seeds into a night planter that is 6 columns wide and 7 rows tall. Three or more of the same plant touching by an edge grow into the next form, and chains score more. The header shows your score with your best under it, the evening name with a progress bar, the now and next seeds, and help and music buttons. The page says to clear five evenings, then keep going for a high score.",
+   "first_steps": [
+    "Press Play on the start card. The five small dots on it stand for the evenings, with the first one lit.",
+    "Move to a column with the mouse or keys and check where the ghost circle lands.",
+    "Drop three matching gold seeds so they touch by an edge. They grow into a green sprout and you get your first points.",
+    "Keep an eye on the next icon and build groups that can set off chains.",
+    "When the progress bar fills, The evening held card shows your score. Press Next evening to start the next one."
+   ],
+   "who_its_for": "It suits players who like calm match-three and merge puzzles where you can stop and think. There is no timer that I saw, so it is relaxed rather than twitchy.",
+   "extra_sections": [
+    {
+     "heading": "What happens when an evening ends",
+     "paragraphs": [
+      "After I reached 270 points in First dew, a card titled The evening held said You reached 270 in First dew. It had two buttons, Next evening and Garden gate. Next evening loaded Second leaf with the score back at 0, while best 270 stayed in the header.",
+      "I did not press Garden gate, so I cannot say where it leads. I also did not lose a run, so I have not seen what a failed evening looks like."
+     ]
+    }
+   ]
+  },
+  "similar": {
+   "intro": "If you enjoy Moonbloom, you probably like small-board puzzles where every placement counts and matching pieces grow into something new. The appeal is the slow build: drop a piece, line up three of a kind, and watch a single good move set off a chain. Look for calm single-player games with merge or match-three rules, a next-piece preview to plan around, short stages you can finish in a few minutes, and a best score to chase afterward. Number-merging and dot-connecting puzzles with no time pressure give a very similar feel."
+  },
+  "faq": {
+   "faqs": [
+    {
+     "question": "Is Moonbloom free to play?",
+     "answer": "Yes. It is a Pixelsprout original that plays in your browser for free with no download. An ad sat beside the game while I played, but it never covered the board."
+    },
+    {
+     "question": "How do you play Moonbloom?",
+     "answer": "Pick a column and drop the seed in your hand. It falls to the lowest empty cell. Three or more of the same plant touching by an edge grow into the next form."
+    },
+    {
+     "question": "What are the controls?",
+     "answer": "Click a column to drop a seed. On the keyboard, the arrow keys or A and D move the column, and Enter drops. Space also dropped a seed in my session."
+    },
+    {
+     "question": "Do diagonal matches count?",
+     "answer": "No. The game says plants must touch by an edge, so only side by side or stacked seeds count toward a group."
+    },
+    {
+     "question": "How many levels are there?",
+     "answer": "The game calls its levels evenings. The page says to clear five evenings and then keep going for a high score. I cleared First dew and started Second leaf."
+    },
+    {
+     "question": "What happens when you finish an evening?",
+     "answer": "A card called The evening held shows your score for that evening. Next evening starts the next one with the score reset to 0, and your best score stays in the header."
+    },
+    {
+     "question": "Is there a timer?",
+     "answer": "I did not see a timer or lives in the first two evenings. You can take your time choosing where each seed goes."
+    },
+    {
+     "question": "What do rain, pebbles and the moonbloom do?",
+     "answer": "The help card says rain upgrades the top plant in a column, pebbles block a cell until a nearby merge cracks them, and a moonbloom shatters them. They did not appear in my first two evenings."
+    }
+   ]
+  }
+ }
+}
