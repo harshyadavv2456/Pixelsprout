@@ -2,15 +2,15 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 172
+      "views": 173
     },
     {
       "slug": "getting-over-it",
-      "views": 92
+      "views": 94
     },
     {
       "slug": "dot-link-puzzle-connect-the-dots",
-      "views": 36
+      "views": 37
     },
     {
       "slug": "protect-my-dog",
@@ -18,14 +18,18 @@
     },
     {
       "slug": "2048-cube-run",
-      "views": 30
+      "views": 31
+    },
+    {
+      "slug": "baba-is-you",
+      "views": 26
     },
     {
       "slug": "save-the-doge",
       "views": 26
     },
     {
-      "slug": "baba-is-you",
+      "slug": "2048-cube-merge-block",
       "views": 26
     },
     {
@@ -33,12 +37,8 @@
       "views": 26
     },
     {
-      "slug": "2048-cube-merge-block",
-      "views": 25
-    },
-    {
       "slug": "100-seconds-labyrinth",
-      "views": 23
+      "views": 24
     },
     {
       "slug": "uno-online",
@@ -50,14 +50,14 @@
     },
     {
       "slug": "gravity-merge",
+      "views": 20
+    },
+    {
+      "slug": "100-doors-escape-puzzle",
       "views": 18
     },
     {
       "slug": "slide-ball-puzzle",
-      "views": 17
-    },
-    {
-      "slug": "100-doors-escape-puzzle",
       "views": 17
     },
     {
@@ -69,15 +69,15 @@
       "views": 15
     },
     {
+      "slug": "agent-hunt-hitman-shooter",
+      "views": 15
+    },
+    {
       "slug": "katana-fruits",
       "views": 14
     },
     {
       "slug": "12-minibattles-two-players",
-      "views": 14
-    },
-    {
-      "slug": "agent-hunt-hitman-shooter",
       "views": 14
     }
   ]
