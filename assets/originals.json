@@ -5,7 +5,7 @@
     "category": "Arcade",
     "source": "pixelsprout",
     "href": "/games/lumenstack.html",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/lumenstack/cover.jpg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/lumenstack/cover.svg"
   },
   {
     "slug": "petalstack",
@@ -13,7 +13,7 @@
     "category": "Arcade",
     "source": "pixelsprout",
     "href": "/games/petalstack.html",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/petalstack/cover.jpg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/petalstack/cover.svg"
   },
   {
     "slug": "mossgate",
@@ -21,7 +21,7 @@
     "category": "Arcade",
     "source": "pixelsprout",
     "href": "/games/mossgate.html",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/mossgate/cover.jpg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/mossgate/cover.svg"
   },
   {
     "slug": "dewdash",
@@ -29,7 +29,7 @@
     "category": "Arcade",
     "source": "pixelsprout",
     "href": "/games/dewdash.html",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/dewdash/cover.jpg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/dewdash/cover.svg"
   },
   {
     "slug": "dewrack",
@@ -37,7 +37,7 @@
     "category": "Arcade",
     "source": "pixelsprout",
     "href": "/games/dewrack.html",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/dewrack/cover.jpg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/dewrack/cover.svg"
   },
   {
     "slug": "petalrack",
@@ -45,7 +45,7 @@
     "category": "Puzzle",
     "source": "pixelsprout",
     "href": "/games/petalrack.html",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/petalrack/cover.jpg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/petalrack/cover.svg"
   },
   {
     "slug": "nectarjar",
@@ -53,7 +53,7 @@
     "category": "Puzzle",
     "source": "pixelsprout",
     "href": "/games/nectarjar.html",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/nectarjar/cover.jpg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/nectarjar/cover.svg"
   },
   {
     "slug": "cairnfall",
@@ -61,7 +61,7 @@
     "category": "Arcade",
     "source": "pixelsprout",
     "href": "/games/cairnfall.html",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/cairnfall/cover.jpg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/cairnfall/cover.svg"
   },
   {
     "slug": "kilnstack",
@@ -69,7 +69,7 @@
     "category": "Arcade",
     "source": "pixelsprout",
     "href": "/games/kilnstack.html",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/kilnstack/cover.jpg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/kilnstack/cover.svg"
   },
   {
     "slug": "lanternspire",
@@ -77,7 +77,7 @@
     "category": "Arcade",
     "source": "pixelsprout",
     "href": "/games/lanternspire.html",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/lanternspire/cover.jpg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/lanternspire/cover.svg"
   },
   {
     "slug": "reedline",
@@ -85,7 +85,7 @@
     "category": "Arcade",
     "source": "pixelsprout",
     "href": "/games/reedline.html",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/reedline/cover.jpg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/reedline/cover.svg"
   },
   {
     "slug": "galehook",
@@ -93,7 +93,7 @@
     "category": "Arcade",
     "source": "pixelsprout",
     "href": "/games/galehook.html",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/galehook/cover.jpg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/galehook/cover.svg"
   },
   {
     "slug": "cinderwell",
@@ -101,7 +101,7 @@
     "category": "Arcade",
     "source": "pixelsprout",
     "href": "/games/cinderwell.html",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/cinderwell/cover.jpg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/cinderwell/cover.svg"
   },
   {
     "slug": "riverstone",
@@ -109,7 +109,7 @@
     "category": "Puzzle",
     "source": "pixelsprout",
     "href": "/games/riverstone.html",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/riverstone/cover.jpg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/riverstone/cover.svg"
   },
   {
     "slug": "moonbloom",
@@ -117,7 +117,7 @@
     "category": "Puzzle",
     "source": "pixelsprout",
     "href": "/games/moonbloom.html",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/moonbloom/cover.jpg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/moonbloom/cover.svg"
   },
   {
     "slug": "cold-read",
@@ -125,7 +125,7 @@
     "category": "Original",
     "source": "pixelsprout",
     "href": "/cold-read/",
-    "thumbnail": "https://playpixelsprout.com/assets/cold-read-logo.jpg"
+    "thumbnail": "https://playpixelsprout.com/assets/cold-read-logo.svg"
   },
   {
     "slug": "guess-it-box",
@@ -133,6 +133,6 @@
     "category": "Original",
     "source": "pixelsprout",
     "href": "/gift-file/",
-    "thumbnail": "https://playpixelsprout.com/assets/gift-file-logo.jpg"
+    "thumbnail": "https://playpixelsprout.com/assets/gift-file-logo.svg"
   }
 ]
