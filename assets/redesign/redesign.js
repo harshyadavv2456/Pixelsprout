@@ -13,7 +13,7 @@
     var orig = origSet && origSet[g.s];
     return '<a class="card' + (orig ? ' card--original' : '') + '" href="/games/' + esc(g.s) + '.html">' +
       '<span class="card__media"><img src="' + esc(g.i || '/assets/logo-icon.png') + '" alt="' + esc(g.t) + '" width="320" height="320" loading="lazy" decoding="async">' +
-      (orig ? '<span class="card__badge">Original</span>' : '') + '<span class="card__play" aria-hidden="true">Play</span></span>' +
+      (orig ? '<span class="card__badge">Original</span>' : '') + (g.v ? '<span class="card__badge card__badge--hot">Hot</span>' : '') + '<span class="card__play" aria-hidden="true">Play</span></span>' +
       '<span class="card__title">' + esc(g.t) + '</span>' + (g.c ? '<span class="card__meta">' + esc(g.c) + '</span>' : '') + '</a>';
   }
 
@@ -23,7 +23,15 @@
     home().then(function (h) { var a = h.all; location.href = '/games/' + a[Math.floor(Math.random() * a.length)] + '.html'; })
       .catch(function () { location.href = '/all-games/'; });
   }
+  var GENRES = ['Action','Puzzle','Arcade','Racing','Sports','Shooter','Adventure','Strategy','Girls','Two Player','Multiplayer','Casual'];
+  function genreNav() {
+    var top = document.querySelector('.topbar'); if (!top || document.querySelector('.rd-genres')) return;
+    var n = document.createElement('nav'); n.className = 'rd-genres'; n.setAttribute('aria-label', 'Genres');
+    n.innerHTML = GENRES.map(function (g) { var u = '/' + slugify(g) + '/'; return '<a href="' + u + '"' + (location.pathname === u ? ' aria-current="page"' : '') + '>' + esc(g) + '</a>'; }).join('');
+    top.insertAdjacentElement('afterend', n);
+  }
   function ensureHeader() {
+    genreNav();
     var inner = document.querySelector('.topbar__inner');
     if (inner && !inner.querySelector('.topnav')) {
       var nav = document.createElement('nav'); nav.className = 'topnav'; nav.setAttribute('aria-label', 'Primary');
@@ -91,6 +99,11 @@
       ['Do I need to install anything?', 'No. Pixelsprout games are HTML5 and load directly in the page.']
     ];
     var about = document.querySelector('.game-about') || page;
+    if (!document.querySelector('.rd-howto')) {
+      var ht = document.createElement('section'); ht.className = 'rd-howto';
+      ht.innerHTML = '<h2>How to play</h2><ol><li>Press Play in the game frame above; it loads right in the page.</li><li>Use your mouse, keyboard or touch, following the in-game prompts.</li><li>Tap full screen on phones and turn to landscape for the best view.</li></ol>';
+      about.parentNode.insertBefore(ht, about.nextSibling); about = ht;
+    }
     var hasFaq = Array.prototype.some.call(document.querySelectorAll('script[type="application/ld+json"]'), function (s) { return /FAQPage/.test(s.textContent); });
     var sec = document.createElement('section'); sec.className = 'rd-faq';
     sec.innerHTML = '<h2>At a glance</h2>' + faq.map(function (q) { return '<details><summary>' + esc(q[0]) + '</summary><p>' + esc(q[1]) + '</p></details>'; }).join('');
@@ -110,6 +123,10 @@
       var pn = document.createElement('section'); pn.className = 'rd-next';
       pn.innerHTML = '<div class="rd-head"><h2>Play next</h2><button class="btn-ghost" type="button" data-surprise>🎲 Surprise me</button></div><div class="rd-next__list">' + picks.map(card).join('') + '</div>';
       (document.querySelector('.rd-trust') || bar || page).insertAdjacentElement('afterend', pn);
+      var more = pool.filter(function (g) { return picks.indexOf(g) < 0; }).slice(0, 12);
+      if (more.length) { var ml = document.createElement('section'); ml.className = 'rd-more';
+        ml.innerHTML = '<div class="rd-head"><h2>More like this</h2><a class="shelf__more" href="/' + slugify(genre) + '/">All ' + esc(genre) + '</a></div><div class="rd-track">' + more.map(card).join('') + '</div>';
+        (document.querySelector('.rd-faq') || page).insertAdjacentElement('afterend', ml); }
     });
   }
 
