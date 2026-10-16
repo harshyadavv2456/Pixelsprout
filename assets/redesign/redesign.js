@@ -66,6 +66,31 @@
     }).catch(function () {});
   }
 
+
+  /* ---- Hero extras: Just added, Game of the day, stats (data: home.json from build-redesign-data.py) ---- */
+  function heroExtras(h) {
+    var now = Date.now() / 1000, wk = (h.recent || []).filter(function (g) { return g.a >= now - 7 * 86400; });
+    var n = wk.length || h.new7 || 0;
+    var real = wk.filter(function (g) { return g.ok; });
+    var ja = !n ? '' : '<section class="ja" aria-labelledby="ja-title"><p class="ja__label">Just added</p>' +
+      '<h2 class="ja__title" id="ja-title">' + n + ' new game' + (n === 1 ? '' : 's') + ' just added</h2>' +
+      '<div class="ja__grid">' + real.slice(0, 6).map(function (g) {
+        return '<a class="ja__item" href="/games/' + esc(g.s) + '.html"><span class="ja__media"><img src="' + esc(g.i) + '" alt="" width="200" height="125" loading="lazy" decoding="async"></span><span class="ja__name">' + esc(g.t) + '</span></a>'; }).join('') +
+      '</div><a class="btn-lime ja__cta" href="/new-games/">Play the new games →</a></section>';
+    var pool = real.length ? real : (h.recent || []).filter(function (g) { return g.ok; });
+    var gotd = '';
+    if (pool.length) {
+      var d = new Date(), day = Math.floor(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) / 86400000);
+      var g = pool[day % pool.length];
+      gotd = '<section class="gotd" aria-labelledby="gotd-title"><a class="gotd__media" href="/games/' + esc(g.s) + '.html" tabindex="-1" aria-hidden="true"><img src="' + esc(g.i) + '" alt="" width="640" height="400" decoding="async"></a>' +
+        '<div class="gotd__body"><p class="label">Game of the day</p><h2 class="gotd__title" id="gotd-title">' + esc(g.t) + '</h2>' +
+        '<p class="gotd__desc">A free ' + esc((g.c || 'browser').toLowerCase()) + ' game that plays right in your browser.</p>' +
+        '<a class="btn-lime" href="/games/' + esc(g.s) + '.html">▶ Play ' + esc(g.t) + '</a></div></section>';
+    }
+    var st = h.stats ? '<p class="rd-stats">' + Number(h.stats.games).toLocaleString('en-US') + ' free games · ' + n + ' added this week · ' + h.stats.genres + ' genres</p>' : '';
+    return { ja: ja, gotd: gotd, stats: st };
+  }
+
   /* ---- Homepage ---- */
   function homepage() {
     var main = document.querySelector('#main, main'); if (!main) return;
@@ -84,7 +109,8 @@
       var cols = '<section class="rd-block"><h2>Collections</h2>' + h.collections.map(function (c) {
         return '<div class="rd-row"><div class="rd-head"><h3>' + esc(c.name) + '</h3><a class="shelf__more" href="/' + esc(c.slug) + '/">See all</a></div>' +
           '<div class="shelf__track rd-track">' + c.games.map(card).join('') + '</div></div>'; }).join('') + '</section>';
-      var wrap = document.createElement('div'); wrap.className = 'rd-home'; wrap.innerHTML = picksHTML(h.picks, 'Top picks') + hero + tr + cols;
+      var wrap = document.createElement('div'); wrap.className = 'rd-home'; var hx = heroExtras(h); hero = hero.replace('</section>', hx.stats + hx.ja + '</section>');
+      wrap.innerHTML = hero + hx.gotd + picksHTML(h.picks, 'Top picks') + tr + cols;
       main.insertBefore(wrap, main.firstChild);
       var grid = wrap.querySelector('[data-rd-grid]');
       var cur = 'trending', phoneOnly = false;

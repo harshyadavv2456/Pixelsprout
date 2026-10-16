@@ -1285,3 +1285,28 @@ html:not(.rd-ready) body.home-page #main { opacity: 0; animation: rdReveal .01s 
 .tp-card__title { font: 600 var(--fs-base)/1.25 var(--f-display); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .tp-card__play { margin-top: auto; align-self: flex-start; min-height: 44px; padding: 0 16px; }
 @media (max-width: 479px) { .tp-card__play { align-self: stretch; justify-content: center; } .tp-card__title { font-size: 14px; } }
+
+/* Hero extras: Just added card, Game of the day, stats (mobile first) */
+.rd-stats { margin: var(--sp-4) 0 0; font: 500 var(--fs-xs)/1.4 var(--f-mono); color: var(--text-2); letter-spacing: .04em; }
+.ja { margin-top: var(--sp-5); padding: var(--sp-4); border-radius: var(--r-panel); background: var(--s1); border: 1px solid var(--line-2); }
+.ja__label { display: inline-block; margin: 0 0 var(--sp-2); padding: 4px 10px; border-radius: var(--r-pill); background: var(--accent); color: var(--accent-ink);
+  font: 600 11px/1 var(--f-mono); text-transform: uppercase; letter-spacing: .1em; }
+.ja__title { margin: 0 0 var(--sp-3); font: 700 var(--fs-lg)/1.15 var(--f-display); }
+.ja__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sp-2); }
+.ja__item { display: flex; flex-direction: column; gap: 4px; min-width: 0; color: var(--text); text-decoration: none; }
+.ja__media { display: block; aspect-ratio: 16 / 10; border-radius: var(--r-sm); overflow: hidden; background: var(--s2); }
+.ja__media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.ja__name { font-size: 12px; line-height: 1.25; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ja__cta { margin-top: var(--sp-4); width: 100%; justify-content: center; min-height: 48px; font-size: var(--fs-base); }
+.gotd { display: grid; gap: var(--sp-4); margin: var(--sp-6) 0; padding: var(--sp-4); border-radius: var(--r-panel); background: var(--s1); border: 1px solid var(--line); }
+.gotd__media { display: block; aspect-ratio: 16 / 10; border-radius: var(--r-card); overflow: hidden; background: var(--s2); }
+.gotd__media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.gotd__body { display: flex; flex-direction: column; gap: var(--sp-2); align-items: flex-start; }
+.gotd__title { margin: 0; font: 700 var(--fs-xl)/1.1 var(--f-display); }
+.gotd__desc { margin: 0 0 var(--sp-2); color: var(--text-2); }
+.gotd .btn-lime { min-height: 48px; }
+@media (min-width: 768px) {
+  .ja__grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .ja__cta { width: auto; }
+  .gotd { grid-template-columns: 1.4fr 1fr; align-items: center; padding: var(--sp-5); }
+}

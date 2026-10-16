@@ -81,3 +81,49 @@ for c, gs in cats.items():
     json.dump(cp, open(os.path.join(out, "picks", slug(c) + ".json"), "w"), separators=(",", ":"))
 print("top picks:", ", ".join(p["s"] for p in picks))
 
+
+# ---- Just added / Game of the day / stats (homepage hero) + /new-games/ page ----
+# Added date = first git commit that created games/<slug>.html (games-index.json has no date field).
+import subprocess, time, datetime, html as _html
+def _added_dates():
+    out = subprocess.run(["git", "log", "--diff-filter=A", "--format=@%ct", "--name-only", "--", "games/"],
+                         cwd=R, capture_output=True, text=True).stdout
+    dates, ts = {}, None
+    for line in out.splitlines():
+        if line.startswith("@"): ts = int(line[1:])
+        elif line.startswith("games/") and line.endswith(".html"):
+            dates[line[6:-5]] = ts  # log is newest-first, so the last hit is the first add
+    return dates
+added = _added_dates()
+now = int(time.time())
+WINDOW_DAYS = 30
+recent = sorted((g for g in idx if added.get(g["slug"], 0) >= now - WINDOW_DAYS * 86400),
+                key=lambda g: -added[g["slug"]])
+def _new(g):
+    d = slim(g); d["a"] = added[g["slug"]]; d["ok"] = 1 if real_thumb(g) else 0; return d
+home["recent"] = [_new(g) for g in recent]
+home["new7"] = sum(1 for g in recent if added[g["slug"]] >= now - 7 * 86400)
+home["stats"] = {"games": len(idx), "genres": len(cats)}
+home["built"] = now
+json.dump(home, open(os.path.join(out, "home.json"), "w"), separators=(",", ":"))
+
+import sys as _sys
+_sys.path.insert(0, R)
+import site_shell as _S
+_rows = "".join(
+    _S.card(g).replace('<span class="card__meta">',
+        f'<span class="card__meta">Added {datetime.datetime.fromtimestamp(added[g["slug"]]).strftime("%-d %b")} · ', 1)
+    for g in recent)
+_main = (_S.crumbs([("Home", "/"), ("New games", None)]) +
+         '<header class="page-head"><p class="eyebrow">New</p><h1>New games</h1>'
+         f'<p>Every game added to Pixelsprout in the last {WINDOW_DAYS} days, newest first. {len(recent)} games.</p></header>'
+         f'<div class="grid">{_rows}</div>')
+_head = _S.head("New games — Pixelsprout", _html.escape(f"Free browser games added to Pixelsprout in the last {WINDOW_DAYS} days, newest first."),
+                canonical="https://playpixelsprout.com/new-games/")
+os.makedirs(os.path.join(R, "new-games"), exist_ok=True)
+open(os.path.join(R, "new-games", "index.html"), "w", encoding="utf-8", newline="\n").write(
+    _S.page(_head, _main, body_attrs='class="category-page" data-page="new-games"', total_games=len(idx)))
+_sm = os.path.join(R, "sitemap.xml"); _t = open(_sm, encoding="utf-8").read()
+if "/new-games/<" not in _t:
+    open(_sm, "w", encoding="utf-8").write(_t.replace("</urlset>", "  <url><loc>https://playpixelsprout.com/new-games/</loc><priority>0.8</priority></url>\n</urlset>"))
+print("new in 7 days:", home["new7"], "| recent (30d):", len(recent))
