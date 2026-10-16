@@ -1,0 +1,112 @@
+{
+ "slug": "ninja-adventure",
+ "played": true,
+ "pages": {
+  "tips": {
+   "intro": "These tips come from a real session of Ninja Adventure on Pixelsprout. I picked Ninja Boy, opened Level 1, and played for about four to five minutes. I never finished the level, so everything here is what I saw while running, jumping, and collecting coins.",
+   "tips": [
+    "Hold Right while tapping Up repeatedly when you need to clear a gap or climb a stack of wooden crates. That combination got me onto ledges that a single jump left me short of.",
+    "Coins pick up the moment you touch them. Run through the arcs and platforms instead of stopping on each one, and the gold counter climbs fast. Mine went from 600 to 2500 in that short run.",
+    "Spam X to throw kunai and Z to swing the sword when enemies are near. I saw the kunai fly and the sword animation play, though browser input delay made clean hits hard to confirm.",
+    "Watch for purple gems on high ledges. I saw one above a raised area but could not reach it in time. The page text says coins and hidden gems unlock levels, so those high pickups matter.",
+    "Jump timing is the hard part on crate stacks and tall dirt plateaus. Approach with a short run, then tap Up as you hit the edge rather than jumping from a dead stop.",
+    "The pink health bar sits in the HUD with a plus icon. I never took a hit, so I cannot say how much damage the orange pumpkin-faced enemies deal, but keep an eye on that bar once fights start.",
+    "If the camera stops at the right edge and your ninja slides partly off-screen, try heading back left. That happened in my run and I could not tell whether it was the end of the stage or a quirk."
+   ],
+   "conclusion": "Level 1 is a bright side-scrolling run where coins and careful jumps matter most. Practice holding Right with repeated Up presses on crates, and save kunai and sword swings for the orange enemies you meet on the way.",
+   "extra_sections": [
+    {
+     "heading": "What the HUD showed me",
+     "paragraphs": [
+      "The top of the screen shows a pink health bar with a plus icon, a red gem counter that stayed at 0 the whole time I played, and a gold coin counter that rose as I touched coins. Top right has a green speaker icon and a pause icon.",
+      "My coin count moved in clear steps: 600, then 1300, then 1900, then 2500. The gem counter never moved because I never reached the purple gem on the high ledge."
+     ]
+    },
+    {
+     "heading": "What I did not get to see",
+     "paragraphs": [
+      "I never finished Level 1, never saw a level-complete screen, never watched health drop, never confirmed an enemy kill, and never hit a game over. The LEVEL screen showed six tiles with only tile 1 unlocked and the rest padlocked, so later stages stayed closed for this session."
+     ]
+    }
+   ]
+  },
+  "controls": {
+   "intro": "Ninja Adventure uses arrow keys plus two attack keys on desktop, and always draws on-screen touch buttons. Here is what worked in my browser session.",
+   "desktop": "ArrowRight and ArrowLeft move the ninja. ArrowUp jumps. X throws a kunai that I saw fly across the screen. Z swings the sword and plays the slash animation. ArrowDown, A, Space, F, S, and Ctrl had no visible effect in the limited testing I did.",
+   "mobile": "On-screen touch controls stay drawn the whole time: left, right, up, and down arrows, a round A button, a round up-arrow button, and a round kunai or dart button. I played on desktop with a keyboard and did not test the touch buttons myself, so tapping those pads should be the phone scheme.",
+   "tips": [
+    "Hold Right and tap Up in a short burst to clear gaps and climb crate walls more reliably than a single jump.",
+    "X is the throw and Z is the slash. Both showed clear animations when I pressed them.",
+    "Coins collect on contact, so you do not need a separate pickup key.",
+    "The green speaker and pause icons sit in the top-right corner of the HUD."
+   ]
+  },
+  "beginner-guide": {
+   "intro": "New to Ninja Adventure? This guide covers the menus and the first minutes of Level 1 from a session where I chose Ninja Boy and never quite finished the stage.",
+   "what_it_is": "Ninja Adventure is a free browser game on Pixelsprout, loaded through GamePix with an OK, PLAY NOW button and a load that sat near 99 percent for about 25 to 30 seconds. After the title screen with PLAY and FULL SCREEN, you pick Ninja Boy or Ninja Girl, then see a LEVEL screen with six tiles. Only tile 1 was unlocked for me; the others had padlocks. Level 1 is a 2D side-scrolling platformer where you run, jump, throw kunai, and slash with a sword while collecting coins and gems and fighting orange pumpkin-like enemies with angry faces. The background is a bright cartoon city skyline with trees, and a side ad sat beside the game without blocking play.",
+   "first_steps": [
+    "Press OK, PLAY NOW on the GamePix load screen and wait through the long load near 99 percent.",
+    "On the title screen, use PLAY. FULL SCREEN is there if you want it.",
+    "On PLAYER SELECT, pick Ninja Boy or Ninja Girl. I chose Ninja Boy.",
+    "On the LEVEL screen, click the unlocked tile 1, then use the green play button at the bottom.",
+    "Run right with ArrowRight, jump grass ledges and dirt plateaus with ArrowUp, and touch coins as you go.",
+    "When you see stacked wooden crates, hold Right and tap Up repeatedly to climb them.",
+    "Use X for kunai and Z for the sword near the orange enemies that wait by raised ledges."
+   ],
+   "who_its_for": "It suits players who like casual Mario-style run-and-jump platformers with coin collecting and simple attack buttons. The first level is bright and easy to pick up, though high ledges and crates take practice.",
+   "extra_sections": [
+    {
+     "heading": "How the level select looked",
+     "paragraphs": [
+      "After character select, the LEVEL screen showed six tiles in a row. Only the first tile was open. The other five had padlocks. Along the bottom sat a green play button, a list button, and a green round button that looked like a home control. I clicked level 1 and started from there."
+     ]
+    },
+    {
+     "heading": "Coins, gems, and what the page claims",
+     "paragraphs": [
+      "Page text on the game says you collect coins and hidden gems to unlock levels. In my run the gold counter climbed as I touched coins on arcs and platforms, and I spotted one purple gem on a high ledge I never reached. The red gem counter on the HUD stayed at 0. I never saw a level-complete screen, so I cannot confirm how unlocks actually apply after a clear."
+     ]
+    }
+   ]
+  },
+  "similar": {
+   "intro": "If you enjoy Ninja Adventure, you probably like bright 2D side-scrolling platformers where you run right, jump ledges, grab coins, and smack simple enemies with a throw and a close slash. The feel is casual and cartoon, closer to a short Mario-style stage than a hard precision gauntlet. Look for free browser platformers with left-right movement, a jump key, collectible coins or gems, short locked level maps, and light combat against a few enemy types. Games that mix running, jumping onto crates or platforms, and basic attack buttons give the same vibe without needing a long story or complex menus."
+  },
+  "faq": {
+   "faqs": [
+    {
+     "question": "Is Ninja Adventure free to play?",
+     "answer": "Yes. It runs in the browser on Pixelsprout through GamePix with no download. A side ad sat beside the game while I played and did not cover the stage."
+    },
+    {
+     "question": "How do you start a game?",
+     "answer": "Press OK, PLAY NOW on the GamePix screen, wait out the load near 99 percent, tap PLAY on the title, pick Ninja Boy or Ninja Girl, then open the unlocked level 1 tile and press the green play button."
+    },
+    {
+     "question": "What are the desktop controls?",
+     "answer": "ArrowRight and ArrowLeft move, ArrowUp jumps, X throws a kunai, and Z swings the sword. ArrowDown, A, Space, F, S, and Ctrl did nothing visible in my tests."
+    },
+    {
+     "question": "Are there touch controls?",
+     "answer": "Yes. On-screen pads stay drawn: direction arrows, a round A button, a round up-arrow button, and a round kunai or dart button. I did not test tapping them myself."
+    },
+    {
+     "question": "How many levels are there?",
+     "answer": "The LEVEL screen showed six tiles. Only tile 1 was unlocked in my session; the rest had padlocks. I never finished Level 1, so I cannot say how the others open."
+    },
+    {
+     "question": "What do you collect?",
+     "answer": "Coins pick up on contact and raise the gold counter. I also saw a purple gem on a high ledge. Page text says coins and hidden gems unlock levels. My gem counter stayed at 0 because I never grabbed that gem."
+    },
+    {
+     "question": "What enemies appear in Level 1?",
+     "answer": "I saw orange pumpkin-like enemies with angry faces near a raised ledge. I spammed kunai and sword near them but, with browser input delay, I never clearly confirmed a kill."
+    },
+    {
+     "question": "Can you pick a girl ninja?",
+     "answer": "Yes. PLAYER SELECT offers Ninja Boy and Ninja Girl. I only played as Ninja Boy, so I cannot compare how they feel in Level 1."
+    }
+   ]
+  }
+ }
+}
