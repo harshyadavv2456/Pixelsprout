@@ -96,7 +96,7 @@
     }
     var faq = [
       ['Is ' + title + ' free to play?', 'Yes. ' + title + ' is free on Pixelsprout and plays in your web browser with no download or sign-up.'],
-      ['Can I play ' + title + ' on my phone?', 'Yes, it runs in a modern mobile browser. Rotate to landscape or use full screen for the best view.'],
+      ['Can I play ' + title + ' on my phone?', document.querySelector('.desktop-only') ? 'No. ' + title + ' is desktop only: it needs a mouse and keyboard.' : 'Yes, it runs in a modern mobile browser. Rotate to landscape or use full screen for the best view.'],
       ['What kind of game is ' + title + '?', title + ' is a ' + genre.toLowerCase() + ' game. Find more in the ' + genre + ' section.'],
       ['Do I need to install anything?', 'No. Pixelsprout games are HTML5 and load directly in the page.']
     ];
