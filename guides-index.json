@@ -19424,5 +19424,12 @@
     "beginner-guide": "/guides/moonbloom-beginner-guide/",
     "similar": "/guides/games-like-moonbloom/",
     "faq": "/guides/moonbloom-faq/"
+  },
+  "lumenstack": {
+    "tips": "/guides/lumenstack-tips/",
+    "controls": "/guides/lumenstack-controls/",
+    "beginner-guide": "/guides/lumenstack-beginner-guide/",
+    "similar": "/guides/games-like-lumenstack/",
+    "faq": "/guides/lumenstack-faq/"
   }
 }

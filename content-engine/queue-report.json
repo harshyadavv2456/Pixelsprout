@@ -8,9 +8,53 @@
     "2048.json": "0358c5d7f2e13b947d9201ac211c5bf1ebbfb27e6fb6cef27cab9271114d6d09",
     "toilet-rush-draw-to-pee.json": "fdd6754ca1970f77f043383aa646ad6a6f9bdb774e072a49f7504e8c0b3581cc",
     "moonbloom.json": "4e434c8a3e3866e9ceee6a558db29608e71a3bce5db6e0957f91f8d614d9958b",
-    "skateboard-challenge.json": "0f65a184dca98b2abed1dc720388acdcd5fc675e651a2d234142ffad2ac5f3a4"
+    "skateboard-challenge.json": "0f65a184dca98b2abed1dc720388acdcd5fc675e651a2d234142ffad2ac5f3a4",
+    "lumenstack.json": "eee4be197ec83edc379402850a81e8a1510aa8f179166c1d5b53d4619cf02748",
+    "ninja-adventure.json": "2a8b94c50ee6005c481a617cf5dc2a18e0b1bccfe7fc0d02357e2f1d401cafa9"
   },
   "runs": [
+    {
+      "ran_at": "2026-10-16T06:21:36Z",
+      "published": [
+        {
+          "file": "lumenstack.json",
+          "slug": "lumenstack",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/lumenstack-beginner-guide/",
+            "https://playpixelsprout.com/guides/lumenstack-controls/",
+            "https://playpixelsprout.com/guides/lumenstack-faq/",
+            "https://playpixelsprout.com/guides/games-like-lumenstack/",
+            "https://playpixelsprout.com/guides/lumenstack-tips/"
+          ]
+        },
+        {
+          "file": "ninja-adventure.json",
+          "slug": "ninja-adventure",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/ninja-adventure-beginner-guide/",
+            "https://playpixelsprout.com/guides/ninja-adventure-controls/",
+            "https://playpixelsprout.com/guides/ninja-adventure-faq/",
+            "https://playpixelsprout.com/guides/games-like-ninja-adventure/",
+            "https://playpixelsprout.com/guides/ninja-adventure-tips/"
+          ]
+        }
+      ],
+      "rejected": []
+    },
     {
       "ran_at": "2026-10-16T03:38:23Z",
       "published": [

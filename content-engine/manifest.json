@@ -18570,14 +18570,22 @@
   },
   "ninja-adventure": {
     "generated_at": "2026-08-03T06:59:38Z",
-    "any_fallback": true,
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/ninja-adventure-tips/",
       "controls": "/guides/ninja-adventure-controls/",
       "beginner-guide": "/guides/ninja-adventure-beginner-guide/",
       "similar": "/guides/games-like-ninja-adventure/",
       "faq": "/guides/ninja-adventure-faq/"
-    }
+    },
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-10-16T06:21:36Z"
   },
   "kly-kly": {
     "generated_at": "2026-08-03T06:59:39Z",
@@ -30604,5 +30612,23 @@
       "tips"
     ],
     "bot_updated_at": "2026-10-16T03:38:07Z"
+  },
+  "lumenstack": {
+    "pages": {
+      "tips": "/guides/lumenstack-tips/",
+      "controls": "/guides/lumenstack-controls/",
+      "beginner-guide": "/guides/lumenstack-beginner-guide/",
+      "similar": "/guides/games-like-lumenstack/",
+      "faq": "/guides/lumenstack-faq/"
+    },
+    "any_fallback": false,
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-10-16T06:21:36Z"
   }
 }

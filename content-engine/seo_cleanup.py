@@ -81,6 +81,12 @@ def main():
     args = parser.parse_args()
 
     games = {g["slug"]: g for g in json.load(open(GAMES_INDEX_PATH, encoding="utf-8"))}
+    # Pixelsprout originals live in assets/originals.json, not games-index.json
+    originals_path = os.path.join(REPO_ROOT, "assets", "originals.json")
+    if os.path.exists(originals_path):
+        for g in json.load(open(originals_path, encoding="utf-8")):
+            if isinstance(g, dict) and g.get("slug"):
+                games.setdefault(g["slug"], g)
     manifest = json.load(open(MANIFEST_PATH, encoding="utf-8"))
     with open(SITEMAP_PATH, encoding="utf-8") as f:
         sitemap = f.read()
