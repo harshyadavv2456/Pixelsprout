@@ -10,6 +10,10 @@ Style reference: foundplay.io (dark base, single acid accent). Our own palette, 
 - Untouched: ad slots/scripts (`ad_*`, `assets/ads.js`, AdSense/Adsterra), `<head>` (titles, descriptions, canonicals, robots), `sitemap.xml`, URLs.
 - CSS changes apply to every page immediately (all pages load `/styles.css`). Header/badge markup appears on pages as they are re-rendered (`migrate-ui.py` / generators). A full re-render was intentionally NOT run yet (would touch ~19k files).
 
+## Done (rough preview, compressed timeline)
+- Homepage: hero with Surprise me, trending tabs (Trending/Originals/New), phone-friendly toggle (placeholder), collections rows. Injected by `assets/redesign/redesign.js` (loaded from `pixelsprout-features.js`), data from `build-redesign-data.py`.
+- Game pages (all existing): trust line, Play next (1 original + 2 same genre), "At a glance" FAQ + FAQPage JSON-LD (added client-side).
+
 ## Next
 - **Days 3-4 homepage:** trending tabs (24h/7d/all), working Surprise me (random game from games-index.json, JS on `[data-surprise]`), collections row, phone-friendly filter; originals first (`originals_first`).
 - **Day 5 game page:** Play next list (3 games), FAQ block + FAQPage JSON-LD, link-checked trust line.
