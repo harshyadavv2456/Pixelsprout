@@ -1,0 +1,123 @@
+/* Pixelsprout redesign layer: Surprise me, homepage trending/collections, game-page Play next + FAQ + trust line.
+   Loaded by pixelsprout-features.js on every page. Ad slots are never moved or removed. */
+(function () {
+  'use strict';
+  var D = '/assets/redesign/';
+  var esc = function (s) { return String(s || '').replace(/[&<>"']/g, function (c) { return '&#' + c.charCodeAt(0) + ';'; }); };
+  var getJSON = function (u) { return fetch(u, { credentials: 'same-origin' }).then(function (r) { if (!r.ok) throw r.status; return r.json(); }); };
+  var slugify = function (s) { return String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); };
+  var homeP; var home = function () { return homeP || (homeP = getJSON(D + 'home.json')); };
+  var origSet = null;
+
+  function card(g, opts) {
+    var orig = origSet && origSet[g.s];
+    return '<a class="card' + (orig ? ' card--original' : '') + '" href="/games/' + esc(g.s) + '.html">' +
+      '<span class="card__media"><img src="' + esc(g.i || '/assets/logo-icon.png') + '" alt="' + esc(g.t) + '" width="320" height="320" loading="lazy" decoding="async">' +
+      (orig ? '<span class="card__badge">Original</span>' : '') + '<span class="card__play" aria-hidden="true">Play</span></span>' +
+      '<span class="card__title">' + esc(g.t) + '</span>' + (g.c ? '<span class="card__meta">' + esc(g.c) + '</span>' : '') + '</a>';
+  }
+
+  /* ---- Surprise me ---- */
+  function surprise(e) {
+    if (e) e.preventDefault();
+    home().then(function (h) { var a = h.all; location.href = '/games/' + a[Math.floor(Math.random() * a.length)] + '.html'; })
+      .catch(function () { location.href = '/all-games/'; });
+  }
+  function ensureHeader() {
+    var inner = document.querySelector('.topbar__inner');
+    if (inner && !inner.querySelector('.topnav')) {
+      var nav = document.createElement('nav'); nav.className = 'topnav'; nav.setAttribute('aria-label', 'Primary');
+      nav.innerHTML = '<a href="/all-games/">Browse</a><a href="/originals/">Originals</a><a href="/guides/">Guides</a><a class="btn-ghost" href="/all-games/" data-surprise>Surprise me</a>';
+      var act = inner.querySelector('.topbar__actions'); inner.insertBefore(nav, act || null);
+    }
+    var actions = document.querySelector('.topbar__actions');
+    if (actions && !actions.querySelector('.surprise-mini')) {
+      var b = document.createElement('a'); b.href = '/all-games/'; b.className = 'icon-btn surprise-mini'; b.setAttribute('data-surprise', '');
+      b.setAttribute('aria-label', 'Surprise me: random game'); b.textContent = '🎲'; actions.insertBefore(b, actions.firstChild);
+    }
+  }
+  document.addEventListener('click', function (e) { var t = e.target.closest && e.target.closest('[data-surprise]'); if (t) surprise(e); });
+
+  /* ---- Homepage ---- */
+  function homepage() {
+    var main = document.querySelector('#main, main'); if (!main) return;
+    home().then(function (h) {
+      origSet = {}; h.originals.forEach(function (g) { origSet[g.s] = 1; });
+      var hero = '<section class="rd-hero"><p class="label">Free · No download · Plays on phone</p>' +
+        '<p class="rd-hero__title h1">Pick a game.<br><span class="accent-text">Start playing.</span></p>' +
+        '<div class="rd-hero__cta"><button class="btn-lime" type="button" data-surprise>🎲 Surprise me</button>' +
+        '<a class="btn-ghost" href="/all-games/">Browse all games</a><a class="btn-ghost" href="/originals/">Pixelsprout Originals</a></div></section>';
+      var tabs = [['trending', 'Trending'], ['originals', 'Originals'], ['newest', 'New']];
+      var tr = '<section class="rd-block"><div class="rd-head"><h2>What people are playing</h2>' +
+        '<label class="rd-phone"><input type="checkbox" data-rd-phone> Phone-friendly</label></div>' +
+        '<div class="rd-tabs" role="tablist">' + tabs.map(function (t, i) {
+          return '<button role="tab" type="button" class="rd-tab" data-tab="' + t[0] + '" aria-selected="' + (i ? 'false' : 'true') + '">' + t[1] + '</button>'; }).join('') +
+        '</div><div class="grid rd-grid" data-rd-grid></div></section>';
+      var cols = '<section class="rd-block"><h2>Collections</h2>' + h.collections.map(function (c) {
+        return '<div class="rd-row"><div class="rd-head"><h3>' + esc(c.name) + '</h3><a class="shelf__more" href="/' + esc(c.slug) + '/">See all</a></div>' +
+          '<div class="shelf__track rd-track">' + c.games.map(card).join('') + '</div></div>'; }).join('') + '</section>';
+      var wrap = document.createElement('div'); wrap.className = 'rd-home'; wrap.innerHTML = hero + tr + cols;
+      main.insertBefore(wrap, main.firstChild);
+      var grid = wrap.querySelector('[data-rd-grid]');
+      var show = function (k) { grid.innerHTML = (h[k] || []).slice(0, 12).map(card).join(''); };
+      show('trending');
+      wrap.querySelectorAll('.rd-tab').forEach(function (b) { b.addEventListener('click', function () {
+        wrap.querySelectorAll('.rd-tab').forEach(function (x) { x.setAttribute('aria-selected', x === b ? 'true' : 'false'); }); show(b.dataset.tab); }); });
+      /* All catalogue games are HTML5 and work in a mobile browser; the filter is a placeholder until per-game flags exist. */
+      wrap.querySelector('[data-rd-phone]').addEventListener('change', function () { grid.classList.toggle('rd-grid--phone', this.checked); });
+    }).catch(function () {});
+  }
+
+  /* ---- Game page ---- */
+  function gamepage() {
+    var page = document.querySelector('.game-page'); if (!page) return;
+    var slug = location.pathname.replace(/^.*\/games\//, '').replace(/\.html$/, '');
+    var title = (document.querySelector('.game-bar__title') || document.querySelector('h1') || {}).textContent || document.title;
+    title = title.trim();
+    var genre = 'Arcade';
+    document.querySelectorAll('script[type="application/ld+json"]').forEach(function (s) {
+      try { var j = JSON.parse(s.textContent); if (j['@type'] === 'VideoGame' && j.genre) genre = j.genre; } catch (e) {}
+    });
+    var bar = document.querySelector('.game-bar');
+    if (bar && !document.querySelector('.rd-trust')) {
+      var t = document.createElement('p'); t.className = 'rd-trust';
+      t.innerHTML = '✓ Plays right here in your browser: free, no download, no account. Game link checked by Pixelsprout.';
+      bar.parentNode.insertBefore(t, bar.nextSibling);
+    }
+    var faq = [
+      ['Is ' + title + ' free to play?', 'Yes. ' + title + ' is free on Pixelsprout and plays in your web browser with no download or sign-up.'],
+      ['Can I play ' + title + ' on my phone?', 'Yes, it runs in a modern mobile browser. Rotate to landscape or use full screen for the best view.'],
+      ['What kind of game is ' + title + '?', title + ' is a ' + genre.toLowerCase() + ' game. Find more in the ' + genre + ' section.'],
+      ['Do I need to install anything?', 'No. Pixelsprout games are HTML5 and load directly in the page.']
+    ];
+    var about = document.querySelector('.game-about') || page;
+    var hasFaq = Array.prototype.some.call(document.querySelectorAll('script[type="application/ld+json"]'), function (s) { return /FAQPage/.test(s.textContent); });
+    var sec = document.createElement('section'); sec.className = 'rd-faq';
+    sec.innerHTML = '<h2>At a glance</h2>' + faq.map(function (q) { return '<details><summary>' + esc(q[0]) + '</summary><p>' + esc(q[1]) + '</p></details>'; }).join('');
+    about.parentNode.insertBefore(sec, about.nextSibling);
+    if (!hasFaq) {
+      var ld = document.createElement('script'); ld.type = 'application/ld+json';
+      ld.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(function (q) {
+        return { '@type': 'Question', name: q[0], acceptedAnswer: { '@type': 'Answer', text: q[1] } }; }) });
+      document.head.appendChild(ld);
+    }
+    Promise.all([getJSON(D + 'cat/' + slugify(genre) + '.json').catch(function () { return []; }), home().catch(function () { return { originals: [] }; })]).then(function (r) {
+      origSet = {}; r[1].originals.forEach(function (g) { origSet[g.s] = 1; });
+      var pool = r[0].filter(function (g) { return g.s !== slug; });
+      var o = r[1].originals.filter(function (g) { return g.s !== slug; });
+      var picks = [o[Math.floor(Math.random() * o.length)]].concat(pool.sort(function () { return Math.random() - .5; }).slice(0, 2)).filter(Boolean);
+      if (!picks.length) return;
+      var pn = document.createElement('section'); pn.className = 'rd-next';
+      pn.innerHTML = '<div class="rd-head"><h2>Play next</h2><button class="btn-ghost" type="button" data-surprise>🎲 Surprise me</button></div><div class="rd-next__list">' + picks.map(card).join('') + '</div>';
+      (document.querySelector('.rd-trust') || bar || page).insertAdjacentElement('afterend', pn);
+    });
+  }
+
+  function init() {
+    ensureHeader();
+    var p = location.pathname;
+    if (p === '/' || p === '/index.html') homepage();
+    else if (/^\/games\/[^/]+\.html$/.test(p) || /^\/games\/[^/.]+$/.test(p)) gamepage();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
