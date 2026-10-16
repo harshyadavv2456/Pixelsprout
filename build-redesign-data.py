@@ -10,6 +10,7 @@ TOUCH = re.compile(r"\b(tap|touch|swipe|mobile|phone|tablet)\b", re.I)
 _pf = {}
 def phone_ok(slug):
     """Phone-friendly heuristic: game page text mentions touch controls, or does not rely on keyboard-only controls."""
+    if by.get(slug, {}).get("phone") is False: return 0  # explicit desktop-only flag in games-index.json
     if slug not in _pf:
         try: t = open(os.path.join(R, "games", slug + ".html"), encoding="utf-8").read()
         except OSError: t = ""
