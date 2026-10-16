@@ -1,0 +1,119 @@
+{
+ "slug": "lumenstack",
+ "played": true,
+ "pages": {
+  "tips": {
+   "intro": "These tips come from real runs of Lumenstack on Pixelsprout. My Best started at 8 from an earlier session, then climbed through scores of 23 and 26 before a high run of 73. Everything here is what I saw while timing drops on the glowing stack.",
+   "tips": [
+    "Watch the glowing block slide left and right near the top, then drop when it overlaps the stack below. Only the overlapping width stays; the rest is trimmed off.",
+    "Aim for as much overlap as you can. On good landings my stack widths went roughly 120, then 106, 94, 83, 62, 38, and 25 as the pile narrowed.",
+    "A miss with no overlap ends the run right away. The screen shows Stack fell, your score in cyan, Best N, and Tap to retry.",
+    "The sliding speed stayed steady across five drops in my 73 run. It bounced left and right with no speed-up that I noticed, so you can learn the rhythm.",
+    "New blocks came in green, then lime, yellow, orange, pink, and cyan. Use the color change as a quick cue that a fresh piece is in play.",
+    "Score sits top left and Best N top right. There is no pause or settings menu in the game, so stay focused on the current slide.",
+    "On my 73 run, successive scores read 23, 43, 58, 67, then 73, with points per drop falling to 23, 20, 15, 9, and 6. The exact scoring rule was unclear from play alone."
+   ],
+   "conclusion": "Lumenstack is short and punishing. Time the drop for max overlap, expect the stack to shrink, and retry fast after a miss. My Best went from 8 to 73 in one session.",
+   "extra_sections": [
+    {
+     "heading": "How a stack shrinks on a good drop",
+     "paragraphs": [
+      "When a block lands with partial overlap, the game keeps only the overlapping width. I watched the pile step down from about 120 wide to 106, 94, 83, 62, 38, and finally 25 across successive good drops. That narrowing is the whole challenge: later drops need tighter timing on a thinner top.",
+      "A full miss with no overlap triggers Stack fell. On the 73 run, the Tap to retry prompt overlapped the stack drawing on screen, so the retry text sat on top of the fallen pile until I started again."
+     ]
+    },
+    {
+     "heading": "What the About text says vs what I saw",
+     "paragraphs": [
+      "The page About says Perfect alignment keeps the full width and multiplies your score. Miss by too much and the stack falls. I never saw a perfect-drop text, flash, sound, or bonus during play, so I can only report that line as page text, not as a verified effect from my runs."
+     ]
+    },
+    {
+     "heading": "Odd visuals I noticed but cannot explain",
+     "paragraphs": [
+      "The first cyan block appeared as the widest cap at the top of the pile, and newly placed blocks showed up at the bottom, so the stack looked like a staircase narrowing downward. That is a visual observation only; I am unsure if it is intended.",
+      "After the 73 run, the next run began with a tiny 25-wide block instead of a full-width one. An earlier session had started full width. I do not know what controls the starting width."
+     ]
+    }
+   ]
+  },
+  "controls": {
+   "intro": "Lumenstack is a one-button timing game. Space, click, and Enter all worked for dropping once a run was going.",
+   "desktop": "On the start screen, Space or a mouse click on the canvas starts the game. Space also drops the sliding block and retries from the Stack fell screen. A mouse click on the canvas starts, drops, and retries the same way. After I started a run with Space, Enter also dropped the block. The page text lists tap, Space, and Enter.",
+   "mobile": "The page says to tap to start and drop. I played on desktop, where a mouse click on the canvas worked like a tap. I did not personally test touch beyond that page wording.",
+   "tips": [
+    "The start screen reads LUMENSTACK, Time the drop. Stack the light., and Tap or press Space to start.",
+    "Score is top left and Best N is top right. There is no in-game pause or settings.",
+    "Under the canvas the page offers Fullscreen, Favorite, and Share, plus About, How to play, and Guides.",
+    "Ads sit beside the game, including a MELBET unit and a skippable fake Download or Play now ad in the page ad area. Neither covered the portrait canvas."
+   ]
+  },
+  "beginner-guide": {
+   "intro": "New to Lumenstack? This guide covers what the game is and how your first stacks play out, based on runs that went from a miss at 0 up to a Best of 73.",
+   "what_it_is": "Lumenstack is a free Pixelsprout original that runs in the browser with no download. It uses a portrait canvas about 300 by 400 pixels embedded on the page, not a Gamepix iframe. A glowing block slides left and right near the top; you drop it onto the stack, and only the overlapping width remains. Miss completely and the stack falls. The vibe is minimal: dark navy and teal with glowing neon blocks, and runs are short and punishing. Score sits top left, Best N top right.",
+   "first_steps": [
+    "Read the start screen: LUMENSTACK, Time the drop. Stack the light., then Tap or press Space to start.",
+    "Watch the glowing block bounce left and right near the top of the canvas.",
+    "Press Space or click the canvas when the block overlaps the stack as much as you can.",
+    "If it lands, the width shrinks to the overlap and a new colored block starts sliding.",
+    "If you miss with no overlap, Stack fell appears with your score in cyan and Best N, then Tap to retry.",
+    "Chase a higher Best. Mine moved from 8 to 26 to 73 across the session."
+   ],
+   "who_its_for": "It suits players who like one-button timing games with short retries. Runs end fast on a miss, so it is twitchy rather than slow and planned.",
+   "extra_sections": [
+    {
+     "heading": "Your first few drops",
+     "paragraphs": [
+      "Early drops use a wider stack, so timing is more forgiving. Colors I saw for new blocks in order were green, lime, yellow, orange, pink, and cyan. Sliding speed stayed roughly steady and bounced left and right; across five drops in my 73 run I saw no speed change.",
+      "Points per drop are not spelled out in the UI. On the 73 run the score climbed 23, then 43, 58, 67, and 73, with each drop adding less than the one before. Treat that as what I observed, not a confirmed formula."
+     ]
+    },
+    {
+     "heading": "When the stack falls",
+     "paragraphs": [
+      "No overlap ends the run immediately. You get Stack fell, the score in cyan, Best N, and Tap to retry. Space, a canvas click, or the page tap wording all restart. On my highest run the retry text overlapped the fallen stack drawing until I restarted."
+     ]
+    }
+   ]
+  },
+  "similar": {
+   "intro": "If you enjoy Lumenstack, you probably like one-button timing stackers where a piece slides and you drop it to keep a shrinking tower alive. The appeal is short, punishing runs: time the overlap, lose width on every partial land, and retry the moment the stack falls. Look for minimal neon or dark-canvas games with a best score to chase, no long campaigns, and a single input that both starts and drops. Other Pixelsprout originals in the More like this list on this page include Kilnstack, Cairnfall, Mossgate, Dewdash, Reedline, and Moonbloom, which sit next to Lumenstack in the same catalog and share that small-browser-game feel."
+  },
+  "faq": {
+   "faqs": [
+    {
+     "question": "Is Lumenstack free to play?",
+     "answer": "Yes. It is a Pixelsprout original that plays in your browser for free with no download. A MELBET ad sat to the right of the canvas while I played and never covered it. A skippable fake Download or Play now ad also sat in the page ad area, not inside the game."
+    },
+    {
+     "question": "How do you play Lumenstack?",
+     "answer": "A glowing block slides left and right near the top. Drop it onto the stack. Only the overlapping width stays; the rest is trimmed. Miss with no overlap and the stack falls."
+    },
+    {
+     "question": "What are the controls?",
+     "answer": "Space starts, drops, and retries from Stack fell. A mouse click on the canvas does the same. After a run started with Space, Enter also dropped. The page says tap, Space, and Enter. I did not personally test touch beyond that wording."
+    },
+    {
+     "question": "What happens when you miss?",
+     "answer": "You see Stack fell, your score in cyan, Best N, and Tap to retry. Space or a canvas click restarts. On my 73 run the retry text overlapped the stack drawing."
+    },
+    {
+     "question": "Does perfect alignment give a bonus?",
+     "answer": "The page About says Perfect alignment keeps the full width and multiplies your score. I never saw perfect-drop text, a flash, a sound, or a bonus in play, so I cannot confirm that effect from my runs."
+    },
+    {
+     "question": "Is there a pause or settings menu?",
+     "answer": "I did not see any in-game settings or pause. Score is top left and Best N is top right. Under the canvas the page has Fullscreen, Favorite, Share, About, How to play, and Guides."
+    },
+    {
+     "question": "How high can the score go?",
+     "answer": "Best started at 8 from an earlier session. I had runs of 0, 23, and 26, then a high of 73 that became Best 73. Within that run successive scores were 23, 43, 58, 67, and 73. The scoring rule was unclear."
+    },
+    {
+     "question": "Does the block speed up as you stack?",
+     "answer": "Across five drops in my 73 run the sliding speed stayed roughly steady and bounced left and right. I did not see a speed change in that run."
+    }
+   ]
+  }
+ }
+}
