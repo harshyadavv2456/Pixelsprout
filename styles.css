@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500..700&display=swap');
 /* Pixelsprout — design system. Tokens first; every component reads from them. */
 
 :root {
@@ -1254,3 +1255,16 @@ body { background: radial-gradient(1200px 500px at 70% -10%, rgba(124,92,255,.22
   .card__play { display: none; }
 }
 @media (hover: none) { .card:hover { transform: none; } }
+
+/* ===== Redesign launch fixes ===== */
+/* Hide the old homepage layout until redesign.js has rendered; failsafe reveal after 1.2s. */
+@keyframes rdReveal { to { opacity: 1; } }
+html:not(.rd-ready) body.home-page #main { opacity: 0; animation: rdReveal .01s linear 1.2s forwards; }
+/* Mobile game pages: header + title visible above the game frame. */
+@media (max-width: 767px) {
+  .game-main { display: flex; flex-direction: column; }
+  .game-main > .crumbs { order: -2; }
+  .game-main > .game-bar { order: -1; padding: var(--sp-2) 0 var(--sp-3); }
+  .game-main > .game-bar .game-bar__title { font-size: var(--fs-lg, 1.25rem); }
+  .embed-frame-wrap { height: max(360px, calc(100svh - var(--topbar-h) - 120px)); }
+}

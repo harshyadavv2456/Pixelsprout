@@ -49,7 +49,7 @@
   /* ---- Homepage ---- */
   function homepage() {
     var main = document.querySelector('#main, main'); if (!main) return;
-    home().then(function (h) {
+    return home().then(function (h) {
       origSet = {}; h.originals.forEach(function (g) { origSet[g.s] = 1; });
       var hero = '<section class="rd-hero"><p class="label">Free · No download · Plays on phone</p>' +
         '<p class="rd-hero__title h1">Pick a game.<br><span class="accent-text">Start playing.</span></p>' +
@@ -135,8 +135,9 @@
   function init() {
     ensureHeader();
     var p = location.pathname;
-    if (p === '/' || p === '/index.html') homepage();
-    else if (/^\/games\/[^/]+\.html$/.test(p) || /^\/games\/[^/.]+$/.test(p)) gamepage();
+    var ready = function () { document.documentElement.classList.add('rd-ready'); };
+    if (p === '/' || p === '/index.html') { try { Promise.resolve(homepage()).then(ready, ready); } catch (e) { ready(); } }
+    else { ready(); if (/^\/games\/[^/]+\.html$/.test(p) || /^\/games\/[^/.]+$/.test(p)) gamepage(); }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();
