@@ -664,3 +664,6 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
 })();
+
+/* Redesign layer (branch: redesign): Surprise me, homepage modules, game-page Play next / FAQ / trust line. */
+(function () { var s = document.createElement('script'); s.src = '/assets/redesign/redesign.js?v=20261016c'; s.defer = true; document.head.appendChild(s); })();

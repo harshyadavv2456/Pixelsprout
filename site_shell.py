@@ -233,13 +233,37 @@ def card(game, show_meta=True, index=None, extra_class="", newness=None):
         attrs += f' data-i="{index}"'
     if newness is not None:
         attrs += f' data-n="{newness}"'
-    cls = "card" + (f" {extra_class}" if extra_class else "")
+    is_original = game.get("source") == "pixelsprout" or slug in _original_slugs()
+    cls = "card" + (" card--original" if is_original else "") + (f" {extra_class}" if extra_class else "")
+    badge = '<span class="card__badge">Original</span>' if is_original else ""
+    play = '<span class="card__play" aria-hidden="true">Play</span>'
     meta = f'<span class="card__meta">{esc(pretty_genre(category))}</span>' if show_meta and category else ""
     return (
         f'<a class="{cls}" href="/games/{esc(slug)}.html"{attrs}>'
-        f'<span class="card__media"><img src="{esc(thumb_of(game))}" alt="{esc(title)}" width="320" height="320" loading="lazy" decoding="async"></span>'
+        f'<span class="card__media"><img src="{esc(thumb_of(game))}" alt="{esc(title)}" width="320" height="320" loading="lazy" decoding="async">{badge}{play}</span>'
         f'<span class="card__title">{esc(title)}</span>{meta}</a>'
     )
+
+
+_ORIGINALS_CACHE = None
+
+
+def _original_slugs():
+    """Slugs from assets/originals.json (Pixelsprout originals are featured first and badged)."""
+    global _ORIGINALS_CACHE
+    if _ORIGINALS_CACHE is None:
+        try:
+            with open(os.path.join(ROOT, "assets", "originals.json"), encoding="utf-8") as fh:
+                _ORIGINALS_CACHE = {g.get("slug") for g in json.load(fh) if g.get("slug")}
+        except (OSError, ValueError):
+            _ORIGINALS_CACHE = set()
+    return _ORIGINALS_CACHE
+
+
+def originals_first(games):
+    """Stable sort that puts Pixelsprout originals ahead of everything else."""
+    o = _original_slugs()
+    return sorted(games, key=lambda g: 0 if (g.get("source") == "pixelsprout" or g.get("slug") in o) else 1)
 
 
 def tool_card(href, title, subtitle, image):
@@ -414,6 +438,9 @@ def topbar(total_games=None):
         f'<button class="icon-btn menu-btn" type="button" data-menu-open aria-controls="rail" aria-expanded="false" aria-label="Open menu">{icon("menu")}</button>'
         '<a class="wordmark" href="/" aria-label="Pixelsprout home"><img src="/assets/logo-icon.png" width="28" height="28" alt=""><span>PIXEL<b>SPROUT</b></span></a>'
         f'<button class="search-trigger" type="button" data-search-open aria-label="Search games">{icon("search")}<span>{_count_label(total_games)}</span><kbd>/</kbd></button>'
+        '<nav class="topnav" aria-label="Primary">'
+        '<a href="/all-games/">Browse</a><a href="/originals/">Originals</a><a href="/guides/">Guides</a>'
+        '<a class="btn-ghost" href="/all-games/" data-surprise>Surprise me</a></nav>'
         '<div class="topbar__actions">'
         f'<button class="icon-btn" type="button" data-open-panel="favorites" aria-label="Favorites">{icon("heart")}<span class="count-badge" data-count="favorites" hidden></span></button>'
         f'<button class="icon-btn" type="button" data-open-panel="recent" aria-label="Recently played">{icon("clock")}<span class="count-badge" data-count="recent" hidden></span></button>'
