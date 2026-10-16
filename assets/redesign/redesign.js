@@ -46,6 +46,26 @@
   }
   document.addEventListener('click', function (e) { var t = e.target.closest && e.target.closest('[data-surprise]'); if (t) surprise(e); });
 
+
+  /* ---- Top picks: large cards (homepage top + category pages). Data from build-redesign-data.py ---- */
+  function picksHTML(list, title) {
+    if (!list || !list.length) return '';
+    return '<section class="tp" aria-labelledby="tp-title"><div class="rd-head"><h2 id="tp-title">' + esc(title) + '</h2></div><div class="tp__grid">' +
+      list.slice(0, 12).map(function (g) {
+        return '<a class="tp-card" href="/games/' + esc(g.s) + '.html">' +
+          '<span class="tp-card__media"><img src="' + esc(g.i) + '" alt="' + esc(g.t) + '" width="400" height="250" loading="lazy" decoding="async"></span>' +
+          '<span class="tp-card__body"><span class="tp-card__tag">' + esc(g.tag || g.c) + '</span><span class="tp-card__title">' + esc(g.t) + '</span>' +
+          '<span class="btn-lime tp-card__play">▶ Play</span></span></a>'; }).join('') + '</div></section>';
+  }
+  function categoryPicks() {
+    var main = document.querySelector('#main'); var head = main && main.querySelector('.page-head'); if (!head) return;
+    var seg = location.pathname.split('/').filter(Boolean)[0]; if (!seg) return;
+    getJSON(D + 'picks/' + encodeURIComponent(seg) + '.json').then(function (l) {
+      if (!l.length) return; var d = document.createElement('div'); d.innerHTML = picksHTML(l, 'Top picks');
+      head.parentNode.insertBefore(d.firstChild, head.nextSibling);
+    }).catch(function () {});
+  }
+
   /* ---- Homepage ---- */
   function homepage() {
     var main = document.querySelector('#main, main'); if (!main) return;
@@ -64,7 +84,7 @@
       var cols = '<section class="rd-block"><h2>Collections</h2>' + h.collections.map(function (c) {
         return '<div class="rd-row"><div class="rd-head"><h3>' + esc(c.name) + '</h3><a class="shelf__more" href="/' + esc(c.slug) + '/">See all</a></div>' +
           '<div class="shelf__track rd-track">' + c.games.map(card).join('') + '</div></div>'; }).join('') + '</section>';
-      var wrap = document.createElement('div'); wrap.className = 'rd-home'; wrap.innerHTML = hero + tr + cols;
+      var wrap = document.createElement('div'); wrap.className = 'rd-home'; wrap.innerHTML = picksHTML(h.picks, 'Top picks') + hero + tr + cols;
       main.insertBefore(wrap, main.firstChild);
       var grid = wrap.querySelector('[data-rd-grid]');
       var cur = 'trending', phoneOnly = false;
@@ -137,7 +157,7 @@
     var p = location.pathname;
     var ready = function () { document.documentElement.classList.add('rd-ready'); };
     if (p === '/' || p === '/index.html') { try { Promise.resolve(homepage()).then(ready, ready); } catch (e) { ready(); } }
-    else { ready(); if (/^\/games\/[^/]+\.html$/.test(p) || /^\/games\/[^/.]+$/.test(p)) gamepage(); }
+    else { ready(); if (document.body && document.body.getAttribute('data-page') === 'category') categoryPicks(); if (/^\/games\/[^/]+\.html$/.test(p) || /^\/games\/[^/.]+$/.test(p)) gamepage(); }
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 })();

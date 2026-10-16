@@ -1268,3 +1268,20 @@ html:not(.rd-ready) body.home-page #main { opacity: 0; animation: rdReveal .01s 
   .game-main > .game-bar .game-bar__title { font-size: var(--fs-lg, 1.25rem); }
   .embed-frame-wrap { height: max(360px, calc(100svh - var(--topbar-h) - 120px)); }
 }
+
+/* Top picks: large game cards (homepage top + category pages) */
+.tp { margin: var(--sp-4) 0 var(--sp-8); }
+.tp__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--sp-3); }
+@media (min-width: 768px) { .tp__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--sp-4); } }
+@media (min-width: 1200px) { .tp__grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.tp-card { display: flex; flex-direction: column; min-width: 0; border-radius: var(--r-card); overflow: hidden; background: var(--s1);
+  border: 1px solid var(--line); color: var(--text); text-decoration: none; transition: transform var(--t) var(--ease), border-color var(--t) var(--ease); }
+.tp-card:hover { transform: translateY(-2px); border-color: var(--accent); }
+.tp-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.tp-card__media { display: block; aspect-ratio: 16 / 10; background: var(--s2); overflow: hidden; }
+.tp-card__media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.tp-card__body { display: flex; flex-direction: column; gap: 6px; padding: 10px 12px 12px; flex: 1; }
+.tp-card__tag { font: 500 10px/1 var(--f-mono); text-transform: uppercase; letter-spacing: .1em; color: var(--accent); }
+.tp-card__title { font: 600 var(--fs-base)/1.25 var(--f-display); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tp-card__play { margin-top: auto; align-self: flex-start; min-height: 44px; padding: 0 16px; }
+@media (max-width: 479px) { .tp-card__play { align-self: stretch; justify-content: center; } .tp-card__title { font-size: 14px; } }

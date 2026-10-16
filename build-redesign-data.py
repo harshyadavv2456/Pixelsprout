@@ -36,3 +36,48 @@ json.dump(home, open(os.path.join(out, "home.json"), "w"), separators=(",", ":")
 for c, gs in cats.items():
     json.dump(gs[:40], open(os.path.join(out, "cat", slug(c) + ".json"), "w"), separators=(",", ":"))
 print(len(idx), "games;", len(cats), "categories")
+# ---- Top picks (large cards on homepage + category pages) ----
+# Only games with a real gameplay/creator thumbnail qualify. Generated title cards and logo fallbacks are skipped.
+PLACEHOLDER_THUMBS = {"raveswords", "wildbrush", "get-in-the-shelter", "spellwright", "sojourner"}
+FOUNDPLAY_LIVE = ["surfd", "flowline-snowboarding", "billiards", "hollowlands", "gravecrawl", "graveyard-pinball",
+                  "apex-formula-2026", "infinite-powder", "lantern-valley", "polygolf", "garage-to-gigawatt"]
+ALWAYS = ["getting-over-it"]
+def real_thumb(g):
+    t = g.get("thumbnail") or ""
+    if not t or "logo-icon" in t or g["slug"] in PLACEHOLDER_THUMBS:
+        return False
+    if t.startswith("/assets/thumbs/") or "playpixelsprout.com/assets/thumbs/" in t:
+        f = os.path.join(R, "assets", "thumbs", g["slug"] + ".webp")
+        if not os.path.exists(f):
+            return False
+        try:  # generated title cards are a flat two-tone gradient: very few distinct colours
+            from PIL import Image
+            if len(Image.open(f).convert("RGB").resize((32, 16)).getcolors(512) or range(512)) < 40:
+                return False
+        except ImportError:
+            pass
+    return True
+def pick(g, tag):
+    d = slim(g); d["tag"] = tag; return d
+popular = [p["slug"] for p in pop if p["slug"] in by]
+chosen, picks = set(), []
+def take(slugs, tag, limit):
+    n = 0
+    for s in slugs:
+        g = by.get(s)
+        if g and s not in chosen and real_thumb(g) and n < limit and len(picks) < 12:
+            picks.append(pick(g, tag(g))); chosen.add(s); n += 1
+take(ALWAYS, lambda g: "Classic", 1)
+take(FOUNDPLAY_LIVE, lambda g: "New on Pixelsprout", 7)
+take(popular, lambda g: "Most played", 12)
+home["picks"] = picks
+json.dump(home, open(os.path.join(out, "home.json"), "w"), separators=(",", ":"))
+os.makedirs(os.path.join(out, "picks"), exist_ok=True)
+rank = {s: i for i, s in enumerate(ALWAYS + FOUNDPLAY_LIVE + popular)}
+for c, gs in cats.items():
+    pool = [by[g["s"]] for g in gs if g["s"] in by]
+    pool = sorted(pool, key=lambda g: (0 if g["slug"] in osl else 1, rank.get(g["slug"], 10**6)))
+    cp = [pick(g, "Original" if g["slug"] in osl else ("Popular" if g["slug"] in rank else c)) for g in pool if real_thumb(g)][:8]
+    json.dump(cp, open(os.path.join(out, "picks", slug(c) + ".json"), "w"), separators=(",", ":"))
+print("top picks:", ", ".join(p["s"] for p in picks))
+
