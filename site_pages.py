@@ -231,6 +231,7 @@ def render_game_page(f, catalog, guides=None, total_games=None):
 
     head = S.head(
         f["title_tag"], f["meta_desc"],
+        canonical=f"{DOMAIN}/games/{slug}.html",
         meta_extra="\n".join(og),
         jsonld=f["jsonld"],
         head_extra='<link rel="preconnect" href="https://img.gamepix.com">\n<link rel="preconnect" href="https://img.gamemonetize.com">',
