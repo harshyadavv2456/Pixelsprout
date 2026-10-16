@@ -6,7 +6,11 @@
   var esc = function (s) { return String(s || '').replace(/[&<>"']/g, function (c) { return '&#' + c.charCodeAt(0) + ';'; }); };
   var getJSON = function (u) { return fetch(u, { credentials: 'same-origin' }).then(function (r) { if (!r.ok) throw r.status; return r.json(); }); };
   var slugify = function (s) { return String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); };
-  var homeP; var home = function () { return homeP || (homeP = getJSON(D + 'home.json')); };
+  var homeP; var home = function () { return homeP || (homeP = getJSON(D + 'home.json').then(function (h) {
+    /* keep the header search label exact: same live count as the hero stats line */
+    var sp = h.stats && document.querySelector('.search-trigger span');
+    if (sp && /^Search [0-9,]+\+? games$/.test(sp.textContent)) sp.textContent = 'Search ' + Number(h.stats.games).toLocaleString('en-US') + ' games';
+    return h; })); };
   var origSet = null;
 
   function card(g, opts) {

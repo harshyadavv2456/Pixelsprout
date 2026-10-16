@@ -666,4 +666,4 @@
 })();
 
 /* Redesign layer (branch: redesign): Surprise me, homepage modules, game-page Play next / FAQ / trust line. */
-(function () { var s = document.createElement('script'); s.src = '/assets/redesign/redesign.js?v=20261016e'; s.defer = true; document.head.appendChild(s); })();
+(function () { var s = document.createElement('script'); s.src = '/assets/redesign/redesign.js?v=20261016f'; s.defer = true; document.head.appendChild(s); })();

@@ -427,8 +427,7 @@ def head(title_html, description_attr, *, canonical=None, meta_extra="", jsonld=
 def _count_label(total):
     if not total:
         return "Search games"
-    rounded = (total // 100) * 100 if total >= 200 else total
-    return f"Search {rounded:,}+ games" if total >= 200 else f"Search {total} games"
+    return f"Search {total:,} games"
 
 
 def topbar(total_games=None):
