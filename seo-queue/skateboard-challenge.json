@@ -1,104 +1,129 @@
 {
- "slug": "skateboard-challenge",
- "played": true,
- "pages": {
-  "tips": {
-   "intro": "These tips come from a real session of Skateboard Challenge on Pixelsprout, playing Level 1 with the starting skater, Jeff. The first traffic cone beat me on every run, so this page focuses on that opening stretch, the menus, and what the game itself tells you about tricks.",
-   "tips": [
-    "Get ready before the run starts. After a restart, Jeff stands holding his board for about a second, then rolls to the right on his own, and the first orange cone shows up only two or three seconds later.",
-    "Press Space to ollie as soon as he starts rolling. My first jump collected a letter S, lit the S in SKATE at the top of the screen, and scored +50 with OLLIE shown at the bottom.",
-    "Save a second Space press for the cone. Touching it ended my run instantly, and I saw no lives or second chances.",
-    "Read the CONTROLS screen from the title menu before your first run. It lists every trick key, and the tip at the top says ollies let you reach higher places or stay in the air longer.",
-    "Jump for the coins hanging in rows above the street. They feed the coin counter in the top bar, which is the currency for new skaters.",
-    "Use the circular arrow on the TRY AGAIN screen to restart quickly. It reloads Level 1 after a short black screen, so failed attempts cost very little time."
-   ],
-   "conclusion": "Skateboard Challenge is all about timing. Learn the rhythm of the first jump and the first cone, and the rest of Level 1 opens up from there.",
-   "extra_sections": [
-    {
-     "heading": "Reading the top bar during a run",
-     "paragraphs": [
-      "During Level 1 the top bar shows LEVEL 1, a coin counter, TARGET: 100000, a seven digit score, the letters SKATE and the word COMBO. The SKATE letters stay grey until you collect them in the level. I picked up the S with my first ollie.",
-      "The TRY AGAIN screen repeats this information with SCORE, BEST SCORE and badges for SCORE, SKATE and COMBO, so you can see which goals a run touched before you restart."
-     ]
+  "slug": "skateboard-challenge",
+  "played": true,
+  "pages": {
+    "tips": {
+      "intro": "These tips come from a real session of Skateboard Challenge on Pixelsprout, playing Level 1 with the starting skater, Jeff. The first traffic cone beat me on every run, so this page focuses on that opening stretch, the menus, and what the game itself tells you about tricks.",
+      "tips": [
+        "Get ready before the run starts. After a restart, Jeff stands holding his board for about a second, then rolls to the right on his own, and the first orange cone shows up only two or three seconds later.",
+        "Press Space to ollie as soon as he starts rolling. My first jump collected a letter S, lit the S in SKATE at the top of the screen, and scored +50 with OLLIE shown at the bottom.",
+        "Save a second Space press for the cone. Touching it ended my run instantly, and I saw no lives or second chances.",
+        "Read the CONTROLS screen from the title menu before your first run. It lists every trick key, and the tip at the top says ollies let you reach higher places or stay in the air longer.",
+        "Jump for the coins hanging in rows above the street. They feed the coin counter in the top bar, which is the currency for new skaters.",
+        "Use the circular arrow on the TRY AGAIN screen to restart quickly. It reloads Level 1 after a short black screen, so failed attempts cost very little time."
+      ],
+      "conclusion": "Skateboard Challenge is all about timing. Learn the rhythm of the first jump and the first cone, and the rest of Level 1 opens up from there.",
+      "extra_sections": [
+        {
+          "heading": "Reading the top bar during a run",
+          "paragraphs": [
+            "During Level 1 the top bar shows LEVEL 1, a coin counter, TARGET: 100000, a seven digit score, the letters SKATE and the word COMBO. The SKATE letters stay grey until you collect them in the level. I picked up the S with my first ollie.",
+            "The TRY AGAIN screen repeats this information with SCORE, BEST SCORE and badges for SCORE, SKATE and COMBO, so you can see which goals a run touched before you restart."
+          ]
+        },
+        {
+          "heading": "Tricks listed in the game",
+          "paragraphs": [
+            "The controls screen lists Space to ollie, Z to kickflip, C to heelflip and holding X for an indy grab. It also lists grinds: land on a rail for a 50-50, or hold Left, Right or Down while landing for a 5-0, a nosegrind or a noseslide. I only confirmed the ollie myself, because I never made it past the first cone to reach a rail."
+          ]
+        }
+      ]
     },
-    {
-     "heading": "Tricks listed in the game",
-     "paragraphs": [
-      "The controls screen lists Space to ollie, Z to kickflip, C to heelflip and holding X for an indy grab. It also lists grinds: land on a rail for a 50-50, or hold Left, Right or Down while landing for a 5-0, a nosegrind or a noseslide. I only confirmed the ollie myself, because I never made it past the first cone to reach a rail."
-     ]
+    "controls": {
+      "intro": "Skateboard Challenge uses the keyboard for riding and the mouse for menus. Here is what the in-game controls screen lists, and what I confirmed while playing.",
+      "desktop": "Space makes Jeff ollie, which I confirmed in play. The controls screen also lists Z to kickflip, C to heelflip, hold X to indy grab, and landing on a rail for a 50-50 grind, or holding Left for a 5-0, Right for a nosegrind and Down for a noseslide. Jeff rolls forward on his own. Menu buttons work with the mouse.",
+      "mobile": "I played in a desktop browser and did not see any on-screen touch buttons, so I cannot confirm how tricks are done on a phone or tablet.",
+      "tips": [
+        "Open CONTROLS from the title screen to see the full trick list before you ride.",
+        "Space is the key to learn first. The controls screen says ollies help you reach higher places and travel farther in the air.",
+        "Grind directions are held while landing on a rail, not pressed after you are already on it, according to the controls screen.",
+        "The title screen also has an AUDIO ON button and a CREDITS button. I left the audio setting alone while playing."
+      ]
+    },
+    "beginner-guide": {
+      "intro": "New to Skateboard Challenge? This guide walks through the menus and your first run on Level 1, based on a session where I learned the hard way how fast the first obstacle arrives.",
+      "what_it_is": "Skateboard Challenge is a free 2D skating game that runs in your browser with no download. You ride as Jeff, a skater in a red cap, who rolls right down a street of houses and parked cars. You jump over obstacles like traffic cones, collect coins and the letters of SKATE, and pull tricks for points. Level 1 shows a target of 100000 points. The level select has eight levels, with only Level 1 open at the start and the rest locked.",
+      "first_steps": [
+        "Press OK, PLAY NOW! on the first screen if it appears, then wait for the title screen.",
+        "Open CONTROLS to read the trick list, then press START.",
+        "Pick Level 1 on the LEVEL SELECT screen. Levels 2 through 8 show padlocks.",
+        "When Jeff starts rolling, press Space to ollie and grab the S floating ahead.",
+        "Jump again before the orange cone. If you hit it, use the restart arrow on the TRY AGAIN screen."
+      ],
+      "who_its_for": "It suits players who enjoy short timing challenges and do not mind retrying the same opening many times. One hit ends a run, so it is not a relaxed game.",
+      "extra_sections": [
+        {
+          "heading": "Skaters and coins",
+          "paragraphs": [
+            "The SELECT SKATER screen starts you with Jeff. Emily costs 5000 coins and Mike costs 8000, each with a BUY button. My balance was 0 after my runs, since I never cleared the first cone.",
+            "The same screen offers FREE 200, which says you can get 200 free coins by watching a video. I did not use it, so I cannot say how long the video is."
+          ]
+        }
+      ]
+    },
+    "similar": {
+      "intro": "If you like Skateboard Challenge, you probably enjoy side-scrolling games where your character moves forward on their own and your job is to time every jump. The fun comes from learning each obstacle, trying again right after a crash, and slowly adding style on top of survival. Look for runner and skating games with short levels, coins to collect in the air, a score target to beat, and unlockable characters. Games where one mistake restarts the stage give that same one-more-try pull.",
+      "extra_sections": [
+        {
+          "heading": "Picks we have played on Pixelsprout",
+          "paragraphs": [
+            "2048 Cube Run is the closest match in how it moves. Your cube runs forward on its own down a road toward a checkered finish line, and the levels we played took several seconds each, with a coin counter that went up after each clear. Like Skateboard Challenge, the forward motion is automatic. The difference is that Skateboard Challenge gives you a clear jump key, while in 2048 Cube Run we could not confirm how steering between lanes works.",
+            "Getting Over It on Pixelsprout is a fan-made Scratch remake, not the original game. You guide a cat in a flower pot who swings a long hammer with the mouse to climb over platforms and junk. Movement is momentum-based and hard to control. It has the same try-again pull as Skateboard Challenge, but nothing moves forward on its own, and progress depends entirely on how you swing."
+          ]
+        },
+        {
+          "heading": "Other picks from the catalog",
+          "paragraphs": [
+            "Ski King is described on its page as racing down snowy mountains, taking sharp turns and dodging obstacles while finding the fastest path. Like Skateboard Challenge, it is about getting past obstacles while you keep moving. We have not played it ourselves.",
+            "Stickman Car Racing is described as racing to the finish on 3D tracks, dodging obstacles, with a choice of cars and drivers. The choice of drivers is a little like the skaters you can unlock with coins in Skateboard Challenge. We have not played it ourselves either."
+          ]
+        },
+        {
+          "heading": "How these picks compare",
+          "paragraphs": [
+            "Skateboard Challenge is a 2D side-scroller. Jeff rolls right on his own, Space makes him ollie, and the controls screen lists Z for a kickflip, C for a heelflip, X for an indy grab and rail grinds with the arrow keys. You jump cones, collect coins and the letters of SKATE, and aim for a target of 100000 points on Level 1. Touching a cone ended our run at once, but the restart arrow on the TRY AGAIN screen reloads the level after a short pause. Eight levels are listed, with only Level 1 open at the start.",
+            "If you like the automatic forward motion and short levels, 2048 Cube Run is the nearest match among the games we have played. If what keeps you playing is falling and trying again, Getting Over It is the harder and slower version of that feeling. If you want more obstacle dodging at speed, Ski King and Stickman Car Racing fit that from their descriptions, though they are racing games rather than trick games.",
+            "Scoring is another difference. In Skateboard Challenge, our first ollie collected the letter S, lit the S in SKATE at the top of the screen and added 50 points, and the coins hanging above the street feed a counter that pays for new skaters. 2048 Cube Run also has a coin counter that grows after each cleared level, but it is built around merging numbered cubes rather than tricks. Getting Over It shows a timer instead, and in our session a fall back to the low starting area set the timer back close to zero. For Ski King and Stickman Car Racing, the descriptions talk about finishing and speed rather than points.",
+            "None of these picks have a trick list like Skateboard Challenge's, so if the trick keys are what you enjoy most, the best next step may be to keep working on Level 1 and unlock the later levels."
+          ]
+        }
+      ]
+    },
+    "faq": {
+      "faqs": [
+        {
+          "question": "Is Skateboard Challenge free to play?",
+          "answer": "Yes. It plays in your browser on Pixelsprout with no download. An ad sat beside the game while I played, but it did not cover it."
+        },
+        {
+          "question": "How do you jump in Skateboard Challenge?",
+          "answer": "Press Space to ollie. When I did, the word OLLIE appeared at the bottom of the screen and I got +50 points."
+        },
+        {
+          "question": "How do you do tricks?",
+          "answer": "The controls screen lists Z for a kickflip, C for a heelflip and holding X for an indy grab. Grinds happen when you land on a rail, with Left, Right or Down held for different grinds."
+        },
+        {
+          "question": "How many levels are there?",
+          "answer": "The LEVEL SELECT screen shows eight levels. Only Level 1 is open at the start, and Levels 2 through 8 show padlocks."
+        },
+        {
+          "question": "What happens if you hit an obstacle?",
+          "answer": "Hitting the traffic cone ended my run right away. A TRY AGAIN screen shows your score and best score, with buttons for level select and restart."
+        },
+        {
+          "question": "What are the SKATE letters for?",
+          "answer": "The letters S, K, A, T and E appear in the top bar and stay grey until you collect them in the level. I picked up the S by jumping right at the start of Level 1."
+        },
+        {
+          "question": "Can you play as other skaters?",
+          "answer": "Yes. Jeff is unlocked from the start. On the SELECT SKATER screen, Emily costs 5000 coins and Mike costs 8000 coins."
+        },
+        {
+          "question": "Is there a sound setting?",
+          "answer": "The title screen has an AUDIO ON button, which appears to be the sound setting. I did not switch it off during my session."
+        }
+      ]
     }
-   ]
-  },
-  "controls": {
-   "intro": "Skateboard Challenge uses the keyboard for riding and the mouse for menus. Here is what the in-game controls screen lists, and what I confirmed while playing.",
-   "desktop": "Space makes Jeff ollie, which I confirmed in play. The controls screen also lists Z to kickflip, C to heelflip, hold X to indy grab, and landing on a rail for a 50-50 grind, or holding Left for a 5-0, Right for a nosegrind and Down for a noseslide. Jeff rolls forward on his own. Menu buttons work with the mouse.",
-   "mobile": "I played in a desktop browser and did not see any on-screen touch buttons, so I cannot confirm how tricks are done on a phone or tablet.",
-   "tips": [
-    "Open CONTROLS from the title screen to see the full trick list before you ride.",
-    "Space is the key to learn first. The controls screen says ollies help you reach higher places and travel farther in the air.",
-    "Grind directions are held while landing on a rail, not pressed after you are already on it, according to the controls screen.",
-    "The title screen also has an AUDIO ON button and a CREDITS button. I left the audio setting alone while playing."
-   ]
-  },
-  "beginner-guide": {
-   "intro": "New to Skateboard Challenge? This guide walks through the menus and your first run on Level 1, based on a session where I learned the hard way how fast the first obstacle arrives.",
-   "what_it_is": "Skateboard Challenge is a free 2D skating game that runs in your browser with no download. You ride as Jeff, a skater in a red cap, who rolls right down a street of houses and parked cars. You jump over obstacles like traffic cones, collect coins and the letters of SKATE, and pull tricks for points. Level 1 shows a target of 100000 points. The level select has eight levels, with only Level 1 open at the start and the rest locked.",
-   "first_steps": [
-    "Press OK, PLAY NOW! on the first screen if it appears, then wait for the title screen.",
-    "Open CONTROLS to read the trick list, then press START.",
-    "Pick Level 1 on the LEVEL SELECT screen. Levels 2 through 8 show padlocks.",
-    "When Jeff starts rolling, press Space to ollie and grab the S floating ahead.",
-    "Jump again before the orange cone. If you hit it, use the restart arrow on the TRY AGAIN screen."
-   ],
-   "who_its_for": "It suits players who enjoy short timing challenges and do not mind retrying the same opening many times. One hit ends a run, so it is not a relaxed game.",
-   "extra_sections": [
-    {
-     "heading": "Skaters and coins",
-     "paragraphs": [
-      "The SELECT SKATER screen starts you with Jeff. Emily costs 5000 coins and Mike costs 8000, each with a BUY button. My balance was 0 after my runs, since I never cleared the first cone.",
-      "The same screen offers FREE 200, which says you can get 200 free coins by watching a video. I did not use it, so I cannot say how long the video is."
-     ]
-    }
-   ]
-  },
-  "similar": {
-   "intro": "If you like Skateboard Challenge, you probably enjoy side-scrolling games where your character moves forward on their own and your job is to time every jump. The fun comes from learning each obstacle, trying again right after a crash, and slowly adding style on top of survival. Look for runner and skating games with short levels, coins to collect in the air, a score target to beat, and unlockable characters. Games where one mistake restarts the stage give that same one-more-try pull."
-  },
-  "faq": {
-   "faqs": [
-    {
-     "question": "Is Skateboard Challenge free to play?",
-     "answer": "Yes. It plays in your browser on Pixelsprout with no download. An ad sat beside the game while I played, but it did not cover it."
-    },
-    {
-     "question": "How do you jump in Skateboard Challenge?",
-     "answer": "Press Space to ollie. When I did, the word OLLIE appeared at the bottom of the screen and I got +50 points."
-    },
-    {
-     "question": "How do you do tricks?",
-     "answer": "The controls screen lists Z for a kickflip, C for a heelflip and holding X for an indy grab. Grinds happen when you land on a rail, with Left, Right or Down held for different grinds."
-    },
-    {
-     "question": "How many levels are there?",
-     "answer": "The LEVEL SELECT screen shows eight levels. Only Level 1 is open at the start, and Levels 2 through 8 show padlocks."
-    },
-    {
-     "question": "What happens if you hit an obstacle?",
-     "answer": "Hitting the traffic cone ended my run right away. A TRY AGAIN screen shows your score and best score, with buttons for level select and restart."
-    },
-    {
-     "question": "What are the SKATE letters for?",
-     "answer": "The letters S, K, A, T and E appear in the top bar and stay grey until you collect them in the level. I picked up the S by jumping right at the start of Level 1."
-    },
-    {
-     "question": "Can you play as other skaters?",
-     "answer": "Yes. Jeff is unlocked from the start. On the SELECT SKATER screen, Emily costs 5000 coins and Mike costs 8000 coins."
-    },
-    {
-     "question": "Is there a sound setting?",
-     "answer": "The title screen has an AUDIO ON button, which appears to be the sound setting. I did not switch it off during my session."
-    }
-   ]
   }
- }
 }
