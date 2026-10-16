@@ -3,6 +3,10 @@ Run: python3 build-redesign-data.py  (reads games-index.json, popular-games.json
 import json, os, re
 R = os.path.dirname(os.path.abspath(__file__))
 L = lambda p: json.load(open(os.path.join(R, p), encoding="utf-8"))
+try:  # snapshot before this run overwrites home.json (keeps the last baked Games of the week)
+    _PREV_HOME = L("assets/redesign/home.json")
+except (OSError, ValueError):
+    _PREV_HOME = {}
 idx = L("games-index.json"); pop = L("popular-games.json")["games"]; orig = L("assets/originals.json")
 by = {g["slug"]: g for g in idx}
 KB = re.compile(r"\b(arrow keys|wasd|keyboard|space ?bar|press [a-z] key|mouse wheel|right[- ]click)\b", re.I)
@@ -97,7 +101,7 @@ def _week():
         except (OSError, ValueError) as e:
             print("analytics report unreadable:", e)
     try:
-        prev = L("assets/redesign/home.json")
+        prev = _PREV_HOME
         if prev.get("weekSrc") == "analytics-7d" and prev.get("week"):
             return [slim(by[g["s"]]) for g in prev["week"] if g["s"] in by and real_thumb(by[g["s"]])], "analytics-7d"
     except (OSError, ValueError):
