@@ -100,8 +100,9 @@ WINDOW_DAYS = 30
 recent = sorted((g for g in idx if added.get(g["slug"], 0) >= now - WINDOW_DAYS * 86400),
                 key=lambda g: -added[g["slug"]])
 # Interim (Studio): until older add-dates are verified, "new" = only the games that went live tonight.
-INTERIM_NEW = ["surfd", "flowline-snowboarding", "billiards", "hollowlands", "gravecrawl", "graveyard-pinball",
+INTERIM_NEW_TONIGHT = ["surfd", "flowline-snowboarding", "billiards", "hollowlands", "gravecrawl", "graveyard-pinball",
                "apex-formula-2026", "infinite-powder", "lantern-valley", "polygolf", "garage-to-gigawatt"]
+INTERIM_NEW = []  # dates verified 16 Oct: every game is from a dated auto-add or launch commit, never deleted, live 200
 if INTERIM_NEW:
     recent = [g for g in recent if g["slug"] in INTERIM_NEW]
 def _new(g):
