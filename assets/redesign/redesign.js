@@ -52,9 +52,9 @@
 
 
   /* ---- Top picks: large cards (homepage top + category pages). Data from build-redesign-data.py ---- */
-  function picksHTML(list, title) {
-    if (!list || !list.length) return '';
-    return '<section class="tp" aria-labelledby="tp-title"><div class="rd-head"><h2 id="tp-title">' + esc(title) + '</h2></div><div class="tp__grid">' +
+  function picksHTML(list, title, id) {
+    if (!list || !list.length) return ''; id = id || 'tp-title';
+    return '<section class="tp" aria-labelledby="' + id + '"><div class="rd-head"><h2 id="' + id + '">' + esc(title) + '</h2></div><div class="tp__grid">' +
       list.slice(0, 12).map(function (g) {
         return '<a class="tp-card" href="/games/' + esc(g.s) + '.html">' +
           '<span class="tp-card__media"><img src="' + esc(g.i) + '" alt="' + esc(g.t) + '" width="400" height="250" loading="lazy" decoding="async"></span>' +
@@ -113,8 +113,9 @@
       var cols = '<section class="rd-block"><h2>Collections</h2>' + h.collections.map(function (c) {
         return '<div class="rd-row"><div class="rd-head"><h3>' + esc(c.name) + '</h3><a class="shelf__more" href="/' + esc(c.slug) + '/">See all</a></div>' +
           '<div class="shelf__track rd-track">' + c.games.map(card).join('') + '</div></div>'; }).join('') + '</section>';
-      var wrap = document.createElement('div'); wrap.className = 'rd-home'; var hx = heroExtras(h); hero = hero.replace('</section>', hx.stats + hx.ja + '</section>');
-      wrap.innerHTML = hero + hx.gotd + picksHTML(h.picks, 'Top picks') + tr + cols;
+      var wrap = document.createElement('div'); wrap.className = 'rd-home'; var hx = heroExtras(h); var col = (h.collage || []).length >= 3 ? '<div class="rd-collage" aria-label="City action games">' + h.collage.slice(0, 5).map(function (g, i) { return '<a class="rd-collage__c rd-collage__c' + i + '" href="/games/' + esc(g.s) + '.html"><img src="' + esc(g.i) + '" alt="' + esc(g.t) + '" width="400" height="250" decoding="async"' + (i ? ' loading="lazy"' : '') + '></a>'; }).join('') + '</div>' : '';
+      hero = hero.replace('<section class="rd-hero">', '<section class="rd-hero">' + col).replace('</section>', hx.stats + hx.ja + '</section>');
+      wrap.innerHTML = hero + hx.gotd + picksHTML(h.week, 'Games of the week', 'gow-title') + picksHTML(h.picks, 'Top picks') + tr + cols;
       main.insertBefore(wrap, main.firstChild);
       var grid = wrap.querySelector('[data-rd-grid]');
       var cur = 'trending', phoneOnly = false;

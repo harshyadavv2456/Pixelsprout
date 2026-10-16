@@ -1310,3 +1310,14 @@ html:not(.rd-ready) body.home-page #main { opacity: 0; animation: rdReveal .01s 
   .ja__cta { width: auto; }
   .gotd { grid-template-columns: 1.4fr 1fr; align-items: center; padding: var(--sp-5); }
 }
+
+/* Hero collage: tilted real-thumbnail cards (mobile first, fixed aspect = no shift) */
+.rd-collage{position:relative;height:210px;margin:-4px 0 18px;max-width:520px}
+.rd-collage__c{position:absolute;width:58%;aspect-ratio:8/5;border-radius:14px;overflow:hidden;border:3px solid var(--accent,#B6F23F);box-shadow:0 10px 28px rgba(0,0,0,.55),0 0 24px rgba(182,242,63,.18);background:#192019;transition:transform .2s}
+.rd-collage__c img{width:100%;height:100%;object-fit:cover;display:block}
+.rd-collage__c0{left:22%;top:72px;z-index:3;transform:rotate(-2deg)}
+.rd-collage__c1{right:0;top:0;z-index:2;transform:rotate(5deg);border-color:#8b5cf6}
+.rd-collage__c2{left:0;top:14px;z-index:1;transform:rotate(-8deg)}
+.rd-collage__c3,.rd-collage__c4{display:none}
+.rd-collage__c:hover,.rd-collage__c:focus-visible{transform:rotate(0) scale(1.03);z-index:5}
+@media (min-width:900px){.rd-collage{float:right;width:46%;height:250px;margin:0 0 0 24px}.rd-collage__c{width:52%}.rd-collage__c3{display:block;right:28%;top:150px;z-index:4;transform:rotate(6deg)}}

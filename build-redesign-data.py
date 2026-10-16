@@ -32,6 +32,7 @@ top = sorted(cats, key=lambda c: -len(cats[c]))[:6]
 home = {"originals": originals, "trending": trending[:24], "newest": newest,
         "collections": [{"name": c, "slug": slug(c), "games": cats[c][:12]} for c in top],
         "all": [g["slug"] for g in idx]}
+
 json.dump(home, open(os.path.join(out, "home.json"), "w"), separators=(",", ":"))
 for c, gs in cats.items():
     json.dump(gs[:40], open(os.path.join(out, "cat", slug(c) + ".json"), "w"), separators=(",", ":"))
@@ -75,6 +76,36 @@ take(ALWAYS, lambda g: "Classic", 1)
 take(FOUNDPLAY_LIVE, lambda g: "New on Pixelsprout", 7)
 take(popular, lambda g: "Most played", 12)
 home["picks"] = picks
+
+# ---- Hero collage: crime/city action games with real art ----
+COLLAGE = ["gangster-crimes-online-6-mafia-city", "gta-vi-beat-em-up", "the-boss-of-mong-kok", "grand-crime-auto-6",
+           "blocky-dude-gangster-auto-city", "crime-theft-gangster-paradise", "grand-city-driving-2"]
+def big(d):
+    d["i"] = re.sub(r"([?&]w=)\d+", r"\g<1>400", d["i"]); return d
+home["collage"] = [big(slim(by[s])) for s in COLLAGE if s in by and real_thumb(by[s])][:5]
+# ---- Games of the week: top pageviews (7d) from a report file passed via PS_ANALYTICS_REPORT.
+# The report URL/key never live in the repo; without a report we keep the last baked list, else fall back to Top picks.
+def _week():
+    rp = os.environ.get("PS_ANALYTICS_REPORT")
+    if rp:
+        try:
+            tg = json.load(open(rp)).get("topGames") or []
+            sl = [re.sub(r"^/games/|\.html$", "", x.get("path", "")) for x in sorted(tg, key=lambda x: -x.get("pageviews", 0))]
+            l = [slim(by[s]) for s in sl if s in by and real_thumb(by[s])][:8]
+            if l:
+                return l, "analytics-7d"
+        except (OSError, ValueError) as e:
+            print("analytics report unreadable:", e)
+    try:
+        prev = L("assets/redesign/home.json")
+        if prev.get("weekSrc") == "analytics-7d" and prev.get("week"):
+            return [slim(by[g["s"]]) for g in prev["week"] if g["s"] in by and real_thumb(by[g["s"]])], "analytics-7d"
+    except (OSError, ValueError):
+        pass
+    return [dict(p) for p in picks[:8]], "top-picks-fallback"
+home["week"], home["weekSrc"] = _week()
+print("games of the week (%s): %s" % (home["weekSrc"], ", ".join(g["s"] for g in home["week"])))
+print("collage:", ", ".join(g["s"] for g in home["collage"]))
 json.dump(home, open(os.path.join(out, "home.json"), "w"), separators=(",", ":"))
 os.makedirs(os.path.join(out, "picks"), exist_ok=True)
 rank = {s: i for i, s in enumerate(ALWAYS + FOUNDPLAY_LIVE + popular)}
