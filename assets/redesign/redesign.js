@@ -131,7 +131,7 @@
 
   /* ---- Game page ---- */
   function gamepage() {
-    var page = document.querySelector('.game-page'); if (!page) return;
+    var page = document.querySelector('.game-page'); if (!page || document.body.dataset.linkout) return; /* link-out pages: no in-page play, so no generated FAQ/trust line */
     var slug = location.pathname.replace(/^.*\/games\//, '').replace(/\.html$/, '');
     var title = (document.querySelector('.game-bar__title') || document.querySelector('h1') || {}).textContent || document.title;
     title = title.trim();
