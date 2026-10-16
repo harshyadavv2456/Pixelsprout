@@ -99,6 +99,11 @@ now = int(time.time())
 WINDOW_DAYS = 30
 recent = sorted((g for g in idx if added.get(g["slug"], 0) >= now - WINDOW_DAYS * 86400),
                 key=lambda g: -added[g["slug"]])
+# Interim (Studio): until older add-dates are verified, "new" = only the games that went live tonight.
+INTERIM_NEW = ["surfd", "flowline-snowboarding", "billiards", "hollowlands", "gravecrawl", "graveyard-pinball",
+               "apex-formula-2026", "infinite-powder", "lantern-valley", "polygolf", "garage-to-gigawatt"]
+if INTERIM_NEW:
+    recent = [g for g in recent if g["slug"] in INTERIM_NEW]
 def _new(g):
     d = slim(g); d["a"] = added[g["slug"]]; d["ok"] = 1 if real_thumb(g) else 0; return d
 home["recent"] = [_new(g) for g in recent]
@@ -115,8 +120,8 @@ _rows = "".join(
         f'<span class="card__meta">Added {datetime.datetime.fromtimestamp(added[g["slug"]]).strftime("%-d %b")} · ', 1)
     for g in recent)
 _main = (_S.crumbs([("Home", "/"), ("New games", None)]) +
-         '<header class="page-head"><p class="eyebrow">New</p><h1>New games</h1>'
-         f'<p>Every game added to Pixelsprout in the last {WINDOW_DAYS} days, newest first. {len(recent)} games.</p></header>'
+         '<header class="page-head"><p class="eyebrow">New</p><h1>New games</h1>' +
+         (f'<p>The {len(recent)} games that went live on Pixelsprout on 16 October 2026.</p></header>' if INTERIM_NEW else f'<p>Every game added to Pixelsprout in the last {WINDOW_DAYS} days, newest first. {len(recent)} games.</p></header>') +
          f'<div class="grid">{_rows}</div>')
 _head = _S.head("New games — Pixelsprout", _html.escape(f"Free browser games added to Pixelsprout in the last {WINDOW_DAYS} days, newest first."),
                 canonical="https://playpixelsprout.com/new-games/")
