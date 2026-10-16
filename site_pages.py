@@ -807,7 +807,6 @@ def render_home(catalog, featured, popular_ranked, today=None):
 <h1>Free browser games</h1>
 <p>{total:,} games across {len(genre_pages)} genres. Nothing to install, no account needed.</p>
 </div>
-{hero_html}
 {continue_shelf}
 {popular_shelf}
 {''.join(shelves)}

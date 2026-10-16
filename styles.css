@@ -1230,3 +1230,27 @@ body { background: radial-gradient(1200px 500px at 70% -10%, rgba(124,92,255,.22
   .rd-track, .rd-more .rd-track { grid-auto-columns: 42vw; }
   .topnav a:not([data-surprise]) { display: none; }
 }
+/* Redesign v2 polish: cards, hover, spacing, mobile */
+.card { display: flex; flex-direction: column; gap: 6px; text-decoration: none; }
+.card__media { position: relative; display: block; aspect-ratio: 1/1; background: var(--s2); }
+.card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform 400ms var(--ease), filter var(--t) var(--ease); }
+.card:hover .card__media img, .card:focus-visible .card__media img { transform: scale(1.06); filter: saturate(1.15); }
+.card:focus-visible { outline: none; } .card:focus-visible .card__media { box-shadow: 0 0 0 3px var(--accent); }
+.card__title { font-weight: 600; font-size: var(--fs-sm); line-height: 1.3; color: var(--text); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.card:hover .card__title { color: var(--accent); }
+.card__meta { font-size: var(--fs-xs); color: var(--text-3); }
+.card__kb { position: absolute; left: 8px; bottom: 8px; padding: 2px 7px; border-radius: var(--r-pill); background: rgba(14,11,31,.8); color: var(--text-2); font-size: 12px; }
+.rd-grid { gap: 18px 14px; } .rd-block { margin: 36px 0; } .rd-row { margin: 22px 0; }
+.rd-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.rd-tab { border-radius: var(--r-pill); padding: 8px 16px; transition: background var(--t) var(--ease), color var(--t); }
+.rd-tab[aria-selected="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.rd-empty { color: var(--text-3); padding: 24px 0; }
+.rd-phone { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; color: var(--text-2); font-size: var(--fs-sm); }
+.rd-phone input { accent-color: var(--accent); width: 16px; height: 16px; }
+@media (max-width: 640px) {
+  .rd-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 14px 10px; }
+  .rd-block { margin: 24px 0; } .rd-head h2 { font-size: var(--fs-lg); }
+  .rd-hero__title { font-size: 34px; line-height: 1.05; }
+  .card__play { display: none; }
+}
+@media (hover: none) { .card:hover { transform: none; } }

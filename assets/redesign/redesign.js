@@ -13,7 +13,7 @@
     var orig = origSet && origSet[g.s];
     return '<a class="card' + (orig ? ' card--original' : '') + '" href="/games/' + esc(g.s) + '.html">' +
       '<span class="card__media"><img src="' + esc(g.i || '/assets/logo-icon.png') + '" alt="' + esc(g.t) + '" width="320" height="320" loading="lazy" decoding="async">' +
-      (orig ? '<span class="card__badge">Original</span>' : '') + (g.v ? '<span class="card__badge card__badge--hot">Hot</span>' : '') + '<span class="card__play" aria-hidden="true">Play</span></span>' +
+      (orig ? '<span class="card__badge">Original</span>' : '') + (g.v ? '<span class="card__badge card__badge--hot">Hot</span>' : '') + (g.m === 0 ? '<span class="card__kb" title="Best with a keyboard">⌨</span>' : '') + '<span class="card__play" aria-hidden="true">Play</span></span>' +
       '<span class="card__title">' + esc(g.t) + '</span>' + (g.c ? '<span class="card__meta">' + esc(g.c) + '</span>' : '') + '</a>';
   }
 
@@ -67,12 +67,14 @@
       var wrap = document.createElement('div'); wrap.className = 'rd-home'; wrap.innerHTML = hero + tr + cols;
       main.insertBefore(wrap, main.firstChild);
       var grid = wrap.querySelector('[data-rd-grid]');
-      var show = function (k) { grid.innerHTML = (h[k] || []).slice(0, 12).map(card).join(''); };
+      var cur = 'trending', phoneOnly = false;
+      var show = function (k) { cur = k; var l = (h[k] || []).filter(function (g) { return !phoneOnly || g.m !== 0; }); grid.innerHTML = l.slice(0, 12).map(card).join('') || '<p class="rd-empty">No phone-friendly games in this list yet.</p>'; };
       show('trending');
       wrap.querySelectorAll('.rd-tab').forEach(function (b) { b.addEventListener('click', function () {
         wrap.querySelectorAll('.rd-tab').forEach(function (x) { x.setAttribute('aria-selected', x === b ? 'true' : 'false'); }); show(b.dataset.tab); }); });
-      /* All catalogue games are HTML5 and work in a mobile browser; the filter is a placeholder until per-game flags exist. */
-      wrap.querySelector('[data-rd-phone]').addEventListener('change', function () { grid.classList.toggle('rd-grid--phone', this.checked); });
+      /* Phone-friendly: g.m from build-redesign-data.py (0 = keyboard-only controls in the game description). */
+      wrap.querySelector('[data-rd-phone]').addEventListener('change', function () { phoneOnly = this.checked; try { localStorage.setItem('rdPhone', phoneOnly ? '1' : ''); } catch (e) {} show(cur); });
+      try { if (localStorage.getItem('rdPhone')) { wrap.querySelector('[data-rd-phone]').checked = true; phoneOnly = true; show(cur); } } catch (e) {}
     }).catch(function () {});
   }
 
