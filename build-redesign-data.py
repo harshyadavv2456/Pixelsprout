@@ -39,6 +39,10 @@ print(len(idx), "games;", len(cats), "categories")
 # ---- Top picks (large cards on homepage + category pages) ----
 # Only games with a real gameplay/creator thumbnail qualify. Generated title cards and logo fallbacks are skipped.
 PLACEHOLDER_THUMBS = {"raveswords", "wildbrush", "get-in-the-shelter", "spellwright", "sojourner"}
+try:  # generated title cards are registered here by the add-game tooling
+    PLACEHOLDER_THUMBS |= set(L("assets/thumbs/placeholders.json"))
+except (OSError, ValueError):
+    pass
 FOUNDPLAY_LIVE = ["surfd", "flowline-snowboarding", "billiards", "hollowlands", "gravecrawl", "graveyard-pinball",
                   "apex-formula-2026", "infinite-powder", "lantern-valley", "polygolf", "garage-to-gigawatt"]
 ALWAYS = ["getting-over-it"]
