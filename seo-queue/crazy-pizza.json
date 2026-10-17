@@ -1,0 +1,82 @@
+{
+ "slug": "crazy-pizza",
+ "played": true,
+ "pages": {
+  "tips": {
+   "intro": "These tips come from my own run of Crazy Pizza, where I made 5 matches and finished at $150 without reaching game over. Crazy Pizza is not a cooking game. You sort ready-made pizzas between glass columns and clear them in sets of three, and everything below is what I saw while doing that.",
+   "tips": [
+    "Press, hold for a moment, then drag slowly to the target column. About half of my quick or straight-line drags were ignored, while slow, deliberate drags worked every time.",
+    "You can only grab the bottom pizza of a column, and it lands at the bottom of the stack you drop it on. Plan around the pizza that is currently lowest.",
+    "Drop the pizza near or just below the bottom of the target stack. One drop I made high up on an empty column failed and the pizza did not move.",
+    "Stack two of the same kind first, then bring the third. Three matching pizzas in one column clear and pay out.",
+    "Every match paid exactly $30 in my run, taking me from $0 to $30, $60, $90, $120, and $150. I saw no bonus for combos.",
+    "New pizzas keep arriving at the top and push the stacks down, and they seemed to come faster as time went on. Grab the right pizza before the column shifts, since I missed twice when a spot moved under my cursor.",
+    "Do not let one column fill with mixed types. My middle column built up 5 different pizzas and became much harder to sort as it grew."
+   ],
+   "conclusion": "Slow drags, two of a kind first, and keeping columns from filling with mixed pizzas got me to $150. Use the pause button if you need a breather, since the pizzas keep coming.",
+   "extra_sections": [
+    {
+     "heading": "Why drags sometimes fail",
+     "paragraphs": [
+      "The single biggest problem in my run was input, not strategy. When I moved quickly from one column to another, the game often ignored the drag. When I pressed, held briefly, and then moved slowly, the pizza followed every time.",
+      "The other trap is timing. New pizzas arrive at the top and the stack shifts, so the pizza you aimed at can move just as you grab it. Wait for the stack to settle, then make your move."
+     ]
+    },
+    {
+     "heading": "How my five matches came together",
+     "paragraphs": [
+      "My matches in order were the green pepper and onion pizza twice, the seafood pizza with blue starfish shapes, the red chili pizza, the green pizza again, and finally the mushroom pizza. The game does not name the pizzas, so these are just how they looked to me.",
+      "Each time, the pattern was the same: find a column with one or two of a kind at the bottom, move matching pizzas onto it one at a time, and let the third one trigger the clear."
+     ]
+    }
+   ]
+  },
+  "controls": {
+   "intro": "Crazy Pizza has one control: press and drag a pizza from one column to another. There are no keys to learn.",
+   "desktop": "Click and hold the bottom pizza in a column, then drag it to another column and release. It lands at the bottom of that stack. Press, hold for a moment, and move slowly, because fast drags were often ignored in my run. The pause button sits in the top bar next to the cash counter, and the music button shows ON at the top right. I found no keyboard controls.",
+   "mobile": "The How to Play screen says Tap and Drag to move the pizzas, so the game is built for touch. I played on desktop with a mouse and did not test it on a phone myself.",
+   "tips": [
+    "The title screen has Start and a music button showing ON.",
+    "The How to Play screen has a Continue button that starts the game.",
+    "The pause screen shows Paused with Continue and Back to Main.",
+    "Drop pizzas near the bottom of the target stack, since a drop high on an empty column failed for me."
+   ]
+  },
+  "beginner-guide": {
+   "intro": "New to Crazy Pizza? This guide explains what the game really is, since the name suggests cooking, and walks you through your first matches.",
+   "what_it_is": "Crazy Pizza is an endless sorting and matching game that runs free in the browser. The board is 5 tall glass columns under a brick oven arch. Finished pizzas of several kinds keep arriving at the top and push each column down. You drag pizzas between columns, and when 3 of the same kind line up in one column they clear and add $30 to your cash counter. There are no customers, orders, recipes, levels, or timers. The pace seemed to pick up the longer I played.",
+   "first_steps": [
+    "Press OK, PLAY NOW on the loader, then Start on the title screen.",
+    "Read the How to Play screen: Tap and Drag to move the pizzas, and Put 3 pizzas of the same kind in a row. Press Continue to begin.",
+    "Look at the bottom pizza of each column, since that is the only one you can move.",
+    "Find two of the same kind and put them together in one column, then bring a third to clear them.",
+    "Drag slowly and drop near the bottom of the target stack so the move registers.",
+    "Use the pause button in the top bar if you need to stop; Continue resumes the run."
+   ],
+   "who_its_for": "It suits players who like quick match-3 sorting with a bit of time pressure, and anyone who wants a simple drag-only game for a short break.",
+   "extra_sections": [
+    {
+     "heading": "What I could not confirm",
+     "paragraphs": [
+      "I never reached game over, so I cannot say exactly what ends a run, though a column filling up seems the likely danger. I also only made vertical matches inside one column, so I do not know whether matches across columns count.",
+      "I saw no shop, upgrades, levels, or ads between rounds during my session, and every match paid the same $30."
+     ]
+    }
+   ]
+  },
+  "similar": {
+   "intro": "If you enjoy Crazy Pizza, you probably like sorting puzzles that keep the pressure on. The fun is in spotting two of a kind, setting them up, and landing the third before new pieces bury your plan. It mixes the calm logic of a sorting puzzle with the steady push of pieces that never stop arriving. Games where you stack, sort, or match pieces under a gentle time squeeze give that same satisfying mix of planning and quick reactions."
+  },
+  "faq": {
+   "faqs": [
+    {"question": "Is Crazy Pizza a cooking game?", "answer": "No. You never cook or take orders. You sort ready-made pizzas between 5 glass columns and clear sets of 3 matching pizzas for cash."},
+    {"question": "How do you match pizzas in Crazy Pizza?", "answer": "Drag the bottom pizza of one column onto another column. When 3 pizzas of the same kind line up in one column, they clear and you earn money."},
+    {"question": "How much is each match worth?", "answer": "Every match in my run paid exactly $30. Five matches took my cash counter from $0 to $150."},
+    {"question": "Why does my drag not work?", "answer": "Fast drags were often ignored for me. Press, hold briefly, then move slowly to the target column and drop near the bottom of its stack."},
+    {"question": "Can I pause the game?", "answer": "Yes. The pause button in the top bar opens a Paused screen with Continue and Back to Main."},
+    {"question": "Does Crazy Pizza have levels?", "answer": "I saw no levels, days, or stages. It played as one continuous run where new pizzas kept arriving and seemed to speed up over time."},
+    {"question": "Do I need to download or sign in?", "answer": "No. It loaded in the browser after pressing OK, PLAY NOW, with no sign in or download."}
+   ]
+  }
+ }
+}
