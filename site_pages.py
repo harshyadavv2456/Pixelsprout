@@ -216,6 +216,19 @@ FAQ_FREE_ANSWER = {
 }
 
 
+# Override for the "Can I play <game> on my phone?" FAQ answer (visible FAQ via data-faq-mobile, JSON-LD via add-faq-jsonld.py).
+# Use it where phone play has not been checked, so the FAQ does not claim it works on mobile.
+_MOBILE_UNTESTED = "It's built for desktop browsers; mobile support depends on the game and wasn't tested here."
+FAQ_MOBILE_ANSWER = {
+    "vibe-theft-auto": _MOBILE_UNTESTED,
+    "gigacity": "It's built for desktop browsers and needs a browser with WebGPU or WebGL 2; mobile support wasn't tested here.",
+    "tweetcraft": _MOBILE_UNTESTED,
+    "hood-warfare": _MOBILE_UNTESTED,
+    "poople": _MOBILE_UNTESTED,
+    "8compute": _MOBILE_UNTESTED,
+}
+
+
 def render_game_page(f, catalog, guides=None, total_games=None):
     slug, title, category = f["slug"], f["title"], f["category"]
     genre_label = S.pretty_genre(category)
@@ -328,6 +341,8 @@ def render_game_page(f, catalog, guides=None, total_games=None):
     )
     if slug in FAQ_FREE_ANSWER:
         body_attrs += f' data-faq-free="{esc(FAQ_FREE_ANSWER[slug])}"'
+    if slug in FAQ_MOBILE_ANSWER:
+        body_attrs += f' data-faq-mobile="{esc(FAQ_MOBILE_ANSWER[slug])}"'
     return S.page(head, main, body_attrs=body_attrs, active=genre_href, total_games=total_games)
 
 
