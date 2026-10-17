@@ -51,6 +51,8 @@ except (OSError, ValueError):
 FOUNDPLAY_LIVE = ["surfd", "flowline-snowboarding", "billiards", "hollowlands", "gravecrawl", "graveyard-pinball",
                   "apex-formula-2026", "infinite-powder", "lantern-valley", "polygolf", "garage-to-gigawatt"]
 ALWAYS = ["getting-over-it"]
+# Live and playable, but never featured (Top picks, Games of the week, collage, Just added, Game of the day).
+NOT_FEATURED = {"spellwright"}  # Spellwright: crafting spells needs a Discord sign-in on the creator's site
 def real_thumb(g):
     t = g.get("thumbnail") or ""
     if not t or "logo-icon" in t or g["slug"] in PLACEHOLDER_THUMBS:
@@ -74,7 +76,7 @@ def take(slugs, tag, limit):
     n = 0
     for s in slugs:
         g = by.get(s)
-        if g and s not in chosen and real_thumb(g) and n < limit and len(picks) < 12:
+        if g and s not in chosen and s not in NOT_FEATURED and real_thumb(g) and n < limit and len(picks) < 12:
             picks.append(pick(g, tag(g))); chosen.add(s); n += 1
 take(ALWAYS, lambda g: "Classic", 1)
 take(FOUNDPLAY_LIVE, lambda g: "New on Pixelsprout", 7)
@@ -86,7 +88,7 @@ COLLAGE = ["gangster-crimes-online-6-mafia-city", "gta-vi-beat-em-up", "the-boss
            "blocky-dude-gangster-auto-city", "crime-theft-gangster-paradise", "grand-city-driving-2"]
 def big(d):
     d["i"] = re.sub(r"([?&]w=)\d+", r"\g<1>400", d["i"]); return d
-home["collage"] = [big(slim(by[s])) for s in COLLAGE if s in by and real_thumb(by[s])][:5]
+home["collage"] = [big(slim(by[s])) for s in COLLAGE if s in by and s not in NOT_FEATURED and real_thumb(by[s])][:5]
 # ---- Games of the week: top pageviews (7d) from a report file passed via PS_ANALYTICS_REPORT.
 # The report URL/key never live in the repo; without a report we keep the last baked list, else fall back to Top picks.
 def _week():
@@ -95,7 +97,7 @@ def _week():
         try:
             tg = json.load(open(rp)).get("topGames") or []
             sl = [re.sub(r"^/games/|\.html$", "", x.get("path", "")) for x in sorted(tg, key=lambda x: -x.get("pageviews", 0))]
-            l = [slim(by[s]) for s in sl if s in by and real_thumb(by[s])][:8]
+            l = [slim(by[s]) for s in sl if s in by and s not in NOT_FEATURED and real_thumb(by[s])][:8]
             if l:
                 return l, "analytics-7d"
         except (OSError, ValueError) as e:
@@ -103,7 +105,7 @@ def _week():
     try:
         prev = _PREV_HOME
         if prev.get("weekSrc") == "analytics-7d" and prev.get("week"):
-            return [slim(by[g["s"]]) for g in prev["week"] if g["s"] in by and real_thumb(by[g["s"]])], "analytics-7d"
+            return [slim(by[g["s"]]) for g in prev["week"] if g["s"] in by and g["s"] not in NOT_FEATURED and real_thumb(by[g["s"]])], "analytics-7d"
     except (OSError, ValueError):
         pass
     return [dict(p) for p in picks[:8]], "top-picks-fallback"
@@ -116,7 +118,7 @@ rank = {s: i for i, s in enumerate(ALWAYS + FOUNDPLAY_LIVE + popular)}
 for c, gs in cats.items():
     pool = [by[g["s"]] for g in gs if g["s"] in by]
     pool = sorted(pool, key=lambda g: (0 if g["slug"] in osl else 1, rank.get(g["slug"], 10**6)))
-    cp = [pick(g, "Original" if g["slug"] in osl else ("Popular" if g["slug"] in rank else c)) for g in pool if real_thumb(g)][:8]
+    cp = [pick(g, "Original" if g["slug"] in osl else ("Popular" if g["slug"] in rank else c)) for g in pool if g["slug"] not in NOT_FEATURED and real_thumb(g)][:8]
     json.dump(cp, open(os.path.join(out, "picks", slug(c) + ".json"), "w"), separators=(",", ":"))
 print("top picks:", ", ".join(p["s"] for p in picks))
 
@@ -146,8 +148,8 @@ if INTERIM_NEW:
     recent = [g for g in recent if g["slug"] in INTERIM_NEW]
 def _new(g):
     d = slim(g); d["a"] = added[g["slug"]]; d["ok"] = 1 if real_thumb(g) else 0; return d
-home["recent"] = [_new(g) for g in recent]
-home["new7"] = sum(1 for g in recent if added[g["slug"]] >= now - 7 * 86400)
+home["recent"] = [_new(g) for g in recent if g["slug"] not in NOT_FEATURED]  # feeds Just added + Game of the day
+home["new7"] = sum(1 for g in recent if g["slug"] not in NOT_FEATURED and added[g["slug"]] >= now - 7 * 86400)
 home["stats"] = {"games": len(idx), "genres": len(cats)}
 home["built"] = now
 json.dump(home, open(os.path.join(out, "home.json"), "w"), separators=(",", ":"))
