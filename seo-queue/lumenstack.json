@@ -45,7 +45,7 @@
     "The start screen reads LUMENSTACK, Time the drop. Stack the light., and Tap or press Space to start.",
     "Score is top left and Best N is top right. There is no in-game pause or settings.",
     "Under the canvas the page offers Fullscreen, Favorite, and Share, plus About, How to play, and Guides.",
-    "Ads sit beside the game, including a MELBET unit and a skippable fake Download or Play now ad in the page ad area. Neither covered the portrait canvas."
+    "The page ads sit beside the game canvas."
    ]
   },
   "beginner-guide": {
@@ -77,13 +77,13 @@
    ]
   },
   "similar": {
-   "intro": "If you enjoy Lumenstack, you probably like one-button timing stackers where a piece slides and you drop it to keep a shrinking tower alive. The appeal is short, punishing runs: time the overlap, lose width on every partial land, and retry the moment the stack falls. Look for minimal neon or dark-canvas games with a best score to chase, no long campaigns, and a single input that both starts and drops. Other Pixelsprout originals in the More like this list on this page include Kilnstack, Cairnfall, Mossgate, Dewdash, Reedline, and Moonbloom, which sit next to Lumenstack in the same catalog and share that small-browser-game feel."
+   "intro": "If you enjoy Lumenstack, you probably like one-button timing stackers where a piece slides and you drop it to keep a shrinking tower alive. The appeal is short, punishing runs: time the overlap, lose width on every partial land, and retry the moment the stack falls. Look for minimal neon or dark-canvas games with a best score to chase, no long campaigns, and a single input that both starts and drops. Other Pixelsprout originals on the Lumenstack game page include Kilnstack, Cairnfall, Mossgate, Dewdash, Reedline, and Moonbloom, which sit next to Lumenstack in the same catalog and share that small-browser-game feel."
   },
   "faq": {
    "faqs": [
     {
      "question": "Is Lumenstack free to play?",
-     "answer": "Yes. It is a Pixelsprout original that plays in your browser for free with no download. A MELBET ad sat to the right of the canvas while I played and never covered it. A skippable fake Download or Play now ad also sat in the page ad area, not inside the game."
+     "answer": "Yes. It is a Pixelsprout original that plays in your browser for free with no download."
     },
     {
      "question": "How do you play Lumenstack?",
