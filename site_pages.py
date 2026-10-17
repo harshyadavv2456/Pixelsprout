@@ -202,6 +202,11 @@ GUIDE_LABELS = [
 
 FAN_MADE_SLUGS = {"getting-over-it", "baba-is-you"}
 
+# One-line notices shown directly above the game embed (same rd-note style as the notes in descriptions).
+EMBED_NOTES = {
+    "spellwright": "Crafting spells needs a Discord sign-in on the creator's site.",
+}
+
 
 def render_game_page(f, catalog, guides=None, total_games=None):
     slug, title, category = f["slug"], f["title"], f["category"]
@@ -215,6 +220,7 @@ def render_game_page(f, catalog, guides=None, total_games=None):
 
     # Fan-made Scratch remakes get a one-line disclosure under the description.
     fan_made_note = '<p class="how-to">This is a fan-made Scratch remake, not the original game.</p>\n' if slug in FAN_MADE_SLUGS else ""
+    embed_note = f'<p class="rd-note embed-note"><strong>{EMBED_NOTES[slug]}</strong></p>\n' if slug in EMBED_NOTES else ""
     description = (f.get("description_html") or "").strip()
     if not text(description):
         description = esc(f"{title} is a free {genre_label.lower()} game you can play right here in your browser — no download, no sign-up.")
@@ -279,7 +285,7 @@ def render_game_page(f, catalog, guides=None, total_games=None):
     main = f"""<div class="game-layout">
 <div class="game-main">
 {S.crumbs(crumb_items)}
-<div class="stage"><div class="embed-frame-wrap"><iframe src="{f['embed_url']}" allow="fullscreen; autoplay; screen-orientation;" scrolling="no" allowfullscreen title="{esc(title)}"></iframe></div></div>
+{embed_note}<div class="stage"><div class="embed-frame-wrap"><iframe src="{f['embed_url']}" allow="fullscreen; autoplay; screen-orientation;" scrolling="no" allowfullscreen title="{esc(title)}"></iframe></div></div>
 <div class="game-bar">
 <div class="game-bar__info"><h1 class="game-bar__title">{esc(title)}</h1>{chip}</div>
 <div class="game-bar__actions">
