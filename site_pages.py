@@ -882,8 +882,8 @@ FEATURED_GUIDES = [
     ("Toilet Rush: Draw to Pee", "toilet-rush-draw-to-pee", "A draw-a-path puzzle played with the mouse: drag a route from the character to the toilet.", []),
     ("Moonbloom", "moonbloom", "A Pixelsprout original puzzle: drop seeds into a 6x7 night planter and match three or more plants to grow them.", []),
     ("Skateboard Challenge", "skateboard-challenge", "A 2D street skating game: jump cones, collect coins and the letters of SKATE, and pull tricks for points.", []),
-    ("Ninja Adventure", "ninja-adventure", "A side-scrolling ninja platformer: pick a fighter on the title screen, then run Level 1 collecting coins.", []),
-    ("Lumenstack", "lumenstack", "A Pixelsprout original: drop glowing blocks on a portrait board and clear stacks before the pile reaches the top.", []),
+    ("Ninja Adventure", "ninja-adventure", "A side-scrolling ninja platformer: pick Ninja Boy or Ninja Girl on the player-select screen, then run Level 1 collecting coins.", []),
+    ("Lumenstack", "lumenstack", "Time each drop so the sliding block overlaps the stack; only the overlap stays and a miss ends the run.", []),
 ]
 
 
