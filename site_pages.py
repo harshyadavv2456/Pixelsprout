@@ -206,6 +206,7 @@ FAN_MADE_SLUGS = {"getting-over-it", "baba-is-you"}
 # One-line notices shown directly above the game embed (same rd-note style as the notes in descriptions).
 EMBED_NOTES = {
     "spellwright": "Crafting spells needs a Discord sign-in on the creator's site.",
+    "gigacity": "Needs a browser with WebGPU or WebGL 2.",
 }
 
 # Override for the "Is <game> free to play?" FAQ answer (visible FAQ via data-faq-free, JSON-LD via add-faq-jsonld.py).
