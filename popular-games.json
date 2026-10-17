@@ -2,22 +2,26 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 173
+      "views": 174
     },
     {
       "slug": "getting-over-it",
-      "views": 94
+      "views": 96
     },
     {
       "slug": "dot-link-puzzle-connect-the-dots",
-      "views": 37
+      "views": 38
     },
     {
       "slug": "protect-my-dog",
-      "views": 35
+      "views": 38
     },
     {
       "slug": "2048-cube-run",
+      "views": 33
+    },
+    {
+      "slug": "test-tubes-water-sort",
       "views": 31
     },
     {
@@ -25,15 +29,11 @@
       "views": 26
     },
     {
-      "slug": "save-the-doge",
-      "views": 26
-    },
-    {
       "slug": "2048-cube-merge-block",
       "views": 26
     },
     {
-      "slug": "test-tubes-water-sort",
+      "slug": "save-the-doge",
       "views": 26
     },
     {
@@ -50,7 +50,7 @@
     },
     {
       "slug": "gravity-merge",
-      "views": 20
+      "views": 22
     },
     {
       "slug": "100-doors-escape-puzzle",
