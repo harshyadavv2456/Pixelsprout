@@ -139,14 +139,15 @@
     document.querySelectorAll('script[type="application/ld+json"]').forEach(function (s) {
       try { var j = JSON.parse(s.textContent); if (j['@type'] === 'VideoGame' && j.genre) genre = j.genre; } catch (e) {}
     });
+    var faqFree = document.body.getAttribute('data-faq-free'); // per-game override from site_pages.FAQ_FREE_ANSWER
     var bar = document.querySelector('.game-bar');
     if (bar && !document.querySelector('.rd-trust')) {
       var t = document.createElement('p'); t.className = 'rd-trust';
-      t.innerHTML = '✓ Plays right here in your browser: free, no download, no account. Game link checked by Pixelsprout.';
+      t.innerHTML = '✓ Plays right here in your browser: free, no download' + (faqFree ? '' : ', no account') + '. Game link checked by Pixelsprout.';
       bar.parentNode.insertBefore(t, bar.nextSibling);
     }
     var faq = [
-      ['Is ' + title + ' free to play?', 'Yes. ' + title + ' is free on Pixelsprout and plays in your web browser with no download or sign-up.'],
+      ['Is ' + title + ' free to play?', faqFree || ('Yes. ' + title + ' is free on Pixelsprout and plays in your web browser with no download or sign-up.')],
       ['Can I play ' + title + ' on my phone?', document.querySelector('.desktop-only') ? 'No. ' + title + ' is desktop only: it needs a mouse and keyboard.' : 'Yes, it runs in a modern mobile browser. Rotate to landscape or use full screen for the best view.'],
       ['What kind of game is ' + title + '?', title + ' is a ' + genre.toLowerCase() + ' game. Find more in the ' + genre + ' section.'],
       ['Do I need to install anything?', 'No. Pixelsprout games are HTML5 and load directly in the page.']

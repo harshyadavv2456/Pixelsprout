@@ -207,6 +207,12 @@ EMBED_NOTES = {
     "spellwright": "Crafting spells needs a Discord sign-in on the creator's site.",
 }
 
+# Override for the "Is <game> free to play?" FAQ answer (visible FAQ via data-faq-free, JSON-LD via add-faq-jsonld.py).
+FAQ_FREE_ANSWER = {
+    "spellwright": "Yes. Spellwright is free on Pixelsprout and plays in your web browser with no download. "
+                   "Casting or crafting spells needs a Discord sign-in on the creator's site.",
+}
+
 
 def render_game_page(f, catalog, guides=None, total_games=None):
     slug, title, category = f["slug"], f["title"], f["category"]
@@ -318,6 +324,8 @@ def render_game_page(f, catalog, guides=None, total_games=None):
         f'class="game-page" data-page="game" data-slug="{esc(slug)}" data-title="{esc(title)}" '
         f'data-genre="{esc(category)}" data-thumbnail="{esc(thumb)}"'
     )
+    if slug in FAQ_FREE_ANSWER:
+        body_attrs += f' data-faq-free="{esc(FAQ_FREE_ANSWER[slug])}"'
     return S.page(head, main, body_attrs=body_attrs, active=genre_href, total_games=total_games)
 
 
