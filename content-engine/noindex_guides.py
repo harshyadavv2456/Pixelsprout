@@ -65,7 +65,7 @@ def hidden_hub_slugs(guides_index, urls=None):
 # game. Every game on Pixelsprout runs free in the web browser with no download.
 _H = r"[\s\-\u2010\u2011\u2012\u2013]?"
 PURCHASE_RE = re.compile(r"in" + _H + r"(game|app)\s+purchas|micro" + _H + r"transaction|\bpurchas", re.I)
-CLAIM_RE = re.compile(PURCHASE_RE.pattern + r"|limited content|full version|download and (start )?play"
+CLAIM_RE = re.compile(PURCHASE_RE.pattern + r"|limited content|full version|(?<!no )(?<!nothing to )download and|initial download|download (it|the game) (from|on)"
                       r"|free" + _H + r"to" + _H + r"download|app store|google play"
                       r"|(free|paid|premium|full|lite)\s*version|paid game|can be bought|in" + _H + r"(game|app)\s+store", re.I)
 # Questions about cost: the only verified answer is the browser line.
