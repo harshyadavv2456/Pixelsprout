@@ -83,3 +83,12 @@ that page first, and say what they actually have in common with the famous game.
 `content-engine/queue-report.json` on `main` → `runs[0]` is the latest run:
 - `published`: file, pages and live URLs (plus `rejected_pages` if only some pages failed)
 - `rejected`: file and the exact reasons — fix them and push the file again
+
+## Pages on the noindex list
+
+`content-engine/noindex-guides.json` lists guide pages held out of Google until Studio has checked them
+(the 39 template games from 17 Oct 2026). A played file for one of these games still publishes, but its
+pages stay `noindex,follow` and out of `sitemap.xml` (`runs[0].published[].noindex_held` in the report).
+After Studio checks the live pages, run `python content-engine/lift_noindex.py <slug> [<slug> ...]`
+(try `--dry-run` first) on main: it removes the 5 URLs from the list, reruns `seo_cleanup.py` so they
+become indexable and return to the sitemap, and re-renders the `/guides/` hub so the game is listed again.
