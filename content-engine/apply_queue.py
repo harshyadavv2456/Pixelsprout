@@ -281,10 +281,15 @@ def main():
         related = sim.find_similar(game, all_games, limit=8)
         category_url = gg.category_url_for(game)
         page_urls = gg.guide_urls_for(game)
+        held = noindex_guides.load_urls()
         for page_type, content in good_pages.items():
             out_dir = os.path.join(REPO_ROOT, page_urls[page_type].strip("/"))
             os.makedirs(out_dir, exist_ok=True)
             page_html = render.render_guide_page(page_type, game, escape_all(content), related, page_urls, category_url)
+            if page_urls[page_type] in held:
+                # Still on the NOINDEX_GUIDES list: new content goes live but stays noindex and out
+                # of the sitemap until Studio checks it and runs content-engine/lift_noindex.py.
+                page_html, _ = seo_cleanup.set_noindex(page_html, True)
             with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8", newline="\n") as f:
                 f.write(page_html)
 
@@ -314,11 +319,11 @@ def main():
                      "urls": [f"https://playpixelsprout.com{page_urls[p]}" for p in sorted(good_pages)]}
         if page_errors:
             published["rejected_pages"] = {p: e[:10] for p, e in page_errors.items()}
-        # A played file is the proof the NOINDEX_GUIDES list waits for: only the pages
-        # published from it come off the list (seo_cleanup then re-adds them to the sitemap).
-        lifted = noindex_guides.remove_urls(page_urls[p] for p in good_pages)
-        if lifted:
-            published["noindex_lifted"] = lifted
+        # Never take URLs off the NOINDEX_GUIDES list here: Studio checks the rewrite first,
+        # then runs content-engine/lift_noindex.py <slug>.
+        still_held = sorted(page_urls[p] for p in good_pages if page_urls[p] in held)
+        if still_held:
+            published["noindex_held"] = still_held
         run_log["published"].append(published)
         applied_hashes[fname] = sha
 

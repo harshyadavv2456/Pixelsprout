@@ -1,5 +1,5 @@
 {
-  "_about": "Guide page URLs that must stay noindex,follow and out of sitemap.xml until they are rewritten from real play. Respected by content-engine/seo_cleanup.py (forces noindex + drops from sitemap), generate_guides.py (never regenerates these pages, never adds them to the sitemap, hides fully-listed games from the /guides/ hub list) and apply_queue.py (a played seo-queue file for the game is the only thing that takes a URL off this list). Added 2026-10-17 from the guide verdicts audit: 39 games with template copy.",
+  "_about": "Guide page URLs that must stay noindex,follow and out of sitemap.xml until Studio has checked a rewrite from real play. Respected by content-engine/seo_cleanup.py (forces noindex + drops from sitemap), generate_guides.py (never regenerates these pages, never adds them to the sitemap, hides fully-listed games from the /guides/ hub list) and apply_queue.py (publishes played rewrites but keeps them noindex; never edits this list). Only content-engine/lift_noindex.py <slug> takes URLs off the list. Added 2026-10-17 from the guide verdicts audit: 39 games with template copy.",
   "added": "2026-10-17",
   "urls": [
     "/guides/angry-sharks-beginner-guide/",

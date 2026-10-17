@@ -83,7 +83,12 @@ def set_noindex(page_html, want_noindex):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true")
-    args = parser.parse_args()
+    run(parser.parse_args().dry_run)
+
+
+def run(dry_run=False, forced_noindex=None):
+    """forced_noindex: override the NOINDEX_GUIDES set (lift_noindex.py --dry-run uses this)."""
+    args = argparse.Namespace(dry_run=dry_run)
 
     games = {g["slug"]: g for g in json.load(open(GAMES_INDEX_PATH, encoding="utf-8"))}
     # Pixelsprout originals live in assets/originals.json, not games-index.json
@@ -96,7 +101,8 @@ def main():
     with open(SITEMAP_PATH, encoding="utf-8") as f:
         sitemap = f.read()
 
-    forced_noindex = noindex_guides.load_urls()
+    if forced_noindex is None:
+        forced_noindex = noindex_guides.load_urls()
     template_urls, real_urls = set(), set()
     html_changed = 0
     for slug, entry in manifest.items():
@@ -149,6 +155,7 @@ def main():
     print(f"Sitemap: removed {removed} template URLs, added {len(missing)} real URLs")
     if args.dry_run:
         print("(dry run - nothing written)")
+    return {"template_urls": template_urls, "real_urls": real_urls, "sitemap": new_sitemap}
 
 
 if __name__ == "__main__":

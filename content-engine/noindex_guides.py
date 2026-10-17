@@ -7,8 +7,10 @@ Who respects it:
   * seo_cleanup.py      - forces the noindex tag and drops these URLs from sitemap.xml
   * generate_guides.py  - never regenerates these pages, never adds them to the sitemap,
                           and hides games whose guides are all listed from the /guides/ hub list
-  * apply_queue.py      - publishing a page from a played seo-queue file is the only thing
-                          that takes its URL off the list (that is the proof the copy is real)
+  * apply_queue.py      - still publishes played rewrites for listed pages, but keeps them
+                          noindex; it never takes URLs off the list
+  * lift_noindex.py     - the only way off the list: Studio checks the rewrite, then runs
+                          `python content-engine/lift_noindex.py <slug> [...]`
 
 Also home of the purchase-claim guard: nobody has verified in-game purchases for any
 game, so generated copy must never claim them.
@@ -37,7 +39,7 @@ NOINDEX_GUIDES = load_urls()
 
 
 def remove_urls(urls):
-    """Take URLs off the list (only after they were republished from a played file)."""
+    """Take URLs off the list. Only lift_noindex.py calls this (after Studio has checked them)."""
     urls = set(urls)
     doc = _load_doc()
     before = doc.get("urls", [])
