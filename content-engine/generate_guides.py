@@ -68,9 +68,10 @@ def build_prompts(page_type, game, related_titles):
         "involves, phrased generically enough to be true (e.g. \"time your jumps to avoid "
         "obstacles\" rather than inventing a named special move). Being accurately generic "
         "beats being specifically wrong.\n\n"
-        "NEVER mention in-game purchases, microtransactions, shops, ads, or prices: nobody has "
-        "checked them for this game. For free-to-play questions, only say it is free to play in "
-        "the browser on Pixelsprout."
+        "NEVER mention in-game or in-app purchases, microtransactions, shops, ads, prices, a "
+        "'full version', 'limited content', app stores, or downloading: nobody has checked them "
+        "for this game. For free-to-play or download questions, only say it is free to play in "
+        "your web browser on Pixelsprout, with no download."
     )
     if page_type == "tips":
         user = (
@@ -122,7 +123,7 @@ def get_content(client, page_type, game, related_titles, dry_run, stats):
         result = client.generate_json(system, user)
         if result:
             # Nobody has verified purchases for any game: never publish a purchase claim.
-            result = noindex_guides.scrub_content(page_type, result)
+            result = noindex_guides.scrub_content(page_type, result, game["title"])
             stats["ai"] += 1
             return result, False
         stats["fallback_after_fail"] += 1
@@ -135,7 +136,7 @@ def get_content(client, page_type, game, related_titles, dry_run, stats):
         "similar": fb.fallback_similar_intro,
         "faq": fb.fallback_faq,
     }
-    return noindex_guides.scrub_content(page_type, fallback_map[page_type](game)), True
+    return noindex_guides.scrub_content(page_type, fallback_map[page_type](game), game["title"]), True
 
 
 GUIDE_PAGE_TYPES = ["tips", "controls", "beginner-guide", "similar", "faq"]

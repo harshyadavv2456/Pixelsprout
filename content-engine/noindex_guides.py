@@ -60,23 +60,52 @@ def hidden_hub_slugs(guides_index, urls=None):
                   if pages and all(u in urls for u in pages.values()))
 
 
-# --- purchase-claim guard ---------------------------------------------------
-# Matches "in-game purchases" with any hyphen (ASCII, non-breaking U+2011, en dash...) or a space.
-PURCHASE_RE = re.compile(r"in[\s\-\u2010\u2011\u2012\u2013]?(game|app)\s+purchas|micro[\s\-\u2010\u2011]?transaction|\bpurchas", re.I)
+# --- purchase / download claim guard -----------------------------------------
+# Nobody has verified purchases, paid "full versions" or app-store downloads for any
+# game. Every game on Pixelsprout runs free in the web browser with no download.
+_H = r"[\s\-\u2010\u2011\u2012\u2013]?"
+PURCHASE_RE = re.compile(r"in" + _H + r"(game|app)\s+purchas|micro" + _H + r"transaction|\bpurchas", re.I)
+CLAIM_RE = re.compile(PURCHASE_RE.pattern + r"|limited content|full version|download and (start )?play"
+                      r"|free" + _H + r"to" + _H + r"download|app store|google play"
+                      r"|(free|paid|premium|full|lite)\s*version|paid game|can be bought|in" + _H + r"(game|app)\s+store", re.I)
+# Questions about cost: the only verified answer is the browser line.
+COST_Q_RE = re.compile(r"\bpurchas|\bpaid\b|\bcost\b|\bprice", re.I)
 _SENT_RE = re.compile(r"[^.!?]*(?:[.!?]+|$)")
 
 
-def strip_purchase_claims(text):
-    """Drop every sentence that talks about purchases. Returns the cleaned text."""
-    if not isinstance(text, str) or not PURCHASE_RE.search(text):
+def browser_line(title, yes=False):
+    return f"{'Yes. ' if yes else ''}{title} is free to play in your web browser on Pixelsprout, with no download."
+
+
+def clean_text(text, title=None, regex=None):
+    """Replace every sentence with a purchase/download claim. With a title, the first one
+    becomes the true browser line; without a title (or after the first) it is dropped."""
+    regex = regex or CLAIM_RE
+    if not isinstance(text, str) or not regex.search(text):
         return text
-    kept = [s for s in _SENT_RE.findall(text) if s.strip() and not PURCHASE_RE.search(s)]
-    return "".join(kept).strip()
+    out, used = [], False
+    for sent in _SENT_RE.findall(text):
+        if not sent.strip():
+            continue
+        if regex.search(sent):
+            if title and not used:
+                lead = sent[:len(sent) - len(sent.lstrip())]
+                out.append(lead + browser_line(title, sent.strip().lower().startswith("yes")))
+                used = True
+            continue
+        out.append(sent)
+    return "".join(out).strip()
 
 
-def scrub_content(page_type, content):
-    """Remove unverified purchase claims from generated guide content (any page type).
-    FAQ pairs whose question is about purchases are dropped entirely."""
+def strip_purchase_claims(text):
+    """Drop every sentence with a purchase/download claim. Returns the cleaned text."""
+    return clean_text(text)
+
+
+def scrub_content(page_type, content, title=None):
+    """Remove unverified purchase/download claims from generated guide content.
+    FAQ pairs asking about in-game/in-app purchases are dropped; questions about cost get
+    the true browser line; in answers each claim becomes that line (title given) or is dropped."""
     if not isinstance(content, dict):
         return content
     out = {}
@@ -84,14 +113,18 @@ def scrub_content(page_type, content):
         if key == "faqs" and isinstance(value, list):
             faqs = []
             for qa in value:
-                if not isinstance(qa, dict) or PURCHASE_RE.search(str(qa.get("question", ""))):
+                q = str(qa.get("question", "")) if isinstance(qa, dict) else ""
+                if not q or re.search(r"in" + _H + r"(game|app)\s+purchas|micro" + _H + r"transaction", q, re.I):
                     continue
-                answer = strip_purchase_claims(qa.get("answer", ""))
+                if title and COST_Q_RE.search(q):
+                    answer = browser_line(title)
+                else:
+                    answer = clean_text(qa.get("answer", ""), title)
                 if answer:
                     faqs.append({**qa, "answer": answer})
             out[key] = faqs
         elif isinstance(value, list):
-            out[key] = [v for v in (strip_purchase_claims(x) for x in value) if v]
+            out[key] = [v for v in (clean_text(x) for x in value) if v]
         else:
-            out[key] = strip_purchase_claims(value)
+            out[key] = clean_text(value)
     return out
