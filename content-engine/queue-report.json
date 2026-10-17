@@ -9,10 +9,54 @@
     "toilet-rush-draw-to-pee.json": "fdd6754ca1970f77f043383aa646ad6a6f9bdb774e072a49f7504e8c0b3581cc",
     "moonbloom.json": "4e434c8a3e3866e9ceee6a558db29608e71a3bce5db6e0957f91f8d614d9958b",
     "skateboard-challenge.json": "0f65a184dca98b2abed1dc720388acdcd5fc675e651a2d234142ffad2ac5f3a4",
-    "lumenstack.json": "eee4be197ec83edc379402850a81e8a1510aa8f179166c1d5b53d4619cf02748",
-    "ninja-adventure.json": "2a8b94c50ee6005c481a617cf5dc2a18e0b1bccfe7fc0d02357e2f1d401cafa9"
+    "lumenstack.json": "31e2c835f5ba94526cb5c05f1187ba72bc46e4f41046e2cc43f8f086c844cb67",
+    "ninja-adventure.json": "2a8b94c50ee6005c481a617cf5dc2a18e0b1bccfe7fc0d02357e2f1d401cafa9",
+    "crazy-pizza.json": "a0c303100381200c02c36f07834da1bc2aa781bf7890f9807bafbc33ac71f9cf",
+    "test-tubes-water-sort.json": "adeb2f3a032ad3cf5a55dd374c62ce55e4ec714d667eb023497c86c7388a0b50"
   },
   "runs": [
+    {
+      "ran_at": "2026-10-17T04:21:06Z",
+      "published": [
+        {
+          "file": "crazy-pizza.json",
+          "slug": "crazy-pizza",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/crazy-pizza-beginner-guide/",
+            "https://playpixelsprout.com/guides/crazy-pizza-controls/",
+            "https://playpixelsprout.com/guides/crazy-pizza-faq/",
+            "https://playpixelsprout.com/guides/games-like-crazy-pizza/",
+            "https://playpixelsprout.com/guides/crazy-pizza-tips/"
+          ]
+        },
+        {
+          "file": "test-tubes-water-sort.json",
+          "slug": "test-tubes-water-sort",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/test-tubes-water-sort-beginner-guide/",
+            "https://playpixelsprout.com/guides/test-tubes-water-sort-controls/",
+            "https://playpixelsprout.com/guides/test-tubes-water-sort-faq/",
+            "https://playpixelsprout.com/guides/games-like-test-tubes-water-sort/",
+            "https://playpixelsprout.com/guides/test-tubes-water-sort-tips/"
+          ]
+        }
+      ],
+      "rejected": []
+    },
     {
       "ran_at": "2026-10-16T06:21:36Z",
       "published": [

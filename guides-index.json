@@ -19431,5 +19431,12 @@
     "beginner-guide": "/guides/lumenstack-beginner-guide/",
     "similar": "/guides/games-like-lumenstack/",
     "faq": "/guides/lumenstack-faq/"
+  },
+  "test-tubes-water-sort": {
+    "tips": "/guides/test-tubes-water-sort-tips/",
+    "controls": "/guides/test-tubes-water-sort-controls/",
+    "beginner-guide": "/guides/test-tubes-water-sort-beginner-guide/",
+    "similar": "/guides/games-like-test-tubes-water-sort/",
+    "faq": "/guides/test-tubes-water-sort-faq/"
   }
 }

@@ -4407,7 +4407,15 @@
       "beginner-guide": "/guides/crazy-pizza-beginner-guide/",
       "similar": "/guides/games-like-crazy-pizza/",
       "faq": "/guides/crazy-pizza-faq/"
-    }
+    },
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-10-17T04:21:06Z"
   },
   "bubble-hero-3d": {
     "generated_at": "2026-10-01T11:28:09Z",
@@ -30630,5 +30638,23 @@
       "tips"
     ],
     "bot_updated_at": "2026-10-16T06:21:36Z"
+  },
+  "test-tubes-water-sort": {
+    "pages": {
+      "tips": "/guides/test-tubes-water-sort-tips/",
+      "controls": "/guides/test-tubes-water-sort-controls/",
+      "beginner-guide": "/guides/test-tubes-water-sort-beginner-guide/",
+      "similar": "/guides/games-like-test-tubes-water-sort/",
+      "faq": "/guides/test-tubes-water-sort-faq/"
+    },
+    "any_fallback": false,
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-10-17T04:21:06Z"
   }
 }
