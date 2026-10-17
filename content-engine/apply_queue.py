@@ -52,6 +52,7 @@ import generate_guides as gg  # noqa: E402
 import page_renderer as render  # noqa: E402
 import similar_games as sim  # noqa: E402
 import seo_cleanup  # noqa: E402
+import noindex_guides  # noqa: E402
 from collections_data import COLLECTIONS  # noqa: E402
 
 REPO_ROOT = gg.REPO_ROOT
@@ -313,6 +314,11 @@ def main():
                      "urls": [f"https://playpixelsprout.com{page_urls[p]}" for p in sorted(good_pages)]}
         if page_errors:
             published["rejected_pages"] = {p: e[:10] for p, e in page_errors.items()}
+        # A played file is the proof the NOINDEX_GUIDES list waits for: only the pages
+        # published from it come off the list (seo_cleanup then re-adds them to the sitemap).
+        lifted = noindex_guides.remove_urls(page_urls[p] for p in good_pages)
+        if lifted:
+            published["noindex_lifted"] = lifted
         run_log["published"].append(published)
         applied_hashes[fname] = sha
 

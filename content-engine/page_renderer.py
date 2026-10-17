@@ -185,3 +185,77 @@ def render_collection_page(collection, games, content):
     }
     by_slug = {g["slug"]: g for g in games}
     return P.render_collection_page(fields, by_slug)
+
+
+STUB_TITLES = {
+    "tips": "{t} Tips",
+    "controls": "{t} Controls",
+    "beginner-guide": "{t} Beginner's Guide",
+    "similar": "Games Like {t}",
+    "faq": "{t} FAQ",
+}
+STUB_LABELS = {"tips": "tips guide", "controls": "controls guide", "beginner-guide": "beginner's guide",
+               "similar": "games-like guide", "faq": "FAQ"}
+
+
+def render_stub_page(page_type, game, related_games, sibling_guides, category_url=None):
+    """Short, true page for a game nobody has played for a guide yet: the name, that it
+    plays free in the browser on Pixelsprout, and a link to the game page. No mechanics,
+    no claims. These URLs sit on content-engine/noindex-guides.json (noindex, no sitemap)."""
+    t = S.esc(game["title"])
+    game_url = f"/games/{game['slug']}.html"
+    free_line = f"{t} plays free in your browser on Pixelsprout."
+    if page_type == "faq":
+        body = (f"<h2>Is {t} free to play?</h2>\n<p>Yes. {free_line}</p>\n"
+                f'<p><a href="{game_url}">Play {t} on Pixelsprout</a></p>')
+        content = {"faqs": [{"question": f"Is {game['title']} free to play?",
+                             "answer": f"Yes. {game['title']} plays free in your browser on Pixelsprout."}]}
+    else:
+        body = (f"<p>{free_line}</p>\n<p>This page does not have a full {STUB_LABELS[page_type]} yet.</p>\n"
+                f'<p><a href="{game_url}">Play {t} on Pixelsprout</a></p>')
+        content = {}
+    title = STUB_TITLES[page_type].format(t=game["title"])
+    canonical_path = f"/guides/{_fmt(SLUG_MAP[page_type], game)}/"
+    desc = f"{game['title']} plays free in your browser on Pixelsprout."
+    thumb = (game.get("thumbnail") or "").strip()
+    schema = [
+        json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE}/"},
+            {"@type": "ListItem", "position": 2, "name": "Guides", "item": f"{SITE}/guides/"},
+            {"@type": "ListItem", "position": 3, "name": title, "item": f"{SITE}{canonical_path}"},
+        ]}),
+    ]
+    if content.get("faqs"):
+        schema.append(json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": q["question"], "acceptedAnswer": {"@type": "Answer", "text": q["answer"]}}
+            for q in content["faqs"]]}))
+    crumbs = [("Home", "/"), ("Guides", "/guides/")]
+    if category_url:
+        crumbs.append((S.esc(game["category"]), category_url))
+    crumbs.append((t, game_url))
+    crumbs.append((CRUMB_LABELS[page_type], None))
+    og = "\n".join([
+        '<meta property="og:type" content="article">',
+        f'<meta property="og:url" content="{SITE}{canonical_path}">',
+        f'<meta property="og:title" content="{S.esc(title)} | Pixelsprout">',
+        f'<meta property="og:description" content="{S.esc(desc)}">',
+        f'<meta property="og:image" content="{S.esc(thumb or SITE + "/assets/logo-icon.png")}">',
+    ])
+    fields = {
+        "title_tag": S.esc(title + " | Pixelsprout"),
+        "meta_desc": S.esc(desc),
+        "canonical": f"{SITE}{canonical_path}",
+        "og": og,
+        "jsonld": schema,
+        "crumbs": crumbs,
+        "h1": S.esc(title),
+        "eyebrow": f"Guide &middot; {S.esc(game['category'])}",
+        "game_slug": game["slug"],
+        "game_title": game["title"],
+        "genre": game["category"],
+        "thumbnail": thumb,
+        "body": body,
+        "siblings": [(url, SIBLING_LABELS[key]) for key, url in sibling_guides.items() if key != page_type],
+        "related": [{"slug": g["slug"], "title": g["title"], "thumbnail": (g.get("thumbnail") or "").strip()} for g in related_games],
+    }
+    return P.render_guide_page(fields)

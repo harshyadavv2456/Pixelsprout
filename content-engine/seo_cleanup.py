@@ -19,6 +19,10 @@ What this does (safe to run every day, idempotent):
 Template pages are detected by content, not by the manifest flag (the manifest
 only tracks "any page of this game fell back", not which page).
 
+Pages on the NOINDEX_GUIDES list (content-engine/noindex-guides.json, see
+noindex_guides.py) are always treated as noindex and kept out of the sitemap,
+whatever their content, until a played rewrite takes them off the list.
+
 Usage:
   python content-engine/seo_cleanup.py            # apply
   python content-engine/seo_cleanup.py --dry-run  # report only
@@ -33,6 +37,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
 import fallback_content as fb  # noqa: E402
+import noindex_guides  # noqa: E402
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GAMES_INDEX_PATH = os.path.join(REPO_ROOT, "games-index.json")
@@ -91,6 +96,7 @@ def main():
     with open(SITEMAP_PATH, encoding="utf-8") as f:
         sitemap = f.read()
 
+    forced_noindex = noindex_guides.load_urls()
     template_urls, real_urls = set(), set()
     html_changed = 0
     for slug, entry in manifest.items():
@@ -105,7 +111,7 @@ def main():
                 continue
             with open(path, encoding="utf-8") as f:
                 page = f.read()
-            template = is_template_page(page, page_type, game)
+            template = url in forced_noindex or is_template_page(page, page_type, game)
             (template_urls if template else real_urls).add(url)
             new_page, changed = set_noindex(page, template)
             if changed:
@@ -119,7 +125,7 @@ def main():
     kept_lines = []
     for line in sitemap.splitlines():
         m = re.search(r"<loc>" + re.escape(SITE) + r"(/guides/[^<]+)</loc>", line)
-        if m and m.group(1) in template_urls:
+        if m and (m.group(1) in template_urls or m.group(1) in forced_noindex):
             removed += 1
             continue
         kept_lines.append(line)

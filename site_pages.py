@@ -10,6 +10,7 @@ import datetime
 import json
 import os
 import re
+import sys
 
 import site_shell as S
 from site_shell import esc, text
@@ -902,6 +903,17 @@ def _featured_guides_html():
     return ''.join(out)
 
 
+def _hub_hidden_slugs():
+    """Games whose guides are all on content-engine/noindex-guides.json stay off the hub list."""
+    try:
+        sys.path.insert(0, os.path.join(S.ROOT, "content-engine"))
+        import noindex_guides
+        with open(os.path.join(S.ROOT, "guides-index.json"), encoding="utf-8") as f:
+            return noindex_guides.hidden_hub_slugs(json.load(f))
+    except (ImportError, OSError, ValueError):
+        return []
+
+
 def render_guides_hub(total_games=None):
     title = "Game Guides - Tips, Controls & FAQs | Pixelsprout"
     description = "Tips, controls, beginner guides, and FAQs for every game on Pixelsprout."
@@ -917,10 +929,11 @@ def render_guides_hub(total_games=None):
 <div class="catalog-bar"><label class="field"><span class="visually-hidden">Filter guides</span>{S.icon('search')}<input id="guides-search" type="search" placeholder="Find a game's guides" autocomplete="off"></label><span class="catalog-bar__count" id="guides-count"></span></div>
 <ul class="az-list" id="guides-list"></ul>
 <script>
+const hidden = new Set({json.dumps(_hub_hidden_slugs())});
 fetch('/guides-index.json')
   .then(r => r.json())
   .then(data => {{
-    const entries = Object.keys(data).map(slug => ({{ slug, pages: data[slug], name: slug.replace(/-/g, ' ') }}))
+    const entries = Object.keys(data).filter(slug => !hidden.has(slug)).map(slug => ({{ slug, pages: data[slug], name: slug.replace(/-/g, ' ') }}))
       .sort((a, b) => a.name.localeCompare(b.name));
     const list = document.getElementById('guides-list');
     const count = document.getElementById('guides-count');

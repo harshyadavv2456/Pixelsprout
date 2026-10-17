@@ -31,6 +31,7 @@ from groq_client import GroqRotatingClient
 import fallback_content as fb
 import similar_games as sim
 import page_renderer as render
+import noindex_guides
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GAMES_INDEX_PATH = os.path.join(REPO_ROOT, "games-index.json")
@@ -66,7 +67,10 @@ def build_prompts(page_type, game, related_titles):
         "genuinely useful content based on what a game in this GENRE/CATEGORY typically "
         "involves, phrased generically enough to be true (e.g. \"time your jumps to avoid "
         "obstacles\" rather than inventing a named special move). Being accurately generic "
-        "beats being specifically wrong."
+        "beats being specifically wrong.\n\n"
+        "NEVER mention in-game purchases, microtransactions, shops, ads, or prices: nobody has "
+        "checked them for this game. For free-to-play questions, only say it is free to play in "
+        "the browser on Pixelsprout."
     )
     if page_type == "tips":
         user = (
@@ -117,6 +121,8 @@ def get_content(client, page_type, game, related_titles, dry_run, stats):
         system, user = build_prompts(page_type, game, related_titles)
         result = client.generate_json(system, user)
         if result:
+            # Nobody has verified purchases for any game: never publish a purchase claim.
+            result = noindex_guides.scrub_content(page_type, result)
             stats["ai"] += 1
             return result, False
         stats["fallback_after_fail"] += 1
@@ -129,7 +135,7 @@ def get_content(client, page_type, game, related_titles, dry_run, stats):
         "similar": fb.fallback_similar_intro,
         "faq": fb.fallback_faq,
     }
-    return fallback_map[page_type](game), True
+    return noindex_guides.scrub_content(page_type, fallback_map[page_type](game)), True
 
 
 GUIDE_PAGE_TYPES = ["tips", "controls", "beginner-guide", "similar", "faq"]
@@ -167,8 +173,11 @@ def process_game(client, game, all_games, dry_run, stats, locked=()):
 
     page_urls = guide_urls_for(game)
     page_contents = {}
+    noindex = noindex_guides.load_urls()
     for page_type in GUIDE_PAGE_TYPES:
-        if page_type in locked:
+        if page_type in locked or page_urls[page_type] in noindex:
+            # locked = written from real play; noindex list = cut to a short true stub and
+            # waiting for a played rewrite. Neither is ever regenerated here.
             continue
         content, is_fallback = get_content(client, page_type, game, related_titles, dry_run, stats)
         page_contents[page_type] = (content, is_fallback)
@@ -191,7 +200,8 @@ def update_sitemap(new_urls):
         return
     with open(SITEMAP_PATH, encoding="utf-8") as f:
         content = f.read()
-    to_add = [u for u in new_urls if f"<loc>https://playpixelsprout.com{u}</loc>" not in content]
+    noindex = noindex_guides.load_urls()
+    to_add = [u for u in new_urls if u not in noindex and f"<loc>https://playpixelsprout.com{u}</loc>" not in content]
     if not to_add:
         return
     entries = "\n".join(f"  <url><loc>https://playpixelsprout.com{u}</loc><priority>0.5</priority></url>" for u in to_add)
