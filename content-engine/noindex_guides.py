@@ -60,7 +60,7 @@ def hidden_hub_slugs(guides_index, urls=None):
 
 # --- purchase-claim guard ---------------------------------------------------
 # Matches "in-game purchases" with any hyphen (ASCII, non-breaking U+2011, en dash...) or a space.
-PURCHASE_RE = re.compile(r"in[\s\-\u2010\u2011\u2012\u2013]?(game|app)\s+purchas|microtransaction|\bpurchas", re.I)
+PURCHASE_RE = re.compile(r"in[\s\-\u2010\u2011\u2012\u2013]?(game|app)\s+purchas|micro[\s\-\u2010\u2011]?transaction|\bpurchas", re.I)
 _SENT_RE = re.compile(r"[^.!?]*(?:[.!?]+|$)")
 
 
