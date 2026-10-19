@@ -5,6 +5,30 @@
   <link>https://playpixelsprout.com/</link>
   <description>Newest games added to Pixelsprout, a free browser gaming library.</description>
   <item>
+    <title>Shaftbound</title>
+    <link>https://playpixelsprout.com/games/shaftbound.html</link>
+    <guid>https://playpixelsprout.com/games/shaftbound.html</guid>
+    <description>Play Shaftbound free online at Pixelsprout — no download needed.</description>
+    <pubDate>Mon, 19 Oct 2026 11:50:01 GMT</pubDate>
+    <enclosure url="https://img.gamemonetize.com/of8yz42m8amsb74l8l436xixj4icaw3y/512x384.jpg" type="image/jpeg"/>
+  </item>
+  <item>
+    <title>Glimmer</title>
+    <link>https://playpixelsprout.com/games/glimmer.html</link>
+    <guid>https://playpixelsprout.com/games/glimmer.html</guid>
+    <description>Play Glimmer free online at Pixelsprout — no download needed.</description>
+    <pubDate>Mon, 19 Oct 2026 11:50:01 GMT</pubDate>
+    <enclosure url="https://img.gamemonetize.com/p7pltg6j7qidp662o7m483ub29w7wxa3/512x384.jpg" type="image/jpeg"/>
+  </item>
+  <item>
+    <title>Bow or Die</title>
+    <link>https://playpixelsprout.com/games/bow-or-die.html</link>
+    <guid>https://playpixelsprout.com/games/bow-or-die.html</guid>
+    <description>Play Bow or Die free online at Pixelsprout — no download needed.</description>
+    <pubDate>Mon, 19 Oct 2026 11:50:01 GMT</pubDate>
+    <enclosure url="https://img.gamemonetize.com/ets0wzzui28672jjkkna7crhnyd1k8r9/512x384.jpg" type="image/jpeg"/>
+  </item>
+  <item>
     <title>Taiga: Expedition</title>
     <link>https://playpixelsprout.com/games/taiga-expedition.html</link>
     <guid>https://playpixelsprout.com/games/taiga-expedition.html</guid>
@@ -459,30 +483,6 @@
     <description>Play Half Life 2: Platformer free online at Pixelsprout — no download needed.</description>
     <pubDate>Thu, 01 Oct 2026 09:56:58 GMT</pubDate>
     <enclosure url="https://playpixelsprout.com/assets/thumbs/half-life-2-platformer.webp" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Sector Nine: Lockdown</title>
-    <link>https://playpixelsprout.com/games/sector-nine-lockdown.html</link>
-    <guid>https://playpixelsprout.com/games/sector-nine-lockdown.html</guid>
-    <description>Play Sector Nine: Lockdown free online at Pixelsprout — no download needed.</description>
-    <pubDate>Thu, 01 Oct 2026 09:49:26 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/ykxiuyiajgujttioqdwuemexeag96vqu/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Fat Duck Frenzy</title>
-    <link>https://playpixelsprout.com/games/fat-duck-frenzy.html</link>
-    <guid>https://playpixelsprout.com/games/fat-duck-frenzy.html</guid>
-    <description>Play Fat Duck Frenzy free online at Pixelsprout — no download needed.</description>
-    <pubDate>Thu, 01 Oct 2026 09:49:25 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/mkzk0jxzb6j1z2tm8xquoquzjqjwhn64/512x384.jpg" type="image/jpeg"/>
-  </item>
-  <item>
-    <title>Ink Streak</title>
-    <link>https://playpixelsprout.com/games/ink-streak.html</link>
-    <guid>https://playpixelsprout.com/games/ink-streak.html</guid>
-    <description>Play Ink Streak free online at Pixelsprout — no download needed.</description>
-    <pubDate>Thu, 01 Oct 2026 09:49:25 GMT</pubDate>
-    <enclosure url="https://img.gamemonetize.com/zko20s3434m8k7bjpeg8qzutkzikotxq/512x384.jpg" type="image/jpeg"/>
   </item>
 </channel>
 </rss>

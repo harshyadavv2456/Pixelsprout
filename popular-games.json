@@ -25,15 +25,15 @@
       "views": 31
     },
     {
+      "slug": "2048-cube-merge-block",
+      "views": 26
+    },
+    {
       "slug": "baba-is-you",
       "views": 26
     },
     {
       "slug": "save-the-doge",
-      "views": 26
-    },
-    {
-      "slug": "2048-cube-merge-block",
       "views": 26
     },
     {
@@ -45,11 +45,11 @@
       "views": 23
     },
     {
-      "slug": "2048",
+      "slug": "gravity-merge",
       "views": 22
     },
     {
-      "slug": "gravity-merge",
+      "slug": "2048",
       "views": 22
     },
     {
@@ -77,7 +77,7 @@
       "views": 14
     },
     {
-      "slug": "2d-platformer-coin",
+      "slug": "2048-number-ball",
       "views": 14
     }
   ]
