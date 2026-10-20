@@ -17,16 +17,12 @@
       "views": 38
     },
     {
+      "slug": "test-tubes-water-sort",
+      "views": 36
+    },
+    {
       "slug": "2048-cube-run",
       "views": 33
-    },
-    {
-      "slug": "test-tubes-water-sort",
-      "views": 31
-    },
-    {
-      "slug": "2048-cube-merge-block",
-      "views": 26
     },
     {
       "slug": "baba-is-you",
@@ -34,6 +30,10 @@
     },
     {
       "slug": "save-the-doge",
+      "views": 26
+    },
+    {
+      "slug": "2048-cube-merge-block",
       "views": 26
     },
     {
@@ -73,11 +73,11 @@
       "views": 15
     },
     {
-      "slug": "katana-fruits",
+      "slug": "2048-number-ball",
       "views": 14
     },
     {
-      "slug": "2048-number-ball",
+      "slug": "katana-fruits",
       "views": 14
     }
   ]
