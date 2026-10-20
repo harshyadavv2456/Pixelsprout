@@ -101,7 +101,7 @@
     "category": "Puzzle",
     "source": "pixelsprout",
     "href": "/games/nectarjar.html",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/nectarjar/cover.svg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/nectarjar/cover.webp"
   },
   {
     "slug": "riverstone",
@@ -109,7 +109,7 @@
     "category": "Puzzle",
     "source": "pixelsprout",
     "href": "/games/riverstone.html",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/riverstone/cover.svg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/riverstone/cover.webp"
   },
   {
     "slug": "moonbloom",
@@ -117,7 +117,7 @@
     "category": "Puzzle",
     "source": "pixelsprout",
     "href": "/games/moonbloom.html",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/moonbloom/cover.svg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/moonbloom/cover.webp"
   },
   {
     "slug": "bloomstack",
