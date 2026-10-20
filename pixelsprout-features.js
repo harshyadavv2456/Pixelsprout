@@ -11,8 +11,8 @@
   var MAX_RECENT = 12;
   var ICONS = '/assets/icons.svg#';
   var TOOLS = [
-    { slug: 'cold-read', title: 'Cold Read', category: 'Pixelsprout original', thumbnail: '/assets/cold-read-logo.jpg', href: '/cold-read/' },
-    { slug: 'gift-file', title: 'Guess It Box', category: 'Pixelsprout original', thumbnail: '/assets/gift-file-logo.jpg', href: '/gift-file/' }
+    { slug: 'cold-read', title: 'Cold Read', category: 'Pixelsprout original', thumbnail: '/assets/originals/cold-read/cover.svg', href: '/cold-read/' },
+    { slug: 'gift-file', title: 'Guess It Box', category: 'Pixelsprout original', thumbnail: '/assets/originals/guess-it-box/cover.svg', href: '/gift-file/' }
   ];
 
   // ---------- helpers ----------

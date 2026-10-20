@@ -1,19 +1,115 @@
 [
   {
-    "slug": "bloomstack",
-    "title": "Bloomstack",
-    "category": "Arcade",
-    "source": "pixelsprout",
-    "href": "/games/bloomstack.html",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/bloomstack/cover.jpg"
-  },
-  {
     "slug": "lumenstack",
     "title": "Lumenstack",
     "category": "Arcade",
     "source": "pixelsprout",
     "href": "/games/lumenstack.html",
     "thumbnail": "https://playpixelsprout.com/assets/originals/lumenstack/cover.svg"
+  },
+  {
+    "slug": "petalstack",
+    "title": "Petalstack",
+    "category": "Arcade",
+    "source": "pixelsprout",
+    "href": "/games/petalstack.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/petalstack/cover.svg"
+  },
+  {
+    "slug": "mossgate",
+    "title": "Mossgate",
+    "category": "Arcade",
+    "source": "pixelsprout",
+    "href": "/games/mossgate.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/mossgate/cover.svg"
+  },
+  {
+    "slug": "dewdash",
+    "title": "Dewdash",
+    "category": "Arcade",
+    "source": "pixelsprout",
+    "href": "/games/dewdash.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/dewdash/cover.svg"
+  },
+  {
+    "slug": "dewrack",
+    "title": "Dewrack",
+    "category": "Arcade",
+    "source": "pixelsprout",
+    "href": "/games/dewrack.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/dewrack/cover.svg"
+  },
+  {
+    "slug": "lanternspire",
+    "title": "Lanternspire",
+    "category": "Arcade",
+    "source": "pixelsprout",
+    "href": "/games/lanternspire.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/lanternspire/cover.svg"
+  },
+  {
+    "slug": "cairnfall",
+    "title": "Cairnfall",
+    "category": "Arcade",
+    "source": "pixelsprout",
+    "href": "/games/cairnfall.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/cairnfall/cover.svg"
+  },
+  {
+    "slug": "kilnstack",
+    "title": "Kilnstack",
+    "category": "Arcade",
+    "source": "pixelsprout",
+    "href": "/games/kilnstack.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/kilnstack/cover.svg"
+  },
+  {
+    "slug": "reedline",
+    "title": "Reedline",
+    "category": "Arcade",
+    "source": "pixelsprout",
+    "href": "/games/reedline.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/reedline/cover.svg"
+  },
+  {
+    "slug": "galehook",
+    "title": "Galehook",
+    "category": "Arcade",
+    "source": "pixelsprout",
+    "href": "/games/galehook.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/galehook/cover.svg"
+  },
+  {
+    "slug": "cinderwell",
+    "title": "Cinderwell",
+    "category": "Arcade",
+    "source": "pixelsprout",
+    "href": "/games/cinderwell.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/cinderwell/cover.svg"
+  },
+  {
+    "slug": "petalrack",
+    "title": "Petalrack",
+    "category": "Puzzle",
+    "source": "pixelsprout",
+    "href": "/games/petalrack.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/petalrack/cover.svg"
+  },
+  {
+    "slug": "nectarjar",
+    "title": "Nectarjar",
+    "category": "Puzzle",
+    "source": "pixelsprout",
+    "href": "/games/nectarjar.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/nectarjar/cover.svg"
+  },
+  {
+    "slug": "riverstone",
+    "title": "Riverstone",
+    "category": "Puzzle",
+    "source": "pixelsprout",
+    "href": "/games/riverstone.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/riverstone/cover.svg"
   },
   {
     "slug": "moonbloom",
@@ -24,12 +120,44 @@
     "thumbnail": "https://playpixelsprout.com/assets/originals/moonbloom/cover.svg"
   },
   {
+    "slug": "bloomstack",
+    "title": "Bloomstack",
+    "category": "Arcade",
+    "source": "pixelsprout",
+    "href": "/games/bloomstack.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/bloomstack/cover.svg"
+  },
+  {
+    "slug": "lumen-dock",
+    "title": "Lumen Dock",
+    "category": "Arcade",
+    "source": "pixelsprout",
+    "href": "/games/lumen-dock.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/lumen-dock/cover.svg"
+  },
+  {
+    "slug": "dewlane",
+    "title": "Dewlane",
+    "category": "Arcade",
+    "source": "pixelsprout",
+    "href": "/games/dewlane.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/dewlane/cover.svg"
+  },
+  {
+    "slug": "vinehook",
+    "title": "Vinehook",
+    "category": "Arcade",
+    "source": "pixelsprout",
+    "href": "/games/vinehook.html",
+    "thumbnail": "https://playpixelsprout.com/assets/originals/vinehook/cover.svg"
+  },
+  {
     "slug": "cold-read",
     "title": "Cold Read",
     "category": "Original",
     "source": "pixelsprout",
     "href": "/cold-read/",
-    "thumbnail": "https://playpixelsprout.com/assets/cold-read-logo.svg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/cold-read/cover.svg"
   },
   {
     "slug": "guess-it-box",
@@ -37,6 +165,6 @@
     "category": "Original",
     "source": "pixelsprout",
     "href": "/gift-file/",
-    "thumbnail": "https://playpixelsprout.com/assets/gift-file-logo.svg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/guess-it-box/cover.svg"
   }
 ]
