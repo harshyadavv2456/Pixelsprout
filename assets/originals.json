@@ -13,7 +13,7 @@
     "category": "Arcade",
     "source": "pixelsprout",
     "href": "/games/petalstack.html",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/petalstack/cover.svg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/petalstack/cover.webp"
   },
   {
     "slug": "mossgate",
@@ -157,7 +157,7 @@
     "category": "Original",
     "source": "pixelsprout",
     "href": "/cold-read/",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/cold-read/cover.svg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/cold-read/cover.webp"
   },
   {
     "slug": "guess-it-box",
@@ -165,6 +165,6 @@
     "category": "Original",
     "source": "pixelsprout",
     "href": "/gift-file/",
-    "thumbnail": "https://playpixelsprout.com/assets/originals/guess-it-box/cover.svg"
+    "thumbnail": "https://playpixelsprout.com/assets/originals/guess-it-box/cover.webp"
   }
 ]
