@@ -22,18 +22,22 @@
     },
     {
       "slug": "2048-cube-run",
-      "views": 33
+      "views": 34
+    },
+    {
+      "slug": "gravity-merge",
+      "views": 26
     },
     {
       "slug": "baba-is-you",
       "views": 26
     },
     {
-      "slug": "save-the-doge",
+      "slug": "2048-cube-merge-block",
       "views": 26
     },
     {
-      "slug": "2048-cube-merge-block",
+      "slug": "save-the-doge",
       "views": 26
     },
     {
@@ -43,10 +47,6 @@
     {
       "slug": "uno-online",
       "views": 23
-    },
-    {
-      "slug": "gravity-merge",
-      "views": 22
     },
     {
       "slug": "2048",
