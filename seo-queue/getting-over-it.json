@@ -1,101 +1,104 @@
 {
- "slug": "getting-over-it",
- "played": true,
- "pages": {
-  "tips": {
-   "intro": "Getting Over It on Pixelsprout is a fan-made Scratch remake, not the original game by Bennett Foddy. It is a slow, precise climbing game where you swing a hammer with your mouse. These tips come from about five minutes of real attempts, including a few hard falls.",
-   "tips": [
-    "Move the mouse slowly. Slow, deliberate movements worked best for me, while fast sweeping swings were the most likely to tip the cat over.",
-    "Plant the hammer head against a platform first, then pull the mouse in the opposite or upward direction to move yourself. Push and pull instead of flailing.",
-    "Expect momentum. The hammer follows your cursor but the cat keeps moving after you stop, so ease off before you reach an edge.",
-    "Take the first yellow platforms as practice. They are a safe place to learn how far the hammer reaches before you attempt anything taller.",
-    "Be careful near the tall vertical yellow block and the green sloping ledge after it. That was where I stopped, and several falls started there.",
-    "A fall can cost everything. After dropping into the blue lower area, I respawned near the low start and the timer went back to almost zero, so progress was lost.",
-    "Take a breath between attempts. The game has no hurry built in, and calmer attempts went further than rushed ones."
-   ],
-   "conclusion": "Patience beats speed here. Make small controlled moves and treat every platform as something to plan before you swing.",
-   "extra_sections": [
-    {
-     "heading": "How to get past the hardest part",
-     "paragraphs": [
-      "The toughest spot I reached was the tall vertical yellow block after the first platforms, next to a green sloping ledge. Several of my falls started there, because a big swing at that height tips the cat and drops it all the way down.",
-      "What worked better was moving in small steps. Set the hammer head against the block, pull the mouse a short distance, then stop and reset your grip before the next pull. Small repeated pulls gave me more control than one big swing."
-     ]
+  "slug": "getting-over-it",
+  "played": true,
+  "pages": {
+    "tips": {
+      "intro": "Getting Over It on Pixelsprout is a climbing game where an orange cat in a flower pot drags itself up a pile of giant Scratch code blocks with a long hammer. This is a fan-made Scratch remake, not the original game. These tips come from real runs, including the spots where falls kept happening.",
+      "tips": [
+        "Use slow, wide sweeps of the mouse. In one run, a steady circular motion lifted the cat off the opening blocks and onto the tall upright when clicked block in under 30 seconds on the timer.",
+        "Hook the hammer head over the top edge of a block before you pull. A pull with the head hooked on an edge lifts the pot. A pull with the head hanging in the air does nothing.",
+        "Stop moving the mouse when the pot lands somewhere flat. The cat keeps some momentum, and an extra twitch at that moment is what usually tips it back down.",
+        "The tall upright block right after the start is the first real wall. Plant the hammer high on its face and pull down in short strokes instead of one big swing.",
+        "Past the tall block, a green block with a plus sign and a purple play sound Meow until done block form the next ledges. Their rounded ends are slippery, so aim for the flat middle.",
+        "The blue water at the bottom is where falls end. When the cat dropped in, it came back near the start and the timer was almost back to zero.",
+        "Watch the timer in the top right corner. It runs the whole time, so it is a fair way to measure whether a new approach is actually faster.",
+        "After a fall, climb the first few low blocks slowly as a warm-up before the tall block, rather than rushing straight back to where you fell."
+      ],
+      "conclusion": "Treat each block as its own small puzzle. Hook an edge, pull a short distance, settle, then plan the next move.",
+      "extra_sections": [
+        {
+          "heading": "Getting onto the tall when clicked block",
+          "paragraphs": [
+            "This block stands on its end right after the low opening pile, and it is where most early runs stall. Bring the cat up against its base, then reach the hammer head as high up the face as it will go.",
+            "Pull down and slightly toward yourself in short strokes. Once the pot is level with the top, sweep the hammer over the far side and drag the cat across. Do not swing back the way you came, because that flips the pot off the edge."
+          ]
+        },
+        {
+          "heading": "The green plus block and the purple Meow block",
+          "paragraphs": [
+            "Beyond the tall block, the path continues over a green operator block with a plus sign and then a long purple play sound Meow until done block that slopes upward. A yellow note box reading Getting Over it, Scratch Edition, Remix by Raph112star hangs above this area.",
+            "The purple block is long and tilted, so keep the hammer planted on its top surface and inch along it. Big sweeps here tend to send the pot sliding back toward the water."
+          ]
+        }
+      ]
     },
-    {
-     "heading": "What to do after a fall",
-     "paragraphs": [
-      "A fall can send you back near the low starting section with the timer close to zero, so the first thing to do is relax. Rushing the same section with fast swings led to the same fall in my attempts.",
-      "Use the early yellow platforms as a quick warm-up each time, and slow your hand down before you reach the part where you fell."
-     ]
+    "controls": {
+      "intro": "The whole game is played with the mouse. The hammer head follows your cursor around the cat, and every move you make comes from where you plant it and which way you pull.",
+      "desktop": "Move the mouse to swing the hammer around the cat. Press the hammer head against a block and pull the cursor the opposite way to push the pot up or along. No clicking is needed once a run starts. In testing, arrow keys and WASD did nothing.",
+      "mobile": "A Mobile Controls toggle sits in the lower right corner of the play area, and it showed Disabled while playing with a mouse. Touch controls were not tested, so how they feel on a touch screen is unconfirmed.",
+      "tips": [
+        "On the start screen, choose New Game to begin. Sound Effects and Commentary can be switched from the same menu.",
+        "Small, steady mouse movements give the most control. Fast flicks tend to tip the pot over.",
+        "The timer in the top right starts when the run starts, so you can watch the menu for as long as you like first.",
+        "Use the full screen button in the top right corner for more room to move the mouse."
+      ]
+    },
+    "beginner-guide": {
+      "intro": "New to this version of Getting Over It? Here is what is on screen, what you are trying to do and how the first minute of a run usually goes.",
+      "what_it_is": "Getting Over It is a slow, physics-based climbing game. You control the Scratch cat, sitting in a brown flower pot, through a long hammer that follows your mouse. This Pixelsprout version is a Scratch remix: its start screen reads Scratch Edition Remix by Raph112star, and everything you climb is made of oversized Scratch code blocks, such as yellow when clicked blocks with green flags, a green plus operator and a purple play sound Meow block. The goal is to climb as high as you can without dropping back into the blue water at the bottom.",
+      "first_steps": [
+        "Wait for the game to load, accept the notice if one appears, then press New Game.",
+        "Before you climb, move the mouse in a slow circle and watch how the hammer swings around the pot.",
+        "Hook the hammer head on the nearest yellow block and pull back to drag the cat onto it.",
+        "Cross the low opening pile until you reach the tall upright when clicked block.",
+        "Climb the tall block in short pulls, then look for the green plus block on the other side.",
+        "If you fall into the water, start the low blocks again slowly instead of rushing."
+      ],
+      "who_its_for": "Players who enjoy a stubborn precision challenge and can laugh off losing progress, and anyone who knows Scratch and wants to see its code blocks used as climbing terrain.",
+      "extra_sections": [
+        {
+          "heading": "What the start screen shows",
+          "paragraphs": [
+            "The menu shows the title, the line Scratch Edition Remix by Raph112star, a New Game option and toggles for Sound Effects and Commentary. A High Score label reading TOP 25 sits in the top left, and a World Record time appears in the top right.",
+            "Once you press New Game, the menu goes away and a run timer takes the place of the record time in the corner."
+          ]
+        }
+      ]
+    },
+    "similar": {
+      "intro": "Getting Over It is about one awkward control scheme and a lot of patience. Every move happens through a hammer, progress is slow and a single slip can throw away a minute of climbing. If you liked that mix of physics, careful mouse control and starting over without much fuss, the games below are worth a try. Look for ones where the challenge comes from controlling your own movement rather than from enemies or timers."
+    },
+    "faq": {
+      "faqs": [
+        {
+          "question": "Is this the original Getting Over It?",
+          "answer": "No. The start screen credits it as a Scratch Edition Remix by Raph112star, and the levels are built from giant Scratch code blocks."
+        },
+        {
+          "question": "How do you move in Getting Over It?",
+          "answer": "You only control the hammer. Move the mouse so the hammer head presses against a block, then pull the cursor the other way to push the cat and its pot."
+        },
+        {
+          "question": "Do the arrow keys or WASD do anything?",
+          "answer": "No. Arrow keys and WASD had no effect in testing. The game is played with the mouse alone."
+        },
+        {
+          "question": "What happens if you fall into the water?",
+          "answer": "The blue water at the bottom ends the climb. After a fall, the cat came back near the start and the timer reset close to zero."
+        },
+        {
+          "question": "What is the first hard part?",
+          "answer": "The tall upright when clicked block right after the starting pile. Plant the hammer high on its face and pull in short strokes to get over the top."
+        },
+        {
+          "question": "Can you turn off the commentary?",
+          "answer": "Yes. The start screen has separate Sound Effects and Commentary toggles next to the New Game option."
+        },
+        {
+          "question": "What do the timer and World Record show?",
+          "answer": "A timer in the top right corner counts up during a run. The start screen shows a World Record time in the same spot and a High Score TOP 25 label in the top left."
+        }
+      ]
     }
-   ]
-  },
-  "controls": {
-   "intro": "This version of Getting Over It is a fan-made Scratch remake, not the original game by Bennett Foddy. It is played almost entirely with the mouse, and the hammer follows your cursor, so learning how it moves is the whole game.",
-   "desktop": "Move the mouse to swing the hammer and position its head. When I held the head against a platform and pulled the mouse the other way, the cat moved. I pressed arrow keys and WASD during my test and saw no effect.",
-   "mobile": "The game screen has a Mobile Controls option that shows Enabled or Disabled, with translucent circular controls, so touch devices are mentioned. I played with a mouse and did not test touch myself.",
-   "tips": [
-    "Click Ok, Play Now! on the start screen to begin, then pick New Game.",
-    "Go slowly with the cursor. Small mouse movements give you the most control.",
-    "The start screen also lists Sound Effects and Commentary options if you want to change them."
-   ]
-  },
-  "beginner-guide": {
-   "intro": "New to Getting Over It? This guide covers the fan-made Scratch remake on Pixelsprout, what you are trying to do and how to avoid the most common early falls.",
-   "what_it_is": "Getting Over It on Pixelsprout is a free browser version with no download. It is a fan-made Scratch remake, not the original game by Bennett Foddy, and the start screen calls it a Scratch Edition remix by Raph112star. You guide an orange cat in a flower pot who uses a long yellow-handled hammer with a gray head to climb through a world of platforms and junk. Movement is momentum-based and hard to control, which is the challenge.",
-   "first_steps": [
-    "Click Ok, Play Now! when the game finishes loading, then choose New Game.",
-    "Move the mouse a little and watch how the hammer follows the cursor before you try to climb.",
-    "Plant the hammer head on a platform and pull the mouse the opposite way to move forward.",
-    "Climb the first bright yellow platforms slowly to get used to how far the cat travels.",
-    "If you fall, stay calm and restart your approach instead of rushing the same swing again."
-   ],
-   "who_its_for": "Players who like a patient, precision challenge and can handle repeated falls, and anyone curious to try a free browser take on a famously hard climbing game.",
-   "extra_sections": [
-    {
-     "heading": "What the first minutes look like",
-     "paragraphs": [
-      "After the game loads and you choose New Game, you start low in a world of bright yellow platforms with rotated labels such as when and clicked, and green flag icons, which fits the Scratch style. The cat and pot sit at the bottom, with a blue water-like area below.",
-      "Your first goal is just to get onto and along the first platforms without tipping over. Only after that is it worth trying for the taller blocks further up."
-     ]
-    }
-   ]
-  },
-  "similar": {
-   "intro": "This version of Getting Over It on Pixelsprout is a fan-made Scratch remake, not the original game by Bennett Foddy. If Getting Over It is your kind of challenge, you probably enjoy games where physics and patience matter more than speed. Other physics-based climbing and balancing games share the same mix of small controlled moves, big risks and the urge to try just one more time after a fall. They suit players who like a hard but fair skill game and are happy to improve a little on every attempt, whether you play for a few minutes or a long session."
-  },
-  "faq": {
-   "faqs": [
-    {
-     "question": "Is Getting Over It free to play on Pixelsprout?",
-     "answer": "Yes. It is free to play in your browser on Pixelsprout, with no download and no account needed. I saw no sign-in or payment prompt while playing."
-    },
-    {
-     "question": "Is this the original Getting Over It game?",
-     "answer": "No. The start screen calls it a Scratch Edition remix by Raph112star, so it is a fan-made version in a Scratch style, not the original paid game."
-    },
-    {
-     "question": "How do you control Getting Over It?",
-     "answer": "With the mouse. The hammer follows your cursor, and you plant its head on a platform and pull the other way to move. Arrow keys and WASD did nothing when I tried them."
-    },
-    {
-     "question": "Can you play Getting Over It on a phone?",
-     "answer": "The game shows a Mobile Controls option with circular on-screen controls, so touch is mentioned. I played with a mouse and did not test it on a phone."
-    },
-    {
-     "question": "What happens when you fall?",
-     "answer": "In my attempts, falling into the blue lower area sent the cat back near the low starting section, and the timer returned close to zero, so the progress was lost."
-    },
-    {
-     "question": "What is the goal of Getting Over It?",
-     "answer": "You guide an orange cat in a flower pot with a hammer through a world of towering junk and try to climb as high as you can without falling."
-    },
-    {
-     "question": "Why is Getting Over It so hard?",
-     "answer": "Movement is momentum-based, so big or badly timed swings easily tip the cat over. Slow, careful mouse movement helped me the most."
-    }
-   ]
   }
- }
 }

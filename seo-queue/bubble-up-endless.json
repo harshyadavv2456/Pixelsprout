@@ -3,98 +3,98 @@
   "played": true,
   "pages": {
     "tips": {
-      "intro": "Bubble Up Endless is a bubble shooter where one bad shot can snowball into a crowded board. These tips come from several runs, including one that ended at 3,250 points and one that reached 50,150.",
+      "intro": "Bubble Up Endless is a bubble shooter where you fire colored bubbles up into a cluster that hangs from the top of the screen. These tips come from several real runs, with scores from a few hundred up to 50,150.",
       "tips": [
-        "Aim at an existing group of the same color instead of attaching a bubble to an isolated one. Groups clear, loose bubbles just stay on the board and crowd you.",
-        "Look for the bubbles holding up a big cluster. Clearing the support makes everything hanging from it fall at once, which gave me the biggest score jumps.",
-        "Chase combos. The game shows Combo x2 and higher when you clear on back-to-back shots, and the score climbs much faster once the multiplier builds.",
-        "Keep an eye on the red dashed line. When the bubble formation touches it you see FAILED, so clear from the bottom of the board before you go for fancy shots.",
-        "Treat a miss as expensive. Missed shots add bubbles and push the formation down, so a safe small clear is often better than a risky long one.",
-        "Check the progress counter at the top, which showed values like 51/230 and 160/230, so you know how far you still have to go before you start gambling.",
-        "Take your time lining up. Aiming is by holding down, so you can adjust the angle before you let go, and there is no rush between shots."
+        "Check the small bubble beside the launcher before you shoot. It shows the color coming next, so you can save a spot for it instead of being surprised.",
+        "The aiming line takes the color of the bubble you are holding. Use it to confirm the color and the exact landing spot before you let go.",
+        "Go for the bubbles that hold a big section in place. When the support goes, everything below it drops loose, and in one run that took the score from 900 to 3,400 in a single shot.",
+        "Loose bubbles fall into five buckets along the bottom worth 50, 100, 150, 100 and 50 points. Drops in the middle are worth the most.",
+        "Clear on back-to-back shots to keep the multiplier in the top right climbing from x1 to x2 and x3. A shot that pops nothing resets it to x1.",
+        "Keep the red dashed line above the launcher in view. If the cluster reaches it, the run ends with FAILED.",
+        "When the cluster gets close to the red line, stop chasing combos and clear the lowest row first."
       ],
-      "conclusion": "Steady clears beat flashy shots here. Protect the red line first, then build combos once the board has some breathing room.",
+      "conclusion": "Read the next bubble, line up a clean match and protect the red line. Big scores come from drops and multipliers, not from risky shots.",
       "extra_sections": [
         {
-          "heading": "Best strategy for high scores",
+          "heading": "How the multiplier and buckets add up",
           "paragraphs": [
-            "The biggest jump in my results came from combos. My early runs ended at 3,250 and 21,500 points. The run that reached 50,150 came from picking shots that cleared a group every time, so the Combo counter kept climbing instead of resetting.",
-            "A good habit is to scan the board for the largest cluster that hangs from only a few bubbles. Popping the bubbles that hold it up drops the whole section in one shot, and that is where the big score jumps came from."
+            "Every bubble that falls lands in one of the buckets along the bottom, worth 50, 100 or 150 points depending on where it lands. The multiplier in the top right corner rises when you clear on consecutive shots.",
+            "That is why one well-placed shot that drops a large hanging section is worth far more than several small pops. In testing, runs that kept the multiplier at x2 or x3 for a stretch scored many times more than runs that reset it often."
           ]
         },
         {
-          "heading": "What to do when the board gets crowded",
+          "heading": "When the cluster starts to sink",
           "paragraphs": [
-            "Every missed shot adds bubbles and pushes the formation toward the red dashed line, so a crowded board is mostly a result of a few misses in a row. When it starts to get tight, stop going for long combos and clear the lowest bubbles first to buy back space.",
-            "Once there is room again, go back to hunting combos. Playing safe for two or three shots is cheaper than losing a run that was going well."
+            "Missed shots add bubbles to the cluster and it creeps down toward the red dashed line. Once it gets close, play two or three safe shots that pop low groups, even if they score little.",
+            "With some space back, go back to looking for supports that drop big sections."
           ]
         }
       ]
     },
     "controls": {
-      "intro": "Bubble Up Endless uses one simple action, press and hold to aim, then release to shoot. The game shows the instruction on screen at the start.",
-      "desktop": "With a mouse, press and hold the left button on the play area to aim, move the cursor to line up the shot, then release the button to fire. I did not see any keyboard controls listed or need any.",
-      "mobile": "The on-screen hint reads Tap and hold to aim. Then release to shoot, so on a touch screen you hold a finger down to aim and lift it to fire. I played with a mouse and did not test touch myself.",
+      "intro": "Bubble Up Endless uses a single action. You press and hold to aim, then release to fire. The game shows this as an on-screen hint at the start of a run.",
+      "desktop": "Press and hold the left mouse button in the play area, then move the cursor to swing the dotted aiming line. Release the button to fire. The pause button sits in the lower left corner. No keyboard controls were needed or listed.",
+      "mobile": "The on-screen hint reads Tap and hold to aim. Then release to shoot, so on a touch screen you hold a finger down to aim and lift it to fire. Testing was done with a mouse only.",
       "tips": [
-        "If a consent box covers the game when the page opens, click OK, PLAY NOW! to start.",
-        "Pause, music, information and sound buttons are visible on screen if you need them.",
-        "After a loss, the replay button starts a new run right away."
+        "Keep holding while you adjust. The shot only fires when you let go, so there is no penalty for taking time to aim.",
+        "The menu has music, information and sound buttons along the bottom.",
+        "Accept the notice that appears when the game first opens, then press Play."
       ]
     },
     "beginner-guide": {
-      "intro": "New to Bubble Up Endless? This guide covers what the game is, how a run works and what to do on your first few shots.",
-      "what_it_is": "Bubble Up Endless is a free bubble shooter that runs in your browser. You fire colored bubbles at a cluster at the top of the screen. Match same-colored bubbles into groups to pop them, and any bubbles left hanging with no support fall away. The colors I saw were blue, green and orange. The run ends with FAILED when the cluster reaches the red dashed line.",
+      "intro": "New to Bubble Up Endless? This guide walks through what is on the screen and how to play your first run without filling the board.",
+      "what_it_is": "Bubble Up Endless is a free bubble shooter that runs in your browser. A cluster of blue, green and orange bubbles hangs at the top of the play area and you fire bubbles from a launcher at the bottom. Fire into groups of the same color to pop them, and any bubbles left with nothing holding them up fall into point buckets. A progress bar at the top counts toward a total of 230, and the run ends with FAILED if the cluster reaches the red dashed line.",
       "first_steps": [
-        "Click OK, PLAY NOW! if a consent box appears, then press Play.",
-        "Press and hold to aim, and release to shoot. Do a few easy shots first to get the feel of the angle.",
-        "Aim for spots where your bubble touches two or more bubbles of its own color.",
-        "Watch the score and the progress counter at the top to see how you are doing.",
-        "Try for consecutive clears so the combo counter starts to climb.",
-        "If you lose, tap the replay button and try again. Your best score is shown on the start screen."
+        "Press Play on the title screen. Your best score shows just below the button.",
+        "Read the hint, Tap and hold to aim. Then release to shoot, and fire a couple of easy shots into matching groups.",
+        "Look at the small bubble next to the launcher to see the color that comes next.",
+        "Aim for spots where your bubble touches two or more of its own color.",
+        "Watch the score at the top center and the multiplier in the top right after each clear.",
+        "Use the pause button in the lower left corner if you need a break."
       ],
-      "who_its_for": "Anyone who likes quick, calm puzzle games with a score to beat, from first-time players to people who already know bubble shooters.",
+      "who_its_for": "Anyone who likes calm, turn-by-turn puzzle games with a score to chase. There is no time pressure, so it suits players new to bubble shooters as well as regulars.",
       "extra_sections": [
         {
-          "heading": "How a run feels from start to finish",
+          "heading": "Reading the screen",
           "paragraphs": [
-            "The progress counter at the top climbs as you clear bubbles, with values like 51/230 and 160/230 appearing during my runs. The game is turn-based, so you choose when to shoot and each shot resolves quickly with a score and combo update.",
-            "The pressure builds only through your misses. The more bubbles you add, the closer the formation gets to the red line, and the game ends with FAILED if it touches it. That makes the early shots the best place to practice your aim."
+            "Across the top you will see a coin counter on the left, your score in the middle, a progress bar such as 11/230 with a gift icon beside it and the multiplier on the right. The buckets along the bottom show their point values, 50, 100, 150, 100 and 50.",
+            "Below the buckets is a bar with the pause button and four booster buttons marked with a plus sign. What each booster does was not tested, so this guide sticks to normal shots."
           ]
         }
       ]
     },
     "similar": {
-      "intro": "If you enjoy Bubble Up Endless, you probably like games where a small clever move sets off a big satisfying result. Other bubble shooters and color-matching puzzles share that feeling: you line up a shot, hope it hits the right spot and enjoy the chain reaction. They also tend to be easy to pick up and hard to put down, so they work for a two-minute break or a longer session chasing a better score."
+      "intro": "Bubble Up Endless is about aim and planning rather than speed. You choose when to shoot, read the next color, bank shots off the walls and look for the one bubble holding up a big section. If you enjoy that calm, shot-by-shot style and the payoff of a big drop into the point buckets, the games below are a good next step. Look for games where you match colors at your own pace and a single good move can clear a large part of the board."
     },
     "faq": {
       "faqs": [
         {
-          "question": "How do you play Bubble Up Endless?",
-          "answer": "Press and hold to aim, then release to shoot a bubble. Match same-colored bubbles into groups to pop them and keep the cluster away from the red line."
+          "question": "How do you shoot in Bubble Up Endless?",
+          "answer": "Press and hold to aim, move to adjust the dotted aiming line, then release to fire. The game shows this as a hint at the start of a run."
         },
         {
-          "question": "Is Bubble Up Endless free to play?",
-          "answer": "Yes. It runs in your browser on Pixelsprout, so there is nothing to download and I did not need an account to play."
+          "question": "How do you lose in Bubble Up Endless?",
+          "answer": "The run ends with FAILED when the bubble cluster reaches the red dashed line just above the launcher."
         },
         {
-          "question": "What happens when you lose?",
-          "answer": "The game shows FAILED when the bubble formation reaches the red dashed line. You can then start a new run with the replay button."
+          "question": "What are the buckets at the bottom for?",
+          "answer": "Bubbles that fall loose drop into five buckets worth 50, 100, 150, 100 and 50 points. The middle bucket pays the most."
         },
         {
-          "question": "How does scoring work in Bubble Up Endless?",
-          "answer": "Your score shows at the top of the screen, along with a progress counter. Combos such as Combo x2 up to Combo x10 appeared when I cleared shots in a row, and they made the score rise much faster."
+          "question": "What does the x2 or x3 in the corner mean?",
+          "answer": "It is the score multiplier. It rises when you clear bubbles on consecutive shots and drops back to x1 after a shot that pops nothing."
         },
         {
-          "question": "Can you play Bubble Up Endless on a phone?",
-          "answer": "The on-screen instructions say to tap and hold to aim and then release to shoot, which suggests touch is supported. I tested it with a mouse only."
+          "question": "Can you see the next bubble?",
+          "answer": "Yes. A small bubble beside the launcher shows the next color, and the aiming line takes the color of the bubble you are about to fire."
         },
         {
-          "question": "What is the red dashed line for?",
-          "answer": "It is the danger line. If the bubbles reach it, your run ends. Missed shots add bubbles and push the cluster down toward it."
+          "question": "What does the bar at the top count?",
+          "answer": "It is a progress bar that counts up toward 230 as you play, shown as values like 11/230, with a gift icon at its end."
         },
         {
-          "question": "How do I get a higher score?",
-          "answer": "Aim for large same-color groups, clear the bubbles that support big clusters and keep your combos going. Avoid risky shots when the board is already crowded."
+          "question": "Is there a time limit?",
+          "answer": "No timer was shown while playing. You can take as long as you want to line up each shot."
         }
       ]
     }
