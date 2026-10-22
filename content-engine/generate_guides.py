@@ -32,6 +32,7 @@ import fallback_content as fb
 import similar_games as sim
 import page_renderer as render
 import noindex_guides
+import seo_cleanup  # noqa: E402
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GAMES_INDEX_PATH = os.path.join(REPO_ROOT, "games-index.json")
@@ -190,6 +191,9 @@ def process_game(client, game, all_games, dry_run, stats, locked=()):
         out_dir = os.path.join(REPO_ROOT, "guides", slug_suffix)
         os.makedirs(out_dir, exist_ok=True)
         html = render.render_guide_page(page_type, game, content, related, page_urls, category_url)
+        # Unplayed (generated) pages always start noindex; only a played seo-queue
+        # rewrite can make them indexable (see seo_cleanup.py).
+        html, _ = seo_cleanup.set_noindex(html, True)
         with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
             f.write(html)
 
@@ -308,7 +312,7 @@ def main():
 
     save_json(MANIFEST_PATH, manifest)
     save_json(GUIDES_INDEX_PATH, guides_index)
-    update_sitemap(new_sitemap_urls)
+    # Generated pages are noindex, so they are not added to sitemap.xml here.
     write_guides_landing_page(guides_index)
     refresh_game_pages([g["slug"] for g in processed], all_games, guides_index)
 
