@@ -162,7 +162,7 @@ def new_game_fields(game):
         "title_tag": f"{esc(title)} — Pixelsprout",
         "meta_desc": esc(f"Play {title} free online, no download needed."),
         "category": game["category"],
-        "embed_url": game["embed_url"],
+        "embed_url": EMBED_URL_OVERRIDE.get(game["slug"], game["embed_url"]),
         "thumbnail": game.get("thumbnail", ""),
         "description_html": esc(desc_text),
         "onclick": fullscreen_onclick(orientation_lock_js(game.get("orientation"))),
@@ -191,7 +191,7 @@ def extract_game_page(doc, slug):
         "title_tag": _first(r"<title>(.*?)</title>", doc).strip(),
         "meta_desc": _first(r'<meta name="description" content="([^"]*)"', doc),
         "category": category or "Arcade",
-        "embed_url": embed,
+        "embed_url": EMBED_URL_OVERRIDE.get(slug, embed),
         "thumbnail": thumbnail,
         "description_html": description,
         "onclick": onclick or fullscreen_onclick(),
@@ -219,11 +219,22 @@ GUIDE_LABELS = [
 
 
 FAN_MADE_SLUGS = {"getting-over-it", "baba-is-you"}
+FAN_MADE_CREDIT = {"getting-over-it": "Raph112star"}
 
 # One-line notices shown directly above the game embed (same rd-note style as the notes in descriptions).
 EMBED_NOTES = {
     "spellwright": "Crafting spells needs a Discord sign-in on the creator's site.",
     "gigacity": "Needs a browser with WebGPU or WebGL 2.",
+    "getting-over-it": "Loading can take a minute or two.",
+}
+
+# Per-game embed URL override (used instead of the provider embed on re-render) and an optional
+# plain source link shown right under the player.
+EMBED_URL_OVERRIDE = {
+    "getting-over-it": "https://scratch.mit.edu/projects/964268774/embed",
+}
+EMBED_SOURCE_LINK = {
+    "getting-over-it": ("View on Scratch", "https://scratch.mit.edu/projects/964268774/"),
 }
 
 # Override for the "Is <game> free to play?" FAQ answer (visible FAQ via data-faq-free, JSON-LD via add-faq-jsonld.py).
@@ -243,7 +254,7 @@ FAQ_MOBILE_ANSWER = {
     "hood-warfare": _MOBILE_UNTESTED,
     "poople": _MOBILE_UNTESTED,
     "8compute": _MOBILE_UNTESTED,
-    "getting-over-it": "It's built for mouse play. There's a Mobile Controls toggle on the start screen, but touch play hasn't been tested here.",
+    "getting-over-it": "It's built for mouse play. Once a run starts, a Mobile Controls toggle appears at the bottom right and adds an on-screen joystick, but touch play hasn't been tested here.",
 }
 
 
@@ -277,7 +288,11 @@ def render_game_page(f, catalog, guides=None, total_games=None):
         shelf_list = similar[:12]
 
     # Fan-made Scratch remakes get a one-line disclosure under the description.
-    fan_made_note = '<p class="how-to">This is a fan-made Scratch remake, not the original game.</p>\n' if slug in FAN_MADE_SLUGS else ""
+    credit = f" by {FAN_MADE_CREDIT[slug]}" if slug in FAN_MADE_CREDIT else ""
+    fan_made_note = f'<p class="how-to">This is a fan-made Scratch remake{credit}, not the original game.</p>\n' if slug in FAN_MADE_SLUGS else ""
+    embed_url = EMBED_URL_OVERRIDE.get(slug, f["embed_url"])
+    src_link = (f'<p class="how-to embed-source"><a href="{esc(EMBED_SOURCE_LINK[slug][1])}" rel="noopener" target="_blank">'
+                f'{esc(EMBED_SOURCE_LINK[slug][0])}</a></p>\n') if slug in EMBED_SOURCE_LINK else ""
     embed_note = f'<p class="rd-note embed-note"><strong>{EMBED_NOTES[slug]}</strong></p>\n' if slug in EMBED_NOTES else ""
     description = (f.get("description_html") or "").strip()
     if not text(description):
@@ -343,8 +358,8 @@ def render_game_page(f, catalog, guides=None, total_games=None):
     main = f"""<div class="game-layout">
 <div class="game-main">
 {S.crumbs(crumb_items)}
-{embed_note}<div class="stage"><div class="embed-frame-wrap"><iframe src="{f['embed_url']}" allow="fullscreen; autoplay; screen-orientation;" scrolling="no" allowfullscreen title="{esc(title)}"></iframe></div></div>
-<div class="game-bar">
+{embed_note}<div class="stage"><div class="embed-frame-wrap"><iframe src="{embed_url}" allow="fullscreen; autoplay; screen-orientation;" scrolling="no" allowfullscreen title="{esc(title)}"></iframe></div></div>
+{src_link}<div class="game-bar">
 <div class="game-bar__info"><h1 class="game-bar__title">{esc(title)}</h1>{chip}</div>
 <div class="game-bar__actions">
 <button class="btn btn--ghost fullscreen-btn" type="button" onclick="{f['onclick']}">{S.icon('maximize')}<span>Fullscreen</span></button>
