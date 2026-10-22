@@ -151,6 +151,8 @@ function publicView(value) {
 const memHits = new Map(); // ipHash -> [timestamps]
 
 function clientIp(req) {
+  const vf = String(req.headers["x-vercel-forwarded-for"] || "").split(",")[0].trim();
+  if (vf) return vf;
   const xff = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim();
   return xff || String(req.headers["x-real-ip"] || "") || (req.socket && req.socket.remoteAddress) || "unknown";
 }
@@ -181,16 +183,19 @@ async function sharedLimit(h, now) {
     hits.push(now);
     await kvSet(key, { hits });
     return true;
-  } catch {
-    return true;
+  } catch (err) {
+    console.error("cold-read rate-limit store unavailable", String((err && err.message) || err).slice(0, 200));
+    return null; // fall back to the in-memory limiter
   }
 }
 
-async function rateLimit(req) {
+async function rateLimit(req, res) {
   const h = ipHash(clientIp(req));
   const now = Date.now();
-  if (!memoryLimit(h, now)) return false;
-  return sharedLimit(h, now);
+  if (!memoryLimit(h, now)) { res.setHeader("X-RateLimit-Source", "memory"); return false; }
+  const r = await sharedLimit(h, now);
+  res.setHeader("X-RateLimit-Source", r === null ? "memory-fallback" : "shared");
+  return r !== false;
 }
 
 // ---- body parsing -----------------------------------------------------------
@@ -267,7 +272,7 @@ export default async function handler(req, res) {
 
   try {
     // Every POST attempt (valid or not) counts toward the per-IP limit.
-    if (!(await rateLimit(req))) {
+    if (!(await rateLimit(req, res))) {
       res.setHeader("Retry-After", "60");
       res.status(429).json({ error: "Too many updates, slow down" });
       return;
