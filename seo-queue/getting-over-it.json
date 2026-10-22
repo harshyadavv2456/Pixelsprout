@@ -8,18 +8,10 @@
         "Use slow, wide sweeps of the mouse.",
         "Hook the hammer head over the top edge of a block before you pull. The pot only moves when the hammer head is pressing against something, so find an edge first.",
         "Ease off the mouse when the pot lands somewhere flat. The cat keeps some momentum after you stop, so give it a moment to settle before the next move.",
-        "The tall upright block right after the start is the first real wall. Plant the hammer high on its face and pull down in short strokes instead of one big swing.",
         "Watch the timer in the top right corner. It runs the whole time, so it is a fair way to measure whether a new approach is actually faster."
       ],
       "conclusion": "Treat each block as its own small puzzle. Hook an edge, pull a short distance, settle, then plan the next move.",
       "extra_sections": [
-        {
-          "heading": "Getting past the tall when clicked block",
-          "paragraphs": [
-            "This block stands on its end right after the low opening pile, and it is the first climb that needs more than a short push. Bring the cat up against its base, then reach the hammer head as high up the face as it will go.",
-            "Pull down in short strokes to lift the pot. Once the pot is level with the top, sweep the hammer over the far side and drag the cat across."
-          ]
-        },
         {
           "heading": "What you can see ahead",
           "paragraphs": [
@@ -77,8 +69,8 @@
           "answer": "No. Arrow keys and WASD had no effect when they were tried in an earlier session. The game is played with the mouse alone."
         },
         {
-          "question": "What is the first hard part?",
-          "answer": "The tall upright when clicked block right after the starting pile. Plant the hammer high on its face and pull in short strokes to get over the top."
+          "question": "What is the start of the climb like?",
+          "answer": "It begins on a low pile of when clicked blocks with gaps between some of them. In a replay, the cat crossed a gap without falling, and the tall upright when clicked block was visible ahead."
         },
         {
           "question": "Can you turn off the commentary?",
