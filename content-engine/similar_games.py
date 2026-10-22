@@ -32,6 +32,21 @@ def build_index(games):
     return games
 
 
+# Hand-picked lists that replace the automatic match for specific games,
+# used when category/title matching gives poor results. Approved by Studio.
+CURATED_SIMILAR = {
+    # Getting Over It is listed as Strategy, so the automatic match pulled in
+    # tower defense and management games. These are precision/physics climbers.
+    "getting-over-it": [
+        "hammer-climb-miniscrafter",
+        "mad-climbing",
+        "bike-mania-2",
+        "carrot-climber",
+        "stickman-that-one-level",
+    ],
+}
+
+
 def find_similar(target, games, limit=10, exclude_slugs=None):
     """
     Returns up to `limit` games most similar to `target`, best match
@@ -39,6 +54,12 @@ def find_similar(target, games, limit=10, exclude_slugs=None):
     """
     exclude_slugs = exclude_slugs or set()
     exclude_slugs = exclude_slugs | {target["slug"]}
+
+    curated = CURATED_SIMILAR.get(target["slug"])
+    if curated:
+        by_slug = {g["slug"]: g for g in games}
+        picks = [by_slug[s] for s in curated if s in by_slug and s not in exclude_slugs]
+        return picks[:limit]
 
     scored = []
     for g in games:
