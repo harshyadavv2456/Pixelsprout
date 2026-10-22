@@ -26,7 +26,7 @@
         {
           "heading": "The green plus block and the purple Meow block",
           "paragraphs": [
-            "Beyond the tall block, the path continues over a green operator block with a plus sign and then a long purple play sound Meow until done block that slopes upward. A yellow note box reading Getting Over it, Scratch Edition, by griffpatch hangs above this area.",
+            "Beyond the tall block, the path continues over a green operator block with a plus sign and then a long purple play sound Meow until done block that slopes upward. A yellow note box reading Getting Over it, Scratch Edition by griffpatch hangs above this area.",
             "The purple block is long and tilted, so keep the hammer planted on its top surface and move along it a little at a time. By 0'38 on the timer the cat had reached it, with the note box hanging just above."
           ]
         }
@@ -45,7 +45,7 @@
     },
     "beginner-guide": {
       "intro": "New to this version of Getting Over It? Here is what is on screen, what you are trying to do and how the first minute of a run usually goes.",
-      "what_it_is": "Getting Over It is a slow, physics-based climbing game. You control the Scratch cat, sitting in a brown flower pot, through a long hammer that follows your mouse. This Pixelsprout version is a fan-made Scratch remake: its start screen reads Scratch Edition by griffpatch, and everything you climb is made of oversized Scratch code blocks, such as yellow when clicked blocks with green flags, a green plus operator and a purple play sound Meow block. The goal is to climb as high as you can, with blue water waiting below the blocks.",
+      "what_it_is": "Getting Over It is a slow, physics-based climbing game. You control the Scratch cat, sitting in a brown flower pot, through a long hammer that follows your mouse. This Pixelsprout version is a fan-made Scratch remake: its start screen reads Getting Over It, Scratch edition with Griffpatch, and everything you climb is made of oversized Scratch code blocks, such as yellow when clicked blocks with green flags, a green plus operator and a purple play sound Meow block. The goal is to climb as high as you can, with blue water waiting below the blocks.",
       "first_steps": [
         "Wait for the game to load, accept the notice if one appears, then press New Game.",
         "Before you climb, move the mouse in a slow circle and watch how the hammer swings around the pot.",
@@ -59,7 +59,7 @@
         {
           "heading": "What the start screen shows",
           "paragraphs": [
-            "The menu shows the title, the line Scratch Edition by griffpatch, a New Game option and toggles for Sound Effects and Commentary. A High Score label reading TOP 25 sits in the top left, and a World Record time appears in the top right.",
+            "The menu shows the title, the line Scratch edition with Griffpatch, a New Game option and toggles for Sound Effects and Commentary. A High Score label reading TOP 25 sits in the top left, and a World Record time appears in the top right.",
             "Once you press New Game, the menu goes away and a run timer takes the place of the record time in the corner."
           ]
         }
@@ -72,7 +72,7 @@
       "faqs": [
         {
           "question": "Is this the original Getting Over It?",
-          "answer": "No. The start screen credits it as a Scratch Edition by griffpatch, and the levels are built from giant Scratch code blocks."
+          "answer": "No. The start screen credits it as a Scratch edition with Griffpatch, and the levels are built from giant Scratch code blocks."
         },
         {
           "question": "How do you move in Getting Over It?",
