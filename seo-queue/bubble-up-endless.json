@@ -7,7 +7,7 @@
       "tips": [
         "Check the small bubble beside the launcher before you shoot. It shows the color coming next, so you can save a spot for it instead of being surprised.",
         "The aiming line takes the color of the bubble you are holding. Use it to confirm the color and the exact landing spot before you let go.",
-        "Go for the bubbles that hold a big section in place. When the support goes, everything below it drops loose, and in one run that took the score from 900 to 3,400 in a single shot.",
+        "Go for the bubbles that hold a big section in place. When the support goes, everything below it drops loose, and in one run that took the score from 850 to 3,400 in a single shot.",
         "Loose bubbles fall into five buckets along the bottom worth 50, 100, 150, 100 and 50 points. Drops in the middle are worth the most.",
         "Clear on back-to-back shots to keep the multiplier in the top right climbing from x1 to x2 and x3. A shot that pops nothing resets it to x1.",
         "Keep the red dashed line above the launcher in view. If the cluster reaches it, the run ends with FAILED.",
@@ -19,13 +19,13 @@
           "heading": "How the multiplier and buckets add up",
           "paragraphs": [
             "Every bubble that falls lands in one of the buckets along the bottom, worth 50, 100 or 150 points depending on where it lands. The multiplier in the top right corner rises when you clear on consecutive shots.",
-            "That is why one well-placed shot that drops a large hanging section is worth far more than several small pops. In testing, runs that kept the multiplier at x2 or x3 for a stretch scored many times more than runs that reset it often."
+            "That is why one well-placed shot that drops a large hanging section is worth far more than several small pops. In one run the score went from 850 at x1 to 3,400 at x2 and then 6,250 at x3 over a few connected clears."
           ]
         },
         {
           "heading": "When the cluster starts to sink",
           "paragraphs": [
-            "Missed shots add bubbles to the cluster and it creeps down toward the red dashed line. Once it gets close, play two or three safe shots that pop low groups, even if they score little.",
+            "Shots that pop nothing stick to the cluster, so it grows down toward the red dashed line. Once it gets close, play two or three safe shots that pop low groups, even if they score little.",
             "With some space back, go back to looking for supports that drop big sections."
           ]
         }
@@ -34,7 +34,7 @@
     "controls": {
       "intro": "Bubble Up Endless uses a single action. You press and hold to aim, then release to fire. The game shows this as an on-screen hint at the start of a run.",
       "desktop": "Press and hold the left mouse button in the play area, then move the cursor to swing the dotted aiming line. Release the button to fire. The pause button sits in the lower left corner. No keyboard controls were needed or listed.",
-      "mobile": "The on-screen hint reads Tap and hold to aim. Then release to shoot, so on a touch screen you hold a finger down to aim and lift it to fire. Testing was done with a mouse only.",
+      "mobile": "The on-screen hint reads Tap and hold to aim. Then release to shoot, which suggests holding a finger down to aim and lifting it to fire. Touch controls were not tested, since all testing was done with a mouse, so play on a touch screen is unconfirmed.",
       "tips": [
         "Keep holding while you adjust. The shot only fires when you let go, so there is no penalty for taking time to aim.",
         "The menu has music, information and sound buttons along the bottom.",
@@ -57,14 +57,14 @@
         {
           "heading": "Reading the screen",
           "paragraphs": [
-            "Across the top you will see a coin counter on the left, your score in the middle, a progress bar such as 11/230 with a gift icon beside it and the multiplier on the right. The buckets along the bottom show their point values, 50, 100, 150, 100 and 50.",
+            "Across the top you will see a coin counter on the left, your score in the middle, a progress bar such as 10/230 with a gift icon beside it and the multiplier on the right. The buckets along the bottom show their point values, 50, 100, 150, 100 and 50.",
             "Below the buckets is a bar with the pause button and four booster buttons marked with a plus sign. What each booster does was not tested, so this guide sticks to normal shots."
           ]
         }
       ]
     },
     "similar": {
-      "intro": "Bubble Up Endless is about aim and planning rather than speed. You choose when to shoot, read the next color, bank shots off the walls and look for the one bubble holding up a big section. If you enjoy that calm, shot-by-shot style and the payoff of a big drop into the point buckets, the games below are a good next step. Look for games where you match colors at your own pace and a single good move can clear a large part of the board."
+      "intro": "Bubble Up Endless is about aim and planning rather than speed. You choose when to shoot, read the next color, line up shots along the dotted aiming line and look for the one bubble holding up a big section. If you enjoy that calm, shot-by-shot style and the payoff of a big drop into the point buckets, try more puzzle games from the Pixelsprout catalog next. Look for games where you match colors at your own pace and a single good move can clear a large part of the board."
     },
     "faq": {
       "faqs": [
@@ -90,7 +90,7 @@
         },
         {
           "question": "What does the bar at the top count?",
-          "answer": "It is a progress bar that counts up toward 230 as you play, shown as values like 11/230, with a gift icon at its end."
+          "answer": "It is a progress bar that counts up toward 230 as you play, shown as values like 10/230, with a gift icon at its end."
         },
         {
           "question": "Is there a time limit?",

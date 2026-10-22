@@ -5,12 +5,12 @@
     "tips": {
       "intro": "Getting Over It on Pixelsprout is a climbing game where an orange cat in a flower pot drags itself up a pile of giant Scratch code blocks with a long hammer. This is a fan-made Scratch remake, not the original game. These tips come from real runs, including the spots where falls kept happening.",
       "tips": [
-        "Use slow, wide sweeps of the mouse. In one run, a steady circular motion lifted the cat off the opening blocks and onto the tall upright when clicked block in under 30 seconds on the timer.",
-        "Hook the hammer head over the top edge of a block before you pull. A pull with the head hooked on an edge lifts the pot. A pull with the head hanging in the air does nothing.",
-        "Stop moving the mouse when the pot lands somewhere flat. The cat keeps some momentum, and an extra twitch at that moment is what usually tips it back down.",
+        "Use slow, wide sweeps of the mouse. In one run, a steady circular motion lifted the cat off the opening blocks and onto the top of the tall upright when clicked block at 0'16 on the timer.",
+        "Hook the hammer head over the top edge of a block before you pull. The pot only moves when the hammer head is pressing against something, so find an edge first.",
+        "Ease off the mouse when the pot lands somewhere flat. The cat keeps some momentum after you stop, so give it a moment to settle before the next move.",
         "The tall upright block right after the start is the first real wall. Plant the hammer high on its face and pull down in short strokes instead of one big swing.",
-        "Past the tall block, a green block with a plus sign and a purple play sound Meow until done block form the next ledges. Their rounded ends are slippery, so aim for the flat middle.",
-        "The blue water at the bottom is where falls end. When the cat dropped in, it came back near the start and the timer was almost back to zero.",
+        "Past the tall block, a green block with a plus sign and a long purple play sound Meow until done block form the next ledges. Aim for their flat top surfaces.",
+        "The blue water at the bottom is where falls end. In an earlier session, a drop into it sent the cat back near the start and the timer went back close to zero.",
         "Watch the timer in the top right corner. It runs the whole time, so it is a fair way to measure whether a new approach is actually faster.",
         "After a fall, climb the first few low blocks slowly as a warm-up before the tall block, rather than rushing straight back to where you fell."
       ],
@@ -19,22 +19,22 @@
         {
           "heading": "Getting onto the tall when clicked block",
           "paragraphs": [
-            "This block stands on its end right after the low opening pile, and it is where most early runs stall. Bring the cat up against its base, then reach the hammer head as high up the face as it will go.",
-            "Pull down and slightly toward yourself in short strokes. Once the pot is level with the top, sweep the hammer over the far side and drag the cat across. Do not swing back the way you came, because that flips the pot off the edge."
+            "This block stands on its end right after the low opening pile, and it is the first climb that needs more than a short push. Bring the cat up against its base, then reach the hammer head as high up the face as it will go.",
+            "Pull down in short strokes to lift the pot. Once the pot is level with the top, sweep the hammer over the far side and drag the cat across. In testing, the cat was sitting on top of this block 16 seconds into the run."
           ]
         },
         {
           "heading": "The green plus block and the purple Meow block",
           "paragraphs": [
             "Beyond the tall block, the path continues over a green operator block with a plus sign and then a long purple play sound Meow until done block that slopes upward. A yellow note box reading Getting Over it, Scratch Edition, Remix by Raph112star hangs above this area.",
-            "The purple block is long and tilted, so keep the hammer planted on its top surface and inch along it. Big sweeps here tend to send the pot sliding back toward the water."
+            "The purple block is long and tilted, so keep the hammer planted on its top surface and move along it a little at a time. By 0'38 on the timer the cat had reached it, with the note box hanging just above."
           ]
         }
       ]
     },
     "controls": {
       "intro": "The whole game is played with the mouse. The hammer head follows your cursor around the cat, and every move you make comes from where you plant it and which way you pull.",
-      "desktop": "Move the mouse to swing the hammer around the cat. Press the hammer head against a block and pull the cursor the opposite way to push the pot up or along. No clicking is needed once a run starts. In testing, arrow keys and WASD did nothing.",
+      "desktop": "Move the mouse to swing the hammer around the cat. Press the hammer head against a block and pull the cursor the opposite way to push the pot up or along. No clicking is needed once a run starts. In an earlier session, arrow keys and WASD did nothing.",
       "mobile": "A Mobile Controls toggle sits in the lower right corner of the play area, and it showed Disabled while playing with a mouse. Touch controls were not tested, so how they feel on a touch screen is unconfirmed.",
       "tips": [
         "On the start screen, choose New Game to begin. Sound Effects and Commentary can be switched from the same menu.",
@@ -45,7 +45,7 @@
     },
     "beginner-guide": {
       "intro": "New to this version of Getting Over It? Here is what is on screen, what you are trying to do and how the first minute of a run usually goes.",
-      "what_it_is": "Getting Over It is a slow, physics-based climbing game. You control the Scratch cat, sitting in a brown flower pot, through a long hammer that follows your mouse. This Pixelsprout version is a Scratch remix: its start screen reads Scratch Edition Remix by Raph112star, and everything you climb is made of oversized Scratch code blocks, such as yellow when clicked blocks with green flags, a green plus operator and a purple play sound Meow block. The goal is to climb as high as you can without dropping back into the blue water at the bottom.",
+      "what_it_is": "Getting Over It is a slow, physics-based climbing game. You control the Scratch cat, sitting in a brown flower pot, through a long hammer that follows your mouse. This Pixelsprout version is a Scratch remix: its start screen reads Scratch Edition Remix by Raph112star, and everything you climb is made of oversized Scratch code blocks, such as yellow when clicked blocks with green flags, a green plus operator and a purple play sound Meow block. The goal is to climb as high as you can, with blue water waiting below the blocks.",
       "first_steps": [
         "Wait for the game to load, accept the notice if one appears, then press New Game.",
         "Before you climb, move the mouse in a slow circle and watch how the hammer swings around the pot.",
@@ -66,7 +66,7 @@
       ]
     },
     "similar": {
-      "intro": "Getting Over It is about one awkward control scheme and a lot of patience. Every move happens through a hammer, progress is slow and a single slip can throw away a minute of climbing. If you liked that mix of physics, careful mouse control and starting over without much fuss, the games below are worth a try. Look for ones where the challenge comes from controlling your own movement rather than from enemies or timers."
+      "intro": "Getting Over It is about one awkward control scheme and a lot of patience. Every move happens through a hammer, progress is slow and a single slip can throw away a minute of climbing. If you liked that mix of physics, careful mouse control and starting over without much fuss, try more games from the Pixelsprout catalog next. When you pick one, look for games where the challenge comes from controlling your own movement rather than from enemies or timers."
     },
     "faq": {
       "faqs": [
@@ -80,11 +80,11 @@
         },
         {
           "question": "Do the arrow keys or WASD do anything?",
-          "answer": "No. Arrow keys and WASD had no effect in testing. The game is played with the mouse alone."
+          "answer": "No. Arrow keys and WASD had no effect when they were tried in an earlier session. The game is played with the mouse alone."
         },
         {
           "question": "What happens if you fall into the water?",
-          "answer": "The blue water at the bottom ends the climb. After a fall, the cat came back near the start and the timer reset close to zero."
+          "answer": "The blue water at the bottom ends the climb. In an earlier session, a fall into it sent the cat back near the start and the timer reset close to zero."
         },
         {
           "question": "What is the first hard part?",
