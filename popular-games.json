@@ -2,11 +2,11 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 174
+      "views": 180
     },
     {
       "slug": "getting-over-it",
-      "views": 96
+      "views": 109
     },
     {
       "slug": "protect-my-dog",
@@ -22,11 +22,7 @@
     },
     {
       "slug": "2048-cube-run",
-      "views": 34
-    },
-    {
-      "slug": "gravity-merge",
-      "views": 26
+      "views": 35
     },
     {
       "slug": "baba-is-you",
@@ -34,6 +30,10 @@
     },
     {
       "slug": "2048-cube-merge-block",
+      "views": 26
+    },
+    {
+      "slug": "gravity-merge",
       "views": 26
     },
     {
@@ -73,11 +73,11 @@
       "views": 15
     },
     {
-      "slug": "2048-number-ball",
+      "slug": "2d-platformer-coin",
       "views": 14
     },
     {
-      "slug": "katana-fruits",
+      "slug": "2048-number-ball",
       "views": 14
     }
   ]
