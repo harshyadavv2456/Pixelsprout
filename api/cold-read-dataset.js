@@ -173,12 +173,13 @@ function memoryLimit(h, now) {
 // Best effort: on any storage error we fall back to the in-memory limiter alone.
 async function sharedLimit(h, now) {
   try {
-    const minute = Math.floor(now / 60_000);
     const key = `coldread:rl:${h}`;
     const cur = await kvGet(key);
-    const count = cur && cur.minute === minute ? cur.count : 0;
-    if (count >= RL_MINUTE) return false;
-    await kvSet(key, { minute, count: count + 1 });
+    const hits = (cur && Array.isArray(cur.hits) ? cur.hits : []).filter((t) => typeof t === "number" && now - t < 60_000);
+    const burst = hits.filter((t) => now - t < RL_BURST_WINDOW_MS).length;
+    if (hits.length >= RL_MINUTE || burst >= RL_BURST) return false;
+    hits.push(now);
+    await kvSet(key, { hits });
     return true;
   } catch {
     return true;
@@ -196,10 +197,16 @@ async function rateLimit(req) {
 async function readBody(req) {
   const len = Number(req.headers["content-length"] || 0);
   if (len > MAX_BODY_BYTES) throw new BadRequest("payload too large", 413);
+  let parsedBody;
+  try {
+    parsedBody = req.body; // Vercel's lazy parser throws on invalid JSON
+  } catch {
+    throw new BadRequest("malformed JSON");
+  }
   let raw;
-  if (typeof req.body === "string") raw = req.body;
-  else if (Buffer.isBuffer(req.body)) raw = req.body.toString("utf8");
-  else if (req.body && typeof req.body === "object") raw = JSON.stringify(req.body);
+  if (typeof parsedBody === "string") raw = parsedBody;
+  else if (Buffer.isBuffer(parsedBody)) raw = parsedBody.toString("utf8");
+  else if (parsedBody && typeof parsedBody === "object") raw = JSON.stringify(parsedBody);
   else raw = "";
   if (Buffer.byteLength(raw, "utf8") > MAX_BODY_BYTES) throw new BadRequest("payload too large", 413);
   if (!raw) throw new BadRequest("empty body");
