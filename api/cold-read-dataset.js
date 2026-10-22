@@ -232,6 +232,7 @@ async function rateLimit(req, res) {
   const mem = memoryCounts(h, now);
   const shared = await sharedLimit(h, now);
   res.setHeader("X-RateLimit-Limit", String(RL_MINUTE));
+  res.setHeader("X-RateLimit-Bucket", h.slice(0, 8)); // opaque per-client key id, for debugging
   if (!shared) {
     res.setHeader("X-RateLimit-Remaining", "0");
     res.setHeader("X-RateLimit-Source", "unavailable");
@@ -241,6 +242,7 @@ async function rateLimit(req, res) {
   const burst = Math.max(mem.burst, shared.burst);
   res.setHeader("X-RateLimit-Remaining", String(Math.max(0, RL_MINUTE - minute)));
   res.setHeader("X-RateLimit-Source", "shared");
+  res.setHeader("X-RateLimit-Count", `${shared.minute}/${shared.burst}`);
   return minute <= RL_MINUTE && burst <= RL_BURST ? "ok" : "limited";
 }
 
