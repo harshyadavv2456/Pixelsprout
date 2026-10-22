@@ -157,8 +157,20 @@ function clientIp(req) {
   return xff || String(req.headers["x-real-ip"] || "") || (req.socket && req.socket.remoteAddress) || "unknown";
 }
 
+// IPv6 clients commonly rotate addresses inside their /64, so bucket IPv6 by /64.
+export function ipBucket(ip) {
+  ip = String(ip).trim().toLowerCase();
+  if (ip.startsWith("::ffff:")) return ip.slice(7);
+  if (!ip.includes(":")) return ip;
+  const [head, tail = ""] = ip.split("::");
+  const h = head ? head.split(":") : [];
+  const t = tail ? tail.split(":") : [];
+  const full = ip.includes("::") ? [...h, ...Array(Math.max(0, 8 - h.length - t.length)).fill("0"), ...t] : h;
+  return full.slice(0, 4).map((x) => (parseInt(x || "0", 16) || 0).toString(16)).join(":") + "::/64";
+}
+
 function ipHash(ip) {
-  return crypto.createHash("sha256").update("coldread:" + ip).digest("hex").slice(0, 24);
+  return crypto.createHash("sha256").update("coldread:" + ipBucket(ip)).digest("hex").slice(0, 24);
 }
 
 function memoryLimit(h, now) {
