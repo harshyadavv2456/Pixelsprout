@@ -3329,7 +3329,7 @@
       "similar",
       "tips"
     ],
-    "bot_updated_at": "2026-10-03T04:14:37Z"
+    "bot_updated_at": "2026-10-22T10:58:49Z"
   },
   "my-ice-cream-shop": {
     "generated_at": "2026-08-12T08:05:17Z",
@@ -13165,8 +13165,8 @@
     }
   },
   "animal-puzzle": {
-    "generated_at": "2026-08-03T06:47:19Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T10:58:53Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/animal-puzzle-tips/",
       "controls": "/guides/animal-puzzle-controls/",
@@ -13176,8 +13176,8 @@
     }
   },
   "color-snake-dx": {
-    "generated_at": "2026-08-03T06:47:20Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T10:58:59Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/color-snake-dx-tips/",
       "controls": "/guides/color-snake-dx-controls/",
@@ -13187,8 +13187,8 @@
     }
   },
   "beenvaders": {
-    "generated_at": "2026-08-03T06:47:22Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T10:59:05Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/beenvaders-tips/",
       "controls": "/guides/beenvaders-controls/",
@@ -13198,8 +13198,8 @@
     }
   },
   "eat-to-evolve": {
-    "generated_at": "2026-08-03T06:47:23Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T10:59:20Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/eat-to-evolve-tips/",
       "controls": "/guides/eat-to-evolve-controls/",
@@ -13209,8 +13209,8 @@
     }
   },
   "jumping-raccoon": {
-    "generated_at": "2026-08-03T06:47:25Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T10:59:41Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/jumping-raccoon-tips/",
       "controls": "/guides/jumping-raccoon-controls/",
@@ -13220,8 +13220,8 @@
     }
   },
   "bunny-jump-plus": {
-    "generated_at": "2026-08-03T06:47:26Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:00:01Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/bunny-jump-plus-tips/",
       "controls": "/guides/bunny-jump-plus-controls/",
@@ -13231,8 +13231,8 @@
     }
   },
   "panda-escape-with-piggy-2": {
-    "generated_at": "2026-08-03T06:47:28Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:00:17Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/panda-escape-with-piggy-2-tips/",
       "controls": "/guides/panda-escape-with-piggy-2-controls/",
@@ -13242,8 +13242,8 @@
     }
   },
   "save-the-crumb": {
-    "generated_at": "2026-08-03T06:47:29Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:00:30Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/save-the-crumb-tips/",
       "controls": "/guides/save-the-crumb-controls/",
@@ -13253,8 +13253,8 @@
     }
   },
   "animal-match-master": {
-    "generated_at": "2026-08-03T06:47:31Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:00:46Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/animal-match-master-tips/",
       "controls": "/guides/animal-match-master-controls/",
@@ -13264,8 +13264,8 @@
     }
   },
   "ninja-pig": {
-    "generated_at": "2026-08-03T06:47:32Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:01:08Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/ninja-pig-tips/",
       "controls": "/guides/ninja-pig-controls/",
@@ -13275,8 +13275,8 @@
     }
   },
   "puppy-battle": {
-    "generated_at": "2026-08-03T06:47:34Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:01:22Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/puppy-battle-tips/",
       "controls": "/guides/puppy-battle-controls/",
@@ -13286,8 +13286,8 @@
     }
   },
   "angry-monsters": {
-    "generated_at": "2026-08-03T06:47:35Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:01:41Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/angry-monsters-tips/",
       "controls": "/guides/angry-monsters-controls/",
@@ -13297,8 +13297,8 @@
     }
   },
   "snake-escape": {
-    "generated_at": "2026-08-03T06:47:37Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:01:55Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/snake-escape-tips/",
       "controls": "/guides/snake-escape-controls/",
@@ -13308,8 +13308,8 @@
     }
   },
   "kind-shelter-animal-care-and-treatment": {
-    "generated_at": "2026-08-03T06:47:38Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:02:09Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/kind-shelter-animal-care-and-treatment-tips/",
       "controls": "/guides/kind-shelter-animal-care-and-treatment-controls/",
@@ -13319,8 +13319,8 @@
     }
   },
   "angry-flocks": {
-    "generated_at": "2026-08-03T06:47:40Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:02:29Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/angry-flocks-tips/",
       "controls": "/guides/angry-flocks-controls/",
@@ -13330,8 +13330,8 @@
     }
   },
   "jump-sheep-game": {
-    "generated_at": "2026-08-03T06:47:41Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:02:43Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/jump-sheep-game-tips/",
       "controls": "/guides/jump-sheep-game-controls/",
@@ -13341,8 +13341,8 @@
     }
   },
   "clouds-and-sheep-2": {
-    "generated_at": "2026-08-03T06:47:43Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:02:58Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/clouds-and-sheep-2-tips/",
       "controls": "/guides/clouds-and-sheep-2-controls/",
@@ -13352,8 +13352,8 @@
     }
   },
   "cow-cow-run": {
-    "generated_at": "2026-08-03T06:47:44Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:03:12Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/cow-cow-run-tips/",
       "controls": "/guides/cow-cow-run-controls/",
@@ -13363,8 +13363,8 @@
     }
   },
   "catch-the-fly": {
-    "generated_at": "2026-08-03T06:47:46Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:03:28Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/catch-the-fly-tips/",
       "controls": "/guides/catch-the-fly-controls/",
@@ -13374,8 +13374,8 @@
     }
   },
   "angry-goat-simulator-3d": {
-    "generated_at": "2026-08-03T06:47:47Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:03:47Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/angry-goat-simulator-3d-tips/",
       "controls": "/guides/angry-goat-simulator-3d-controls/",
@@ -13385,8 +13385,8 @@
     }
   },
   "jungle-runner": {
-    "generated_at": "2026-08-03T06:47:49Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:04:05Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/jungle-runner-tips/",
       "controls": "/guides/jungle-runner-controls/",
@@ -13396,8 +13396,8 @@
     }
   },
   "flappy-bird-classic": {
-    "generated_at": "2026-08-03T06:47:50Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:04:20Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/flappy-bird-classic-tips/",
       "controls": "/guides/flappy-bird-classic-controls/",
@@ -13407,8 +13407,8 @@
     }
   },
   "birdy-bird-floppy": {
-    "generated_at": "2026-08-03T06:47:52Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:04:35Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/birdy-bird-floppy-tips/",
       "controls": "/guides/birdy-bird-floppy-controls/",
@@ -13418,8 +13418,8 @@
     }
   },
   "feeding-fish": {
-    "generated_at": "2026-08-03T06:47:53Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:04:49Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/feeding-fish-tips/",
       "controls": "/guides/feeding-fish-controls/",
@@ -13429,8 +13429,8 @@
     }
   },
   "mango-mania": {
-    "generated_at": "2026-08-03T06:47:55Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:05:06Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/mango-mania-tips/",
       "controls": "/guides/mango-mania-controls/",
@@ -13440,8 +13440,8 @@
     }
   },
   "pet-drive-in": {
-    "generated_at": "2026-08-03T06:47:56Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:05:22Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/pet-drive-in-tips/",
       "controls": "/guides/pet-drive-in-controls/",
@@ -13451,8 +13451,8 @@
     }
   },
   "help-the-cat": {
-    "generated_at": "2026-08-03T06:47:58Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:05:36Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/help-the-cat-tips/",
       "controls": "/guides/help-the-cat-controls/",
@@ -13462,8 +13462,8 @@
     }
   },
   "flappy-bird-3d": {
-    "generated_at": "2026-08-03T06:47:59Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:05:52Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/flappy-bird-3d-tips/",
       "controls": "/guides/flappy-bird-3d-controls/",
@@ -13473,8 +13473,8 @@
     }
   },
   "honey-collector-bee-game": {
-    "generated_at": "2026-08-03T06:48:01Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:06:07Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/honey-collector-bee-game-tips/",
       "controls": "/guides/honey-collector-bee-game-controls/",
@@ -13484,8 +13484,8 @@
     }
   },
   "angry-tower": {
-    "generated_at": "2026-08-03T06:48:02Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:06:21Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/angry-tower-tips/",
       "controls": "/guides/angry-tower-controls/",
@@ -13495,8 +13495,8 @@
     }
   },
   "tap-the-frog": {
-    "generated_at": "2026-08-03T06:48:04Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:06:37Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/tap-the-frog-tips/",
       "controls": "/guides/tap-the-frog-controls/",
@@ -13506,8 +13506,8 @@
     }
   },
   "find-the-fish": {
-    "generated_at": "2026-08-03T06:48:05Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:06:51Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/find-the-fish-tips/",
       "controls": "/guides/find-the-fish-controls/",
@@ -13517,8 +13517,8 @@
     }
   },
   "idle-cat-town-clicker": {
-    "generated_at": "2026-08-03T06:48:07Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:07:07Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/idle-cat-town-clicker-tips/",
       "controls": "/guides/idle-cat-town-clicker-controls/",
@@ -13528,8 +13528,8 @@
     }
   },
   "tactical-penguin": {
-    "generated_at": "2026-08-03T06:48:08Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:07:20Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/tactical-penguin-tips/",
       "controls": "/guides/tactical-penguin-controls/",
@@ -13539,8 +13539,8 @@
     }
   },
   "crab-shooter": {
-    "generated_at": "2026-08-03T06:48:10Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:07:34Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/crab-shooter-tips/",
       "controls": "/guides/crab-shooter-controls/",
@@ -13550,8 +13550,8 @@
     }
   },
   "squicky": {
-    "generated_at": "2026-08-03T06:48:11Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:07:49Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/squicky-tips/",
       "controls": "/guides/squicky-controls/",
@@ -13561,8 +13561,8 @@
     }
   },
   "stacky-bird": {
-    "generated_at": "2026-08-03T06:48:13Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:08:04Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/stacky-bird-tips/",
       "controls": "/guides/stacky-bird-controls/",
@@ -13572,8 +13572,8 @@
     }
   },
   "raccoon-retail": {
-    "generated_at": "2026-08-03T06:48:14Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:08:18Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/raccoon-retail-tips/",
       "controls": "/guides/raccoon-retail-controls/",
@@ -13583,8 +13583,8 @@
     }
   },
   "froggy-tower": {
-    "generated_at": "2026-08-03T06:48:16Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:08:31Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/froggy-tower-tips/",
       "controls": "/guides/froggy-tower-controls/",
@@ -13594,8 +13594,8 @@
     }
   },
   "red-and-blue-cat": {
-    "generated_at": "2026-08-03T06:48:17Z",
-    "any_fallback": true,
+    "generated_at": "2026-10-22T11:08:46Z",
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/red-and-blue-cat-tips/",
       "controls": "/guides/red-and-blue-cat-controls/",
@@ -30565,7 +30565,7 @@
       "similar",
       "tips"
     ],
-    "bot_updated_at": "2026-10-01T10:46:16Z"
+    "bot_updated_at": "2026-10-22T10:58:49Z"
   },
   "dot-link-puzzle-connect-the-dots": {
     "pages": {
