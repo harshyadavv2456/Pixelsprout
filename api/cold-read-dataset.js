@@ -30,6 +30,13 @@ const BLEND = { guess: 0.15, teach: 0.35 };
 const RL_MINUTE = 30;
 const RL_BURST = 5;
 const RL_BURST_WINDOW_MS = 5000;
+// Wider network buckets (IPv6 /32, IPv4 /24): privacy relays such as
+// Cloudflare WARP hand out a different IPv6 /64 (even /48) per request, so
+// per-address limits alone never trip. Plus a global backstop.
+const RL_NET_MINUTE = 30;
+const RL_NET_BURST = 10;
+const RL_GLOBAL_MINUTE = 240;
+const RL_GLOBAL_BURST = 40;
 
 export function slugify(name) {
   return String(name)
@@ -185,8 +192,15 @@ export function ipBucket(ip) {
   return full.slice(0, 4).map((x) => (parseInt(x || "0", 16) || 0).toString(16)).join(":") + "::/64";
 }
 
-function ipHash(ip) {
-  return crypto.createHash("sha256").update("coldread:" + ipBucket(ip)).digest("hex").slice(0, 24);
+export function netBucket(ip) {
+  const b = ipBucket(ip);
+  if (b.endsWith("::/64")) return b.split(":").slice(0, 2).join(":") + "::/32";
+  if (net.isIPv4(b)) return b.split(".").slice(0, 3).join(".") + ".0/24";
+  return b;
+}
+
+function hash(s, n) {
+  return crypto.createHash("sha256").update("coldread:" + s).digest("hex").slice(0, n);
 }
 
 
@@ -196,20 +210,25 @@ function ipHash(ip) {
 // inserting, we count this client's rows in the last 5 s / 60 s.
 // On storage failure we return null and the caller FAILS CLOSED (503): a
 // per-instance memory count is not a real limit on serverless.
-async function sharedLimit(h, now) {
+async function sharedLimit(nh, h, now) {
   try {
-    const prefix = `coldread:rlhit:${h}:`;
+    const root = "coldread:rlhit:";
+    const netPrefix = `${root}${nh}:`;
+    const prefix = `${netPrefix}${h}:`;
     await kvInsert(prefix + now + ":" + crypto.randomBytes(4).toString("hex"), 1);
-    const [minute, burst] = await Promise.all([
-      kvCountPrefix(prefix, new Date(now - 60_000).toISOString()),
-      kvCountPrefix(prefix, new Date(now - RL_BURST_WINDOW_MS).toISOString()),
+    const min = new Date(now - 60_000).toISOString();
+    const bst = new Date(now - RL_BURST_WINDOW_MS).toISOString();
+    const [minute, burst, netMinute, netBurst, globalMinute, globalBurst] = await Promise.all([
+      kvCountPrefix(prefix, min), kvCountPrefix(prefix, bst),
+      kvCountPrefix(netPrefix, min), kvCountPrefix(netPrefix, bst),
+      kvCountPrefix(root, min), kvCountPrefix(root, bst),
     ]);
     if (Math.random() < 0.05) {
-      kvDeletePrefixOlderThan("coldread:rlhit:", new Date(now - 10 * 60_000).toISOString()).catch(() => {});
+      kvDeletePrefixOlderThan(root, new Date(now - 10 * 60_000).toISOString()).catch(() => {});
     }
     // Our own row was just inserted, so 0 means the count query is broken.
     if (minute < 1 || burst < 1) throw new Error("rate-limit count returned 0 after insert");
-    return { minute, burst };
+    return { minute, burst, netMinute, netBurst, globalMinute, globalBurst };
   } catch (err) {
     console.error("cold-read rate-limit store unavailable", String((err && err.message) || err).slice(0, 200));
     return null;
@@ -227,12 +246,13 @@ function memoryCounts(h, now) {
 // Runs first for every POST, before the body is read or validated. Always sets
 // X-RateLimit-Limit / X-RateLimit-Remaining / X-RateLimit-Source.
 async function rateLimit(req, res) {
-  const h = ipHash(clientIp(req));
+  const ip = clientIp(req);
+  const h = hash(ipBucket(ip), 24);
+  const nh = hash("net:" + netBucket(ip), 12);
   const now = Date.now();
   const mem = memoryCounts(h, now);
-  const shared = await sharedLimit(h, now);
+  const shared = await sharedLimit(nh, h, now);
   res.setHeader("X-RateLimit-Limit", String(RL_MINUTE));
-  res.setHeader("X-RateLimit-Bucket", h.slice(0, 8)); // opaque per-client key id, for debugging
   if (!shared) {
     res.setHeader("X-RateLimit-Remaining", "0");
     res.setHeader("X-RateLimit-Source", "unavailable");
@@ -240,10 +260,14 @@ async function rateLimit(req, res) {
   }
   const minute = Math.max(mem.minute, shared.minute);
   const burst = Math.max(mem.burst, shared.burst);
-  res.setHeader("X-RateLimit-Remaining", String(Math.max(0, RL_MINUTE - minute)));
+  // Remaining = the tighter of the per-client and per-network minute budgets.
+  const remaining = Math.min(RL_MINUTE - minute, RL_NET_MINUTE - shared.netMinute);
+  res.setHeader("X-RateLimit-Remaining", String(Math.max(0, remaining)));
   res.setHeader("X-RateLimit-Source", "shared");
-  res.setHeader("X-RateLimit-Count", `${shared.minute}/${shared.burst}`);
-  return minute <= RL_MINUTE && burst <= RL_BURST ? "ok" : "limited";
+  const ok = minute <= RL_MINUTE && burst <= RL_BURST
+    && shared.netMinute <= RL_NET_MINUTE && shared.netBurst <= RL_NET_BURST
+    && shared.globalMinute <= RL_GLOBAL_MINUTE && shared.globalBurst <= RL_GLOBAL_BURST;
+  return ok ? "ok" : "limited";
 }
 
 // ---- body parsing -----------------------------------------------------------
