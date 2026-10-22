@@ -3,16 +3,14 @@
   "played": true,
   "pages": {
     "tips": {
-      "intro": "Getting Over It on Pixelsprout is a climbing game where an orange cat in a flower pot drags itself up a pile of giant Scratch code blocks with a long hammer. This is a fan-made Scratch remake, not the original game. These tips come from real runs, including the spots where falls kept happening.",
+      "intro": "Getting Over It on Pixelsprout is a climbing game where an orange cat in a flower pot drags itself up a pile of giant Scratch code blocks with a long hammer. This is a fan-made Scratch remake, not the original game. These tips cover the opening climb, from the low pile to the purple Meow block.",
       "tips": [
-        "Use slow, wide sweeps of the mouse. In one run, a steady circular motion got the cat past the tall block and onto the purple Meow block by 0'38 on the timer.",
+        "Use slow, wide sweeps of the mouse.",
         "Hook the hammer head over the top edge of a block before you pull. The pot only moves when the hammer head is pressing against something, so find an edge first.",
         "Ease off the mouse when the pot lands somewhere flat. The cat keeps some momentum after you stop, so give it a moment to settle before the next move.",
         "The tall upright block right after the start is the first real wall. Plant the hammer high on its face and pull down in short strokes instead of one big swing.",
         "Past the tall block, a green block with a plus sign and a long purple play sound Meow until done block form the next ledges. Aim for their flat top surfaces.",
-        "The blue water at the bottom is where falls end. In an earlier session, a drop into it sent the cat back near the start and the timer went back close to zero.",
-        "Watch the timer in the top right corner. It runs the whole time, so it is a fair way to measure whether a new approach is actually faster.",
-        "After a fall, climb the first few low blocks slowly as a warm-up before the tall block, rather than rushing straight back to where you fell."
+        "Watch the timer in the top right corner. It runs the whole time, so it is a fair way to measure whether a new approach is actually faster."
       ],
       "conclusion": "Treat each block as its own small puzzle. Hook an edge, pull a short distance, settle, then plan the next move.",
       "extra_sections": [
@@ -20,14 +18,14 @@
           "heading": "Getting past the tall when clicked block",
           "paragraphs": [
             "This block stands on its end right after the low opening pile, and it is the first climb that needs more than a short push. Bring the cat up against its base, then reach the hammer head as high up the face as it will go.",
-            "Pull down in short strokes to lift the pot. Once the pot is level with the top, sweep the hammer over the far side and drag the cat across. In testing, the cat got past the tall block and onto the purple Meow block by 0'38."
+            "Pull down in short strokes to lift the pot. Once the pot is level with the top, sweep the hammer over the far side and drag the cat across."
           ]
         },
         {
           "heading": "The green plus block and the purple Meow block",
           "paragraphs": [
             "Beyond the tall block, the path continues over a green operator block with a plus sign and then a long purple play sound Meow until done block that slopes upward. A yellow note box reading Getting Over It, Scratch Edition by Griffpatch hangs above this area.",
-            "The purple block is long and tilted, so keep the hammer planted on its top surface and move along it a little at a time. By 0'38 on the timer the cat had reached it, with the note box hanging just above."
+            "The purple block is long and tilted, so keep the hammer planted on its top surface and move along it a little at a time."
           ]
         }
       ]
@@ -51,8 +49,7 @@
         "Before you climb, move the mouse in a slow circle and watch how the hammer swings around the pot.",
         "Hook the hammer head on the nearest yellow block and pull back to drag the cat onto it.",
         "Cross the low opening pile until you reach the tall upright when clicked block.",
-        "Climb the tall block in short pulls, then look for the green plus block on the other side.",
-        "If you fall into the water, start the low blocks again slowly instead of rushing."
+        "Climb the tall block in short pulls, then look for the green plus block on the other side."
       ],
       "who_its_for": "Players who enjoy a stubborn precision challenge and can laugh off losing progress, and anyone who knows Scratch and wants to see its code blocks used as climbing terrain.",
       "extra_sections": [
@@ -81,10 +78,6 @@
         {
           "question": "Do the arrow keys or WASD do anything?",
           "answer": "No. Arrow keys and WASD had no effect when they were tried in an earlier session. The game is played with the mouse alone."
-        },
-        {
-          "question": "What happens if you fall into the water?",
-          "answer": "The blue water at the bottom ends the climb. In an earlier session, a fall into it sent the cat back near the start and the timer reset close to zero."
         },
         {
           "question": "What is the first hard part?",
