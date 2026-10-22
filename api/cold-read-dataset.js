@@ -194,6 +194,7 @@ async function sharedLimit(h, now) {
     if (hits.length >= RL_MINUTE || burst >= RL_BURST) return false;
     hits.push(now);
     await kvSet(key, { hits });
+    sharedLimit.lastRemaining = RL_MINUTE - hits.length;
     return true;
   } catch (err) {
     console.error("cold-read rate-limit store unavailable", String((err && err.message) || err).slice(0, 200));
@@ -207,6 +208,7 @@ async function rateLimit(req, res) {
   if (!memoryLimit(h, now)) { res.setHeader("X-RateLimit-Source", "memory"); return false; }
   const r = await sharedLimit(h, now);
   res.setHeader("X-RateLimit-Source", r === null ? "memory-fallback" : "shared");
+  if (r === true) res.setHeader("X-RateLimit-Remaining", String(sharedLimit.lastRemaining));
   return r !== false;
 }
 
