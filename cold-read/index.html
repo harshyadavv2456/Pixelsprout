@@ -372,9 +372,10 @@ function ColdReadApp() {
           setDataset(data.entities);
           setGamesPlayed(data.gamesPlayed || 0);
         } else {
+          // Server reseeds itself from its own copy of the seed list; never
+          // upload the dataset from the browser.
           setDataset(SEED_ENTITIES);
           setGamesPlayed(0);
-          persistAll(SEED_ENTITIES, 0);
         }
       } catch {
         // API unreachable (offline, storage not yet configured) - fall back
@@ -386,12 +387,25 @@ function ColdReadApp() {
     })();
   }, []);
 
-  async function persistAll(entities, games) {
+  // Sends ONE update to the server: { action: "guess"|"teach", id, answers }
+  // or { action: "add", name, answers }. The server rejects whole-dataset writes.
+  function slugify(name) {
+    return String(name).toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  }
+
+  function answersFrom(roundData) {
+    const answers = {};
+    roundData.forEach(({ key, value }) => { answers[key] = value; });
+    return answers;
+  }
+
+  async function sendUpdate(update) {
     try {
       await fetch("/api/cold-read-dataset", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ entities, gamesPlayed: games }),
+        body: JSON.stringify(update),
       });
     } catch {}
   }
@@ -471,9 +485,9 @@ function ColdReadApp() {
       });
       const next = [...prev];
       next[idx] = updated;
-      persistAll(next, newGames);
       return next;
     });
+    if (roundData.length) sendUpdate({ action: "guess", id: currentGuess.id || slugify(currentGuess.name), answers: answersFrom(roundData) });
     setGamesPlayed(newGames);
     setPhase("won");
   }
@@ -483,8 +497,15 @@ function ColdReadApp() {
     if (!trimmed) return;
     const roundData = history.filter((h) => h.value !== null);
     const newGames = (gamesPlayed || 0) + 1;
+    const trimmedId = slugify(trimmed);
+    const exists = dataset && dataset.some((e) => (e.id || slugify(e.name)) === trimmedId);
+    if (trimmedId) {
+      sendUpdate(exists
+        ? { action: "teach", id: trimmedId, answers: answersFrom(roundData) }
+        : { action: "add", name: trimmed.slice(0, 60), answers: answersFrom(roundData) });
+    }
     setDataset((prev) => {
-      const idx = prev.findIndex((e) => e.name.toLowerCase() === trimmed.toLowerCase());
+      const idx = prev.findIndex((e) => (e.id || slugify(e.name)) === trimmedId);
       let next;
       if (idx >= 0) {
         const updated = { ...prev[idx], v: { ...prev[idx].v } };
@@ -498,9 +519,8 @@ function ColdReadApp() {
         roundData.forEach(({ key, value }) => {
           v[key] = value;
         });
-        next = [...prev, { name: trimmed, v }];
+        next = [...prev, { id: trimmedId, name: trimmed, v }];
       }
-      persistAll(next, newGames);
       return next;
     });
     setGamesPlayed(newGames);
@@ -664,7 +684,7 @@ function ColdReadApp() {
             <p className="text-sm mb-5" style={{ color: "rgba(0,0,0,0.6)" }}>
               What were you thinking of? I'll add it to the file.
             </p>
-            <input
+            <input maxLength={60}
               value={teachName}
               onChange={(e) => setTeachName(e.target.value)}
               placeholder="e.g. Cristiano Ronaldo"
