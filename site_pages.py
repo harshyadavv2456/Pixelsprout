@@ -254,7 +254,7 @@ FAQ_MOBILE_ANSWER = {
     "hood-warfare": _MOBILE_UNTESTED,
     "poople": _MOBILE_UNTESTED,
     "8compute": _MOBILE_UNTESTED,
-    "getting-over-it": "It's built for mouse play. Once a run starts, a Mobile Controls toggle appears at the bottom right and adds an on-screen joystick, but touch play hasn't been tested here.",
+    "getting-over-it": "It's built for mouse play. This version has no on-screen touch controls, and touch play hasn't been tested here.",
 }
 
 
