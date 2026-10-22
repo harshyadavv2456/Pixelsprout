@@ -26,7 +26,7 @@
         {
           "heading": "The green plus block and the purple Meow block",
           "paragraphs": [
-            "Beyond the tall block, the path continues over a green operator block with a plus sign and then a long purple play sound Meow until done block that slopes upward. A yellow note box reading Getting Over it, Scratch Edition by griffpatch hangs above this area.",
+            "Beyond the tall block, the path continues over a green operator block with a plus sign and then a long purple play sound Meow until done block that slopes upward. A yellow note box reading Getting Over It, Scratch Edition by Griffpatch hangs above this area.",
             "The purple block is long and tilted, so keep the hammer planted on its top surface and move along it a little at a time. By 0'38 on the timer the cat had reached it, with the note box hanging just above."
           ]
         }
@@ -35,7 +35,7 @@
     "controls": {
       "intro": "The whole game is played with the mouse. The hammer head follows your cursor around the cat, and every move you make comes from where you plant it and which way you pull. This version is a fan-made Scratch remake by griffpatch, not the original game by Bennett Foddy.",
       "desktop": "Move the mouse to swing the hammer around the cat. Press the hammer head against a block and pull the cursor the opposite way to push the pot up or along. No clicking is needed once a run starts. In an earlier session, arrow keys and WASD did nothing.",
-      "mobile": "A Mobile Controls toggle sits in the lower right corner of the play area, and it showed Disabled while playing with a mouse. Touch controls were not tested, so how they feel on a touch screen is unconfirmed.",
+      "mobile": "This version has no on-screen Mobile Controls toggle. Touch controls were not tested, so how it plays on a touch screen is unconfirmed.",
       "tips": [
         "On the start screen, choose New Game to begin. Sound Effects and Commentary can be switched from the same menu.",
         "Small, steady mouse movements give the most control. Fast flicks tend to tip the pot over.",
@@ -59,7 +59,7 @@
         {
           "heading": "What the start screen shows",
           "paragraphs": [
-            "The menu shows the title, the line Scratch edition with Griffpatch, a New Game option and toggles for Sound Effects and Commentary. A High Score label reading TOP 25 sits in the top left, and a World Record time appears in the top right.",
+            "The menu shows the title, the line Scratch edition with Griffpatch, a New Game option and toggles for Sound Effects and Commentary. A World Record time appears in the top right.",
             "Once you press New Game, the menu goes away and a run timer takes the place of the record time in the corner."
           ]
         }
@@ -96,7 +96,7 @@
         },
         {
           "question": "What do the timer and World Record show?",
-          "answer": "A timer in the top right corner counts up during a run. The start screen shows a World Record time in the same spot and a High Score TOP 25 label in the top left."
+          "answer": "A timer in the top right corner counts up during a run. The start screen shows a World Record time in the same spot."
         }
       ]
     }
