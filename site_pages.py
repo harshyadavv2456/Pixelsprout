@@ -225,7 +225,7 @@ FAN_MADE_CREDIT = {"getting-over-it": "Raph112star"}
 EMBED_NOTES = {
     "spellwright": "Crafting spells needs a Discord sign-in on the creator's site.",
     "gigacity": "Needs a browser with WebGPU or WebGL 2.",
-    "getting-over-it": "Loading can take a minute or two.",
+    "getting-over-it": "The first load can take a few minutes.",
 }
 
 # Per-game embed URL override (used instead of the provider embed on re-render) and an optional
