@@ -3,13 +3,12 @@
   "played": true,
   "pages": {
     "tips": {
-      "intro": "Getting Over It on Pixelsprout is a climbing game where an orange cat in a flower pot drags itself up a pile of giant Scratch code blocks with a long hammer. This is a fan-made Scratch remake, not the original game. These tips cover the opening climb, from the low pile to the purple Meow block.",
+      "intro": "Getting Over It on Pixelsprout is a climbing game where an orange cat in a flower pot drags itself up a pile of giant Scratch code blocks with a long hammer. This is a fan-made Scratch remake, not the original game. These tips cover the opening stretch of low when clicked blocks.",
       "tips": [
         "Use slow, wide sweeps of the mouse.",
         "Hook the hammer head over the top edge of a block before you pull. The pot only moves when the hammer head is pressing against something, so find an edge first.",
         "Ease off the mouse when the pot lands somewhere flat. The cat keeps some momentum after you stop, so give it a moment to settle before the next move.",
         "The tall upright block right after the start is the first real wall. Plant the hammer high on its face and pull down in short strokes instead of one big swing.",
-        "Past the tall block, a green block with a plus sign and a long purple play sound Meow until done block form the next ledges. Aim for their flat top surfaces.",
         "Watch the timer in the top right corner. It runs the whole time, so it is a fair way to measure whether a new approach is actually faster."
       ],
       "conclusion": "Treat each block as its own small puzzle. Hook an edge, pull a short distance, settle, then plan the next move.",
@@ -22,10 +21,9 @@
           ]
         },
         {
-          "heading": "The green plus block and the purple Meow block",
+          "heading": "What you can see ahead",
           "paragraphs": [
-            "Beyond the tall block, the path continues over a green operator block with a plus sign and then a long purple play sound Meow until done block that slopes upward. A yellow note box reading Getting Over It, Scratch Edition by Griffpatch hangs above this area.",
-            "The purple block is long and tilted, so keep the hammer planted on its top surface and move along it a little at a time."
+            "From the low pile, the tall upright when clicked block is visible ahead. Behind it you can see a green block with a plus sign and the edge of a purple block, and a yellow note box reading Getting Over It, Scratch Edition by Griffpatch hangs above that area."
           ]
         }
       ]
@@ -43,13 +41,12 @@
     },
     "beginner-guide": {
       "intro": "New to this version of Getting Over It? Here is what is on screen, what you are trying to do and how the first minute of a run usually goes.",
-      "what_it_is": "Getting Over It is a slow, physics-based climbing game. You control the Scratch cat, sitting in a brown flower pot, through a long hammer that follows your mouse. This Pixelsprout version is a fan-made Scratch remake: its start screen reads Getting Over It, Scratch edition with Griffpatch, and everything you climb is made of oversized Scratch code blocks, such as yellow when clicked blocks with green flags, a green plus operator and a purple play sound Meow block. The goal is to climb as high as you can, with blue water waiting below the blocks.",
+      "what_it_is": "Getting Over It is a slow, physics-based climbing game. You control the Scratch cat, sitting in a brown flower pot, through a long hammer that follows your mouse. This Pixelsprout version is a fan-made Scratch remake: its start screen reads Getting Over It, Scratch edition with Griffpatch, and everything you climb is made of oversized Scratch code blocks, such as yellow when clicked blocks with green flags. The goal is to climb as high as you can, with blue water waiting below the blocks.",
       "first_steps": [
-        "Wait for the game to load, accept the notice if one appears, then press New Game.",
+        "Wait for the game to load, accept the notice if one appears, then press New Game. A quick click may not start it, so hold the click until the timer appears.",
         "Before you climb, move the mouse in a slow circle and watch how the hammer swings around the pot.",
         "Hook the hammer head on the nearest yellow block and pull back to drag the cat onto it.",
-        "Cross the low opening pile until you reach the tall upright when clicked block.",
-        "Climb the tall block in short pulls, then look for the green plus block on the other side."
+        "Work across the low pile of when clicked blocks. There are gaps between some blocks, and you can pass over a gap without falling."
       ],
       "who_its_for": "Players who enjoy a stubborn precision challenge and can laugh off losing progress, and anyone who knows Scratch and wants to see its code blocks used as climbing terrain.",
       "extra_sections": [
