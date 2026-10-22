@@ -247,6 +247,25 @@ FAQ_MOBILE_ANSWER = {
 }
 
 
+# Per-game "See it in action" links to Pixelsprout's own gameplay clips, shown on the game page.
+GAME_SOCIAL_LINKS = {
+    "gravity-merge": [
+        ("YouTube Short", "https://youtube.com/shorts/Uq54-x44wEQ"),
+        ("Post on X", "https://x.com/Playpixelsprout/status/2112692842246099447"),
+    ],
+}
+
+
+def _social_section(slug, title):
+    links = GAME_SOCIAL_LINKS.get(slug)
+    if not links:
+        return ""
+    items = "".join(f'<li><a href="{esc(u)}" rel="noopener" target="_blank">{esc(l)}</a></li>' for l, u in links)
+    return (f'<section class="game-about" aria-labelledby="in-action-title"><!--ps:shots-->'
+            f'<h2 id="in-action-title">See it in action</h2><p>Watch {esc(title)} being played, then try it yourself in your browser.</p>'
+            f'<ul>{items}</ul><!--/ps:shots--></section>\n')
+
+
 def render_game_page(f, catalog, guides=None, total_games=None):
     slug, title, category = f["slug"], f["title"], f["category"]
     genre_label = S.pretty_genre(category)
@@ -344,7 +363,7 @@ def render_game_page(f, catalog, guides=None, total_games=None):
 <p class="how-to"><!--ps:desc-->{description}<!--/ps:desc--></p>
 {fan_made_note}<div class="facts"><span class="chip">Free to play</span><span class="chip">No download</span><span class="chip">Plays in your browser</span></div>
 </section>
-{S.ad_native()}
+{_social_section(slug, title)}{S.ad_native()}
 {guides_html}
 {S.ad_adsense(S.AD_SLOT_BANNER)}
 {more_like}
