@@ -34,7 +34,7 @@ const RL_BURST_WINDOW_MS = 5000;
 // Cloudflare WARP hand out a different IPv6 /64 (even /48) per request, so
 // per-address limits alone never trip. Plus a global backstop.
 const RL_NET_MINUTE = 30;
-const RL_NET_BURST = 10;
+const RL_NET_BURST = 6;
 const RL_GLOBAL_MINUTE = 240;
 const RL_GLOBAL_BURST = 40;
 
