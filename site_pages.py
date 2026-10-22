@@ -69,7 +69,24 @@ def _catalog_groups(catalog):
     return _groups_cache[key]
 
 
+def _curated_similar():
+    """Hand-picked lists from content-engine/similar_games.py (CURATED_SIMILAR)."""
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "content-engine", "similar_games.py")
+    try:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("_ps_similar_games", path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        return getattr(mod, "CURATED_SIMILAR", {})
+    except (OSError, ImportError, SyntaxError):
+        return {}
+
+
 def similar_games(slug, category, catalog, count=18):
+    curated = _curated_similar().get(slug)
+    if curated:
+        by_slug = {g["slug"]: g for g in catalog}
+        return [by_slug[s] for s in curated if s in by_slug][:count]
     primary = S.primary_category(category)
     same = [g for g in _catalog_groups(catalog).get(primary, []) if g["slug"] != slug]
     same.sort(key=lambda g: (not g.get("thumbnail"), S.stable_hash(slug + g["slug"])))
