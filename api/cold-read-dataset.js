@@ -1,5 +1,5 @@
 import crypto from "node:crypto";
-import { supabaseConfigured, kvGet, kvSet, applyCors } from "./_supabase.js";
+import { supabaseConfigured, kvGet, kvSet, kvInsert, kvCountPrefix, kvDeletePrefixOlderThan, applyCors } from "./_supabase.js";
 import { ATTR_KEYS, SEED_ENTITIES } from "./_cold-read-seed.js";
 
 // Stored value: { schema: 2, entities: [{ name, v }], gamesPlayed }.
@@ -173,61 +173,69 @@ function ipHash(ip) {
   return crypto.createHash("sha256").update("coldread:" + ipBucket(ip)).digest("hex").slice(0, 24);
 }
 
-function memoryLimit(h, now) {
-  const arr = (memHits.get(h) || []).filter((t) => now - t < 60_000);
-  const burst = arr.filter((t) => now - t < RL_BURST_WINDOW_MS).length;
-  if (arr.length >= RL_MINUTE || burst >= RL_BURST) { memHits.set(h, arr); return false; }
-  arr.push(now);
-  memHits.set(h, arr);
-  if (memHits.size > 5000) memHits.delete(memHits.keys().next().value);
-  return true;
-}
 
-// Shared (cross-instance) minute counter in the same Supabase kv_store.
-// Best effort: on any storage error we fall back to the in-memory limiter alone.
+// Shared (cross-instance) limiter in the same Supabase kv_store. Each hit is
+// its own append-only row, so concurrent requests can't overwrite each other's
+// count (a read-modify-write counter undercounted parallel bursts). After
+// inserting, we count this client's rows in the last 5 s / 60 s.
+// On storage failure we return null and the caller falls back to the
+// in-memory counts (per instance) - it never silently skips limiting.
 async function sharedLimit(h, now) {
   try {
-    const key = `coldread:rl:${h}`;
-    const cur = await kvGet(key);
-    const hits = (cur && Array.isArray(cur.hits) ? cur.hits : []).filter((t) => typeof t === "number" && now - t < 60_000);
-    const burst = hits.filter((t) => now - t < RL_BURST_WINDOW_MS).length;
-    if (hits.length >= RL_MINUTE || burst >= RL_BURST) return false;
-    hits.push(now);
-    await kvSet(key, { hits });
-    sharedLimit.lastRemaining = RL_MINUTE - hits.length;
-    return true;
+    const prefix = `coldread:rlhit:${h}:`;
+    await kvInsert(prefix + now + ":" + crypto.randomBytes(4).toString("hex"), 1);
+    const [minute, burst] = await Promise.all([
+      kvCountPrefix(prefix, new Date(now - 60_000).toISOString(), RL_MINUTE + 5),
+      kvCountPrefix(prefix, new Date(now - RL_BURST_WINDOW_MS).toISOString(), RL_BURST + 5),
+    ]);
+    if (Math.random() < 0.05) {
+      kvDeletePrefixOlderThan("coldread:rlhit:", new Date(now - 10 * 60_000).toISOString()).catch(() => {});
+    }
+    return { minute, burst };
   } catch (err) {
     console.error("cold-read rate-limit store unavailable", String((err && err.message) || err).slice(0, 200));
-    return null; // fall back to the in-memory limiter
+    return null;
   }
 }
 
+function memoryCounts(h, now) {
+  const arr = (memHits.get(h) || []).filter((t) => now - t < 60_000);
+  arr.push(now);
+  memHits.set(h, arr);
+  if (memHits.size > 5000) memHits.delete(memHits.keys().next().value);
+  return { minute: arr.length, burst: arr.filter((t) => now - t < RL_BURST_WINDOW_MS).length };
+}
+
+// Runs first for every POST, before the body is read or validated. Always sets
+// X-RateLimit-Limit / X-RateLimit-Remaining / X-RateLimit-Source.
 async function rateLimit(req, res) {
   const h = ipHash(clientIp(req));
   const now = Date.now();
-  if (!memoryLimit(h, now)) { res.setHeader("X-RateLimit-Source", "memory"); return false; }
-  const r = await sharedLimit(h, now);
-  res.setHeader("X-RateLimit-Source", r === null ? "memory-fallback" : "shared");
-  if (r === true) res.setHeader("X-RateLimit-Remaining", String(sharedLimit.lastRemaining));
-  return r !== false;
+  const mem = memoryCounts(h, now);
+  const shared = await sharedLimit(h, now);
+  const minute = Math.max(mem.minute, shared ? shared.minute : 0);
+  const burst = Math.max(mem.burst, shared ? shared.burst : 0);
+  res.setHeader("X-RateLimit-Limit", String(RL_MINUTE));
+  res.setHeader("X-RateLimit-Remaining", String(Math.max(0, RL_MINUTE - minute)));
+  res.setHeader("X-RateLimit-Source", shared ? "shared" : "memory-fallback");
+  return minute <= RL_MINUTE && burst <= RL_BURST;
 }
 
 // ---- body parsing -----------------------------------------------------------
 async function readBody(req) {
   const len = Number(req.headers["content-length"] || 0);
-  if (len > MAX_BODY_BYTES) throw new BadRequest("payload too large", 413);
-  let parsedBody;
-  try {
-    parsedBody = req.body; // Vercel's lazy parser throws on invalid JSON
-  } catch {
-    throw new BadRequest("malformed JSON");
+  if (len > MAX_BODY_BYTES) {
+    if (typeof req.resume === "function") req.resume(); // drain, don't buffer
+    throw new BadRequest("payload too large", 413);
   }
-  let raw;
-  if (typeof parsedBody === "string") raw = parsedBody;
-  else if (Buffer.isBuffer(parsedBody)) raw = parsedBody.toString("utf8");
-  else if (parsedBody && typeof parsedBody === "object") raw = JSON.stringify(parsedBody);
-  else raw = "";
-  if (Buffer.byteLength(raw, "utf8") > MAX_BODY_BYTES) throw new BadRequest("payload too large", 413);
+  const chunks = [];
+  let size = 0;
+  for await (const chunk of req) {
+    size += chunk.length;
+    if (size > MAX_BODY_BYTES) throw new BadRequest("payload too large", 413);
+    chunks.push(chunk);
+  }
+  const raw = Buffer.concat(chunks).toString("utf8");
   if (!raw) throw new BadRequest("empty body");
   try {
     return JSON.parse(raw);
@@ -257,7 +265,9 @@ function applyUpdate(value, upd) {
   return idx < 0 ? entities.length - 1 : idx;
 }
 
-export const config = { api: { bodyParser: { sizeLimit: "4kb" } } };
+// Body parsing is disabled so oversized/malformed bodies reach this handler
+// (and the rate limiter) instead of being rejected by the platform first.
+export const config = { api: { bodyParser: false } };
 
 export default async function handler(req, res) {
   applyCors(res);

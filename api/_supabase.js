@@ -101,3 +101,33 @@ export async function rpcCall(fnName, params) {
   }
   return true;
 }
+
+// Inserts a brand-new kv_store row (no upsert). Used for append-only records
+// such as rate-limit hits, where every request must create its own row.
+export async function kvInsert(key, value) {
+  const r = await fetch(`${SUPABASE_URL}/rest/v1/kv_store`, {
+    method: "POST",
+    headers: headers({ "Content-Type": "application/json", Prefer: "return=minimal" }),
+    body: JSON.stringify([{ key, value, updated_at: new Date().toISOString() }]),
+  });
+  if (!r.ok) throw new Error(`Supabase INSERT failed: ${r.status}`);
+  return true;
+}
+
+// Counts kv_store rows whose key starts with `prefix` and were written at or
+// after `sinceIso` (capped at `cap`).
+export async function kvCountPrefix(prefix, sinceIso, cap = 200) {
+  const q = `kv_store?select=key&key=like.${encodeURIComponent(prefix)}*&updated_at=gte.${encodeURIComponent(sinceIso)}&limit=${cap}`;
+  const r = await fetch(`${SUPABASE_URL}/rest/v1/${q}`, { headers: headers() });
+  if (!r.ok) throw new Error(`Supabase COUNT failed: ${r.status}`);
+  const rows = await r.json();
+  return Array.isArray(rows) ? rows.length : 0;
+}
+
+// Deletes kv_store rows whose key starts with `prefix` and are older than `beforeIso`.
+export async function kvDeletePrefixOlderThan(prefix, beforeIso) {
+  const q = `kv_store?key=like.${encodeURIComponent(prefix)}*&updated_at=lt.${encodeURIComponent(beforeIso)}`;
+  const r = await fetch(`${SUPABASE_URL}/rest/v1/${q}`, { method: "DELETE", headers: headers({ Prefer: "return=minimal" }) });
+  if (!r.ok) throw new Error(`Supabase DELETE failed: ${r.status}`);
+  return true;
+}
