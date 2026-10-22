@@ -243,6 +243,7 @@ FAQ_MOBILE_ANSWER = {
     "hood-warfare": _MOBILE_UNTESTED,
     "poople": _MOBILE_UNTESTED,
     "8compute": _MOBILE_UNTESTED,
+    "getting-over-it": "It's built for mouse play. There's a Mobile Controls toggle on the start screen, but touch play hasn't been tested here.",
 }
 
 
