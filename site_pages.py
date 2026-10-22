@@ -219,7 +219,7 @@ GUIDE_LABELS = [
 
 
 FAN_MADE_SLUGS = {"getting-over-it", "baba-is-you"}
-FAN_MADE_CREDIT = {"getting-over-it": "Raph112star"}
+FAN_MADE_CREDIT = {"getting-over-it": "griffpatch"}
 
 # One-line notices shown directly above the game embed (same rd-note style as the notes in descriptions).
 EMBED_NOTES = {
@@ -231,10 +231,10 @@ EMBED_NOTES = {
 # Per-game embed URL override (used instead of the provider embed on re-render) and an optional
 # plain source link shown right under the player.
 EMBED_URL_OVERRIDE = {
-    "getting-over-it": "https://scratch.mit.edu/projects/964268774/embed",
+    "getting-over-it": "https://scratch.mit.edu/projects/389464290/embed",
 }
 EMBED_SOURCE_LINK = {
-    "getting-over-it": ("View on Scratch", "https://scratch.mit.edu/projects/964268774/"),
+    "getting-over-it": ("View on Scratch", "https://scratch.mit.edu/projects/389464290/"),
 }
 
 # Override for the "Is <game> free to play?" FAQ answer (visible FAQ via data-faq-free, JSON-LD via add-faq-jsonld.py).
