@@ -1,4 +1,5 @@
 import crypto from "node:crypto";
+import net from "node:net";
 import { supabaseConfigured, kvGet, kvSet, kvInsert, kvCountPrefix, kvDeletePrefixOlderThan, applyCors } from "./_supabase.js";
 import { ATTR_KEYS, SEED_ENTITIES } from "./_cold-read-seed.js";
 
@@ -150,18 +151,33 @@ function publicView(value) {
 // ---- rate limiting -----------------------------------------------------------
 const memHits = new Map(); // ipHash -> [timestamps]
 
-function clientIp(req) {
-  const vf = String(req.headers["x-vercel-forwarded-for"] || "").split(",")[0].trim();
-  if (vf) return vf;
-  const xff = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim();
-  return xff || String(req.headers["x-real-ip"] || "") || (req.socket && req.socket.remoteAddress) || "unknown";
+// Normalise one address: strip IPv6 brackets/zone, an IPv4 ":port" suffix and
+// the "::ffff:" mapping. Returns "" unless the result is a real IP, so a port or
+// junk can never make the key change per request.
+export function normalizeIp(raw) {
+  let ip = String(raw || "").trim().toLowerCase();
+  const br = ip.match(/^\[([^\]]+)\](?::\d+)?$/);
+  if (br) ip = br[1];
+  const v4port = ip.match(/^(\d{1,3}(?:\.\d{1,3}){3}):\d+$/);
+  if (v4port) ip = v4port[1];
+  ip = ip.replace(/%.*$/, "");
+  if (ip.startsWith("::ffff:") && net.isIPv4(ip.slice(7))) ip = ip.slice(7);
+  return net.isIP(ip) ? ip : "";
+}
+
+// Vercel sets x-real-ip (and x-forwarded-for / x-vercel-forwarded-for) to the
+// client address; only ever use the FIRST entry of a chain.
+export function clientIp(req) {
+  const h = req.headers || {};
+  const first = (v) => normalizeIp(String(v || "").split(",")[0]);
+  return first(h["x-real-ip"]) || first(h["x-vercel-forwarded-for"]) || first(h["x-forwarded-for"])
+    || normalizeIp(req.socket && req.socket.remoteAddress) || "unknown";
 }
 
 // IPv6 clients commonly rotate addresses inside their /64, so bucket IPv6 by /64.
 export function ipBucket(ip) {
-  ip = String(ip).trim().toLowerCase();
-  if (ip.startsWith("::ffff:")) return ip.slice(7);
-  if (!ip.includes(":")) return ip;
+  ip = normalizeIp(ip) || String(ip);
+  if (!net.isIPv6(ip)) return ip;
   const [head, tail = ""] = ip.split("::");
   const h = head ? head.split(":") : [];
   const t = tail ? tail.split(":") : [];
@@ -178,19 +194,21 @@ function ipHash(ip) {
 // its own append-only row, so concurrent requests can't overwrite each other's
 // count (a read-modify-write counter undercounted parallel bursts). After
 // inserting, we count this client's rows in the last 5 s / 60 s.
-// On storage failure we return null and the caller falls back to the
-// in-memory counts (per instance) - it never silently skips limiting.
+// On storage failure we return null and the caller FAILS CLOSED (503): a
+// per-instance memory count is not a real limit on serverless.
 async function sharedLimit(h, now) {
   try {
     const prefix = `coldread:rlhit:${h}:`;
     await kvInsert(prefix + now + ":" + crypto.randomBytes(4).toString("hex"), 1);
     const [minute, burst] = await Promise.all([
-      kvCountPrefix(prefix, new Date(now - 60_000).toISOString(), RL_MINUTE + 5),
-      kvCountPrefix(prefix, new Date(now - RL_BURST_WINDOW_MS).toISOString(), RL_BURST + 5),
+      kvCountPrefix(prefix, new Date(now - 60_000).toISOString()),
+      kvCountPrefix(prefix, new Date(now - RL_BURST_WINDOW_MS).toISOString()),
     ]);
     if (Math.random() < 0.05) {
       kvDeletePrefixOlderThan("coldread:rlhit:", new Date(now - 10 * 60_000).toISOString()).catch(() => {});
     }
+    // Our own row was just inserted, so 0 means the count query is broken.
+    if (minute < 1 || burst < 1) throw new Error("rate-limit count returned 0 after insert");
     return { minute, burst };
   } catch (err) {
     console.error("cold-read rate-limit store unavailable", String((err && err.message) || err).slice(0, 200));
@@ -213,12 +231,17 @@ async function rateLimit(req, res) {
   const now = Date.now();
   const mem = memoryCounts(h, now);
   const shared = await sharedLimit(h, now);
-  const minute = Math.max(mem.minute, shared ? shared.minute : 0);
-  const burst = Math.max(mem.burst, shared ? shared.burst : 0);
   res.setHeader("X-RateLimit-Limit", String(RL_MINUTE));
+  if (!shared) {
+    res.setHeader("X-RateLimit-Remaining", "0");
+    res.setHeader("X-RateLimit-Source", "unavailable");
+    return "unavailable";
+  }
+  const minute = Math.max(mem.minute, shared.minute);
+  const burst = Math.max(mem.burst, shared.burst);
   res.setHeader("X-RateLimit-Remaining", String(Math.max(0, RL_MINUTE - minute)));
-  res.setHeader("X-RateLimit-Source", shared ? "shared" : "memory-fallback");
-  return minute <= RL_MINUTE && burst <= RL_BURST;
+  res.setHeader("X-RateLimit-Source", "shared");
+  return minute <= RL_MINUTE && burst <= RL_BURST ? "ok" : "limited";
 }
 
 // ---- body parsing -----------------------------------------------------------
@@ -296,7 +319,14 @@ export default async function handler(req, res) {
 
   try {
     // Every POST attempt (valid or not) counts toward the per-IP limit.
-    if (!(await rateLimit(req, res))) {
+    const rl = await rateLimit(req, res);
+    if (rl === "unavailable") {
+      if (typeof req.resume === "function") req.resume();
+      res.setHeader("Retry-After", "30");
+      res.status(503).json({ error: "Rate limiter unavailable, try again shortly" });
+      return;
+    }
+    if (rl !== "ok") {
       res.setHeader("Retry-After", "60");
       res.status(429).json({ error: "Too many updates, slow down" });
       return;

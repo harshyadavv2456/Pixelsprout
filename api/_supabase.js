@@ -116,12 +116,15 @@ export async function kvInsert(key, value) {
 
 // Counts kv_store rows whose key starts with `prefix` and were written at or
 // after `sinceIso` (capped at `cap`).
-export async function kvCountPrefix(prefix, sinceIso, cap = 200) {
-  const q = `kv_store?select=key&key=like.${encodeURIComponent(prefix)}*&updated_at=gte.${encodeURIComponent(sinceIso)}&limit=${cap}`;
-  const r = await fetch(`${SUPABASE_URL}/rest/v1/${q}`, { headers: headers() });
+export async function kvCountPrefix(prefix, sinceIso) {
+  // Exact count from Content-Range (HEAD + count=exact), not len(rows), so a
+  // row limit / max-rows setting can never cap or zero the result.
+  const q = `kv_store?select=key&key=like.${encodeURIComponent(prefix + "*")}&updated_at=gte.${encodeURIComponent(sinceIso)}`;
+  const r = await fetch(`${SUPABASE_URL}/rest/v1/${q}`, { method: "HEAD", headers: headers({ Prefer: "count=exact" }) });
   if (!r.ok) throw new Error(`Supabase COUNT failed: ${r.status}`);
-  const rows = await r.json();
-  return Array.isArray(rows) ? rows.length : 0;
+  const m = String(r.headers.get("content-range") || "").match(/\/(\d+)$/);
+  if (!m) throw new Error("Supabase COUNT: no content-range total");
+  return Number(m[1]);
 }
 
 // Deletes kv_store rows whose key starts with `prefix` and are older than `beforeIso`.
