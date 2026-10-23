@@ -357,6 +357,11 @@ def render_game_page(f, catalog, guides=None, total_games=None):
             rows.append(
                 f'<li><a href="{esc(url)}">{S.icon(icon_name)}<span class="link-list__label">{esc(shown)}</span>{S.icon("chevron-right", "i i--sm")}</a></li>'
             )
+        hub_url = curated_hub_url(slug)
+        if hub_url:
+            rows.append(
+                f'<li><a href="{esc(hub_url)}">{S.icon("layers")}<span class="link-list__label">{esc(f"Games like {title}: full list")}</span>{S.icon("chevron-right", "i i--sm")}</a></li>'
+            )
         if rows:
             guides_html = (
                 f'<section aria-labelledby="guides-title"><h2 class="block__title" id="guides-title">Guides for {esc(title)}</h2>'
@@ -555,6 +560,12 @@ def render_guide_page(f, catalog_by_slug=None, total_games=None):
                                more_href=S.category_url(genre) if genre else None, section_id="related",
                                extra_class="block")
 
+    hub_html = ""
+    hub_url = curated_hub_url(game_slug) if game_slug else None
+    if hub_url and (f.get("canonical") or "").rstrip("/").endswith(f"/guides/games-like-{game_slug}"):
+        hub_html = (f'<p class="block"><a class="btn btn--primary" href="{esc(hub_url)}">{S.icon("layers", "i i--sm")}'
+                    f'See the full list: Games like {esc(game_title)}</a></p>\n')
+
     main = f"""<article class="reading">
 {S.crumbs(f['crumbs'])}
 <header class="page-head">
@@ -564,7 +575,7 @@ def render_guide_page(f, catalog_by_slug=None, total_games=None):
 {game_card}
 {S.ad_adsense(S.AD_SLOT_BANNER)}
 <div class="prose"><!--ps:body-->{f['body']}<!--/ps:body--></div>
-<div class="block">{S.ad_native()}</div>
+{hub_html}<div class="block">{S.ad_native()}</div>
 {siblings_html}
 {related_html}
 <div class="block">{S.ad_rect()}</div>
@@ -625,6 +636,112 @@ def render_collection_page(f, catalog_by_slug=None, total_games=None):
 <div class="block">{S.ad_rect()}</div>
 </div>"""
     return S.page(head, main, body_attrs='class="collection-page" data-page="collection"', total_games=total_games)
+
+
+# ---------------------------------------------------------------------------
+# Hand-picked "games like" hubs (content-engine/collections_data.py CURATED_HUBS)
+# ---------------------------------------------------------------------------
+
+def _curated_hubs():
+    """CURATED_HUBS from content-engine/collections_data.py, keyed by the main game's slug."""
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "content-engine", "collections_data.py")
+    try:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("_ps_collections_data", path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        return {h["game_slug"]: h for h in getattr(mod, "CURATED_HUBS", [])}
+    except (OSError, ImportError, SyntaxError):
+        return {}
+
+
+def curated_hub_url(game_slug):
+    hub = _curated_hubs().get(game_slug)
+    return f"/games-like/{hub['slug']}/" if hub else None
+
+
+def _game_card_row(entry, button_label="Play now"):
+    slug = entry["slug"]
+    genre_label = S.pretty_genre(entry.get("category", "")) if entry.get("category") else ""
+    return (
+        '<div class="game-card">'
+        f'<a class="game-card__art" href="/games/{esc(slug)}.html" tabindex="-1" aria-hidden="true">'
+        f'<img src="{esc(S.thumb_of(entry) or S.FALLBACK_THUMB)}" alt="" width="88" height="88" loading="lazy" decoding="async"></a>'
+        f'<div class="game-card__body"><span class="game-card__title">{esc(entry["title"])}</span>'
+        f'<span class="game-card__meta">{esc(genre_label)}{" · " if genre_label else ""}Free to play</span></div>'
+        f'<a class="btn btn--primary" href="/games/{esc(slug)}.html">{S.icon("play", "i i--sm")}{esc(button_label)}</a>'
+        "</div>"
+    )
+
+
+def render_curated_hub(hub, catalog_by_slug, total_games=None):
+    """Full HTML for a hand-picked hub. Text is plain (escaped here), never generated."""
+    path = f"/games-like/{hub['slug']}/"
+    main_entry = dict(catalog_by_slug.get(hub["game_slug"], {}), slug=hub["game_slug"])
+    main_entry.setdefault("title", hub["display_name"])
+    listed = []
+    for sec in hub["sections"]:
+        for g in sec["games"]:
+            e = dict(catalog_by_slug.get(g["slug"], {}), slug=g["slug"])
+            e["title"] = g["title"]
+            listed.append(e)
+    schema = [
+        json.dumps({"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "name": g["title"], "url": f"{DOMAIN}/games/{g['slug']}.html"}
+            for i, g in enumerate(listed)]}),
+        json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{DOMAIN}/"},
+            {"@type": "ListItem", "position": 2, "name": hub["h1"], "item": f"{DOMAIN}{path}"}]}),
+    ]
+    og_image = next((S.thumb_of(g) for g in [main_entry] + listed if S.thumb_of(g)), f"{DOMAIN}/assets/logo-icon.png")
+    og = "\n".join([
+        '<meta property="og:type" content="article">',
+        f'<meta property="og:url" content="{DOMAIN}{path}">',
+        f'<meta property="og:title" content="{esc(hub["title_tag"])}">',
+        f'<meta property="og:description" content="{esc(hub["meta_desc"])}">',
+        f'<meta property="og:image" content="{esc(og_image)}">',
+    ])
+    head = S.head(esc(hub["title_tag"]), esc(hub["meta_desc"]), canonical=f"{DOMAIN}{path}",
+                  meta_extra=og, jsonld=schema)
+    para = lambda t: f"<p>{esc(t)}</p>"
+    parts = [para(t) for t in hub["intro"]]
+    parts.append(f"<h2>{esc(hub['tips_title'])}</h2>")
+    if hub.get("tips_intro"):
+        parts.append(para(hub["tips_intro"]))
+    parts.append("<ul>" + "".join(f"<li>{esc(t)}</li>" for t in hub["tips"]) + "</ul>")
+    parts.append(f"<h2>{esc(hub['next_title'])}</h2>")
+    parts += [para(t) for t in hub["next_intro"]]
+    for sec in hub["sections"]:
+        parts.append(f"<h2>{esc(sec['heading'])}</h2>")
+        for g in sec["games"]:
+            e = dict(catalog_by_slug.get(g["slug"], {}), slug=g["slug"])
+            e["title"] = g["title"]
+            parts.append(f"<h3>{esc(g['title'])}</h3>")
+            parts.append(_game_card_row(e))
+            parts.append(para(g["note"]))
+    parts.append(f"<h2>{esc(hub['pick_title'])}</h2>")
+    parts += [para(t) for t in hub["pick"]]
+    if hub.get("footer_note"):
+        parts.append(para(hub["footer_note"]))
+    body = "\n".join(parts)
+    more_rows = "".join(
+        f'<li><a href="{esc(href)}">{S.icon("chevron-right")}<span class="link-list__label">{esc(label)}</span>{S.icon("chevron-right", "i i--sm")}</a></li>'
+        for label, href in hub["more_links"])
+    main = f"""<article class="reading">
+{S.crumbs([("Home", "/"), (esc(hub['h1']), None)])}
+<header class="page-head">
+<p class="eyebrow">Collection</p>
+<h1 class="page-title">{esc(hub['h1'])}</h1>
+</header>
+{_game_card_row(main_entry, "Play " + main_entry["title"])}
+{S.ad_adsense(S.AD_SLOT_BANNER)}
+<div class="prose"><!--ps:hub-->{body}<!--/ps:hub--></div>
+<div class="block">{S.ad_native()}</div>
+<section class="block" aria-labelledby="more-from"><h2 class="block__title" id="more-from">More from Pixelsprout</h2><ul class="link-list">{more_rows}</ul></section>
+<div class="block">{S.ad_rect()}</div>
+</article>"""
+    return S.page(head, main, body_attrs=f'class="collection-page" data-page="curated-hub" data-curated="1" data-game-slug="{esc(hub["game_slug"])}"',
+                  total_games=total_games)
 
 
 # ---------------------------------------------------------------------------

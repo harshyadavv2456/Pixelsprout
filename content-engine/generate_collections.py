@@ -6,6 +6,10 @@ rebuilds each collection from the current catalog, so a newly-added game
 that matches an existing collection's keywords will show up automatically
 next run.
 
+Hand-picked hubs (CURATED_HUBS, flagged curated=True) are rendered straight from their data by
+site_pages.render_curated_hub. The keyword/Groq path never writes to a curated slug, and any
+games-like page carrying data-curated="1" is left alone by it, so the daily run can't overwrite them.
+
 Usage:
   python content-engine/generate_collections.py
   python content-engine/generate_collections.py --dry-run
@@ -22,7 +26,9 @@ from groq_client import GroqRotatingClient
 import fallback_content as fb
 import similar_games as sim
 import page_renderer as render
-from collections_data import COLLECTIONS
+from collections_data import COLLECTIONS, CURATED_HUBS
+
+CURATED_SLUGS = {h["slug"] for h in CURATED_HUBS}
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GAMES_INDEX_PATH = os.path.join(REPO_ROOT, "games-index.json")
@@ -55,6 +61,40 @@ def update_sitemap(new_urls):
         f.write(content)
 
 
+def _is_curated_file(slug):
+    path = os.path.join(REPO_ROOT, "games-like", slug, "index.html")
+    if not os.path.exists(path):
+        return False
+    with open(path, encoding="utf-8") as f:
+        return 'data-curated="1"' in f.read()
+
+
+def render_curated_hubs(all_games):
+    """Render CURATED_HUBS from their data. Output is deterministic, so a re-run is a no-op."""
+    sys.path.insert(0, REPO_ROOT)
+    import site_pages
+    by_slug = {g["slug"]: g for g in all_games}
+    urls = []
+    for hub in CURATED_HUBS:
+        if not hub.get("curated"):
+            continue
+        listed = [hub["game_slug"]] + [g["slug"] for sec in hub["sections"] for g in sec["games"]]
+        missing = [s for s in listed if s not in by_slug]
+        if missing:
+            print(f"WARN {hub['slug']}: not in catalog: {', '.join(missing)}")
+        html = site_pages.render_curated_hub(hub, by_slug, total_games=len(all_games))
+        out_dir = os.path.join(REPO_ROOT, "games-like", hub["slug"])
+        os.makedirs(out_dir, exist_ok=True)
+        path = os.path.join(out_dir, "index.html")
+        old = open(path, encoding="utf-8").read() if os.path.exists(path) else None
+        if old != html:
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(html)
+        urls.append(f"/games-like/{hub['slug']}/")
+        print(f"OK {hub['slug']}: hand-picked, {len(listed) - 1} games{' (unchanged)' if old == html else ''}")
+    return urls
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true")
@@ -75,8 +115,11 @@ def main():
     intros = load_json(INTROS_PATH, {})
     intros_changed = False
 
-    new_urls = []
+    new_urls = render_curated_hubs(all_games)
     for coll in COLLECTIONS:
+        if coll["slug"] in CURATED_SLUGS or _is_curated_file(coll["slug"]):
+            print(f"SKIP {coll['slug']}: hand-picked hub, not generated")
+            continue
         matches = sim.find_by_keywords(
             all_games,
             category_keywords=coll.get("category_keywords"),

@@ -203,6 +203,8 @@ def migrate_collections(args, stats, catalog):
     for file in files:
         try:
             doc = read(file)
+            if 'data-curated="1"' in doc:
+                continue  # hand-picked hub: rendered only from CURATED_HUBS by generate_collections.py
             f = P.extract_collection_page(doc)
             require(f["h1"] and f["games"], "missing h1 or games")
             out = P.render_collection_page(f, by_slug, total_games=len(catalog))
