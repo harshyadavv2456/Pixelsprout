@@ -23,7 +23,7 @@ JSON format (any subset of the 5 page types is fine):
   "played": true,
   "pages": {
     "tips": {"intro": "...", "tips": ["...", ...], "conclusion": "..."},
-    "controls": {"intro": "...", "desktop": "...", "mobile": "...", "tips": ["...", ...]},
+    "controls": {"intro": "...", "desktop": "...", "tips": ["...", ...]},
     "beginner-guide": {"intro": "...", "what_it_is": "...", "first_steps": ["...", ...], "who_its_for": "..."},
     "similar": {"intro": "..."},
     "faq": {"faqs": [{"question": "...?", "answer": "..."}, ...]}

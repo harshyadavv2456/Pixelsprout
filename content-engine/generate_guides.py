@@ -72,7 +72,10 @@ def build_prompts(page_type, game, related_titles):
         "NEVER mention in-game or in-app purchases, microtransactions, shops, ads, prices, a "
         "'full version', 'limited content', app stores, or downloading: nobody has checked them "
         "for this game. For free-to-play or download questions, only say it is free to play in "
-        "your web browser on Pixelsprout, with no download."
+        "your web browser on Pixelsprout, with no download.\n\n"
+        "NEVER say or guess whether the game works on mobile, phones, tablets or touch screens, "
+        "and never describe tap, swipe or touch controls: touch play has not been tested. Do not "
+        "hedge with 'likely' or 'probably'."
     )
     if page_type == "tips":
         user = (
@@ -85,10 +88,12 @@ def build_prompts(page_type, game, related_titles):
         )
     elif page_type == "controls":
         user = (
-            f'Game: "{game["title"]}" (category: {game["category"]}). This is a browser game '
-            f'played with mouse/keyboard on desktop and touch on mobile. Write JSON: '
-            f'{{"intro": "1 sentence", "desktop": "1-2 sentences on likely desktop controls for '
-            f'a {game["category"]} game", "mobile": "1-2 sentences on likely touch controls", '
+            f'Game: "{game["title"]}" (category: {game["category"]}). This is a browser game. '
+            f'Describe desktop controls only (mouse and keyboard), and only what real play notes '
+            f'confirm. Do not guess with words like likely, probably or typically, and do not '
+            f'mention mobile, phones, tablets or touch. If no controls are confirmed, say to follow '
+            f'the on-screen instructions when the game loads. Write JSON: '
+            f'{{"intro": "1 sentence", "desktop": "1-2 sentences on the desktop controls", '
             f'"tips": ["2-3 short control-related tips"]}}.'
         )
     elif page_type == "beginner-guide":
