@@ -8,7 +8,8 @@
         "Use slow, wide sweeps of the mouse.",
         "Hook the hammer head over the top edge of a block before you pull. The pot only moves when the hammer head is pressing against something, so find an edge first.",
         "Ease off the mouse when the pot lands somewhere flat. The cat keeps some momentum after you stop, so give it a moment to settle before the next move.",
-        "Watch the timer in the top right corner. It runs the whole time, so it is a fair way to measure whether a new approach is actually faster."
+        "Watch the timer in the top right corner. It runs the whole time, so it is a fair way to measure whether a new approach is actually faster.",
+        "To lift the cat, rest the hammer head on the block under the pot and move the mouse down. In testing, that downward push raised the pot, so treat the hammer like a pole you press into the ground."
       ],
       "conclusion": "Treat each block as its own small puzzle. Hook an edge, pull a short distance, settle, then plan the next move.",
       "extra_sections": [
@@ -58,7 +59,7 @@
       "faqs": [
         {
           "question": "Is this the original Getting Over It?",
-          "answer": "No. The start screen credits it as a Scratch edition with Griffpatch, and the levels are built from giant Scratch code blocks."
+          "answer": "No. It is a fan-made Scratch recreation by griffpatch, not the original game by Bennett Foddy. The start screen credits it as a Scratch edition with Griffpatch, and the levels are built from giant Scratch code blocks."
         },
         {
           "question": "How do you move in Getting Over It?",
