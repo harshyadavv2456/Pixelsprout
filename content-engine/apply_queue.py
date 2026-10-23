@@ -66,7 +66,7 @@ MAX_FILES_PER_RUN = 30
 # (min_chars, max_chars) for strings; (min_items, max_items, min_chars, max_chars) for lists
 SCHEMAS = {
     "tips": {"intro": (40, 500), "tips": (5, 10, 30, 350), "conclusion": (20, 350)},
-    "controls": {"intro": (20, 350), "desktop": (30, 600), "mobile": (30, 600), "tips": (2, 6, 20, 300)},
+    "controls": {"intro": (20, 350), "desktop": (30, 600), "tips": (2, 6, 20, 300)},
     "beginner-guide": {"intro": (20, 450), "what_it_is": (80, 900), "first_steps": (3, 8, 20, 300), "who_its_for": (20, 350)},
     "similar": {"intro": (120, 900)},
 }
