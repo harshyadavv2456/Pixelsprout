@@ -6,27 +6,27 @@
     },
     {
       "slug": "getting-over-it",
-      "views": 109
+      "views": 121
+    },
+    {
+      "slug": "dot-link-puzzle-connect-the-dots",
+      "views": 43
     },
     {
       "slug": "protect-my-dog",
       "views": 42
     },
     {
-      "slug": "dot-link-puzzle-connect-the-dots",
-      "views": 38
+      "slug": "2048-cube-run",
+      "views": 37
     },
     {
       "slug": "test-tubes-water-sort",
       "views": 36
     },
     {
-      "slug": "2048-cube-run",
-      "views": 35
-    },
-    {
       "slug": "baba-is-you",
-      "views": 26
+      "views": 28
     },
     {
       "slug": "2048-cube-merge-block",
@@ -69,15 +69,15 @@
       "views": 16
     },
     {
+      "slug": "books-tower",
+      "views": 16
+    },
+    {
       "slug": "dop-in-love-story-find-part",
       "views": 15
     },
     {
       "slug": "2d-platformer-coin",
-      "views": 14
-    },
-    {
-      "slug": "2048-number-ball",
       "views": 14
     }
   ]
