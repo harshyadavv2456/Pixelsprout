@@ -6,6 +6,7 @@ pages share the exact shell, cards and ad slots as every other page.
 
 import html
 import json
+import re
 import os
 import sys
 
@@ -123,6 +124,17 @@ def render_guide_page(page_type, game, content, related_games, sibling_guides, c
     return P.render_guide_page(fields)
 
 
+TOUCH_DEFAULT = "Not tested on touch screens."
+_TOUCH_OK_RE = re.compile(r"(not|wasn't|hasn't been|never) tested|untested|desktop[- ]only|no on-screen touch", re.I)
+_TOUCH_GUESS_RE = re.compile(r"suggest|likely|probably|should|may work|seems", re.I)
+
+
+def _touch_line(text):
+    """Fixed touch line; a per-game line is kept only if it says touch is untested or desktop-only."""
+    ok = isinstance(text, str) and _TOUCH_OK_RE.search(text) and not _TOUCH_GUESS_RE.search(text)
+    return text.strip() if ok else TOUCH_DEFAULT
+
+
 def _render_body_for_type(page_type, game, content):
     if page_type == "tips":
         tips_html = "\n".join(f"<li>{t}</li>" for t in content.get("tips", []))
@@ -133,8 +145,8 @@ def _render_body_for_type(page_type, game, content):
         return f"""<p>{content.get('intro','')}</p>
 <h2>Desktop controls</h2>
 <p>{content.get('desktop','')}</p>
-<h2>Mobile controls</h2>
-<p>{content.get('mobile','')}</p>
+<h2>Touch play</h2>
+<p>{_touch_line(content.get('mobile'))}</p>
 <h2>Tips</h2>
 <ul>{"".join(f"<li>{t}</li>" for t in content.get('tips', []))}</ul>"""
     if page_type == "beginner-guide":

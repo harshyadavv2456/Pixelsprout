@@ -110,7 +110,7 @@ def build_prompts(page_type, game, related_titles):
             f'Game: "{game["title"]}" (category: {game["category"]}). Write JSON: '
             f'{{"faqs": [{{"question": "...", "answer": "..."}}, ...]}} with 5-8 question/answer '
             f'pairs a real player would search for about this specific game - free-to-play status, '
-            f'mobile support, controls, difficulty, what makes it fun, common confusion points for '
+            f'desktop controls (touch play not tested, so do not claim mobile or touch support), difficulty, what makes it fun, common confusion points for '
             f'a {game["category"]} game. Answers should be 1-2 sentences, specific and useful.'
         )
     else:
