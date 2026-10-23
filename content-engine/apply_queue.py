@@ -194,6 +194,20 @@ def handle_collection(fname, sha, item, intros, run_log, applied_hashes):
                                  "urls": [f"https://playpixelsprout.com/games-like/{slug}/"]})
 
 
+SHOTS_RE = re.compile(r"<!--ps:shots-->.*?<!--/ps:shots-->", re.S)
+
+
+def keep_shots_block(path, new_html):
+    """Carry the hand-added screenshots / "See it in action" block over when a page is re-rendered."""
+    if not os.path.exists(path) or "<!--ps:shots-->" in new_html:
+        return new_html
+    with open(path, encoding="utf-8") as f:
+        m = SHOTS_RE.search(f.read())
+    if not m or "<!--/ps:body-->" not in new_html:
+        return new_html
+    return new_html.replace("<!--/ps:body-->", m.group(0) + "<!--/ps:body-->", 1)
+
+
 def file_sha(path):
     with open(path, "rb") as f:
         return hashlib.sha256(f.read()).hexdigest()
@@ -296,7 +310,9 @@ def main():
                 # Still on the NOINDEX_GUIDES list: new content goes live but stays noindex and out
                 # of the sitemap until Studio checks it and runs content-engine/lift_noindex.py.
                 page_html, _ = seo_cleanup.set_noindex(page_html, True)
-            with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8", newline="\n") as f:
+            out_path = os.path.join(out_dir, "index.html")
+            page_html = keep_shots_block(out_path, page_html)
+            with open(out_path, "w", encoding="utf-8", newline="\n") as f:
                 f.write(page_html)
 
         entry = manifest.get(slug) or {"pages": page_urls, "any_fallback": True}
