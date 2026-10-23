@@ -6,11 +6,9 @@
       "intro": "Baba Is You on Pixelsprout is a fan-made remake, not the original game. Its first board is a short corridor with a column of three rocks between you and the flag, and four rules written in word blocks around it. These tips come from playing that board.",
       "tips": [
         "Read the four rules before your first move. The top row says BABA IS YOU and FLAG IS WIN. The bottom row says WALL IS STOP and ROCK IS PUSH. Together they say you are Baba, the flag wins, the walls block you and rocks can be shoved.",
-        "Notice that the word blocks sit outside the walled corridor. On this board you work inside the corridor, so the plan is to deal with the rocks rather than rewrite a rule.",
         "The three rocks stand in a column across the whole corridor, so there is no way around them. Walk Baba straight into the middle rock to push it toward the flag.",
         "Pushing the middle rock moves only that rock. The rocks above and below it stay put, which opens a gap in the column for Baba to step into.",
         "Press each arrow key once and wait for Baba to finish the step. Quick presses did not always register in testing, and single taps were easier to follow.",
-        "Count the squares to the flag. The corridor is three rows tall, Baba starts on the middle row at the left and the flag stands on the same row near the right end.",
         "If a push leaves a rock where you do not want it, the UNDO button in the lower right and the RESTART button in the lower left are always on screen."
       ],
       "conclusion": "Read the rules, push the middle rock, step through the gap and head for the flag. Take each move one key press at a time.",
@@ -29,10 +27,11 @@
             "In testing, the top and bottom rocks stayed in place while the middle one moved, so the column split into a gap. Keep going along the middle row toward the flag from there."
           ]
         }
-      ]
+      ],
+      "about_name": "Baba Is You (fan-made Scratch remake)"
     },
     "controls": {
-      "intro": "Baba Is You is played on the keyboard, one square per key press, with two on-screen buttons for mistakes.",
+      "intro": "Baba Is You is played on the keyboard, one square per key press, with two on-screen buttons for mistakes. This Pixelsprout version is a fan-made Scratch remake, not the original game.",
       "desktop": "Click the game once so it takes key presses, then use the arrow keys to move Baba up, down, left or right by one square. Walking into a rock pushes it if the square behind it is free. Mouse clicks are only for focusing the game and for the RESTART and UNDO buttons.",
       "mobile": "No on-screen arrows or touch pad appeared during play, and the game was only tested with a keyboard. A desktop browser with a keyboard is the safer choice.",
       "tips": [
@@ -40,7 +39,8 @@
         "Tap each key once and let the step finish before the next one.",
         "RESTART sits in the lower left of the screen and UNDO in the lower right.",
         "Click Ok, Play Now! on the first notice and wait for the board to appear."
-      ]
+      ],
+      "about_name": "Baba Is You (fan-made Scratch remake)"
     },
     "beginner-guide": {
       "intro": "New to Baba Is You? Here is what the first board shows and how to read it before you make a single move.",
@@ -62,10 +62,12 @@
             "ROCK IS PUSH means the rocks are not walls. Walking into one shoves it one square, which is the whole idea of this first board."
           ]
         }
-      ]
+      ],
+      "about_name": "Baba Is You (fan-made Scratch remake)"
     },
     "similar": {
-      "intro": "Baba Is You is about reading a small board carefully and solving it one square at a time. There is no timer and nothing chasing you, so every move is a choice you can think through, and pushing objects around is how you open the way forward. If you enjoy that slow, grid-based style of puzzle, where the answer comes from looking at what is in front of you, the games below are a good next step. Look for games with step-by-step moves, objects to push or arrange, and boards you can restart freely."
+      "intro": "This Pixelsprout version is a fan-made Scratch remake, not the original game. Baba Is You is about reading a small board carefully and solving it one square at a time. There is no timer and nothing chasing you, so every move is a choice you can think through, and pushing objects around is how you open the way forward. If you enjoy that slow, grid-based style of puzzle, where the answer comes from looking at what is in front of you, the games below are a good next step. Look for games with step-by-step moves, objects to push or arrange, and boards you can restart freely.",
+      "about_name": "Baba Is You (fan-made Scratch remake)"
     },
     "faq": {
       "faqs": [
@@ -97,7 +99,8 @@
           "question": "Is there a time limit?",
           "answer": "No timer appeared on the first board. You can take as long as you need between moves."
         }
-      ]
+      ],
+      "about_name": "Baba Is You (fan-made Scratch remake)"
     }
   }
 }

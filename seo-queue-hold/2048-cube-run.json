@@ -9,10 +9,7 @@
         "Hold the mouse button and drag sideways to move your cube across the track. Dragging left slid it toward the left side, so small drags are enough to line up with a cube ahead.",
         "Stay away from the very edge of the track. In one run the cube was dragged all the way to the left edge, and a few seconds later the game was back on the Level 1 start screen.",
         "Cubes you collect stack up on your cube in a column. In one run the stack grew to show 2, 2, 8, 4, 128 and 32 before the finish line, so it is worth chasing the cubes in your lane.",
-        "Watch the bar at the top of the screen. It fills as you move down the track, so you can tell how much road is left before the finish.",
-        "Expect bigger numbers further down the track. Early cubes showed 2, 4 and 8, while later ones by the sides showed 64, 256 and 512.",
-        "Past the checkered finish line the track turns into colored strips marked X2, X4 and higher. Your stack is spent along those strips, so a taller stack carries you further.",
-        "On the Level Cleared screen, NEXT LEVEL moves you on. The WATCH ADS & GET button is optional and only adds coins."
+        "Past the checkered finish line the track turns into colored strips marked X2, X4 and higher. Your stack is spent along those strips, so a taller stack carries you further."
       ],
       "conclusion": "Start the run, keep your cube near the middle with short drags and grab what sits in your lane. A tall stack at the finish line is what pushes you up the multiplier strips.",
       "extra_sections": [
@@ -20,14 +17,14 @@
           "heading": "What happens at the finish line",
           "paragraphs": [
             "After the checkered line, the track becomes a ramp of colored strips. The first was a wide dark blue X2 strip, then a green X4 strip, with more strips with higher values beyond it. As the cube climbs them, the stack shrinks until only a single cube is left.",
-            "Then the Level Cleared screen appears with a coin reward. On Level 1 it showed REWARD +100 and a curved bar of multipliers reading x2, x3, x4, x3 and x2 with a moving arrow above a WATCH ADS & GET button."
+            "Then the Level Cleared screen appears. On Level 1 it showed REWARD +100 coins and a curved bar of multipliers reading x2, x3, x4, x3 and x2 with a moving arrow above a WATCH ADS & GET button, plus a NEXT LEVEL button that moves you on without an ad."
           ]
         },
         {
           "heading": "Coins and the Cube Value card",
           "paragraphs": [
-            "The coin total sits in the top right corner, and it read 500 at the start of Level 1. Below the starting cube is a Cube Value card that showed a 2 cube, x2 and a price of 1000 coins.",
-            "That price was more than the 500 coins on hand, so the card was not used in testing. What buying it changes was not seen."
+            "Coins in 2048 Cube Run are in-game points only. They are earned by playing and no real money is involved. The coin total sits in the top right corner, and it read 500 at the start of Level 1.",
+            "Below the starting cube is a Cube Value card that showed a 2 cube, x2 and the number 1000 next to a coin icon. That was more than the 500 coins on hand, so the card was not used in testing and its effect was not seen."
           ]
         }
       ]
@@ -45,7 +42,7 @@
     },
     "beginner-guide": {
       "intro": "New to 2048 Cube Run? Here is what each screen shows and how a first run on Level 1 goes from the start button to the reward screen.",
-      "what_it_is": "2048 Cube Run is a free browser runner with a numbers theme. You control a blue cube marked 2 on a long white track over a light blue sky. Colored cubes with numbers such as 2, 4, 8, 16, 64 and 128 sit on the track, and the ones you run into stack up on your cube. At the end, a checkered finish line leads onto strips marked X2, X4 and more, and the level ends with a coin reward.",
+      "what_it_is": "2048 Cube Run is a free browser runner with a numbers theme. You control a blue cube marked 2 on a long white track over a light blue sky. Colored cubes with numbers such as 2, 4, 8, 16, 64 and 128 sit on the track, and the ones you run into stack up on your cube. At the end, a checkered finish line leads onto strips marked X2, X4 and more, and the level ends on a Level Cleared screen.",
       "first_steps": [
         "Click Ok, Play Now! on the notice and let the game load to the Level 1 screen.",
         "Look at the coin total in the top right and the Cube Value card below the starting cube.",
@@ -88,7 +85,7 @@
         },
         {
           "question": "What does the Level Cleared screen give you?",
-          "answer": "On Level 1 it showed REWARD +100 coins, a bar of multipliers from x2 to x4, a WATCH ADS & GET button and a NEXT LEVEL button."
+          "answer": "On Level 1 it showed REWARD +100 coins, a bar of multipliers from x2 to x4, a WATCH ADS & GET button and a NEXT LEVEL button. Coins are in-game points only, with no real money involved."
         },
         {
           "question": "Do you have to watch an ad to keep playing?",
@@ -96,7 +93,11 @@
         },
         {
           "question": "What is the Cube Value card?",
-          "answer": "It sits under the starting cube and showed a 2 cube, x2 and a price of 1000 coins. With only 500 coins at the start, it was not bought, so its effect was not seen."
+          "answer": "It sits under the starting cube and showed a 2 cube, x2 and the number 1000 next to a coin icon. The game started with only 500 coins, so the card was not used and its effect was not seen."
+        },
+        {
+          "question": "Are the coins real money?",
+          "answer": "No. Coins are in-game points earned by playing 2048 Cube Run. No real money was involved anywhere in the game during testing."
         }
       ]
     }
