@@ -226,6 +226,7 @@ EMBED_NOTES = {
     "spellwright": "Crafting spells needs a Discord sign-in on the creator's site.",
     "gigacity": "Needs a browser with WebGPU or WebGL 2.",
     "getting-over-it": "The first load can take a few minutes.",
+    "touchthemoon": "Built for touch screens; mouse play didn't work in our test.",
 }
 
 # Per-game embed URL override (used instead of the provider embed on re-render) and an optional
