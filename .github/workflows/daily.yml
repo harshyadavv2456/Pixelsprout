@@ -83,7 +83,10 @@ jobs:
             echo "No seo-queue branch yet - skipping"
           fi
 
+      # Switched off 23 Oct 2026 (Studio): generate_guides.py --retry-fallback kept rewriting
+      # noindexed guide sets with guessed copy. Remove the `if: false` line to turn it back on.
       - name: Generate guide pages with Groq (time-boxed)
+        if: false
         continue-on-error: true
         timeout-minutes: 20
         env:
