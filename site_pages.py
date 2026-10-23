@@ -263,6 +263,18 @@ GAME_SOCIAL_LINKS = {
     "gravity-merge": [
         ("YouTube Short", "https://youtube.com/shorts/Uq54-x44wEQ"),
         ("Post on X", "https://x.com/Playpixelsprout/status/2112692842246099447"),
+        ("Post on Instagram", "https://www.instagram.com/playpixelsprout/p/DevDWn8gVus/"),
+        ("Reel on Instagram", "https://www.instagram.com/playpixelsprout/reel/DevDYI3nT2F/"),
+        ("Reel on Facebook", "https://www.facebook.com/reel/29291042653846498"),
+    ],
+    "test-tubes-water-sort": [
+        ("Post on Instagram", "https://www.instagram.com/playpixelsprout/p/DesejofkWTV/"),
+        ("Reel on Instagram", "https://www.instagram.com/playpixelsprout/reel/DesekHglQLq/"),
+        ("Reel on Facebook", "https://www.facebook.com/reel/1130420909503778"),
+    ],
+    "star-hop-endless-galaxy": [
+        ("Post on Instagram", "https://www.instagram.com/playpixelsprout/p/Dep5xvvCpGI/"),
+        ("Reel on Instagram", "https://www.instagram.com/playpixelsprout/reel/Dep5zX3iSSJ/"),
     ],
 }
 
