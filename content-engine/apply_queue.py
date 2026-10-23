@@ -71,6 +71,7 @@ SCHEMAS = {
     "similar": {"intro": (120, 900)},
 }
 FAQ_RULES = {"count": (5, 10), "question": (10, 160), "answer": (30, 450)}
+OVERRIDE_RULES = {"title": (10, 90), "meta_description": (40, 200), "about_name": (3, 90)}
 EXTRA_RULES = {"sections": (0, 4), "heading": (5, 90), "paragraphs": (1, 4), "paragraph": (60, 800)}
 
 BANNED_PATTERNS = [
@@ -134,6 +135,11 @@ def validate_page(page_type, content):
                 check_list(content[field], rule, where, errors)
             else:
                 check_text(content[field], *rule, where, errors)
+
+    # Optional per-game overrides of the page title, meta description and JSON-LD about.name.
+    for field, rule in OVERRIDE_RULES.items():
+        if field in content:
+            check_text(content[field], *rule, f"{page_type}.{field}", errors)
 
     extra = content.get("extra_sections", [])
     if extra:

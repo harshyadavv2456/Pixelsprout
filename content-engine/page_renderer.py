@@ -4,6 +4,7 @@ hands them to the site-wide templates in site_pages (repo root), so these
 pages share the exact shell, cards and ad slots as every other page.
 """
 
+import html
 import json
 import os
 import sys
@@ -15,18 +16,18 @@ import site_shell as S  # noqa: E402
 SITE = S.DOMAIN
 
 TITLE_MAP = {
-    "tips": "{t} - Tips, Tricks & How to Get a High Score",
-    "controls": "{t} Controls - How to Play (Desktop & Mobile)",
+    "tips": "{t} Tips and Strategy",
+    "controls": "{t} Controls (Desktop)",
     "beginner-guide": "{t} Beginner's Guide - How to Get Started",
     "similar": "Games Like {t} - {c} Games to Try Next",
     "faq": "{t} - Frequently Asked Questions",
 }
 DESC_MAP = {
-    "tips": "Tips and strategies to improve at {t} and get a higher score, from the basics to more advanced play.",
-    "controls": "Full control scheme for {t} on both desktop and mobile - keyboard, mouse, and touch.",
+    "tips": "Tips and strategy for {t}, based on what the game shows in play.",
+    "controls": "Desktop controls for {t}; touch play not tested.",
     "beginner-guide": "New to {t}? Here's everything to know before your first playthrough.",
     "similar": "Enjoyed {t}? Here are more {cl} games to play free on Pixelsprout.",
-    "faq": "Common questions about {t} - free play, mobile support, and more.",
+    "faq": "Common questions about {t}, from free play to desktop controls.",
 }
 SLUG_MAP = {
     "tips": "{s}-tips",
@@ -43,6 +44,11 @@ def _fmt(template, game):
     return template.format(t=game["title"], c=game["category"], cl=game["category"].lower(), s=game["slug"])
 
 
+def _override(content, key):
+    v = content.get(key) if isinstance(content, dict) else None
+    return html.unescape(v).strip() if isinstance(v, str) and v.strip() else None
+
+
 def render_guide_page(page_type, game, content, related_games, sibling_guides, category_url=None):
     """
     page_type: "tips" | "controls" | "beginner-guide" | "similar" | "faq"
@@ -51,14 +57,18 @@ def render_guide_page(page_type, game, content, related_games, sibling_guides, c
     sibling_guides: dict of {page_type: url} for this same game's other guide pages
     category_url: "/<category-slug>/" if that category page exists, else None
     """
-    title = _fmt(TITLE_MAP[page_type], game)
+    # Per-game overrides from the queue JSON (already HTML-escaped by apply_queue, so unescape
+    # once here; S.esc / json.dumps below escape them again for output).
+    title = _override(content, "title") or _fmt(TITLE_MAP[page_type], game)
+    meta_desc = _override(content, "meta_description") or _fmt(DESC_MAP[page_type], game)
+    about_name = _override(content, "about_name") or game["title"]
     canonical_path = f"/guides/{_fmt(SLUG_MAP[page_type], game)}/"
     thumb = (game.get("thumbnail") or "").strip()
     safe_thumbnail = thumb or f"{SITE}/assets/logo-icon.png"
 
     schema = [
         json.dumps({"@context": "https://schema.org", "@type": "Article", "headline": title,
-                    "about": {"@type": "VideoGame", "name": game["title"]}, "image": safe_thumbnail}),
+                    "about": {"@type": "VideoGame", "name": about_name}, "image": safe_thumbnail}),
         json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE}/"},
             {"@type": "ListItem", "position": 2, "name": "Guides", "item": f"{SITE}/guides/"},
@@ -89,13 +99,13 @@ def render_guide_page(page_type, game, content, related_games, sibling_guides, c
         '<meta property="og:type" content="article">',
         f'<meta property="og:url" content="{SITE}{canonical_path}">',
         f'<meta property="og:title" content="{S.esc(title)} | Pixelsprout">',
-        f'<meta property="og:description" content="{S.esc(_fmt(DESC_MAP[page_type], game))}">',
+        f'<meta property="og:description" content="{S.esc(meta_desc)}">',
         f'<meta property="og:image" content="{S.esc(safe_thumbnail)}">',
     ])
 
     fields = {
         "title_tag": S.esc(title + " | Pixelsprout"),
-        "meta_desc": S.esc(_fmt(DESC_MAP[page_type], game)),
+        "meta_desc": S.esc(meta_desc),
         "canonical": f"{SITE}{canonical_path}",
         "og": og,
         "jsonld": schema,
