@@ -178,6 +178,20 @@ def category_url(category):
 # Catalog
 # ---------------------------------------------------------------------------
 
+EXCLUDED_GAMES = os.path.join(ROOT, "excluded-games.json")
+NOINDEX_TAG = '<meta name="robots" content="noindex,follow">'
+
+
+def load_excluded_slugs(path=EXCLUDED_GAMES):
+    """Slugs listed in excluded-games.json: never listed anywhere, game page kept noindex."""
+    try:
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+    except (OSError, ValueError):
+        return set()
+    return {g["slug"] if isinstance(g, dict) else g for g in data.get("games", [])}
+
+
 def load_catalog(path=GAMES_INDEX):
     try:
         with open(path, encoding="utf-8") as f:
@@ -185,9 +199,10 @@ def load_catalog(path=GAMES_INDEX):
     except FileNotFoundError:
         return []
     seen, games = set(), []
+    excluded = load_excluded_slugs()
     for g in raw:
         slug = g.get("slug")
-        if not slug or slug in seen:
+        if not slug or slug in seen or slug in excluded:
             continue
         seen.add(slug)
         g["title"] = clean_title(g.get("title") or slug)

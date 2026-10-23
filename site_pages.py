@@ -413,7 +413,10 @@ def render_game_page(f, catalog, guides=None, total_games=None):
         body_attrs += f' data-faq-free="{esc(FAQ_FREE_ANSWER[slug])}"'
     if slug in FAQ_MOBILE_ANSWER:
         body_attrs += f' data-faq-mobile="{esc(FAQ_MOBILE_ANSWER[slug])}"'
-    return S.page(head, main, body_attrs=body_attrs, active=genre_href, total_games=total_games)
+    out = S.page(head, main, body_attrs=body_attrs, active=genre_href, total_games=total_games)
+    if slug in S.load_excluded_slugs() and S.NOINDEX_TAG not in out:  # excluded-games.json: keep noindex
+        out = out.replace("<head>", "<head>\n" + S.NOINDEX_TAG, 1)
+    return out
 
 
 # ---------------------------------------------------------------------------

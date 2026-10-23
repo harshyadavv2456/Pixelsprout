@@ -109,6 +109,8 @@ def update_games_index(game):
             games_list = json.load(f)
     except FileNotFoundError:
         games_list = []
+    if game["slug"] in site_shell.load_excluded_slugs():
+        return
     games_list.append({
         "slug": game["slug"],
         "title": game["title"],
@@ -236,8 +238,13 @@ def main():
 
     added_titles = []
     new_urls = []
+    excluded = site_shell.load_excluded_slugs()
     for game in new_games:
         game["slug"] = slugify(game["title"])
+        if game["slug"] in excluded:
+            print(f"SKIP {game['slug']}: listed in excluded-games.json")
+            tracking["added_ids"].append(game["id"])
+            continue
         build_game_page(game)
         add_to_sitemap(game)
         add_to_rss(game)

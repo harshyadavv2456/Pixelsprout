@@ -11,6 +11,8 @@ words (light weight). Intentionally simple - this only needs to be
 is what actually makes each page useful to read.
 """
 
+import json
+import os
 import re
 
 STOPWORDS = {
@@ -47,13 +49,26 @@ CURATED_SIMILAR = {
 }
 
 
+def _excluded_slugs():
+    """excluded-games.json at the repo root (see site_shell.load_excluded_slugs)."""
+    path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "excluded-games.json")
+    try:
+        with open(path, encoding="utf-8") as f:
+            return {g["slug"] if isinstance(g, dict) else g for g in json.load(f).get("games", [])}
+    except (OSError, ValueError):
+        return set()
+
+
+EXCLUDED_SLUGS = _excluded_slugs()
+
+
 def find_similar(target, games, limit=10, exclude_slugs=None):
     """
     Returns up to `limit` games most similar to `target`, best match
     first. `games` must already have gone through build_index().
     """
     exclude_slugs = exclude_slugs or set()
-    exclude_slugs = exclude_slugs | {target["slug"]}
+    exclude_slugs = exclude_slugs | {target["slug"]} | EXCLUDED_SLUGS
 
     curated = CURATED_SIMILAR.get(target["slug"])
     if curated:
@@ -88,6 +103,8 @@ def find_by_keywords(games, category_keywords=None, title_keywords=None, limit=2
 
     matches = []
     for g in games:
+        if g["slug"] in EXCLUDED_SLUGS:
+            continue
         cat = g["category"].lower()
         title = g["title"].lower()
         cat_hit = any(k in cat for k in category_keywords) if category_keywords else False

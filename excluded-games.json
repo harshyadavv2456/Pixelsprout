@@ -1,0 +1,10 @@
+{
+  "_about": "Games kept off the site's listings for good. Every generator filters these slugs out of games-index.json, the homepage, category pages, all-games, collections, hubs and similar-games lists; seo_cleanup.py keeps their game page noindex and out of sitemap.xml. The game page itself stays live. Remove a slug here (and re-add it to games-index.json) to bring a game back.",
+  "games": [
+    {
+      "slug": "this-game-about-climbing",
+      "reason": "Embed loads a different game (\"Master climber\"), not This Game About Climbing.",
+      "added": "2026-10-23"
+    }
+  ]
+}

@@ -8,6 +8,12 @@ try:  # snapshot before this run overwrites home.json (keeps the last baked Game
 except (OSError, ValueError):
     _PREV_HOME = {}
 idx = L("games-index.json"); pop = L("popular-games.json")["games"]; orig = L("assets/originals.json")
+try:  # excluded-games.json: never listed anywhere
+    _EXCL = {g["slug"] if isinstance(g, dict) else g for g in L("excluded-games.json").get("games", [])}
+except (OSError, ValueError):
+    _EXCL = set()
+idx = [g for g in idx if g.get("slug") not in _EXCL]; pop = [p for p in pop if p.get("slug") not in _EXCL]
+orig = [o for o in orig if o.get("slug") not in _EXCL]
 by = {g["slug"]: g for g in idx}
 KB = re.compile(r"\b(arrow keys|wasd|keyboard|space ?bar|press [a-z] key|mouse wheel|right[- ]click)\b", re.I)
 TOUCH = re.compile(r"\b(tap|touch|swipe|mobile|phone|tablet)\b", re.I)

@@ -100,7 +100,7 @@ def main():
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
-    all_games = load_json(GAMES_INDEX_PATH, [])
+    all_games = [g for g in load_json(GAMES_INDEX_PATH, []) if g.get("slug") not in sim.EXCLUDED_SLUGS]
     if not all_games:
         print("games-index.json not found or empty.")
         return

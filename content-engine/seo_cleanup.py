@@ -80,6 +80,15 @@ def set_noindex(page_html, want_noindex):
     return page_html, False
 
 
+def load_excluded_slugs():
+    """excluded-games.json at the repo root: games kept off listings, noindex, out of the sitemap."""
+    try:
+        with open(os.path.join(REPO_ROOT, "excluded-games.json"), encoding="utf-8") as f:
+            return {g["slug"] if isinstance(g, dict) else g for g in json.load(f).get("games", [])}
+    except (OSError, ValueError):
+        return set()
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true")
@@ -134,10 +143,33 @@ def run(dry_run=False, forced_noindex=None):
                     with open(path, "w", encoding="utf-8", newline="\n") as f:
                         f.write(new_page)
 
+    # Games on excluded-games.json: game page stays live but noindex, and neither it nor any of
+    # its guide pages may be in the sitemap.
+    excluded = load_excluded_slugs()
+    for slug in sorted(excluded):
+        path = os.path.join(REPO_ROOT, "games", f"{slug}.html")
+        if os.path.exists(path):
+            with open(path, encoding="utf-8") as f:
+                page = f.read()
+            new_page, changed = set_noindex(page, True)
+            if changed:
+                html_changed += 1
+                if not args.dry_run:
+                    with open(path, "w", encoding="utf-8", newline="\n") as f:
+                        f.write(new_page)
+    excluded_locs = re.compile(
+        r"<loc>" + re.escape(SITE) + r"/(?:games/(?:" + "|".join(map(re.escape, excluded)) + r")\.html"
+        r"|guides/(?:" + "|".join(map(re.escape, excluded)) + r")-[^<]*)</loc>") if excluded else None
+    real_urls = {u for u in real_urls if not (excluded_locs and excluded_locs.search(f"<loc>{SITE}{u}</loc>"))}
+
     # Rebuild the sitemap line by line: drop template guide URLs, keep everything else.
     removed = 0
+    excluded_removed = 0
     kept_lines = []
     for line in sitemap.splitlines():
+        if excluded_locs and excluded_locs.search(line):
+            excluded_removed += 1
+            continue
         m = re.search(r"<loc>" + re.escape(SITE) + r"(/guides/[^<]+)</loc>", line)
         if m and (m.group(1) in template_urls or m.group(1) in forced_noindex):
             removed += 1
@@ -161,6 +193,7 @@ def run(dry_run=False, forced_noindex=None):
     print(f"  template (noindex):       {len(template_urls)}")
     print(f"HTML files updated: {html_changed}")
     print(f"Sitemap: removed {removed} template URLs, added {len(missing)} real URLs")
+    print(f"Excluded games ({len(excluded)}): removed {excluded_removed} sitemap URLs")
     if args.dry_run:
         print("(dry run - nothing written)")
     return {"template_urls": template_urls, "real_urls": real_urls, "sitemap": new_sitemap}

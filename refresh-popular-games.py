@@ -51,6 +51,12 @@ def main():
         print(f"Fetch failed: {e} - leaving existing popular-games.json untouched.")
         sys.exit(0)  # don't fail the whole workflow over a transient Supabase hiccup
 
+    try:  # never rank a game listed in excluded-games.json
+        with open("excluded-games.json", encoding="utf-8") as f:
+            excluded = {g["slug"] if isinstance(g, dict) else g for g in json.load(f).get("games", [])}
+    except (OSError, ValueError):
+        excluded = set()
+    games = [g for g in games if g.get("slug") not in excluded]
     payload = {"games": games}
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2)
