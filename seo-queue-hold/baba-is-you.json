@@ -33,7 +33,6 @@
     "controls": {
       "intro": "Baba Is You is played on the keyboard, one square per key press, with two on-screen buttons for mistakes. This Pixelsprout version is a fan-made Scratch remake, not the original game.",
       "desktop": "Click the game once so it takes key presses, then use the arrow keys to move Baba up, down, left or right by one square. Walking into a rock pushes it if the square behind it is free. Mouse clicks are only for focusing the game and for the RESTART and UNDO buttons.",
-      "mobile": "No on-screen arrows or touch pad appeared during play, and the game was only tested with a keyboard. A desktop browser with a keyboard is the safer choice.",
       "tips": [
         "If nothing moves, click inside the game area and try the arrow keys again.",
         "Tap each key once and let the step finish before the next one.",
@@ -73,7 +72,7 @@
       "faqs": [
         {
           "question": "Is this the original Baba Is You?",
-          "answer": "No. The Pixelsprout version is a fan-made remake, not the original game, and it may differ from the original in levels and features."
+          "answer": "No. The Pixelsprout version is a fan-made remake, not the original game."
         },
         {
           "question": "How do you move in Baba Is You?",

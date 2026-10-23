@@ -32,7 +32,6 @@
     "controls": {
       "intro": "2048 Cube Run needs very little input. You start the run with one click, the cube moves forward by itself, and you steer by dragging.",
       "desktop": "Click CLICK TO START! to begin. Then hold the left mouse button and drag left or right to move the cube across the track. Release when it is where you want it. Arrow keys were also pressed during testing, but the drag was the input that clearly moved the cube.",
-      "mobile": "Testing was done with a mouse only. The game is built around one held drag, which suggests a finger drag on a touch screen, but touch play was not tested.",
       "tips": [
         "Click Ok, Play Now! on the first notice and wait for the game to load before you try to start.",
         "Use short drags. A long drag to the edge of the track was followed by the run ending.",
@@ -57,7 +56,7 @@
           "heading": "Reading the screen during a run",
           "paragraphs": [
             "The bar at the top of the screen fills from left to right as you move down the track, with a small marker at each end. The coin count stays in the top right corner.",
-            "Your stack shows its numbers on the front of each cube, so you can see at a glance which values you have picked up. Cubes waiting on the track show their numbers too, and the bigger ones tend to sit toward the sides further down."
+            "Your stack shows its numbers on the front of each cube, so you can see at a glance which values you have picked up. Cubes waiting on the track show their numbers too."
           ]
         }
       ]
