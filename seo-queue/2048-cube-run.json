@@ -17,7 +17,7 @@
           "heading": "What happens at the finish line",
           "paragraphs": [
             "After the checkered line, the track becomes a ramp of colored strips. The first was a wide dark blue X2 strip, then a green X4 strip, with more strips with higher values beyond it. As the cube climbs them, the stack shrinks until only a single cube is left.",
-            "Then the Level Cleared screen appears. On Level 1 it showed REWARD +100 coins and a curved bar of multipliers reading x2, x3, x4, x3 and x2 with a moving arrow above a WATCH ADS & GET button, plus a NEXT LEVEL button that moves you on without an ad."
+            "Then the Level Cleared screen appears. On Level 1 it showed REWARD +100 coins and a curved bar of multipliers reading x2, x3, x4, x3 and x2 with a moving arrow above a WATCH ADS & GET button, which offers extra coins (+200 and +300 were shown). NEXT LEVEL sits on the same screen as WATCH ADS & GET (we didn't press it)."
           ]
         },
         {
@@ -36,11 +36,11 @@
         "Click Ok, Play Now! on the first notice and wait for the game to load before you try to start.",
         "Use short drags. A long drag to the edge of the track was followed by the run ending.",
         "A gear icon sits in the top left corner of the Level 1 start screen.",
-        "Use NEXT LEVEL on the results screen to keep playing without watching an ad."
+        "NEXT LEVEL sits on the same screen as WATCH ADS & GET (we didn't press it)."
       ]
     },
     "beginner-guide": {
-      "intro": "New to 2048 Cube Run? Here is what each screen shows and how a first run on Level 1 goes from the start button to the reward screen.",
+      "intro": "New to 2048 Cube Run? Here is what each screen shows and how a first run on Level 1 goes from the start button to the Level Cleared screen.",
       "what_it_is": "2048 Cube Run is a free browser runner with a numbers theme. You control a blue cube marked 2 on a long white track over a light blue sky. Colored cubes with numbers such as 2, 4, 8, 16, 64 and 128 sit on the track, and the ones you run into stack up on your cube. At the end, a checkered finish line leads onto strips marked X2, X4 and more, and the level ends on a Level Cleared screen.",
       "first_steps": [
         "Click Ok, Play Now! on the notice and let the game load to the Level 1 screen.",
@@ -48,7 +48,7 @@
         "Click CLICK TO START! to set the cube moving.",
         "Hold the mouse button and make small drags left and right to line up with cubes ahead.",
         "Keep an eye on the progress bar at the top as you near the finish line.",
-        "On the Level Cleared screen, press NEXT LEVEL to go on."
+        "Look over the Level Cleared screen. NEXT LEVEL sits on the same screen as WATCH ADS & GET (we didn't press it)."
       ],
       "who_its_for": "Players who want a short, low-effort runner with one simple input. Each run on Level 1 lasted well under a minute.",
       "extra_sections": [
@@ -88,7 +88,7 @@
         },
         {
           "question": "Do you have to watch an ad to keep playing?",
-          "answer": "No. NEXT LEVEL is on the same screen as WATCH ADS & GET, and it moves you to the next level."
+          "answer": "WATCH ADS & GET is optional and offers extra coins (+200 and +300 were shown). NEXT LEVEL sits on the same screen as WATCH ADS & GET (we didn't press it)."
         },
         {
           "question": "What is the Cube Value card?",

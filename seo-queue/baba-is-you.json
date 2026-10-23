@@ -3,15 +3,15 @@
   "played": true,
   "pages": {
     "tips": {
-      "intro": "Baba Is You on Pixelsprout is a fan-made remake, not the original game. Its first board is a short corridor with a column of three rocks between you and the flag, and four rules written in word blocks around it. These tips come from playing that board.",
+      "intro": "Baba Is You on Pixelsprout is a fan-made Scratch remake, not the original game. Its first board is a short corridor with a column of three rocks between you and the flag, and four rules written in word blocks around it. These tips come from playing that board.",
       "tips": [
         "Read the four rules before your first move. The top row says BABA IS YOU and FLAG IS WIN. The bottom row says WALL IS STOP and ROCK IS PUSH. Together they say you are Baba, the flag wins, the walls block you and rocks can be shoved.",
         "The three rocks stand in a column across the whole corridor, so there is no way around them. Walk Baba straight into the middle rock to push it toward the flag.",
         "Pushing the middle rock moves only that rock. The rocks above and below it stay put, which opens a gap in the column for Baba to step into.",
         "Press each arrow key once and wait for Baba to finish the step. Quick presses did not always register in testing, and single taps were easier to follow.",
-        "If a push leaves a rock where you do not want it, the UNDO button in the lower right and the RESTART button in the lower left are always on screen."
+        "Know where the two buttons are before you start: UNDO sits in the lower right and RESTART in the lower left, and both stay on screen."
       ],
-      "conclusion": "Read the rules, push the middle rock, step through the gap and head for the flag. Take each move one key press at a time.",
+      "conclusion": "Read the rules, push the middle rock and step into the gap; we didn't reach the flag in testing. Take each move one key press at a time.",
       "extra_sections": [
         {
           "heading": "Reading the word blocks",
@@ -24,15 +24,15 @@
           "heading": "Getting past the column of rocks",
           "paragraphs": [
             "Move Baba right along the middle row until it touches the middle rock. The next press to the right shoves that rock one square toward the flag, and Baba moves into the space it left.",
-            "In testing, the top and bottom rocks stayed in place while the middle one moved, so the column split into a gap. Keep going along the middle row toward the flag from there."
+            "In testing, the top and bottom rocks stayed in place while the middle one moved, so the column split into a gap."
           ]
         }
       ],
       "about_name": "Baba Is You (fan-made Scratch remake)"
     },
     "controls": {
-      "intro": "Baba Is You is played on the keyboard, one square per key press, with two on-screen buttons for mistakes. This Pixelsprout version is a fan-made Scratch remake, not the original game.",
-      "desktop": "Click the game once so it takes key presses, then use the arrow keys to move Baba up, down, left or right by one square. Walking into a rock pushes it if the square behind it is free. Mouse clicks are only for focusing the game and for the RESTART and UNDO buttons.",
+      "intro": "Baba Is You is played on the keyboard, one square per key press, with UNDO and RESTART buttons on screen. This Pixelsprout version is a fan-made Scratch remake, not the original game.",
+      "desktop": "Click the game once so it takes key presses, then use the arrow keys to move Baba up, down, left or right by one square. Walking into a rock pushes it if the square behind it is free. The mouse was used only to click the game so it takes key presses. RESTART and UNDO buttons are on screen.",
       "tips": [
         "If nothing moves, click inside the game area and try the arrow keys again.",
         "Tap each key once and let the step finish before the next one.",
@@ -43,21 +43,21 @@
     },
     "beginner-guide": {
       "intro": "New to Baba Is You? Here is what the first board shows and how to read it before you make a single move.",
-      "what_it_is": "Baba Is You is a puzzle game where the rules of each board are written on the board itself as word blocks. This Pixelsprout version is a fan-made remake, not the original game. On the first board, a small white creature called Baba stands at the left of a short corridor walled with gray bricks. A column of three brown rocks blocks the way, and a yellow flag stands at the right. The rules BABA IS YOU, FLAG IS WIN, WALL IS STOP and ROCK IS PUSH sit above and below the corridor.",
+      "what_it_is": "Baba Is You is a puzzle game where the rules of each board are written on the board itself as word blocks. This Pixelsprout version is a fan-made Scratch remake, not the original game. On the first board, a small white creature called Baba stands at the left of a short corridor walled with gray bricks. A column of three brown rocks blocks the way, and a yellow flag stands at the right. The rules BABA IS YOU, FLAG IS WIN, WALL IS STOP and ROCK IS PUSH sit above and below the corridor.",
       "first_steps": [
         "Click Ok, Play Now! and wait for the board to load.",
         "Read the rules in the four corners: BABA IS YOU, FLAG IS WIN, WALL IS STOP and ROCK IS PUSH.",
         "Click the game once so it listens to the keyboard.",
         "Press the Right arrow to walk Baba along the middle row to the rocks.",
-        "Push the middle rock to open a gap, then keep heading for the flag.",
-        "Use UNDO or RESTART if a push goes wrong."
+        "Push the middle rock once to open a gap in the column.",
+        "Note the UNDO button in the lower right and RESTART in the lower left."
       ],
       "who_its_for": "Players who like slow, thinking puzzles with no timer and no reflexes involved, and anyone curious about a game where the rules are pieces on the board.",
       "extra_sections": [
         {
           "heading": "What each rule means on this board",
           "paragraphs": [
-            "BABA IS YOU means the white creature is the one your keys move. FLAG IS WIN means reaching the flag ends the board. WALL IS STOP means the brick strips at the top and bottom cannot be crossed.",
+            "BABA IS YOU means the white creature is the one your keys move. FLAG IS WIN means reaching the flag ends the board (the flag wasn't reached in testing). WALL IS STOP means the brick strips at the top and bottom cannot be crossed.",
             "ROCK IS PUSH means the rocks are not walls. Walking into one shoves it one square, which is the whole idea of this first board."
           ]
         }
@@ -72,7 +72,7 @@
       "faqs": [
         {
           "question": "Is this the original Baba Is You?",
-          "answer": "No. The Pixelsprout version is a fan-made remake, not the original game."
+          "answer": "No. The Pixelsprout version is a fan-made Scratch remake, not the original game."
         },
         {
           "question": "How do you move in Baba Is You?",
@@ -88,7 +88,7 @@
         },
         {
           "question": "Is there an undo button?",
-          "answer": "Yes. UNDO is shown in the lower right of the screen and RESTART in the lower left, and both stay visible the whole time."
+          "answer": "An UNDO button is shown in the lower right of the screen and RESTART in the lower left, and both stay visible the whole time."
         },
         {
           "question": "Why do the arrow keys do nothing?",
