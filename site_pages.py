@@ -82,21 +82,25 @@ def _curated_similar():
         return {}
 
 
+def _similar_module():
+    """content-engine/similar_games.py, loaded once."""
+    global _SIM_MOD
+    if _SIM_MOD is None:
+        import importlib.util
+        path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "content-engine", "similar_games.py")
+        spec = importlib.util.spec_from_file_location("_ps_similar_games", path)
+        _SIM_MOD = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(_SIM_MOD)
+    return _SIM_MOD
+
+
+_SIM_MOD = None
+
+
 def similar_games(slug, category, catalog, count=18):
-    curated = _curated_similar().get(slug)
-    if curated:
-        by_slug = {g["slug"]: g for g in catalog}
-        return [by_slug[s] for s in curated if s in by_slug][:count]
-    primary = S.primary_category(category)
-    same = [g for g in _catalog_groups(catalog).get(primary, []) if g["slug"] != slug]
-    same.sort(key=lambda g: (not g.get("thumbnail"), S.stable_hash(slug + g["slug"])))
-    picks = same[:count]
-    if len(picks) < count:
-        taken = {g["slug"] for g in picks} | {slug}
-        rest = [g for g in catalog if g["slug"] not in taken and g.get("thumbnail")]
-        rest.sort(key=lambda g: S.stable_hash(slug + "~" + g["slug"]))
-        picks += rest[: count - len(picks)]
-    return picks
+    """Category + mechanic picks; see similar_games.pick_similar."""
+    return _similar_module().pick_similar(slug, category, catalog, count,
+                                          primary_category=S.primary_category, stable_hash=S.stable_hash)
 
 
 # ---------------------------------------------------------------------------
