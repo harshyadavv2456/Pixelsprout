@@ -63,36 +63,6 @@ def _excluded_slugs():
 EXCLUDED_SLUGS = _excluded_slugs()
 
 
-def find_similar(target, games, limit=10, exclude_slugs=None):
-    """
-    Returns up to `limit` games most similar to `target`, best match
-    first. `games` must already have gone through build_index().
-    """
-    exclude_slugs = exclude_slugs or set()
-    exclude_slugs = exclude_slugs | {target["slug"]} | EXCLUDED_SLUGS
-
-    curated = CURATED_SIMILAR.get(target["slug"])
-    if curated:
-        by_slug = {g["slug"]: g for g in games}
-        picks = [by_slug[s] for s in curated if s in by_slug and s not in exclude_slugs]
-        return picks[:limit]
-
-    scored = []
-    for g in games:
-        if g["slug"] in exclude_slugs:
-            continue
-        score = 0
-        if g["category"] == target["category"]:
-            score += 10
-        shared = target.get("_tokens", set()) & g.get("_tokens", set())
-        score += len(shared) * 3
-        if score > 0:
-            scored.append((score, g))
-
-    scored.sort(key=lambda x: -x[0])
-    return [g for _, g in scored[:limit]]
-
-
 # ---------------------------------------------------------------------------
 # Mechanic-aware picks (the "Games like this" rail/shelf on game pages)
 # ---------------------------------------------------------------------------
@@ -214,6 +184,64 @@ def pick_similar(slug, category, catalog, count=18, primary_category=None, stabl
         rest.sort(key=lambda g: stable_hash(slug + "~" + g["slug"]))
         picks += rest[: count - len(picks)]
     return picks
+
+
+def _primary_category():
+    """site_shell.primary_category (category aliases), or identity if unavailable."""
+    try:
+        import sys
+        root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        if root not in sys.path:
+            sys.path.insert(0, root)
+        import site_shell
+        return site_shell.primary_category
+    except ImportError:
+        return lambda c: c
+
+
+def find_similar(target, games, limit=10, exclude_slugs=None):
+    """
+    Returns up to `limit` games most similar to `target`, best match first
+    (guide cross-links). `games` must already have gone through build_index().
+    Same rules as the game pages (pick_similar): hand-picked override first,
+    then same category + same mechanic (then same mechanic elsewhere). Only
+    when fewer than MIN_MECHANIC_MATCHES match does it fill with the original
+    category + shared-title-word scoring. Deny-listed games never count as
+    mechanic matches; excluded, noindexed and broken games are never picked.
+    """
+    exclude = set(exclude_slugs or ()) | {target["slug"]}
+    usable = [g for g in games if _usable(g, exclude)]
+    by_slug = {g["slug"]: g for g in usable}
+
+    curated = CURATED_SIMILAR.get(target["slug"])
+    if curated:
+        return [by_slug[s] for s in curated if s in by_slug][:limit]
+
+    primary = _primary_category()
+    picks = []
+    mech = mechanic_of(target)
+    if mech:
+        pc = primary(target.get("category", ""))
+        same = [g for g in usable if primary(g.get("category", "")) == pc and mechanic_of(g) == mech]
+        other = [g for g in usable if primary(g.get("category", "")) != pc and mechanic_of(g) == mech]
+        picks = (same + other)[:limit]
+    if len(picks) >= MIN_MECHANIC_MATCHES:
+        return picks
+
+    taken = {g["slug"] for g in picks}
+    scored = []
+    for g in usable:
+        if g["slug"] in taken:
+            continue
+        score = 0
+        if g["category"] == target["category"]:
+            score += 10
+        shared = target.get("_tokens", set()) & g.get("_tokens", set())
+        score += len(shared) * 3
+        if score > 0:
+            scored.append((score, g))
+    scored.sort(key=lambda x: -x[0])
+    return picks + [g for _, g in scored[: limit - len(picks)]]
 
 
 def find_by_keywords(games, category_keywords=None, title_keywords=None, limit=20):
