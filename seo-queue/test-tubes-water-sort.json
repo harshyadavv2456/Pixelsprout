@@ -1,89 +1,104 @@
 {
- "slug": "test-tubes-water-sort",
- "played": true,
- "pages": {
-  "tips": {
-   "intro": "These tips come from my own session with Test Tubes. Water Sort. I cleared Level 1 with three stars and got Level 2 to three quarters sorted before a button press reset it. Everything below is what I saw on screen, including the one mistake that cost me a level.",
-   "tips": [
-    "Click a tube to lift it, then click the tube you want to pour into. Wait for each click to register before the next one, because clicks I made too quickly were ignored.",
-    "You can only pour onto a matching top color or into an empty tube. When I tried pink onto a blue top, nothing moved and the selection simply cleared.",
-    "Use empty tubes as holding spots. On Level 2 I poured the loose pinks into one empty tube and the loose blues into the other, which exposed the greens underneath.",
-    "Build each color on a tube that already has that color at the bottom. On Level 2 the greens joined up neatly in the tube that started with two greens at its base.",
-    "Be careful with the curved arrow button at the bottom. I expected it to undo one move, but it reset the whole level to its starting layout and wiped my progress.",
-    "The light bulb is a hint. It made a correct move for me automatically and its badge dropped from 5 to 4. The count did not come back after a restart, so save hints for when you are truly stuck.",
-    "Every tube holds 4 layers. A tube is done when it holds 4 of one color, at which point a cork pops on and a green checkmark appears, so you can stop thinking about it."
-   ],
-   "conclusion": "Take it slow, keep at least one tube free as a buffer, and treat the curved arrow as a restart rather than an undo. There is no timer, so careful thinking beats fast clicking.",
-   "extra_sections": [
-    {
-     "heading": "How I worked through Level 2",
-     "paragraphs": [
-      "Level 2 has five tubes, three filled and two empty, with pink, blue, and green mixed together. Reading top to bottom, the first tube started pink, blue, green, pink; the second pink, blue, green, green; and the third blue, green, pink, blue.",
-      "My approach was to move the top layers out of the way first. Pinks went into one empty tube and blues into the other, which uncovered the greens. Those greens then joined the second tube, which already had greens at the bottom. I reached three of four layers on all three colors before I pressed the curved arrow and the level reset."
-     ]
+  "slug": "test-tubes-water-sort",
+  "played": true,
+  "pages": {
+    "tips": {
+      "intro": "Test Tubes. Water Sort is a color sorting puzzle where you pour layers of liquid between tubes until each tube holds one color. These tips come from clearing Levels 1 and 2 and looking at Level 3, including what the reset and hint buttons really do.",
+      "tips": [
+        "Only the top layer of a tube can move, and it can only land on the same color or in an empty tube. Trying to pour pink onto a blue top did nothing at all.",
+        "Use the empty tubes as parking spots. On Level 2, the pinks went into one empty tube and the blues into the other, which uncovered the greens underneath.",
+        "Build each color on a tube that already has that color at the bottom. On Level 2 the second tube had two greens at its base, so every loose green went there.",
+        "Do not use the curved arrow as an undo. On Level 2 it put the whole level back to its starting layout after two pours.",
+        "The light bulb makes one correct pour for you. Its badge dropped from 5 to 4 after one use and stayed at 4 on the next level, so save it.",
+        "A tube is finished when it holds 4 layers of one color. A cork drops onto it and a green check mark appears, so you can stop watching it.",
+        "Click one tube, wait for the pour animation to end, then make the next move. Slow, separate clicks worked every time in testing."
+      ],
+      "conclusion": "Clear the top layers into empty tubes, stack each color on the tube that already has it at the bottom, and keep the light bulb for real dead ends. There is no clock, so take your time.",
+      "extra_sections": [
+        {
+          "heading": "A full solve of Level 2",
+          "paragraphs": [
+            "Level 2 has three full tubes on top and two empty tubes below. Reading top to bottom, the first tube is pink, blue, green, pink, the second is pink, blue, green, green, and the third is blue, green, pink, blue.",
+            "Pour both top pinks into the first empty tube and the three blues that come to the top into the second empty tube. Then move the greens onto the second tube, which already has two greens at its base. The pinks and the last blue then go to their own tubes, and all three colors get a cork."
+          ]
+        }
+      ]
     },
-    {
-     "heading": "What the bottom buttons did for me",
-     "paragraphs": [
-      "There are four buttons along the bottom of each level. The curved arrow reset the full level. The light bulb gave one automatic correct move and started with a badge of 5. A tube with a plus sign also showed a badge of 5, but I did not press it. A double arrow with a small video icon looks like a skip that may play an ad, which I did not try.",
-      "The buttons dim while a pour animation plays, so wait for the liquid to finish moving before pressing anything else."
-     ]
-    }
-   ]
-  },
-  "controls": {
-   "intro": "Test Tubes. Water Sort uses only pointer input. Every move is two clicks: pick a tube, then pick where it pours.",
-   "desktop": "Left click a tube to select it; it lifts slightly. Left click a second tube and the first one tilts over it and pours its top layer. If the pour is not allowed, the selection clears and nothing moves. Clicks must be made one at a time; quick double clicks were ignored in my session. I used no keyboard keys.",
-   "mobile": "I played on desktop with a mouse and did not test the game on a phone, so I cannot confirm how touch feels. The only input the game asked for was selecting one tube and then another, with no dragging or keys.",
-   "tips": [
-    "Each level shows LV and the level number at the top center, a back arrow at top left, and a gear at top right.",
-    "The curved arrow at the bottom reset the whole level for me, not just the last move.",
-    "The light bulb hint button started with 5 uses and performed one correct pour per press.",
-    "The bottom buttons dim during a pour, so wait for the animation before your next click."
-   ]
-  },
-  "beginner-guide": {
-   "intro": "New to Test Tubes. Water Sort? This guide walks through how the game starts, how the first two levels play, and what each button did when I tried it.",
-   "what_it_is": "Test Tubes. Water Sort is a calm color sorting puzzle that runs free in the browser. Clear test tubes hold stacked layers of colored liquid, and each tube fits 4 layers. You pour from tube to tube until every tube holds a single color. A finished tube gets a cork and a green checkmark, and when all colors are sorted a Victory ribbon appears with three gold stars and the words Level complete. I saw no timer and no move counter during play.",
-   "first_steps": [
-    "When the game loads, press OK, PLAY NOW on the loader, then press the big green Play button on the title screen.",
-    "The Select level screen shows levels 1 to 20 in a grid. Only Level 1 is open at first; the rest show padlocks.",
-    "Level 1 has four tubes and two colors, purple and green, with no empty tube. I solved it in two pours by moving each single layer onto its matching color.",
-    "Level 2 adds a third color and two empty tubes. Use the empty tubes to park top layers so the colors underneath are uncovered.",
-    "Avoid the curved arrow unless you want to start over, since it reset my whole level.",
-    "After a win, the right arrow on the Victory screen takes you to the next level."
-   ],
-   "who_its_for": "It suits players who like slow, thoughtful puzzles with no clock, and anyone who wants a quiet game they can pick up for a few minutes at a time.",
-   "extra_sections": [
-    {
-     "heading": "Reading a tube from top to bottom",
-     "paragraphs": [
-      "Only the top layer of a tube can move, so always look at the top color first. In Level 2 the first tube had pink on top and pink at the bottom, with blue and green in between. That means two separate pinks have to come out of it at different times.",
-      "Pours I saw moved one layer at a time. A tube only counts as finished when all 4 layers match, which is when the cork appears."
-     ]
+    "controls": {
+      "intro": "Test Tubes. Water Sort uses only mouse clicks. Every move is two clicks: one on the tube you pour from and one on the tube you pour into.",
+      "desktop": "Click a tube with the left mouse button, then click the tube you want to pour into. The top layer pours across if the move is allowed. If it is not, nothing moves. The buttons along the bottom and the arrows on the menus are clicked the same way. No keyboard keys were used.",
+      "tips": [
+        "The curved arrow at the bottom left restarts the whole level.",
+        "The light bulb makes one correct pour for you and started with 5 uses.",
+        "Next to it is a tube with a plus sign, also showing 5. It was not pressed during testing.",
+        "The double arrow button has a small video icon on it. It was not pressed during testing.",
+        "The gear in the top right opens music and sound buttons with an X to close, and the arrow in the top left goes back."
+      ]
     },
-    {
-     "heading": "Stars and level select",
-     "paragraphs": [
-      "Each level tile on the Select level screen has three small stars under it, and a star counter sits at the top of that screen. I earned three stars on Level 1. I did not see what earns fewer stars, so I cannot say what the rule is.",
-      "There is also a right arrow on the side of the level select screen, which likely leads to the next set of levels, though I did not test it."
-     ]
+    "beginner-guide": {
+      "intro": "New to Test Tubes. Water Sort? This walks through the menus, the first two levels and what each button did when it was tried.",
+      "what_it_is": "Test Tubes. Water Sort is a free browser puzzle about sorting colored liquid. Each tube holds up to 4 layers. You pour the top layer of one tube into another tube that is empty or has the same color on top, and the goal is to finish with every color alone in its own tube. A sorted tube gets a cork and a green check mark, and a Victory ribbon with up to three stars ends the level. No timer or move counter was seen.",
+      "first_steps": [
+        "Click OK, PLAY NOW! on the loading screen, then the large green play button on the title screen.",
+        "On the Select level (1-20) screen, pick level 1. The other levels show padlocks at first.",
+        "Level 1 has four tubes with purple and green. Pour the single purple onto the purple tube and the single green onto the green tube.",
+        "On the Victory screen, click the right arrow to move to the next level.",
+        "On Level 2, use the two empty tubes to hold top layers while you dig out the colors underneath."
+      ],
+      "who_its_for": "Players who want a slow, quiet puzzle they can stop and start. Early levels are short, and later ones add more colors and tubes.",
+      "extra_sections": [
+        {
+          "heading": "How the levels grow",
+          "paragraphs": [
+            "Level 1 has four tubes, two colors and no empty tube. Level 2 has three full tubes, three colors and two empty tubes. Level 3 jumps to seven tubes: five full ones in pink, blue, purple, green and red, plus two empty ones."
+          ]
+        },
+        {
+          "heading": "Stars on the Victory screen",
+          "paragraphs": [
+            "Level 1, solved in two pours, gave three gold stars. Level 2, on a run that used the restart button once and the light bulb once, gave two of three stars. The Victory screen has a list button, a replay button and a right arrow for the next level."
+          ]
+        }
+      ]
+    },
+    "similar": {
+      "intro": "Test Tubes. Water Sort is about untangling mixed colors with very little free space. You can only move the top layer, it has to land on a matching color or in an empty tube, and an empty tube is the most valuable thing on the board. Fans of that kind of slow, careful sorting will feel at home with other water sort and color sort puzzles on Pixelsprout, such as Sort Color Water Puzzle, Mermaid Water Sort and Water Sort - Color Puzzle Game. Look for games with no timer and levels that add colors bit by bit."
+    },
+    "faq": {
+      "faqs": [
+        {
+          "question": "How do you pour in Test Tubes. Water Sort?",
+          "answer": "Click the tube you want to pour from, then click the tube you want to pour into. The top layer moves across if the target is empty or has the same color on top."
+        },
+        {
+          "question": "Why will a tube not pour?",
+          "answer": "The colors do not match. Pouring a pink top onto a blue top did nothing. Only an empty tube or a matching top color will take the layer."
+        },
+        {
+          "question": "Is the curved arrow an undo button?",
+          "answer": "No. On Level 2 it restarted the whole level, putting every tube back to its starting colors after two pours had been made."
+        },
+        {
+          "question": "What does the light bulb do?",
+          "answer": "It makes one correct pour for you. On Level 2 it moved a green onto the tube that already held two greens, and its badge went from 5 to 4."
+        },
+        {
+          "question": "How many layers does a tube hold?",
+          "answer": "Four. When a tube has four layers of one color, a cork drops on top and a green check mark appears."
+        },
+        {
+          "question": "How many stars can you get on a level?",
+          "answer": "Up to three. Level 1 gave three stars. Level 2 gave two on a run that used the restart button and one hint."
+        },
+        {
+          "question": "Are all levels open from the start?",
+          "answer": "No. The Select level (1-20) screen showed level 1 open and the rest locked with padlocks. Clearing a level opens the next one."
+        },
+        {
+          "question": "Is there a timer?",
+          "answer": "No timer or move counter was seen on any of the first three levels, so you can think each pour through."
+        }
+      ]
     }
-   ]
-  },
-  "similar": {
-   "intro": "If you enjoy Test Tubes. Water Sort, you probably like puzzles where you look before you move. The fun comes from reading stacked colors, working out which layer has to come out first, and using an empty space as a temporary parking spot. There is no timer pushing you, so the satisfaction comes from a clean plan. Games that ask you to sort, stack, or connect pieces with a few careful moves give that same quiet, step by step feeling of bringing order to a messy board."
-  },
-  "faq": {
-   "faqs": [
-    {"question": "How do you pour in Test Tubes. Water Sort?", "answer": "Click the tube you want to pour from so it lifts, then click the tube you want to pour into. The first tube tilts and pours its top layer if the move is allowed."},
-    {"question": "Can you pour one color onto a different color?", "answer": "No. In my session, pouring pink onto a blue top did nothing and just cleared the selection. You can pour onto the same top color or into an empty tube."},
-    {"question": "How many layers does each tube hold?", "answer": "Each tube holds 4 layers. A tube is complete when it has 4 layers of one color, and then a cork pops on with a green checkmark."},
-    {"question": "Does the curved arrow button undo one move?", "answer": "When I pressed it, it reset the entire level to the starting layout instead of undoing just my last move, so I lost all my progress on Level 2."},
-    {"question": "How do hints work?", "answer": "The light bulb button starts with a badge of 5. Each press made one correct pour for me and lowered the count by one. The count stayed lowered after I restarted the level."},
-    {"question": "Is there a timer or move limit?", "answer": "I did not see a timer or a move counter on either of the levels I played, so you can take as long as you need to plan."},
-    {"question": "Do I need to download anything or sign in?", "answer": "No. It loaded in the browser after pressing OK, PLAY NOW on the loading screen, with no sign in and no download."}
-   ]
   }
- }
 }

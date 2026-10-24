@@ -3,73 +3,108 @@
   "played": true,
   "pages": {
     "tips": {
-      "intro": "Dot Link Puzzle is a calm, turn-based grid puzzle where you draw a line between each pair of matching colored dots and fill the whole board. These tips come from playing the first Basic levels and a Blockers level, and they focus on planning rather than speed.",
+      "intro": "Dot Link Puzzle - Connect the Dots asks you to join each pair of same-colored squares with a line and cover every cell of the grid. These tips come from playing the first Beginner boards, a second 5 by 5 board with a hint, and a look at the first Blockers board.",
       "tips": [
-        "Start with the dots that sit close to an edge or corner. Their paths have the fewest options, so drawing them first keeps the middle of the board open for the harder pairs.",
-        "Run lines along the outer edge of the grid when you can. An edge route uses cells that no other color wants, and it leaves a clean block of space in the center.",
-        "Before you drag, trace the whole route in your head. A path that looks fine for three squares can seal off another color's dot a few squares later.",
-        "Every cell has to be covered, so watch for lonely empty cells. If one empty square is cut off from every line, the board cannot reach 100% fill and you need to rethink an earlier path.",
-        "Leave narrow corridors for pairs that still have to cross the board. If a corridor is only one cell wide, save it for the color that really needs it.",
-        "Use UNDO instead of RESET when only the last line is wrong. Undo steps back one move, while reset wipes the board and costs you the progress you already planned.",
-        "The HINT button showed a red badge with the number 5 when I first opened a level, so hints are limited. Try the board yourself first and keep hints for the bigger grids."
+        "Draw the short, obvious lines first. On Level 1 the green pair sat two cells apart in the left column and the red pair filled the whole bottom row, so those lines were fixed before any thinking was needed.",
+        "Use the long, bendy line to soak up the empty cells. On Level 1 the yellow line ran left along the top row, down the second column and back right to its partner, which used up the cells nothing else could reach.",
+        "Watch the Fill counter, not just the Lines counter. A board is only solved when every cell is covered, so a level can have all pairs joined and still not be done if Fill is below 100%.",
+        "Do not drag through another color's line unless you mean to. When a line was pulled across the cyan and red lines, both of them were cut short and had to be drawn again.",
+        "Press UNDO right after a bad drag. In testing it put the cut lines back the way they were, which is much faster than redrawing several colors.",
+        "Save the HINT button for boards that stump you. It starts with 5 uses, one press drew a complete line for one color, and the count stayed at 4 when moving to a different bundle.",
+        "Count the cells before you commit to a route. On a 5 by 5 board there are 25 cells, and every one has to belong to some color by the end."
       ],
-      "conclusion": "There is no timer in this game, so slow down and plan each color before you drag. Most of my wins came from picking the order of the lines, not from clever drawing."
+      "conclusion": "Lock in the forced lines, route the longest line through the leftover space, and use UNDO the moment a drag goes wrong. The Fill counter tells you when the board is really finished.",
+      "extra_sections": [
+        {
+          "heading": "How Level 1 was solved",
+          "paragraphs": [
+            "Level 1 in the Beginner bundle is a 5 by 5 board with green, yellow, orange, cyan and red pairs. Green joins straight down the left column, cyan runs across the fourth row, and red runs along the whole bottom row.",
+            "That leaves orange and yellow. Orange goes right from its square near the center, then down the right edge to its partner. Yellow starts in the top right corner, runs left along the top row, drops down the second column and turns right to reach its partner. With those five lines Fill reads 100% and the LEVEL COMPLETE popup appears."
+          ]
+        },
+        {
+          "heading": "What the hint does",
+          "paragraphs": [
+            "On Level 2 the HINT button drew the full yellow line between its two squares and marked both ends with a blue star. The Moves counter went up by one and the red badge on the button dropped from 5 to 4."
+          ]
+        }
+      ]
     },
     "controls": {
-      "intro": "Dot Link Puzzle is played almost entirely with the mouse. There is no keyboard control to learn, and the buttons around the board handle everything else.",
-      "desktop": "Press and hold the left mouse button on one colored dot, then drag through the neighboring squares to the dot of the same color and let go. Lines move one square at a time through adjacent cells. I did not see any keyboard controls or a written tutorial in the game.",
-      "mobile": "I played with a mouse and did not see a separate touch control scheme on screen. The drag-from-dot-to-dot action is the same idea on a touch screen, but I did not test it on a phone, so check how it feels on your own device.",
+      "intro": "Dot Link Puzzle is played with the mouse. You draw lines by dragging, and a row of buttons under the board handles undo, reset, hints and moving between levels.",
+      "desktop": "Press the left mouse button on a colored square, drag through the neighboring cells to the square of the same color, and release. Lines move from cell to cell in straight steps, up, down, left or right. The buttons under the board are clicked the same way. No keyboard keys were needed to play.",
       "tips": [
-        "Under the board you will find UNDO, RESET and HINT buttons, plus LAST LEVEL and NEXT LEVEL to move between levels.",
-        "The gear icon at the top opens a SETTINGS window with MUSIC and SOUNDS switches, both on by default, and a CLOSE button.",
-        "Below the game there are Fullscreen, favorite and share controls if you want a bigger board.",
-        "When a level ends, a LEVEL COMPLETE popup shows your move count and a NEXT LEVEL button, so you do not need to hunt for the next board."
+        "UNDO takes back the last line you drew, including any lines it cut short. RESET sits next to it.",
+        "The Moves, Lines and Fill counters above the board update after every line you draw.",
+        "HINT has a red badge showing how many uses are left. It started at 5.",
+        "LAST LEVEL and NEXT LEVEL sit under the other buttons, and the back arrow at the top returns to the level list.",
+        "The gear at the top opens SETTINGS with MUSIC and SOUNDS switches and a CLOSE button."
       ]
     },
     "beginner-guide": {
-      "intro": "New to Dot Link Puzzle? This guide covers what the game is, how a level works, and the first few things to do so your opening boards go smoothly.",
-      "what_it_is": "Dot Link Puzzle, also listed as Connect the Dots, is a connection puzzle on a square grid. Each board shows pairs of colored dots, and your job is to join every pair with a line of its own color without crossing another line. The page describes it as connecting matching dots without crossing paths. In the levels I played, every square also had to be covered, and the board showed Moves, Lines and Fill counters that reached Fill 100% when a level was solved.",
+      "intro": "New to Dot Link Puzzle? Here is how to get from the loading screen to your first solved board, and what each screen and counter means.",
+      "what_it_is": "Dot Link Puzzle - Connect the Dots is a free browser puzzle about joining colored pairs. Each board is a square grid with two squares of each color. You drag a line from one square to its partner, lines cannot share a cell, and the board is solved when every pair is joined and every cell is covered. Above the board, Moves, Lines and Fill counters track your progress. Solving a board earns a star, and the star total sits in the top right corner.",
       "first_steps": [
-        "Wait for the loader to reach the Ok, Play Now button, click it, and the level menu opens.",
-        "Pick the Basic mode and the Beginner bundle, which uses 5 by 5 boards, and open level 1.",
-        "Drag from one colored dot to its matching dot, moving through neighboring squares only.",
-        "Check the Fill counter after each line. When all lines are drawn and Fill reads 100%, the LEVEL COMPLETE popup appears.",
-        "Tap NEXT LEVEL, and once the 5 by 5 boards feel easy, try the Easy Peasy bundle with 6 by 6 boards."
+        "Click OK, PLAY NOW! on the loading screen, then click PLAY! on the title screen.",
+        "On the BUNDLES screen, start with BASIC and the BEGINNER bundle, which uses 5 by 5 boards.",
+        "Pick level 1 from the numbered grid.",
+        "Drag the short, forced lines first, then fit the longer lines into the space that is left.",
+        "Check that Fill reads 100%. The LEVEL COMPLETE popup then shows your move count and a NEXT LEVEL button.",
+        "Once 5 by 5 boards feel easy, move up to EASY PEASY with 6 by 6 boards."
       ],
-      "who_its_for": "It suits anyone who likes quiet logic puzzles and does not want a timer or lives. It is easy to pick up for a few minutes, and the larger grids give more experienced puzzle fans something to chew on."
+      "who_its_for": "Players who like calm logic puzzles with no clock. No timer or lives were seen while playing, so each board can be thought through at your own pace.",
+      "extra_sections": [
+        {
+          "heading": "The bundles you can choose from",
+          "paragraphs": [
+            "The BASIC page lists BEGINNER (5 by 5), EASY PEASY (6 by 6), NOT SO BAD (7 by 7), CHALLENGING (8 by 8) and PRETTY HARD (9 by 9). Each one has a star bar, reading 0 / 50 for BEGINNER and 0 / 150 for the other four on a fresh start.",
+            "An arrow at the top switches to SPECIALTY. That page lists BLOCKERS - STARTER (6 by 6), BLOCKERS - BONUS (7 by 7 to 9 by 9), BLOCKERS - PREMIUM (10 by 10 to 13 by 13) and SHAPES - STARTER with small grids. The first Blockers board has a dark gray square that no line can use."
+          ]
+        },
+        {
+          "heading": "Reading the level complete popup",
+          "paragraphs": [
+            "After Level 1 the popup read You completed the level in 5 moves!, showed one large star with You earned +1 under it, and had a bar reading 1 / 25 with a gift box icon at the end. Under that are a replay button and NEXT LEVEL, plus an X in the corner."
+          ]
+        }
+      ]
     },
     "similar": {
-      "intro": "If you enjoy drawing paths between matching dots, you probably like puzzles where careful planning beats quick reflexes. Other pipe, flow and path puzzles use the same ideas of routing around obstacles and filling every space, and they reward the same patient style of play. Look for games with no timer, short levels and boards that slowly get bigger, so you can stop after one level or keep going for a long session."
+      "intro": "Dot Link Puzzle is about planning routes on a small grid. Every pair of colors needs its own path, paths cannot overlap, and the whole board has to be filled, so the order you draw in matters more than speed. If you like that kind of quiet planning, look for other puzzles where you draw or connect paths between matching pieces, with short levels, no timer, and grids that get bigger as you go. Games that let you undo a move and try another route suit the same patient style."
     },
     "faq": {
       "faqs": [
         {
           "question": "How do you play Dot Link Puzzle?",
-          "answer": "Drag with the mouse from one colored dot through neighboring squares to the dot of the same color. Do this for every color without crossing lines. In the levels I played, the board also had to be completely filled."
+          "answer": "Drag with the mouse from a colored square to the square of the same color, moving through neighboring cells. Join every pair without overlapping lines and cover every cell to solve the board."
         },
         {
-          "question": "Is there a timer or a move limit?",
-          "answer": "I did not see a timer, lives or a move limit. The game only counts your moves upward, so you can take as long as you like on each board."
+          "question": "Why is my board not finished when all the colors are joined?",
+          "answer": "Every cell has to be covered too. Check the Fill counter above the board. The level only ends when it reads 100%."
         },
         {
-          "question": "What do the Basic and Specialty modes mean?",
-          "answer": "Basic has bundles from Beginner with 5 by 5 boards up to Pretty Hard with 9 by 9 boards. Specialty has themed bundles such as Blockers, which add dark blocked cells that your lines must go around, and Shapes."
+          "question": "What happens if I draw over another line?",
+          "answer": "The other line gets cut short. In testing, a line pulled across the cyan and red lines broke both of them. UNDO put them back."
         },
         {
-          "question": "Can I undo a mistake?",
-          "answer": "Yes. The UNDO button takes back your last move, and RESET clears the whole board. There is also a HINT button with a small number badge, which suggests hints are limited."
+          "question": "How many hints do you get?",
+          "answer": "The HINT button started with a badge of 5. Each press draws one full line and lowers the count by one, and the lower count carried over to other levels and bundles."
         },
         {
-          "question": "How do blocked cells work?",
-          "answer": "In the Blockers Starter bundle, which uses 6 by 6 boards, some squares are dark and cannot be used. You have to route every line around them, so plan those paths first."
+          "question": "What sizes are the boards?",
+          "answer": "The BASIC bundles run from 5 by 5 in BEGINNER to 9 by 9 in PRETTY HARD. The SPECIALTY Blockers bundles go from 6 by 6 up to 13 by 13."
         },
         {
-          "question": "Is Dot Link Puzzle free to play?",
-          "answer": "Yes, it runs in your browser on Pixelsprout with no download or account. An Ok, Play Now button appears first, and a small advertisement sits beside the game area."
+          "question": "What are Blockers levels?",
+          "answer": "They are boards with dark gray squares that lines cannot pass through. The first Blockers - Starter board is 6 by 6 with one such square, so routes have to bend around it."
         },
         {
-          "question": "Does it work on a phone?",
-          "answer": "I played with a mouse and did not see a separate touch guide, so I cannot say how it handles on a phone. The game is built around dragging, which usually carries over to touch screens."
+          "question": "What do you get for solving a level?",
+          "answer": "A star. After Level 1 the popup said You earned +1, the star total in the top right went from 0 to 1, and the level 1 tile in the list showed a star."
+        },
+        {
+          "question": "Can I turn off the music?",
+          "answer": "Yes. The gear icon at the top opens SETTINGS with separate MUSIC and SOUNDS switches. Both were on by default."
         }
       ]
     }
