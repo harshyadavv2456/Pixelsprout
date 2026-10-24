@@ -126,6 +126,8 @@ def add_to_sitemap(game):
     with open(SITEMAP_FILE, encoding='utf-8') as f:
         sitemap = f.read()
     new_url = f'  <url><loc>{DOMAIN}/games/{game["slug"]}.html</loc><priority>0.7</priority></url>\n'
+    if f'<loc>{DOMAIN}/games/{game["slug"]}.html</loc>' in sitemap:
+        return
     sitemap = sitemap.replace("</urlset>", new_url + "</urlset>")
     with open(SITEMAP_FILE, "w", encoding='utf-8') as f:
         f.write(sitemap)

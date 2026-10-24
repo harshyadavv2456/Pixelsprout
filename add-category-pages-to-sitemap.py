@@ -9,6 +9,7 @@ where glob() returned "action\\" and produced URLs like /action\\/.
 
 import glob
 import os
+import re
 
 DOMAIN = "https://playpixelsprout.com"
 SKIP = {"games", "assets", ".github", "api", "content-engine", "legacy-scripts", "node_modules", "qa", "qa-screenshots"}
@@ -32,7 +33,21 @@ for slug in slugs:
         sitemap = sitemap.replace("</urlset>", url + "</urlset>")
         added += 1
 
+# Drop repeated <url> entries for the same <loc>, keeping the first one.
+seen = set()
+kept = []
+dupes = 0
+for line in sitemap.splitlines(keepends=True):
+    m = re.search(r"<url><loc>(.*?)</loc>", line)
+    if m:
+        if m.group(1) in seen:
+            dupes += 1
+            continue
+        seen.add(m.group(1))
+    kept.append(line)
+sitemap = "".join(kept)
+
 with open("sitemap.xml", "w", encoding="utf-8") as f:
     f.write(sitemap)
 
-print(f"Added {added} page folders to sitemap.xml, repaired {repaired} malformed entries")
+print(f"Added {added} page folders to sitemap.xml, repaired {repaired} malformed entries, removed {dupes} duplicates")
