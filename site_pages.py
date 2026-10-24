@@ -276,10 +276,30 @@ GAME_SOCIAL_LINKS = {
         ("Post on Instagram", "https://www.instagram.com/playpixelsprout/p/DesejofkWTV/"),
         ("Reel on Instagram", "https://www.instagram.com/playpixelsprout/reel/DesekHglQLq/"),
         ("Reel on Facebook", "https://www.facebook.com/reel/1130420909503778"),
+        ("YouTube Short", "https://youtube.com/shorts/D3Xf1b7Xz88"),
+        ("Post on X", "https://x.com/Playpixelsprout/status/2112330454678245590"),
     ],
     "star-hop-endless-galaxy": [
         ("Post on Instagram", "https://www.instagram.com/playpixelsprout/p/Dep5xvvCpGI/"),
         ("Reel on Instagram", "https://www.instagram.com/playpixelsprout/reel/Dep5zX3iSSJ/"),
+    ],
+    "books-tower": [
+        ("YouTube Short", "https://youtube.com/shorts/mpuQxAT9THk"),
+        ("Reel on Instagram", "https://www.instagram.com/playpixelsprout/reel/De2onZlis0L/"),
+    ],
+    "carrot-climber": [
+        ("YouTube Short", "https://youtube.com/shorts/62IERMxfeuQ"),
+        ("Reel on Instagram", "https://www.instagram.com/playpixelsprout/reel/De2vjpGkjoA/"),
+    ],
+    "stickman-that-one-level": [
+        ("YouTube Short", "https://youtube.com/shorts/V5bXbFGrbVk"),
+        ("Reel on Instagram", "https://www.instagram.com/playpixelsprout/reel/De22aGdjILa/"),
+    ],
+    "dot-link-puzzle-connect-the-dots": [
+        ("YouTube Short", "https://youtube.com/shorts/58vqtwXVsns"),
+        ("Reel on Instagram", "https://www.instagram.com/playpixelsprout/reel/De0NBp6grRs/"),
+        ("Reel on Facebook", "https://www.facebook.com/reel/28733576349667923"),
+        ("Post on X", "https://x.com/Playpixelsprout/status/2113417618178904207"),
     ],
 }
 
