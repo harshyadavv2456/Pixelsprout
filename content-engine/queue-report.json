@@ -1,9 +1,9 @@
 {
   "applied_hashes": {
     "bubble-up-endless.json": "b2d1d6205c37376b108c715638539addeb60deedc182e77126dcf7f621d17b49",
-    "getting-over-it.json": "a86e0b6c32c18a4eae3b137722fee7ea37f8cbb58d01ba3757424549b9d086a9",
-    "dot-link-puzzle-connect-the-dots.json": "a5e0755ff9cf1496b3fa22a479dcdf91276c2ed0f12c346d8b65cd9fd1b24d3d",
-    "baba-is-you.json": "0d697caeb1cbd33f450335109af06ee6599b53cb90ed2f79ff7047f25889beef",
+    "getting-over-it.json": "cb3436b3699f1ad2fbc32a1abf9503290bf4384c635b777d57d8da4dbe9a81a8",
+    "dot-link-puzzle-connect-the-dots.json": "3cc09923137d163198b3e5424b051dbd4452e612c33deddf7d7818847fab56db",
+    "baba-is-you.json": "847d8265994979af48335cec3255b1b5884c5ae65bdd9caeaea1221dd9dc06c1",
     "2048-cube-run.json": "407d4d3663316b526ccebb44627753f210db1407779a597ee5e6d262581907da",
     "2048.json": "0358c5d7f2e13b947d9201ac211c5bf1ebbfb27e6fb6cef27cab9271114d6d09",
     "toilet-rush-draw-to-pee.json": "fdd6754ca1970f77f043383aa646ad6a6f9bdb774e072a49f7504e8c0b3581cc",
@@ -12,9 +12,87 @@
     "lumenstack.json": "31e2c835f5ba94526cb5c05f1187ba72bc46e4f41046e2cc43f8f086c844cb67",
     "ninja-adventure.json": "2a8b94c50ee6005c481a617cf5dc2a18e0b1bccfe7fc0d02357e2f1d401cafa9",
     "crazy-pizza.json": "a0c303100381200c02c36f07834da1bc2aa781bf7890f9807bafbc33ac71f9cf",
-    "test-tubes-water-sort.json": "adeb2f3a032ad3cf5a55dd374c62ce55e4ec714d667eb023497c86c7388a0b50"
+    "test-tubes-water-sort.json": "fe535cb3e0c5c5f5cad81e5c0c18e6bcdf6ac5414e8e0be7584493d82f84e055"
   },
   "runs": [
+    {
+      "ran_at": "2026-10-24T10:06:33Z",
+      "published": [
+        {
+          "file": "baba-is-you.json",
+          "slug": "baba-is-you",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/baba-is-you-beginner-guide/",
+            "https://playpixelsprout.com/guides/baba-is-you-controls/",
+            "https://playpixelsprout.com/guides/baba-is-you-faq/",
+            "https://playpixelsprout.com/guides/games-like-baba-is-you/",
+            "https://playpixelsprout.com/guides/baba-is-you-tips/"
+          ]
+        },
+        {
+          "file": "dot-link-puzzle-connect-the-dots.json",
+          "slug": "dot-link-puzzle-connect-the-dots",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/dot-link-puzzle-connect-the-dots-beginner-guide/",
+            "https://playpixelsprout.com/guides/dot-link-puzzle-connect-the-dots-controls/",
+            "https://playpixelsprout.com/guides/dot-link-puzzle-connect-the-dots-faq/",
+            "https://playpixelsprout.com/guides/games-like-dot-link-puzzle-connect-the-dots/",
+            "https://playpixelsprout.com/guides/dot-link-puzzle-connect-the-dots-tips/"
+          ]
+        },
+        {
+          "file": "getting-over-it.json",
+          "slug": "getting-over-it",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/getting-over-it-beginner-guide/",
+            "https://playpixelsprout.com/guides/getting-over-it-controls/",
+            "https://playpixelsprout.com/guides/getting-over-it-faq/",
+            "https://playpixelsprout.com/guides/games-like-getting-over-it/",
+            "https://playpixelsprout.com/guides/getting-over-it-tips/"
+          ]
+        },
+        {
+          "file": "test-tubes-water-sort.json",
+          "slug": "test-tubes-water-sort",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/test-tubes-water-sort-beginner-guide/",
+            "https://playpixelsprout.com/guides/test-tubes-water-sort-controls/",
+            "https://playpixelsprout.com/guides/test-tubes-water-sort-faq/",
+            "https://playpixelsprout.com/guides/games-like-test-tubes-water-sort/",
+            "https://playpixelsprout.com/guides/test-tubes-water-sort-tips/"
+          ]
+        }
+      ],
+      "rejected": []
+    },
     {
       "ran_at": "2026-10-23T10:52:27Z",
       "published": [
