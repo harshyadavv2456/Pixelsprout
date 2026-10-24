@@ -114,6 +114,14 @@ MECHANIC_RULES = [
 ]
 _MECHANIC_RES = [(name, [(re.compile(p), "[ -]" in p) for p in pats]) for name, pats in MECHANIC_RULES]
 MIN_MECHANIC_MATCHES = 4
+# Never a mechanic pick: titles that hit a keyword but aren't that kind of game
+# (checked against their game-page descriptions). Approved by Studio.
+MECHANIC_DENY = {
+    "zombies-vs-lines",
+    "paty-path",
+    "princess-stripes-vs-dots",  # dress-up game
+    "worms-lines",               # tile-painting maze, not line drawing
+}
 _GAMES_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "games")
 _DESC_RE = re.compile(r'<meta name="description" content="([^"]*)"')
 _KEYWORDS_RE = re.compile(r'<meta name="keywords" content="([^"]*)"')
@@ -140,6 +148,8 @@ def _page_info(slug):
 
 def mechanic_of(game):
     """Mechanic key for a game, or None. Title and tags are checked before the description."""
+    if game.get("slug") in MECHANIC_DENY:
+        return None
     tags = game.get("tags") or []
     if isinstance(tags, str):
         tags = [tags]
