@@ -121,6 +121,7 @@ MECHANIC_DENY = {
     "paty-path",
     "princess-stripes-vs-dots",  # dress-up game
     "worms-lines",               # tile-painting maze, not line drawing
+    "color-lines",               # ball-matching game, not line drawing
 }
 _GAMES_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "games")
 _DESC_RE = re.compile(r'<meta name="description" content="([^"]*)"')
