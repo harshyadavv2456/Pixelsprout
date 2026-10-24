@@ -2,27 +2,27 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 180
+      "views": 181
     },
     {
       "slug": "getting-over-it",
-      "views": 121
+      "views": 122
     },
     {
       "slug": "dot-link-puzzle-connect-the-dots",
-      "views": 43
+      "views": 45
     },
     {
       "slug": "protect-my-dog",
-      "views": 42
+      "views": 44
+    },
+    {
+      "slug": "test-tubes-water-sort",
+      "views": 37
     },
     {
       "slug": "2048-cube-run",
       "views": 37
-    },
-    {
-      "slug": "test-tubes-water-sort",
-      "views": 36
     },
     {
       "slug": "baba-is-you",
@@ -33,15 +33,19 @@
       "views": 26
     },
     {
-      "slug": "gravity-merge",
-      "views": 26
-    },
-    {
       "slug": "save-the-doge",
       "views": 26
     },
     {
+      "slug": "gravity-merge",
+      "views": 26
+    },
+    {
       "slug": "100-seconds-labyrinth",
+      "views": 24
+    },
+    {
+      "slug": "books-tower",
       "views": 24
     },
     {
@@ -69,16 +73,12 @@
       "views": 16
     },
     {
-      "slug": "books-tower",
-      "views": 16
+      "slug": "stickman-that-one-level",
+      "views": 15
     },
     {
       "slug": "dop-in-love-story-find-part",
       "views": 15
-    },
-    {
-      "slug": "2d-platformer-coin",
-      "views": 14
     }
   ]
 }
