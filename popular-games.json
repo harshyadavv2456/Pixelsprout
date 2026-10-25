@@ -2,19 +2,19 @@
   "games": [
     {
       "slug": "bubble-up-endless",
-      "views": 181
+      "views": 182
     },
     {
       "slug": "getting-over-it",
-      "views": 122
-    },
-    {
-      "slug": "dot-link-puzzle-connect-the-dots",
-      "views": 45
+      "views": 123
     },
     {
       "slug": "protect-my-dog",
-      "views": 44
+      "views": 56
+    },
+    {
+      "slug": "dot-link-puzzle-connect-the-dots",
+      "views": 47
     },
     {
       "slug": "test-tubes-water-sort",
@@ -25,8 +25,16 @@
       "views": 37
     },
     {
+      "slug": "books-tower",
+      "views": 30
+    },
+    {
       "slug": "baba-is-you",
       "views": 28
+    },
+    {
+      "slug": "gravity-merge",
+      "views": 26
     },
     {
       "slug": "2048-cube-merge-block",
@@ -37,16 +45,8 @@
       "views": 26
     },
     {
-      "slug": "gravity-merge",
-      "views": 26
-    },
-    {
       "slug": "100-seconds-labyrinth",
-      "views": 24
-    },
-    {
-      "slug": "books-tower",
-      "views": 24
+      "views": 25
     },
     {
       "slug": "uno-online",
@@ -69,15 +69,15 @@
       "views": 17
     },
     {
+      "slug": "stickman-that-one-level",
+      "views": 17
+    },
+    {
       "slug": "agent-hunt-hitman-shooter",
       "views": 16
     },
     {
-      "slug": "stickman-that-one-level",
-      "views": 15
-    },
-    {
-      "slug": "dop-in-love-story-find-part",
+      "slug": "2048-number-ball",
       "views": 15
     }
   ]
