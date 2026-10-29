@@ -284,8 +284,14 @@ GAME_SOCIAL_LINKS = {
         ("Reel on Instagram", "https://www.instagram.com/playpixelsprout/reel/Dep5zX3iSSJ/"),
     ],
     "books-tower": [
-        ("YouTube Short", "https://youtube.com/shorts/mpuQxAT9THk"),
+        ("YouTube Short (Part 1)", "https://youtube.com/shorts/BASeAbjnGPE"),
+        ("YouTube Short (Part 2)", "https://youtube.com/shorts/JQV5enwFlSA"),
         ("Reel on Instagram", "https://www.instagram.com/playpixelsprout/reel/De2onZlis0L/"),
+    ],
+    "protect-my-dog": [
+        ("YouTube Short (Part 1)", "https://youtube.com/shorts/bBCWh7W_dyg"),
+        ("YouTube Short (Part 2)", "https://youtube.com/shorts/9HDQw-4LYb4"),
+        ("YouTube Short (Part 3)", "https://youtube.com/shorts/wUPrd7FjjnE"),
     ],
     "carrot-climber": [
         ("YouTube Short", "https://youtube.com/shorts/62IERMxfeuQ"),
