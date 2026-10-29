@@ -1,0 +1,100 @@
+{
+  "slug": "star-hop-endless-galaxy",
+  "played": true,
+  "pages": {
+    "tips": {
+      "intro": "Star Hop: Endless Galaxy is a one-button space game. Your ship circles a planet, a line points toward the next planet above, and a click sends the ship along that line. These tips come from the guided first flight and the game's own How to play screen.",
+      "tips": [
+        "Click only when the line turns green. The guided flight says exactly that, and a green line means the hop will reach the planet.",
+        "Aim for gold. The tutorial explains that a gold line means PERFECT, and a perfect hop in testing showed PERFECT +20 next to the ship.",
+        "String perfects together. According to the How to play screen, perfects in a row build a combo that goes up to x10, so a steady rhythm is worth more than a fast one.",
+        "Watch the line, not the ship. The ship keeps moving around the planet, and the line is what tells you when the hop is lined up.",
+        "During the guided flight a miss just shows Missed - try again, so use it to practice the timing before you play for score.",
+        "Do not wait too long on one planet. The How to play screen says the colored arc around a planet shows your time on it.",
+        "Watch for hazards later on. The How to play screen warns to avoid rocks and says black holes pull you in. Neither appeared during the first flight."
+      ],
+      "conclusion": "Tap on green, try for gold, and keep a calm rhythm to build combos. Use the guided first flight to learn the timing, since misses there only ask you to try again.",
+      "extra_sections": [
+        {
+          "heading": "How the guided first flight works",
+          "paragraphs": [
+            "Pressing PLAY on the ENDLESS FLIGHT card starts a flight that teaches the controls step by step. First the game shows Tap when the line turns green and then Now! at the right moment. After a good hop it explains that Gold line = PERFECT = combo and more points.",
+            "Then it hands over with Your turn - tap when the line turns green. A mistimed click brings up Missed - try again instead of ending the flight. Pause and Skip buttons sit in the top right corner the whole time."
+          ]
+        }
+      ]
+    },
+    "controls": {
+      "intro": "Star Hop uses a single action. In a browser on a computer, that action is a left mouse click anywhere on the game.",
+      "desktop": "Click the left mouse button to make the ship fly along the line toward the next planet. Time the click for when the line turns green, or gold for a PERFECT. Menus and buttons are clicked the same way. Keyboard keys were not tested.",
+      "tips": [
+        "The Pause button in the top right corner stops the flight.",
+        "The Skip button next to it skips the guided tutorial.",
+        "The three-line button on the title screen opens What's new, Sign in, Settings and How to play.",
+        "How to play also has a Replay the tutorial option if you want to see the guided flight again."
+      ]
+    },
+    "beginner-guide": {
+      "intro": "New to Star Hop: Endless Galaxy? Here is what is on the first screen, how the guided flight teaches you, and what the How to play screen adds.",
+      "what_it_is": "Star Hop: Endless Galaxy is a free one-button space arcade game that runs on the creator's own site and is embedded on Pixelsprout. Planets sit in a column going up the screen. Your ship circles the current planet with a line pointing ahead, and a well-timed click sends it along that line to the next planet. A green line means you will reach it, and a gold line means a PERFECT hop that earns extra points and builds a combo. The flight keeps going upward with new planets.",
+      "first_steps": [
+        "On the title screen, find the ENDLESS FLIGHT card at the bottom. It says Start here, your first flight is guided.",
+        "Press PLAY on that card.",
+        "Follow the prompts. Click when the game says Now! for the first hop.",
+        "When you see Your turn, click on your own as soon as the line turns green.",
+        "If you see Missed - try again, wait for the line to come around and click again.",
+        "Open the three-line menu and choose How to play to read the full rules."
+      ],
+      "who_its_for": "Players who like short timing games with one control. The guided first flight makes it easy to start, and the combo system rewards a steady hand.",
+      "extra_sections": [
+        {
+          "heading": "The title screen",
+          "paragraphs": [
+            "A new player sees a Pilot badge with level 1 and a progress bar in the top left, a stardust counter reading 0 in the top right, and the three-line menu button beside it. The ENDLESS FLIGHT card with its PLAY button sits at the bottom."
+          ]
+        },
+        {
+          "heading": "What the How to play screen lists",
+          "paragraphs": [
+            "The help screen describes a Hangar where stardust is spent on upgrades and ships, a Daily challenge with one galaxy for everyone each day, Missions with three tasks for rewards, and Levels that each give a crate and raise your score multiplier up to x2. These were read on the help screen and were not tried during the first flight."
+          ]
+        }
+      ]
+    },
+    "similar": {
+      "intro": "Star Hop: Endless Galaxy turns one click into a test of timing. The ship circles a planet, you wait for the line to turn green or gold, and a single click launches you to the next planet while combos reward a steady rhythm. If you enjoy that kind of game, look for other one-button arcade games built around orbits, hops or timed launches, where runs are quick, the score climbs with every clean move, and one bad click costs you the streak."
+    },
+    "faq": {
+      "faqs": [
+        {
+          "question": "How do you play Star Hop: Endless Galaxy?",
+          "answer": "Your ship circles a planet with a line pointing ahead. Click when the line turns green and the ship flies along it to the next planet. A gold line means a PERFECT hop."
+        },
+        {
+          "question": "What does PERFECT do in Star Hop?",
+          "answer": "A perfect hop gives extra points. In testing one showed PERFECT +20. The How to play screen says perfects in a row build a combo up to x10."
+        },
+        {
+          "question": "What happens if I miss a hop?",
+          "answer": "During the guided first flight a miss shows Missed - try again, and you can click again when the line comes back around."
+        },
+        {
+          "question": "Is there a tutorial?",
+          "answer": "Yes. The ENDLESS FLIGHT card says your first flight is guided, with prompts like Tap when the line turns green. A Skip button lets you leave it, and How to play has Replay the tutorial."
+        },
+        {
+          "question": "What is stardust for?",
+          "answer": "The stardust counter sits at the top of the title screen. The How to play screen says stardust is spent in the Hangar on upgrades and ships. The Hangar was not opened during testing."
+        },
+        {
+          "question": "Are there obstacles in Star Hop?",
+          "answer": "The How to play screen says to avoid rocks and that black holes pull you in. None appeared during the guided first flight."
+        },
+        {
+          "question": "Can I pause the game?",
+          "answer": "Yes. A Pause button sits in the top right corner during a flight, next to the Skip button."
+        }
+      ]
+    }
+  }
+}
