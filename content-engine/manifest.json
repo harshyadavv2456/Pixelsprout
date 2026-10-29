@@ -24677,14 +24677,22 @@
   },
   "books-tower": {
     "generated_at": "2026-08-03T07:13:29Z",
-    "any_fallback": true,
+    "any_fallback": false,
     "pages": {
       "tips": "/guides/books-tower-tips/",
       "controls": "/guides/books-tower-controls/",
       "beginner-guide": "/guides/books-tower-beginner-guide/",
       "similar": "/guides/games-like-books-tower/",
       "faq": "/guides/books-tower-faq/"
-    }
+    },
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-10-29T12:07:17Z"
   },
   "mushy": {
     "generated_at": "2026-08-03T07:13:30Z",
@@ -30656,5 +30664,41 @@
       "tips"
     ],
     "bot_updated_at": "2026-10-24T10:06:33Z"
+  },
+  "protect-my-dog": {
+    "pages": {
+      "tips": "/guides/protect-my-dog-tips/",
+      "controls": "/guides/protect-my-dog-controls/",
+      "beginner-guide": "/guides/protect-my-dog-beginner-guide/",
+      "similar": "/guides/games-like-protect-my-dog/",
+      "faq": "/guides/protect-my-dog-faq/"
+    },
+    "any_fallback": false,
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-10-29T12:07:17Z"
+  },
+  "star-hop-endless-galaxy": {
+    "pages": {
+      "tips": "/guides/star-hop-endless-galaxy-tips/",
+      "controls": "/guides/star-hop-endless-galaxy-controls/",
+      "beginner-guide": "/guides/star-hop-endless-galaxy-beginner-guide/",
+      "similar": "/guides/games-like-star-hop-endless-galaxy/",
+      "faq": "/guides/star-hop-endless-galaxy-faq/"
+    },
+    "any_fallback": false,
+    "locked": [
+      "beginner-guide",
+      "controls",
+      "faq",
+      "similar",
+      "tips"
+    ],
+    "bot_updated_at": "2026-10-29T12:07:17Z"
   }
 }

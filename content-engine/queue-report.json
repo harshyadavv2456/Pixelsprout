@@ -12,9 +12,72 @@
     "lumenstack.json": "31e2c835f5ba94526cb5c05f1187ba72bc46e4f41046e2cc43f8f086c844cb67",
     "ninja-adventure.json": "2a8b94c50ee6005c481a617cf5dc2a18e0b1bccfe7fc0d02357e2f1d401cafa9",
     "crazy-pizza.json": "a0c303100381200c02c36f07834da1bc2aa781bf7890f9807bafbc33ac71f9cf",
-    "test-tubes-water-sort.json": "fe535cb3e0c5c5f5cad81e5c0c18e6bcdf6ac5414e8e0be7584493d82f84e055"
+    "test-tubes-water-sort.json": "fe535cb3e0c5c5f5cad81e5c0c18e6bcdf6ac5414e8e0be7584493d82f84e055",
+    "books-tower.json": "46d312987bf1aea0122076bbf6678f0368492c4dbd5b4a102b4c1db636dfd05c",
+    "protect-my-dog.json": "2e26452f2c0cb58d0eb1eaf5e1f2a5a5f79a8e6830a4f35f703b077b08286ab9",
+    "star-hop-endless-galaxy.json": "f508b935eb626d3e88f4f8d3b6c1b9d799d98eb28b73ba24cc1f865c80d089ed"
   },
   "runs": [
+    {
+      "ran_at": "2026-10-29T12:07:17Z",
+      "published": [
+        {
+          "file": "books-tower.json",
+          "slug": "books-tower",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/books-tower-beginner-guide/",
+            "https://playpixelsprout.com/guides/books-tower-controls/",
+            "https://playpixelsprout.com/guides/books-tower-faq/",
+            "https://playpixelsprout.com/guides/games-like-books-tower/",
+            "https://playpixelsprout.com/guides/books-tower-tips/"
+          ]
+        },
+        {
+          "file": "protect-my-dog.json",
+          "slug": "protect-my-dog",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/protect-my-dog-beginner-guide/",
+            "https://playpixelsprout.com/guides/protect-my-dog-controls/",
+            "https://playpixelsprout.com/guides/protect-my-dog-faq/",
+            "https://playpixelsprout.com/guides/games-like-protect-my-dog/",
+            "https://playpixelsprout.com/guides/protect-my-dog-tips/"
+          ]
+        },
+        {
+          "file": "star-hop-endless-galaxy.json",
+          "slug": "star-hop-endless-galaxy",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/star-hop-endless-galaxy-beginner-guide/",
+            "https://playpixelsprout.com/guides/star-hop-endless-galaxy-controls/",
+            "https://playpixelsprout.com/guides/star-hop-endless-galaxy-faq/",
+            "https://playpixelsprout.com/guides/games-like-star-hop-endless-galaxy/",
+            "https://playpixelsprout.com/guides/star-hop-endless-galaxy-tips/"
+          ]
+        }
+      ],
+      "rejected": []
+    },
     {
       "ran_at": "2026-10-24T10:06:33Z",
       "published": [
