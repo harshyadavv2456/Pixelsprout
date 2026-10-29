@@ -1,0 +1,95 @@
+{
+  "slug": "protect-my-dog",
+  "played": true,
+  "pages": {
+    "tips": {
+      "intro": "Protect My Dog is a drawing puzzle where you draw a line to shield a dog from a swarm of bees until a short timer runs out. These tips come from clearing Levels 1 and 2, the first with three stars and the second with two.",
+      "tips": [
+        "Make the line long enough to reach the ground on both sides of the dog. On Level 1 a dome with both ends on the grass held off the bees.",
+        "Draw the whole shield in one stroke. The line only appears when you let go of the mouse, and the bees come out right after.",
+        "Keep the line short if you want three stars. The ink bar at the top drains as you draw, and on Level 2 a long line dropped the result to two stars.",
+        "Expect the bees to push your line. On Level 1 they shoved the dome sideways, and the dog still stayed safe because the line was solid all the way around.",
+        "Look under the dog before drawing. On Level 2 the dog hung in the air over water and dropped onto the line as soon as it was drawn, so the line had to catch it as well as cover it.",
+        "Use the existing ground. On Level 2 the line rested its ends on the two grass ledges on each side of the gap.",
+        "Only the 10 second timer matters once you have drawn. It counts down after the line appears, and the level clears when it reaches the end."
+      ],
+      "conclusion": "Plan the shape before you press, draw it in one smooth stroke with both ends anchored, and use as little ink as you can. Then wait out the 10 seconds."
+    },
+    "controls": {
+      "intro": "Protect My Dog is played with the mouse. You draw by holding the left button and dragging.",
+      "desktop": "Hold the left mouse button and drag to draw a line, then let go. The line appears in black when you release the button, and it falls and stays solid like a real object. Buttons on the menus and around the play area are clicked with the left mouse button. No keyboard keys were used.",
+      "tips": [
+        "The blue arrow at the top left goes back.",
+        "The green light bulb under it has a small video icon on it. It was not pressed during testing.",
+        "The orange curved arrow at the top right restarts the level.",
+        "The purple alarm clock under it shows the seconds left, starting from 10.",
+        "The square corner icon at the bottom right appears to be a full screen button. It was not pressed."
+      ]
+    },
+    "beginner-guide": {
+      "intro": "New to Protect My Dog? This walks through the menu and the first two levels, and what happened when each was played.",
+      "what_it_is": "Protect My Dog, titled Save The Dog on its own menu, is a free browser puzzle. Each level shows a dog and a beehive. You draw one line with the mouse to shield the dog, then a swarm of bees flies out and tries to reach it. A clock counts down from 10, and if the dog is still safe when it runs out, the level is cleared. An ink bar at the top with three stars below it shows how much line you can still draw.",
+      "first_steps": [
+        "Click OK, PLAY NOW! on the loading screen, then the blue PLAY button on the menu.",
+        "On Level 1 a pointing hand traces a box around the dog to show the idea.",
+        "Hold the mouse button and draw a dome over the dog with both ends on the grass, then let go.",
+        "Wait while the bees attack the line and the clock counts down.",
+        "On the LEVEL CLEARED screen, click CONTINUE to go on to Level 2."
+      ],
+      "who_its_for": "Players who like short puzzles where one drawing decides the outcome. Each attempt takes about 10 seconds once the line is drawn, so it is easy to retry.",
+      "extra_sections": [
+        {
+          "heading": "What is on the main menu",
+          "paragraphs": [
+            "Besides PLAY, the menu has LOVE MODE, CHASE MODE, LASER MODE and TELEPORT MODE buttons and a LEVEL button. There is a gear at the top left and a pink shop button at the top right. Only PLAY was tried in testing, so the other modes are not described here."
+          ]
+        },
+        {
+          "heading": "The result screen",
+          "paragraphs": [
+            "Level 1 ended with three stars and 30 coins, and Level 2 with two stars and 20 coins. The coin counter at the top showed 30 after Level 1. The screen also has a GET X2 button marked AD, which was not pressed, plus a restart button and CONTINUE."
+          ]
+        }
+      ]
+    },
+    "similar": {
+      "intro": "Protect My Dog is about drawing one shape that has to hold up under pressure. You get a single stroke, limited ink and a few seconds of bees testing every gap, so the puzzle is in planning the line before you draw it. If that is what you like, try other draw to save puzzles on Pixelsprout such as Save the Doge, Draw Save Puzzle, Stickman Rescue Draw 2 Save, Draw 2 Save Stickman Puzzle and Protect The Thief. Look for games where a short line and a good anchor point earn the best score."
+    },
+    "faq": {
+      "faqs": [
+        {
+          "question": "How do you protect the dog?",
+          "answer": "Hold the mouse button and draw a line around or over the dog, then let go. The line becomes solid and blocks the bees until the clock runs out."
+        },
+        {
+          "question": "Is Protect My Dog the same as Save The Dog?",
+          "answer": "The game is listed as Protect My Dog on the loading screen, and its own menu shows the title Save The Dog."
+        },
+        {
+          "question": "How long do you have to survive?",
+          "answer": "The clock on the right starts at 10 and counts down once the line is drawn. Level 1 and Level 2 both cleared when it ran out."
+        },
+        {
+          "question": "How do you get three stars?",
+          "answer": "Use less ink. The bar at the top shrinks as you draw. A short dome on Level 1 kept three stars, while a longer line on Level 2 left two."
+        },
+        {
+          "question": "Can the bees move my line?",
+          "answer": "Yes. On Level 1 the swarm pushed the dome to one side, but the dog stayed covered and the level was still cleared."
+        },
+        {
+          "question": "What happens on Level 2?",
+          "answer": "The dog hangs over a gap with water below and a small brick block above. Once the line was drawn the dog dropped onto it, so the line had to catch it and cover it."
+        },
+        {
+          "question": "What are the coins for?",
+          "answer": "Coins are handed out on the result screen, 30 for Level 1 and 20 for Level 2 in testing. A shop button is on screen, but it was not opened, so what it offers was not checked."
+        },
+        {
+          "question": "Did you try the other modes?",
+          "answer": "No. Love, Chase, Laser and Teleport modes are on the menu, but only the main PLAY levels were played."
+        }
+      ]
+    }
+  }
+}

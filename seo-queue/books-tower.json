@@ -1,0 +1,89 @@
+{
+  "slug": "books-tower",
+  "played": true,
+  "pages": {
+    "tips": {
+      "intro": "Books Tower is a stacking game where you drop one book at a time onto a pile on a wooden table. These tips come from several short runs, the best of which reached 5 books, and from watching how the books landed, slid and fell.",
+      "tips": [
+        "Drop only when the moving book sits right over the top of the pile. Books that landed even a little off center tilted or slid on the next few drops.",
+        "Watch the width of each new book. They come in different sizes and colors, and a narrow book on top gives the next one less room to land.",
+        "Do not drop out of habit. The book keeps sliding back and forth until you press, so waiting for the next pass costs nothing.",
+        "Expect the pile to move. Books act like real objects, so a book that hangs over the edge can push the ones below it or slip off the side.",
+        "A book that misses the pile is not always the end. In one run a pink book slid off onto the table next to the stack and the score still went up by one.",
+        "Press the mouse button firmly. A very fast click sometimes did nothing in testing, while a normal press dropped the book every time.",
+        "Treat the number at the top as your only goal. It counts the books you have dropped in the current run and starts again at 0 each time."
+      ],
+      "conclusion": "Wait for the book to line up with the top of the pile, watch how wide it is, and press with a normal click. Steady, centered drops kept the tower standing longest."
+    },
+    "controls": {
+      "intro": "Books Tower is played with the mouse. One press drops the book that is sliding across the top of the screen.",
+      "desktop": "Click the large blue play button to start a run. A book then slides from side to side above the pile. Press the left mouse button anywhere on the game to drop it. The buttons on the title and end screens are clicked the same way. No keyboard keys were needed.",
+      "tips": [
+        "A very quick click was sometimes ignored in testing. A normal press worked every time.",
+        "The orange button with the speaker icon at the top of the title screen is the sound button.",
+        "The orange share button and the pink trophy button sit on each side of the play button. They were not used during testing.",
+        "On the end screen, the pink house button at the top leads back to the title screen and the blue play button starts a new run."
+      ]
+    },
+    "beginner-guide": {
+      "intro": "New to Books Tower? This covers the title screen, how a run works and what the end screen shows, based on several short runs.",
+      "what_it_is": "Books Tower, shown on its title screen as Books Tower Challenge, is a free browser stacking game. One book lies on a wooden table at the start. A new book slides back and forth near the top of the screen, and you click to drop it onto the pile. Books come in different colors and widths and behave like real objects, so they can tilt, slide or fall. The number at the top counts the books dropped in the run, and the run ends when the stack fails.",
+      "first_steps": [
+        "Click OK, PLAY NOW! on the loading screen to reach the title screen.",
+        "Click the large blue play button in the middle. The counter at the top shows 0.",
+        "Watch the book slide across the top and click when it is over the book on the table.",
+        "Keep dropping books one at a time, lining each one up with the top of the pile.",
+        "When the run ends, read your score on the end screen and click the blue play button to try again."
+      ],
+      "who_its_for": "Players who like short timing games they can retry right away. A run lasts well under a minute at first, and the only skill is choosing the moment to press.",
+      "extra_sections": [
+        {
+          "heading": "What the end screen shows",
+          "paragraphs": [
+            "The end screen shows the score from the run in large numbers, a BEST line, a Players Online count and a Your Rank line. Below them are share, play and trophy buttons and a REVIVE? button with a film icon, which was not pressed during testing.",
+            "In this test the BEST line stayed at 0 even after runs of 5 and 3 books, and the online and rank lines also showed 0."
+          ]
+        }
+      ]
+    },
+    "similar": {
+      "intro": "Books Tower is about timing one press at a time and keeping a wobbly pile upright. Each book slides across the screen, each one is a different size, and a careless drop can tip what is already there. If that mix of quick timing and balance is what you enjoy, try other stacking games on Pixelsprout such as Color Tower, Stack Block - Up, Tower Blocks Deluxe 3D, Cube Stack and BuildTower. Look for games where each run is short and a single misplaced piece can end it."
+    },
+    "faq": {
+      "faqs": [
+        {
+          "question": "How do you play Books Tower?",
+          "answer": "Click the blue play button, then press the mouse button each time the sliding book is over the pile. The goal is to stack as many books as you can before the tower fails."
+        },
+        {
+          "question": "What does the number at the top mean?",
+          "answer": "It counts the books dropped in the current run. It starts at 0 and went up by one with each book in testing."
+        },
+        {
+          "question": "Are all the books the same size?",
+          "answer": "No. Purple, orange, yellow, blue, pink and green books all showed up, and some were clearly wider or narrower than others."
+        },
+        {
+          "question": "Why did my tower fall over?",
+          "answer": "Books act like real objects. When one lands far off center it can tilt, slide off the side or push the books under it out of place."
+        },
+        {
+          "question": "What was the highest score reached in testing?",
+          "answer": "Five books in one run. Other runs ended at 2 and 3."
+        },
+        {
+          "question": "Why does BEST still show 0?",
+          "answer": "That is what happened in this test. The BEST line stayed at 0 after runs of 5 and 3 books, so your best score may not be kept."
+        },
+        {
+          "question": "What is the REVIVE? button?",
+          "answer": "It appears on the end screen with a film icon. It was not pressed during testing, so what it does was not checked."
+        },
+        {
+          "question": "Do I need the keyboard?",
+          "answer": "No. Every part of the game, from the title screen to dropping books, was played with mouse clicks only."
+        }
+      ]
+    }
+  }
+}
