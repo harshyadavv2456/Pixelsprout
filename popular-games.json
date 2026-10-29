@@ -10,7 +10,7 @@
     },
     {
       "slug": "protect-my-dog",
-      "views": 57
+      "views": 58
     },
     {
       "slug": "dot-link-puzzle-connect-the-dots",
@@ -26,11 +26,15 @@
     },
     {
       "slug": "books-tower",
-      "views": 30
+      "views": 32
     },
     {
       "slug": "baba-is-you",
       "views": 28
+    },
+    {
+      "slug": "gravity-merge",
+      "views": 26
     },
     {
       "slug": "2048-cube-merge-block",
@@ -38,10 +42,6 @@
     },
     {
       "slug": "save-the-doge",
-      "views": 26
-    },
-    {
-      "slug": "gravity-merge",
       "views": 26
     },
     {
