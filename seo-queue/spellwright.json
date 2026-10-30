@@ -1,0 +1,100 @@
+{
+  "slug": "spellwright",
+  "played": true,
+  "pages": {
+    "tips": {
+      "intro": "Spellwright is a 3D wizard game where you move a character around open maps and cast spells you make yourself. Crafting and casting spells needs a Discord sign-in on the creator's site. These tips cover what you can see and do as a guest without signing in.",
+      "tips": [
+        "Know about the sign-in before you start. Pressing C to craft brings up a Sign in to craft box that says crafting spells is only possible when logged in with Discord. As a guest all six spell slots stay empty, so there is nothing to cast.",
+        "Pick a map that fits what you want to see. Single Player offers Desert and Grassland, which have rocks, hills and props, plus Flat Grassland and Flat Desert, which the game describes as open empty maps for sandbox and craft testing.",
+        "Read the first message from Léon. A small spirit guide named Léon appears when a map loads and says it will point out useful things while you test spells, gather XP orbs and spend Sigils on new magic.",
+        "Look for green XP orbs. The opening prompt says to collect green XP orbs to level up, and the level number sits under your portrait in the bottom left, starting at 0.",
+        "Jump with Space to get over small bumps. The Desert map has rolling dunes and tall red rock spires to move around.",
+        "Check the controls list early. Settings has a Controls tab that shows every key, and it notes that key rebinding is not available yet.",
+        "Use Maybe later to close the sign-in box. It returns you to the map so you can keep walking around as a guest."
+      ],
+      "conclusion": "Without signing in you can pick a map, walk, sprint, jump and look around, but casting needs spells, and making spells needs a Discord sign-in. Decide which way you want to play before you start.",
+      "extra_sections": [
+        {
+          "heading": "What a guest can and cannot do",
+          "paragraphs": [
+            "As a guest you can open Single Player, choose any of the four maps, move with W, A, S and D, jump and look around with the mouse. You can also browse the Community list of shared spells and open Saved Spells, which was empty and said spells are saved from the in-game spellbook.",
+            "What a guest cannot do is craft. The six spell slots at the bottom of the screen were empty, a left click with an empty slot did nothing, and pressing C asked for a Discord sign-in. Settings also says that linking Discord saves your progress across devices."
+          ]
+        }
+      ]
+    },
+    "controls": {
+      "intro": "Spellwright plays with the keyboard and mouse. The full list is under Settings, then Controls, and it says key rebinding is not available yet.",
+      "desktop": "Move with W, A, S and D, look and aim with the mouse, jump with Space and sprint with Shift. Keys 1 to 6 or the mouse wheel pick a spell slot. Left click casts and can be held, right click casts a secondary spell and C opens crafting, which needs a Discord sign-in. Escape opens Settings. Only moving, jumping and the C and Escape keys were tried.",
+      "tips": [
+        "Settings, Controls has an Invert Mouse Y switch for players who prefer reversed up and down looking.",
+        "Tab shows the scoreboard and V is push to talk, and the list marks both as multiplayer only.",
+        "The six numbered diamonds along the bottom of the screen are the spell slots that keys 1 to 6 select.",
+        "Return to Main Menu is at the bottom of the Settings window that Escape opens."
+      ]
+    },
+    "beginner-guide": {
+      "intro": "New to Spellwright? Here is what the main menu offers, how to get into a map as a guest and what changes if you sign in.",
+      "what_it_is": "Spellwright, shown on its title screen as Spellwright Infinite Spells, is a free 3D game made by liampoli that runs on the creator's site and is embedded on Pixelsprout. You control a wizard in a purple hat from behind, on open desert or grassland maps. The idea is to craft your own spells into six slots and cast them, but crafting needs a Discord sign-in. Without it you start as a Guest and can explore the maps, while the spell slots stay empty.",
+      "first_steps": [
+        "On the title screen, check the Guest badge in the top left. That means you are not signed in.",
+        "Click Single Player.",
+        "Choose a map. Desert was used in testing.",
+        "Read Léon's welcome message, which says to collect green XP orbs to level up.",
+        "Try moving with W, A, S and D and jumping with Space.",
+        "Press Escape and open the Controls tab in Settings to see the full key list."
+      ],
+      "who_its_for": "Players who like the idea of making their own magic and do not mind signing in with Discord to do it. Guests can look around, but the spell slots, spellbook and saved spells all depend on crafted spells.",
+      "extra_sections": [
+        {
+          "heading": "The main menu",
+          "paragraphs": [
+            "The title screen has four large buttons, Single Player, Community, Saved Spells and Settings, with a smaller Join Discord button below them. Community showed spells shared by other players, each with a picture, the maker's name, a heart count and a Share button. Saved Spells was empty for a guest."
+          ]
+        },
+        {
+          "heading": "The four maps",
+          "paragraphs": [
+            "The Choose a map screen lists Desert, described as mesa-strewn dunes with the latest layout, and Grassland, a forested arena with hills and props. Flat Grassland and Flat Desert are open empty maps that the game labels for sandbox and craft testing. Only Desert was played."
+          ]
+        }
+      ]
+    },
+    "similar": {
+      "intro": "Spellwright is built around one big idea: making your own spells and casting them as a wizard in an open 3D world, with a guide called Léon, XP orbs to collect and Sigils to spend on new magic. Crafting needs a Discord sign-in, so if you want something you can jump into right away, look for other wizard and magic games where your character already has spells to use, or other 3D action games where you move freely across open maps."
+    },
+    "faq": {
+      "faqs": [
+        {
+          "question": "Do I need Discord to play Spellwright?",
+          "answer": "You can open a map and walk around as a guest. Crafting spells needs a Discord sign-in, and since the spell slots start empty, casting spells needs a Discord sign-in too."
+        },
+        {
+          "question": "Can a guest cast spells in Spellwright?",
+          "answer": "Not in testing. All six spell slots were empty for a guest, a left click did nothing, and pressing C showed a box saying crafting is only possible when logged in."
+        },
+        {
+          "question": "What are the controls in Spellwright?",
+          "answer": "W, A, S and D move, the mouse looks and aims, Space jumps and Shift sprints. Keys 1 to 6 pick a spell slot, left click casts, right click casts a secondary spell and C opens crafting."
+        },
+        {
+          "question": "Which maps are in Spellwright?",
+          "answer": "Single Player lists four: Desert, Grassland, Flat Grassland and Flat Desert. The two flat maps are described as open empty maps for sandbox and craft testing."
+        },
+        {
+          "question": "Who is Léon in Spellwright?",
+          "answer": "Léon is a small spirit guide who greets you when a map loads. He says he will point out useful things while you test spells, gather XP orbs and spend Sigils on new magic."
+        },
+        {
+          "question": "How do you level up in Spellwright?",
+          "answer": "The opening prompt says to collect green XP orbs to level up. Your level shows under the portrait in the bottom left and starts at 0. No orbs were collected during testing."
+        },
+        {
+          "question": "What does linking Discord do?",
+          "answer": "Settings says linking Discord saves your progress across devices and that your current spells and loadout carry over. It is also needed to craft spells. Sign-in was not tried during testing."
+        }
+      ]
+    }
+  }
+}

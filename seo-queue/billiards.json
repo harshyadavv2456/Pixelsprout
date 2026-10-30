@@ -1,0 +1,97 @@
+{
+  "slug": "billiards",
+  "played": true,
+  "pages": {
+    "tips": {
+      "intro": "Billiards is a 3D pool game that opens straight onto a racked table, ready to break. These tips come from a short session in the browser with a 9-ball rack and an 8-ball rack, using the Hit button, the power bar and the camera views.",
+      "tips": [
+        "Place the cue ball before you break. At the start the cue ball has four small arrows around it and a Place Ball button. You can drag the ball to a new spot first, then press Place Ball to lock it in.",
+        "Set power by clicking on the power bar along the bottom. The percentage on the bar changes to match where you click. In testing, clicking near the left third gave 37 percent and clicking near the right end gave 100 percent.",
+        "Use a softer shot when the object ball is close. A 78 percent shot at a nearby ball sent it all the way across to the far cushion.",
+        "Switch to the top-down view before aiming a long shot. The camera button in the bottom right corner cycles views, and the top-down one shows the whole table with a faint aim line running from the cue ball.",
+        "Hold an arrow key to turn the cue. Holding the Left or Right arrow key swings the aim around the cue ball quickly, so let go early and check the aim line before you shoot.",
+        "Drag across the table for small aim changes. A short sideways mouse drag nudged the cue a little, which is handy after a rough turn with the arrow keys.",
+        "In 9-ball, check which ball the cue points at after each shot. In testing the cue lined up on the 1 ball, the lowest one on the table, before every shot.",
+        "A full-power break spreads the rack well but did not pot anything in testing. Do not expect a ball to drop on the break every time."
+      ],
+      "conclusion": "Place the cue ball, pick a camera view, set the power on the bar and turn the cue with the arrow keys or a drag before you press Hit. Softer shots are easier to control when the balls are close.",
+      "extra_sections": [
+        {
+          "heading": "What a short session looked like",
+          "paragraphs": [
+            "The game started on a blue table with nine balls racked in a diamond for 9-ball. After placing the cue ball, the view moved behind it and the Hit button appeared. A 65 percent break spread the balls without potting any. A row of small circles at the top grew by one after each shot, under the name Anon and a score of 0.",
+            "Choosing 8-ball from the help menu opened the creator's own 8 ball pool page, and its Play 8 Ball Pool Online button started a fresh rack of 15 balls in a triangle. A 100 percent break scattered them across the table, again with nothing potted."
+          ]
+        }
+      ]
+    },
+    "controls": {
+      "intro": "Billiards uses the mouse for most things, with a few keyboard keys for aiming. The game also has its own help panel that lists every control.",
+      "desktop": "Drag the cue ball to move it, then click Place Ball. Turn the cue by holding the Left or Right arrow key, or by dragging sideways across the table. Click on the power bar at the bottom to set shot strength, then click the Hit button to shoot. The help panel also lists double click to hit, scroll for power and Space held for power, which were not confirmed in testing.",
+      "tips": [
+        "The camera button in the bottom right corner switches between a view behind the cue ball, a raised view of the whole table and a top-down view.",
+        "The three-line button above it opens a small column of buttons, including an info button that shows the Play and Controls panel.",
+        "The help panel lists Up and Down arrows for topspin and backspin, and Shift with Left or Right for side spin. These were not tried.",
+        "The help panel also lists Ctrl with the arrow keys for fine aim, M for masse angle, O for camera view, F for full screen and H for help.",
+        "A quick press of Space did not shoot in testing. The help panel says to hold Space to build power."
+      ]
+    },
+    "beginner-guide": {
+      "intro": "New to this Billiards game? Here is what you see when it loads, how to take your first shot and where the other game types are.",
+      "what_it_is": "Billiards is a free 3D cue sports game by tailuge that runs on the creator's site and is embedded on Pixelsprout. It loads straight onto a pool table with a rack ready to break, and in testing that first rack was 9-ball. You place the cue ball, aim the cue, set the power on a bar at the bottom of the screen and press Hit. Balls roll, slow down on the cloth and bounce off the cushions. The help menu lists other game types, including 8-ball, 3-cushion and snooker.",
+      "first_steps": [
+        "Wait for the table to load. The cue ball has four small arrows around it and a Place Ball button sits on the left.",
+        "Drag the cue ball if you want it somewhere else, then click Place Ball.",
+        "The view moves behind the cue ball. Click the camera button in the bottom right if you would rather see the table from above.",
+        "Hold the Left or Right arrow key to turn the cue until the aim line points where you want.",
+        "Click on the power bar to set how hard to hit. The default was 65 percent.",
+        "Click Hit and wait for the balls to stop before lining up the next shot."
+      ],
+      "who_its_for": "Players who want a full 3D pool table in the browser and are happy to take their time lining up each shot with the camera and aim controls.",
+      "extra_sections": [
+        {
+          "heading": "Finding the other game types",
+          "paragraphs": [
+            "Click the three-line button in the bottom right, then the info button with the letter i. The panel that opens has a Play section with buttons for 8-ball, 9-ball, 3-cushion, Snooker, Sagu, Map, Reveal and Lobby, and a Controls section below it.",
+            "Only 8-ball was tried. It opened the creator's 8 ball pool page first, and the Play 8 Ball Pool Online button there loaded a new table with 15 balls racked in a triangle. The other buttons were not tested."
+          ]
+        }
+      ]
+    },
+    "similar": {
+      "intro": "Billiards puts a full 3D pool table in your browser. You place the cue ball, turn the cue, choose your power and switch between camera views until the shot looks right, and the balls roll and bounce off the cushions in a natural way. If you enjoy that slower, careful style of play, other cue games on Pixelsprout such as Pool 8 Ball, Real Pool 3D and Prime Snooker Showdown are worth a look, along with other sports games where aim and power decide every shot."
+    },
+    "faq": {
+      "faqs": [
+        {
+          "question": "How do you shoot in Billiards?",
+          "answer": "Aim the cue with the Left or Right arrow key or a sideways drag, click on the power bar at the bottom to set strength, then click the Hit button on the left side of the screen."
+        },
+        {
+          "question": "What does the Place Ball button do?",
+          "answer": "Before the break the cue ball can be dragged to a new spot. Clicking Place Ball fixes it there and switches the view to behind the cue ball, ready to aim."
+        },
+        {
+          "question": "How do I change the power of a shot?",
+          "answer": "Click on the power bar along the bottom. The percentage updates to match where you clicked. In testing it went from 65 percent to 37 percent near the left third and to 100 percent near the right end."
+        },
+        {
+          "question": "Can I see the table from above?",
+          "answer": "Yes. The camera button in the bottom right corner cycles through a view behind the cue ball, a raised view of the whole table and a top-down view with the aim line showing."
+        },
+        {
+          "question": "Which game types does Billiards have?",
+          "answer": "The help panel lists 8-ball, 9-ball, 3-cushion, Snooker and Sagu. The game opened on 9-ball in testing, and 8-ball was also tried. The others were not checked."
+        },
+        {
+          "question": "Is there a computer opponent?",
+          "answer": "None was seen. During testing every shot stayed with the same player name, Anon, and no other player took a turn. The help panel has a Lobby button, which was not opened."
+        },
+        {
+          "question": "Where can I see all the controls?",
+          "answer": "Open the three-line menu in the bottom right and click the info button. The Controls section lists mouse actions and keys for aim, power, spin, camera and full screen."
+        }
+      ]
+    }
+  }
+}
