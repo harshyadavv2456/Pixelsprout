@@ -47,6 +47,21 @@ CURATED_SIMILAR = {
         "carrot-climber",
         "stickman-that-one-level",
     ],
+    # The games named in the "games like Protect My Dog" guide: draw-a-line rescue puzzles.
+    "protect-my-dog": [
+        "save-the-doge",
+        "draw-save-puzzle",
+        "stickman-rescue-draw-2-save",
+        "draw-2-save-stickman-puzzle",
+        "protect-the-thief",
+    ],
+    # The automatic match pulled in unrelated Skill games. These are drop-and-stack timing games.
+    "books-tower": [
+        "tower-blocks-deluxe-3d",
+        "stack-block-up",
+        "color-tower-2-drop-the-boxes-3d",
+        "buildtower",
+    ],
 }
 
 
