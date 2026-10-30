@@ -287,11 +287,21 @@ GAME_SOCIAL_LINKS = {
         ("YouTube Short (Part 1)", "https://youtube.com/shorts/BASeAbjnGPE"),
         ("YouTube Short (Part 2)", "https://youtube.com/shorts/JQV5enwFlSA"),
         ("Reel on Instagram", "https://www.instagram.com/playpixelsprout/reel/De2onZlis0L/"),
+        ("YouTube Short (Part 3)", "https://youtube.com/shorts/kJpeplOfVcU"),
+        ("Reel on Instagram (Part 1)", "https://www.instagram.com/playpixelsprout/reel/DfGGJh5v-3X/"),
+        ("Reel on Instagram (Part 2)", "https://www.instagram.com/playpixelsprout/reel/DfGRB0TvJ_i/"),
     ],
     "protect-my-dog": [
         ("YouTube Short (Part 1)", "https://youtube.com/shorts/bBCWh7W_dyg"),
         ("YouTube Short (Part 2)", "https://youtube.com/shorts/9HDQw-4LYb4"),
         ("YouTube Short (Part 3)", "https://youtube.com/shorts/wUPrd7FjjnE"),
+        ("YouTube Short (Part 4)", "https://youtube.com/shorts/rug6f92m0qo"),
+        ("Reel on Instagram (Part 1)", "https://www.instagram.com/playpixelsprout/reel/DfGRR95PF1r/"),
+        ("Reel on Instagram (Part 2)", "https://www.instagram.com/playpixelsprout/reel/DfGRdtmPqoJ/"),
+        ("Reel on Instagram (Part 3)", "https://www.instagram.com/playpixelsprout/reel/DfGTvYrvlqR/"),
+    ],
+    "buba-jump": [
+        ("YouTube Short (Part 1)", "https://youtube.com/shorts/I9OXV5JlIc0"),
     ],
     "carrot-climber": [
         ("YouTube Short", "https://youtube.com/shorts/62IERMxfeuQ"),
