@@ -13,11 +13,91 @@
     "ninja-adventure.json": "2a8b94c50ee6005c481a617cf5dc2a18e0b1bccfe7fc0d02357e2f1d401cafa9",
     "crazy-pizza.json": "a0c303100381200c02c36f07834da1bc2aa781bf7890f9807bafbc33ac71f9cf",
     "test-tubes-water-sort.json": "fe535cb3e0c5c5f5cad81e5c0c18e6bcdf6ac5414e8e0be7584493d82f84e055",
-    "books-tower.json": "46d312987bf1aea0122076bbf6678f0368492c4dbd5b4a102b4c1db636dfd05c",
+    "books-tower.json": "d27d6e9968c69a002be526599d785803a5a897b4a164820f2e141c1b666c0b4b",
     "protect-my-dog.json": "2e26452f2c0cb58d0eb1eaf5e1f2a5a5f79a8e6830a4f35f703b077b08286ab9",
-    "star-hop-endless-galaxy.json": "f508b935eb626d3e88f4f8d3b6c1b9d799d98eb28b73ba24cc1f865c80d089ed"
+    "star-hop-endless-galaxy.json": "6f8121efb4c316bbabf8b6ff9e68e206239303a9178b10e47ee907550eedc4e3",
+    "billiards.json": "96c279747b520d1eaae9ea35790fcc248072dd1f3f0e51daa63c1535c4633c19",
+    "spellwright.json": "b5d608a1ab82dbb3fbf91c467fd6b76f1b79fc62df88897d2355013c21970d37"
   },
   "runs": [
+    {
+      "ran_at": "2026-10-30T11:58:35Z",
+      "published": [
+        {
+          "file": "billiards.json",
+          "slug": "billiards",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/billiards-beginner-guide/",
+            "https://playpixelsprout.com/guides/billiards-controls/",
+            "https://playpixelsprout.com/guides/billiards-faq/",
+            "https://playpixelsprout.com/guides/games-like-billiards/",
+            "https://playpixelsprout.com/guides/billiards-tips/"
+          ]
+        },
+        {
+          "file": "books-tower.json",
+          "slug": "books-tower",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/books-tower-beginner-guide/",
+            "https://playpixelsprout.com/guides/books-tower-controls/",
+            "https://playpixelsprout.com/guides/books-tower-faq/",
+            "https://playpixelsprout.com/guides/games-like-books-tower/",
+            "https://playpixelsprout.com/guides/books-tower-tips/"
+          ]
+        },
+        {
+          "file": "spellwright.json",
+          "slug": "spellwright",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/spellwright-beginner-guide/",
+            "https://playpixelsprout.com/guides/spellwright-controls/",
+            "https://playpixelsprout.com/guides/spellwright-faq/",
+            "https://playpixelsprout.com/guides/games-like-spellwright/",
+            "https://playpixelsprout.com/guides/spellwright-tips/"
+          ]
+        },
+        {
+          "file": "star-hop-endless-galaxy.json",
+          "slug": "star-hop-endless-galaxy",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/star-hop-endless-galaxy-beginner-guide/",
+            "https://playpixelsprout.com/guides/star-hop-endless-galaxy-controls/",
+            "https://playpixelsprout.com/guides/star-hop-endless-galaxy-faq/",
+            "https://playpixelsprout.com/guides/games-like-star-hop-endless-galaxy/",
+            "https://playpixelsprout.com/guides/star-hop-endless-galaxy-tips/"
+          ]
+        }
+      ],
+      "rejected": []
+    },
     {
       "ran_at": "2026-10-29T12:07:17Z",
       "published": [

@@ -19452,5 +19452,19 @@
     "beginner-guide": "/guides/star-hop-endless-galaxy-beginner-guide/",
     "similar": "/guides/games-like-star-hop-endless-galaxy/",
     "faq": "/guides/star-hop-endless-galaxy-faq/"
+  },
+  "billiards": {
+    "tips": "/guides/billiards-tips/",
+    "controls": "/guides/billiards-controls/",
+    "beginner-guide": "/guides/billiards-beginner-guide/",
+    "similar": "/guides/games-like-billiards/",
+    "faq": "/guides/billiards-faq/"
+  },
+  "spellwright": {
+    "tips": "/guides/spellwright-tips/",
+    "controls": "/guides/spellwright-controls/",
+    "beginner-guide": "/guides/spellwright-beginner-guide/",
+    "similar": "/guides/games-like-spellwright/",
+    "faq": "/guides/spellwright-faq/"
   }
 }
