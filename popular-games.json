@@ -6,15 +6,19 @@
     },
     {
       "slug": "getting-over-it",
-      "views": 123
+      "views": 125
     },
     {
       "slug": "protect-my-dog",
-      "views": 58
+      "views": 63
     },
     {
       "slug": "dot-link-puzzle-connect-the-dots",
       "views": 47
+    },
+    {
+      "slug": "books-tower",
+      "views": 37
     },
     {
       "slug": "test-tubes-water-sort",
@@ -25,23 +29,19 @@
       "views": 37
     },
     {
-      "slug": "books-tower",
-      "views": 32
-    },
-    {
       "slug": "baba-is-you",
       "views": 28
     },
     {
-      "slug": "gravity-merge",
-      "views": 26
+      "slug": "save-the-doge",
+      "views": 27
     },
     {
       "slug": "2048-cube-merge-block",
       "views": 26
     },
     {
-      "slug": "save-the-doge",
+      "slug": "gravity-merge",
       "views": 26
     },
     {
@@ -73,11 +73,11 @@
       "views": 17
     },
     {
-      "slug": "agent-hunt-hitman-shooter",
+      "slug": "dop-in-love-story-find-part",
       "views": 16
     },
     {
-      "slug": "dop-in-love-story-find-part",
+      "slug": "agent-hunt-hitman-shooter",
       "views": 16
     }
   ]
