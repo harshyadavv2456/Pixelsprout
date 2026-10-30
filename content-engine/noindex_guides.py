@@ -68,6 +68,11 @@ PURCHASE_RE = re.compile(r"in" + _H + r"(game|app)\s+purchas|micro" + _H + r"tra
 CLAIM_RE = re.compile(PURCHASE_RE.pattern + r"|limited content|full version|(?<!no )(?<!nothing to )download and|initial download|download (it|the game) (from|on)"
                       r"|free" + _H + r"to" + _H + r"download|app store|google play"
                       r"|(free|paid|premium|full|lite)\s*version|paid game|can be bought|in" + _H + r"(game|app)\s+store", re.I)
+# Paid-option hints ("without spending real money", premium currency, the shop): nobody has
+# checked whether any game sells anything, so these questions are dropped and the clauses removed.
+PAID_HINT_RE = re.compile(r"real" + _H + r"(world\s+)?money|spend\w*\s+(any\s+)?money|without\s+(paying|spending)"
+                          r"|premium\s+currenc|pay" + _H + r"to" + _H + r"win|\bor\s+the\s+shop\b", re.I)
+CLAIM_RE = re.compile(CLAIM_RE.pattern + "|" + PAID_HINT_RE.pattern, re.I)
 # Questions about cost: the only verified answer is the browser line.
 COST_Q_RE = re.compile(r"\bpurchas|\bpaid\b|\bcost\b|\bprice", re.I)
 _SENT_RE = re.compile(r"[^.!?]*(?:[.!?]+|$)")
@@ -114,7 +119,8 @@ def scrub_content(page_type, content, title=None):
             faqs = []
             for qa in value:
                 q = str(qa.get("question", "")) if isinstance(qa, dict) else ""
-                if not q or re.search(r"in" + _H + r"(game|app)\s+purchas|micro" + _H + r"transaction", q, re.I):
+                if not q or re.search(r"in" + _H + r"(game|app)\s+purchas|micro" + _H + r"transaction", q, re.I) \
+                        or PAID_HINT_RE.search(q):
                     continue
                 if title and COST_Q_RE.search(q):
                     answer = browser_line(title)
