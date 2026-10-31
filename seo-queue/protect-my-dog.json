@@ -3,7 +3,7 @@
   "played": true,
   "pages": {
     "tips": {
-      "intro": "Protect My Dog is a drawing puzzle where you draw a line to shield a dog from a swarm of bees until a short timer runs out. These tips come from clearing Levels 1 and 2, the first with three stars and the second with two.",
+      "intro": "Protect My Dog is a drawing puzzle where you draw a line to shield a dog from a swarm of bees until a short timer runs out. These tips and level solutions come from clearing Levels 1, 2 and 3 in the browser with a mouse.",
       "tips": [
         "Make the line long enough to reach the ground on both sides of the dog. On Level 1 a dome with both ends on the grass held off the bees.",
         "Draw the whole shield in one stroke. The line only appears when you let go of the mouse, and the bees come out right after.",
@@ -13,7 +13,38 @@
         "Use the existing ground. On Level 2 the line rested its ends on the two grass ledges on each side of the gap.",
         "Only the 10 second timer matters once you have drawn. It counts down after the line appears, and the level clears when it reaches the end."
       ],
-      "conclusion": "Plan the shape before you press, draw it in one smooth stroke with both ends anchored, and use as little ink as you can. Then wait out the 10 seconds."
+      "conclusion": "Plan the shape before you press, draw it in one smooth stroke with both ends anchored, and use as little ink as you can. Then wait out the 10 seconds.",
+      "title": "Protect My Dog Tips and Level 1-3 Solutions",
+      "meta_description": "Protect My Dog (Save The Dog) tips plus the lines that cleared Levels 1, 2 and 3, from real play. Later levels are not covered yet.",
+      "extra_sections": [
+        {
+          "heading": "Level 1 solution",
+          "paragraphs": [
+            "Level 1 shows one dog sitting on a wide strip of grass, with a beehive up and to the left. A gray outline box around the dog hints at where to draw.",
+            "What worked: one dome drawn in a single stroke, starting on the grass just left of the dog, going up over its head and coming down on the grass just right of it. Both ends rested on the grass. The bees pushed the dome around, but the dog stayed safe until the clock ran out. Result: Level Cleared with three stars and 30 coins."
+          ]
+        },
+        {
+          "heading": "Level 2 solution",
+          "paragraphs": [
+            "Level 2 has the dog in the air above a gap between two grass ledges, with water below the gap, a small brick block above the dog and the hive to the left. As soon as you draw, the dog falls.",
+            "What worked: one stroke that starts on the left ledge, runs flat to the right across the whole gap and well onto the right ledge, then turns back and arches over the dog, ending on the left ledge. The dog dropped onto the flat part and the arch kept the bees off. Result: Level Cleared with one star and 10 coins. Shapes that only just covered the gap slid into the water."
+          ]
+        },
+        {
+          "heading": "Level 3 solution",
+          "paragraphs": [
+            "Level 3 has two dogs, each sitting on its own brick pillar, with water between and around the pillars and the hive above.",
+            "A single dome over both dogs with its ends at the outer edges of the pillars slid off and fell into the water. What worked: a flat line drawn across the tops of both pillars, then an arch back over both dogs to the start, all in one stroke. Result: Level Cleared with two stars and 20 coins."
+          ]
+        },
+        {
+          "heading": "Later levels",
+          "paragraphs": [
+            "Levels 4 and later are not covered yet. Level 4 puts the dog on a tall, narrow grass pillar next to lava, with water below. Two tries did not clear it: a small closed shape around the dog rolled off the pillar. This page will only add solutions for levels we have actually cleared."
+          ]
+        }
+      ]
     },
     "controls": {
       "intro": "Protect My Dog is played with the mouse. You draw by holding the left button and dragging.",
