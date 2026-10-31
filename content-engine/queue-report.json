@@ -13,13 +13,55 @@
     "ninja-adventure.json": "2a8b94c50ee6005c481a617cf5dc2a18e0b1bccfe7fc0d02357e2f1d401cafa9",
     "crazy-pizza.json": "a0c303100381200c02c36f07834da1bc2aa781bf7890f9807bafbc33ac71f9cf",
     "test-tubes-water-sort.json": "fe535cb3e0c5c5f5cad81e5c0c18e6bcdf6ac5414e8e0be7584493d82f84e055",
-    "books-tower.json": "d27d6e9968c69a002be526599d785803a5a897b4a164820f2e141c1b666c0b4b",
-    "protect-my-dog.json": "2e26452f2c0cb58d0eb1eaf5e1f2a5a5f79a8e6830a4f35f703b077b08286ab9",
+    "books-tower.json": "12a6b0d4370b6ec065812c839f7ac04525216fbd3fae342c374851ee732f0513",
+    "protect-my-dog.json": "e15c454e5311d8e8e269095732cdf69166e1a8e3c41b054e86032351e56afd04",
     "star-hop-endless-galaxy.json": "6f8121efb4c316bbabf8b6ff9e68e206239303a9178b10e47ee907550eedc4e3",
     "billiards.json": "96c279747b520d1eaae9ea35790fcc248072dd1f3f0e51daa63c1535c4633c19",
     "spellwright.json": "b5d608a1ab82dbb3fbf91c467fd6b76f1b79fc62df88897d2355013c21970d37"
   },
   "runs": [
+    {
+      "ran_at": "2026-10-31T11:33:31Z",
+      "published": [
+        {
+          "file": "books-tower.json",
+          "slug": "books-tower",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/books-tower-beginner-guide/",
+            "https://playpixelsprout.com/guides/books-tower-controls/",
+            "https://playpixelsprout.com/guides/books-tower-faq/",
+            "https://playpixelsprout.com/guides/games-like-books-tower/",
+            "https://playpixelsprout.com/guides/books-tower-tips/"
+          ]
+        },
+        {
+          "file": "protect-my-dog.json",
+          "slug": "protect-my-dog",
+          "pages": [
+            "beginner-guide",
+            "controls",
+            "faq",
+            "similar",
+            "tips"
+          ],
+          "urls": [
+            "https://playpixelsprout.com/guides/protect-my-dog-beginner-guide/",
+            "https://playpixelsprout.com/guides/protect-my-dog-controls/",
+            "https://playpixelsprout.com/guides/protect-my-dog-faq/",
+            "https://playpixelsprout.com/guides/games-like-protect-my-dog/",
+            "https://playpixelsprout.com/guides/protect-my-dog-tips/"
+          ]
+        }
+      ],
+      "rejected": []
+    },
     {
       "ran_at": "2026-10-30T11:58:35Z",
       "published": [
