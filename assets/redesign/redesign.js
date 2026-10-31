@@ -149,14 +149,14 @@
     }
     var faq = [
       ['Is ' + title + ' free to play?', faqFree || ('Yes. ' + title + ' is free on Pixelsprout and plays in your web browser with no download or sign-up.')],
-      ['Can I play ' + title + ' on my phone?', faqMobile || (document.querySelector('.desktop-only') ? 'No. ' + title + ' is desktop only: it needs a mouse and keyboard.' : 'Yes, it runs in a modern mobile browser. Rotate to landscape or use full screen for the best view.')],
+      ['Can I play ' + title + ' on my phone?', faqMobile || (document.querySelector('.desktop-only') ? 'No. ' + title + ' is desktop only: it needs a mouse and keyboard.' : 'Not tested on touch screens.')],
       ['What kind of game is ' + title + '?', title + ' is a ' + genre.toLowerCase() + ' game. Find more in the ' + genre + ' section.'],
       ['Do I need to install anything?', 'No. Pixelsprout games are HTML5 and load directly in the page.']
     ];
     var about = document.querySelector('.game-about') || page;
     if (!document.querySelector('.rd-howto')) {
       var ht = document.createElement('section'); ht.className = 'rd-howto';
-      ht.innerHTML = '<h2>How to play</h2><ol><li>Press Play in the game frame above; it loads right in the page.</li><li>Use your mouse, keyboard or touch, following the in-game prompts.</li><li>Tap full screen on phones and turn to landscape for the best view.</li></ol>';
+      ht.innerHTML = '<h2>How to play</h2><ol><li>Press Play in the game frame above; it loads right in the page.</li><li>Use your mouse, keyboard or touch, following the in-game prompts.</li><li>Click the full-screen button and turn to landscape for the best view.</li></ol>';
       about.parentNode.insertBefore(ht, about.nextSibling); about = ht;
     }
     var hasFaq = Array.prototype.some.call(document.querySelectorAll('script[type="application/ld+json"]'), function (s) { return /FAQPage/.test(s.textContent); });

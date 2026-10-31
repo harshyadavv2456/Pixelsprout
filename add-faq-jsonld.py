@@ -8,7 +8,7 @@ from site_pages import FAQ_FREE_ANSWER, FAQ_MOBILE_ANSWER  # per-game override o
 FAQ_RE = re.compile(r'<script type="application/ld\+json">\{"@context": "https://schema.org", "@type": "FAQPage".*?</script>\n?', re.S)
 def faq(title, genre, slug=""):
     return [(f"Is {title} free to play?", FAQ_FREE_ANSWER.get(slug) or f"Yes. {title} is free on Pixelsprout and plays in your web browser with no download or sign-up."),
-            (f"Can I play {title} on my phone?", FAQ_MOBILE_ANSWER.get(slug) or "Yes, it runs in a modern mobile browser. Rotate to landscape or use full screen for the best view."),
+            (f"Can I play {title} on my phone?", FAQ_MOBILE_ANSWER.get(slug) or "Not tested on touch screens."),
             (f"What kind of game is {title}?", f"{title} is a {genre.lower()} game. Find more in the {genre} section."),
             ("Do I need to install anything?", "No. Pixelsprout games are HTML5 and load directly in the page.")]
 n = 0
