@@ -3,7 +3,7 @@
   "played": true,
   "pages": {
     "tips": {
-      "intro": "Protect My Dog is a drawing puzzle where you draw a line to shield a dog from a swarm of bees until a short timer runs out. These tips and level solutions come from clearing Levels 1, 2 and 3 in the browser with a mouse.",
+      "intro": "Protect My Dog is a drawing puzzle where you draw a line to shield a dog from a swarm of bees until a short timer runs out. These tips and level solutions come from clearing Levels 1 to 5 in the browser with a mouse.",
       "tips": [
         "Make the line long enough to reach the ground on both sides of the dog. On Level 1 a dome with both ends on the grass held off the bees.",
         "Draw the whole shield in one stroke. The line only appears when you let go of the mouse, and the bees come out right after.",
@@ -14,8 +14,8 @@
         "Only the 10 second timer matters once you have drawn. It counts down after the line appears, and the level clears when it reaches the end."
       ],
       "conclusion": "Plan the shape before you press, draw it in one smooth stroke with both ends anchored, and use as little ink as you can. Then wait out the 10 seconds.",
-      "title": "Protect My Dog Tips and Level 1-3 Solutions",
-      "meta_description": "Protect My Dog (Save The Dog) tips plus the lines that cleared Levels 1, 2 and 3, from real play. Later levels are not covered yet.",
+      "title": "Protect My Dog Tips and Level 1-5 Solutions",
+      "meta_description": "Protect My Dog (Save The Dog) tips plus the lines that cleared Levels 1 to 5, from real play. Level 6 and later are not covered yet.",
       "extra_sections": [
         {
           "heading": "Level 1 solution",
@@ -39,9 +39,11 @@
           ]
         },
         {
-          "heading": "Later levels",
+          "heading": "Level 4 and 5 solutions",
           "paragraphs": [
-            "Levels 4 and later are not covered yet. Level 4 puts the dog on a tall, narrow grass pillar next to lava, with water below. Two tries did not clear it: a small closed shape around the dog rolled off the pillar. This page will only add solutions for levels we have actually cleared."
+            "Level 4 puts the dog on top of a tall, narrow grass pillar with grass steps on each side, lava to the left and water below. A small closed loop drawn around the dog rolled off the pillar and into the water. What worked on the third try: one big dome drawn in a single stroke, starting in the air to the left of the dog, arching high over its head and coming down on the low grass step to the right of the pillar. The dome dropped onto the steps with the dog under it, the bees pushed against it, and it held until the clock ran out. Result: Level Cleared with one star.",
+            "Level 5 has the dog in the air above a gap between two brick pillars topped with grass, with lava filling the bottom of the screen. What worked on the first try: one stroke that starts on the left pillar, runs flat across the gap to the right pillar, then loops up over the dog and back to the start, making a closed shape. The bees knocked the loop off and it tipped down into the gap, but it wedged between the two pillars above the lava with the dog still inside until the clock ran out. Result: Level Cleared with one star.",
+            "Level 6 and later aren't covered. This page will only add solutions for levels we have actually cleared."
           ]
         }
       ]
