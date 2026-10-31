@@ -226,6 +226,31 @@ FAN_MADE_SLUGS = {"getting-over-it", "baba-is-you"}
 FAN_MADE_CREDIT = {"getting-over-it": "griffpatch"}
 
 # One-line notices shown directly above the game embed (same rd-note style as the notes in descriptions).
+# Short-video landing pages (YouTube Shorts / Instagram traffic). Only these slugs get the
+# eager, high-priority embed, the "Play now" button and the 3 picked games right under the game.
+LANDING_PAGES = {
+    "books-tower": {"related": ["tower-blocks-deluxe-3d", "stack-block-up", "buildtower"]},
+    "protect-my-dog": {"related": ["save-the-doge", "draw-save-puzzle", "stickman-rescue-draw-2-save"]},
+}
+
+
+# Phones: drop the breadcrumb row (the JSON-LD breadcrumb stays) so the game starts higher.
+LANDING_HEAD = ('<link rel="preconnect" href="https://play.gamepix.com" crossorigin>\n'
+                '<style>@media (max-width:767px){.game-main>.crumbs{display:none}'
+                '.game-main>.game-bar{padding:var(--sp-2) 0}}</style>\n')
+
+
+def _landing_related(slug, catalog):
+    by_slug = {g["slug"]: g for g in catalog}
+    games = [by_slug[s] for s in LANDING_PAGES[slug]["related"] if s in by_slug]
+    if not games:
+        return ""
+    cards = "".join(S.card(g) for g in games)
+    return (f'<section class="landing-related" aria-labelledby="landing-related-title" style="margin-top:var(--sp-4)">'
+            f'<h2 class="block__title" id="landing-related-title">Play next</h2>'
+            f'<div class="shelf__track" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--sp-3)">{cards}</div></section>\n')
+
+
 EMBED_NOTES = {
     "spellwright": "Crafting spells needs a Discord sign-in on the creator's site.",
     "gigacity": "Needs a browser with WebGPU or WebGL 2.",
@@ -347,6 +372,12 @@ def render_game_page(f, catalog, guides=None, total_games=None):
     src_link = (f'<p class="how-to embed-source"><a href="{esc(EMBED_SOURCE_LINK[slug][1])}" rel="noopener" target="_blank">'
                 f'{esc(EMBED_SOURCE_LINK[slug][0])}</a></p>\n') if slug in EMBED_SOURCE_LINK else ""
     embed_note = f'<p class="rd-note embed-note"><strong>{EMBED_NOTES[slug]}</strong></p>\n' if slug in EMBED_NOTES else ""
+    landing = slug in LANDING_PAGES
+    iframe_extra = ' id="game-frame" loading="eager" fetchpriority="high"' if landing else ""
+    play_now = ('<a class="btn btn--primary play-now-btn" href="#game-frame" '
+                'onclick="var f=document.getElementById(\'game-frame\');f.scrollIntoView({block:\'center\'});f.focus();return false;">'
+                f'{S.icon("play", "i i--sm")}<span>Play now</span></a>\n') if landing else ""
+    landing_related = _landing_related(slug, catalog) if landing else ""
     description = (f.get("description_html") or "").strip()
     if not text(description):
         description = esc(f"{title} is a free {genre_label.lower()} game you can play right here in your browser — no download, no sign-up.")
@@ -366,7 +397,8 @@ def render_game_page(f, catalog, guides=None, total_games=None):
         canonical=f"{DOMAIN}/games/{slug}.html",
         meta_extra="\n".join(og),
         jsonld=f["jsonld"],
-        head_extra='<link rel="preconnect" href="https://img.gamepix.com">\n<link rel="preconnect" href="https://img.gamemonetize.com">',
+        head_extra=(LANDING_HEAD if landing else "")
+        + '<link rel="preconnect" href="https://img.gamepix.com">\n<link rel="preconnect" href="https://img.gamemonetize.com">',
     )
 
     crumb_items = [("Home", "/")]
@@ -416,11 +448,11 @@ def render_game_page(f, catalog, guides=None, total_games=None):
     main = f"""<div class="game-layout">
 <div class="game-main">
 {S.crumbs(crumb_items)}
-{embed_note}<div class="stage"><div class="embed-frame-wrap"><iframe src="{embed_url}" allow="fullscreen; autoplay; screen-orientation;" scrolling="no" allowfullscreen title="{esc(title)}"></iframe></div></div>
-{src_link}<div class="game-bar">
+{embed_note}<div class="stage"><div class="embed-frame-wrap"><iframe src="{embed_url}" allow="fullscreen; autoplay; screen-orientation;" scrolling="no" allowfullscreen title="{esc(title)}"{iframe_extra}></iframe></div></div>
+{landing_related}{src_link}<div class="game-bar">
 <div class="game-bar__info"><h1 class="game-bar__title">{esc(title)}</h1>{chip}</div>
 <div class="game-bar__actions">
-<button class="btn btn--ghost fullscreen-btn" type="button" onclick="{f['onclick']}">{S.icon('maximize')}<span>Fullscreen</span></button>
+{play_now}<button class="btn btn--ghost fullscreen-btn" type="button" onclick="{f['onclick']}">{S.icon('maximize')}<span>Fullscreen</span></button>
 <button class="icon-btn icon-btn--outline" type="button" data-fav aria-pressed="false" aria-label="Add to favorites">{S.icon('heart')}</button>
 <button class="icon-btn icon-btn--outline" type="button" data-share aria-label="Share this game">{S.icon('share')}</button>
 </div>
