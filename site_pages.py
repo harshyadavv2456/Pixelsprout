@@ -317,6 +317,8 @@ GAME_SOCIAL_LINKS = {
         ("YouTube Short (Part 3)", "https://youtube.com/shorts/kJpeplOfVcU"),
         ("Reel on Instagram (Part 1)", "https://www.instagram.com/playpixelsprout/reel/DfGGJh5v-3X/"),
         ("Reel on Instagram (Part 2)", "https://www.instagram.com/playpixelsprout/reel/DfGRB0TvJ_i/"),
+        ("Reel on Instagram (Part 3)", "https://www.instagram.com/playpixelsprout/reel/DfIn8oRvg5X/"),
+        ("Reel on Instagram (30 Oct Short)", "https://www.instagram.com/playpixelsprout/reel/DfIo2wiPc8D/"),
     ],
     "protect-my-dog": [
         ("YouTube Short (Part 1)", "https://youtube.com/shorts/bBCWh7W_dyg"),
@@ -326,9 +328,12 @@ GAME_SOCIAL_LINKS = {
         ("Reel on Instagram (Part 1)", "https://www.instagram.com/playpixelsprout/reel/DfGRR95PF1r/"),
         ("Reel on Instagram (Part 2)", "https://www.instagram.com/playpixelsprout/reel/DfGRdtmPqoJ/"),
         ("Reel on Instagram (Part 3)", "https://www.instagram.com/playpixelsprout/reel/DfGTvYrvlqR/"),
+        ("Reel on Instagram (Part 4)", "https://www.instagram.com/playpixelsprout/reel/DfIoO5nPq3O/"),
+        ("Reel on Instagram (30 Oct Short)", "https://www.instagram.com/playpixelsprout/reel/DfIpD7ev59z/"),
     ],
     "buba-jump": [
         ("YouTube Short (Part 1)", "https://youtube.com/shorts/I9OXV5JlIc0"),
+        ("Reel on Instagram (Part 1)", "https://www.instagram.com/playpixelsprout/reel/DfIomUlPjKF/"),
     ],
     "carrot-climber": [
         ("YouTube Short", "https://youtube.com/shorts/62IERMxfeuQ"),
