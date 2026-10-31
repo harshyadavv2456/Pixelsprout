@@ -156,7 +156,7 @@
     var about = document.querySelector('.game-about') || page;
     if (!document.querySelector('.rd-howto')) {
       var ht = document.createElement('section'); ht.className = 'rd-howto';
-      ht.innerHTML = '<h2>How to play</h2><ol><li>Press Play in the game frame above; it loads right in the page.</li><li>Use your mouse, keyboard or touch, following the in-game prompts.</li><li>Click the full-screen button and turn to landscape for the best view.</li></ol>';
+      ht.innerHTML = '<h2>How to play</h2><ol><li>Press Play in the game frame above; it loads right in the page.</li><li>Use your mouse or keyboard, following the in-game prompts.</li><li>Click the full-screen button.</li></ol>';
       about.parentNode.insertBefore(ht, about.nextSibling); about = ht;
     }
     var hasFaq = Array.prototype.some.call(document.querySelectorAll('script[type="application/ld+json"]'), function (s) { return /FAQPage/.test(s.textContent); });
