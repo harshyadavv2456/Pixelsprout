@@ -284,6 +284,8 @@ FAQ_MOBILE_ANSWER = {
     "hood-warfare": _MOBILE_UNTESTED,
     "poople": _MOBILE_UNTESTED,
     "8compute": _MOBILE_UNTESTED,
+    "books-tower": "Not tested on touch screens.",
+    "protect-my-dog": "Not tested on touch screens.",
     "getting-over-it": "It's built for mouse play. This version has no on-screen touch controls, and touch play hasn't been tested here.",
 }
 
